@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "command": [
+    "C:\\Greenapps\\mingw64\\bin\\g++.exe",
+    "-BC:\\Users\\Donson\\Documents\\Codex\\exports\\Cowyolo26-20261031\\native_reproducible_build_v2\\compiler_frontend\\",
+    "-O3",
+    "-std=c++17",
+    "-shared",
+    "-fopenmp",
+    "-ffp-contract=off",
+    "-static-libgcc",
+    "-static-libstdc++",
+    "queue_runtime.cpp",
+    "-Wl,-Bstatic",
+    "-lgomp",
+    "-Wl,-Bdynamic",
+    "-o",
+    "native_queue_pc.dll"
+  ],
+  "exit": 0,
+  "source_sha256": {
+    "queue_runtime.cpp": "f6e059b7bbcab05403e679ee2c1882b7f447b2b0f63bcbe2726143592b99557c",
+    "native_runtime.cpp": "b66a7a8af5764b6c2e04171cae3dc6d563adb39f6bfcd8bd5f78c2546c36e3b9",
+    "graph_executor.cpp": "f9438e47b48c16bdcad66bc76dcd1fc1eb22069fedcf94701257cc09494bfcf3",
+    "resident_methods.inc": "60ea2c12dac852b681ccb811a2eb7f6940e00c1b3abb4ccf6f57c4e7b54afe39",
+    "software_fusion.inc": "8a692eed81a97c42e643acdfb49407eb1eb35c4cafb514849730dd3d69f9183a"
+  },
+  "job_local_compiler_file_sha256": {
+    "cc1plus.exe": "b66301f8b887c1e0b2962d1a2f8f2c3ad14bafcaf55d28cbfb43f677f84bbce9",
+    "collect2.exe": "61c20d8deb92b2828b2226602122b9e32b797527a7c557f2ecbcc2e66103168b",
+    "as.exe": "a2f49da17593e7f5181f69e459f02b697af14af1ce96891a3d44783029bc8c25",
+    "ld.exe": "908e752cb05a5f0e91af25bb2a5adb4a191701e36eee74c9e8f65bd77b04a4a3",
+    "libwinpthread-1.dll": "10eb8498f1fe8f4674cffc211dc6c7414e851e208ec9f369f7ff8885d8264146"
+  },
+  "library_load_verified": true,
+  "library_sha256": "73061d76349c9e7d6c00c51395168af6dc1d27843019e19bcd8cce80a208aa04",
+  "active_library_replaced": false,
+  "model_forwards": 0
+}

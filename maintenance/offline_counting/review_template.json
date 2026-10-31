@@ -1,0 +1,52 @@
+{
+  "schema_version": "manual-passage-review-v1",
+  "video_id": "original_camera1_2023-08-14T12-54-48",
+  "session_id": "camera1_aug14_development",
+  "source_video_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "source_fps": 25,
+  "source_frame_indexing": "zero-based, inclusive reviewed interval",
+  "reviewed_interval": {
+    "start_frame0": 8912,
+    "end_frame0": 10873
+  },
+  "time_basis": "source PTS; frame0/25 only for verified constant frame rate",
+  "counting_unit": "complete passage, not permanent animal identity",
+  "direction_mapping": {
+    "A->B": "reviewer confirms downward complete passage in orange lane",
+    "B->A": "opposite direction"
+  },
+  "review_status": "pending",
+  "reviewer": null,
+  "reviewed_at": null,
+  "review_method": "independent manual review of source; predictions are not GT",
+  "user_confirmed_total": {
+    "complete_passages": 12,
+    "direction": "A->B",
+    "source": "user confirmed complete downward passages in frames 8912-10873; no per-event GT supplied"
+  },
+  "event_record_template": {
+    "video_id": "original_camera1_2023-08-14T12-54-48",
+    "session_id": "camera1_aug14_development",
+    "event_id": "SET_BY_REVIEWER",
+    "direction": null,
+    "entry_time_s": null,
+    "time_s": null,
+    "time_s_definition": "completion of full A/B passage under frozen counting rule",
+    "entry_source_frame0": null,
+    "completion_source_frame0": null,
+    "key_source_frames0": [],
+    "passage_position_or_local_trajectory": null,
+    "status": "complete|truncated|ambiguous|non_passage",
+    "occlusion": null,
+    "review_status": "pending",
+    "notes": ""
+  },
+  "events": [],
+  "uncertain_or_truncated_records": [],
+  "instructions": "Copy event_record_template into events only after independent source review. Fill event-level video/session IDs. Keep censored or uncertain records separately and report their counts. Do not force twelve fabricated event rows. Freeze completion timing, scope and tolerance before scoring. Set review_status to reviewed only after human review.",
+  "source_bytes": 260096040,
+  "matching_tolerance_s": 2.0,
+  "playback_sha256": "4c7acb0f68ed5a127cc0848e5bacd6658994cfb03c71d788c376e90c3decdfe4",
+  "playback_frame_mapping": "frame n is source frame n; all decoded frame hashes compared",
+  "playback_decoded_frames_verified": true
+}

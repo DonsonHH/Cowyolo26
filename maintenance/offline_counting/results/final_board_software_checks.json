@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "tests": 26,
+  "models_run_in_tests": false,
+  "changes_after_full_v2": [
+    "reference position guard",
+    "explicit early-source-EOF error guard"
+  ],
+  "inference_path_or_counter_changed": false,
+  "patched_source_sha256": {
+    "counting/runner.py": "437d9b73f275ec9f3e568cab996f40ddc42c38afb1e020851a1127096f02e907",
+    "counting/evaluate.py": "68b790544532afd30aacc23b6c3d535df4dd8e449c7388f6a20575617acea195",
+    "counting/test_counting.py": "710ce6ed1b8e8c6cf7fb190cd7a0a0ef79d71e706f0d2f5faacb7857e65240ba",
+    "counting/test_video_integration.py": "d1b86dafa142c40a4e66d563e20f524151b046ee00b47bc2675270628cd53a3e"
+  },
+  "complete_v2_run_normal_source_frame_count_proves_EOF_error_branch_not_entered": true
+}

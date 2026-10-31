@@ -1,0 +1,53 @@
+{
+  "overall_status": "IN_PROGRESS_NOT_ACCURACY_ACCEPTED",
+  "R1_native_build": "PASS_CLEAN_BUILD_AND_LOAD",
+  "PC_tests": {
+    "base_and_integration": 49,
+    "additional_guard_tests": 2,
+    "total_distinct": 51,
+    "logs": [
+      "tests_final_pc.log",
+      "reference_position_guard.log",
+      "early_end_guard.log"
+    ]
+  },
+  "board_tests": 26,
+  "board_complete_video_runs": [
+    {
+      "name": "v1",
+      "frames": 403,
+      "IN": 12,
+      "OUT": 0
+    },
+    {
+      "name": "v2",
+      "frames": 403,
+      "IN": 12,
+      "OUT": 0
+    }
+  ],
+  "board_v2_wall_throughput_fps": 0.5593337824322309,
+  "board_peak_rss_mib": 257.3203125,
+  "maximum_counter_state_count": 15,
+  "camera_or_real_RFID_verified": false,
+  "independent_new_video_accuracy_verified": false,
+  "reviewed_human_events_received": false,
+  "review_source_frame0_interval": [
+    8912,
+    10873
+  ],
+  "review_url": "http://127.0.0.1:8780/",
+  "no_models_datasets_or_videos_uploaded": true,
+  "source_window_video_render": {
+    "frames": 1962,
+    "duration_s": 78.48,
+    "model_forwards": 0,
+    "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\offline_counting_20261031\\board320_count12_review.mp4",
+    "sha256": "d03901081fbd0bc131e9b37a4f82dddde4d17a3f1856d19b728a3e4917d1efb7"
+  },
+  "pc_runtime_versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.2.6",
+    "opencv": "4.12.0"
+  }
+}
