@@ -1,0 +1,136 @@
+{
+  "status": "FROZEN_BEFORE_ANY_NEW_MOSAIC_PAIR_TRAINING_OR_SMOKE",
+  "created_host_UTC": "2026-10-29T19:43:46.486429+00:00",
+  "source_weights": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+  "source_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "source_data_yaml": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/data.yaml",
+  "train_kwargs_common": {
+    "batch": 32,
+    "workers": 2,
+    "deterministic": true,
+    "pretrained": true,
+    "amp": false,
+    "plots": false,
+    "save": true,
+    "cache": false,
+    "close_mosaic": 0,
+    "patience": 0,
+    "verbose": false,
+    "optimizer": "AdamW",
+    "lr0": 0.002,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "lrf": 0.01,
+    "rect": false,
+    "multi_scale": 0.0,
+    "degrees": 0.0,
+    "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8,
+    "warmup_bias_lr": 0.1,
+    "nbs": 64,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "translate": 0.1,
+    "scale": 0.5,
+    "shear": 0.0,
+    "perspective": 0.0,
+    "flipud": 0.0,
+    "fliplr": 0.5,
+    "bgr": 0.0,
+    "mosaic": 1.0,
+    "mixup": 0.0,
+    "cutmix": 0.0,
+    "copy_paste": 0.0
+  },
+  "expected_initial_state_digests": {
+    "26": "98b0f08adb5a735a74cc03a2631f0098bf3a6968b93b978eb6775f5a775d9a0e",
+    "27": "11296502b0bc72fe633c8b7a2f592fae8e269fac9d5c0d87471dbb2ec3a9c5eb",
+    "28": "0e75cc4b8d39f3bbe615112892946a664e446a972fbe24511689c31dd93dfa6e"
+  },
+  "library": {
+    "ultralytics": "8.4.63",
+    "torch": "2.8.0+cu128"
+  },
+  "conditions": [
+    {
+      "array_index": 0,
+      "arm": "mosaic100",
+      "mosaic": 1.0,
+      "seed": 26,
+      "imgsz": 192,
+      "name": "mosaic100_seed26"
+    },
+    {
+      "array_index": 1,
+      "arm": "mosaic050",
+      "mosaic": 0.5,
+      "seed": 26,
+      "imgsz": 192,
+      "name": "mosaic050_seed26"
+    },
+    {
+      "array_index": 2,
+      "arm": "mosaic100",
+      "mosaic": 1.0,
+      "seed": 27,
+      "imgsz": 192,
+      "name": "mosaic100_seed27"
+    },
+    {
+      "array_index": 3,
+      "arm": "mosaic050",
+      "mosaic": 0.5,
+      "seed": 27,
+      "imgsz": 192,
+      "name": "mosaic050_seed27"
+    },
+    {
+      "array_index": 4,
+      "arm": "mosaic100",
+      "mosaic": 1.0,
+      "seed": 28,
+      "imgsz": 192,
+      "name": "mosaic100_seed28"
+    },
+    {
+      "array_index": 5,
+      "arm": "mosaic050",
+      "mosaic": 0.5,
+      "seed": 28,
+      "imgsz": 192,
+      "name": "mosaic050_seed28"
+    }
+  ],
+  "epochs": 10,
+  "images_per_epoch": 6809,
+  "training_label_rows": 8888,
+  "validation_images": 1571,
+  "validation_label_rows": 1864,
+  "expected_training_batches": 2130,
+  "expected_optimizer_updates": 1225,
+  "expected_image_presentations": 68090,
+  "rotation": "existing_exact_RightAngleTrainer;uniform_four_turns_independent_seed710026+seed",
+  "paired_factor": "mosaic_probability1.0_vs0.5_only;branch_changes_augmentation_RNG_consumption_and_component_composition",
+  "not_pixel_identical_augmentations_across_arms": true,
+  "checkpoint_rule": "Allsixlast_epoch10weights_frozen_before_source_or_Toros_evaluation;no_best_or_seed_selection",
+  "source_XML_flag_kept_labels_same_both_arms": true,
+  "source_or_Toros_images_added_to_train": false,
+  "final_holdout_pixels_allowed": false,
+  "coverage_evidence": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\training_coverage_20261030\\results\\independent_verification.json",
+      "sha256": "fa9fab2f60b088cc71204ba86a161a00a5c293886d448b35c2064ea04a888f55"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\training_coverage_20261030\\results\\loader_independent_verification.json",
+      "sha256": "57fdf6344c425b89ba6e122602a9f34f3b5049001507dac1734f4aac8c113758"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\training_coverage_20261030\\results\\publisher_annotation_flag.json",
+      "sha256": "ed11237be09cff9b9fbdeea2c928c637719fd7bef15af9a0e82bd9cba25d1db3"
+    }
+  ],
+  "formal_training_submitted": false,
+  "whole_goal_complete": false
+}

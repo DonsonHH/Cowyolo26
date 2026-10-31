@@ -1,0 +1,172 @@
+[
+  {
+    "scene": "toros",
+    "condition": "S192_rot90_seed27",
+    "model": "S192_rot90_seed27",
+    "input_size": 192,
+    "sample_stride": 1,
+    "nominal_inference_Hz": 30.0,
+    "counter": "confirmed_only_events",
+    "down": 0,
+    "up": 3,
+    "events": [
+      {
+        "time_s": 3.8,
+        "track_id": 5,
+        "direction": "B->A",
+        "frame0": 114
+      },
+      {
+        "time_s": 7.1,
+        "track_id": 7,
+        "direction": "B->A",
+        "frame0": 213
+      },
+      {
+        "time_s": 9.6,
+        "track_id": 23,
+        "direction": "B->A",
+        "frame0": 288
+      }
+    ],
+    "human_down_total": null,
+    "absolute_down_total_error": null,
+    "formal_event_metrics": {
+      "reference_events": 6,
+      "predicted_events": 3,
+      "temporally_matched": 3,
+      "correct_direction_matches": 3,
+      "wrong_direction_matches": 0,
+      "TP": 3,
+      "FP": 0,
+      "FN": 3,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "direction_accuracy_given_temporal_match": 1.0,
+      "counts": {
+        "A->B": {
+          "reference": 0,
+          "prediction": 0
+        },
+        "B->A": {
+          "reference": 6,
+          "prediction": 3
+        }
+      },
+      "mean_absolute_direction_count_error": 1.5,
+      "matching_tolerance_s": 2.0,
+      "pairs": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "time_error_s": 0.1333333333333333,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "time_error_s": 0.6666666666666661,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 2,
+          "time_error_s": 0.06666666666666643,
+          "direction_correct": true
+        }
+      ],
+      "unmatched_reference_indices": [
+        2,
+        4,
+        5
+      ],
+      "unmatched_prediction_indices": []
+    }
+  },
+  {
+    "scene": "toros",
+    "condition": "S192_rot90_seed27",
+    "model": "S192_rot90_seed27",
+    "input_size": 192,
+    "sample_stride": 1,
+    "nominal_inference_Hz": 30.0,
+    "counter": "handoff_events",
+    "down": 0,
+    "up": 3,
+    "events": [
+      {
+        "time_s": 3.8,
+        "track_id": 5,
+        "direction": "B->A",
+        "frame0": 114
+      },
+      {
+        "time_s": 7.1,
+        "track_id": 7,
+        "direction": "B->A",
+        "frame0": 213
+      },
+      {
+        "time_s": 9.6,
+        "track_id": 23,
+        "direction": "B->A",
+        "frame0": 288
+      }
+    ],
+    "human_down_total": null,
+    "absolute_down_total_error": null,
+    "formal_event_metrics": {
+      "reference_events": 6,
+      "predicted_events": 3,
+      "temporally_matched": 3,
+      "correct_direction_matches": 3,
+      "wrong_direction_matches": 0,
+      "TP": 3,
+      "FP": 0,
+      "FN": 3,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "direction_accuracy_given_temporal_match": 1.0,
+      "counts": {
+        "A->B": {
+          "reference": 0,
+          "prediction": 0
+        },
+        "B->A": {
+          "reference": 6,
+          "prediction": 3
+        }
+      },
+      "mean_absolute_direction_count_error": 1.5,
+      "matching_tolerance_s": 2.0,
+      "pairs": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "time_error_s": 0.1333333333333333,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "time_error_s": 0.6666666666666661,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 2,
+          "time_error_s": 0.06666666666666643,
+          "direction_correct": true
+        }
+      ],
+      "unmatched_reference_indices": [
+        2,
+        4,
+        5
+      ],
+      "unmatched_prediction_indices": []
+    }
+  }
+]

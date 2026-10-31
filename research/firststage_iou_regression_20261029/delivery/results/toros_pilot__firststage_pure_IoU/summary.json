@@ -1,0 +1,208 @@
+{
+  "name": "toros_pilot__firststage_pure_IoU",
+  "source": "toros_pilot",
+  "scene": "toros_used_reverse",
+  "model": "pilot",
+  "variant": "firststage_pure_IoU",
+  "checkpoint_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+  "observation_ticks": 479,
+  "post_tracker_rows": 936,
+  "ROI_rows": 926,
+  "all_history_down": 0,
+  "all_history_up": 4,
+  "baseline_checks": null,
+  "window_counters": [
+    {
+      "window": "publisher6_scope",
+      "counter": "confirmed_only",
+      "down": 0,
+      "up": 4,
+      "events": [
+        {
+          "time_s": 4.466666666666667,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame0": 134
+        },
+        {
+          "time_s": 7.166666666666667,
+          "track_id": 4,
+          "direction": "B->A",
+          "frame0": 215
+        },
+        {
+          "time_s": 8.2,
+          "track_id": 20,
+          "direction": "B->A",
+          "frame0": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame0": 395
+        }
+      ],
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 4,
+        "temporally_matched": 4,
+        "correct_direction_matches": 4,
+        "wrong_direction_matches": 0,
+        "TP": 4,
+        "FP": 0,
+        "FN": 2,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 4
+          }
+        },
+        "mean_absolute_direction_count_error": 1.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.8000000000000003,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.7333333333333334,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 3,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "window": "publisher6_scope",
+      "counter": "confirmation_handoff",
+      "down": 0,
+      "up": 4,
+      "events": [
+        {
+          "time_s": 4.466666666666667,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame0": 134
+        },
+        {
+          "time_s": 7.166666666666667,
+          "track_id": 4,
+          "direction": "B->A",
+          "frame0": 215
+        },
+        {
+          "time_s": 8.2,
+          "track_id": 20,
+          "direction": "B->A",
+          "frame0": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame0": 395
+        }
+      ],
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 4,
+        "temporally_matched": 4,
+        "correct_direction_matches": 4,
+        "wrong_direction_matches": 0,
+        "TP": 4,
+        "FP": 0,
+        "FN": 2,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 4
+          }
+        },
+        "mean_absolute_direction_count_error": 1.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.8000000000000003,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.7333333333333334,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 3,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      }
+    }
+  ],
+  "ROI_overlap_pairs_by_tick": 30,
+  "ROI_ticks_with_overlap_candidate": 29,
+  "effective_tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "reference_authority": "already_used_publisher_trajectory_derived_six_events",
+  "new_detector_forwards": 0,
+  "new_training_updates": 0
+}

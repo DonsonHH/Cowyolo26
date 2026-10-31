@@ -1,0 +1,56 @@
+{
+  "status": "FIRSTSTAGE_CONTROL_FOUR_COUNTER_PATHS_AND_SNAPSHOT_RECOVERY_INDEPENDENTLY_VERIFIED",
+  "manifest_files": 37,
+  "whole_history_conditions": 2,
+  "counter_paths": 4,
+  "observation_ticks": 4050,
+  "counter_interface_update_ticks": 8100,
+  "native_ROI_centers_verified": 600,
+  "results": [
+    {
+      "mode": "original_fused",
+      "native_ROI_rows": 297,
+      "post_tracker_rows": 909,
+      "observations": 2025,
+      "down_events": 11,
+      "up_events": 0
+    },
+    {
+      "mode": "firststage_pure_IoU",
+      "native_ROI_rows": 303,
+      "post_tracker_rows": 910,
+      "observations": 2025,
+      "down_events": 12,
+      "up_events": 0
+    }
+  ],
+  "baseline_short_signal": "RED",
+  "candidate_short_signal": "GREEN",
+  "candidate_ID19_event_frame0": 2675,
+  "prediction_time_multiset_added": [
+    [
+      2675,
+      "A->B"
+    ],
+    [
+      3840,
+      "A->B"
+    ]
+  ],
+  "prediction_time_multiset_removed": [
+    [
+      3845,
+      "A->B"
+    ]
+  ],
+  "identity_numbers_not_matched_across_variants": true,
+  "counterfactual_predictions_are_not_independent_GT": true,
+  "candidate_adopted": false,
+  "old_confirmed12_clip_regression_pending": true,
+  "other_seed_regression_pending": true,
+  "new_detector_forwards": 0,
+  "new_training_updates": 0,
+  "formal_scores_computed": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

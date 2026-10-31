@@ -1,0 +1,167 @@
+{
+  "status": "FROZEN_FOUR_PARENT_ONLY_TRIGGER_SCHEDULE_ASSOCIATION_REPLAYS",
+  "created_UTC": "2026-10-31T10:44:21.153338+00:00",
+  "video": {
+    "name": "original",
+    "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+    "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "width": 2560,
+    "height": 1440,
+    "fps": 25,
+    "decode_end_exclusive": 10874,
+    "inference_stride": 5,
+    "orientation": "clockwise90",
+    "axis": "y",
+    "perpendicular_ROI": [
+      0.34,
+      0.75
+    ],
+    "scope_start_frame0": 8912,
+    "scope_end_exclusive": 10874,
+    "counter_replay_strides": [
+      5
+    ],
+    "human_down_total": 12,
+    "formal_event_scoring": false,
+    "detection_crop_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "crop_size_WH": [
+      1050,
+      1440
+    ],
+    "pixel_control_frames": [
+      8995,
+      9345,
+      9790,
+      10830
+    ],
+    "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "cases": [
+    {
+      "run": "r1_old",
+      "raw": "tracker_input/r1_old/actual_raw.npz",
+      "trace": "tracker_input/r1_old/counter_trace.json.gz"
+    },
+    {
+      "run": "r1_new",
+      "raw": "tracker_input/r1_new/actual_raw.npz",
+      "trace": "tracker_input/r1_new/counter_trace.json.gz"
+    },
+    {
+      "run": "r2_new",
+      "raw": "tracker_input/r2_new/actual_raw.npz",
+      "trace": "tracker_input/r2_new/counter_trace.json.gz"
+    },
+    {
+      "run": "r2_old",
+      "raw": "tracker_input/r2_old/actual_raw.npz",
+      "trace": "tracker_input/r2_old/counter_trace.json.gz"
+    }
+  ],
+  "box_tolerance_pixels": 0.002,
+  "axis_tolerance": 2e-06,
+  "IDs_and_events_exact_required": true,
+  "model_forwards": 0,
+  "files": [
+    {
+      "file": "tools/replay_tracker.py",
+      "sha256": "4aa5cafce346142eb43862f5f8856b9b3b0837658a62a31093ed89bf96237ce0"
+    },
+    {
+      "file": "tracker_input/history.json.gz",
+      "sha256": "60d68087a80fe4dca9538ac400c2912ea8a13cca0551a990d3d37541004efda3"
+    },
+    {
+      "file": "tracker_input/r1_new/actual_raw.npz",
+      "sha256": "782c9436272e1410cef9d55e3135f4eeda1383be924798745bad7a00a954f7db"
+    },
+    {
+      "file": "tracker_input/r1_new/counter_trace.json.gz",
+      "sha256": "067ec11c73ec48a045626270db34f262dd38b397dfa676580c9cfd4dc5534bbb"
+    },
+    {
+      "file": "tracker_input/r1_old/actual_raw.npz",
+      "sha256": "76376ec47a2699f18bf0e199e506428c481a8e2975ead1b6b4beb957d7e8addf"
+    },
+    {
+      "file": "tracker_input/r1_old/counter_trace.json.gz",
+      "sha256": "9ed35096e642afadd4d79babdca93fb2786729b64906e7b921a5a512ec0b10dc"
+    },
+    {
+      "file": "tracker_input/r2_new/actual_raw.npz",
+      "sha256": "abad9e16212d652ea3476c3fc8e35d40e5cb9c256023ea1895a2fa7c70e56e1a"
+    },
+    {
+      "file": "tracker_input/r2_new/counter_trace.json.gz",
+      "sha256": "1faa90b8e5e50652457420da7faf9652bc1dd38e772c0e4f37884f8803a20218"
+    },
+    {
+      "file": "tracker_input/r2_old/actual_raw.npz",
+      "sha256": "10d8426389031ffd75a53ea3060acc69c9b6613a4fda4aa49ec85c2354912180"
+    },
+    {
+      "file": "tracker_input/r2_old/counter_trace.json.gz",
+      "sha256": "0056a601fe2c737397cbb48d623826a656e45a40b88e105da028d0fc25dd7aa0"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "file": "tracker_input/source/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    }
+  ]
+}

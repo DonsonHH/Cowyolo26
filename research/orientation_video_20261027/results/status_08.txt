@@ -1,0 +1,28 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129940|idcoo-video-rotation|COMPLETED|0:0|00:12:19|
+129940.batch|batch|COMPLETED|0:0|00:12:19|13768K
+129940.0|python|COMPLETED|0:0|00:12:19|1784772K
+129943|idcoo-video-rot-collect|COMPLETED|0:0|00:00:09|
+129943.batch|batch|COMPLETED|0:0|00:00:09|1176K
+129943.0|python|COMPLETED|0:0|00:00:09|796K
+{"model": "original_seed28", "scene": "source", "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1", "processed_frames": 10874, "sampled_inference_frames": 2175, "rendered_frames": 1962, "A_to_B": 0, "B_to_A": 0, "events": 0, "elapsed_s_host_replay": 81.43629489839077, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [8912, 10873], "detector_input_orientation": "original", "tracker_and_counter_coordinate_system": "original native camera", "detector_pretracker_boxes": 1745, "posttracker_boxes_all_ROIs": 1544, "original_condition_prior_events_and_tracks_reproduced": true, "scope": "Previously observed development video; no new independent accuracy claim"}
+{"model": "original_seed28", "scene": "Toros", "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c", "processed_frames": 479, "sampled_inference_frames": 479, "rendered_frames": 0, "A_to_B": 0, "B_to_A": 0, "events": 0, "elapsed_s_host_replay": 5.825582907535136, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [0, 478], "detector_input_orientation": "original", "tracker_and_counter_coordinate_system": "original native camera", "detector_pretracker_boxes": 53, "posttracker_boxes_all_ROIs": 53, "original_condition_prior_events_and_tracks_reproduced": true, "scope": "Previously used6-event diagnostic; not fresh generalisation"}
+{"model": "clockwise90_seed28", "scene": "source", "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1", "processed_frames": 10874, "sampled_inference_frames": 2175, "rendered_frames": 1962, "A_to_B": 8, "B_to_A": 0, "events": 8, "elapsed_s_host_replay": 142.99942350015044, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [8912, 10873], "detector_input_orientation": "clockwise90", "tracker_and_counter_coordinate_system": "original native camera", "detector_pretracker_boxes": 1126, "posttracker_boxes_all_ROIs": 1052, "original_condition_prior_events_and_tracks_reproduced": null, "scope": "Previously observed development video; no new independent accuracy claim"}
+{"model": "clockwise90_seed28", "scene": "Toros", "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c", "processed_frames": 479, "sampled_inference_frames": 479, "rendered_frames": 0, "A_to_B": 0, "B_to_A": 0, "events": 0, "elapsed_s_host_replay": 12.634982194751501, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [0, 478], "detector_input_orientation": "clockwise90", "tracker_and_counter_coordinate_system": "original native camera", "detector_pretracker_boxes": 0, "posttracker_boxes_all_ROIs": 0, "original_condition_prior_events_and_tracks_reproduced": null, "scope": "Previously used6-event diagnostic; not fresh generalisation"}
+{
+  "job_id": "129943",
+  "files": 177,
+  "bytes": 236119038,
+  "sha256": "4395fd44d0e806457c164c461bdec1c5062cbc711ac55c2eba1f1d8a2c9315fa",
+  "manifest_sha256": "c09eeb5df11533bbc457a5a037649ef905334684d0ad162eec88652b81388514",
+  "omitted_original_source_videos": [
+    "results/inference/original_seed26/source_transfer.mp4",
+    "results/inference/original_seed27/source_transfer.mp4",
+    "results/inference/original_seed28/source_transfer.mp4"
+  ],
+  "omission_reason": "All exact original track/event regressions passed; retain previous original3verified previews and all new traces/snapshots",
+  "clockwise90_source_videos_included": 3,
+  "native_full_inputs_or_weight_files_archived": false,
+  "whole_goal_complete": false
+}

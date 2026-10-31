@@ -1,0 +1,14 @@
+{
+  "source": "tools/smoke.py",
+  "source_sha256": "73ce7885d6555cc969e6f018c3debafdd9efdcb8a81cdb6a51099f2190753629",
+  "corrected": "tools/smoke_v2.py",
+  "corrected_sha256": "283832cae6f2aa9edc035a15dc2739da1620cfddcfef9e4b545f217cc67560b6",
+  "failure_job": "129989",
+  "diagnosis_job": "129990",
+  "reason": "34fusedbias parameters hadrequires_gradFalse, producingNonegradients; no nonfinitegradients in all4loss controls.",
+  "only_changes": [
+    "enablegrad for allfolded parameters beforequantcalibration/conversion",
+    "newresultfolder preservingfailedrun"
+  ],
+  "protocol_values_weights_initial_values_loss_and_tolerances_changed": false
+}

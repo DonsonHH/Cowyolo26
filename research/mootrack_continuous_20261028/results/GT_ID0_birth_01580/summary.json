@@ -1,0 +1,141 @@
+{
+  "status": "CONTINUOUS_NATIVE_GT_AND_FIXED_GATE_CROP_RENDERED",
+  "name": "GT_ID0_birth_01580",
+  "publisher_ID": 0,
+  "protocol_sha256": "ccb3e4dacff209182c19b15cea9c703d8a19cfa951fefe30f77468cb3a6d203a",
+  "source_elementary_sha256": "0d47a5685a0c421bbda12dbdcfa1fd63f5e43c941d9368ad0a6ec94633d4d436",
+  "decode_frames": 120,
+  "render_frames": 90,
+  "review_source_frames0": [
+    1550,
+    1639
+  ],
+  "native_anchors": [
+    {
+      "video_frame0": 1550,
+      "GT_frame1": 1551,
+      "path": "video0_01550_native.png",
+      "sha256": "73a84aaa841e62fed04b1c0c16ff0bd07d5b9fe926f599872adae852275676e5"
+    },
+    {
+      "video_frame0": 1579,
+      "GT_frame1": 1580,
+      "path": "video0_01579_native.png",
+      "sha256": "1e3d2a124427c99b8905b8214d4e6f410f9d8bf405a49498f3fa950009757856"
+    },
+    {
+      "video_frame0": 1580,
+      "GT_frame1": 1581,
+      "path": "video0_01580_native.png",
+      "sha256": "ed3efd48728060655debb9051c0b15712b037dedbe8e67b9ea4f4d5a6fbb85d3"
+    },
+    {
+      "video_frame0": 1595,
+      "GT_frame1": 1596,
+      "path": "video0_01595_native.png",
+      "sha256": "d5b7a1f43f21c2ccdeaa00c26e9752ccbfacb67c0b724f62e06dba52c0178bf3"
+    },
+    {
+      "video_frame0": 1639,
+      "GT_frame1": 1640,
+      "path": "video0_01639_native.png",
+      "sha256": "8b191c468652e593cde196e6691f20b762e7c200ac3ce8ac25458b42fecfb6c0"
+    }
+  ],
+  "videos": [
+    {
+      "file": "native_and_publisher_GT.mp4",
+      "sha256": "cac925335f5717d0754a1ffbcff54cb292d36cf918a16596e2550936d542fb5a",
+      "bytes": 770175
+    },
+    {
+      "file": "gate_native_and_GT.mp4",
+      "sha256": "84929c8915ce2bd6f2176a435814fe9045c83daa6a28dd34107620902b65fe4a",
+      "bytes": 1942948
+    }
+  ],
+  "decode_command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-v",
+    "warning",
+    "-threads",
+    "2",
+    "-i",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_continuous_20261028\\evidence\\video_ranges\\GT_ID0_birth_01580.h264",
+    "-an",
+    "-fps_mode",
+    "passthrough",
+    "-f",
+    "rawvideo",
+    "-pix_fmt",
+    "rgb24",
+    "pipe:1"
+  ],
+  "encode_command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-v",
+    "warning",
+    "-f",
+    "rawvideo",
+    "-pix_fmt",
+    "rgb24",
+    "-s",
+    "1472x816",
+    "-r",
+    "30000/2002",
+    "-i",
+    "pipe:0",
+    "-an",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "fast",
+    "-crf",
+    "19",
+    "-pix_fmt",
+    "yuv420p",
+    "-threads",
+    "2",
+    "-movflags",
+    "+faststart",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_continuous_20261028\\results\\GT_ID0_birth_01580\\native_and_publisher_GT.mp4"
+  ],
+  "gate_encode_command": [
+    "ffmpeg",
+    "-hide_banner",
+    "-v",
+    "warning",
+    "-f",
+    "rawvideo",
+    "-pix_fmt",
+    "rgb24",
+    "-s",
+    "1200x620",
+    "-r",
+    "30000/2002",
+    "-i",
+    "pipe:0",
+    "-an",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "fast",
+    "-crf",
+    "19",
+    "-pix_fmt",
+    "yuv420p",
+    "-threads",
+    "2",
+    "-movflags",
+    "+faststart",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_continuous_20261028\\results\\GT_ID0_birth_01580\\gate_native_and_GT.mp4"
+  ],
+  "duration_expected_s": 6.006,
+  "all_GT_source_rows": 330,
+  "new_detector_inference": false,
+  "full_GT_alignment_certified": false,
+  "complete_passages_certified": false,
+  "whole_goal_complete": false
+}

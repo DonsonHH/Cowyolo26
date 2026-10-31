@@ -1,0 +1,40 @@
+{
+  "status": "ALL132_SERVER_NCNN_NORMALIZED_FEATURES_AND144_RETRIEVAL_DECISIONS_INDEPENDENTLY_VERIFIED",
+  "created_UTC": "2026-10-29T16:36:11.011457+00:00",
+  "vectors": 132,
+  "retrieval_decisions": 144,
+  "maximum_normalized_embedding_difference": 4.8354268074035645e-06,
+  "maximum_prior_embedding_difference": 2.7567148208618164e-07,
+  "retrieval_checks": [
+    {
+      "gallery": "old_gallery",
+      "query_group": "labelled_query",
+      "images": 60,
+      "all_rank1_and_acceptance_exact": true
+    },
+    {
+      "gallery": "old_gallery",
+      "query_group": "real_event_query",
+      "images": 12,
+      "all_rank1_and_acceptance_exact": true
+    },
+    {
+      "gallery": "new_gallery",
+      "query_group": "labelled_query",
+      "images": 60,
+      "all_rank1_and_acceptance_exact": true
+    },
+    {
+      "gallery": "new_gallery",
+      "query_group": "real_event_query",
+      "images": 12,
+      "all_rank1_and_acceptance_exact": true
+    }
+  ],
+  "failed_wrapper_assets_preserved_and_reused_byte_exact": true,
+  "new_training_updates": 0,
+  "new_model_forwards": 0,
+  "actual_board_encoder_inference_verified_in_this_record": false,
+  "real_event_permanent_identity_accuracy_proven": false,
+  "whole_goal_complete": false
+}

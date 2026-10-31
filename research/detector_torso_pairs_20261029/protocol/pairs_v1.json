@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "status": "FROZEN_BEFORE_NEW640_PREDICTIONS",
+  "created_UTC": "2026-10-29T07:55:12.733648+00:00",
+  "source_dataset": "Cows2021Detection_and_localisation",
+  "official_readme_URL": "https://data.bris.ac.uk/datasets/4vnrca7qw1642qlwxjadp87h7/readme.txt",
+  "official_paper_URL": "https://arxiv.org/html/2105.01938",
+  "source_catalogs": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cows2021_labels_20261027\\catalog\\train_annotations.json",
+      "sha256": "18b6494e585c68839115e8cf5b60bc392493b96be1eebd1d0fdb3ba4d959dc6e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cows2021_labels_20261027\\catalog\\validation_annotations.json",
+      "sha256": "c7ba9d77bba123035e6139a3ae08fd776d0929beb95634269a73ad2a88182714"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cows2021_labels_20261027\\catalog\\reserved_test_annotations.json",
+      "sha256": "85ecd0b1aeb6d5f21a9f4c4ef090ff706a09fbc2773d3418a6bfcb10d0bbed9e"
+    }
+  ],
+  "prepared_manifest_sha256": "fd664b040229d249fc0fd4135466696141f95e3449fad5bb98aeb2f3062f5423",
+  "new_pair_manifest_sha256": "f80176c35402c1dba4416249fb111aff35178352f2be7abe2807990aa4ea301c",
+  "previous_crop_domain_final_sha256": "e0b8c3164ddfbd98667441c1476b582bf4859a3cd1da231d3cc23f578780341d",
+  "models": [
+    {
+      "name": "official",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "name": "seed26",
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+    },
+    {
+      "name": "seed27",
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226"
+    },
+    {
+      "name": "seed28",
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+    }
+  ],
+  "train_pair_model_name": "seed26",
+  "train_images": 6809,
+  "train_references": 8888,
+  "validation_images": 1571,
+  "validation_references": 1864,
+  "prediction": {
+    "orientation": "clockwise90",
+    "imgsz": 640,
+    "rect": true,
+    "batch": 1,
+    "confidence": 0.2,
+    "nominal_iou": 0.5,
+    "max_det": 300,
+    "half": false,
+    "augment": false,
+    "device": 0
+  },
+  "native_box_inverse": "Nativeedgebox=[rot_y1,H-rot_x2,rot_y2,H-rot_x1];H720;fullimage,noROIortracker.",
+  "matching": "Reference visible polygon envelope vs nativepredictionAABB:IoU>=.5;maximizecardinalitythenIoU;dummyunmatched.",
+  "actual_crop_rounding": "x1/y1=floor, x2/y2=ceil after clamp to nativeimage; no padding; halfopenpixelbox.",
+  "metrics": "Referencevisiblepolygoncoverage;referencefractioninactualcrop;polygonIoU;idealGTenvelopeexteriorfraction;notsemanticforegroundsegmentation.",
+  "engineering_crop_gate": {
+    "minimum_reference_coverage": 0.9,
+    "maximum_reference_exterior_fraction": 0.25
+  },
+  "reference_complete_tolerance": 1e-08,
+  "all_unmatched_references_and_predictions_retained": true,
+  "fixed_validation_sample_names": [
+    "07556.jpg",
+    "07785.jpg",
+    "08229.jpg",
+    "07333.jpg",
+    "07878.jpg",
+    "07427.jpg",
+    "07507.jpg",
+    "07437.jpg"
+  ],
+  "posthoc_case_rules": [
+    "minimum_matched_reference_coverage",
+    "maximum_matched_reference_exterior_fraction",
+    "maximum_complete_reference_envelope_exterior_fraction",
+    "maximum_visible_reference_area_among_unmatched"
+  ],
+  "reference_crop_visual": "Longaxiswidth,warp4nativecorners to horizontalrectangle;maxlongside800;bilinear,borderRGB127;headtail180ambiguous.",
+  "new_training_updates": 0,
+  "identity_encoder_forwards": 0,
+  "animal_identity_labels_generated": false,
+  "current12_counting_pipeline_changed": false,
+  "new_final_test": false,
+  "source_or_Toros_video_pixels_accessed": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

@@ -1,0 +1,78 @@
+{
+  "status": "FIVE_ENTRYPOINTS_UPDATED_WITH_FAILED_EIGHT_RUN_PLAN_AND_FIVE_VERIFIED_PERIODS",
+  "created_UTC": "2026-10-31T08:55:30.275625+00:00",
+  "previous_files_and_snapshots": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究阶段总结_20261030.md",
+      "snapshot": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\snapshots\\overview_v22_before_workload_failure\\研究阶段总结_20261030.md",
+      "sha256": "4f8713513ec345209ff69598b7cd06dcab49a86be1520ee07b83a222b63aad0e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究总览_从想法到论文.md",
+      "snapshot": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\snapshots\\overview_v22_before_workload_failure\\研究总览_从想法到论文.md",
+      "sha256": "92e7e97dfd041a5ce52dd1e563fe4d1978e4d0f0961ae78457b31b6aa700065a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究进度.md",
+      "snapshot": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\snapshots\\overview_v22_before_workload_failure\\研究进度.md",
+      "sha256": "48155c5c414f2bbdbb641228243fabee81dba115a042e6a29b159fe6c15153bc"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\phase3_diagnosis_20261026\\方案与执行状态.md",
+      "snapshot": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\snapshots\\overview_v22_before_workload_failure\\phase3_diagnosis_20261026\\方案与执行状态.md",
+      "sha256": "d473ab83ba294332aae76436f578e0199debdb35ab95d30d8b9a16a1fa36abcc"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\Review与当前状态.md",
+      "snapshot": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\snapshots\\overview_v22_before_workload_failure\\research_synthesis_20261027\\Review与当前状态.md",
+      "sha256": "ecbf51338dc3fd74ec87ebd28b82aed8ec7deecd0e10873e4b16d0e7af4abaf7"
+    }
+  ],
+  "current_entrypoints": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究阶段总结_20261030.md",
+      "sha256": "440b35da825d62b269f14c78c61e3ced4180b793f191c80be3ae83d5d4d1c0e3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究总览_从想法到论文.md",
+      "sha256": "a4e5593d5bee0fc3bc1795afd7305304f66cfff88352c29dbb2ac4899a1fbad9"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究进度.md",
+      "sha256": "78528128d549a7d406abf9ebf4ec8fb0707bbd208bcbe7e863ddf6fb195cc95c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\phase3_diagnosis_20261026\\方案与执行状态.md",
+      "sha256": "cfea3e3b36f1e9ec6425ff37c78649182060156dcc2e3f9814a909caed1a482a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\Review与当前状态.md",
+      "sha256": "1c45b0f02b33083cdc153781b84094976ebb10f35b742dcffd3e8c49dcd273cd"
+    }
+  ],
+  "new_documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\paper_readiness_20261030\\论文补充_板上负载退化与启动失败_20261031.md",
+      "sha256": "d459cf63ffcbd61420cf9cc517a78ef424f7cfe19bf345c80ae2911ad3229898"
+    }
+  ],
+  "diff": {
+    "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\results\\overview_diff_20261031_v23_workload_v2.txt",
+    "sha256": "b96103212d52327d88797f050071ec6974bd32f8a87d314b0e0bafd9d3c4cc40"
+  },
+  "new_review_sources": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_workload_ablation_20261031\\results\\final_review_v1.json",
+      "sha256": "9a53a72eb76b417eab8ad85f48653a83c168ec60458905693ffc37a5fb489b21"
+    }
+  ],
+  "whole_goal_complete": false,
+  "pre_review_revision_of": {
+    "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\results\\entrypoint_update_20261031_v23_workload.json",
+    "sha256": "8518aab157597bf41c850ad7eded3bafa998c320684f8c03d118a8b2b340bde6"
+  },
+  "scope_corrections": [
+    "4. 历次回放已暴露3／7／8／9／10计数波动，以及部分策略的后台饥饿。此前固定10照片的CPU分配和新旧编码器对照已完成；本次I×W八轮控制未完成。继续补真实触发与长时负载，记录前台迟到和身份等待，不以少触发任务或事后挑一轮作为优胜。",
+    "上述结果表明该配置未达稳定5FPS，可靠自动找回仍未获验证"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "Three seed trainable integer-forward STE pre/postupdate gate v1",
+  "created_UTC": "2026-10-27T17:20:03.682161+00:00",
+  "scope": "Trainingrole only. Numerical/gradient smoke, no validation, test, identityaccuracy or board claim.",
+  "source_models": [
+    {
+      "seed": 26,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+      "sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "original_selected_epoch": 5
+    },
+    {
+      "seed": 27,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/best_encoder.pt",
+      "sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+      "original_selected_epoch": 5
+    },
+    {
+      "seed": 28,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/best_encoder.pt",
+      "sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+      "original_selected_epoch": 10
+    }
+  ],
+  "manifest_sha256": "dda82ba39a8a8f1b82bd309f5272ceb0471f74103850678e7355e6faff078aba",
+  "calibration_manifest_sha256": "2977907ef64834918fcf1f4bc5748b0285f08a4fb455574fa4da6eefc6a1e110",
+  "prior_protocol_sha256": "28b37395ce1c696f16c734881e87713a1c77d14bc0931c962a1b39b503d7ddd6",
+  "calibration": "Same64trainimages, floatobserver calibration then freeze; first8deterministictrainingvectors regression.",
+  "numerical_contract": "Integerdot products via exact bounded DOUBLEconv of integer operands, INT32bound checked; DOUBLEinputscale thenweightscale thenbias, FP32cast and explicitdivision/nearest-even outputquant. NonConvFP32retained.",
+  "weight_contract": "TrainableFP32masterweights, explicitdivide/nearest-even INT8then UINT8offset128 at export; all52arrays packed afterexport.",
+  "gradient_contract": "Declared clipped STE: exactforward outputclippingmask times quantizedFloatConv gradients; input/weight clippingmasks applied. Compared against explicitAutograd surrogate, not finitedifference derivative of roundedforward; no doublebackward.",
+  "runtime_conditions": [
+    "OFF",
+    "ALL_disable_quant_qdq",
+    "ALL_default_diagnostic"
+  ],
+  "seeds": [
+    26,
+    27,
+    28
+  ],
+  "actual_discarded_smoke_updates_each": 2,
+  "training": {
+    "epochs": 6,
+    "batches_per_epoch": 20,
+    "identities_per_batch": 8,
+    "images_per_identity": 4,
+    "learning_rate": 3e-05,
+    "optimiser": "AdamW",
+    "weight_decay": 0.0001,
+    "loss": "mean(1-cos(student, frozen source teacher)) +0.25*batch-hard Euclidean triplet margin0.3",
+    "teacher": "Source trained encoder in eval on same augmented image; no validation/query training",
+    "checkpoint": "Fixed final epoch6; no checkpoint/seed selection"
+  },
+  "gradient_controls": [
+    "CPUordinary/depthwise",
+    "GPUordinary/depthwise",
+    "finite allmodel gradients",
+    "actualparameterschange",
+    "qparamsunchanged"
+  ],
+  "gates": {
+    "vectors": 8,
+    "maximum_absolute_embedding_difference": 0.001,
+    "minimum_cosine": 0.9999,
+    "maximum_packing_error": 1e-06,
+    "maximum_STE_control_gradient_error": 1e-05,
+    "GPU_CPU_forward_same_embedding_tolerance_required": true
+  },
+  "sequencing": "Checkall3initialseedgates beforeanyupdates. Ifany fails, preserveallinitials and stopbeforeupdates. After2discardedupdatesperseed, re-export andreporteveryseed evenifpostgatefails. Noformal6epochQATinthisstage.",
+  "formal_QAT_updates": 0,
+  "holdout_or_validation_allowed": false,
+  "FPGA_execution": false,
+  "whole_goal_complete": false
+}

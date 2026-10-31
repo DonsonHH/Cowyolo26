@@ -1,0 +1,99 @@
+{
+  "status": "PARTIAL_HOST_OBSERVATIONS_PRESERVED_AFTER_USER_CONFIRMED_POWER_OR_CONNECTION_CHANGE_NOT_FINAL_RESULT",
+  "created_UTC": "2026-10-30T14:12:08.238181+00:00",
+  "protocol_SHA256": "4217824d2964e56218c566a73096a2f282c94020f3176c74bf86cef9a270513c",
+  "original_experiment_PID": 10099,
+  "source_boot_id": "9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f",
+  "latest_successful_observation_host_UTC": "2026-10-30T12:33:16.536979+00:00",
+  "observed_complete_case_summaries": [
+    {
+      "run": "r1_old",
+      "identity_model": "old",
+      "processed_frames": 363,
+      "skipped_slots": 29,
+      "deadline_misses": 273,
+      "source_down_count": 10,
+      "actual_background_jobs": 10,
+      "processed_per_second_over_offered_duration": 4.630102040816326
+    },
+    {
+      "run": "r1_new",
+      "identity_model": "new",
+      "processed_frames": 374,
+      "skipped_slots": 18,
+      "deadline_misses": 124,
+      "source_down_count": 10,
+      "actual_background_jobs": 10,
+      "processed_per_second_over_offered_duration": 4.770408163265306
+    },
+    {
+      "run": "r2_new",
+      "identity_model": "new",
+      "processed_frames": 364,
+      "skipped_slots": 28,
+      "deadline_misses": 285,
+      "source_down_count": 8,
+      "actual_background_jobs": 8,
+      "processed_per_second_over_offered_duration": 4.642857142857142
+    }
+  ],
+  "last_progress_run": "r2_old",
+  "last_progress_case_processed_frames_lower_bound": 350,
+  "timed_O8_calls_observed_lower_bound": 1451,
+  "observed_first3_background_jobs": 28,
+  "fourth_case_terminal_observed": false,
+  "original_results_archive_obtained": false,
+  "full_raw_outputs_obtained": false,
+  "actual_photo_or_feature_files_obtained": false,
+  "full_independent_numeric_or_counter_verification_complete": false,
+  "user_confirmed_access_change": "User replied that power was turned off or connections moved; exact time and whether SD writes completed were not stated.",
+  "current_PC_ethernet_last_observed": {
+    "IPv4": "192.168.3.13",
+    "prefix_length": 24,
+    "origin": "DHCP",
+    "gateway": "192.168.3.1"
+  },
+  "previous_direct_board_PC_IPv4": "192.168.2.1",
+  "network_configuration_changed_by_agent": false,
+  "original_experiment_restarted": false,
+  "board_reset_or_model_reload_requested_by_agent": false,
+  "result_files_lost_claimed": false,
+  "source_completion_or_failure_inferred_from_access_loss": false,
+  "new_independent_ID_or_count_GT": false,
+  "new_model_forwards_by_this_audit": 0,
+  "whole_goal_complete": false,
+  "evidence_files": [
+    {
+      "file": "evidence/status01.json",
+      "sha256": "de71469732bf5f3b29059a52bdada0759cce79643edd88c3f8435b7fe78d8a23"
+    },
+    {
+      "file": "evidence/status02.json",
+      "sha256": "879c5a2cf48fcb81deaa7fa8169d69ee78940072d8063e323d89c9f6418cbe01"
+    },
+    {
+      "file": "evidence/status03.json",
+      "sha256": "2fdd181d28da07fad44a3e60cb692f49729afd728cd67b310e6cfbe6e1da44c1"
+    },
+    {
+      "file": "evidence/status04.json",
+      "sha256": "7b5609fe3c4db6066a1921cec74c530d26248a19649e037a4b3599e892b7e901"
+    },
+    {
+      "file": "evidence/status05.json",
+      "sha256": "104fd3f10e834a9d887444101cc50c7f5442f9ef30b6732006f81e4d6ea2d36b"
+    },
+    {
+      "file": "evidence/status06.json",
+      "sha256": "5db5a7018f24b50547d498e321169f9af9180e64f4f29860c99eeaaf7479809e"
+    },
+    {
+      "file": "evidence/access_diagnosis01_network.json",
+      "sha256": "5477f0bb4b89ea9ed448e650968959e1c41d0eff10d993772535c41326afde25"
+    },
+    {
+      "file": "evidence/access_diagnosis01_serial.json",
+      "sha256": "dded5bbc90dd4429d1c2726653789a98871dfff95ca9f6202c6ac9cf9afa3094"
+    }
+  ]
+}

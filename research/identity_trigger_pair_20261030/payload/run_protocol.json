@@ -1,0 +1,306 @@
+{
+  "video": {
+    "name": "original",
+    "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+    "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "width": 2560,
+    "height": 1440,
+    "fps": 25,
+    "decode_end_exclusive": 10874,
+    "inference_stride": 5,
+    "orientation": "clockwise90",
+    "axis": "y",
+    "perpendicular_ROI": [
+      0.34,
+      0.75
+    ],
+    "scope_start_frame0": 8912,
+    "scope_end_exclusive": 10874,
+    "counter_replay_strides": [
+      5
+    ],
+    "human_down_total": 12,
+    "formal_event_scoring": false,
+    "detection_crop_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "crop_size_WH": [
+      1050,
+      1440
+    ],
+    "pixel_control_frames": [
+      8995,
+      9345,
+      9790,
+      10830
+    ],
+    "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "registered_IDs": [
+    "009",
+    "020",
+    "026",
+    "028",
+    "031",
+    "054"
+  ],
+  "fixed_identity_threshold": 0.8445389603236383,
+  "backend_nice_increment": 10,
+  "foreground_source_model": "628db893fa8be090df206b32c35d8b81839eab2f497925ccbd0c6d855ad9d3eb",
+  "O8_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "runtime_files": [
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/libcow_encoder_v2.so",
+      "sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.param",
+      "sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.bin",
+      "sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/ncnn_encoder_v3.py",
+      "sha256": "c7e83e2638b9cb80e4e0720b5338ac802d05b37241526226da1e482a3172027c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/all_normalized_features.npz",
+      "sha256": "a23bf0714a0d8ef12f23ea5198fc2ad82f209b61c058f692613114f0d1f05ac1"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/image_groups.json",
+      "sha256": "f89a5f4501b0d8b896ada40431a1e58405117fe8593c512163aec130924bfad6"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/record.json",
+      "sha256": "f84a4de6797638a090f6514c1cd718f9e86e39019f191db41c9ece6ee3718d14"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/program/graph.bin",
+      "sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/resident_plan/resident_plan.bin",
+      "sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/encoder.ncnn.param",
+      "sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/encoder.ncnn.bin",
+      "sha256": "2a587d0fe293d244eb5632feb0e3665cf6091243198612b59363a6a7bb173252"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/libcow_encoder_v2.so",
+      "sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_joint_pair_20261030/results/identity_qualification/all_features.npz",
+      "sha256": "0eb51bda110e1f2e1abb5d447db9db576f5e901a779c44cc187ed3f1bb8e351c"
+    }
+  ],
+  "camera_root": "/home/xilinx/jupyter_notebooks/cow_research_periodic_joint_20261030/camera",
+  "graph_sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538",
+  "resident_plan_sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4",
+  "identity_preprocessing": "SamePillow11roundinggeometryasfrozenservertransform;globalboardPillowunchanged.",
+  "identity_vector_protocol_sha256": "63e89edc9c0d617e27c40719f274ed72b440fa6f16cfbe0724a806c94f976d6b",
+  "selector": {
+    "maximum_age_frames_at25fps": 25,
+    "maximum_compressed_JPEG_frames": 6,
+    "edge_guard_px": 16,
+    "formula": "visible_box_area*(1-max_other_confirmed_box_intersection_fraction)*min(1,max(0,minimum_ROI_edge_margin)/16)",
+    "ties": "Most_recent_available_frame",
+    "uses_future_frames": false,
+    "uses_identity_labels_or_gallery_scores": false,
+    "uses_highres_pixels_to_rank": false,
+    "candidate_evidence": "Only_current_or_past_actual_processed_confirmed_post_tracker_rows_of_same_temporary_ID"
+  },
+  "status": "FROZEN_BEFORE_ACTUAL_COUNT_TRIGGER_OLD_NEW_NEW_OLD_CAUSAL_BOARD_RUNS",
+  "created_UTC": "2026-10-30T12:19:20.621813+00:00",
+  "period_ns": 200000000,
+  "cases": [
+    "idle_gate",
+    "low_priority_parallel"
+  ],
+  "runs": [
+    {
+      "run": "r1_old",
+      "identity_model": "old",
+      "policy": "low_priority_parallel",
+      "repeat": 1
+    },
+    {
+      "run": "r1_new",
+      "identity_model": "new",
+      "policy": "low_priority_parallel",
+      "repeat": 1
+    },
+    {
+      "run": "r2_new",
+      "identity_model": "new",
+      "policy": "low_priority_parallel",
+      "repeat": 2
+    },
+    {
+      "run": "r2_old",
+      "identity_model": "old",
+      "policy": "low_priority_parallel",
+      "repeat": 2
+    }
+  ],
+  "source_frame0_first": 8915,
+  "source_frame0_last": 10870,
+  "offered_slots_per_case": 392,
+  "scope_source_frames_inclusive": [
+    8912,
+    10873
+  ],
+  "PNG_compress_level": 0,
+  "plan_sha256": "54fe04eeb35fb39a2070a889bc1fe1a3e69466a82ce532ff103bb8cc8059562f",
+  "source_runner_sha256": "ed9dfbe015b5247ed91d8dc46f2171eb01027dd2c92580edb198c244941568be",
+  "payload_files": [
+    {
+      "file": "board_trigger_repeats.py",
+      "sha256": "7955c47c93aa08efa4ade09e4efcc1de3f589facaed965f5f68bca392166def5",
+      "bytes": 17474
+    },
+    {
+      "file": "background_selected_worker.py",
+      "sha256": "7edc1ce50e9726e8c3fb4b1e20af5a1e59da4e33a9247fe054ffa7b8b71e265a",
+      "bytes": 6790
+    },
+    {
+      "file": "jpeg_producer.py",
+      "sha256": "3b70d38740c60d87fcd8399916c4b0d98dd627592e72e8908a280b810c863483",
+      "bytes": 5293
+    },
+    {
+      "file": "causal_selector.py",
+      "sha256": "5f1611ff42b660032cb4806b60e898409440ba65a9e3c7c7dba6976846859b18",
+      "bytes": 2713
+    },
+    {
+      "file": "process_cpu.py",
+      "sha256": "d0ccc4f972e0066f8d0ebc02a1a5232733cda4164c9ffe4cf0358534373540a4",
+      "bytes": 798
+    },
+    {
+      "file": "collect_results.py",
+      "sha256": "6294c7718fdd3343fdbba81dcd9d8d08a4e64491b77b3577639c99f0a22f325f",
+      "bytes": 3025
+    }
+  ],
+  "selector_or_counter_or_identity_threshold_changed": false,
+  "both_modes_verify_each_acquired_JPEG": true,
+  "async_producer_reads_every_released_source_frame": true,
+  "producer_release_gated_no_future_reads": true,
+  "producer_cleaned_payload_bank_maximum": 7,
+  "producer_transient_maximum_including_new_read": 8,
+  "foreground_ring_cleaned_maximum": 6,
+  "queue_payload_and_decoded_image_memory_additional": true,
+  "lowres192_is_ready_replay_not_derived_from_current_JPEG_at_runtime": true,
+  "timing_from_global_lowres_release_includes_wait_for_actual_highres_acquisition": true,
+  "hypothesis": "Measure actual count-triggered crop selection, actual ARM candidates and foreground/backlog when only the identity encoder with its matched gallery changes.",
+  "simulated_RFID_all_unread": true,
+  "actual_camera_or_RFID_hardware": false,
+  "same_replay_repeats_not_independent_sessions": true,
+  "global_cache_or_swap_controls": false,
+  "new_training_updates": 0,
+  "new_independent_test": false,
+  "whole_goal_complete": false,
+  "new_boundary_instrumentation": "Same two child/proc/stat CPU-tick snapshots in both policies; clocks include boundary read overhead, not layer-level CPU scheduling trace.",
+  "all_current_cases_async_JPEG_producer": true,
+  "foreground_affinity": [
+    0,
+    1
+  ],
+  "background_affinity": [
+    0,
+    1
+  ],
+  "models": {
+    "old": {
+      "encoder_directory": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029",
+      "encoder_bin_sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b",
+      "gallery_features_file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/all_normalized_features.npz",
+      "gallery_array_key": "new_gallery",
+      "gallery_SHA256": "a23bf0714a0d8ef12f23ea5198fc2ad82f209b61c058f692613114f0d1f05ac1"
+    },
+    "new": {
+      "encoder_directory": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030",
+      "encoder_bin_sha256": "2a587d0fe293d244eb5632feb0e3665cf6091243198612b59363a6a7bb173252",
+      "gallery_features_file": "/home/xilinx/jupyter_notebooks/cow_research_identity_joint_pair_20261030/results/identity_qualification/all_features.npz",
+      "gallery_array_key": "normalized",
+      "gallery_SHA256": "0eb51bda110e1f2e1abb5d447db9db576f5e901a779c44cc187ed3f1bb8e351c"
+    }
+  },
+  "secondary_Cows_threshold": 0.8707458695890389,
+  "source_worker_sha256": "27595f6b57c386671c5da67fbc875e474f8bdcc595eb5e848374fc1c63d80fdf",
+  "jobs_decoupled_from_current_counter": false,
+  "exactly10_identity_jobs_forced": false,
+  "models_and_corresponding_gallery_only_treatment": true,
+  "default_model_or_threshold_changed": false,
+  "foreground_affinity_scope": "main thread and observed producer; not every existing library thread",
+  "source_latest90_ARM_review_sha256": "2ad5b8acb5baeeb4e856aae0186834a94a6800ae5de512ddbf0d696cf76c172b"
+}

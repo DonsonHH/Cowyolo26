@@ -1,0 +1,132 @@
+[
+  {
+    "seed": 26,
+    "transitions": [
+      {
+        "float": "C",
+        "QAT": "C",
+        "queries": 10
+      },
+      {
+        "float": "C",
+        "QAT": "U_rank_correct",
+        "queries": 8
+      },
+      {
+        "float": "U_rank_correct",
+        "QAT": "U_rank_correct",
+        "queries": 6
+      },
+      {
+        "float": "U_rank_correct",
+        "QAT": "W",
+        "queries": 1
+      },
+      {
+        "float": "unknown_false_accept",
+        "QAT": "unknown_reject",
+        "queries": 1
+      },
+      {
+        "float": "unknown_reject",
+        "QAT": "unknown_false_accept",
+        "queries": 1
+      },
+      {
+        "float": "unknown_reject",
+        "QAT": "unknown_reject",
+        "queries": 28
+      }
+    ]
+  },
+  {
+    "seed": 27,
+    "transitions": [
+      {
+        "float": "C",
+        "QAT": "C",
+        "queries": 7
+      },
+      {
+        "float": "C",
+        "QAT": "U_rank_correct",
+        "queries": 9
+      },
+      {
+        "float": "U_rank_correct",
+        "QAT": "C",
+        "queries": 2
+      },
+      {
+        "float": "U_rank_correct",
+        "QAT": "U_rank_correct",
+        "queries": 7
+      },
+      {
+        "float": "unknown_false_accept",
+        "QAT": "unknown_false_accept",
+        "queries": 1
+      },
+      {
+        "float": "unknown_reject",
+        "QAT": "unknown_reject",
+        "queries": 29
+      }
+    ]
+  },
+  {
+    "seed": 28,
+    "transitions": [
+      {
+        "float": "C",
+        "QAT": "C",
+        "queries": 5
+      },
+      {
+        "float": "C",
+        "QAT": "U_rank_correct",
+        "queries": 4
+      },
+      {
+        "float": "C",
+        "QAT": "U_rank_wrong",
+        "queries": 5
+      },
+      {
+        "float": "C",
+        "QAT": "W",
+        "queries": 1
+      },
+      {
+        "float": "U_rank_correct",
+        "QAT": "C",
+        "queries": 2
+      },
+      {
+        "float": "U_rank_correct",
+        "QAT": "U_rank_correct",
+        "queries": 5
+      },
+      {
+        "float": "U_rank_correct",
+        "QAT": "U_rank_wrong",
+        "queries": 3
+      },
+      {
+        "float": "unknown_false_accept",
+        "QAT": "unknown_reject",
+        "queries": 1
+      },
+      {
+        "float": "unknown_reject",
+        "QAT": "unknown_false_accept",
+        "queries": 1
+      },
+      {
+        "float": "unknown_reject",
+        "QAT": "unknown_reject",
+        "queries": 28
+      }
+    ]
+  }
+]

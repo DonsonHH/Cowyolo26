@@ -1,0 +1,4724 @@
+{
+  "status": "NINE_EXACT_BASELINES_AND_NINE_FIRSTSTAGE_ONLY_IOU_CONTROLS_COMPLETE",
+  "job_id": "130351",
+  "protocol_sha256": "648d3f7d226fff6885245bdcd137c5bfcab9f0ecf263650f02965bcc2a985450",
+  "conditions": [
+    {
+      "name": "long_official__original_fused",
+      "source": "long_official",
+      "scene": "new_long",
+      "model": "official",
+      "variant": "original_fused",
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "observation_ticks": 2025,
+      "post_tracker_rows": 7,
+      "ROI_rows": 0,
+      "all_history_down": 0,
+      "all_history_up": 0,
+      "baseline_checks": {
+        "all_observations_tentative_and_acceptance_history_exact": true,
+        "all_full_image_and_ROI_boxes_exact": true,
+        "both_counter_event_paths_exact": true
+      },
+      "window_counters": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "long_seed26__original_fused",
+      "source": "long_seed26",
+      "scene": "new_long",
+      "model": "seed26",
+      "variant": "original_fused",
+      "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "observation_ticks": 2025,
+      "post_tracker_rows": 909,
+      "ROI_rows": 297,
+      "all_history_down": 11,
+      "all_history_up": 0,
+      "baseline_checks": {
+        "all_observations_tentative_and_acceptance_history_exact": true,
+        "all_full_image_and_ROI_boxes_exact": true,
+        "both_counter_event_paths_exact": true
+      },
+      "window_counters": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "down": 10,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 107.6,
+              "track_id": 20,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 21,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 24,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 31,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 136.0,
+              "track_id": 34,
+              "direction": "A->B",
+              "frame0": 3400
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 36,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 38,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 152.8,
+              "track_id": 44,
+              "direction": "A->B",
+              "frame0": 3820
+            },
+            {
+              "time_s": 153.8,
+              "track_id": 42,
+              "direction": "A->B",
+              "frame0": 3845
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 50,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "down": 10,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 107.6,
+              "track_id": 20,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 21,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 24,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 31,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 136.0,
+              "track_id": 34,
+              "direction": "A->B",
+              "frame0": 3400
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 36,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 38,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 152.8,
+              "track_id": 44,
+              "direction": "A->B",
+              "frame0": 3820
+            },
+            {
+              "time_s": 153.8,
+              "track_id": 42,
+              "direction": "A->B",
+              "frame0": 3845
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 50,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 82,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 82,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "long_seed27__original_fused",
+      "source": "long_seed27",
+      "scene": "new_long",
+      "model": "seed27",
+      "variant": "original_fused",
+      "checkpoint_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "observation_ticks": 2025,
+      "post_tracker_rows": 387,
+      "ROI_rows": 214,
+      "all_history_down": 12,
+      "all_history_up": 0,
+      "baseline_checks": {
+        "all_observations_tentative_and_acceptance_history_exact": true,
+        "all_full_image_and_ROI_boxes_exact": true,
+        "both_counter_event_paths_exact": true
+      },
+      "window_counters": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "down": 10,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 106.8,
+              "track_id": 14,
+              "direction": "A->B",
+              "frame0": 2670
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 15,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 16,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 21,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 135.4,
+              "track_id": 23,
+              "direction": "A->B",
+              "frame0": 3385
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 26,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 27,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 152.8,
+              "track_id": 31,
+              "direction": "A->B",
+              "frame0": 3820
+            },
+            {
+              "time_s": 154.0,
+              "track_id": 30,
+              "direction": "A->B",
+              "frame0": 3850
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 34,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 106.8,
+              "track_id": 14,
+              "direction": "A->B",
+              "frame0": 2670
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 15,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 18,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 16,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 21,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 135.4,
+              "track_id": 23,
+              "direction": "A->B",
+              "frame0": 3385
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 26,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 27,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 152.8,
+              "track_id": 31,
+              "direction": "A->B",
+              "frame0": 3820
+            },
+            {
+              "time_s": 154.0,
+              "track_id": 30,
+              "direction": "A->B",
+              "frame0": 3850
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 34,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 36,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 36,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "long_seed28__original_fused",
+      "source": "long_seed28",
+      "scene": "new_long",
+      "model": "seed28",
+      "variant": "original_fused",
+      "checkpoint_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "observation_ticks": 2025,
+      "post_tracker_rows": 3027,
+      "ROI_rows": 220,
+      "all_history_down": 12,
+      "all_history_up": 0,
+      "baseline_checks": {
+        "all_observations_tentative_and_acceptance_history_exact": true,
+        "all_full_image_and_ROI_boxes_exact": true,
+        "both_counter_event_paths_exact": true
+      },
+      "window_counters": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 106.8,
+              "track_id": 11,
+              "direction": "A->B",
+              "frame0": 2670
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 13,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 17,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 14,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 18,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 135.6,
+              "track_id": 21,
+              "direction": "A->B",
+              "frame0": 3390
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 23,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 27,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 153.0,
+              "track_id": 32,
+              "direction": "A->B",
+              "frame0": 3825
+            },
+            {
+              "time_s": 153.8,
+              "track_id": 31,
+              "direction": "A->B",
+              "frame0": 3845
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 36,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 106.8,
+              "track_id": 11,
+              "direction": "A->B",
+              "frame0": 2670
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 13,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 17,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 14,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 18,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 135.6,
+              "track_id": 21,
+              "direction": "A->B",
+              "frame0": 3390
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 23,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 27,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 153.0,
+              "track_id": 32,
+              "direction": "A->B",
+              "frame0": 3825
+            },
+            {
+              "time_s": 153.8,
+              "track_id": 31,
+              "direction": "A->B",
+              "frame0": 3845
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 36,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 45,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 45,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "original_seed26__original_fused",
+      "source": "original_seed26",
+      "scene": "original_clip",
+      "model": "seed26",
+      "variant": "original_fused",
+      "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "observation_ticks": 2175,
+      "post_tracker_rows": 2125,
+      "ROI_rows": 571,
+      "all_history_down": 12,
+      "all_history_up": 0,
+      "baseline_checks": {
+        "all_observations_tentative_and_acceptance_history_exact": true,
+        "all_ROI_boxes_history_exact_full_image_IDs_exact": true,
+        "all_nonROI_box_coordinates_had_prior_reference": false,
+        "both_counter_event_paths_exact": true
+      },
+      "window_counters": [
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmed_only",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 359.8,
+              "track_id": 86,
+              "direction": "A->B",
+              "frame0": 8995
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 88,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 91,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.6,
+              "track_id": 93,
+              "direction": "A->B",
+              "frame0": 9340
+            },
+            {
+              "time_s": 374.6,
+              "track_id": 94,
+              "direction": "A->B",
+              "frame0": 9365
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 96,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 103,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 98,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 102,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 117,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.2,
+              "track_id": 141,
+              "direction": "A->B",
+              "frame0": 10830
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 1
+        },
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmation_handoff",
+          "down": 12,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 359.8,
+              "track_id": 86,
+              "direction": "A->B",
+              "frame0": 8995
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 88,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 91,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.6,
+              "track_id": 93,
+              "direction": "A->B",
+              "frame0": 9340
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 95,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 374.6,
+              "track_id": 94,
+              "direction": "A->B",
+              "frame0": 9365
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 96,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 103,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 98,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 102,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 117,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.2,
+              "track_id": 141,
+              "direction": "A->B",
+              "frame0": 10830
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 0
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 2,
+      "ROI_ticks_with_overlap_candidate": 2,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "user_confirmed_down_total12_development_clip",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "original_seed27__original_fused",
+      "source": "original_seed27",
+      "scene": "original_clip",
+      "model": "seed27",
+      "variant": "original_fused",
+      "checkpoint_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "observation_ticks": 2175,
+      "post_tracker_rows": 2065,
+      "ROI_rows": 553,
+      "all_history_down": 11,
+      "all_history_up": 0,
+      "baseline_checks": {
+        "all_observations_tentative_and_acceptance_history_exact": true,
+        "all_ROI_boxes_history_exact_full_image_IDs_exact": true,
+        "all_nonROI_box_coordinates_had_prior_reference": false,
+        "both_counter_event_paths_exact": true
+      },
+      "window_counters": [
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmed_only",
+          "down": 10,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 359.8,
+              "track_id": 50,
+              "direction": "A->B",
+              "frame0": 8995
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 52,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 53,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.6,
+              "track_id": 54,
+              "direction": "A->B",
+              "frame0": 9340
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 64,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 68,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 65,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 67,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 73,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.6,
+              "track_id": 100,
+              "direction": "A->B",
+              "frame0": 10840
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 2
+        },
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmation_handoff",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 359.8,
+              "track_id": 50,
+              "direction": "A->B",
+              "frame0": 8995
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 52,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 53,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.6,
+              "track_id": 54,
+              "direction": "A->B",
+              "frame0": 9340
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 57,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 64,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 68,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 65,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 67,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 73,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.6,
+              "track_id": 100,
+              "direction": "A->B",
+              "frame0": 10840
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 1
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "user_confirmed_down_total12_development_clip",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "original_seed28__original_fused",
+      "source": "original_seed28",
+      "scene": "original_clip",
+      "model": "seed28",
+      "variant": "original_fused",
+      "checkpoint_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "observation_ticks": 2175,
+      "post_tracker_rows": 3458,
+      "ROI_rows": 575,
+      "all_history_down": 11,
+      "all_history_up": 0,
+      "baseline_checks": {
+        "all_observations_tentative_and_acceptance_history_exact": true,
+        "all_ROI_boxes_history_exact_full_image_IDs_exact": true,
+        "all_nonROI_box_coordinates_had_prior_reference": false,
+        "both_counter_event_paths_exact": true
+      },
+      "window_counters": [
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmed_only",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 360.0,
+              "track_id": 108,
+              "direction": "A->B",
+              "frame0": 9000
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 110,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 112,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 115,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 113,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 119,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 136,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 388.2,
+              "track_id": 121,
+              "direction": "A->B",
+              "frame0": 9705
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 135,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 141,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.2,
+              "track_id": 163,
+              "direction": "A->B",
+              "frame0": 10830
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 1
+        },
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmation_handoff",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 360.0,
+              "track_id": 108,
+              "direction": "A->B",
+              "frame0": 9000
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 110,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 112,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 115,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 113,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 119,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 136,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 388.2,
+              "track_id": 121,
+              "direction": "A->B",
+              "frame0": 9705
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 135,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 141,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.2,
+              "track_id": 163,
+              "direction": "A->B",
+              "frame0": 10830
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 1
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 1,
+      "ROI_ticks_with_overlap_candidate": 1,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "user_confirmed_down_total12_development_clip",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "toros_generic__original_fused",
+      "source": "toros_generic",
+      "scene": "toros_used_reverse",
+      "model": "generic",
+      "variant": "original_fused",
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "observation_ticks": 479,
+      "post_tracker_rows": 1158,
+      "ROI_rows": 1145,
+      "all_history_down": 0,
+      "all_history_up": 6,
+      "baseline_checks": {
+        "all_observations_tentative_and_acceptance_history_exact": true,
+        "all_full_image_and_ROI_boxes_exact": true,
+        "both_counter_event_paths_exact": true
+      },
+      "window_counters": [
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 6,
+          "events": [
+            {
+              "time_s": 3.6666666666666665,
+              "track_id": 2,
+              "direction": "B->A",
+              "frame0": 110
+            },
+            {
+              "time_s": 6.633333333333334,
+              "track_id": 5,
+              "direction": "B->A",
+              "frame0": 199
+            },
+            {
+              "time_s": 8.166666666666666,
+              "track_id": 25,
+              "direction": "B->A",
+              "frame0": 245
+            },
+            {
+              "time_s": 9.7,
+              "track_id": 31,
+              "direction": "B->A",
+              "frame0": 291
+            },
+            {
+              "time_s": 10.733333333333333,
+              "track_id": 54,
+              "direction": "B->A",
+              "frame0": 322
+            },
+            {
+              "time_s": 13.233333333333333,
+              "track_id": 34,
+              "direction": "B->A",
+              "frame0": 397
+            }
+          ],
+          "formal_event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          }
+        },
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 6,
+          "events": [
+            {
+              "time_s": 3.6666666666666665,
+              "track_id": 2,
+              "direction": "B->A",
+              "frame0": 110
+            },
+            {
+              "time_s": 6.633333333333334,
+              "track_id": 5,
+              "direction": "B->A",
+              "frame0": 199
+            },
+            {
+              "time_s": 8.166666666666666,
+              "track_id": 25,
+              "direction": "B->A",
+              "frame0": 245
+            },
+            {
+              "time_s": 9.7,
+              "track_id": 31,
+              "direction": "B->A",
+              "frame0": 291
+            },
+            {
+              "time_s": 10.733333333333333,
+              "track_id": 54,
+              "direction": "B->A",
+              "frame0": 322
+            },
+            {
+              "time_s": 13.233333333333333,
+              "track_id": 34,
+              "direction": "B->A",
+              "frame0": 397
+            }
+          ],
+          "formal_event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          }
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 2,
+      "ROI_ticks_with_overlap_candidate": 1,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "already_used_publisher_trajectory_derived_six_events",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "toros_pilot__original_fused",
+      "source": "toros_pilot",
+      "scene": "toros_used_reverse",
+      "model": "pilot",
+      "variant": "original_fused",
+      "checkpoint_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+      "observation_ticks": 479,
+      "post_tracker_rows": 905,
+      "ROI_rows": 891,
+      "all_history_down": 0,
+      "all_history_up": 2,
+      "baseline_checks": {
+        "all_observations_tentative_and_acceptance_history_exact": true,
+        "all_full_image_and_ROI_boxes_exact": true,
+        "both_counter_event_paths_exact": true
+      },
+      "window_counters": [
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 2,
+          "events": [
+            {
+              "time_s": 8.2,
+              "track_id": 21,
+              "direction": "B->A",
+              "frame0": 246
+            },
+            {
+              "time_s": 13.166666666666666,
+              "track_id": 39,
+              "direction": "B->A",
+              "frame0": 395
+            }
+          ],
+          "formal_event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 2,
+            "temporally_matched": 2,
+            "correct_direction_matches": 2,
+            "wrong_direction_matches": 0,
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 2
+              }
+            },
+            "mean_absolute_direction_count_error": 2.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 1,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          }
+        },
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 2,
+          "events": [
+            {
+              "time_s": 8.2,
+              "track_id": 21,
+              "direction": "B->A",
+              "frame0": 246
+            },
+            {
+              "time_s": 13.166666666666666,
+              "track_id": 39,
+              "direction": "B->A",
+              "frame0": 395
+            }
+          ],
+          "formal_event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 2,
+            "temporally_matched": 2,
+            "correct_direction_matches": 2,
+            "wrong_direction_matches": 0,
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 2
+              }
+            },
+            "mean_absolute_direction_count_error": 2.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 1,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          }
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 22,
+      "ROI_ticks_with_overlap_candidate": 22,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "already_used_publisher_trajectory_derived_six_events",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "long_official__firststage_pure_IoU",
+      "source": "long_official",
+      "scene": "new_long",
+      "model": "official",
+      "variant": "firststage_pure_IoU",
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "observation_ticks": 2025,
+      "post_tracker_rows": 7,
+      "ROI_rows": 0,
+      "all_history_down": 0,
+      "all_history_up": 0,
+      "baseline_checks": null,
+      "window_counters": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "long_seed26__firststage_pure_IoU",
+      "source": "long_seed26",
+      "scene": "new_long",
+      "model": "seed26",
+      "variant": "firststage_pure_IoU",
+      "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "observation_ticks": 2025,
+      "post_tracker_rows": 910,
+      "ROI_rows": 303,
+      "all_history_down": 12,
+      "all_history_up": 0,
+      "baseline_checks": null,
+      "window_counters": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 107.0,
+              "track_id": 19,
+              "direction": "A->B",
+              "frame0": 2675
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 20,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 21,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 23,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 30,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 136.0,
+              "track_id": 33,
+              "direction": "A->B",
+              "frame0": 3400
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 35,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 37,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 152.8,
+              "track_id": 43,
+              "direction": "A->B",
+              "frame0": 3820
+            },
+            {
+              "time_s": 153.6,
+              "track_id": 41,
+              "direction": "A->B",
+              "frame0": 3840
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 48,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 107.0,
+              "track_id": 19,
+              "direction": "A->B",
+              "frame0": 2675
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 20,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 21,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 23,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 30,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 136.0,
+              "track_id": 33,
+              "direction": "A->B",
+              "frame0": 3400
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 35,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 37,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 152.8,
+              "track_id": 43,
+              "direction": "A->B",
+              "frame0": 3820
+            },
+            {
+              "time_s": 153.6,
+              "track_id": 41,
+              "direction": "A->B",
+              "frame0": 3840
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 48,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 76,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 76,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "long_seed27__firststage_pure_IoU",
+      "source": "long_seed27",
+      "scene": "new_long",
+      "model": "seed27",
+      "variant": "firststage_pure_IoU",
+      "checkpoint_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "observation_ticks": 2025,
+      "post_tracker_rows": 388,
+      "ROI_rows": 218,
+      "all_history_down": 12,
+      "all_history_up": 0,
+      "baseline_checks": null,
+      "window_counters": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "down": 10,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 106.8,
+              "track_id": 14,
+              "direction": "A->B",
+              "frame0": 2670
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 15,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 16,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 20,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 135.4,
+              "track_id": 22,
+              "direction": "A->B",
+              "frame0": 3385
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 24,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 25,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 152.8,
+              "track_id": 28,
+              "direction": "A->B",
+              "frame0": 3820
+            },
+            {
+              "time_s": 154.0,
+              "track_id": 27,
+              "direction": "A->B",
+              "frame0": 3850
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 31,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 106.8,
+              "track_id": 14,
+              "direction": "A->B",
+              "frame0": 2670
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 15,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 18,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 16,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 20,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 135.4,
+              "track_id": 22,
+              "direction": "A->B",
+              "frame0": 3385
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 24,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 25,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 152.8,
+              "track_id": 28,
+              "direction": "A->B",
+              "frame0": 3820
+            },
+            {
+              "time_s": 154.0,
+              "track_id": 27,
+              "direction": "A->B",
+              "frame0": 3850
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 31,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 33,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 33,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "long_seed28__firststage_pure_IoU",
+      "source": "long_seed28",
+      "scene": "new_long",
+      "model": "seed28",
+      "variant": "firststage_pure_IoU",
+      "checkpoint_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "observation_ticks": 2025,
+      "post_tracker_rows": 3036,
+      "ROI_rows": 223,
+      "all_history_down": 12,
+      "all_history_up": 0,
+      "baseline_checks": null,
+      "window_counters": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 106.8,
+              "track_id": 8,
+              "direction": "A->B",
+              "frame0": 2670
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 9,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 13,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 10,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 14,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 135.4,
+              "track_id": 16,
+              "direction": "A->B",
+              "frame0": 3385
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 17,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 20,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 153.0,
+              "track_id": 25,
+              "direction": "A->B",
+              "frame0": 3825
+            },
+            {
+              "time_s": 153.8,
+              "track_id": 24,
+              "direction": "A->B",
+              "frame0": 3845
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 29,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 106.8,
+              "track_id": 8,
+              "direction": "A->B",
+              "frame0": 2670
+            },
+            {
+              "time_s": 107.6,
+              "track_id": 9,
+              "direction": "A->B",
+              "frame0": 2690
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 13,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 108.8,
+              "track_id": 10,
+              "direction": "A->B",
+              "frame0": 2720
+            },
+            {
+              "time_s": 117.2,
+              "track_id": 14,
+              "direction": "A->B",
+              "frame0": 2930
+            },
+            {
+              "time_s": 135.4,
+              "track_id": 16,
+              "direction": "A->B",
+              "frame0": 3385
+            },
+            {
+              "time_s": 144.4,
+              "track_id": 17,
+              "direction": "A->B",
+              "frame0": 3610
+            },
+            {
+              "time_s": 147.8,
+              "track_id": 20,
+              "direction": "A->B",
+              "frame0": 3695
+            },
+            {
+              "time_s": 153.0,
+              "track_id": 25,
+              "direction": "A->B",
+              "frame0": 3825
+            },
+            {
+              "time_s": 153.8,
+              "track_id": 24,
+              "direction": "A->B",
+              "frame0": 3845
+            },
+            {
+              "time_s": 160.4,
+              "track_id": 29,
+              "direction": "A->B",
+              "frame0": 4010
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 36,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "down": 1,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 212.8,
+              "track_id": 36,
+              "direction": "A->B",
+              "frame0": 5320
+            }
+          ],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 0,
+          "events": [],
+          "formal_event_metrics": null
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "original_seed26__firststage_pure_IoU",
+      "source": "original_seed26",
+      "scene": "original_clip",
+      "model": "seed26",
+      "variant": "firststage_pure_IoU",
+      "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "observation_ticks": 2175,
+      "post_tracker_rows": 2128,
+      "ROI_rows": 574,
+      "all_history_down": 12,
+      "all_history_up": 0,
+      "baseline_checks": null,
+      "window_counters": [
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmed_only",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 359.8,
+              "track_id": 86,
+              "direction": "A->B",
+              "frame0": 8995
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 88,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 91,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.6,
+              "track_id": 93,
+              "direction": "A->B",
+              "frame0": 9340
+            },
+            {
+              "time_s": 374.6,
+              "track_id": 94,
+              "direction": "A->B",
+              "frame0": 9365
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 96,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 103,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 99,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 102,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 116,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.2,
+              "track_id": 138,
+              "direction": "A->B",
+              "frame0": 10830
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 1
+        },
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmation_handoff",
+          "down": 12,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 359.8,
+              "track_id": 86,
+              "direction": "A->B",
+              "frame0": 8995
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 88,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 91,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.6,
+              "track_id": 93,
+              "direction": "A->B",
+              "frame0": 9340
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 95,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 374.6,
+              "track_id": 94,
+              "direction": "A->B",
+              "frame0": 9365
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 96,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 103,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 99,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 102,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 116,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.2,
+              "track_id": 138,
+              "direction": "A->B",
+              "frame0": 10830
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 0
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 4,
+      "ROI_ticks_with_overlap_candidate": 4,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "user_confirmed_down_total12_development_clip",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "original_seed27__firststage_pure_IoU",
+      "source": "original_seed27",
+      "scene": "original_clip",
+      "model": "seed27",
+      "variant": "firststage_pure_IoU",
+      "checkpoint_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "observation_ticks": 2175,
+      "post_tracker_rows": 2068,
+      "ROI_rows": 557,
+      "all_history_down": 11,
+      "all_history_up": 0,
+      "baseline_checks": null,
+      "window_counters": [
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmed_only",
+          "down": 10,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 359.8,
+              "track_id": 50,
+              "direction": "A->B",
+              "frame0": 8995
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 51,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 52,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.6,
+              "track_id": 53,
+              "direction": "A->B",
+              "frame0": 9340
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 62,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 65,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 63,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 64,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 69,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.6,
+              "track_id": 96,
+              "direction": "A->B",
+              "frame0": 10840
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 2
+        },
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmation_handoff",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 359.8,
+              "track_id": 50,
+              "direction": "A->B",
+              "frame0": 8995
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 51,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 52,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.6,
+              "track_id": 53,
+              "direction": "A->B",
+              "frame0": 9340
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 56,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 62,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 65,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 63,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 64,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 69,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.6,
+              "track_id": 96,
+              "direction": "A->B",
+              "frame0": 10840
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 1
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 0,
+      "ROI_ticks_with_overlap_candidate": 0,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "user_confirmed_down_total12_development_clip",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "original_seed28__firststage_pure_IoU",
+      "source": "original_seed28",
+      "scene": "original_clip",
+      "model": "seed28",
+      "variant": "firststage_pure_IoU",
+      "checkpoint_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "observation_ticks": 2175,
+      "post_tracker_rows": 3478,
+      "ROI_rows": 588,
+      "all_history_down": 11,
+      "all_history_up": 0,
+      "baseline_checks": null,
+      "window_counters": [
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmed_only",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 360.0,
+              "track_id": 100,
+              "direction": "A->B",
+              "frame0": 9000
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 102,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 104,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 107,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 105,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 110,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 126,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 111,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 125,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 130,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.2,
+              "track_id": 142,
+              "direction": "A->B",
+              "frame0": 10830
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 1
+        },
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmation_handoff",
+          "down": 11,
+          "up": 0,
+          "events": [
+            {
+              "time_s": 360.0,
+              "track_id": 100,
+              "direction": "A->B",
+              "frame0": 9000
+            },
+            {
+              "time_s": 365.4,
+              "track_id": 102,
+              "direction": "A->B",
+              "frame0": 9135
+            },
+            {
+              "time_s": 370.6,
+              "track_id": 104,
+              "direction": "A->B",
+              "frame0": 9265
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 107,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 373.8,
+              "track_id": 105,
+              "direction": "A->B",
+              "frame0": 9345
+            },
+            {
+              "time_s": 378.6,
+              "track_id": 110,
+              "direction": "A->B",
+              "frame0": 9465
+            },
+            {
+              "time_s": 384.2,
+              "track_id": 126,
+              "direction": "A->B",
+              "frame0": 9605
+            },
+            {
+              "time_s": 387.6,
+              "track_id": 111,
+              "direction": "A->B",
+              "frame0": 9690
+            },
+            {
+              "time_s": 391.6,
+              "track_id": 125,
+              "direction": "A->B",
+              "frame0": 9790
+            },
+            {
+              "time_s": 396.0,
+              "track_id": 130,
+              "direction": "A->B",
+              "frame0": 9900
+            },
+            {
+              "time_s": 433.2,
+              "track_id": 142,
+              "direction": "A->B",
+              "frame0": 10830
+            }
+          ],
+          "formal_event_metrics": null,
+          "human_down_total": 12,
+          "absolute_down_total_error": 1
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 1,
+      "ROI_ticks_with_overlap_candidate": 1,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "user_confirmed_down_total12_development_clip",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "toros_generic__firststage_pure_IoU",
+      "source": "toros_generic",
+      "scene": "toros_used_reverse",
+      "model": "generic",
+      "variant": "firststage_pure_IoU",
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "observation_ticks": 479,
+      "post_tracker_rows": 1185,
+      "ROI_rows": 1172,
+      "all_history_down": 0,
+      "all_history_up": 5,
+      "baseline_checks": null,
+      "window_counters": [
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 5,
+          "events": [
+            {
+              "time_s": 3.6666666666666665,
+              "track_id": 2,
+              "direction": "B->A",
+              "frame0": 110
+            },
+            {
+              "time_s": 8.166666666666666,
+              "track_id": 5,
+              "direction": "B->A",
+              "frame0": 245
+            },
+            {
+              "time_s": 9.633333333333333,
+              "track_id": 19,
+              "direction": "B->A",
+              "frame0": 289
+            },
+            {
+              "time_s": 10.733333333333333,
+              "track_id": 38,
+              "direction": "B->A",
+              "frame0": 322
+            },
+            {
+              "time_s": 13.233333333333333,
+              "track_id": 21,
+              "direction": "B->A",
+              "frame0": 397
+            }
+          ],
+          "formal_event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 5,
+            "temporally_matched": 5,
+            "correct_direction_matches": 5,
+            "wrong_direction_matches": 0,
+            "TP": 5,
+            "FP": 0,
+            "FN": 1,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1": 0.9090909090909091,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 5
+              }
+            },
+            "mean_absolute_direction_count_error": 0.5,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 1,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 2,
+                "time_error_s": 0.09999999999999964,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 3,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 4,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              1
+            ],
+            "unmatched_prediction_indices": []
+          }
+        },
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 5,
+          "events": [
+            {
+              "time_s": 3.6666666666666665,
+              "track_id": 2,
+              "direction": "B->A",
+              "frame0": 110
+            },
+            {
+              "time_s": 8.166666666666666,
+              "track_id": 5,
+              "direction": "B->A",
+              "frame0": 245
+            },
+            {
+              "time_s": 9.633333333333333,
+              "track_id": 19,
+              "direction": "B->A",
+              "frame0": 289
+            },
+            {
+              "time_s": 10.733333333333333,
+              "track_id": 38,
+              "direction": "B->A",
+              "frame0": 322
+            },
+            {
+              "time_s": 13.233333333333333,
+              "track_id": 21,
+              "direction": "B->A",
+              "frame0": 397
+            }
+          ],
+          "formal_event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 5,
+            "temporally_matched": 5,
+            "correct_direction_matches": 5,
+            "wrong_direction_matches": 0,
+            "TP": 5,
+            "FP": 0,
+            "FN": 1,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1": 0.9090909090909091,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 5
+              }
+            },
+            "mean_absolute_direction_count_error": 0.5,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 1,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 2,
+                "time_error_s": 0.09999999999999964,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 3,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 4,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              1
+            ],
+            "unmatched_prediction_indices": []
+          }
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 7,
+      "ROI_ticks_with_overlap_candidate": 6,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "already_used_publisher_trajectory_derived_six_events",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    },
+    {
+      "name": "toros_pilot__firststage_pure_IoU",
+      "source": "toros_pilot",
+      "scene": "toros_used_reverse",
+      "model": "pilot",
+      "variant": "firststage_pure_IoU",
+      "checkpoint_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+      "observation_ticks": 479,
+      "post_tracker_rows": 936,
+      "ROI_rows": 926,
+      "all_history_down": 0,
+      "all_history_up": 4,
+      "baseline_checks": null,
+      "window_counters": [
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmed_only",
+          "down": 0,
+          "up": 4,
+          "events": [
+            {
+              "time_s": 4.466666666666667,
+              "track_id": 1,
+              "direction": "B->A",
+              "frame0": 134
+            },
+            {
+              "time_s": 7.166666666666667,
+              "track_id": 4,
+              "direction": "B->A",
+              "frame0": 215
+            },
+            {
+              "time_s": 8.2,
+              "track_id": 20,
+              "direction": "B->A",
+              "frame0": 246
+            },
+            {
+              "time_s": 13.166666666666666,
+              "track_id": 25,
+              "direction": "B->A",
+              "frame0": 395
+            }
+          ],
+          "formal_event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 4,
+            "temporally_matched": 4,
+            "correct_direction_matches": 4,
+            "wrong_direction_matches": 0,
+            "TP": 4,
+            "FP": 0,
+            "FN": 2,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 4
+              }
+            },
+            "mean_absolute_direction_count_error": 1.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.8000000000000003,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.7333333333333334,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 3,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          }
+        },
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmation_handoff",
+          "down": 0,
+          "up": 4,
+          "events": [
+            {
+              "time_s": 4.466666666666667,
+              "track_id": 1,
+              "direction": "B->A",
+              "frame0": 134
+            },
+            {
+              "time_s": 7.166666666666667,
+              "track_id": 4,
+              "direction": "B->A",
+              "frame0": 215
+            },
+            {
+              "time_s": 8.2,
+              "track_id": 20,
+              "direction": "B->A",
+              "frame0": 246
+            },
+            {
+              "time_s": 13.166666666666666,
+              "track_id": 25,
+              "direction": "B->A",
+              "frame0": 395
+            }
+          ],
+          "formal_event_metrics": {
+            "reference_events": 6,
+            "predicted_events": 4,
+            "temporally_matched": 4,
+            "correct_direction_matches": 4,
+            "wrong_direction_matches": 0,
+            "TP": 4,
+            "FP": 0,
+            "FN": 2,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 4
+              }
+            },
+            "mean_absolute_direction_count_error": 1.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.8000000000000003,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.7333333333333334,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 3,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          }
+        }
+      ],
+      "ROI_overlap_pairs_by_tick": 30,
+      "ROI_ticks_with_overlap_candidate": 29,
+      "effective_tracker_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "reference_authority": "already_used_publisher_trajectory_derived_six_events",
+      "new_detector_forwards": 0,
+      "new_training_updates": 0
+    }
+  ],
+  "paired_results": [
+    {
+      "source": "long_official",
+      "scene": "new_long",
+      "model": "official",
+      "window_differences": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        }
+      ],
+      "ROI_overlap_ticks_before_after": [
+        0,
+        0
+      ],
+      "ID_numbers_not_correspondences_between_variants": true
+    },
+    {
+      "source": "long_seed26",
+      "scene": "new_long",
+      "model": "seed26",
+      "window_differences": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            10,
+            0
+          ],
+          "after_down_up": [
+            11,
+            0
+          ],
+          "time_direction_multiset_added": [
+            [
+              2675,
+              "A->B"
+            ],
+            [
+              3840,
+              "A->B"
+            ]
+          ],
+          "time_direction_multiset_removed": [
+            [
+              3845,
+              "A->B"
+            ]
+          ],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            10,
+            0
+          ],
+          "after_down_up": [
+            11,
+            0
+          ],
+          "time_direction_multiset_added": [
+            [
+              2675,
+              "A->B"
+            ],
+            [
+              3840,
+              "A->B"
+            ]
+          ],
+          "time_direction_multiset_removed": [
+            [
+              3845,
+              "A->B"
+            ]
+          ],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            1,
+            0
+          ],
+          "after_down_up": [
+            1,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            1,
+            0
+          ],
+          "after_down_up": [
+            1,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        }
+      ],
+      "ROI_overlap_ticks_before_after": [
+        0,
+        0
+      ],
+      "ID_numbers_not_correspondences_between_variants": true
+    },
+    {
+      "source": "long_seed27",
+      "scene": "new_long",
+      "model": "seed27",
+      "window_differences": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            10,
+            0
+          ],
+          "after_down_up": [
+            10,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            11,
+            0
+          ],
+          "after_down_up": [
+            11,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            1,
+            0
+          ],
+          "after_down_up": [
+            1,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            1,
+            0
+          ],
+          "after_down_up": [
+            1,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        }
+      ],
+      "ROI_overlap_ticks_before_after": [
+        0,
+        0
+      ],
+      "ID_numbers_not_correspondences_between_variants": true
+    },
+    {
+      "source": "long_seed28",
+      "scene": "new_long",
+      "model": "seed28",
+      "window_differences": [
+        {
+          "window": "group_passage",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            11,
+            0
+          ],
+          "after_down_up": [
+            11,
+            0
+          ],
+          "time_direction_multiset_added": [
+            [
+              3385,
+              "A->B"
+            ]
+          ],
+          "time_direction_multiset_removed": [
+            [
+              3390,
+              "A->B"
+            ]
+          ],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "group_passage",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            11,
+            0
+          ],
+          "after_down_up": [
+            11,
+            0
+          ],
+          "time_direction_multiset_added": [
+            [
+              3385,
+              "A->B"
+            ]
+          ],
+          "time_direction_multiset_removed": [
+            [
+              3390,
+              "A->B"
+            ]
+          ],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            1,
+            0
+          ],
+          "after_down_up": [
+            1,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "late_single",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            1,
+            0
+          ],
+          "after_down_up": [
+            1,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "person_control",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            0,
+            0
+          ],
+          "after_down_up": [
+            0,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        }
+      ],
+      "ROI_overlap_ticks_before_after": [
+        0,
+        0
+      ],
+      "ID_numbers_not_correspondences_between_variants": true
+    },
+    {
+      "source": "original_seed26",
+      "scene": "original_clip",
+      "model": "seed26",
+      "window_differences": [
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            11,
+            0
+          ],
+          "after_down_up": [
+            11,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            12,
+            0
+          ],
+          "after_down_up": [
+            12,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        }
+      ],
+      "ROI_overlap_ticks_before_after": [
+        2,
+        4
+      ],
+      "ID_numbers_not_correspondences_between_variants": true
+    },
+    {
+      "source": "original_seed27",
+      "scene": "original_clip",
+      "model": "seed27",
+      "window_differences": [
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            10,
+            0
+          ],
+          "after_down_up": [
+            10,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            11,
+            0
+          ],
+          "after_down_up": [
+            11,
+            0
+          ],
+          "time_direction_multiset_added": [],
+          "time_direction_multiset_removed": [],
+          "original_metrics": null,
+          "candidate_metrics": null
+        }
+      ],
+      "ROI_overlap_ticks_before_after": [
+        0,
+        0
+      ],
+      "ID_numbers_not_correspondences_between_variants": true
+    },
+    {
+      "source": "original_seed28",
+      "scene": "original_clip",
+      "model": "seed28",
+      "window_differences": [
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            11,
+            0
+          ],
+          "after_down_up": [
+            11,
+            0
+          ],
+          "time_direction_multiset_added": [
+            [
+              9690,
+              "A->B"
+            ]
+          ],
+          "time_direction_multiset_removed": [
+            [
+              9705,
+              "A->B"
+            ]
+          ],
+          "original_metrics": null,
+          "candidate_metrics": null
+        },
+        {
+          "window": "confirmed12_scope",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            11,
+            0
+          ],
+          "after_down_up": [
+            11,
+            0
+          ],
+          "time_direction_multiset_added": [
+            [
+              9690,
+              "A->B"
+            ]
+          ],
+          "time_direction_multiset_removed": [
+            [
+              9705,
+              "A->B"
+            ]
+          ],
+          "original_metrics": null,
+          "candidate_metrics": null
+        }
+      ],
+      "ROI_overlap_ticks_before_after": [
+        1,
+        1
+      ],
+      "ID_numbers_not_correspondences_between_variants": true
+    },
+    {
+      "source": "toros_generic",
+      "scene": "toros_used_reverse",
+      "model": "generic",
+      "window_differences": [
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            0,
+            6
+          ],
+          "after_down_up": [
+            0,
+            5
+          ],
+          "time_direction_multiset_added": [
+            [
+              289,
+              "B->A"
+            ]
+          ],
+          "time_direction_multiset_removed": [
+            [
+              199,
+              "B->A"
+            ],
+            [
+              291,
+              "B->A"
+            ]
+          ],
+          "original_metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          },
+          "candidate_metrics": {
+            "reference_events": 6,
+            "predicted_events": 5,
+            "temporally_matched": 5,
+            "correct_direction_matches": 5,
+            "wrong_direction_matches": 0,
+            "TP": 5,
+            "FP": 0,
+            "FN": 1,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1": 0.9090909090909091,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 5
+              }
+            },
+            "mean_absolute_direction_count_error": 0.5,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 1,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 2,
+                "time_error_s": 0.09999999999999964,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 3,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 4,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              1
+            ],
+            "unmatched_prediction_indices": []
+          }
+        },
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            0,
+            6
+          ],
+          "after_down_up": [
+            0,
+            5
+          ],
+          "time_direction_multiset_added": [
+            [
+              289,
+              "B->A"
+            ]
+          ],
+          "time_direction_multiset_removed": [
+            [
+              199,
+              "B->A"
+            ],
+            [
+              291,
+              "B->A"
+            ]
+          ],
+          "original_metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          },
+          "candidate_metrics": {
+            "reference_events": 6,
+            "predicted_events": 5,
+            "temporally_matched": 5,
+            "correct_direction_matches": 5,
+            "wrong_direction_matches": 0,
+            "TP": 5,
+            "FP": 0,
+            "FN": 1,
+            "precision": 1.0,
+            "recall": 0.8333333333333334,
+            "f1": 0.9090909090909091,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 5
+              }
+            },
+            "mean_absolute_direction_count_error": 0.5,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 1,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 2,
+                "time_error_s": 0.09999999999999964,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 3,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 4,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              1
+            ],
+            "unmatched_prediction_indices": []
+          }
+        }
+      ],
+      "ROI_overlap_ticks_before_after": [
+        1,
+        6
+      ],
+      "ID_numbers_not_correspondences_between_variants": true
+    },
+    {
+      "source": "toros_pilot",
+      "scene": "toros_used_reverse",
+      "model": "pilot",
+      "window_differences": [
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmed_only",
+          "before_down_up": [
+            0,
+            2
+          ],
+          "after_down_up": [
+            0,
+            4
+          ],
+          "time_direction_multiset_added": [
+            [
+              134,
+              "B->A"
+            ],
+            [
+              215,
+              "B->A"
+            ]
+          ],
+          "time_direction_multiset_removed": [],
+          "original_metrics": {
+            "reference_events": 6,
+            "predicted_events": 2,
+            "temporally_matched": 2,
+            "correct_direction_matches": 2,
+            "wrong_direction_matches": 0,
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 2
+              }
+            },
+            "mean_absolute_direction_count_error": 2.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 1,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          },
+          "candidate_metrics": {
+            "reference_events": 6,
+            "predicted_events": 4,
+            "temporally_matched": 4,
+            "correct_direction_matches": 4,
+            "wrong_direction_matches": 0,
+            "TP": 4,
+            "FP": 0,
+            "FN": 2,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 4
+              }
+            },
+            "mean_absolute_direction_count_error": 1.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.8000000000000003,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.7333333333333334,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 3,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          }
+        },
+        {
+          "window": "publisher6_scope",
+          "counter": "confirmation_handoff",
+          "before_down_up": [
+            0,
+            2
+          ],
+          "after_down_up": [
+            0,
+            4
+          ],
+          "time_direction_multiset_added": [
+            [
+              134,
+              "B->A"
+            ],
+            [
+              215,
+              "B->A"
+            ]
+          ],
+          "time_direction_multiset_removed": [],
+          "original_metrics": {
+            "reference_events": 6,
+            "predicted_events": 2,
+            "temporally_matched": 2,
+            "correct_direction_matches": 2,
+            "wrong_direction_matches": 0,
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 2
+              }
+            },
+            "mean_absolute_direction_count_error": 2.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 1,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          },
+          "candidate_metrics": {
+            "reference_events": 6,
+            "predicted_events": 4,
+            "temporally_matched": 4,
+            "correct_direction_matches": 4,
+            "wrong_direction_matches": 0,
+            "TP": 4,
+            "FP": 0,
+            "FN": 2,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 4
+              }
+            },
+            "mean_absolute_direction_count_error": 1.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.8000000000000003,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.7333333333333334,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 3,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          }
+        }
+      ],
+      "ROI_overlap_ticks_before_after": [
+        22,
+        29
+      ],
+      "ID_numbers_not_correspondences_between_variants": true
+    }
+  ],
+  "full_tracker_runs": 18,
+  "counter_paths": 36,
+  "total_tracker_updates": 31166,
+  "candidate_adopted": false,
+  "new_independent_test": false,
+  "new_detector_forwards": 0,
+  "new_training_updates": 0,
+  "new_long_reference_scores_computed": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

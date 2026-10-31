@@ -1,0 +1,38 @@
+JobID                         JobName      State ExitCode    Elapsed     MaxRSS 
+------------ ------------------------ ---------- -------- ---------- ---------- 
+129785            idcoo-detector-20x3  COMPLETED      0:0   00:21:30            
+129785.batch                    batch  COMPLETED      0:0   00:21:30     13868K 
+129785.0                       python  COMPLETED      0:0   00:21:29  47554320K 
+                   all        370        683      0.946      0.947      0.985      0.787
+Speed: 0.0ms preprocess, 0.3ms inference, 0.0ms loss, 0.1ms postprocess per image
+{"completed_seed": 28, "epochs": 20, "last_epoch_validation": {"metrics/precision(B)": 0.94597, "metrics/recall(B)": 0.94856, "metrics/mAP50(B)": 0.98475, "metrics/mAP50-95(B)": 0.78701}, "checkpoint_sha256": "a6eb9677a036550fedcfd8ee36601f389c13f6b586b9094be2668b8ac613d27f"}
+{"status": "COMPLETED_PUBLIC_LABEL_TRAINING_3SEEDS_20EPOCHS", "elapsed_seconds": 1282.9060616353527}
+  warnings.warn(
+/share/home/renly/miniconda3/lib/python3.13/site-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 8 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+Exception in thread Thread-7 (_pin_memory_loop):
+JobID                         JobName      State ExitCode    Elapsed     MaxRSS 
+------------ ------------------------ ---------- -------- ---------- ---------- 
+129792       idcoo-detector-source-c+  COMPLETED      0:0   00:07:28            
+129792.batch                    batch  COMPLETED      0:0   00:07:28     13968K 
+129792.0                       python  COMPLETED      0:0   00:07:28   1763128K 
+{"model": "epoch20_seed27", "scene": "source", "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1", "processed_frames": 10874, "sampled_inference_frames": 2175, "rendered_frames": 1962, "A_to_B": 6, "B_to_A": 0, "events": 6, "elapsed_s_host_replay": 82.43588540423661, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [8912, 10873], "scope": "Previously observed development video; no new independent accuracy claim"}
+{"model": "epoch20_seed27", "scene": "Toros", "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c", "processed_frames": 479, "sampled_inference_frames": 479, "rendered_frames": 0, "A_to_B": 0, "B_to_A": 2, "events": 2, "elapsed_s_host_replay": 5.349032696336508, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [0, 478], "scope": "Previously used6-event diagnostic; not fresh generalisation"}
+{"model": "epoch20_seed28", "scene": "source", "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1", "processed_frames": 10874, "sampled_inference_frames": 2175, "rendered_frames": 1962, "A_to_B": 8, "B_to_A": 0, "events": 8, "elapsed_s_host_replay": 83.2086417498067, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [8912, 10873], "scope": "Previously observed development video; no new independent accuracy claim"}
+{"model": "epoch20_seed28", "scene": "Toros", "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c", "processed_frames": 479, "sampled_inference_frames": 479, "rendered_frames": 0, "A_to_B": 0, "B_to_A": 1, "events": 1, "elapsed_s_host_replay": 5.316105839796364, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [0, 478], "scope": "Previously used6-event diagnostic; not fresh generalisation"}
+JobID                         JobName      State ExitCode    Elapsed     MaxRSS 
+------------ ------------------------ ---------- -------- ---------- ---------- 
+129797         idcoo-detector-collect     FAILED      1:0   00:00:00            
+129797.batch                    batch     FAILED      1:0   00:00:00      1180K 
+sacct: error: slurm_persist_conn_open_without_init: failed to open persistent connection to host:localhost:6819: Connection refused
+sacct: error: Sending PersistInit msg: Connection refused
+sacct: error: Problem talking to the database: Connection refused
+/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed26/results.csv
+19,402.913,1.14386,0.63862,0.01199,0.9413,0.95315,0.98599,0.78684,0.79813,0.2944,0.00909,0.000218,0.000218,0.000218
+20,424.196,1.12743,0.63324,0.01167,0.94312,0.95022,0.98686,0.78465,0.8001,0.28692,0.00902,0.000119,0.000119,0.000119
+/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed27/results.csv
+19,395.78,1.13864,0.64233,0.01192,0.94889,0.96779,0.98639,0.78625,0.80348,0.28463,0.00917,0.000218,0.000218,0.000218
+20,416.072,1.12843,0.6291,0.01169,0.94361,0.96779,0.98675,0.79023,0.79812,0.28196,0.009,0.000119,0.000119,0.000119
+/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed28/results.csv
+19,399.845,1.14734,0.63613,0.01203,0.95157,0.94583,0.98514,0.78401,0.79677,0.29635,0.00901,0.000218,0.000218,0.000218
+20,420.601,1.13357,0.63147,0.01178,0.94597,0.94856,0.98475,0.78701,0.79114,0.29795,0.00885,0.000119,0.000119,0.000119

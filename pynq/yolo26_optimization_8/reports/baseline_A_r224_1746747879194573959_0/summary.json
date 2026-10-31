@@ -1,0 +1,20 @@
+{
+  "size": 224,
+  "scope": "board complete preprocess/inference/decode; initialization/capture/drawing/saving separate",
+  "fixed": [],
+  "camera": [],
+  "warmups": [],
+  "failed": 0,
+  "memory_before": "MemTotal:         503464 kB\nMemFree:           49868 kB\nMemAvailable:     357740 kB\nBuffers:           22584 kB\nCached:           283372 kB\nSwapCached:          164 kB\nActive:           175528 kB\nInactive:         239264 kB\nActive(anon):       1344 kB\nInactive(anon):   108976 kB\nActive(file):     174184 kB\nInactive(file):   130288 kB\nUnevictable:          16 kB\nMlocked:              16 kB\nHighTotal:             0 kB\nHighFree:              0 kB\nLowTotal:         503464 kB\nLowFree:           49868 kB\nSwapTotal:        524284 kB\nSwapFree:         523516 kB\nDirty:               752 kB\nWriteback:             0 kB\nAnonPages:        108744 kB\nMapped:            95412 kB\nShmem:              1432 kB\nKReclaimable:      15240 kB\nSlab:              29780 kB\nSReclaimable:      15240 kB\nSUnreclaim:        14540 kB\nKernelStack:         760 kB\nPageTables:         2188 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      776016 kB\nCommitted_AS:     282924 kB\nVmallocTotal:     507904 kB\nVmallocUsed:        2104 kB\nVmallocChunk:          0 kB\nPercpu:              296 kB\nCmaTotal:         131072 kB\nCmaFree:           24988 kB\n",
+  "initialization_ms": 10793.795682000109,
+  "status_before": {
+    "MM2S": "0x0",
+    "S2MM": "0x0",
+    "core": "0x0",
+    "error": "0x0",
+    "version": "0x60004"
+  },
+  "status": "FAIL",
+  "failure": "Traceback (most recent call last):\n  File \"/home/xilinx/jupyter_notebooks/yolo26_optimization_7/run_board.py\", line 23, in main\n    raw,boxes,item=one(image,'cold',0);cold_raw=raw.copy();result['cold_first_frame']=item;np.save(O/'cold_raw.npy',raw);cv2.imwrite(str(O/'bus_detected.jpg'),annotate(image,boxes));np.save(O/'bus_boxes.npy',boxes)\n  File \"/home/xilinx/jupyter_notebooks/yolo26_optimization_7/run_board.py\", line 16, in one\n    st=time.perf_counter();raw=g.run_image(im);before_decode=time.perf_counter();boxes=decode(raw,im.shape,size=a.size);end=time.perf_counter();tim=g.timers\n  File \"/home/xilinx/jupyter_notebooks/yolo26_optimization_7/native_graph.py\", line 73, in run_image\n    if rc:raise RuntimeError(self.lib.o7_error().decode(),self.failure)\nRuntimeError: ('node 1: DMA submit', None)\n",
+  "memory_after_close": "MemTotal:         503464 kB\nMemFree:           30968 kB\nMemAvailable:     290552 kB\nBuffers:           18912 kB\nCached:           238812 kB\nSwapCached:           96 kB\nActive:           138596 kB\nInactive:         293924 kB\nActive(anon):       1660 kB\nInactive(anon):   174548 kB\nActive(file):     136936 kB\nInactive(file):   119376 kB\nUnevictable:          16 kB\nMlocked:              16 kB\nHighTotal:             0 kB\nHighFree:              0 kB\nLowTotal:         503464 kB\nLowFree:           30968 kB\nSwapTotal:        524284 kB\nSwapFree:         523004 kB\nDirty:               292 kB\nWriteback:             4 kB\nAnonPages:        174740 kB\nMapped:           107360 kB\nShmem:              1412 kB\nKReclaimable:      15112 kB\nSlab:              29904 kB\nSReclaimable:      15112 kB\nSUnreclaim:        14792 kB\nKernelStack:         784 kB\nPageTables:         2392 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      776016 kB\nCommitted_AS:     349400 kB\nVmallocTotal:     507904 kB\nVmallocUsed:        2120 kB\nVmallocChunk:          0 kB\nPercpu:              296 kB\nCmaTotal:         131072 kB\nCmaFree:           17840 kB\n"
+}

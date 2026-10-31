@@ -1,0 +1,279 @@
+{
+  "created_UTC": "2026-10-29T09:35:08.937142+00:00",
+  "status": "PATH_CORRECTION_ONLY_RESUME_COMPLETED_VALIDATION_AND_ORIGINAL_VIDEO",
+  "sizes": [
+    192,
+    256,
+    320
+  ],
+  "models": [
+    {
+      "name": "official",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "name": "seed26",
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+    },
+    {
+      "name": "seed27",
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226"
+    },
+    {
+      "name": "seed28",
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+    }
+  ],
+  "conditions": [
+    {
+      "condition": "official_s192",
+      "model": "official",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+      "model_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "input_size": 192
+    },
+    {
+      "condition": "official_s256",
+      "model": "official",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+      "model_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "input_size": 256
+    },
+    {
+      "condition": "official_s320",
+      "model": "official",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+      "model_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "input_size": 320
+    },
+    {
+      "condition": "seed26_s192",
+      "model": "seed26",
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "model_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "input_size": 192
+    },
+    {
+      "condition": "seed26_s256",
+      "model": "seed26",
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "model_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "input_size": 256
+    },
+    {
+      "condition": "seed26_s320",
+      "model": "seed26",
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "model_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "input_size": 320
+    },
+    {
+      "condition": "seed27_s192",
+      "model": "seed27",
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "model_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "input_size": 192
+    },
+    {
+      "condition": "seed27_s256",
+      "model": "seed27",
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "model_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "input_size": 256
+    },
+    {
+      "condition": "seed27_s320",
+      "model": "seed27",
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "model_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "input_size": 320
+    },
+    {
+      "condition": "seed28_s192",
+      "model": "seed28",
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "model_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "input_size": 192
+    },
+    {
+      "condition": "seed28_s256",
+      "model": "seed28",
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "model_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "input_size": 256
+    },
+    {
+      "condition": "seed28_s320",
+      "model": "seed28",
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "model_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "input_size": 320
+    }
+  ],
+  "target_board_frontend_fps": 5,
+  "target_frame_period_ms": 200,
+  "prediction": {
+    "orientation_validation": "clockwise90",
+    "batch": 16,
+    "rect": false,
+    "confidence": 0.2,
+    "nominal_iou": 0.5,
+    "half": false,
+    "augment": false,
+    "max_det": 300,
+    "device": 0
+  },
+  "validation_images": 1571,
+  "validation_reference_objects": 1864,
+  "videos": [
+    {
+      "name": "original",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+      "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+      "width": 2560,
+      "height": 1440,
+      "fps": 25,
+      "decode_end_exclusive": 10874,
+      "inference_stride": 5,
+      "orientation": "clockwise90",
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "scope_start_frame0": 8912,
+      "scope_end_exclusive": 10874,
+      "counter_replay_strides": [
+        5
+      ],
+      "human_down_total": 12,
+      "formal_event_scoring": false
+    },
+    {
+      "name": "toros",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/phase2/data/mendeley_counting/extracted/Ground Truth/Toros.mp4",
+      "sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "decode_end_exclusive": 479,
+      "inference_stride": 1,
+      "orientation": "original",
+      "axis": "x",
+      "perpendicular_ROI": [
+        0.1,
+        0.95
+      ],
+      "scope_start_frame0": 0,
+      "scope_end_exclusive": 479,
+      "counter_replay_strides": [
+        6,
+        1
+      ],
+      "reference_events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "formal_event_scoring": true,
+      "event_tolerance_s": 2.0
+    }
+  ],
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "tracker": "UnmodifiedUltralytics8.4.63BYTETrackerdefaultyaml;oneupdateperretainedsample;noageclockretuning.",
+  "regression_gates": [
+    "original_seed26cached64012totalobservations/events",
+    "Torosofficialcached64030Hz6eventscore"
+  ],
+  "baseline_regression_root_remote": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results",
+  "primary_Toros_sampling": "5Hzstride6;30Hzstride1samepredictionscontrolnotdeployment.",
+  "expected_validation_image_forwards": 18852,
+  "expected_original_video_image_forwards": 26100,
+  "expected_Toros_video_image_forwards": 5748,
+  "expected_total_detector_source_image_forwards": 50700,
+  "expected_total_tracker_updates": 32808,
+  "input_sha256": {
+    "confirmation_counter.py": "43dc019982f23bd2cab92471d2bc4a5b1824258ec86edd2f17f4fd67f994976f",
+    "event_metrics.py": "049cb747a15ed180fa7f2679f2157c71def8182b69e801fdb433cad369f1e437",
+    "regression_sources.json": "706e45de3e78ce8b0c1871f658fff02fb4055d04362526d407b146fd8bb016eb",
+    "validation_images.json": "06da3d6348cd49447560f5110f93f1320eb449a6d057ef766c1319f9b7af31d3",
+    "zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+  },
+  "geometry_module_sha256": "42a4ddb57aa5b7da3ebd3123503aaa3362d62df0641e2fe7c263082d1709126e",
+  "user_confirmed12_candidate_sha256": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+  "all_model_resolution_counter_results_retained": true,
+  "no_count_selected_model_adoption": true,
+  "new_training_updates": 0,
+  "identity_encoder_forwards": 0,
+  "new_independent_test": false,
+  "FPGA_performance_verified": false,
+  "whole_goal_complete": false,
+  "version": 2,
+  "supersedes_v1_sha256": "1e6d84b7a3bbb5c83eade00f3b2fd00073edb417d28b94442d9758f2e6d85054",
+  "path_correction": {
+    "old": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/data/mendeley_counting/extracted/Ground Truth/Toros.mp4",
+    "new": "/share/home/renly/projects/idcoo_research_20261026/phase2/data/mendeley_counting/extracted/Ground Truth/Toros.mp4",
+    "source_SHA256_unchanged": true,
+    "model_or_sampling_or_scoring_changes": false,
+    "resume_only_remaining_Toros": true,
+    "prior44952_source_prediction_records_reused": true
+  }
+}

@@ -1,0 +1,25 @@
+JobID|JobName|State|ExitCode|Elapsed
+129721|idcoo-quant-activations|COMPLETED|0:0|00:00:05
+129721.batch|batch|COMPLETED|0:0|00:00:05
+129721.0|python|COMPLETED|0:0|00:00:05
+129722|idcoo-mixed-validation|COMPLETED|0:0|00:00:18
+129722.batch|batch|COMPLETED|0:0|00:00:18
+129722.0|python|COMPLETED|0:0|00:00:18
+129724|idcoo-frozen-new-ids|COMPLETED|0:0|00:00:04
+129724.batch|batch|COMPLETED|0:0|00:00:04
+129724.0|python|COMPLETED|0:0|00:00:04
+129726|idcoo-portability-case|COMPLETED|0:0|00:00:01
+129726.batch|batch|COMPLETED|0:0|00:00:01
+129726.0|python|COMPLETED|0:0|00:00:01
+7c434efaa7eaab905f2320d47ad5f843c9a0e4c01489d6c68ff212284020e4a2  /share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/tools/probe_activations.py
+49549339bede2b7facd96732d1b061e2f4fe30a5ebb8decb8c7897a4065e4224  /share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/tools/compare_mixed_precision.py
+9ea57e5f3d55c99391ce97a759efc30c2c76799ba297d43b272451dfc5628736  /share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/tools/evaluate_frozen_holdout.py
+ba8e37fd6cdcdecff5a7cdea78bf88f8756581a120120182294b31222fd75a52  /share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/tools/portability_probe.py
+4e119b2502d65925266a73db3b7ec9a47d63089f60b07bfc242e7127bfb8bc96  /share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/protocol/mixed_precision_v1.json
+6f34f401e3078f05ab92b1f5c2b93f063324fd9494c8d169955e50d013037e22  /share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/protocol/future_comparison_frozen.json
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+    129727_[6-8%3]|     4gpu|         renly-patrol-m4| PENDING|      0:00|   1:15:00|     1|(JobArrayTaskLimit)
+          129727_5|     4gpu|         renly-patrol-m4| RUNNING|      0:04|   1:15:00|     1|gpu02
+          129727_4|     4gpu|         renly-patrol-m4| RUNNING|      0:07|   1:15:00|     1|gpu02
+          129727_3|     4gpu|         renly-patrol-m4| RUNNING|      0:11|   1:15:00|     1|gpu02
+            129728|       cu|   renly-m4-audit-report| PENDING|      0:00|     15:00|     1|(Dependency)

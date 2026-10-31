@@ -1,0 +1,98 @@
+{
+  "status": "FROZEN_BEFORE_S320_SAME_O8_BOARD_WITH_EXPLICIT_ORDERED_REFERENCE",
+  "created_host_UTC": "2026-10-29T18:01:26.547769+00:00",
+  "size": 320,
+  "class_count": 1,
+  "model_checkpoint_sha256": "5b739e5a59f3aed9dc56018c05d5a2604f0051d8c76d41c97039a2cd253cdd52",
+  "qualification_summary_sha256": "3ee4c567d4ace67bcdef5b31a7bce0e84774c39f49a1f530495eacfe27d27a25",
+  "expected_O8_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "parity_gate": {
+    "box_max_absolute_pixels": 0.002,
+    "score_max_absolute": 0.0001,
+    "classes_exact": true
+  },
+  "vectors": 8,
+  "warmups": 2,
+  "all_input_images_from_train_calibration": true,
+  "source_video_Toros_or_development_validation_images_used": false,
+  "real_video_count_accuracy_claimed": false,
+  "background_identity_active": false,
+  "expected_model_forwards": 10,
+  "existing_O8_hardware_must_already_be_loaded": true,
+  "new_bitstream_programming": false,
+  "original_O8_directory_modified": false,
+  "payload_files": [
+    {
+      "file": "program/graph.bin",
+      "bytes": 14632057,
+      "sha256": "3bc4934f4f54ade70bfbdc1f16808bbd5ded7bb7226643d5305604f148376e6d"
+    },
+    {
+      "file": "program/program.json",
+      "bytes": 463446,
+      "sha256": "36d2eacef82fed80e3a2495568e614cfe15535e600bea4f5c3bcc338032b67ff"
+    },
+    {
+      "file": "resident_plan/resident_plan.bin",
+      "bytes": 2364,
+      "sha256": "a4f593d1685f052e95275a59753f097687e92fec6654a209fbc44eb5f9e80a24"
+    },
+    {
+      "file": "resident_plan/resident_plan.json",
+      "bytes": 13148,
+      "sha256": "372a0291cdcf58356397b3ebf76b7175a932f6eb011e14b4d196ea3d1ae734d8"
+    },
+    {
+      "file": "vectors/parity_train_0.npz",
+      "bytes": 218312,
+      "sha256": "3aa66abd980211db52c2a8d606dfeda69ff7fbd41e5af0662ce93c4f365d06f7"
+    },
+    {
+      "file": "vectors/parity_train_1.npz",
+      "bytes": 232878,
+      "sha256": "9af5076c8ee0ea8237570ec56647b0abf941c889930812ae7276c88df67b69f3"
+    },
+    {
+      "file": "vectors/parity_train_2.npz",
+      "bytes": 217684,
+      "sha256": "1f20dc9d887425f754fe23e9817ad2dd2093b5382d755223fb2a834a5710d70c"
+    },
+    {
+      "file": "vectors/parity_train_3.npz",
+      "bytes": 226030,
+      "sha256": "c6866abe58e20d7461314a3ce84c54e30e1f37d23e07f6ecd269d5eb4cfa517c"
+    },
+    {
+      "file": "vectors/parity_train_4.npz",
+      "bytes": 216640,
+      "sha256": "e35fe76f05c29f3ebdcb599b64238def8fd7a6fd083a4e4bce6efddbd7f53674"
+    },
+    {
+      "file": "vectors/parity_train_5.npz",
+      "bytes": 245614,
+      "sha256": "fe672bf90361d6882988d0db547a326252d6411ea3202d44bd96b1ab8af4e727"
+    },
+    {
+      "file": "vectors/parity_train_6.npz",
+      "bytes": 209238,
+      "sha256": "91a3de493429451f932f59e4056f8a6c95b9d997352e664914d08663d99279ce"
+    },
+    {
+      "file": "vectors/parity_train_7.npz",
+      "bytes": 249271,
+      "sha256": "3aaf732c546958dff1a3a5d14a24a4c66492615f4a37e44fe67f4e98830eabe4"
+    },
+    {
+      "file": "board_s320_vectors.py",
+      "bytes": 6394,
+      "sha256": "19b756460383d11e15941e0b3f27406e18af8df97c4152c6b0552941040e4b0d"
+    }
+  ],
+  "whole_goal_complete": false,
+  "reference_contract": "INT32Convexactfixedrequant;nonconvMatMulFP32KorderedandSoftmaxC99expforderedFP32sum.",
+  "ordered_reference_verification_sha256": "d2398e4ba161668edde35936ff5d23baae996198d05a1ff126295e17c1f38a17",
+  "ordered_reference_protocol_sha256": "51a3baab88c62fd047a6b689f78c8d7e3028ec976132deeeeba67d9f0ed45777",
+  "original_numpy_reference_failure_retained": true,
+  "legacy_numpy_reference_all8_raw_passed": false,
+  "new_model_weights_or_native_runtime_code": false
+}

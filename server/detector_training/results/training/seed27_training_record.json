@@ -1,0 +1,88 @@
+{
+  "seed": 27,
+  "epochs_completed": 20,
+  "selected_checkpoint_rule": "Fixed final epoch last.pt for every seed; not selected on video or external counts",
+  "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed27/weights/last.pt",
+  "checkpoint_sha256": "12270f8e7f14867cce464d9707a7b81f10d08c9777a40cfb17948e0e72f00c4c",
+  "saved_validation_best_checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed27/weights/best.pt",
+  "saved_validation_best_sha256": "953a7af79bec66e413913418c573d01e6585a0f9fb4bc2fa01fe3269c3b76570",
+  "video_use_checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed27/weights/last.pt",
+  "elapsed_s": 420.3405891340226,
+  "last_epoch_validation": {
+    "metrics/precision(B)": 0.94361,
+    "metrics/recall(B)": 0.96779,
+    "metrics/mAP50(B)": 0.98675,
+    "metrics/mAP50-95(B)": 0.79023
+  },
+  "trainer_return_metrics_for_saved_best": {
+    "metrics/precision(B)": 0.9433247234082127,
+    "metrics/recall(B)": 0.9677891654465594,
+    "metrics/mAP50(B)": 0.98671485770818,
+    "metrics/mAP50-95(B)": 0.7897865351904696,
+    "fitness": 0.7897865351904696
+  },
+  "optimizer": {
+    "type": "AdamW",
+    "parameter_groups": [
+      {
+        "lr": 0.002,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "weight_decay": 0.0005,
+        "param_group": "weight",
+        "eps": 1e-08,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true,
+        "initial_lr": 0.002
+      },
+      {
+        "lr": 0.002,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "weight_decay": 0.0,
+        "param_group": "bn",
+        "eps": 1e-08,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true,
+        "initial_lr": 0.002
+      },
+      {
+        "lr": 0.002,
+        "betas": [
+          0.9,
+          0.999
+        ],
+        "weight_decay": 0.0,
+        "param_group": "bias",
+        "eps": 1e-08,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true,
+        "initial_lr": 0.002
+      }
+    ],
+    "nc": 1,
+    "train_images": 5913,
+    "validation_images": 370
+  },
+  "training_csv_sha256": "526162c87432ad2e2e99cbdf8619ae28d1ecf12ecfe5df8e5a76653ab0f14e1a",
+  "effective_args_sha256": "1c3b01138eb32925af8925595d2666bc5b01729cb4583e733c4114e0b3406547"
+}

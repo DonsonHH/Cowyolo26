@@ -1,0 +1,175 @@
+{
+  "status": "FROZEN_BEFORE_NEW_ROT192_QUALITY_EVALUATION",
+  "created_UTC": "2026-10-29T15:05:41.899221+00:00",
+  "model": "S192_rot90_seed26",
+  "size": 192,
+  "checkpoint_sha256": "7b01cead4841f17d561f2a6bd768f9b229f1b3bd142818d8302135d3c69ffd45",
+  "FP32_onnx": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_compile_20261029/results/qualification/frozen_S192_rot90_seed26.onnx",
+  "FP32_onnx_sha256": "c21cae6a542b533d28e0de9469ac3f022322406c8e7ba2e5acfa4edeee9a2382",
+  "QDQ_onnx": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_compile_20261029/results/qualification/cow_allconv_int8_normalized.onnx",
+  "QDQ_onnx_sha256": "a24d8fa30b913f7a00489b83c7f6a6ef9ce8eafc9fc62f8bda963ff390865685",
+  "compiled_program": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_compile_20261029/results/qualification/compiled/program",
+  "compiled_graph_sha256": "5c05590f1c16f23f8e920447cdb6dd92e0d58a10104689bbc069ceb9fae1b00c",
+  "resident_plan_sha256": "cd5702cfca84e38ab75e8251ca5a15ff66be16fccc9d87ef3a0e4577079e40fa",
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "videos": [
+    {
+      "name": "original",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+      "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+      "width": 2560,
+      "height": 1440,
+      "fps": 25,
+      "decode_end_exclusive": 10874,
+      "inference_stride": 5,
+      "orientation": "clockwise90",
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "scope_start_frame0": 8912,
+      "scope_end_exclusive": 10874,
+      "counter_replay_strides": [
+        5
+      ],
+      "human_down_total": 12,
+      "formal_event_scoring": false,
+      "detection_crop_xyxy": [
+        870,
+        0,
+        1920,
+        1440
+      ],
+      "crop_size_WH": [
+        1050,
+        1440
+      ],
+      "pixel_control_frames": [
+        8995,
+        9345,
+        9790,
+        10830
+      ],
+      "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+    },
+    {
+      "name": "toros",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/phase2/data/mendeley_counting/extracted/Ground Truth/Toros.mp4",
+      "sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "decode_end_exclusive": 479,
+      "inference_stride": 1,
+      "orientation": "original",
+      "axis": "x",
+      "perpendicular_ROI": [
+        0.1,
+        0.95
+      ],
+      "scope_start_frame0": 0,
+      "scope_end_exclusive": 479,
+      "counter_replay_strides": [
+        6,
+        1
+      ],
+      "reference_events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "formal_event_scoring": true,
+      "event_tolerance_s": 2.0,
+      "detection_crop_xyxy": [
+        0,
+        108,
+        1920,
+        1026
+      ],
+      "crop_size_WH": [
+        1920,
+        918
+      ],
+      "pixel_control_frames": [
+        110,
+        193,
+        248,
+        396
+      ],
+      "source_long_dimension_ratio_full_to_crop": 1.0
+    }
+  ],
+  "expected_NN_input_hashes": {
+    "original_f8995_s192": "0695d390427be906e6d8d6ec2d6ac548109a957a558bf16565bc1e57b3251ec6",
+    "original_f9345_s192": "bb18d5e974f2dcff5b4399e81371bc26a547531b018732c2b0812cd3e6ec6470",
+    "original_f9790_s192": "28f39ad0e0d5df710b47872055bedaae2dd98377c990e9ce846b2f85834585b6",
+    "original_f10830_s192": "48f7a2bff8b2c7c0a06ac067cc03755e94a75f3ae1b669024e93e0714bc042cd",
+    "toros_f110_s192": "d259a49322bb351aa77207f4dded14bc1227fddfc427721fe65521067a788198",
+    "toros_f193_s192": "6b0a6dbf67728ba2126849e6adbc7c5c81aa8097213688790c700a47af1aedd6",
+    "toros_f248_s192": "1a05f0f4607e2ad1f5bceb9e3315eefcc06386a73d91aa25276d44d2d888407c",
+    "toros_f396_s192": "ab1b4cf6524f856dd90556b51912c134165803841508e4308cae256b838a5057"
+  },
+  "validation_manifest_sha256": "06da3d6348cd49447560f5110f93f1320eb449a6d057ef766c1319f9b7af31d3",
+  "validation_images": 1571,
+  "validation_references": 1864,
+  "validation_orientation": "CW90,full image,192square letterbox, conf0.2",
+  "comparison": "FP32ORTandQDQORTonidentical192inputs;CPUfixedintegeronly8videoanchors;lateractualO8wholevideoqualityseparate.",
+  "ORT_actual_forwards_planned": 8450,
+  "CPU_integer_video_anchor_forwards": 8,
+  "board_input_PNGs_expected": 2654,
+  "FP32_previous_prediction_coordinate_tolerance_pixels": 0.05,
+  "FP32_previous_confidence_tolerance": 1e-05,
+  "frame_scope_original_inclusive": [
+    8912,
+    10873
+  ],
+  "original_full_history_retained": true,
+  "publisher_Toros_event_tolerance_s": 2.0,
+  "prediction_confidence": 0.2,
+  "maximum_detections": 300,
+  "no_model_threshold_or_crop_selection": true,
+  "new_training_updates": 0,
+  "new_independent_test": false,
+  "source_Toros_or_validation_used_for_calibration": false,
+  "PYNQ5FPS_proven": false,
+  "whole_goal_complete": false
+}

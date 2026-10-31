@@ -1,0 +1,3613 @@
+[
+  {
+    "condition": "official",
+    "criterion": "minimum_matched_reference_coverage",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/06856.jpg",
+    "source_sha256": "9be21fa7d5059837556ef8969c89f585b9819224a9d245d64c2abfbdae6d9829",
+    "source_pixel_audit": {
+      "file_name": "06856.jpg",
+      "split": "val",
+      "source_sha256": "9be21fa7d5059837556ef8969c89f585b9819224a9d245d64c2abfbdae6d9829",
+      "native_RGB_pixel_sha256": "537c4e90b1667689c2dc9b299922638df67c330aa9e4b23ebc998ee62698eb8f",
+      "clockwise90_RGB_pixel_sha256": "0b611e1b3d379f298120ae1df60b63f143c91f4073b455713f3e16c7f93690a0",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-02-28",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 2,
+      "annotation_key": "06856.jpg:8948",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.911141839563861,
+      "visible_reference_area": 97320.88216749512,
+      "ideal_AABB_exterior_fraction": 0.07970944339737285,
+      "matched_prediction_index": 2,
+      "best_any_prediction_AABB_IoU": 0.524550931620729,
+      "matched_reference_AABB_IoU": 0.524550931620729,
+      "crop_box": [
+        553,
+        0,
+        924,
+        199
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 59370.04571079147,
+        "reference_coverage": 0.610044261709548,
+        "reference_fraction_in_crop": 0.8041561677767743,
+        "reference_exterior_fraction": 0.19584383222322566,
+        "polygon_IoU": 0.5311337678847617,
+        "center_error_native_px": 136.64170922224986,
+        "crop_to_reference_envelope_width_ratio": 0.7060926567879988,
+        "crop_to_reference_envelope_height_ratio": 0.9887448165452541,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.8679245283018868,
+        0.4271356783919598,
+        1.3908355795148248,
+        1.0402010050251256,
+        -0.09983341664682804,
+        0.9950041652780258
+      ],
+      "file_name": "06856.jpg"
+    },
+    "reference": {
+      "annotation_key": "06856.jpg:8948",
+      "published_annotation_ID": 8948,
+      "published_catalog": "train_annotations.json",
+      "bbox_xywh_angle_rad": [
+        617.0,
+        -18.5,
+        516,
+        207,
+        -0.05
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          612.1495887985835,
+          -5.476026279044007
+        ],
+        [
+          1127.5047231623862,
+          -31.26527762271401
+        ],
+        [
+          1137.8504112014166,
+          175.476026279044
+        ],
+        [
+          622.4952768376139,
+          201.265277622714
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          1129.0692910674622,
+          0.0
+        ],
+        [
+          1137.8504112014166,
+          175.476026279044
+        ],
+        [
+          622.4952768376139,
+          201.265277622714
+        ],
+        [
+          612.4236185086962,
+          0.0
+        ]
+      ],
+      "full_reference_area": 106812,
+      "visible_reference_area": 97320.88216749512,
+      "visible_reference_fraction": 0.911141839563861,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        612.4236185086962,
+        0.0,
+        1137.8504112014166,
+        201.265277622714
+      ],
+      "ideal_AABB_reference_fraction": 0.9202905566026272,
+      "ideal_AABB_exterior_fraction": 0.07970944339737285,
+      "long_side": 516,
+      "short_side": 207,
+      "long_axis_angle_rad_mod_pi": 3.0915926535897933
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          325.04595947265625,
+          547.37353515625,
+          718.2814331054688,
+          1277.54296875
+        ],
+        "native_xyxy": [
+          547.37353515625,
+          1.71856689453125,
+          1277.54296875,
+          394.95404052734375
+        ],
+        "integer_crop_box": [
+          547,
+          1,
+          1278,
+          395
+        ],
+        "confidence": 0.4651561379432678
+      },
+      {
+        "prediction_index": 1,
+        "clockwise90_xyxy": [
+          321.8236083984375,
+          0.0,
+          714.7970581054688,
+          1280.0
+        ],
+        "native_xyxy": [
+          0.0,
+          5.20294189453125,
+          1280.0,
+          398.1763916015625
+        ],
+        "integer_crop_box": [
+          0,
+          5,
+          1280,
+          399
+        ],
+        "confidence": 0.4044056832790375
+      },
+      {
+        "prediction_index": 2,
+        "clockwise90_xyxy": [
+          521.8348999023438,
+          553.3814697265625,
+          720.0,
+          923.3191528320312
+        ],
+        "native_xyxy": [
+          553.3814697265625,
+          0.0,
+          923.3191528320312,
+          198.16510009765625
+        ],
+        "integer_crop_box": [
+          553,
+          0,
+          924,
+          199
+        ],
+        "confidence": 0.2892175614833832
+      }
+    ]
+  },
+  {
+    "condition": "official",
+    "criterion": "maximum_matched_reference_exterior_fraction",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07332.jpg",
+    "source_sha256": "808d41e907dc7a2eb08dd1120da50844f66e2a8fb567a12e3679f54ea954400d",
+    "source_pixel_audit": {
+      "file_name": "07332.jpg",
+      "split": "val",
+      "source_sha256": "808d41e907dc7a2eb08dd1120da50844f66e2a8fb567a12e3679f54ea954400d",
+      "native_RGB_pixel_sha256": "e194a0cdca91753e3e88333adf812c415898ac23502c2ddd879a4efffaa80710",
+      "clockwise90_RGB_pixel_sha256": "ce34261c923ef0669de44b62c97e094d319a13581da14f8bd42239264dede95a",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07332.jpg:105",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9999930997932073,
+      "visible_reference_area": 101177.30185087712,
+      "ideal_AABB_exterior_fraction": 0.5454554470540531,
+      "matched_prediction_index": 0,
+      "best_any_prediction_AABB_IoU": 0.5045946251207242,
+      "matched_reference_AABB_IoU": 0.5045946251207242,
+      "crop_box": [
+        1,
+        0,
+        921,
+        380
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 97210.24714216076,
+        "reference_coverage": 0.9607910604834737,
+        "reference_fraction_in_crop": 0.2780613476606429,
+        "reference_exterior_fraction": 0.7219386523393572,
+        "polygon_IoU": 0.2749414738945254,
+        "center_error_native_px": 161.88070456720124,
+        "crop_to_reference_envelope_width_ratio": 1.8219201543532542,
+        "crop_to_reference_envelope_height_ratio": 0.8620559384852708,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.6728260869565217,
+        0.5789473684210527,
+        0.5021739130434782,
+        0.5763157894736842,
+        -0.9320390859672265,
+        0.3623577544766732
+      ],
+      "file_name": "07332.jpg"
+    },
+    "reference": {
+      "annotation_key": "07332.jpg:105",
+      "published_annotation_ID": 105,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        389.0,
+        110.5,
+        462,
+        219,
+        -0.6
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          367.5191221191079,
+          260.0581615216434
+        ],
+        [
+          748.8241762073793,
+          -0.8066611868629394
+        ],
+        [
+          872.4808778808921,
+          179.9418384783566
+        ],
+        [
+          491.1758237926207,
+          440.806661186863
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          367.5191221191079,
+          260.0581615216434
+        ],
+        [
+          747.6450828198765,
+          0.0
+        ],
+        [
+          749.3760428171728,
+          0.0
+        ],
+        [
+          872.4808778808921,
+          179.9418384783566
+        ],
+        [
+          491.1758237926207,
+          440.806661186863
+        ]
+      ],
+      "full_reference_area": 101178,
+      "visible_reference_area": 101177.30185087712,
+      "visible_reference_fraction": 0.9999930997932073,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        367.5191221191079,
+        0.0,
+        872.4808778808921,
+        440.806661186863
+      ],
+      "ideal_AABB_reference_fraction": 0.4545445529459468,
+      "ideal_AABB_exterior_fraction": 0.5454554470540531,
+      "long_side": 462,
+      "short_side": 219,
+      "long_axis_angle_rad_mod_pi": 2.541592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          340.3166198730469,
+          1.557952880859375,
+          720.0,
+          920.9943237304688
+        ],
+        "native_xyxy": [
+          1.557952880859375,
+          0.0,
+          920.9943237304688,
+          379.6833801269531
+        ],
+        "integer_crop_box": [
+          1,
+          0,
+          921,
+          380
+        ],
+        "confidence": 0.43053120374679565
+      }
+    ]
+  },
+  {
+    "condition": "official",
+    "criterion": "maximum_complete_reference_envelope_exterior_fraction",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07447.jpg",
+    "source_sha256": "f7a103c67016548c713924f74d32cfd25a03c7489a7dbb69a8a79369fe84ce05",
+    "source_pixel_audit": {
+      "file_name": "07447.jpg",
+      "split": "val",
+      "source_sha256": "f7a103c67016548c713924f74d32cfd25a03c7489a7dbb69a8a79369fe84ce05",
+      "native_RGB_pixel_sha256": "3e355f51ebd990f3e28b85006cec6530a70b87788657ece926a019ffbc6076c0",
+      "clockwise90_RGB_pixel_sha256": "f108c8828d7b34b4c1ad80d0749950418d871eeee0741cfd6080204282b1a9eb",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07447.jpg:256",
+      "reference_complete": true,
+      "visible_reference_fraction": 1.0,
+      "visible_reference_area": 106680.0,
+      "ideal_AABB_exterior_fraction": 0.5797101293754483,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": 0.04331978648860491,
+      "file_name": "07447.jpg"
+    },
+    "reference": {
+      "annotation_key": "07447.jpg:256",
+      "published_annotation_ID": 256,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        286.0,
+        240.0,
+        508,
+        210,
+        -0.671
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          275.78132952774865,
+          420.69342226294077
+        ],
+        [
+          673.6470758756958,
+          104.8345172388921
+        ],
+        [
+          804.2186704722513,
+          269.30657773705923
+        ],
+        [
+          406.3529241243042,
+          585.1654827611079
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          275.78132952774865,
+          420.69342226294077
+        ],
+        [
+          673.6470758756958,
+          104.8345172388921
+        ],
+        [
+          804.2186704722513,
+          269.30657773705923
+        ],
+        [
+          406.3529241243042,
+          585.1654827611079
+        ]
+      ],
+      "full_reference_area": 106680,
+      "visible_reference_area": 106680.0,
+      "visible_reference_fraction": 1.0,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        275.78132952774865,
+        104.8345172388921,
+        804.2186704722513,
+        585.1654827611079
+      ],
+      "ideal_AABB_reference_fraction": 0.42028987062455164,
+      "ideal_AABB_exterior_fraction": 0.5797101293754483,
+      "long_side": 508,
+      "short_side": 210,
+      "long_axis_angle_rad_mod_pi": 2.470592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          346.6095886230469,
+          733.8646850585938,
+          716.257568359375,
+          1278.221435546875
+        ],
+        "native_xyxy": [
+          733.8646850585938,
+          3.742431640625,
+          1278.221435546875,
+          373.3904113769531
+        ],
+        "integer_crop_box": [
+          733,
+          3,
+          1279,
+          374
+        ],
+        "confidence": 0.40949979424476624
+      }
+    ]
+  },
+  {
+    "condition": "official",
+    "criterion": "maximum_visible_reference_area_among_unmatched",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/08377.jpg",
+    "source_sha256": "285543742e7a7e427526c00b94d2a05370bbf916718af473273d4d47ce0f9177",
+    "source_pixel_audit": {
+      "file_name": "08377.jpg",
+      "split": "val",
+      "source_sha256": "285543742e7a7e427526c00b94d2a05370bbf916718af473273d4d47ce0f9177",
+      "native_RGB_pixel_sha256": "095c4dc2abe9dfaed48de24fb177040802b29a851f45886a8f284c697be0287e",
+      "clockwise90_RGB_pixel_sha256": "843bb95ae950f3db424f4905bea81328bb03573bfd8a909f5fe034d295395e4c",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-04",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "08377.jpg:117",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9422325716195814,
+      "visible_reference_area": 157937.02365487424,
+      "ideal_AABB_exterior_fraction": 0.4609206241139123,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": null,
+      "file_name": "08377.jpg"
+    },
+    "reference": {
+      "annotation_key": "08377.jpg:117",
+      "published_annotation_ID": 117,
+      "published_catalog": "reserved_test_annotations.json",
+      "bbox_xywh_angle_rad": [
+        758.0,
+        116.0,
+        578,
+        290,
+        0.5
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          862.8953427112917,
+          -4.803452130718725
+        ],
+        [
+          1370.1380634839272,
+          272.3045091825106
+        ],
+        [
+          1231.1046572887083,
+          526.8034521307187
+        ],
+        [
+          723.8619365160728,
+          249.69549081748937
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          871.6880028584059,
+          0.0
+        ],
+        [
+          1280.0,
+          223.0618606715435
+        ],
+        [
+          1280.0,
+          437.30112764877686
+        ],
+        [
+          1231.1046572887083,
+          526.8034521307187
+        ],
+        [
+          723.8619365160728,
+          249.69549081748937
+        ],
+        [
+          860.2712048524346,
+          0.0
+        ]
+      ],
+      "full_reference_area": 167620,
+      "visible_reference_area": 157937.02365487424,
+      "visible_reference_fraction": 0.9422325716195814,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        723.8619365160728,
+        0.0,
+        1280.0,
+        526.8034521307187
+      ],
+      "ideal_AABB_reference_fraction": 0.5390793758860877,
+      "ideal_AABB_exterior_fraction": 0.4609206241139123,
+      "long_side": 578,
+      "short_side": 290,
+      "long_axis_angle_rad_mod_pi": 0.5
+    },
+    "all_native_predictions": []
+  },
+  {
+    "condition": "seed26",
+    "criterion": "preset_hash_ranked_validation",
+    "selection_is_postprediction_diagnostic": false,
+    "source_file_relative": "results/pairs/case_sources/07556.jpg",
+    "source_sha256": "9289d4326063af76120685346a4b31b0e354b6bea912e5a9a0902fab25def907",
+    "source_pixel_audit": {
+      "file_name": "07556.jpg",
+      "split": "val",
+      "source_sha256": "9289d4326063af76120685346a4b31b0e354b6bea912e5a9a0902fab25def907",
+      "native_RGB_pixel_sha256": "457b6ae1576f44de384d07e4340d7fd7916172e7dcee2446b42d975ab27111bc",
+      "clockwise90_RGB_pixel_sha256": "89939be827d86e667ef49389f94620b3c574c3b5f01f819259e4538879a92049",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07556.jpg:390",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9926894080245995,
+      "visible_reference_area": 109257.38162600347,
+      "ideal_AABB_exterior_fraction": 0.49030040084414184,
+      "matched_prediction_index": 0,
+      "best_any_prediction_AABB_IoU": 0.7871512114634127,
+      "matched_reference_AABB_IoU": 0.7871512114634127,
+      "crop_box": [
+        746,
+        10,
+        1181,
+        401
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 97086.93062992339,
+        "reference_coverage": 0.8886075172683482,
+        "reference_fraction_in_crop": 0.5708141848483017,
+        "reference_exterior_fraction": 0.4291858151516983,
+        "polygon_IoU": 0.5326969925964602,
+        "center_error_native_px": 46.84358568501038,
+        "crop_to_reference_envelope_width_ratio": 0.8110698980328358,
+        "crop_to_reference_envelope_height_ratio": 0.9782981555110012,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.6068965517241379,
+        0.45268542199488493,
+        1.1195402298850574,
+        0.578005115089514,
+        -0.8191915683009984,
+        0.5735199860724565
+      ],
+      "file_name": "07556.jpg"
+    },
+    "reference": {
+      "annotation_key": "07556.jpg:390",
+      "published_annotation_ID": 390,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        766.5,
+        74.0,
+        487,
+        226,
+        -0.48
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          741.8356894670568,
+          199.21280297029196
+        ],
+        [
+          1173.8022168605683,
+          -25.6736555184102
+        ],
+        [
+          1278.1643105329433,
+          174.787197029708
+        ],
+        [
+          846.1977831394319,
+          399.6736555184102
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          741.8356894670568,
+          199.21280297029196
+        ],
+        [
+          1124.48773214542,
+          0.0
+        ],
+        [
+          1187.1682003334834,
+          0.0
+        ],
+        [
+          1278.1643105329433,
+          174.787197029708
+        ],
+        [
+          846.1977831394319,
+          399.6736555184102
+        ]
+      ],
+      "full_reference_area": 110062,
+      "visible_reference_area": 109257.38162600347,
+      "visible_reference_fraction": 0.9926894080245995,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        741.8356894670568,
+        0.0,
+        1278.1643105329433,
+        399.6736555184102
+      ],
+      "ideal_AABB_reference_fraction": 0.5096995991558582,
+      "ideal_AABB_exterior_fraction": 0.49030040084414184,
+      "long_side": 487,
+      "short_side": 226,
+      "long_axis_angle_rad_mod_pi": 2.661592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          319.7091064453125,
+          746.99560546875,
+          709.6754760742188,
+          1180.9036865234375
+        ],
+        "native_xyxy": [
+          746.99560546875,
+          10.32452392578125,
+          1180.9036865234375,
+          400.2908935546875
+        ],
+        "integer_crop_box": [
+          746,
+          10,
+          1181,
+          401
+        ],
+        "confidence": 0.6785654425621033
+      }
+    ]
+  },
+  {
+    "condition": "seed26",
+    "criterion": "preset_hash_ranked_validation",
+    "selection_is_postprediction_diagnostic": false,
+    "source_file_relative": "results/pairs/case_sources/07785.jpg",
+    "source_sha256": "e61f9b869d9a8b0908eed1292975036e77a2b96802254a3ae75c7deb90c44c9b",
+    "source_pixel_audit": {
+      "file_name": "07785.jpg",
+      "split": "val",
+      "source_sha256": "e61f9b869d9a8b0908eed1292975036e77a2b96802254a3ae75c7deb90c44c9b",
+      "native_RGB_pixel_sha256": "711a53a87bddb1be2330a9fa683039bde5d899f0e92cc85f3fd7476f1a349a5c",
+      "clockwise90_RGB_pixel_sha256": "5c6da50eef22764d9e1205965168fe58d2d17455b16dde7c2a91c09b8e081804",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-03",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 1,
+      "annotation_key": "07785.jpg:657",
+      "reference_complete": true,
+      "visible_reference_fraction": 0.9999999999999998,
+      "visible_reference_area": 129471.99999999997,
+      "ideal_AABB_exterior_fraction": 0.419706844219218,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": null,
+      "file_name": "07785.jpg"
+    },
+    "reference": {
+      "annotation_key": "07785.jpg:657",
+      "published_annotation_ID": 657,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        72.0,
+        336.0,
+        544,
+        238,
+        0.28
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          115.47924295859985,
+          265.4656664315793
+        ],
+        [
+          638.2934013996592,
+          415.80313925045715
+        ],
+        [
+          572.5207570414002,
+          644.5343335684206
+        ],
+        [
+          49.70659860034078,
+          494.1968607495428
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          115.47924295859985,
+          265.4656664315793
+        ],
+        [
+          638.2934013996592,
+          415.80313925045715
+        ],
+        [
+          572.5207570414002,
+          644.5343335684206
+        ],
+        [
+          49.70659860034078,
+          494.1968607495428
+        ]
+      ],
+      "full_reference_area": 129472,
+      "visible_reference_area": 129471.99999999997,
+      "visible_reference_fraction": 0.9999999999999998,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        49.70659860034078,
+        265.4656664315793,
+        638.2934013996592,
+        644.5343335684206
+      ],
+      "ideal_AABB_reference_fraction": 0.580293155780782,
+      "ideal_AABB_exterior_fraction": 0.419706844219218,
+      "long_side": 544,
+      "short_side": 238,
+      "long_axis_angle_rad_mod_pi": 0.28
+    },
+    "all_native_predictions": []
+  },
+  {
+    "condition": "seed26",
+    "criterion": "preset_hash_ranked_validation",
+    "selection_is_postprediction_diagnostic": false,
+    "source_file_relative": "results/pairs/case_sources/08229.jpg",
+    "source_sha256": "781e85d5e9fe6f5250e53708a77ba887c9b33b6818a32bc365c616a6d63a828f",
+    "source_pixel_audit": {
+      "file_name": "08229.jpg",
+      "split": "val",
+      "source_sha256": "781e85d5e9fe6f5250e53708a77ba887c9b33b6818a32bc365c616a6d63a828f",
+      "native_RGB_pixel_sha256": "3274b8b3fdee0c9e3457a3e23c313b7de6eb7409951a3ec6a02c7b41a8589795",
+      "clockwise90_RGB_pixel_sha256": "b52773f0d1573a046a5f5fd75c70702ecdd376d17dbda66bfad55936f6caf505",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-04",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "08229.jpg:1195",
+      "reference_complete": true,
+      "visible_reference_fraction": 1.0,
+      "visible_reference_area": 110725.0,
+      "ideal_AABB_exterior_fraction": 0.38437825488921296,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": 0.458028682578626,
+      "file_name": "08229.jpg"
+    },
+    "reference": {
+      "annotation_key": "08229.jpg:1195",
+      "published_annotation_ID": 1195,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        637.5,
+        169.5,
+        515,
+        215,
+        -0.23
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          619.7733195060832,
+          231.0350748472332
+        ],
+        [
+          1121.2115129338513,
+          113.62665022661118
+        ],
+        [
+          1170.2266804939168,
+          322.9649251527668
+        ],
+        [
+          668.7884870661487,
+          440.3733497733888
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          619.7733195060832,
+          231.0350748472332
+        ],
+        [
+          1121.2115129338513,
+          113.62665022661118
+        ],
+        [
+          1170.2266804939168,
+          322.9649251527668
+        ],
+        [
+          668.7884870661487,
+          440.3733497733888
+        ]
+      ],
+      "full_reference_area": 110725,
+      "visible_reference_area": 110725.0,
+      "visible_reference_fraction": 1.0,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        619.7733195060832,
+        113.62665022661118,
+        1170.2266804939168,
+        440.3733497733888
+      ],
+      "ideal_AABB_reference_fraction": 0.615621745110787,
+      "ideal_AABB_exterior_fraction": 0.38437825488921296,
+      "long_side": 515,
+      "short_side": 215,
+      "long_axis_angle_rad_mod_pi": 2.911592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          277.00360107421875,
+          614.2086181640625,
+          496.9202880859375,
+          972.0013427734375
+        ],
+        "native_xyxy": [
+          614.2086181640625,
+          223.0797119140625,
+          972.0013427734375,
+          442.99639892578125
+        ],
+        "integer_crop_box": [
+          614,
+          223,
+          973,
+          443
+        ],
+        "confidence": 0.7333901524543762
+      },
+      {
+        "prediction_index": 1,
+        "clockwise90_xyxy": [
+          379.5052795410156,
+          695.1519165039062,
+          579.355712890625,
+          1107.3626708984375
+        ],
+        "native_xyxy": [
+          695.1519165039062,
+          140.644287109375,
+          1107.3626708984375,
+          340.4947204589844
+        ],
+        "integer_crop_box": [
+          695,
+          140,
+          1108,
+          341
+        ],
+        "confidence": 0.43423792719841003
+      }
+    ]
+  },
+  {
+    "condition": "seed26",
+    "criterion": "preset_hash_ranked_validation",
+    "selection_is_postprediction_diagnostic": false,
+    "source_file_relative": "results/pairs/case_sources/07333.jpg",
+    "source_sha256": "cbb9f10d746b15ed3dcb4b73f50122f3b4be75b0d6861a133da1447bec00d30f",
+    "source_pixel_audit": {
+      "file_name": "07333.jpg",
+      "split": "val",
+      "source_sha256": "cbb9f10d746b15ed3dcb4b73f50122f3b4be75b0d6861a133da1447bec00d30f",
+      "native_RGB_pixel_sha256": "4373b66c049abaf9394e85f51bf77b044324fd87b7fd88271a237f86d7062db5",
+      "clockwise90_RGB_pixel_sha256": "29b48dd195592a9750abf2888ef05245a1c31703dedd78f0ad1b6391f4399520",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07333.jpg:106",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.893653405563673,
+      "visible_reference_area": 89066.86031890904,
+      "ideal_AABB_exterior_fraction": 0.47569314572993815,
+      "matched_prediction_index": 0,
+      "best_any_prediction_AABB_IoU": 0.8041249385581568,
+      "matched_reference_AABB_IoU": 0.8041249385581568,
+      "crop_box": [
+        563,
+        6,
+        986,
+        330
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 84858.32206007678,
+        "reference_coverage": 0.9527485504287079,
+        "reference_fraction_in_crop": 0.6191687976831917,
+        "reference_exterior_fraction": 0.38083120231680834,
+        "polygon_IoU": 0.6007220636848384,
+        "center_error_native_px": 16.926378454982178,
+        "crop_to_reference_envelope_width_ratio": 0.8705293698515177,
+        "crop_to_reference_envelope_height_ratio": 0.9267686654464715,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.5366430260047281,
+        0.36419753086419754,
+        1.0425531914893618,
+        0.6975308641975309,
+        -0.9739401000374984,
+        0.2268053825175841
+      ],
+      "file_name": "07333.jpg"
+    },
+    "reference": {
+      "annotation_key": "07333.jpg:106",
+      "published_annotation_ID": 106,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        569.5,
+        11.0,
+        441,
+        226,
+        -0.671
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          547.0443831940161,
+          172.59854177260772
+        ],
+        [
+          892.435710240167,
+          -101.60180688015896
+        ],
+        [
+          1032.955616805984,
+          75.40145822739231
+        ],
+        [
+          687.564289759833,
+          349.60180688015896
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          547.0443831940161,
+          172.59854177260772
+        ],
+        [
+          764.4548995627013,
+          0.0
+        ],
+        [
+          973.0956709535642,
+          0.0
+        ],
+        [
+          1032.955616805984,
+          75.40145822739231
+        ],
+        [
+          687.564289759833,
+          349.60180688015896
+        ]
+      ],
+      "full_reference_area": 99666,
+      "visible_reference_area": 89066.86031890904,
+      "visible_reference_fraction": 0.893653405563673,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        547.0443831940161,
+        0.0,
+        1032.955616805984,
+        349.60180688015896
+      ],
+      "ideal_AABB_reference_fraction": 0.5243068542700619,
+      "ideal_AABB_exterior_fraction": 0.47569314572993815,
+      "long_side": 441,
+      "short_side": 226,
+      "long_axis_angle_rad_mod_pi": 2.470592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          390.48065185546875,
+          563.43310546875,
+          713.869140625,
+          985.838623046875
+        ],
+        "native_xyxy": [
+          563.43310546875,
+          6.130859375,
+          985.838623046875,
+          329.51934814453125
+        ],
+        "integer_crop_box": [
+          563,
+          6,
+          986,
+          330
+        ],
+        "confidence": 0.7853482961654663
+      }
+    ]
+  },
+  {
+    "condition": "seed26",
+    "criterion": "preset_hash_ranked_validation",
+    "selection_is_postprediction_diagnostic": false,
+    "source_file_relative": "results/pairs/case_sources/07878.jpg",
+    "source_sha256": "82c07fa12e750d8230dfcbd75b9b18084e11831411e5a2a7f0e2522a9ee0c1af",
+    "source_pixel_audit": {
+      "file_name": "07878.jpg",
+      "split": "val",
+      "source_sha256": "82c07fa12e750d8230dfcbd75b9b18084e11831411e5a2a7f0e2522a9ee0c1af",
+      "native_RGB_pixel_sha256": "2274a341c016127b9ba21c64c3942b0c920b3d02858feb7d5fce0979e3b634ca",
+      "clockwise90_RGB_pixel_sha256": "90ced7e9153dfe044ff8a9148604758fe8783ba2b529b1cec93bcc3f30ef7da1",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-03",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07878.jpg:779",
+      "reference_complete": true,
+      "visible_reference_fraction": 1.0000000000000007,
+      "visible_reference_area": 103740.00000000006,
+      "ideal_AABB_exterior_fraction": 0.3285065039641051,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": null,
+      "file_name": "07878.jpg"
+    },
+    "reference": {
+      "annotation_key": "07878.jpg:779",
+      "published_annotation_ID": 779,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        209.0,
+        132.0,
+        494,
+        210,
+        0.18
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          231.78871309104554,
+          89.47610762106866
+        ],
+        [
+          717.8074973283776,
+          177.91671689342581
+        ],
+        [
+          680.2112869089544,
+          384.52389237893135
+        ],
+        [
+          194.19250267162246,
+          296.0832831065742
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          231.78871309104554,
+          89.47610762106866
+        ],
+        [
+          717.8074973283776,
+          177.91671689342581
+        ],
+        [
+          680.2112869089544,
+          384.52389237893135
+        ],
+        [
+          194.19250267162246,
+          296.0832831065742
+        ]
+      ],
+      "full_reference_area": 103740,
+      "visible_reference_area": 103740.00000000006,
+      "visible_reference_fraction": 1.0000000000000007,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        194.19250267162246,
+        89.47610762106866,
+        717.8074973283776,
+        384.52389237893135
+      ],
+      "ideal_AABB_reference_fraction": 0.6714934960358949,
+      "ideal_AABB_exterior_fraction": 0.3285065039641051,
+      "long_side": 494,
+      "short_side": 210,
+      "long_axis_angle_rad_mod_pi": 0.18
+    },
+    "all_native_predictions": []
+  },
+  {
+    "condition": "seed26",
+    "criterion": "preset_hash_ranked_validation",
+    "selection_is_postprediction_diagnostic": false,
+    "source_file_relative": "results/pairs/case_sources/07427.jpg",
+    "source_sha256": "8c33ffca8dd987f009ae42d20733bc2bafc599728fb07b501cef0873345915cf",
+    "source_pixel_audit": {
+      "file_name": "07427.jpg",
+      "split": "val",
+      "source_sha256": "8c33ffca8dd987f009ae42d20733bc2bafc599728fb07b501cef0873345915cf",
+      "native_RGB_pixel_sha256": "3c1ce1b65afb9a4fb48813d04a11c510848d05a4ae9c9a60423cdfabbfc281c8",
+      "clockwise90_RGB_pixel_sha256": "70d9266dcb5eed79115856e37262777a26967bcb736a535daa2b5900b4a469cc",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 1,
+      "annotation_key": "07427.jpg:217",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9309153108149891,
+      "visible_reference_area": 122437.70533963063,
+      "ideal_AABB_exterior_fraction": 0.40545731173982147,
+      "matched_prediction_index": 2,
+      "best_any_prediction_AABB_IoU": 0.6864083057397653,
+      "matched_reference_AABB_IoU": 0.6864083057397653,
+      "crop_box": [
+        148,
+        0,
+        564,
+        354
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 94612.41609595112,
+        "reference_coverage": 0.7727392132473017,
+        "reference_fraction_in_crop": 0.6424680580179211,
+        "reference_exterior_fraction": 0.35753194198207894,
+        "polygon_IoU": 0.5403666695126899,
+        "center_error_native_px": 92.00089826688588,
+        "crop_to_reference_envelope_width_ratio": 0.7167386666187823,
+        "crop_to_reference_envelope_height_ratio": 0.997708377808416,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.7211538461538461,
+        0.3870056497175141,
+        1.2596153846153846,
+        0.7090395480225988,
+        -0.7187480686775714,
+        0.6952706047088869
+      ],
+      "file_name": "07427.jpg"
+    },
+    "reference": {
+      "annotation_key": "07427.jpg:217",
+      "published_annotation_ID": 217,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        186.0,
+        11.5,
+        524,
+        251,
+        -0.401
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          157.796597159686,
+          123.72464765430183
+        ],
+        [
+          640.2282615218769,
+          -80.81309756825205
+        ],
+        [
+          738.2034028403141,
+          150.2753523456982
+        ],
+        [
+          255.77173847812307,
+          354.81309756825203
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          157.796597159686,
+          123.72464765430183
+        ],
+        [
+          449.6189579935959,
+          0.0
+        ],
+        [
+          674.4907902530983,
+          0.0
+        ],
+        [
+          738.2034028403141,
+          150.2753523456982
+        ],
+        [
+          255.77173847812307,
+          354.81309756825203
+        ]
+      ],
+      "full_reference_area": 131524,
+      "visible_reference_area": 122437.70533963063,
+      "visible_reference_fraction": 0.9309153108149891,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        157.796597159686,
+        0.0,
+        738.2034028403141,
+        354.81309756825203
+      ],
+      "ideal_AABB_reference_fraction": 0.5945426882601785,
+      "ideal_AABB_exterior_fraction": 0.40545731173982147,
+      "long_side": 524,
+      "short_side": 251,
+      "long_axis_angle_rad_mod_pi": 2.7405926535897933
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          181.93698120117188,
+          310.9527587890625,
+          501.93267822265625,
+          694.9567260742188
+        ],
+        "native_xyxy": [
+          310.9527587890625,
+          218.06732177734375,
+          694.9567260742188,
+          538.0630187988281
+        ],
+        "integer_crop_box": [
+          310,
+          218,
+          695,
+          539
+        ],
+        "confidence": 0.771943211555481
+      },
+      {
+        "prediction_index": 1,
+        "clockwise90_xyxy": [
+          0.09210205078125,
+          993.648681640625,
+          289.50933837890625,
+          1278.358154296875
+        ],
+        "native_xyxy": [
+          993.648681640625,
+          430.49066162109375,
+          1278.358154296875,
+          719.9078979492188
+        ],
+        "integer_crop_box": [
+          993,
+          430,
+          1279,
+          720
+        ],
+        "confidence": 0.4056563377380371
+      },
+      {
+        "prediction_index": 2,
+        "clockwise90_xyxy": [
+          366.43841552734375,
+          148.6661834716797,
+          720.0,
+          563.8700561523438
+        ],
+        "native_xyxy": [
+          148.6661834716797,
+          0.0,
+          563.8700561523438,
+          353.56158447265625
+        ],
+        "integer_crop_box": [
+          148,
+          0,
+          564,
+          354
+        ],
+        "confidence": 0.24893657863140106
+      },
+      {
+        "prediction_index": 3,
+        "clockwise90_xyxy": [
+          366.2414855957031,
+          126.0977783203125,
+          714.5008544921875,
+          536.495849609375
+        ],
+        "native_xyxy": [
+          126.0977783203125,
+          5.4991455078125,
+          536.495849609375,
+          353.7585144042969
+        ],
+        "integer_crop_box": [
+          126,
+          5,
+          537,
+          354
+        ],
+        "confidence": 0.22190797328948975
+      }
+    ]
+  },
+  {
+    "condition": "seed26",
+    "criterion": "preset_hash_ranked_validation",
+    "selection_is_postprediction_diagnostic": false,
+    "source_file_relative": "results/pairs/case_sources/07507.jpg",
+    "source_sha256": "22340f878d256795184e5a6cd3d34eca0648fc41fe1b6d28e713d3398981f5a3",
+    "source_pixel_audit": {
+      "file_name": "07507.jpg",
+      "split": "val",
+      "source_sha256": "22340f878d256795184e5a6cd3d34eca0648fc41fe1b6d28e713d3398981f5a3",
+      "native_RGB_pixel_sha256": "6218f857526c925b7a982dba1bcedb9967264908e716965d660cf56050e82b22",
+      "clockwise90_RGB_pixel_sha256": "fdf3c7df42db6576c07972059200fb055f1a538aeb725e4237a8900087a76044",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07507.jpg:333",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9764665477643549,
+      "visible_reference_area": 116054.02566834135,
+      "ideal_AABB_exterior_fraction": 0.4020808949201159,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": 0.0,
+      "file_name": "07507.jpg"
+    },
+    "reference": {
+      "annotation_key": "07507.jpg:333",
+      "published_annotation_ID": 333,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        177.5,
+        36.5,
+        519,
+        229,
+        -0.33
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          154.39908510317113,
+          126.76731753446803
+        ],
+        [
+          645.395061394404,
+          -41.41101420246865
+        ],
+        [
+          719.6009148968288,
+          175.23268246553198
+        ],
+        [
+          228.604938605596,
+          343.41101420246866
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          154.39908510317113,
+          126.76731753446803
+        ],
+        [
+          524.4957687354937,
+          0.0
+        ],
+        [
+          659.5793635483891,
+          0.0
+        ],
+        [
+          719.6009148968288,
+          175.23268246553198
+        ],
+        [
+          228.604938605596,
+          343.41101420246866
+        ]
+      ],
+      "full_reference_area": 118851,
+      "visible_reference_area": 116054.02566834135,
+      "visible_reference_fraction": 0.9764665477643549,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        154.39908510317113,
+        0.0,
+        719.6009148968288,
+        343.41101420246866
+      ],
+      "ideal_AABB_reference_fraction": 0.5979191050798841,
+      "ideal_AABB_exterior_fraction": 0.4020808949201159,
+      "long_side": 519,
+      "short_side": 229,
+      "long_axis_angle_rad_mod_pi": 2.811592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          0.0,
+          994.3179931640625,
+          290.4183654785156,
+          1277.9095458984375
+        ],
+        "native_xyxy": [
+          994.3179931640625,
+          429.5816345214844,
+          1277.9095458984375,
+          720.0
+        ],
+        "integer_crop_box": [
+          994,
+          429,
+          1278,
+          720
+        ],
+        "confidence": 0.4853968620300293
+      }
+    ]
+  },
+  {
+    "condition": "seed26",
+    "criterion": "preset_hash_ranked_validation",
+    "selection_is_postprediction_diagnostic": false,
+    "source_file_relative": "results/pairs/case_sources/07437.jpg",
+    "source_sha256": "c910d00628a0be52f457481c198cad7c8c94c2e6557766d7f3ce451aeb4c3874",
+    "source_pixel_audit": {
+      "file_name": "07437.jpg",
+      "split": "val",
+      "source_sha256": "c910d00628a0be52f457481c198cad7c8c94c2e6557766d7f3ce451aeb4c3874",
+      "native_RGB_pixel_sha256": "ca7fab34326e3776a055e98bde5b0cd3c578bbc984c184a30482a25a30ff0df1",
+      "clockwise90_RGB_pixel_sha256": "849c5ffab605502faef0a339b2ad4cc13ecc5099aed979d17e752d288ff2bc59",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 1,
+      "annotation_key": "07437.jpg:234",
+      "reference_complete": true,
+      "visible_reference_fraction": 0.9999999999999999,
+      "visible_reference_area": 112751.99999999999,
+      "ideal_AABB_exterior_fraction": 0.2811479179118289,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": 0.06182824768701533,
+      "file_name": "07437.jpg"
+    },
+    "reference": {
+      "annotation_key": "07437.jpg:234",
+      "published_annotation_ID": 234,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        50.0,
+        268.0,
+        522,
+        216,
+        -0.14
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          37.48296860692418,
+          305.4774253311809
+        ],
+        [
+          554.3757186299207,
+          232.63591948688946
+        ],
+        [
+          584.5170313930759,
+          446.5225746688191
+        ],
+        [
+          67.62428137007926,
+          519.3640805131105
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          37.48296860692418,
+          305.4774253311809
+        ],
+        [
+          554.3757186299207,
+          232.63591948688946
+        ],
+        [
+          584.5170313930759,
+          446.5225746688191
+        ],
+        [
+          67.62428137007926,
+          519.3640805131105
+        ]
+      ],
+      "full_reference_area": 112752,
+      "visible_reference_area": 112751.99999999999,
+      "visible_reference_fraction": 0.9999999999999999,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        37.48296860692418,
+        232.63591948688946,
+        584.5170313930759,
+        519.3640805131105
+      ],
+      "ideal_AABB_reference_fraction": 0.7188520820881711,
+      "ideal_AABB_exterior_fraction": 0.2811479179118289,
+      "long_side": 522,
+      "short_side": 216,
+      "long_axis_angle_rad_mod_pi": 3.001592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          403.71630859375,
+          388.193359375,
+          720.0,
+          783.9751586914062
+        ],
+        "native_xyxy": [
+          388.193359375,
+          0.0,
+          783.9751586914062,
+          316.28369140625
+        ],
+        "integer_crop_box": [
+          388,
+          0,
+          784,
+          317
+        ],
+        "confidence": 0.5070353150367737
+      }
+    ]
+  },
+  {
+    "condition": "seed26",
+    "criterion": "minimum_matched_reference_coverage",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/08354.jpg",
+    "source_sha256": "9b2916742dd14694febdb7c7978af066a8183ce24e72a26bd991df07992ce95d",
+    "source_pixel_audit": {
+      "file_name": "08354.jpg",
+      "split": "val",
+      "source_sha256": "9b2916742dd14694febdb7c7978af066a8183ce24e72a26bd991df07992ce95d",
+      "native_RGB_pixel_sha256": "0547069d50b213af0ce03a896af1e3e6ca46477c9465bb99ebe4050335a3a83f",
+      "clockwise90_RGB_pixel_sha256": "635ff48e494188d2f1e8b22dafa7360909419b4b6ff36933393886732a307d60",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-04",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 1,
+      "annotation_key": "08354.jpg:92",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9999870360062804,
+      "visible_reference_area": 125488.37314842812,
+      "ideal_AABB_exterior_fraction": 0.21069657425916888,
+      "matched_prediction_index": 0,
+      "best_any_prediction_AABB_IoU": 0.5140983578456093,
+      "matched_reference_AABB_IoU": 0.5140983578456093,
+      "crop_box": [
+        0,
+        1,
+        313,
+        309
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 69121.85772725088,
+        "reference_coverage": 0.5508228052768944,
+        "reference_fraction_in_crop": 0.7170019680433476,
+        "reference_exterior_fraction": 0.2829980319566524,
+        "polygon_IoU": 0.45245548551490417,
+        "center_error_native_px": 130.02887625985167,
+        "crop_to_reference_envelope_width_ratio": 0.5641743072865073,
+        "crop_to_reference_envelope_height_ratio": 1.0747866128438843,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.9137380191693291,
+        0.461038961038961,
+        1.706070287539936,
+        0.762987012987013,
+        -0.19866933079506163,
+        0.9800665778412415
+      ],
+      "file_name": "08354.jpg"
+    },
+    "reference": {
+      "annotation_key": "08354.jpg:92",
+      "published_annotation_ID": 92,
+      "published_catalog": "reserved_test_annotations.json",
+      "bbox_xywh_angle_rad": [
+        19.0,
+        25.5,
+        534,
+        235,
+        -0.1
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          8.603461414764807,
+          52.74253282453509
+        ],
+        [
+          539.9356856732306,
+          -0.5685116648711528
+        ],
+        [
+          563.3965385852352,
+          233.2574671754649
+        ],
+        [
+          32.06431432676942,
+          286.56851166487115
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          8.603461414764807,
+          52.74253282453509
+        ],
+        [
+          534.2695320589847,
+          0.0
+        ],
+        [
+          539.9927271047022,
+          0.0
+        ],
+        [
+          563.3965385852352,
+          233.2574671754649
+        ],
+        [
+          32.06431432676942,
+          286.56851166487115
+        ]
+      ],
+      "full_reference_area": 125490,
+      "visible_reference_area": 125488.37314842812,
+      "visible_reference_fraction": 0.9999870360062804,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        8.603461414764807,
+        0.0,
+        563.3965385852352,
+        286.56851166487115
+      ],
+      "ideal_AABB_reference_fraction": 0.7893034257408311,
+      "ideal_AABB_exterior_fraction": 0.21069657425916888,
+      "long_side": 534,
+      "short_side": 235,
+      "long_axis_angle_rad_mod_pi": 3.041592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          411.5320129394531,
+          0.0,
+          718.3076171875,
+          312.2806396484375
+        ],
+        "native_xyxy": [
+          0.0,
+          1.6923828125,
+          312.2806396484375,
+          308.4679870605469
+        ],
+        "integer_crop_box": [
+          0,
+          1,
+          313,
+          309
+        ],
+        "confidence": 0.35458046197891235
+      }
+    ]
+  },
+  {
+    "condition": "seed26",
+    "criterion": "maximum_matched_reference_exterior_fraction",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07326.jpg",
+    "source_sha256": "1601b5b1015ba26d7aa802aab6c268a900cba320b15c00622c62f7b50328b6fb",
+    "source_pixel_audit": {
+      "file_name": "07326.jpg",
+      "split": "val",
+      "source_sha256": "1601b5b1015ba26d7aa802aab6c268a900cba320b15c00622c62f7b50328b6fb",
+      "native_RGB_pixel_sha256": "2deb54442aa6b337fda70ec7346d72d764aa3ec0257fbc60cc6cb5542aa42497",
+      "clockwise90_RGB_pixel_sha256": "f1457d1148798a1e1d09a224d90a9695fd2cc6371f7f0aa7f339932e19120f7c",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 1,
+      "annotation_key": "07326.jpg:99",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9641486415704941,
+      "visible_reference_area": 87292.08971050939,
+      "ideal_AABB_exterior_fraction": 0.5115162282276378,
+      "matched_prediction_index": 0,
+      "best_any_prediction_AABB_IoU": 0.916459043838034,
+      "matched_reference_AABB_IoU": 0.916459043838034,
+      "crop_box": [
+        385,
+        0,
+        797,
+        438
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 87001.76133415686,
+        "reference_coverage": 0.9966740585852011,
+        "reference_fraction_in_crop": 0.4821217434397131,
+        "reference_exterior_fraction": 0.5178782565602869,
+        "polygon_IoU": 0.4813473231555806,
+        "center_error_native_px": 14.739708522589002,
+        "crop_to_reference_envelope_width_ratio": 0.9885655422691867,
+        "crop_to_reference_envelope_height_ratio": 1.0215064378841159,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.5339805825242718,
+        0.4269406392694064,
+        1.0825242718446602,
+        0.4634703196347032,
+        -0.9244507673421027,
+        -0.38130142769283915
+      ],
+      "file_name": "07326.jpg"
+    },
+    "reference": {
+      "annotation_key": "07326.jpg:99",
+      "published_annotation_ID": 99,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        382.0,
+        85.5,
+        446,
+        203,
+        -0.981
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          396.61725632562445,
+          315.871572267663
+        ],
+        [
+          644.678786201834,
+          -54.77850178530999
+        ],
+        [
+          813.3827436743755,
+          58.12842773233697
+        ],
+        [
+          565.321213798166,
+          428.77850178530997
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          396.61725632562445,
+          315.871572267663
+        ],
+        [
+          608.0176874770874,
+          0.0
+        ],
+        [
+          726.5280586519725,
+          0.0
+        ],
+        [
+          813.3827436743755,
+          58.12842773233697
+        ],
+        [
+          565.321213798166,
+          428.77850178530997
+        ]
+      ],
+      "full_reference_area": 90538,
+      "visible_reference_area": 87292.08971050939,
+      "visible_reference_fraction": 0.9641486415704941,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        396.61725632562445,
+        0.0,
+        813.3827436743755,
+        428.77850178530997
+      ],
+      "ideal_AABB_reference_fraction": 0.4884837717723623,
+      "ideal_AABB_exterior_fraction": 0.5115162282276378,
+      "long_side": 446,
+      "short_side": 203,
+      "long_axis_angle_rad_mod_pi": 2.1605926535897932
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          282.5208740234375,
+          385.88720703125,
+          720.0,
+          796.0265502929688
+        ],
+        "native_xyxy": [
+          385.88720703125,
+          0.0,
+          796.0265502929688,
+          437.4791259765625
+        ],
+        "integer_crop_box": [
+          385,
+          0,
+          797,
+          438
+        ],
+        "confidence": 0.23605552315711975
+      }
+    ]
+  },
+  {
+    "condition": "seed26",
+    "criterion": "maximum_complete_reference_envelope_exterior_fraction",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07447.jpg",
+    "source_sha256": "f7a103c67016548c713924f74d32cfd25a03c7489a7dbb69a8a79369fe84ce05",
+    "source_pixel_audit": {
+      "file_name": "07447.jpg",
+      "split": "val",
+      "source_sha256": "f7a103c67016548c713924f74d32cfd25a03c7489a7dbb69a8a79369fe84ce05",
+      "native_RGB_pixel_sha256": "3e355f51ebd990f3e28b85006cec6530a70b87788657ece926a019ffbc6076c0",
+      "clockwise90_RGB_pixel_sha256": "f108c8828d7b34b4c1ad80d0749950418d871eeee0741cfd6080204282b1a9eb",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07447.jpg:256",
+      "reference_complete": true,
+      "visible_reference_fraction": 1.0,
+      "visible_reference_area": 106680.0,
+      "ideal_AABB_exterior_fraction": 0.5797101293754483,
+      "matched_prediction_index": 0,
+      "best_any_prediction_AABB_IoU": 0.6309609523163476,
+      "matched_reference_AABB_IoU": 0.6309609523163476,
+      "crop_box": [
+        274,
+        177,
+        691,
+        564
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 88715.96300736515,
+        "reference_coverage": 0.8316082021687772,
+        "reference_fraction_in_crop": 0.5497367253940423,
+        "reference_exterior_fraction": 0.4502632746059577,
+        "polygon_IoU": 0.49467191196839433,
+        "center_error_native_px": 62.90071541723512,
+        "crop_to_reference_envelope_width_ratio": 0.7891191020957657,
+        "crop_to_reference_envelope_height_ratio": 0.8056944643975922,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.6378896882494005,
+        0.43410852713178294,
+        1.2182254196642686,
+        0.5426356589147286,
+        -0.9739401000374984,
+        0.2268053825175841
+      ],
+      "file_name": "07447.jpg"
+    },
+    "reference": {
+      "annotation_key": "07447.jpg:256",
+      "published_annotation_ID": 256,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        286.0,
+        240.0,
+        508,
+        210,
+        -0.671
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          275.78132952774865,
+          420.69342226294077
+        ],
+        [
+          673.6470758756958,
+          104.8345172388921
+        ],
+        [
+          804.2186704722513,
+          269.30657773705923
+        ],
+        [
+          406.3529241243042,
+          585.1654827611079
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          275.78132952774865,
+          420.69342226294077
+        ],
+        [
+          673.6470758756958,
+          104.8345172388921
+        ],
+        [
+          804.2186704722513,
+          269.30657773705923
+        ],
+        [
+          406.3529241243042,
+          585.1654827611079
+        ]
+      ],
+      "full_reference_area": 106680,
+      "visible_reference_area": 106680.0,
+      "visible_reference_fraction": 1.0,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        275.78132952774865,
+        104.8345172388921,
+        804.2186704722513,
+        585.1654827611079
+      ],
+      "ideal_AABB_reference_fraction": 0.42028987062455164,
+      "ideal_AABB_exterior_fraction": 0.5797101293754483,
+      "long_side": 508,
+      "short_side": 210,
+      "long_axis_angle_rad_mod_pi": 2.470592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          156.57508850097656,
+          274.9649658203125,
+          542.9878540039062,
+          690.7587890625
+        ],
+        "native_xyxy": [
+          274.9649658203125,
+          177.01214599609375,
+          690.7587890625,
+          563.4249114990234
+        ],
+        "integer_crop_box": [
+          274,
+          177,
+          691,
+          564
+        ],
+        "confidence": 0.7022144794464111
+      },
+      {
+        "prediction_index": 1,
+        "clockwise90_xyxy": [
+          302.1528625488281,
+          878.4925537109375,
+          553.0125732421875,
+          1280.0
+        ],
+        "native_xyxy": [
+          878.4925537109375,
+          166.9874267578125,
+          1280.0,
+          417.8471374511719
+        ],
+        "integer_crop_box": [
+          878,
+          166,
+          1280,
+          418
+        ],
+        "confidence": 0.3814634680747986
+      },
+      {
+        "prediction_index": 2,
+        "clockwise90_xyxy": [
+          0.0,
+          991.41650390625,
+          291.0625,
+          1278.9862060546875
+        ],
+        "native_xyxy": [
+          991.41650390625,
+          428.9375,
+          1278.9862060546875,
+          720.0
+        ],
+        "integer_crop_box": [
+          991,
+          428,
+          1279,
+          720
+        ],
+        "confidence": 0.34795188903808594
+      },
+      {
+        "prediction_index": 3,
+        "clockwise90_xyxy": [
+          301.7432861328125,
+          879.4337768554688,
+          544.6929321289062,
+          1280.0
+        ],
+        "native_xyxy": [
+          879.4337768554688,
+          175.30706787109375,
+          1280.0,
+          418.2567138671875
+        ],
+        "integer_crop_box": [
+          879,
+          175,
+          1280,
+          419
+        ],
+        "confidence": 0.2084806263446808
+      }
+    ]
+  },
+  {
+    "condition": "seed26",
+    "criterion": "maximum_visible_reference_area_among_unmatched",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07037.jpg",
+    "source_sha256": "cf11b9e7b055b74c51de09aa3421c09d82f5f22cfc7db4b446a7af13c2043c4e",
+    "source_pixel_audit": {
+      "file_name": "07037.jpg",
+      "split": "val",
+      "source_sha256": "cf11b9e7b055b74c51de09aa3421c09d82f5f22cfc7db4b446a7af13c2043c4e",
+      "native_RGB_pixel_sha256": "2bc59743dead54d42ba3ec438f57ae63299a8d356ecf7a97b8c641340948eea6",
+      "clockwise90_RGB_pixel_sha256": "f69f74f3b77fae7b53613c3ea65f1ec111d034618e988cb29bf791e60db88eb2",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-02-28",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07037.jpg:9157",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9820460778671328,
+      "visible_reference_area": 171423.99926033098,
+      "ideal_AABB_exterior_fraction": 0.362598990274157,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": null,
+      "file_name": "07037.jpg"
+    },
+    "reference": {
+      "annotation_key": "07037.jpg:9157",
+      "published_annotation_ID": 9157,
+      "published_catalog": "train_annotations.json",
+      "bbox_xywh_angle_rad": [
+        -13.5,
+        102.0,
+        619,
+        282,
+        -0.25
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          -38.76235277433229,
+          182.9548739280739
+        ],
+        [
+          560.9944362645568,
+          29.81182314952423
+        ],
+        [
+          630.7623527743323,
+          303.04512607192606
+        ],
+        [
+          31.005563735443182,
+          456.18817685047577
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          0.0,
+          173.05722029962834
+        ],
+        [
+          560.9944362645568,
+          29.81182314952423
+        ],
+        [
+          630.7623527743323,
+          303.04512607192606
+        ],
+        [
+          31.005563735443182,
+          456.18817685047577
+        ],
+        [
+          0.0,
+          334.7605491927232
+        ]
+      ],
+      "full_reference_area": 174558,
+      "visible_reference_area": 171423.99926033098,
+      "visible_reference_fraction": 0.9820460778671328,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        0.0,
+        29.81182314952423,
+        630.7623527743323,
+        456.18817685047577
+      ],
+      "ideal_AABB_reference_fraction": 0.637401009725843,
+      "ideal_AABB_exterior_fraction": 0.362598990274157,
+      "long_side": 619,
+      "short_side": 282,
+      "long_axis_angle_rad_mod_pi": 2.891592653589793
+    },
+    "all_native_predictions": []
+  },
+  {
+    "condition": "seed27",
+    "criterion": "minimum_matched_reference_coverage",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/06919.jpg",
+    "source_sha256": "08065563bda7adf2972797f349d83a4d6470d81d7e22baf59001c445d97c7e9f",
+    "source_pixel_audit": {
+      "file_name": "06919.jpg",
+      "split": "val",
+      "source_sha256": "08065563bda7adf2972797f349d83a4d6470d81d7e22baf59001c445d97c7e9f",
+      "native_RGB_pixel_sha256": "fe48f350cb9a017acf77d17d4697a4ba52be1cd780e43a6768d4ca64219718f9",
+      "clockwise90_RGB_pixel_sha256": "6792c527d580de095b917fd3fde0de18104b88400672d351d441c29cedc26a60",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-02-28",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "06919.jpg:9022",
+      "reference_complete": true,
+      "visible_reference_fraction": 1.0,
+      "visible_reference_area": 135160.0,
+      "ideal_AABB_exterior_fraction": 0.0,
+      "matched_prediction_index": 0,
+      "best_any_prediction_AABB_IoU": 0.5119098302315936,
+      "matched_reference_AABB_IoU": 0.5119098302315936,
+      "crop_box": [
+        551,
+        153,
+        892,
+        432
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 77996.0,
+        "reference_coverage": 0.5770642201834862,
+        "reference_fraction_in_crop": 0.8198110133594004,
+        "reference_exterior_fraction": 0.18018898664059957,
+        "polygon_IoU": 0.5121107266435986,
+        "center_error_native_px": 128.5787696316931,
+        "crop_to_reference_envelope_width_ratio": 0.6256880733944954,
+        "crop_to_reference_envelope_height_ratio": 1.125,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.8768328445747801,
+        0.4838709677419355,
+        1.598240469208211,
+        0.8888888888888888,
+        0.0,
+        1.0
+      ],
+      "file_name": "06919.jpg"
+    },
+    "reference": {
+      "annotation_key": "06919.jpg:9022",
+      "published_annotation_ID": 9022,
+      "published_catalog": "train_annotations.json",
+      "bbox_xywh_angle_rad": [
+        577.5,
+        164.0,
+        545,
+        248,
+        0.0
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          577.5,
+          164.0
+        ],
+        [
+          1122.5,
+          164.0
+        ],
+        [
+          1122.5,
+          412.0
+        ],
+        [
+          577.5,
+          412.0
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          577.5,
+          164.0
+        ],
+        [
+          1122.5,
+          164.0
+        ],
+        [
+          1122.5,
+          412.0
+        ],
+        [
+          577.5,
+          412.0
+        ]
+      ],
+      "full_reference_area": 135160,
+      "visible_reference_area": 135160.0,
+      "visible_reference_fraction": 1.0,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        577.5,
+        164.0,
+        1122.5,
+        412.0
+      ],
+      "ideal_AABB_reference_fraction": 1.0,
+      "ideal_AABB_exterior_fraction": 0.0,
+      "long_side": 545,
+      "short_side": 248,
+      "long_axis_angle_rad_mod_pi": 0.0
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          288.84466552734375,
+          551.056884765625,
+          566.8440551757812,
+          891.0828857421875
+        ],
+        "native_xyxy": [
+          551.056884765625,
+          153.15594482421875,
+          891.0828857421875,
+          431.15533447265625
+        ],
+        "integer_crop_box": [
+          551,
+          153,
+          892,
+          432
+        ],
+        "confidence": 0.2868786156177521
+      }
+    ]
+  },
+  {
+    "condition": "seed27",
+    "criterion": "maximum_matched_reference_exterior_fraction",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07211.jpg",
+    "source_sha256": "0da82a86e20e918944ec458a40f90961ea1f17fa08c831a80b56a17b3db0890a",
+    "source_pixel_audit": {
+      "file_name": "07211.jpg",
+      "split": "val",
+      "source_sha256": "0da82a86e20e918944ec458a40f90961ea1f17fa08c831a80b56a17b3db0890a",
+      "native_RGB_pixel_sha256": "4dffa8d3517464b8f02de5f7635b138ab2752acc991c5c580acb41e91a305611",
+      "clockwise90_RGB_pixel_sha256": "a873924166ab799593b21168511623c1a33fda9ba7d6bb37337be8567f8b775b",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-02-29",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 1,
+      "annotation_key": "07211.jpg:9355",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.8004170598470431,
+      "visible_reference_area": 71397.20173835625,
+      "ideal_AABB_exterior_fraction": 0.5134375191884475,
+      "matched_prediction_index": 0,
+      "best_any_prediction_AABB_IoU": 0.777714171089827,
+      "matched_reference_AABB_IoU": 0.777714171089827,
+      "crop_box": [
+        228,
+        0,
+        636,
+        338
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 68263.29699685672,
+        "reference_coverage": 0.9561060564672533,
+        "reference_fraction_in_crop": 0.49500592438839136,
+        "reference_exterior_fraction": 0.5049940756116087,
+        "polygon_IoU": 0.4840067435911834,
+        "center_error_native_px": 44.23167761403281,
+        "crop_to_reference_envelope_width_ratio": 0.8821562815558007,
+        "crop_to_reference_envelope_height_ratio": 1.0653412879296484,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.3946078431372549,
+        0.27218934911242604,
+        1.0931372549019607,
+        0.591715976331361,
+        0.9976344659237654,
+        0.06874207155013168
+      ],
+      "file_name": "07211.jpg"
+    },
+    "reference": {
+      "annotation_key": "07211.jpg:9355",
+      "published_annotation_ID": 9355,
+      "published_catalog": "train_annotations.json",
+      "bbox_xywh_angle_rad": [
+        166.0,
+        -8.0,
+        446,
+        200,
+        0.751
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          294.2224800376818,
+          -133.26922051135256
+        ],
+        [
+          620.2515415524998,
+          171.06784763475252
+        ],
+        [
+          483.7775199623182,
+          317.26922051135256
+        ],
+        [
+          157.74845844750013,
+          12.932152365247475
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          436.99062575455014,
+          0.0
+        ],
+        [
+          620.2515415524998,
+          171.06784763475252
+        ],
+        [
+          483.7775199623182,
+          317.26922051135256
+        ],
+        [
+          157.74845844750013,
+          12.932152365247475
+        ],
+        [
+          169.82018394758796,
+          0.0
+        ]
+      ],
+      "full_reference_area": 89200,
+      "visible_reference_area": 71397.20173835625,
+      "visible_reference_fraction": 0.8004170598470431,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        157.74845844750013,
+        0.0,
+        620.2515415524998,
+        317.26922051135256
+      ],
+      "ideal_AABB_reference_fraction": 0.48656248081155257,
+      "ideal_AABB_exterior_fraction": 0.5134375191884475,
+      "long_side": 446,
+      "short_side": 200,
+      "long_axis_angle_rad_mod_pi": 0.751
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          382.73492431640625,
+          228.65110778808594,
+          720.0,
+          635.6263427734375
+        ],
+        "native_xyxy": [
+          228.65110778808594,
+          0.0,
+          635.6263427734375,
+          337.26507568359375
+        ],
+        "integer_crop_box": [
+          228,
+          0,
+          636,
+          338
+        ],
+        "confidence": 0.7358772158622742
+      },
+      {
+        "prediction_index": 1,
+        "clockwise90_xyxy": [
+          303.5931701660156,
+          817.14697265625,
+          652.6153564453125,
+          1231.785400390625
+        ],
+        "native_xyxy": [
+          817.14697265625,
+          67.3846435546875,
+          1231.785400390625,
+          416.4068298339844
+        ],
+        "integer_crop_box": [
+          817,
+          67,
+          1232,
+          417
+        ],
+        "confidence": 0.6388976573944092
+      }
+    ]
+  },
+  {
+    "condition": "seed27",
+    "criterion": "maximum_complete_reference_envelope_exterior_fraction",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07447.jpg",
+    "source_sha256": "f7a103c67016548c713924f74d32cfd25a03c7489a7dbb69a8a79369fe84ce05",
+    "source_pixel_audit": {
+      "file_name": "07447.jpg",
+      "split": "val",
+      "source_sha256": "f7a103c67016548c713924f74d32cfd25a03c7489a7dbb69a8a79369fe84ce05",
+      "native_RGB_pixel_sha256": "3e355f51ebd990f3e28b85006cec6530a70b87788657ece926a019ffbc6076c0",
+      "clockwise90_RGB_pixel_sha256": "f108c8828d7b34b4c1ad80d0749950418d871eeee0741cfd6080204282b1a9eb",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07447.jpg:256",
+      "reference_complete": true,
+      "visible_reference_fraction": 1.0,
+      "visible_reference_area": 106680.0,
+      "ideal_AABB_exterior_fraction": 0.5797101293754483,
+      "matched_prediction_index": 2,
+      "best_any_prediction_AABB_IoU": 0.6656543999135648,
+      "matched_reference_AABB_IoU": 0.6656543999135648,
+      "crop_box": [
+        289,
+        165,
+        728,
+        552
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 95689.7414205925,
+        "reference_coverage": 0.8969792034176275,
+        "reference_fraction_in_crop": 0.5632353388343987,
+        "reference_exterior_fraction": 0.4367646611656013,
+        "polygon_IoU": 0.5290138079781709,
+        "center_error_native_px": 34.27097897638759,
+        "crop_to_reference_envelope_width_ratio": 0.8307512849401467,
+        "crop_to_reference_envelope_height_ratio": 0.8056944643975922,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.571753986332574,
+        0.46511627906976744,
+        1.1571753986332574,
+        0.5426356589147286,
+        -0.9739401000374984,
+        0.2268053825175841
+      ],
+      "file_name": "07447.jpg"
+    },
+    "reference": {
+      "annotation_key": "07447.jpg:256",
+      "published_annotation_ID": 256,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        286.0,
+        240.0,
+        508,
+        210,
+        -0.671
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          275.78132952774865,
+          420.69342226294077
+        ],
+        [
+          673.6470758756958,
+          104.8345172388921
+        ],
+        [
+          804.2186704722513,
+          269.30657773705923
+        ],
+        [
+          406.3529241243042,
+          585.1654827611079
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          275.78132952774865,
+          420.69342226294077
+        ],
+        [
+          673.6470758756958,
+          104.8345172388921
+        ],
+        [
+          804.2186704722513,
+          269.30657773705923
+        ],
+        [
+          406.3529241243042,
+          585.1654827611079
+        ]
+      ],
+      "full_reference_area": 106680,
+      "visible_reference_area": 106680.0,
+      "visible_reference_fraction": 1.0,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        275.78132952774865,
+        104.8345172388921,
+        804.2186704722513,
+        585.1654827611079
+      ],
+      "ideal_AABB_reference_fraction": 0.42028987062455164,
+      "ideal_AABB_exterior_fraction": 0.5797101293754483,
+      "long_side": 508,
+      "short_side": 210,
+      "long_axis_angle_rad_mod_pi": 2.470592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          267.6414489746094,
+          33.966461181640625,
+          582.023681640625,
+          462.76605224609375
+        ],
+        "native_xyxy": [
+          33.966461181640625,
+          137.976318359375,
+          462.76605224609375,
+          452.3585510253906
+        ],
+        "integer_crop_box": [
+          33,
+          137,
+          463,
+          453
+        ],
+        "confidence": 0.6777403354644775
+      },
+      {
+        "prediction_index": 1,
+        "clockwise90_xyxy": [
+          302.60302734375,
+          864.9185791015625,
+          553.8218994140625,
+          1280.0
+        ],
+        "native_xyxy": [
+          864.9185791015625,
+          166.1781005859375,
+          1280.0,
+          417.39697265625
+        ],
+        "integer_crop_box": [
+          864,
+          166,
+          1280,
+          418
+        ],
+        "confidence": 0.5675517320632935
+      },
+      {
+        "prediction_index": 2,
+        "clockwise90_xyxy": [
+          168.00975036621094,
+          289.72821044921875,
+          554.3798828125,
+          727.028076171875
+        ],
+        "native_xyxy": [
+          289.72821044921875,
+          165.6201171875,
+          727.028076171875,
+          551.9902496337891
+        ],
+        "integer_crop_box": [
+          289,
+          165,
+          728,
+          552
+        ],
+        "confidence": 0.2820815443992615
+      },
+      {
+        "prediction_index": 3,
+        "clockwise90_xyxy": [
+          166.09066772460938,
+          268.81341552734375,
+          530.047607421875,
+          701.1924438476562
+        ],
+        "native_xyxy": [
+          268.81341552734375,
+          189.952392578125,
+          701.1924438476562,
+          553.9093322753906
+        ],
+        "integer_crop_box": [
+          268,
+          189,
+          702,
+          554
+        ],
+        "confidence": 0.2566327452659607
+      }
+    ]
+  },
+  {
+    "condition": "seed27",
+    "criterion": "maximum_visible_reference_area_among_unmatched",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07037.jpg",
+    "source_sha256": "cf11b9e7b055b74c51de09aa3421c09d82f5f22cfc7db4b446a7af13c2043c4e",
+    "source_pixel_audit": {
+      "file_name": "07037.jpg",
+      "split": "val",
+      "source_sha256": "cf11b9e7b055b74c51de09aa3421c09d82f5f22cfc7db4b446a7af13c2043c4e",
+      "native_RGB_pixel_sha256": "2bc59743dead54d42ba3ec438f57ae63299a8d356ecf7a97b8c641340948eea6",
+      "clockwise90_RGB_pixel_sha256": "f69f74f3b77fae7b53613c3ea65f1ec111d034618e988cb29bf791e60db88eb2",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-02-28",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07037.jpg:9157",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9820460778671328,
+      "visible_reference_area": 171423.99926033098,
+      "ideal_AABB_exterior_fraction": 0.362598990274157,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": null,
+      "file_name": "07037.jpg"
+    },
+    "reference": {
+      "annotation_key": "07037.jpg:9157",
+      "published_annotation_ID": 9157,
+      "published_catalog": "train_annotations.json",
+      "bbox_xywh_angle_rad": [
+        -13.5,
+        102.0,
+        619,
+        282,
+        -0.25
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          -38.76235277433229,
+          182.9548739280739
+        ],
+        [
+          560.9944362645568,
+          29.81182314952423
+        ],
+        [
+          630.7623527743323,
+          303.04512607192606
+        ],
+        [
+          31.005563735443182,
+          456.18817685047577
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          0.0,
+          173.05722029962834
+        ],
+        [
+          560.9944362645568,
+          29.81182314952423
+        ],
+        [
+          630.7623527743323,
+          303.04512607192606
+        ],
+        [
+          31.005563735443182,
+          456.18817685047577
+        ],
+        [
+          0.0,
+          334.7605491927232
+        ]
+      ],
+      "full_reference_area": 174558,
+      "visible_reference_area": 171423.99926033098,
+      "visible_reference_fraction": 0.9820460778671328,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        0.0,
+        29.81182314952423,
+        630.7623527743323,
+        456.18817685047577
+      ],
+      "ideal_AABB_reference_fraction": 0.637401009725843,
+      "ideal_AABB_exterior_fraction": 0.362598990274157,
+      "long_side": 619,
+      "short_side": 282,
+      "long_axis_angle_rad_mod_pi": 2.891592653589793
+    },
+    "all_native_predictions": []
+  },
+  {
+    "condition": "seed28",
+    "criterion": "minimum_matched_reference_coverage",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/08278.jpg",
+    "source_sha256": "64df1f1964fff48260b23bd24e5e80c8416131cda6fdb8b77a52c20d93c708d4",
+    "source_pixel_audit": {
+      "file_name": "08278.jpg",
+      "split": "val",
+      "source_sha256": "64df1f1964fff48260b23bd24e5e80c8416131cda6fdb8b77a52c20d93c708d4",
+      "native_RGB_pixel_sha256": "7c5d6afffa95448ee1e0f6ef709a817f0f32b4d48688522e78621ae8d9142a67",
+      "clockwise90_RGB_pixel_sha256": "420ddc91c4e9d5dac995a6e16087aa30cf1709a01caf57e36209c1c40316f685",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-04",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "08278.jpg:8",
+      "reference_complete": true,
+      "visible_reference_fraction": 1.0000000000000002,
+      "visible_reference_area": 103584.00000000003,
+      "ideal_AABB_exterior_fraction": 0.250486161017319,
+      "matched_prediction_index": 0,
+      "best_any_prediction_AABB_IoU": 0.5056303269717929,
+      "matched_reference_AABB_IoU": 0.5056303269717929,
+      "crop_box": [
+        467,
+        223,
+        776,
+        484
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 57569.10735375769,
+        "reference_coverage": 0.5557721979625972,
+        "reference_fraction_in_crop": 0.7138229532140223,
+        "reference_exterior_fraction": 0.28617704678597766,
+        "polygon_IoU": 0.45450290647976194,
+        "center_error_native_px": 123.9455525624054,
+        "crop_to_reference_envelope_width_ratio": 0.5950101870674797,
+        "crop_to_reference_envelope_height_ratio": 0.9807573326289961,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.8996763754045307,
+        0.45977011494252873,
+        1.6116504854368932,
+        0.7969348659003831,
+        0.23770262642713458,
+        0.9713379748520297
+      ],
+      "file_name": "08278.jpg"
+    },
+    "reference": {
+      "annotation_key": "08278.jpg:8",
+      "published_annotation_ID": 8,
+      "published_catalog": "reserved_test_annotations.json",
+      "bbox_xywh_angle_rad": [
+        496.0,
+        239.0,
+        498,
+        208,
+        0.12
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          510.24071923043493,
+          209.939562256257
+        ],
+        [
+          1004.6594198856603,
+          269.5562414861388
+        ],
+        [
+          979.7592807695651,
+          476.060437743743
+        ],
+        [
+          485.3405801143397,
+          416.4437585138612
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          510.24071923043493,
+          209.939562256257
+        ],
+        [
+          1004.6594198856603,
+          269.5562414861388
+        ],
+        [
+          979.7592807695651,
+          476.060437743743
+        ],
+        [
+          485.3405801143397,
+          416.4437585138612
+        ]
+      ],
+      "full_reference_area": 103584,
+      "visible_reference_area": 103584.00000000003,
+      "visible_reference_fraction": 1.0000000000000002,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        485.3405801143397,
+        209.939562256257,
+        1004.6594198856603,
+        476.060437743743
+      ],
+      "ideal_AABB_reference_fraction": 0.749513838982681,
+      "ideal_AABB_exterior_fraction": 0.250486161017319,
+      "long_side": 498,
+      "short_side": 208,
+      "long_axis_angle_rad_mod_pi": 0.12
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          236.33712768554688,
+          467.4989013671875,
+          496.623291015625,
+          775.5958251953125
+        ],
+        "native_xyxy": [
+          467.4989013671875,
+          223.376708984375,
+          775.5958251953125,
+          483.6628723144531
+        ],
+        "integer_crop_box": [
+          467,
+          223,
+          776,
+          484
+        ],
+        "confidence": 0.3619273900985718
+      }
+    ]
+  },
+  {
+    "condition": "seed28",
+    "criterion": "maximum_matched_reference_exterior_fraction",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07326.jpg",
+    "source_sha256": "1601b5b1015ba26d7aa802aab6c268a900cba320b15c00622c62f7b50328b6fb",
+    "source_pixel_audit": {
+      "file_name": "07326.jpg",
+      "split": "val",
+      "source_sha256": "1601b5b1015ba26d7aa802aab6c268a900cba320b15c00622c62f7b50328b6fb",
+      "native_RGB_pixel_sha256": "2deb54442aa6b337fda70ec7346d72d764aa3ec0257fbc60cc6cb5542aa42497",
+      "clockwise90_RGB_pixel_sha256": "f1457d1148798a1e1d09a224d90a9695fd2cc6371f7f0aa7f339932e19120f7c",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 1,
+      "annotation_key": "07326.jpg:99",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9641486415704941,
+      "visible_reference_area": 87292.08971050939,
+      "ideal_AABB_exterior_fraction": 0.5115162282276378,
+      "matched_prediction_index": 1,
+      "best_any_prediction_AABB_IoU": 0.9442807369215485,
+      "matched_reference_AABB_IoU": 0.9442807369215485,
+      "crop_box": [
+        398,
+        0,
+        799,
+        437
+      ],
+      "crop_metrics": {
+        "intersection_reference_crop_area": 87066.25259397796,
+        "reference_coverage": 0.9974128570265601,
+        "reference_fraction_in_crop": 0.4968485684757098,
+        "reference_exterior_fraction": 0.5031514315242902,
+        "polygon_IoU": 0.4962090778012098,
+        "center_error_native_px": 7.690790481058357,
+        "crop_to_reference_envelope_width_ratio": 0.9621718020629706,
+        "crop_to_reference_envelope_height_ratio": 1.0191742314049284,
+        "passes_engineering_crop_gate": false
+      },
+      "localizer_target_native_crop_cx_cy_long_short_sin2_cos2": [
+        0.516209476309227,
+        0.4279176201372998,
+        1.112219451371571,
+        0.4645308924485126,
+        -0.9244507673421027,
+        -0.38130142769283915
+      ],
+      "file_name": "07326.jpg"
+    },
+    "reference": {
+      "annotation_key": "07326.jpg:99",
+      "published_annotation_ID": 99,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        382.0,
+        85.5,
+        446,
+        203,
+        -0.981
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          396.61725632562445,
+          315.871572267663
+        ],
+        [
+          644.678786201834,
+          -54.77850178530999
+        ],
+        [
+          813.3827436743755,
+          58.12842773233697
+        ],
+        [
+          565.321213798166,
+          428.77850178530997
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          396.61725632562445,
+          315.871572267663
+        ],
+        [
+          608.0176874770874,
+          0.0
+        ],
+        [
+          726.5280586519725,
+          0.0
+        ],
+        [
+          813.3827436743755,
+          58.12842773233697
+        ],
+        [
+          565.321213798166,
+          428.77850178530997
+        ]
+      ],
+      "full_reference_area": 90538,
+      "visible_reference_area": 87292.08971050939,
+      "visible_reference_fraction": 0.9641486415704941,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        396.61725632562445,
+        0.0,
+        813.3827436743755,
+        428.77850178530997
+      ],
+      "ideal_AABB_reference_fraction": 0.4884837717723623,
+      "ideal_AABB_exterior_fraction": 0.5115162282276378,
+      "long_side": 446,
+      "short_side": 203,
+      "long_axis_angle_rad_mod_pi": 2.1605926535897932
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          7.9783477783203125,
+          1007.4107055664062,
+          287.45233154296875,
+          1278.218017578125
+        ],
+        "native_xyxy": [
+          1007.4107055664062,
+          432.54766845703125,
+          1278.218017578125,
+          712.0216522216797
+        ],
+        "integer_crop_box": [
+          1007,
+          432,
+          1279,
+          713
+        ],
+        "confidence": 0.7557554841041565
+      },
+      {
+        "prediction_index": 1,
+        "clockwise90_xyxy": [
+          283.13360595703125,
+          398.2339172363281,
+          720.0,
+          798.914306640625
+        ],
+        "native_xyxy": [
+          398.2339172363281,
+          0.0,
+          798.914306640625,
+          436.86639404296875
+        ],
+        "integer_crop_box": [
+          398,
+          0,
+          799,
+          437
+        ],
+        "confidence": 0.6172094941139221
+      }
+    ]
+  },
+  {
+    "condition": "seed28",
+    "criterion": "maximum_complete_reference_envelope_exterior_fraction",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07447.jpg",
+    "source_sha256": "f7a103c67016548c713924f74d32cfd25a03c7489a7dbb69a8a79369fe84ce05",
+    "source_pixel_audit": {
+      "file_name": "07447.jpg",
+      "split": "val",
+      "source_sha256": "f7a103c67016548c713924f74d32cfd25a03c7489a7dbb69a8a79369fe84ce05",
+      "native_RGB_pixel_sha256": "3e355f51ebd990f3e28b85006cec6530a70b87788657ece926a019ffbc6076c0",
+      "clockwise90_RGB_pixel_sha256": "f108c8828d7b34b4c1ad80d0749950418d871eeee0741cfd6080204282b1a9eb",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-03-01",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07447.jpg:256",
+      "reference_complete": true,
+      "visible_reference_fraction": 1.0,
+      "visible_reference_area": 106680.0,
+      "ideal_AABB_exterior_fraction": 0.5797101293754483,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": 0.0,
+      "file_name": "07447.jpg"
+    },
+    "reference": {
+      "annotation_key": "07447.jpg:256",
+      "published_annotation_ID": 256,
+      "published_catalog": "validation_annotations.json",
+      "bbox_xywh_angle_rad": [
+        286.0,
+        240.0,
+        508,
+        210,
+        -0.671
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          275.78132952774865,
+          420.69342226294077
+        ],
+        [
+          673.6470758756958,
+          104.8345172388921
+        ],
+        [
+          804.2186704722513,
+          269.30657773705923
+        ],
+        [
+          406.3529241243042,
+          585.1654827611079
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          275.78132952774865,
+          420.69342226294077
+        ],
+        [
+          673.6470758756958,
+          104.8345172388921
+        ],
+        [
+          804.2186704722513,
+          269.30657773705923
+        ],
+        [
+          406.3529241243042,
+          585.1654827611079
+        ]
+      ],
+      "full_reference_area": 106680,
+      "visible_reference_area": 106680.0,
+      "visible_reference_fraction": 1.0,
+      "reference_complete": true,
+      "visible_reference_AABB": [
+        275.78132952774865,
+        104.8345172388921,
+        804.2186704722513,
+        585.1654827611079
+      ],
+      "ideal_AABB_reference_fraction": 0.42028987062455164,
+      "ideal_AABB_exterior_fraction": 0.5797101293754483,
+      "long_side": 508,
+      "short_side": 210,
+      "long_axis_angle_rad_mod_pi": 2.470592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          3.244232177734375,
+          999.8177490234375,
+          290.18603515625,
+          1279.1630859375
+        ],
+        "native_xyxy": [
+          999.8177490234375,
+          429.81396484375,
+          1279.1630859375,
+          716.7557678222656
+        ],
+        "integer_crop_box": [
+          999,
+          429,
+          1280,
+          717
+        ],
+        "confidence": 0.3787428140640259
+      }
+    ]
+  },
+  {
+    "condition": "seed28",
+    "criterion": "maximum_visible_reference_area_among_unmatched",
+    "selection_is_postprediction_diagnostic": true,
+    "source_file_relative": "results/pairs/case_sources/07037.jpg",
+    "source_sha256": "cf11b9e7b055b74c51de09aa3421c09d82f5f22cfc7db4b446a7af13c2043c4e",
+    "source_pixel_audit": {
+      "file_name": "07037.jpg",
+      "split": "val",
+      "source_sha256": "cf11b9e7b055b74c51de09aa3421c09d82f5f22cfc7db4b446a7af13c2043c4e",
+      "native_RGB_pixel_sha256": "2bc59743dead54d42ba3ec438f57ae63299a8d356ecf7a97b8c641340948eea6",
+      "clockwise90_RGB_pixel_sha256": "f69f74f3b77fae7b53613c3ea65f1ec111d034618e988cb29bf791e60db88eb2",
+      "native_size_WH": [
+        1280,
+        720
+      ],
+      "rotated_size_WH": [
+        720,
+        1280
+      ]
+    },
+    "source_date": "2020-02-28",
+    "source_image_size_WH": [
+      1280,
+      720
+    ],
+    "pair": {
+      "reference_index": 0,
+      "annotation_key": "07037.jpg:9157",
+      "reference_complete": false,
+      "visible_reference_fraction": 0.9820460778671328,
+      "visible_reference_area": 171423.99926033098,
+      "ideal_AABB_exterior_fraction": 0.362598990274157,
+      "matched_prediction_index": null,
+      "best_any_prediction_AABB_IoU": 0.0,
+      "file_name": "07037.jpg"
+    },
+    "reference": {
+      "annotation_key": "07037.jpg:9157",
+      "published_annotation_ID": 9157,
+      "published_catalog": "train_annotations.json",
+      "bbox_xywh_angle_rad": [
+        -13.5,
+        102.0,
+        619,
+        282,
+        -0.25
+      ],
+      "class": "cow_body_reference",
+      "full_native_quad": [
+        [
+          -38.76235277433229,
+          182.9548739280739
+        ],
+        [
+          560.9944362645568,
+          29.81182314952423
+        ],
+        [
+          630.7623527743323,
+          303.04512607192606
+        ],
+        [
+          31.005563735443182,
+          456.18817685047577
+        ]
+      ],
+      "visible_native_polygon": [
+        [
+          0.0,
+          173.05722029962834
+        ],
+        [
+          560.9944362645568,
+          29.81182314952423
+        ],
+        [
+          630.7623527743323,
+          303.04512607192606
+        ],
+        [
+          31.005563735443182,
+          456.18817685047577
+        ],
+        [
+          0.0,
+          334.7605491927232
+        ]
+      ],
+      "full_reference_area": 174558,
+      "visible_reference_area": 171423.99926033098,
+      "visible_reference_fraction": 0.9820460778671328,
+      "reference_complete": false,
+      "visible_reference_AABB": [
+        0.0,
+        29.81182314952423,
+        630.7623527743323,
+        456.18817685047577
+      ],
+      "ideal_AABB_reference_fraction": 0.637401009725843,
+      "ideal_AABB_exterior_fraction": 0.362598990274157,
+      "long_side": 619,
+      "short_side": 282,
+      "long_axis_angle_rad_mod_pi": 2.891592653589793
+    },
+    "all_native_predictions": [
+      {
+        "prediction_index": 0,
+        "clockwise90_xyxy": [
+          4.3122100830078125,
+          1003.4525146484375,
+          302.13446044921875,
+          1279.90283203125
+        ],
+        "native_xyxy": [
+          1003.4525146484375,
+          417.86553955078125,
+          1279.90283203125,
+          715.6877899169922
+        ],
+        "integer_crop_box": [
+          1003,
+          417,
+          1280,
+          716
+        ],
+        "confidence": 0.38944268226623535
+      }
+    ]
+  }
+]

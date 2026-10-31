@@ -1,0 +1,15 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed|AllocTRES
+130288|COMPLETED|0:0|00:00:02|billing=2,cpu=2,node=1
+130288.batch|COMPLETED|0:0|00:00:02|cpu=2,mem=0,node=1
+130288.0|COMPLETED|0:0|00:00:02|cpu=2,mem=0,node=1
+{
+  "mode": "baseline_red",
+  "tests": 12,
+  "failures": 2,
+  "errors": 0,
+  "skipped": 1,
+  "expected_two_failures_reproduced": true,
+  "gate_passed": true,
+  "synthetic_tracker_sequences_not_cattle_accuracy": true
+}

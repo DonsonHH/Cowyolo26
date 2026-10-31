@@ -1,0 +1,16 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+            129998|     4gpu|    idcoo-int-QAT-paired| RUNNING|      0:47|gpu02
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129998|idcoo-int-QAT-paired|RUNNING|0:0|00:00:47|
+129998.batch|batch|RUNNING|0:0|00:00:47|
+129998.0|python|RUNNING|0:0|00:00:47|
+{"event": "VALIDATION", "seed": 26, "condition": "source_folded_fp32", "C": 18, "W": 0, "U": 7, "unknown_false_accepts": 0, "closed_top1": 25}
+{"event": "VALIDATION", "seed": 26, "condition": "initial_integer", "C": 2, "W": 0, "U": 23, "unknown_false_accepts": 1, "closed_top1": 18}
+{"event": "EPOCH", "seed": 26, "condition": "paired_float_continuation", "epoch": 1, "updates": 20, "mean_loss": 0.0766420379281044}
+{"event": "EPOCH", "seed": 26, "condition": "paired_float_continuation", "epoch": 2, "updates": 40, "mean_loss": 0.0698875019326806}
+{"event": "EPOCH", "seed": 26, "condition": "paired_float_continuation", "epoch": 3, "updates": 60, "mean_loss": 0.0673634335398674}
+{"event": "EPOCH", "seed": 26, "condition": "paired_float_continuation", "epoch": 4, "updates": 80, "mean_loss": 0.06933469641953707}
+/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py:29: TracerWarning: Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  bound = w.shape[1] * w.shape[2] * w.shape[3] * float(centered.abs().max()) * float(qw.abs().max())
+/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py:30: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert bound <= np.iinfo(np.int32).max

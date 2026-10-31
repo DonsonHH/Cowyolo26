@@ -1,0 +1,16 @@
+{"replay_and_collection_code_hashes_verified": true, "checkpoint_freeze_required_by_replay": true, "source_or_Toros_prediction_already_performed": false}
+PARTITION|AVAIL|NODES|STATE|NODELIST|GRES
+cu*|up|5|mix|cu[16-20]|(null)
+cu*|up|15|idle|cu[01-15]|(null)
+8gpu|up|1|idle|gpu01|gpu:V100S:8
+4gpu|up|1|mix|gpu02|gpu:V100S:4
+4gpu|up|1|idle|gpu03|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+            129918|     4gpu|      idcoo-cows21-train| RUNNING|      5:18|gpu02
+training=129918
+inference=129919
+collection=129920
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+            129919|     4gpu|     idcoo-cows21-replay| PENDING|      0:00|(Dependency)
+            129918|     4gpu|      idcoo-cows21-train| RUNNING|      5:18|gpu02
+            129920|       cu|    idcoo-cows21-collect| PENDING|      0:00|(Dependency)

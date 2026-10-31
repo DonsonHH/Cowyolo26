@@ -1,0 +1,238 @@
+{
+  "required_all_vectors_pass": true,
+  "CPU_GPU_passes": 8,
+  "runtime_passes": {
+    "OFF": 8,
+    "ALL_disable_quant_qdq": 8,
+    "ALL_default_diagnostic": 8
+  },
+  "maximum_packing_error": 0.0,
+  "packing": {
+    "packed_weight_arrays": 52,
+    "packed_weight_bytes": 912008,
+    "FP32_bias_and_non_conv_operations_retained": true,
+    "DOUBLE_reconstruction_retained": true,
+    "unpacked_bytes": 4093743,
+    "packed_bytes": 1233226
+  },
+  "packed_sha256": "5f86c3c9a014f2832a8ea38dedb2541fc79ce060c86a457675009146bb738b81",
+  "state_sha256": "fcfa0b92088c408f582a672130efdb2eb951fadd2fb97965cb89979d81da8f4a",
+  "rows": [
+    {
+      "vector": 0,
+      "GPU_CPU": {
+        "maximum_absolute_error": 2.9802322387695312e-08,
+        "cosine": 0.9999999999999967,
+        "pass": true
+      },
+      "packing_max_error": 0.0,
+      "runtime": {
+        "OFF": {
+          "maximum_absolute_error": 2.2351741790771484e-08,
+          "cosine": 0.9999999999999969,
+          "pass": true
+        },
+        "ALL_disable_quant_qdq": {
+          "maximum_absolute_error": 2.2351741790771484e-08,
+          "cosine": 0.9999999999999969,
+          "pass": true
+        },
+        "ALL_default_diagnostic": {
+          "maximum_absolute_error": 2.2351741790771484e-08,
+          "cosine": 0.9999999999999969,
+          "pass": true
+        }
+      },
+      "required_gate_pass": true
+    },
+    {
+      "vector": 1,
+      "GPU_CPU": {
+        "maximum_absolute_error": 1.4901161193847656e-08,
+        "cosine": 0.9999999999999963,
+        "pass": true
+      },
+      "packing_max_error": 0.0,
+      "runtime": {
+        "OFF": {
+          "maximum_absolute_error": 2.9802322387695312e-08,
+          "cosine": 0.9999999999999967,
+          "pass": true
+        },
+        "ALL_disable_quant_qdq": {
+          "maximum_absolute_error": 2.9802322387695312e-08,
+          "cosine": 0.9999999999999967,
+          "pass": true
+        },
+        "ALL_default_diagnostic": {
+          "maximum_absolute_error": 2.9802322387695312e-08,
+          "cosine": 0.9999999999999967,
+          "pass": true
+        }
+      },
+      "required_gate_pass": true
+    },
+    {
+      "vector": 2,
+      "GPU_CPU": {
+        "maximum_absolute_error": 2.9802322387695312e-08,
+        "cosine": 0.9999999999999962,
+        "pass": true
+      },
+      "packing_max_error": 0.0,
+      "runtime": {
+        "OFF": {
+          "maximum_absolute_error": 2.9802322387695312e-08,
+          "cosine": 0.9999999999999964,
+          "pass": true
+        },
+        "ALL_disable_quant_qdq": {
+          "maximum_absolute_error": 2.9802322387695312e-08,
+          "cosine": 0.9999999999999964,
+          "pass": true
+        },
+        "ALL_default_diagnostic": {
+          "maximum_absolute_error": 2.9802322387695312e-08,
+          "cosine": 0.9999999999999964,
+          "pass": true
+        }
+      },
+      "required_gate_pass": true
+    },
+    {
+      "vector": 3,
+      "GPU_CPU": {
+        "maximum_absolute_error": 2.9802322387695312e-08,
+        "cosine": 0.999999999999996,
+        "pass": true
+      },
+      "packing_max_error": 0.0,
+      "runtime": {
+        "OFF": {
+          "maximum_absolute_error": 4.470348358154297e-08,
+          "cosine": 0.9999999999999963,
+          "pass": true
+        },
+        "ALL_disable_quant_qdq": {
+          "maximum_absolute_error": 4.470348358154297e-08,
+          "cosine": 0.9999999999999963,
+          "pass": true
+        },
+        "ALL_default_diagnostic": {
+          "maximum_absolute_error": 4.470348358154297e-08,
+          "cosine": 0.9999999999999963,
+          "pass": true
+        }
+      },
+      "required_gate_pass": true
+    },
+    {
+      "vector": 4,
+      "GPU_CPU": {
+        "maximum_absolute_error": 2.9802322387695312e-08,
+        "cosine": 0.9999999999999967,
+        "pass": true
+      },
+      "packing_max_error": 0.0,
+      "runtime": {
+        "OFF": {
+          "maximum_absolute_error": 7.450580596923828e-08,
+          "cosine": 0.9999999999999959,
+          "pass": true
+        },
+        "ALL_disable_quant_qdq": {
+          "maximum_absolute_error": 7.450580596923828e-08,
+          "cosine": 0.9999999999999959,
+          "pass": true
+        },
+        "ALL_default_diagnostic": {
+          "maximum_absolute_error": 7.450580596923828e-08,
+          "cosine": 0.9999999999999959,
+          "pass": true
+        }
+      },
+      "required_gate_pass": true
+    },
+    {
+      "vector": 5,
+      "GPU_CPU": {
+        "maximum_absolute_error": 2.9802322387695312e-08,
+        "cosine": 0.9999999999999962,
+        "pass": true
+      },
+      "packing_max_error": 0.0,
+      "runtime": {
+        "OFF": {
+          "maximum_absolute_error": 5.960464477539063e-08,
+          "cosine": 0.9999999999999954,
+          "pass": true
+        },
+        "ALL_disable_quant_qdq": {
+          "maximum_absolute_error": 5.960464477539063e-08,
+          "cosine": 0.9999999999999954,
+          "pass": true
+        },
+        "ALL_default_diagnostic": {
+          "maximum_absolute_error": 5.960464477539063e-08,
+          "cosine": 0.9999999999999954,
+          "pass": true
+        }
+      },
+      "required_gate_pass": true
+    },
+    {
+      "vector": 6,
+      "GPU_CPU": {
+        "maximum_absolute_error": 2.2351741790771484e-08,
+        "cosine": 0.9999999999999969,
+        "pass": true
+      },
+      "packing_max_error": 0.0,
+      "runtime": {
+        "OFF": {
+          "maximum_absolute_error": 2.9802322387695312e-08,
+          "cosine": 0.9999999999999967,
+          "pass": true
+        },
+        "ALL_disable_quant_qdq": {
+          "maximum_absolute_error": 2.9802322387695312e-08,
+          "cosine": 0.9999999999999967,
+          "pass": true
+        },
+        "ALL_default_diagnostic": {
+          "maximum_absolute_error": 2.9802322387695312e-08,
+          "cosine": 0.9999999999999967,
+          "pass": true
+        }
+      },
+      "required_gate_pass": true
+    },
+    {
+      "vector": 7,
+      "GPU_CPU": {
+        "maximum_absolute_error": 4.470348358154297e-08,
+        "cosine": 0.9999999999999956,
+        "pass": true
+      },
+      "packing_max_error": 0.0,
+      "runtime": {
+        "OFF": {
+          "maximum_absolute_error": 5.960464477539063e-08,
+          "cosine": 0.9999999999999966,
+          "pass": true
+        },
+        "ALL_disable_quant_qdq": {
+          "maximum_absolute_error": 5.960464477539063e-08,
+          "cosine": 0.9999999999999966,
+          "pass": true
+        },
+        "ALL_default_diagnostic": {
+          "maximum_absolute_error": 5.960464477539063e-08,
+          "cosine": 0.9999999999999966,
+          "pass": true
+        }
+      },
+      "required_gate_pass": true
+    }
+  ]
+}

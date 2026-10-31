@@ -1,0 +1,176 @@
+{
+  "info": {
+    "author": "nihui",
+    "author_email": "nihuini@tencent.com",
+    "bugtrack_url": null,
+    "classifiers": [
+      "License :: OSI Approved :: BSD License",
+      "Operating System :: OS Independent",
+      "Programming Language :: C++",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.7",
+      "Programming Language :: Python :: 3.8",
+      "Programming Language :: Python :: 3.9"
+    ],
+    "description": "# pnnx\npython wrapper of pnnx, only support python 3.7+  now.\n\nInstall from pip\n==================\n\npnnx is available as wheel packages for macOS, Windows and Linux distributions, you can install with pip:\n\n```\npip install pnnx\n```\n\n# Build & Install from source\n\n## Prerequisites\n\n**On Unix (Linux, OS X)**\n\n* A compiler with C++14 support\n* CMake >= 3.4\n\n**On Mac**\n\n* A compiler with C++14 support\n* CMake >= 3.4\n\n**On Windows**\n\n* Visual Studio 2015 or higher\n* CMake >= 3.4\n\n## Build & install\n1. clone ncnn.\n```bash\ngit clone https://github.com/Tencent/ncnn.git\n```\n2. install pytorch \n\ninstall pytorch according to https://pytorch.org/ . Anaconda is strongly recommended for example:\n```bash\nconda install pytorch\n```\n3. install\n```bash\ncd /pathto/ncnntools/pnnx/python\npython setup.py install\n```\n\n> **Note:**\n> If torchvision and pnnx2onnx are needed, you can set the following environment variables before 'python setup.py install' to enable them. e.g. on ubuntu:\n>\n> ```\n> export TORCHVISION_INSTALL_DIR=\"/project/torchvision\"\n> export PROTOBUF_INCLUDE_DIR=\"/project/protobuf/include\"\n> export PROTOBUF_LIBRARIES=\"/project/protobuf/lib64/libprotobuf.a\"\n> export PROTOBUF_PROTOC_EXECUTABLE=\"/project/protobuf/bin/protoc\" \n> ```\n>\n> To do these, you must install Torchvision and Protobuf first.\n\n\n## Tests\n```bash\ncd /pathto/ncnn/tools/pnnx/python\npytest tests\n```\n\n## Usage\n1. export model to pnnx\n```python\nimport torch\nimport torchvision.models as models\nimport pnnx\n\nnet = models.resnet18(pretrained=True)\nx = torch.rand(1, 3, 224, 224)\n\n# You could try disabling checking when torch tracing raises error\n# opt_net = pnnx.export(net, \"resnet18.pt\", x, check_trace=False)\nopt_net = pnnx.export(net, \"resnet18.pt\", x)\n```\n\n2. convert existing model to pnnx\n```python\nimport torch\nimport pnnx\n\nx = torch.rand(1, 3, 224, 224)\nopt_net = pnnx.convert(\"resnet18.pt\", x)\n```\n\n## API Reference\n1. pnnx.export\n\n`model` (torch.nn.Model): model to be exported.\n\n`ptpath` (str): the torchscript name.\n\n`inputs` (torch.Tensor of list of torch.Tensor) expected inputs of the model.\n\n`inputs2` (torch.Tensor of list of torch.Tensor) alternative inputs of the model. Usually, it is used with input_shapes to resolve dynamic shape.\n\n`input_shapes` (Optional, list of int or list of list with int type inside)  shapes of model inputs.\nIt is used to resolve tensor shapes in model graph. for example, [1,3,224,224] for the model with only \n1 input, [[1,3,224,224],[1,3,224,224]] for the model that have 2 inputs. \n\n`input_types` (Optional, str or list of str) types of model inputs, it should have the same length with `input_shapes`.\nfor example, \"f32\" for the model with only 1 input, [\"f32\", \"f32\"] for the model that have 2 inputs.\n\n| typename | torch type                      |\n|:--------:|:--------------------------------|\n|   f32    | torch.float32 or torch.float    |\n|   f64    | torch.float64 or torch.double   |\n|   f16    | torch.float16 or torch.half     |\n|    u8    | torch.uint8                     |\n|    i8    | torch.int8                      |\n|   i16    | torch.int16 or torch.short      |\n|   i32    | torch.int32 or torch.int        |\n|   i64    | torch.int64 or torch.long       |\n|   c32    | torch.complex32                 |\n|   c64    | torch.complex64                 |\n|  c128    | torch.complex128                |\n\n`input_shapes2` (Optional, list of int or list of list with int type inside) shapes of alternative model inputs,\nthe format is identical to `input_shapes`. Usually, it is used with input_shapes to resolve dynamic shape (-1)\nin model graph.\n\n`input_types2` (Optional, str or list of str) types of alternative model inputs.\n\n`device` (Optional, str, default=\"cpu\") device type for the input in TorchScript model, cpu or gpu.\n\n`customop` (Optional, str or list of str) list of Torch extensions (dynamic library) for custom operators.\nFor example, \"/home/nihui/.cache/torch_extensions/fused/fused.so\" or \n[\"/home/nihui/.cache/torch_extensions/fused/fused.so\",...].\n\n`moduleop` (Optional, str or list of str)  list of modules to keep as one big operator.\nfor example, \"models.common.Focus\" or [\"models.common.Focus\",\"models.yolo.Detect\"].\n\n`optlevel` (Optional, int, default=2) graph optimization level\n\n| option | optimization level                |\n|:--------:|:----------------------------------|\n|   0    | do not apply optimization         |\n|   1    | do not apply optimization         |\n|   2    | optimization more for inference   |\n\n`pnnxparam` (Optional, str, default=\"*.pnnx.param\", * is the model name): PNNX graph definition file.\n\n`pnnxbin` (Optional, str, default=\"*.pnnx.bin\"): PNNX model weight.\n\n`pnnxpy` (Optional, str, default=\"*_pnnx.py\"): PyTorch script for inference, including model construction \nand weight initialization code.\n\n`pnnxonnx` (Optional, str, default=\"*.pnnx.onnx\"): PNNX model in onnx format.\n\n`ncnnparam` (Optional, str, default=\"*.ncnn.param\"): ncnn graph definition.\n\n`ncnnbin` (Optional, str, default=\"*.ncnn.bin\"): ncnn model weight.\n\n`ncnnpy` (Optional, str, default=\"*_ncnn.py\"): pyncnn script for inference.\n\n2. pnnx.convert\n\n`ptpath` (str): torchscript model to be converted.\n\nOther parameters are consistent with `pnnx.export`\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": [
+      "Author",
+      "Author-Email",
+      "Classifier",
+      "Description",
+      "Description-Content-Type",
+      "Home-Page",
+      "License",
+      "Requires-Dist",
+      "Requires-Python",
+      "Summary"
+    ],
+    "home_page": "https://github.com/Tencent/ncnn/tree/master/tools/pnnx",
+    "keywords": null,
+    "license": "BSD-3",
+    "license_expression": null,
+    "license_files": null,
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "pnnx",
+    "package_url": "https://pypi.org/project/pnnx/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/pnnx/",
+    "project_urls": {
+      "Homepage": "https://github.com/Tencent/ncnn/tree/master/tools/pnnx"
+    },
+    "provides_extra": null,
+    "release_url": "https://pypi.org/project/pnnx/20261020/",
+    "requires_dist": [
+      "torch"
+    ],
+    "requires_python": ">=3.7",
+    "summary": "pnnx is an open standard for PyTorch model interoperability.",
+    "version": "20261020",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "last_serial": 42488962,
+  "ownership": {
+    "organization": null,
+    "roles": [
+      {
+        "role": "Owner",
+        "user": "Qianshu"
+      },
+      {
+        "role": "Owner",
+        "user": "nihui"
+      }
+    ]
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "a9e957601c262ad292ee16da4df59244d4a21e9deadaae722560559cb335e826"
+      },
+      "digests": {
+        "blake2b_256": "8ce798373b217be926b9a6895c9316c350f97fad8bedeb64e5f43cc99c0f498e",
+        "md5": "539b78d7800902655ca85f76929b6adb",
+        "sha256": "f4d60b7df5d1f7329f60cf75018ab4e25006db6d2299cf5ef8d56c051044660b"
+      },
+      "downloads": -1,
+      "filename": "pnnx-20261020-py3-none-macosx_10_9_universal2.macosx_10_9_x86_64.macosx_11_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "539b78d7800902655ca85f76929b6adb",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.7",
+      "size": 54800431,
+      "upload_time": "2026-10-20T11:46:25",
+      "upload_time_iso_8601": "2026-10-20T11:46:25.946606Z",
+      "url": "https://files.pythonhosted.org/packages/8c/e7/98373b217be926b9a6895c9316c350f97fad8bedeb64e5f43cc99c0f498e/pnnx-20261020-py3-none-macosx_10_9_universal2.macosx_10_9_x86_64.macosx_11_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "a9e957601c262ad292ee16da4df59244d4a21e9deadaae722560559cb335e826"
+      },
+      "digests": {
+        "blake2b_256": "0a85ba5d0b9b632822b63354fa03d6f84e1948528068897bb2cef64398c99ba9",
+        "md5": "5ea809e5eb39c9d4131568c22f61a244",
+        "sha256": "13727adb291bf8061a4cc95c8b911ff2459b406144ad3c86e755b6e3f8953427"
+      },
+      "downloads": -1,
+      "filename": "pnnx-20261020-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "5ea809e5eb39c9d4131568c22f61a244",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.7",
+      "size": 24748930,
+      "upload_time": "2026-10-20T11:46:29",
+      "upload_time_iso_8601": "2026-10-20T11:46:29.512377Z",
+      "url": "https://files.pythonhosted.org/packages/0a/85/ba5d0b9b632822b63354fa03d6f84e1948528068897bb2cef64398c99ba9/pnnx-20261020-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "a9e957601c262ad292ee16da4df59244d4a21e9deadaae722560559cb335e826"
+      },
+      "digests": {
+        "blake2b_256": "5cb79665ea73f6503fea4f30abbd3eebcea1c8500095496167761a15482354bc",
+        "md5": "b1325f8d530114a863db92425f65da8a",
+        "sha256": "d50d921e5897293d616444191c1a2dc5366423c81bdb4bd22a985fe8071cf17c"
+      },
+      "downloads": -1,
+      "filename": "pnnx-20261020-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "b1325f8d530114a863db92425f65da8a",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.7",
+      "size": 29444872,
+      "upload_time": "2026-10-20T11:46:32",
+      "upload_time_iso_8601": "2026-10-20T11:46:32.326671Z",
+      "url": "https://files.pythonhosted.org/packages/5c/b7/9665ea73f6503fea4f30abbd3eebcea1c8500095496167761a15482354bc/pnnx-20261020-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "57aebe733854a7b9c24540101a463b63477d1fa1a80a6fba567ca9cb2266e316"
+      },
+      "digests": {
+        "blake2b_256": "e8511b30523f85f9482f55f3f4f11ad8f4a37db7c8773d66625cceb2973c5c60",
+        "md5": "a7e59b24480aada339e96a84bcd897a1",
+        "sha256": "cde5381cdebbef5d3e0e796e824ed02e2e1dfd075731921a3b3653514c518309"
+      },
+      "downloads": -1,
+      "filename": "pnnx-20261020-py3-none-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "a7e59b24480aada339e96a84bcd897a1",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.7",
+      "size": 18662314,
+      "upload_time": "2026-10-20T11:46:35",
+      "upload_time_iso_8601": "2026-10-20T11:46:35.003491Z",
+      "url": "https://files.pythonhosted.org/packages/e8/51/1b30523f85f9482f55f3f4f11ad8f4a37db7c8773d66625cceb2973c5c60/pnnx-20261020-py3-none-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "vulnerabilities": []
+}

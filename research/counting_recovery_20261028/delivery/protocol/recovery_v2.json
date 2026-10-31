@@ -1,0 +1,138 @@
+{
+  "name": "User steered sourceundercount recovery fixedpairedreplays v1",
+  "created_UTC": "2026-10-28T07:10:33.188291+00:00",
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "source_video": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+  "source_scope_inclusive": [
+    8912,
+    10873
+  ],
+  "source_fps": 25,
+  "history_start": 0,
+  "feedback": {
+    "human_reports": "Morethan8, approximatelyteens",
+    "exactcount_or_event_truth_available": false,
+    "do_not_optimize_to_target_count": true,
+    "board_supplied_later": true
+  },
+  "weights": [
+    {
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+    },
+    {
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226"
+    },
+    {
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+    }
+  ],
+  "pilot_seed": 26,
+  "all_seed_verification": "Afterpilot inspectallarms; extend highestnativeROIrawcoverage5Hz arm, tiepreferlowerimgsz toseeds27/28. Selectionnotbasedontargetcount. Keepallresults.",
+  "arms": [
+    {
+      "name": "baseline_full320_5hz",
+      "crop_x": [
+        0,
+        2560
+      ],
+      "imgsz": 320,
+      "stride": 5,
+      "confidence": 0.2,
+      "stable_samples": 3
+    },
+    {
+      "name": "full640_5hz",
+      "crop_x": [
+        0,
+        2560
+      ],
+      "imgsz": 640,
+      "stride": 5,
+      "confidence": 0.2,
+      "stable_samples": 3
+    },
+    {
+      "name": "channel320_5hz",
+      "crop_x": [
+        716,
+        2074
+      ],
+      "imgsz": 320,
+      "stride": 5,
+      "confidence": 0.2,
+      "stable_samples": 3
+    },
+    {
+      "name": "channel640_5hz",
+      "crop_x": [
+        716,
+        2074
+      ],
+      "imgsz": 640,
+      "stride": 5,
+      "confidence": 0.2,
+      "stable_samples": 3
+    },
+    {
+      "name": "channel320_25hz",
+      "crop_x": [
+        716,
+        2074
+      ],
+      "imgsz": 320,
+      "stride": 1,
+      "confidence": 0.2,
+      "stable_samples": 11
+    },
+    {
+      "name": "channel320_lowconf_5hz",
+      "crop_x": [
+        716,
+        2074
+      ],
+      "imgsz": 320,
+      "stride": 5,
+      "confidence": 0.1,
+      "stable_samples": 3
+    }
+  ],
+  "detection_rotation": "clockwise90 after optionalhorizontalcrop, exactpixelpermutation",
+  "restore": "BeforeByteTrack restorebox coords pluscropxoffset, nativeorig_img/shape. ROIandcounter nativecoords.",
+  "roi_x": [
+    0.34,
+    0.75
+  ],
+  "gate_y": [
+    0.4,
+    0.6
+  ],
+  "maximum_gap_s": 2,
+  "stable_duration_rule": "5Hz3samples=0.4sbetweenfirstlast;25Hz11samples=0.4s. Dense3samples isseparatetemporaldiagnosticonly.",
+  "tracker": "bytetrack.yaml",
+  "library_ultralytics": "8.4.63",
+  "required_gates": [
+    "exactbaselineevent/trackregression",
+    "crop/rotationcornerinversecontrols",
+    "nativecoordsbeforetracker",
+    "allarms andallseedfinalsreported",
+    "rawandtrackedcoverage",
+    "independentcounterreplay",
+    "strictmediaandbrowserreview"
+  ],
+  "prior_protocol_sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+  "checkpoint_freeze_sha256": "44272a1dcdc1c94691f75cda5543dd6ac1752b4dfc5c3ed9e7a046761c216585",
+  "training_updates": 0,
+  "independent_source_accuracy": null,
+  "PYNQ_execution": false,
+  "whole_goal_complete": false,
+  "implementation_correction": {
+    "previous_protocol": "recovery_v1.json",
+    "reason": "Use actualinstalledtracker filename instead ofdescriptivetext. No model/threshold/crop/countingparameter change."
+  }
+}

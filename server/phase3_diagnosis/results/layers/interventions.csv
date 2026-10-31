@@ -1,0 +1,17 @@
+model,condition,association_iou,reference_assisted,reference_events,predicted_events,TP,FP,FN,f1
+generic,actual_pipeline,,False,6,6,6,0,0,1.0
+generic,raw_boxes_reference_ids,0.5,True,6,6,6,0,0,1.0
+generic,post_boxes_reference_ids,0.5,True,6,6,6,0,0,1.0
+generic,reference_boxes_tracker_ids,0.5,True,6,6,6,0,0,1.0
+generic,raw_boxes_reference_ids,0.3,True,6,6,6,0,0,1.0
+generic,post_boxes_reference_ids,0.3,True,6,6,6,0,0,1.0
+generic,reference_boxes_tracker_ids,0.3,True,6,6,6,0,0,1.0
+pilot,actual_pipeline,,False,6,2,2,0,4,0.5
+pilot,raw_boxes_reference_ids,0.5,True,6,6,6,0,0,1.0
+pilot,post_boxes_reference_ids,0.5,True,6,5,5,0,1,0.9090909090909091
+pilot,reference_boxes_tracker_ids,0.5,True,6,3,3,0,3,0.6666666666666666
+pilot,raw_boxes_reference_ids,0.3,True,6,6,6,0,0,1.0
+pilot,post_boxes_reference_ids,0.3,True,6,5,5,0,1,0.9090909090909091
+pilot,reference_boxes_tracker_ids,0.3,True,6,3,3,0,3,0.6666666666666666
+generic,reference_boxes_reference_ids,,True,6,6,6,0,0,1.0
+pilot,reference_boxes_reference_ids,,True,6,6,6,0,0,1.0

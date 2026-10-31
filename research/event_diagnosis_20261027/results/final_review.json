@@ -1,0 +1,62 @@
+{
+  "status": "DIAGNOSTIC_EVIDENCE_REVIEWED_BROWSER_INTERACTION_PENDING",
+  "documents_reviewed": 4,
+  "local_links_checked": 32,
+  "independent_diagnostic_conditions": 24,
+  "strict_ROI_ID_controls": 6,
+  "strict_stable_region_rows": 36,
+  "source_cases": 4,
+  "source_frames": 20,
+  "source_overlays": 80,
+  "verified_asset_files": 100,
+  "server_delivery_files": 158,
+  "HTTP_checks": [
+    {
+      "url": "http://127.0.0.1:8779/annotation_workbench/event_review.html",
+      "status": 200,
+      "bytes": 5479,
+      "sha256": "7b1b47bfee428a57db79c92acfb963b3553553c6cbada6878a83b93819137114"
+    },
+    {
+      "url": "http://127.0.0.1:8779/annotation_workbench/event_review_data.json",
+      "status": 200,
+      "bytes": 31734,
+      "sha256": "c401a26e8c1251a7261546aa0dd72da24793caa3916f007488ce1d1e63864a6f"
+    },
+    {
+      "url": "http://127.0.0.1:8779/inputs/diagnostic_cases/epoch20_seed28_f9345.jpg",
+      "status": 200,
+      "bytes": 341606,
+      "sha256": "bde0befbf279c8f565094d58b498b63c948cca0e137ce67a23dd49a792032460"
+    },
+    {
+      "url": "http://127.0.0.1:8779/inputs/diagnostic_cases/f9345.jpg",
+      "status": 200,
+      "bytes": 1394643,
+      "sha256": "4a93ab0b77daecbdb244875a1d65218989d923cfe29df262eef11f317d0848fe"
+    }
+  ],
+  "new_page_browser_render_and_interaction_verified": true,
+  "new_page_browser_blocker": "CUA kernel assets path unavailable after one session reset; no successful browser state returned in this stage",
+  "source_visual_observations": "AGENT_NONBLIND_NOT_INDEPENDENT_REFERENCE",
+  "normal_algorithm_modified": false,
+  "frozen_scores_modified": false,
+  "whole_goal_complete": false,
+  "remaining_requirements": [
+    "independent source events and held-out evaluation",
+    "scene coverage/data-adaptation decision and reference-free algorithm improvement",
+    "identity mapping/calibration and QAT numerical gate",
+    "PYNQ-Z2 software/hardware joint execution and measurement",
+    "paper novelty/final evidence consolidation"
+  ],
+  "later_interpretation_correction": "data_definition_20261027: torso/whole-body extent mismatch; fixed numeric diagnostics retained, pure miss attribution unresolved",
+  "initial_browser_interaction_status": "pending due to CUA asset path failure at original diagnostic delivery",
+  "later_browser_verification": {
+    "date": "2026-10-27",
+    "four_case_images_loaded": true,
+    "frame_selector_and_previous_next_checked": true,
+    "first_previous_disabled": true,
+    "proof": "results/browser_event_review.png",
+    "qa": "results/browser_qa.json"
+  }
+}

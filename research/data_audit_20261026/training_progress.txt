@@ -1,0 +1,26 @@
+129663        COMPLETED      0:0   00:02:02 
+129663.batch  COMPLETED      0:0   00:02:02 
+129663.0      COMPLETED      0:0   00:02:02 
+{"finished_epochs": 5, "last_metrics": {"epoch": "5", "time": "109.107", "train/box_loss": "1.28328", "train/cls_loss": "0.88751", "train/dfl_loss": "0.01378", "metrics/precision(B)": "0.91072", "metrics/recall(B)": "0.96193", "metrics/mAP50(B)": "0.97822", "metrics/mAP50-95(B)": "0.75284", "val/box_loss": "0.86151", "val/cls_loss": "0.35756", "val/dfl_loss": "0.01001", "lr/pg0": "0.000416", "lr/pg1": "0.000416", "lr/pg2": "0.000416"}}
+{
+  "job_id": "129663",
+  "gpu": "Tesla V100S-PCIE-32GB",
+  "epochs_requested": 5,
+  "imgsz": 320,
+  "batch": 32,
+  "seed": 26,
+  "input_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "dataset": "/share/home/renly/projects/idcoo_research_20261026/data/opencows2020/derived_detection/data.yaml",
+  "split_scope": "development hash-group split; source/augmentation leakage not resolved, no final generalization claim",
+  "save_dir": "/share/home/renly/projects/idcoo_research_20261026/results/detection_pilot/five_epoch_dev",
+  "best_weights": "/share/home/renly/projects/idcoo_research_20261026/results/detection_pilot/five_epoch_dev/weights/best.pt",
+  "best_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+  "elapsed_s": 117.07619380950928,
+  "metrics": {
+    "metrics/precision(B)": 0.9110445707846871,
+    "metrics/recall(B)": 0.9619326500732065,
+    "metrics/mAP50(B)": 0.978154972985312,
+    "metrics/mAP50-95(B)": 0.7526863415732746,
+    "fitness": 0.7526863415732746
+  }
+}

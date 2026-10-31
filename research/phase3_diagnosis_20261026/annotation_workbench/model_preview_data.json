@@ -1,0 +1,205 @@
+{
+  "scope": {
+    "schema_version": "user_selected_source_scope_v1",
+    "source_id": "mc_camera1_aug14",
+    "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "source_fps": 25,
+    "source_frame_count": 14009,
+    "indexing": "Same zero-based source-frame labels shown by existing annotation UI",
+    "first_frame_inclusive": 8912,
+    "last_frame_inclusive": 10873,
+    "frames": 1962,
+    "start_time_s": 356.48,
+    "end_last_frame_time_s": 434.92,
+    "exclusive_end_time_s": 434.96,
+    "duration_s": 78.48,
+    "scope_provenance": "Direct user observation: cattle in orange reference area only during this interval; use for demonstration/capture scope",
+    "event_ground_truth_created": false,
+    "training_source": "Use already labelled public OpenCows2020 training; retain official YOLO26n and existing five-epoch pilot for honest first comparison",
+    "display": "Frame and video times remain tied to original source. Detection track IDs are temporary visual IDs, not cow-record identities. Source clip is demonstration, not independent counting accuracy evaluation."
+  },
+  "models": [
+    {
+      "name": "generic",
+      "title": "Official YOLO26n",
+      "weights": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+      "weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "track_cache_sha256": "9852242d8735a6e6a9bebc9e41758d667613deb68fc213677155055ec0f59772",
+      "original_inference_summary": {
+        "source": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+        "job_id": "129661",
+        "gpu": "Tesla V100S-PCIE-32GB",
+        "processed_source_frames": 14009,
+        "sampled_frames": 2802,
+        "source_fps": 25.0,
+        "effective_detection_fps": 5.0,
+        "source_duration_s": 560.36,
+        "input_size": 320,
+        "cow_class": 19,
+        "roi_x_fraction": [
+          0.34,
+          0.75
+        ],
+        "gate_axis": "y",
+        "gate_fraction": [
+          0.4,
+          0.6
+        ],
+        "stability_samples": 3,
+        "A_to_B": 0,
+        "B_to_A": 0,
+        "cow_in_roi_frames": 5,
+        "elapsed_s": 117.70092955511063,
+        "scope": "development-only COCO pretrained prediction, geometry from raw view; ground-truth review required; no bidirectional/accuracy claim from predicted events"
+      },
+      "inference_is_reused_actual_artifact": true,
+      "fresh_inference_this_render": false,
+      "predicted_A_to_B": 0,
+      "predicted_B_to_A": 0,
+      "scoped_tracked_sample_frames": 5,
+      "prediction_not_independent_accuracy": true
+    },
+    {
+      "name": "pilot",
+      "title": "OpenCows2020 5-epoch pilot",
+      "weights": "/share/home/renly/projects/idcoo_research_20261026/results/detection_pilot/five_epoch_dev/weights/best.pt",
+      "weights_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+      "track_cache_sha256": "2968a64ac5336c09d58f93772448c932fa17a20a7f8b3219c6bcfe8e74fb781e",
+      "original_inference_summary": {
+        "source": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+        "job_id": "129664",
+        "gpu": "Tesla V100S-PCIE-32GB",
+        "processed_source_frames": 14009,
+        "sampled_frames": 2802,
+        "source_fps": 25.0,
+        "effective_detection_fps": 5.0,
+        "source_duration_s": 560.36,
+        "input_size": 320,
+        "cow_class": 0,
+        "roi_x_fraction": [
+          0.34,
+          0.75
+        ],
+        "gate_axis": "y",
+        "gate_fraction": [
+          0.4,
+          0.6
+        ],
+        "stability_samples": 3,
+        "A_to_B": 7,
+        "B_to_A": 0,
+        "cow_tracked_in_roi_frames": 314,
+        "elapsed_s": 117.50887998286635,
+        "model_path": "/share/home/renly/projects/idcoo_research_20261026/results/detection_pilot/five_epoch_dev/weights/best.pt",
+        "model_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+        "scope": "development-only prediction, geometry from raw view; ground-truth review required; no bidirectional/accuracy claim from predicted events"
+      },
+      "inference_is_reused_actual_artifact": true,
+      "fresh_inference_this_render": false,
+      "predicted_A_to_B": 7,
+      "predicted_B_to_A": 0,
+      "scoped_tracked_sample_frames": 313,
+      "prediction_not_independent_accuracy": true
+    }
+  ],
+  "events": [
+    {
+      "model": "generic",
+      "events": 0,
+      "independent_replay": "PASS",
+      "rows": []
+    },
+    {
+      "model": "pilot",
+      "events": 7,
+      "independent_replay": "PASS",
+      "rows": [
+        {
+          "source_frame": 8995,
+          "time_s": 359.8,
+          "track_id": 1,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9140,
+          "time_s": 365.6,
+          "track_id": 4,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9265,
+          "time_s": 370.6,
+          "track_id": 6,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9345,
+          "time_s": 373.8,
+          "track_id": 7,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9700,
+          "time_s": 388.0,
+          "track_id": 21,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9900,
+          "time_s": 396.0,
+          "track_id": 45,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 10835,
+          "time_s": 433.4,
+          "track_id": 55,
+          "direction": "A->B"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\source_demo_20261026\\previews\\generic_f8912-10873.mp4",
+      "sha256": "4f73bf1389f35604e908cd1634c92b40adc1b3f1fee8b71bd23f5e33248e002f",
+      "bytes": 11346121,
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48,
+      "full_decode": "PASS",
+      "codec": "h264"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\source_demo_20261026\\previews\\generic_f8912-10873.webm",
+      "sha256": "442f509c1e10f91c6903b1fc577d331139f55935f0e9ae25ac0ce5fbcc4674ff",
+      "bytes": 16998970,
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48,
+      "full_decode": "PASS",
+      "codec": "vp9"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\source_demo_20261026\\previews\\pilot_f8912-10873.mp4",
+      "sha256": "53684a69bfe670f11b86c889c11d8ec99ac759f5c2e6b55bbad8f357aa473309",
+      "bytes": 12093181,
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48,
+      "full_decode": "PASS",
+      "codec": "h264"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\source_demo_20261026\\previews\\pilot_f8912-10873.webm",
+      "sha256": "9121d475785770a4cbad6bad60a30b9a1d7be0fe937342da82e8173d6d626b87",
+      "bytes": 18529413,
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48,
+      "full_decode": "PASS",
+      "codec": "vp9"
+    }
+  ],
+  "verification_status": "FRAME_ALIGNMENT_EVENTS_AND_FOUR_DERIVATIVES_VERIFIED_RGB_DIFFERENCES_RETAINED"
+}

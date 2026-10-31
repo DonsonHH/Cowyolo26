@@ -1,0 +1,60 @@
+{
+  "status": "FIRSTSTAGE_PURE_IOU_GLOBAL_REPLACEMENT_NOT_ADOPTED_AFTER_PAIRED_REGRESSION",
+  "created_UTC": "2026-10-28T18:31:50.795876+00:00",
+  "summary_sha256": "65110ee58a650392bc075a1e8e31a5b3c47994976dadff8045c8c5d330f0d421",
+  "independent_verification_sha256": "ff535c950d23e7ddd3ceaf86a2d06ee56af76fd22f4615969792cac0f664e352",
+  "all_predefined_sources_retained": 9,
+  "tracker_conditions": 18,
+  "counter_paths": 36,
+  "decision_made_after_all_predefined_results_examined": true,
+  "reason": "Official detector loses one already-referenced reverse passage: TP6->5, FP0->0, FN0->1. Local new-overhead recovery does not justify global replacement.",
+  "new_overhead_seed26_handoff_count_before_after": [
+    11,
+    12
+  ],
+  "original_clip_three_seed_handoff_counts_before_after": [
+    [
+      12,
+      11,
+      11
+    ],
+    [
+      12,
+      11,
+      11
+    ]
+  ],
+  "toros_official_TP_FP_FN_before_after": [
+    [
+      6,
+      0,
+      0
+    ],
+    [
+      5,
+      0,
+      1
+    ]
+  ],
+  "toros_pilot_TP_FP_FN_before_after": [
+    [
+      2,
+      0,
+      4
+    ],
+    [
+      4,
+      0,
+      2
+    ]
+  ],
+  "candidate_global_replacement_adopted": false,
+  "candidate_retained_as_research_control": true,
+  "posthoc_scene_or_seed_specific_switching_added": false,
+  "current_development_candidate_unchanged": "confirmation_handoff_20261028/seed26",
+  "current_confirmed12_candidate_sha256": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+  "new_overhead_reference_final_scoring_eligible": false,
+  "new_independent_test": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

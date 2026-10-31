@@ -1,0 +1,26 @@
+{
+  "status": "VERIFIER_COMPONENT_SUM_OMITTED_STATUS_QUERY_AND_PYTHON_CALL_OVERHEAD",
+  "failed_local_assertion": "abs(component_sum-total)<0.1ms",
+  "raw_board_timing_or_model_outputs_changed": false,
+  "profiles": [
+    {
+      "size": 192,
+      "minimum_instrumentation_residual_ms": 0.21420200000000023,
+      "maximum_instrumentation_residual_ms": 0.253895,
+      "mean_residual_ms": 0.2237066500000026
+    },
+    {
+      "size": 256,
+      "minimum_instrumentation_residual_ms": 0.21511999999995624,
+      "maximum_instrumentation_residual_ms": 0.32070800000002464,
+      "mean_residual_ms": 0.22439428888889348
+    },
+    {
+      "size": 320,
+      "minimum_instrumentation_residual_ms": 0.23942699999997785,
+      "maximum_instrumentation_residual_ms": 0.28339100000016515,
+      "mean_residual_ms": 0.2496889411764802
+    }
+  ],
+  "code_boundary": "infercapturesendtimestampbeforeg.status/QueueConv.status;callerfinishafterfunctionreturns;overalllatencyalreadyincludesstatusqueries"
+}

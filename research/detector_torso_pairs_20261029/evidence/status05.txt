@@ -1,0 +1,13 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS
+130498|cow-torso-pairs|4gpu|COMPLETED|0:0|00:09:17|8|12G|
+130498.batch|batch||COMPLETED|0:0|00:09:17|8||1825144K
+{"condition": "seed28", "split": "val", "images_completed": 1, "image_forwards": 11523}
+{"condition": "seed28", "split": "val", "images_completed": 257, "image_forwards": 11779}
+{"condition": "seed28", "split": "val", "images_completed": 513, "image_forwards": 12035}
+{"condition": "seed28", "split": "val", "images_completed": 769, "image_forwards": 12291}
+{"condition": "seed28", "split": "val", "images_completed": 1025, "image_forwards": 12547}
+{"condition": "seed28", "split": "val", "images_completed": 1281, "image_forwards": 12803}
+{"condition": "seed28", "split": "val", "images_completed": 1537, "image_forwards": 13059}
+{"condition_split_completed": "val_seed28", "matched": 226, "missed": 1638, "extra_predictions": 1330, "pair_targets": 226, "image_forwards": 13093}
+{"status": "ACTUAL640_DETECTOR_TORSO_SOURCE_PAIRS_ALL8380_IMAGES_AND4_VALIDATION_MODELS_COMPLETE", "created_UTC": "2026-10-29T08:11:32.863776+00:00", "Slurm_JOB_ID": "130498", "node": "gpu02", "protocol_sha256": "3e26b4c19975e43dae1af1d17b54e93a02dd23c96b8d52ebbd8368958504287e", "pair_manifest_sha256": "f80176c35402c1dba4416249fb111aff35178352f2be7abe2807990aa4ea301c", "torch": "2.8.0+cu128", "ultralytics": "8.4.63", "opencv": "4.12.0", "detector_actual_image_forwards": 13093, "active_predictor_inference_image_calls": 13093, "predictor_input_tensor_shape_counts": {"(1, 3, 640, 384)": 13093}, "framework_warmup_forward_not_counted_as_source_image": true, "unique_source_images_hashed_and_decoded": 8380, "train_pair_model": "seed26", "all_four_validation_models_reported": true, "crop_target_counts": {"val_official": 1141, "train_seed26": 2920, "val_seed26": 592, "val_seed27": 505, "val_seed28": 226}, "case_records": 24, "case_unique_source_files": 18, "new_training_updates": 0, "identity_encoder_forwards": 0, "animal_identity_labels_generated": false, "native_passage_counts_or_identity_accuracy_computed": false, "candidate_final_images_accessed": false, "current_counting_pipeline_changed": false, "FPGA_execution_verified": false, "whole_goal_complete": false, "wall_s": 552.097484247, "peak_process_rss_kib": 1827928, "CUDA_peak_allocated_bytes": 86858752}

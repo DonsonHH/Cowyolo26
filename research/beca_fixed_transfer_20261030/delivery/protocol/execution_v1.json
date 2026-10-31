@@ -1,0 +1,69 @@
+{
+  "status": "TRANSFER_MODELS_FIXED_WORKPOINTS_CODE_METRICS_AND_NO_PIXEL_ACCESS_REVIEWED_BEFORE_SELECTED_MEMBER_REQUEST",
+  "created_UTC": "2026-10-30T15:58:39.601357+00:00",
+  "protocol_sha256": "421642f55107dba7bbdfa14b3118ff272b50f7672208442fa1b7b857b6592bf6",
+  "models": [
+    {
+      "name": "old_C",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+      "checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "local_checkpoint": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_training_20261026\\delivery\\results\\study\\C_letterbox_trained_seed26\\best_encoder.pt"
+    },
+    {
+      "name": "new_C_domain_seed26",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_domain_adapt_20261030/results/training/C_domain_seed26/last_encoder.pt",
+      "checkpoint_sha256": "b435fb4599d307c0dd8bf3adccb42a466c271a3fdf23ab91d585d463b70cc912",
+      "local_checkpoint": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_domain_adapt_20261030\\delivery\\results\\training\\C_domain_seed26\\last_encoder.pt"
+    }
+  ],
+  "threshold_policies": {
+    "old_C": {
+      "primary_cal10_fold0": 0.8348239883357427,
+      "stability_cal10_fold1": 0.8451253538651191,
+      "legacy_MultiCam": 0.8445389603236383,
+      "prior_cal20": 0.845125353865119
+    },
+    "new_C_domain_seed26": {
+      "primary_cal10_fold0": 0.8304473380979187,
+      "stability_cal10_fold1": 0.870745869589039,
+      "legacy_MultiCam": 0.8445389603236383,
+      "prior_cal20": 0.8707458695890389
+    }
+  },
+  "batch": 12,
+  "Torch_version": "2.8.0+cu128",
+  "Pillow_version": "11.3.0",
+  "bootstrap_seed": 26031,
+  "bootstrap_draws": 2000,
+  "bootstrap_unit": "publisher_ID stratified_by_source_shed",
+  "tensor_anchor_indices": [
+    0,
+    3,
+    29,
+    30,
+    59,
+    60,
+    87,
+    89
+  ],
+  "expected_model_image_forwards": 180,
+  "expected_network_calls": 16,
+  "warmups": 0,
+  "new_training_updates": 0,
+  "new_board_forwards": 0,
+  "new_pixels_requested_at_freeze": 0,
+  "file_hashes_verified_before_every_model_forward_stage": true,
+  "files_sha256": {
+    "tools/evaluate_transfer.py": "285891b333d30afdbce7923a5b7e3c0379c3f9253e9ff937c45d1d743462bca8",
+    "tools/admit_inputs_v1.py": "b7a7d1a0c0b0d0825c1d8edeb3e0194ee65a13f4a9b87bbeea202f92e46dc2c4",
+    "tools/frozen_body_tensor.py": "c7e83e2638b9cb80e4e0720b5338ac802d05b37241526226da1e482a3172027c",
+    "tools/acquire_inputs_v1.ps1": "4d0604e3bcb534c38a05cb324b29054fda2613d39c804d11ba140f31a4003a88",
+    "tools/fetch_BECA_range_v1.ps1": "b9c0e503cb5e1eb079dc03950e57ac6f5950f6fcbf39a4096863fd06c9104b62",
+    "tools/evaluation.slurm": "2352554d1e4e37f233002ae81a60315017b5b6d3653763f88ef0a721b6555f63",
+    "tools/collect_final.sh": "119ead71fa9075ca2f3933f4d91fee2657de231bc456823c13a38004d1f59715",
+    "tools/freeze_run_v1.py": "a177a724475851359195222a56597cee4a6e037cf5a69600aa530036d4b8f477",
+    "tools/freeze_execution_v1.py": "0d7c24471a509ca24ee30740f282a2cba1fd9e73d06d3640cee284bff407cb5f"
+  },
+  "reviewer_kind": "assistant_manual_code_and_metadata_review_before_pixels",
+  "whole_goal_complete": false
+}

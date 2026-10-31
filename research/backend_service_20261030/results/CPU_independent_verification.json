@@ -1,0 +1,70 @@
+{
+  "status": "ALL_FRAME_CHILD_CPU_TICK_WINDOWS_POLICY_NICE_AND_SNAPSHOT_BOUNDARIES_RECOMPUTED",
+  "created_UTC": "2026-10-30T05:01:08.615116+00:00",
+  "frame_windows": 1466,
+  "runs": [
+    {
+      "run": "r1_idle_gate",
+      "policy": "idle_gate",
+      "frame_windows": 378,
+      "windows_with_positive_child_CPU_ticks": 0,
+      "sum_child_CPU_ticks_inside_boundary_windows": 0,
+      "clock_ticks_per_second": 100,
+      "approximate_CPU_ms_inside_boundary_windows": 0.0,
+      "actual_worker_nice": 10,
+      "actual_worker_CPU_affinity": [
+        0,
+        1
+      ],
+      "CPU_tick_quantization_and_boundary_overhead_preclude_layer_level_overlap": true
+    },
+    {
+      "run": "r1_low_priority_parallel",
+      "policy": "low_priority_parallel",
+      "frame_windows": 362,
+      "windows_with_positive_child_CPU_ticks": 48,
+      "sum_child_CPU_ticks_inside_boundary_windows": 857,
+      "clock_ticks_per_second": 100,
+      "approximate_CPU_ms_inside_boundary_windows": 8570.0,
+      "actual_worker_nice": 10,
+      "actual_worker_CPU_affinity": [
+        0,
+        1
+      ],
+      "CPU_tick_quantization_and_boundary_overhead_preclude_layer_level_overlap": true
+    },
+    {
+      "run": "r2_low_priority_parallel",
+      "policy": "low_priority_parallel",
+      "frame_windows": 335,
+      "windows_with_positive_child_CPU_ticks": 46,
+      "sum_child_CPU_ticks_inside_boundary_windows": 975,
+      "clock_ticks_per_second": 100,
+      "approximate_CPU_ms_inside_boundary_windows": 9750.0,
+      "actual_worker_nice": 10,
+      "actual_worker_CPU_affinity": [
+        0,
+        1
+      ],
+      "CPU_tick_quantization_and_boundary_overhead_preclude_layer_level_overlap": true
+    },
+    {
+      "run": "r2_idle_gate",
+      "policy": "idle_gate",
+      "frame_windows": 391,
+      "windows_with_positive_child_CPU_ticks": 0,
+      "sum_child_CPU_ticks_inside_boundary_windows": 0,
+      "clock_ticks_per_second": 100,
+      "approximate_CPU_ms_inside_boundary_windows": 0.0,
+      "actual_worker_nice": 10,
+      "actual_worker_CPU_affinity": [
+        0,
+        1
+      ],
+      "CPU_tick_quantization_and_boundary_overhead_preclude_layer_level_overlap": true
+    }
+  ],
+  "source": "Linux child process utime+stime, clock ticks; not per-layer scheduler trace",
+  "new_forwards": 0,
+  "whole_goal_complete": false
+}

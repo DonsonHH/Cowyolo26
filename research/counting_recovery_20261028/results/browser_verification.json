@@ -1,0 +1,553 @@
+{
+  "status": "FOUR_CONDITIONS_PLAYBACK_SEEKS_EDIT_PAUSE_AND_EVENTS_BROWSER_VERIFIED",
+  "created_UTC": "2026-10-28T08:57:56.666Z",
+  "url": "http://127.0.0.1:8779/annotation_workbench/counting_recovery_preview.html",
+  "tests": [
+    {
+      "test": "default_seek_9420",
+      "state": {
+        "clock": "源帧9420 · 376.80秒",
+        "condition": "full640_5hz_seed26",
+        "jump": "9420",
+        "newText": "seed26 · 向下11、向上0；ROI检测363/392帧",
+        "oldText": "seed26 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "currentTime": 20.321199,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_full640_5hz_seed26_f8912-10873.webm",
+            "currentTime": 20.321199,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "full640_seed26_play_advances",
+      "state": {
+        "clock": "源帧9878 · 395.12秒",
+        "condition": "full640_5hz_seed26",
+        "jump": "9878",
+        "newText": "seed26 · 向下11、向上0；ROI检测363/392帧",
+        "oldText": "seed26 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "currentTime": 38.8188,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": false,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_full640_5hz_seed26_f8912-10873.webm",
+            "currentTime": 38.8188,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": false,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "editing_frame_pauses_both_and_retains_value",
+      "state": {
+        "clock": "源帧9882 · 395.28秒",
+        "condition": "full640_5hz_seed26",
+        "jump": "9550",
+        "newText": "seed26 · 向下11、向上0；ROI检测363/392帧",
+        "oldText": "seed26 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "currentTime": 38.8306,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_full640_5hz_seed26_f8912-10873.webm",
+            "currentTime": 38.8306,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "seek_after_edit",
+      "state": {
+        "clock": "源帧9550 · 382.00秒",
+        "condition": "full640_5hz_seed26",
+        "jump": "9550",
+        "newText": "seed26 · 向下11、向上0；ROI检测363/392帧",
+        "oldText": "seed26 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "currentTime": 25.5212,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_full640_5hz_seed26_f8912-10873.webm",
+            "currentTime": 25.5212,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "seed27_ready_and_play",
+      "state": {
+        "clock": "源帧9426 · 377.04秒",
+        "condition": "full640_5hz_seed27",
+        "jump": "9426",
+        "newText": "seed27 · 向下10、向上0；ROI检测360/392帧",
+        "oldText": "seed27 · 向下6、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed27_f8912-10873.webm",
+            "currentTime": 20.6227,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": false,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_full640_5hz_seed27_f8912-10873.webm",
+            "currentTime": 20.6227,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": false,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "seed27_play_advances",
+      "state": {
+        "clock": "源帧10873 · 434.92秒",
+        "condition": "full640_5hz_seed27",
+        "jump": "10873",
+        "newText": "seed27 · 向下10、向上0；ROI检测360/392帧",
+        "oldText": "seed27 · 向下6、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed27_f8912-10873.webm",
+            "currentTime": 78.48,
+            "duration": 78.48,
+            "ended": true,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_full640_5hz_seed27_f8912-10873.webm",
+            "currentTime": 78.48,
+            "duration": 78.48,
+            "ended": true,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "seed28_ready_and_play",
+      "state": {
+        "clock": "源帧9426 · 377.04秒",
+        "condition": "full640_5hz_seed28",
+        "jump": "9426",
+        "newText": "seed28 · 向下11、向上0；ROI检测362/392帧",
+        "oldText": "seed28 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed28_f8912-10873.webm",
+            "currentTime": 20.6297,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": false,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_full640_5hz_seed28_f8912-10873.webm",
+            "currentTime": 20.6297,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": false,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "seed28_play_advances",
+      "state": {
+        "clock": "源帧10873 · 434.92秒",
+        "condition": "full640_5hz_seed28",
+        "jump": "10873",
+        "newText": "seed28 · 向下11、向上0；ROI检测362/392帧",
+        "oldText": "seed28 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed28_f8912-10873.webm",
+            "currentTime": 78.48,
+            "duration": 78.48,
+            "ended": true,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_full640_5hz_seed28_f8912-10873.webm",
+            "currentTime": 78.48,
+            "duration": 78.48,
+            "ended": true,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "dense25hz_ready_and_play",
+      "state": {
+        "clock": "源帧9426 · 377.04秒",
+        "condition": "channel320_25hz_seed26",
+        "jump": "9426",
+        "newText": "seed26 · 向下10、向上0；ROI检测1881/1962帧",
+        "oldText": "seed26 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "currentTime": 20.6321,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": false,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_channel320_25hz_seed26_f8912-10873.webm",
+            "currentTime": 20.6321,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": false,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "dense25hz_play_advances",
+      "state": {
+        "clock": "源帧10873 · 434.92秒",
+        "condition": "channel320_25hz_seed26",
+        "jump": "10873",
+        "newText": "seed26 · 向下10、向上0；ROI检测1881/1962帧",
+        "oldText": "seed26 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "currentTime": 78.48,
+            "duration": 78.48,
+            "ended": true,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_channel320_25hz_seed26_f8912-10873.webm",
+            "currentTime": 78.48,
+            "duration": 78.48,
+            "ended": true,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "last_source_frame",
+      "state": {
+        "clock": "源帧10873 · 434.92秒",
+        "condition": "channel320_25hz_seed26",
+        "jump": "10873",
+        "newText": "seed26 · 向下10、向上0；ROI检测1881/1962帧",
+        "oldText": "seed26 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "currentTime": 78.4412,
+            "duration": 78.48,
+            "ended": true,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_channel320_25hz_seed26_f8912-10873.webm",
+            "currentTime": 78.4412,
+            "duration": 78.48,
+            "ended": true,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "first_source_frame",
+      "state": {
+        "clock": "源帧8912 · 356.48秒",
+        "condition": "channel320_25hz_seed26",
+        "jump": "8912",
+        "newText": "seed26 · 向下10、向上0；ROI检测1881/1962帧",
+        "oldText": "seed26 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "currentTime": 0.0012,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_channel320_25hz_seed26_f8912-10873.webm",
+            "currentTime": 0.0012,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "eleven_source_event_entries_visible",
+      "events": [
+        "源帧8995 · 359.80秒 · A->B · track 86",
+        "源帧9135 · 365.40秒 · A->B · track 88",
+        "源帧9265 · 370.60秒 · A->B · track 91",
+        "源帧9340 · 373.60秒 · A->B · track 93",
+        "源帧9365 · 374.60秒 · A->B · track 94",
+        "源帧9465 · 378.60秒 · A->B · track 96",
+        "源帧9605 · 384.20秒 · A->B · track 103",
+        "源帧9690 · 387.60秒 · A->B · track 98",
+        "源帧9790 · 391.60秒 · A->B · track 102",
+        "源帧9900 · 396.00秒 · A->B · track 117",
+        "源帧10830 · 433.20秒 · A->B · track 141"
+      ],
+      "pass": true
+    },
+    {
+      "test": "final_seed26_source9420",
+      "state": {
+        "clock": "源帧9420 · 376.80秒",
+        "condition": "full640_5hz_seed26",
+        "jump": "9420",
+        "newText": "seed26 · 向下11、向上0；ROI检测363/392帧",
+        "oldText": "seed26 · 向下8、向上0（上一轮预测）",
+        "rows": 10,
+        "videos": [
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "currentTime": 20.321199,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          },
+          {
+            "currentSrc": "http://127.0.0.1:8779/inputs/counting_recovery_full640_5hz_seed26_f8912-10873.webm",
+            "currentTime": 20.321199,
+            "duration": 78.48,
+            "ended": false,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "rate": 1,
+            "readyState": 4,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    }
+  ],
+  "all_tests_passed": true,
+  "screenshot": "C:/Users/Donson/Documents/ChatGPT/奶牛/counting_recovery_20261028/results/browser_preview.png",
+  "main_annotation_draft_opened_or_modified": false,
+  "formal_accuracy_verified": false,
+  "board_execution": false,
+  "extra_UI_observation_attempt": {
+    "action": "body Control+Home",
+    "result": "locator press unsupported or timed out; no application change; used full-page screenshot instead"
+  }
+}

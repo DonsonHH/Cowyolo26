@@ -1,0 +1,17 @@
+{
+  "status": "FAILED",
+  "PID": 7956,
+  "boot_id": "9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f",
+  "rows": [],
+  "actual_O8_forwards": 0,
+  "actual_qualification_forwards": 0,
+  "actual_warmups": 0,
+  "whole_goal_complete": false,
+  "reusable_buffer_bytes": 730284,
+  "error": "FileNotFoundError(2, 'No such file or directory')",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/xilinx/jupyter_notebooks/cow_research_input_cost_20261030/board_benchmark.py\", line 60, in main\n    before=snapshot();start=time.monotonic_ns();cpu_start=time.process_time_ns()\n  File \"/home/xilinx/jupyter_notebooks/cow_research_input_cost_20261030/board_benchmark.py\", line 20, in snapshot\n    return {'cpu_ns':time.process_time_ns(),'io':io_counters(),'minor_faults':r.ru_minflt,'major_faults':r.ru_majflt}\n  File \"/home/xilinx/jupyter_notebooks/cow_research_input_cost_20261030/board_benchmark.py\", line 17, in io_counters\n    def io_counters():return {k:int(v) for k,v in (line.split(':') for line in Path('/proc/self/io').read_text().splitlines())}\n  File \"/usr/lib/python3.10/pathlib.py\", line 1132, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n  File \"/usr/lib/python3.10/pathlib.py\", line 1117, in open\n    return self._accessor.open(self, mode, buffering, encoding, errors,\nFileNotFoundError: [Errno 2] No such file or directory: '/proc/self/io'\n",
+  "close_error": null,
+  "PL_after": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.bit",
+  "PL_after_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "memory_after": "MemTotal:         503464 kB\nMemFree:           72028 kB\nMemAvailable:     402564 kB\nBuffers:           14052 kB\nCached:           312080 kB\nSwapCached:         3760 kB\nActive:           208120 kB\nInactive:         183128 kB\nActive(anon):       2240 kB\nInactive(anon):    63000 kB\nActive(file):     205880 kB\nInactive(file):   120128 kB\nUnevictable:          16 kB\nMlocked:              16 kB\nHighTotal:             0 kB\nHighFree:              0 kB\nLowTotal:         503464 kB\nLowFree:           72028 kB\nSwapTotal:        524284 kB\nSwapFree:         444156 kB\nDirty:               844 kB\nWriteback:             0 kB\nAnonPages:         63780 kB\nMapped:           101660 kB\nShmem:               112 kB\nKReclaimable:      16368 kB\nSlab:              31224 kB\nSReclaimable:      16368 kB\nSUnreclaim:        14856 kB\nKernelStack:         752 kB\nPageTables:         2208 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      776016 kB\nCommitted_AS:     325416 kB\nVmallocTotal:     507904 kB\nVmallocUsed:        1976 kB\nVmallocChunk:          0 kB\nPercpu:              296 kB\nCmaTotal:         131072 kB\nCmaFree:           35964 kB\n"
+}

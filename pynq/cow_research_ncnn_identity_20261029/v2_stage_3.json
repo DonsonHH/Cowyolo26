@@ -1,0 +1,21 @@
+{
+  "command": [
+    "g++",
+    "-O3",
+    "-std=c++11",
+    "-shared",
+    "-fPIC",
+    "-fopenmp",
+    "-mcpu=cortex-a9",
+    "-mfpu=neon",
+    "-mfloat-abi=hard",
+    "-I/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/install_v2/include/ncnn",
+    "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder_bridge.cpp",
+    "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/install_v2/lib/libncnn.a",
+    "-o",
+    "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/libcow_encoder_v2.so",
+    "-lpthread",
+    "-ldl"
+  ],
+  "monotonic_ns": 20318540224184
+}

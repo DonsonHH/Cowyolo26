@@ -1,0 +1,13 @@
+{
+  "purpose": "Predeclared companion analysis of five image queries from one cow/date/camera, fixed before baseline inference",
+  "input": "Same frozen MobileNetV3-small embeddings and date/identity sample as identity_pilot_v1",
+  "methods": [
+    {"name":"single_first","query_vectors":"First of five selected files by original filename"},
+    {"name":"mean_five","query_vectors":"Arithmetic mean of five L2-normalised embeddings, then L2 normalise"}
+  ],
+  "gallery": "Same 20 known identities, five Aug14 images each; max cosine per identity",
+  "thresholds": "For each method independently use Aug19 groups only and the original calibration selection rule; freeze before scoring Aug20 groups",
+  "group": "Anonymous cow ID + day + camera1; these are public curated daily-tracklet proxies, not a newly verified visual passage or a real RF incident",
+  "statistics": "Report each group once; unknown calibration10/evaluation10 are different IDs; empirical FAR<=0.05 permits zero false accepts out of10 calibration groups and has coarse resolution",
+  "scope": "A fixed comparison, not a search for best K, cropping policy or quality threshold; no new training"
+}

@@ -1,0 +1,211 @@
+JobID|State|ExitCode|Elapsed|MaxRSS
+130565|COMPLETED|0:0|00:00:35|
+130565.batch|COMPLETED|0:0|00:00:35|1147624K
+PARITY_TRAIN_IMAGE 1 0.0 0.0
+PARITY_TRAIN_IMAGE 2 0.0 0.0
+PARITY_TRAIN_IMAGE 3 0.0 0.0
+PARITY_TRAIN_IMAGE 4 0.0 0.0
+PARITY_TRAIN_IMAGE 5 0.0 0.0
+PARITY_TRAIN_IMAGE 6 0.0 0.0
+PARITY_TRAIN_IMAGE 7 0.0 0.0
+PARITY_TRAIN_IMAGE 8 0.0 0.0
+{"status": "PRESELECTED_ROT192_COW_O8_COMPILE_AND_CPU_PARITY_COMPLETE", "created_UTC": "2026-10-29T14:45:46.105016+00:00", "job_id": "130565", "protocol_sha256": "5cc6e48cabd97140f4bb0591ce88df28236a7c4fd8202ba2b2686f617be678b6", "size": 192, "checkpoint_sha256": "7b01cead4841f17d561f2a6bd768f9b229f1b3bd142818d8302135d3c69ffd45", "FP32_onnx_sha256": "c21cae6a542b533d28e0de9469ac3f022322406c8e7ba2e5acfa4edeee9a2382", "QDQ_onnx_sha256": "a24d8fa30b913f7a00489b83c7f6a6ef9ce8eafc9fc62f8bda963ff390865685", "actual_train_calibration_images": 128, "class_count": 1, "primary_model": "S192_rot90_seed26", "normalization_parity": [{"file_name": "04930.jpg", "outputs_byte_exact": true, "raw_sha256": "66ecce3ebbf2db368d66db58eae87bb3e6e1e3f2238ad403c5bbd78815abf777"}, {"file_name": "06639.jpg", "outputs_byte_exact": true, "raw_sha256": "118bc115f348776b4acf7d201b93a03f80bdf030c8b0f0fb825a11991f2d2986"}, {"file_name": "00902.jpg", "outputs_byte_exact": true, "raw_sha256": "42e7683d08d17f1b161f0a572d0f95b830c41c65ded461b905d966ee0714f102"}, {"file_name": "00644.jpg", "outputs_byte_exact": true, "raw_sha256": "66142923ceaa0a71539d463eb1a9fe04a946f0d6e31d08863f1081ae851dc922"}, {"file_name": "01348.jpg", "outputs_byte_exact": true, "raw_sha256": "81d4cae22be5da7571d88685fd4a55eaa41e63587140a85d72cd3f6ff35cfcdd"}, {"file_name": "01786.jpg", "outputs_byte_exact": true, "raw_sha256": "6c2926b447af84480921203c63915739296de6bee40ca83e8496bf8059a07295"}, {"file_name": "02761.jpg", "outputs_byte_exact": true, "raw_sha256": "d4254eb575a9f4e88f15babb92bbb550fa72fd0445511d32e1ee790a9c7b40dd"}, {"file_name": "03923.jpg", "outputs_byte_exact": true, "raw_sha256": "f51b3c4ff9f0e646de2edc3b73a97f2e0e93bbdc580891672caf79ccaf70a898"}], "integer_depthwise_ids": [35, 60, 65, 78, 83, 89, 95, 99], "compiled_op_counts": {"QuantizeLinear": 24, "QuantConv": 94, "Int8Lookup": 47, "Split": 23, "Identity": 42, "DequantizeLinear": 30, "FloatLookup": 17, "Add": 21, "Concat": 24, "MaxPool": 3, "Reshape": 15, "Transpose": 5, "MatMul": 4, "Mul": 3, "Softmax": 2, "Depthwise": 8, "Resize": 2, "Slice": 2, "Sub": 1, "ReduceMax": 1, "TopK": 2, "Unsqueeze": 4, "Flatten": 2, "Expand": 2, "GatherElements": 3, "Mod": 1, "Cast": 1}, "graph_sha256": "5c05590f1c16f23f8e920447cdb6dd92e0d58a10104689bbc069ceb9fae1b00c", "resident_plan_sha256": "cd5702cfca84e38ab75e8251ca5a15ff66be16fccc9d87ef3a0e4577079e40fa", "resident_pairs": 25, "native_PC_library_sha256": "ca6bc4d2eb78210e59f441657b3f7d797239682bdb48d5d31db238f6fd329ae0", "class_head_code_checks": [{"conv_id": 70, "Cout": 1, "codes": 256, "finite": true, "range_valid": true}, {"conv_id": 87, "Cout": 1, "codes": 256, "finite": true, "range_valid": true}, {"conv_id": 101, "Cout": 1, "codes": 256, "finite": true, "range_valid": true}], "CPU_integer_parity_vectors": [{"file_name": "04930.jpg", "input_sha256": "21cf6f493afd4d013cdb5f1b2e43046120a6e10486be615ef2df755200b7f05f", "maximum_box_error": 0.0, "maximum_score_error": 0.0, "classes_exact": true, "passes": true}, {"file_name": "06639.jpg", "input_sha256": "68c4f9af010eb93e34c1daa2e0d050c77e5a85322703670e292ce26fb406be50", "maximum_box_error": 0.0, "maximum_score_error": 0.0, "classes_exact": true, "passes": true}, {"file_name": "00902.jpg", "input_sha256": "f1aeee68c0984c8a2552a19b71f70c4ea9b586fb63565c2c9d21d31fbb459112", "maximum_box_error": 0.0, "maximum_score_error": 0.0, "classes_exact": true, "passes": true}, {"file_name": "00644.jpg", "input_sha256": "da2df3c615b5c927602b5fef763c2b8f24454a7f7dcc6bd075bd190904e8cb83", "maximum_box_error": 0.0, "maximum_score_error": 0.0, "classes_exact": true, "passes": true}, {"file_name": "01348.jpg", "input_sha256": "fe6e6da766e7ba1f4a087bcf9a7bf1919e20ab025844d488cd9aa2fe97bc80c0", "maximum_box_error": 0.0, "maximum_score_error": 0.0, "classes_exact": true, "passes": true}, {"file_name": "01786.jpg", "input_sha256": "20f3a95490ff0377a7b16a2b2e9dd0188d3d5d00d0b0bec7889d733a25c08a5c", "maximum_box_error": 0.0, "maximum_score_error": 0.0, "classes_exact": true, "passes": true}, {"file_name": "02761.jpg", "input_sha256": "eaa9a5ca996eda358e3559b4e1e66d6437d1ddff006aef9ce7363837a3274158", "maximum_box_error": 0.0, "maximum_score_error": 0.0, "classes_exact": true, "passes": true}, {"file_name": "03923.jpg", "input_sha256": "7ea4fba08547ba4b169239ca00def41f7d2b39341b7bef37e3823cfc379fb2dc", "maximum_box_error": 0.0, "maximum_score_error": 0.0, "classes_exact": true, "passes": true}], "maximum_box_parity_error": 0.0, "maximum_score_parity_error": 0.0, "all_native_CPU_parity_gates_pass": true, "new_training_updates": 0, "source_video_Toros_or_validation_pixels_used": false, "board_inference_executed": false, "whole_goal_complete": false}
+[1;31m2026-10-29 22:45:19.989697511 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 1777082, index: 47, mask: {48, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+[1;31m2026-10-29 22:45:20.000695122 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 1777088, index: 53, mask: {54, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+[1;31m2026-10-29 22:45:20.000695787 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 1777085, index: 50, mask: {51, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+[1;31m2026-10-29 22:45:20.050697767 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 1777086, index: 51, mask: {52, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+WARNING:root:Please consider pre-processing before quantization. See https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 
+{
+  "status": "PRESELECTED_ROT192_COW_O8_COMPILE_AND_CPU_PARITY_COMPLETE",
+  "created_UTC": "2026-10-29T14:45:46.105016+00:00",
+  "job_id": "130565",
+  "protocol_sha256": "5cc6e48cabd97140f4bb0591ce88df28236a7c4fd8202ba2b2686f617be678b6",
+  "size": 192,
+  "checkpoint_sha256": "7b01cead4841f17d561f2a6bd768f9b229f1b3bd142818d8302135d3c69ffd45",
+  "FP32_onnx_sha256": "c21cae6a542b533d28e0de9469ac3f022322406c8e7ba2e5acfa4edeee9a2382",
+  "QDQ_onnx_sha256": "a24d8fa30b913f7a00489b83c7f6a6ef9ce8eafc9fc62f8bda963ff390865685",
+  "actual_train_calibration_images": 128,
+  "class_count": 1,
+  "primary_model": "S192_rot90_seed26",
+  "normalization_parity": [
+    {
+      "file_name": "04930.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "66ecce3ebbf2db368d66db58eae87bb3e6e1e3f2238ad403c5bbd78815abf777"
+    },
+    {
+      "file_name": "06639.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "118bc115f348776b4acf7d201b93a03f80bdf030c8b0f0fb825a11991f2d2986"
+    },
+    {
+      "file_name": "00902.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "42e7683d08d17f1b161f0a572d0f95b830c41c65ded461b905d966ee0714f102"
+    },
+    {
+      "file_name": "00644.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "66142923ceaa0a71539d463eb1a9fe04a946f0d6e31d08863f1081ae851dc922"
+    },
+    {
+      "file_name": "01348.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "81d4cae22be5da7571d88685fd4a55eaa41e63587140a85d72cd3f6ff35cfcdd"
+    },
+    {
+      "file_name": "01786.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "6c2926b447af84480921203c63915739296de6bee40ca83e8496bf8059a07295"
+    },
+    {
+      "file_name": "02761.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "d4254eb575a9f4e88f15babb92bbb550fa72fd0445511d32e1ee790a9c7b40dd"
+    },
+    {
+      "file_name": "03923.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "f51b3c4ff9f0e646de2edc3b73a97f2e0e93bbdc580891672caf79ccaf70a898"
+    }
+  ],
+  "integer_depthwise_ids": [
+    35,
+    60,
+    65,
+    78,
+    83,
+    89,
+    95,
+    99
+  ],
+  "compiled_op_counts": {
+    "QuantizeLinear": 24,
+    "QuantConv": 94,
+    "Int8Lookup": 47,
+    "Split": 23,
+    "Identity": 42,
+    "DequantizeLinear": 30,
+    "FloatLookup": 17,
+    "Add": 21,
+    "Concat": 24,
+    "MaxPool": 3,
+    "Reshape": 15,
+    "Transpose": 5,
+    "MatMul": 4,
+    "Mul": 3,
+    "Softmax": 2,
+    "Depthwise": 8,
+    "Resize": 2,
+    "Slice": 2,
+    "Sub": 1,
+    "ReduceMax": 1,
+    "TopK": 2,
+    "Unsqueeze": 4,
+    "Flatten": 2,
+    "Expand": 2,
+    "GatherElements": 3,
+    "Mod": 1,
+    "Cast": 1
+  },
+  "graph_sha256": "5c05590f1c16f23f8e920447cdb6dd92e0d58a10104689bbc069ceb9fae1b00c",
+  "resident_plan_sha256": "cd5702cfca84e38ab75e8251ca5a15ff66be16fccc9d87ef3a0e4577079e40fa",
+  "resident_pairs": 25,
+  "native_PC_library_sha256": "ca6bc4d2eb78210e59f441657b3f7d797239682bdb48d5d31db238f6fd329ae0",
+  "class_head_code_checks": [
+    {
+      "conv_id": 70,
+      "Cout": 1,
+      "codes": 256,
+      "finite": true,
+      "range_valid": true
+    },
+    {
+      "conv_id": 87,
+      "Cout": 1,
+      "codes": 256,
+      "finite": true,
+      "range_valid": true
+    },
+    {
+      "conv_id": 101,
+      "Cout": 1,
+      "codes": 256,
+      "finite": true,
+      "range_valid": true
+    }
+  ],
+  "CPU_integer_parity_vectors": [
+    {
+      "file_name": "04930.jpg",
+      "input_sha256": "21cf6f493afd4d013cdb5f1b2e43046120a6e10486be615ef2df755200b7f05f",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "06639.jpg",
+      "input_sha256": "68c4f9af010eb93e34c1daa2e0d050c77e5a85322703670e292ce26fb406be50",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "00902.jpg",
+      "input_sha256": "f1aeee68c0984c8a2552a19b71f70c4ea9b586fb63565c2c9d21d31fbb459112",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "00644.jpg",
+      "input_sha256": "da2df3c615b5c927602b5fef763c2b8f24454a7f7dcc6bd075bd190904e8cb83",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "01348.jpg",
+      "input_sha256": "fe6e6da766e7ba1f4a087bcf9a7bf1919e20ab025844d488cd9aa2fe97bc80c0",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "01786.jpg",
+      "input_sha256": "20f3a95490ff0377a7b16a2b2e9dd0188d3d5d00d0b0bec7889d733a25c08a5c",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "02761.jpg",
+      "input_sha256": "eaa9a5ca996eda358e3559b4e1e66d6437d1ddff006aef9ce7363837a3274158",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "03923.jpg",
+      "input_sha256": "7ea4fba08547ba4b169239ca00def41f7d2b39341b7bef37e3823cfc379fb2dc",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    }
+  ],
+  "maximum_box_parity_error": 0.0,
+  "maximum_score_parity_error": 0.0,
+  "all_native_CPU_parity_gates_pass": true,
+  "new_training_updates": 0,
+  "source_video_Toros_or_validation_pixels_used": false,
+  "board_inference_executed": false,
+  "whole_goal_complete": false
+}

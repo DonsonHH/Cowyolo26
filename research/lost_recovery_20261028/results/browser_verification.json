@@ -1,0 +1,504 @@
+{
+  "status": "THREE_LOST_RECOVERY_PAIRS_PLAY_SEEK_EDIT_PAUSE_AND_EVENTS_VERIFIED",
+  "created_UTC": "2026-10-28T12:19:28.404Z",
+  "url": "http://127.0.0.1:8779/annotation_workbench/lost_recovery_preview.html",
+  "tests": [
+    {
+      "test": "three_pair_rows_and_default_media_ready",
+      "state": {
+        "clock": "源帧8912 · 356.48秒",
+        "condition": "allow_lost_iou_seed26",
+        "jump": "8912",
+        "newText": "seed26 · 向下12、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed26 · 向下12、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed26_f8912-10873.webm",
+            "time": 0,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed26_f8912-10873.webm",
+            "time": 0,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "source9365_seek",
+      "state": {
+        "clock": "源帧9365 · 374.60秒",
+        "condition": "allow_lost_iou_seed26",
+        "jump": "9365",
+        "newText": "seed26 · 向下12、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed26 · 向下12、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed26_f8912-10873.webm",
+            "time": 18.1212,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed26_f8912-10873.webm",
+            "time": 18.1212,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "seed26_play_advances",
+      "state": {
+        "clock": "源帧9756 · 390.24秒",
+        "condition": "allow_lost_iou_seed26",
+        "jump": "9756",
+        "newText": "seed26 · 向下12、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed26 · 向下12、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed26_f8912-10873.webm",
+            "time": 33.9892,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed26_f8912-10873.webm",
+            "time": 33.9892,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "playing_edit_pauses_and_retains_value",
+      "before": {
+        "clock": "源帧9371 · 374.84秒",
+        "condition": "allow_lost_iou_seed26",
+        "jump": "9371",
+        "newText": "seed26 · 向下12、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed26 · 向下12、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed26_f8912-10873.webm",
+            "time": 18.4243,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed26_f8912-10873.webm",
+            "time": 18.4243,
+            "width": 1280
+          }
+        ]
+      },
+      "after": {
+        "clock": "源帧9372 · 374.88秒",
+        "condition": "allow_lost_iou_seed26",
+        "jump": "9375",
+        "newText": "seed26 · 向下12、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed26 · 向下12、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed26_f8912-10873.webm",
+            "time": 18.4344,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed26_f8912-10873.webm",
+            "time": 18.4343,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "edited_frame_seek",
+      "state": {
+        "clock": "源帧9375 · 375.00秒",
+        "condition": "allow_lost_iou_seed26",
+        "jump": "9375",
+        "newText": "seed26 · 向下12、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed26 · 向下12、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed26_f8912-10873.webm",
+            "time": 18.5212,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed26_f8912-10873.webm",
+            "time": 18.5212,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "seed27_play_ready_and_advances",
+      "initial": {
+        "clock": "源帧9371 · 374.84秒",
+        "condition": "allow_lost_iou_seed27",
+        "jump": "9371",
+        "newText": "seed27 · 向下11、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed27 · 向下11、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed27_f8912-10873.webm",
+            "time": 18.427,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed27_f8912-10873.webm",
+            "time": 18.427,
+            "width": 1280
+          }
+        ]
+      },
+      "state": {
+        "clock": "源帧10873 · 434.92秒",
+        "condition": "allow_lost_iou_seed27",
+        "jump": "10873",
+        "newText": "seed27 · 向下11、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed27 · 向下11、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed27_f8912-10873.webm",
+            "time": 78.48,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed27_f8912-10873.webm",
+            "time": 78.48,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "seed28_play_ready_and_advances",
+      "initial": {
+        "clock": "源帧9371 · 374.84秒",
+        "condition": "allow_lost_iou_seed28",
+        "jump": "9371",
+        "newText": "seed28 · 向下11、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed28 · 向下11、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed28_f8912-10873.webm",
+            "time": 18.4109,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed28_f8912-10873.webm",
+            "time": 18.4109,
+            "width": 1280
+          }
+        ]
+      },
+      "state": {
+        "clock": "源帧10333 · 413.32秒",
+        "condition": "allow_lost_iou_seed28",
+        "jump": "10333",
+        "newText": "seed28 · 向下11、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed28 · 向下11、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed28_f8912-10873.webm",
+            "time": 57.026,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": false,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed28_f8912-10873.webm",
+            "time": 57.026,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "last_source_frame",
+      "state": {
+        "clock": "源帧10873 · 434.92秒",
+        "condition": "allow_lost_iou_seed28",
+        "jump": "10873",
+        "newText": "seed28 · 向下11、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed28 · 向下11、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "readyState": 1,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed28_f8912-10873.webm",
+            "time": 78.4412,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed28_f8912-10873.webm",
+            "time": 78.4412,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "first_source_frame",
+      "state": {
+        "clock": "源帧8912 · 356.48秒",
+        "condition": "allow_lost_iou_seed28",
+        "jump": "8912",
+        "newText": "seed28 · 向下11、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed28 · 向下11、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed28_f8912-10873.webm",
+            "time": 0.0012,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed28_f8912-10873.webm",
+            "time": 0.0012,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "test": "seed28_eleven_events_visible",
+      "events": [
+        "源帧9000 · 360.00秒 · A->B · track 96",
+        "源帧9135 · 365.40秒 · A->B · track 98",
+        "源帧9265 · 370.60秒 · A->B · track 100",
+        "源帧9345 · 373.80秒 · A->B · track 103",
+        "源帧9345 · 373.80秒 · A->B · track 101",
+        "源帧9465 · 378.60秒 · A->B · track 107",
+        "源帧9605 · 384.20秒 · A->B · track 124",
+        "源帧9705 · 388.20秒 · A->B · track 109",
+        "源帧9790 · 391.60秒 · A->B · track 123",
+        "源帧9900 · 396.00秒 · A->B · track 136",
+        "源帧10830 · 433.20秒 · A->B · track 151"
+      ],
+      "pass": true
+    },
+    {
+      "test": "all_three_pairs_and_low_recovery_counts_visible",
+      "text": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+      "pass": true
+    },
+    {
+      "test": "final_seed28_source9365_synced_and_paused",
+      "state": {
+        "clock": "源帧9365 · 374.60秒",
+        "condition": "allow_lost_iou_seed28",
+        "jump": "9365",
+        "newText": "seed28 · 向下11、向上0；Lost可参与低分恢复，计数规则相同",
+        "oldText": "seed28 · 向下11、向上0（上一轮预测）",
+        "rows": 3,
+        "table": "26\t12 / 0\t12 / 0\t9\t581 → 582\t一致\n27\t11 / 0\t11 / 0\t5\t557 → 557\t一致\n28\t11 / 0\t11 / 0\t19\t577 → 578\t一致",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "old",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/secondstage_iou_seed28_f8912-10873.webm",
+            "time": 18.1212,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "id": "new",
+            "paused": true,
+            "readyState": 4,
+            "src": "http://127.0.0.1:8779/inputs/lost_recovery_seed28_f8912-10873.webm",
+            "time": 18.1212,
+            "width": 1280
+          }
+        ]
+      },
+      "pass": true
+    }
+  ],
+  "all_tests_passed": true,
+  "screenshot": "C:/Users/Donson/Documents/ChatGPT/奶牛/lost_recovery_20261028/results/browser_source9365.png",
+  "screenshot_note": "First full-page capture unavailable; shown browser and documented viewport screenshot succeeded.",
+  "main_annotation_draft_opened_or_modified": false,
+  "independent_accuracy_verified": false,
+  "board_execution": false
+}

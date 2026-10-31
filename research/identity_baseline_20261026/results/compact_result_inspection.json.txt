@@ -1,0 +1,296 @@
+{
+  "audit": {
+    "job_id": "129696",
+    "status": "PASS",
+    "images": 400,
+    "cohort_id_counts": {
+      "known": 20,
+      "validation_unknown": 10,
+      "evaluation_unknown": 10
+    },
+    "images_by_split": {
+      "gallery": 100,
+      "calibration": 150,
+      "evaluation": 150
+    },
+    "all_images_fully_decoded": true,
+    "same_identity_split_sizes": [
+      5
+    ],
+    "min_side_lt128": 0,
+    "minimum_dimensions": [
+      323,
+      141
+    ],
+    "exact_pixel_cross_split_duplicates": [],
+    "near_candidate_interpretation": "Perceptual similarity of the same cow across dates is expected; dHash is a screening signal, not proof of duplicated source passage",
+    "protocol_sha256": "42b086741cec530d32cf2b5f364722ee0135c55ea05d460166b2b0baa4770c27",
+    "manifest_sha256": "8d611dbd7b86a44f9342448e1fabb3af47493b1f33b3a227148fe0c41c00ae84",
+    "independent_annotation_status": "Uses public author identity labels, no new independent human verification by this project"
+  },
+  "near_candidates": 0
+}
+{
+  "job_id": "129697",
+  "status": "COMPLETED_PUBLIC_CROP_BASELINE",
+  "protocol_sha256": "42b086741cec530d32cf2b5f364722ee0135c55ea05d460166b2b0baa4770c27",
+  "predeclared_companion_protocol_sha256": "09aa1690240f48c38b9b77a97b867e89bc313008286fa57ba921443feade0e17",
+  "weights_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+  "model": "Frozen ImageNet MobileNetV3-small features + avgpool, no cattle training",
+  "feature_dimensions": 576,
+  "encoder_parameters": 927008,
+  "encoder_float32_state_bytes": 3838079,
+  "pure_int8_parameter_bytes_estimate": 927008,
+  "preprocess": "ImageClassification(\n    crop_size=[224]\n    resize_size=[256]\n    mean=[0.485, 0.456, 0.406]\n    std=[0.229, 0.224, 0.225]\n    interpolation=InterpolationMode.BILINEAR\n)",
+  "threshold": 0.8753834887038181,
+  "threshold_file_sha256": "82e1f2dbbbc335f70b2db17a3a991c830abda83360ffc59bed66de1a4740e0c1",
+  "calibration": {
+    "known_queries": 100,
+    "unknown_queries": 50,
+    "known_correct_accepted_C": 18,
+    "known_wrong_accepted_W": 3,
+    "known_rejected_U": 79,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 43,
+    "known_closed_top1_accuracy": 0.43,
+    "known_correct_accepted_rate": 0.18,
+    "known_wrong_accepted_rate": 0.03,
+    "unknown_false_accepts": 2,
+    "unknown_false_acceptance_rate": 0.04,
+    "all_accepted_wrong_fraction": 0.21739130434782608,
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "evaluation": {
+    "known_queries": 100,
+    "unknown_queries": 50,
+    "known_correct_accepted_C": 16,
+    "known_wrong_accepted_W": 6,
+    "known_rejected_U": 78,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 52,
+    "known_closed_top1_accuracy": 0.52,
+    "known_correct_accepted_rate": 0.16,
+    "known_wrong_accepted_rate": 0.06,
+    "unknown_false_accepts": 3,
+    "unknown_false_acceptance_rate": 0.06,
+    "all_accepted_wrong_fraction": 0.36,
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "evaluation_identity_cluster_intervals": {
+    "closed_top1_accuracy": {
+      "macro_mean": 0.52,
+      "identity_clusters": 20,
+      "percentile_95_interval": [
+        0.4000000000000001,
+        0.64
+      ],
+      "bootstrap_draws": 2000
+    },
+    "correct_accepted_rate": {
+      "macro_mean": 0.16,
+      "identity_clusters": 20,
+      "percentile_95_interval": [
+        0.06000000000000001,
+        0.2702499999999987
+      ],
+      "bootstrap_draws": 2000
+    },
+    "false_accept_rate": {
+      "macro_mean": 0.06000000000000001,
+      "identity_clusters": 10,
+      "percentile_95_interval": [
+        0.0,
+        0.12
+      ],
+      "bootstrap_draws": 2000
+    }
+  },
+  "gallery_identities": 20,
+  "gallery_images": 100,
+  "calibration_images": 150,
+  "evaluation_images": 150,
+  "torch": "2.8.0+cu128",
+  "torchvision": "0.23.0+cu128",
+  "server_device": "Tesla V100S-PCIE-32GB",
+  "total_elapsed_s": 2.390909451059997,
+  "scope": "Public curated cow crops; cross-day same-camera identity retrieval and unknown rejection pilot, not detector-triggered end-to-end recovery",
+  "interpretation": "Curated-crop image-query baseline; ImageNet weights are not a cow identity registry. Gallery binds public anonymous IDs. No end-to-end event, RFID, high-resolution capture or PYNQ performance is established."
+}
+{
+  "job_id": "129698",
+  "protocol": {
+    "purpose": "Predeclared companion analysis of five image queries from one cow/date/camera, fixed before baseline inference",
+    "input": "Same frozen MobileNetV3-small embeddings and date/identity sample as identity_pilot_v1",
+    "methods": [
+      {
+        "name": "single_first",
+        "query_vectors": "First of five selected files by original filename"
+      },
+      {
+        "name": "mean_five",
+        "query_vectors": "Arithmetic mean of five L2-normalised embeddings, then L2 normalise"
+      }
+    ],
+    "gallery": "Same 20 known identities, five Aug14 images each; max cosine per identity",
+    "thresholds": "For each method independently use Aug19 groups only and the original calibration selection rule; freeze before scoring Aug20 groups",
+    "group": "Anonymous cow ID + day + camera1; these are public curated daily-tracklet proxies, not a newly verified visual passage or a real RF incident",
+    "statistics": "Report each group once; unknown calibration10/evaluation10 are different IDs; empirical FAR<=0.05 permits zero false accepts out of10 calibration groups and has coarse resolution",
+    "scope": "A fixed comparison, not a search for best K, cropping policy or quality threshold; no new training"
+  },
+  "conditions": [
+    {
+      "method": "single_first",
+      "threshold": {
+        "threshold": 0.814351955843797,
+        "calibration_known_correct_accepted": 6,
+        "calibration_known_wrong_accepted": 4,
+        "calibration_unknown_false_accepts": 0,
+        "calibration_unknown_queries": 10,
+        "calibration_unknown_far": 0.0,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold",
+        "frozen_before_group_evaluation_scoring": true,
+        "frozen_at_utc": "2026-10-26T12:23:18.336392+00:00"
+      },
+      "calibration": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_correct_accepted_C": 6,
+        "known_wrong_accepted_W": 4,
+        "known_rejected_U": 10,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 9,
+        "known_closed_top1_accuracy": 0.45,
+        "known_correct_accepted_rate": 0.3,
+        "known_wrong_accepted_rate": 0.2,
+        "unknown_false_accepts": 0,
+        "unknown_false_acceptance_rate": 0.0,
+        "all_accepted_wrong_fraction": 0.4,
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      },
+      "evaluation": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_correct_accepted_C": 8,
+        "known_wrong_accepted_W": 4,
+        "known_rejected_U": 8,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 9,
+        "known_closed_top1_accuracy": 0.45,
+        "known_correct_accepted_rate": 0.4,
+        "known_wrong_accepted_rate": 0.2,
+        "unknown_false_accepts": 7,
+        "unknown_false_acceptance_rate": 0.7,
+        "all_accepted_wrong_fraction": 0.5789473684210527,
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      },
+      "evaluation_identity_cluster_intervals": {
+        "closed_top1_accuracy": {
+          "macro_mean": 0.45,
+          "identity_clusters": 20,
+          "percentile_95_interval": [
+            0.2,
+            0.65
+          ],
+          "bootstrap_draws": 2000
+        },
+        "correct_accepted_rate": {
+          "macro_mean": 0.4,
+          "identity_clusters": 20,
+          "percentile_95_interval": [
+            0.2,
+            0.6
+          ],
+          "bootstrap_draws": 2000
+        },
+        "false_accept_rate": {
+          "macro_mean": 0.7,
+          "identity_clusters": 10,
+          "percentile_95_interval": [
+            0.4,
+            1.0
+          ],
+          "bootstrap_draws": 2000
+        }
+      },
+      "unit": "One anonymous cow/date/camera group from five fixed curated crops; complete source passage not independently established"
+    },
+    {
+      "method": "mean_five",
+      "threshold": {
+        "threshold": 0.9237236162406803,
+        "calibration_known_correct_accepted": 4,
+        "calibration_known_wrong_accepted": 0,
+        "calibration_unknown_false_accepts": 0,
+        "calibration_unknown_queries": 10,
+        "calibration_unknown_far": 0.0,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold",
+        "frozen_before_group_evaluation_scoring": true,
+        "frozen_at_utc": "2026-10-26T12:23:18.567005+00:00"
+      },
+      "calibration": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_correct_accepted_C": 4,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 16,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 9,
+        "known_closed_top1_accuracy": 0.45,
+        "known_correct_accepted_rate": 0.2,
+        "known_wrong_accepted_rate": 0.0,
+        "unknown_false_accepts": 0,
+        "unknown_false_acceptance_rate": 0.0,
+        "all_accepted_wrong_fraction": 0.0,
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      },
+      "evaluation": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_correct_accepted_C": 2,
+        "known_wrong_accepted_W": 1,
+        "known_rejected_U": 17,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 10,
+        "known_closed_top1_accuracy": 0.5,
+        "known_correct_accepted_rate": 0.1,
+        "known_wrong_accepted_rate": 0.05,
+        "unknown_false_accepts": 0,
+        "unknown_false_acceptance_rate": 0.0,
+        "all_accepted_wrong_fraction": 0.3333333333333333,
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      },
+      "evaluation_identity_cluster_intervals": {
+        "closed_top1_accuracy": {
+          "macro_mean": 0.5,
+          "identity_clusters": 20,
+          "percentile_95_interval": [
+            0.3,
+            0.7
+          ],
+          "bootstrap_draws": 2000
+        },
+        "correct_accepted_rate": {
+          "macro_mean": 0.1,
+          "identity_clusters": 20,
+          "percentile_95_interval": [
+            0.0,
+            0.25
+          ],
+          "bootstrap_draws": 2000
+        },
+        "false_accept_rate": {
+          "macro_mean": 0.0,
+          "identity_clusters": 10,
+          "percentile_95_interval": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_draws": 2000
+        }
+      },
+      "unit": "One anonymous cow/date/camera group from five fixed curated crops; complete source passage not independently established"
+    }
+  ],
+  "board_measurements": null,
+  "scope": "A fixed comparison, not a search for best K, cropping policy or quality threshold; no new training"
+}

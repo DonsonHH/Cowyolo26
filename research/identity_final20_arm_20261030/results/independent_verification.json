@@ -1,0 +1,85 @@
+{
+  "status": "ALL90_ARM_INPUTS180_ACTUAL_FEATURES1200_ID_SCORES480_DECISIONS_TIMING_AND_TERMINAL_STATE_INDEPENDENTLY_RECOMPUTED",
+  "created_UTC": "2026-10-30T12:02:47.578782+00:00",
+  "experiment_status": "BOTH90_ENCODERS180_ARM_FEATURES_AND480_FIXED_DECISIONS_PASS",
+  "actual_ARM_measured_forwards": 180,
+  "actual_ARM_warmup_forwards": 4,
+  "actual_ARM_network_calls": 184,
+  "new_PL_forwards": 0,
+  "source_JPEG_and_tensor_hashes_verified": 90,
+  "input_anchors_verified": 6,
+  "actual_raw_features_verified": 180,
+  "ID_score_cells_recomputed": 1200,
+  "retrieval_queries": 120,
+  "fixed_decisions": 480,
+  "numeric_failed_images": 0,
+  "Top1_changes": 0,
+  "Top5_order_changes": 0,
+  "full_ranking_changes": 0,
+  "decision_changes": 0,
+  "maximum_normalized_feature_error": 1.8328428268432617e-06,
+  "timings": {
+    "old_C": {
+      "images": 90,
+      "warmups": [
+        160.76528,
+        149.029649
+      ],
+      "network_mean_ms": 149.28506152222224,
+      "network_P95_ms": 152.35788495,
+      "network_min_ms": 148.215772,
+      "network_max_ms": 170.262449,
+      "maximum_normalized_ARM_CPU_error": 1.6167759895324707e-06
+    },
+    "new_C_domain_seed26": {
+      "images": 90,
+      "warmups": [
+        160.593421,
+        149.965347
+      ],
+      "network_mean_ms": 150.3542705111111,
+      "network_P95_ms": 151.65547235,
+      "network_min_ms": 149.209545,
+      "network_max_ms": 168.408227,
+      "maximum_normalized_ARM_CPU_error": 1.8328428268432617e-06
+    }
+  },
+  "JPEG_read_decode_preprocess_mean_ms": 47.22608716666666,
+  "JPEG_read_decode_preprocess_P95_ms": 52.265410249999995,
+  "primary_outcomes": [
+    {
+      "model": "old_C",
+      "policy": "primary_cal10_fold0",
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "known_Top1": 22,
+      "known_Top5": 28,
+      "C": 10,
+      "W": 2,
+      "U": 18,
+      "unknown_FA": 3
+    },
+    {
+      "model": "new_C_domain_seed26",
+      "policy": "primary_cal10_fold0",
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "known_Top1": 30,
+      "known_Top5": 30,
+      "C": 3,
+      "W": 0,
+      "U": 27,
+      "unknown_FA": 0
+    }
+  ],
+  "archive_bytes": 1199612,
+  "archive_SHA256": "a6e0e938ee74f9cabe133d1a0241f26be5e8154d618a2433c1e891a60aa0fcd6",
+  "archive_members": 24,
+  "manifest_files": 23,
+  "verification_additional_model_forwards": 0,
+  "new_training_updates": 0,
+  "default_model_or_threshold_changed": false,
+  "new_independent_identity_test": false,
+  "concurrent_detector_or_full5FPS_test": false,
+  "whole_goal_complete": false
+}

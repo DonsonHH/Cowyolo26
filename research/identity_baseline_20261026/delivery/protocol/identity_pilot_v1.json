@@ -1,0 +1,92 @@
+{
+  "version": "identity-pilot-v1",
+  "status": "FROZEN_BEFORE_IMAGE_SELECTION_OR_INFERENCE",
+  "dataset": "MultiCamCows2024",
+  "dataset_doi": "10.5523/bris.2inu67jru7a6821kkgehxg3cv2",
+  "scope": "Public curated cow crops; cross-day same-camera identity retrieval and unknown rejection pilot, not detector-triggered end-to-end recovery",
+  "source_semantics": "Dataset author paper describes merged stable cow labels across days; camera suffix verified against author loader before sampling",
+  "cohort_selection": "SHA256 rank of common Aug14/Aug19/Aug20 folder IDs using prefix cow-id-sample-v1-26:, first40",
+  "known_ids": [
+    "059",
+    "004",
+    "046",
+    "038",
+    "016",
+    "053",
+    "072",
+    "043",
+    "085",
+    "055",
+    "036",
+    "003",
+    "021",
+    "047",
+    "062",
+    "049",
+    "027",
+    "005",
+    "013",
+    "048"
+  ],
+  "validation_unknown_ids": [
+    "042",
+    "032",
+    "050",
+    "029",
+    "002",
+    "056",
+    "018",
+    "023",
+    "063",
+    "061"
+  ],
+  "evaluation_unknown_ids": [
+    "078",
+    "067",
+    "008",
+    "006",
+    "014",
+    "051",
+    "017",
+    "034",
+    "015",
+    "060"
+  ],
+  "model_training": "None; freeze ImageNet pretrained MobileNetV3-small feature extractor; no cattle ID optimisation",
+  "gallery": {
+    "day": "2023Aug14",
+    "identities": "known_ids only",
+    "images_per_identity": 5
+  },
+  "calibration": {
+    "day": "2023Aug19",
+    "identities": "known_ids and validation_unknown_ids",
+    "images_per_identity": 5
+  },
+  "evaluation": {
+    "day": "2023Aug20",
+    "identities": "known_ids and evaluation_unknown_ids",
+    "images_per_identity": 5
+  },
+  "camera": 1,
+  "file_sampling": "Select five indices equally spaced over sorted camera1 file list including endpoints; require at least5; no substitution by image quality or predicted identity",
+  "eligibility": "Pre-inference require at least5 camera1 crops in each required day; exclude entire identity with reason, do not replace after observing model scores",
+  "embedding": {
+    "architecture": "torchvision MobileNetV3 small features+avgpool, classifier removed",
+    "weights_file": "mobilenet_v3_small-047dcff4.pth",
+    "weights_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+    "preprocess": "official IMAGENET1K_V1 transforms: resize short side256, centre crop224, ImageNet normalisation",
+    "distance": "L2 normalised feature cosine similarity",
+    "gallery_matching": "max cosine per identity across its five reference crops; top1 nearest identity"
+  },
+  "threshold": "From calibration only, enumerate score thresholds including reject-all; maximise correctly accepted known queries subject to empirical unknown false acceptance <=0.05; ties minimise known wrong acceptance, then prefer higher threshold; freeze before opening eval predictions",
+  "integrity": "Audit actual image decode, dimensions, byte/pixel hashes and cross-split near duplicates; exact cross-split duplicates trigger exclusion review before inference; do not infer dates from unknown OpenCows filenames",
+  "statistics": "Report counts and per-identity macro accuracy; resample identity clusters with seed26 and2000 bootstrap draws for95% percentile intervals; adjacent frames not independent trials",
+  "nonclaims": [
+    "No official ear-tag identity verification",
+    "No actual lost-tag incidence model",
+    "No PYNQ latency/energy",
+    "No newly trained ReID metric model",
+    "No full-dataset benchmark"
+  ]
+}

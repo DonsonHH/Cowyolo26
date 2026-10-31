@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "bundle_sha256": "eed889d5659e4f66e946b940dba0e58d3254cfcae8265207cb06e9225ea9622a",
+  "verified_manifest_files": 33,
+  "matched_local_inputs": [
+    "evaluation_protocol_v1.json",
+    "external_sources_frozen.json",
+    "multicam_review_scope.json",
+    "multicam_source_events_v1.csv",
+    "review_findings.json",
+    "author_gt_audit.py",
+    "event_metrics.py",
+    "external_counting_inference.py",
+    "score_counting.py",
+    "test_event_metrics.py",
+    "test_zone_counter.py",
+    "zone_counter.py"
+  ],
+  "independent_reference_events": [
+    {
+      "track_id": 1,
+      "frame": 110,
+      "time_s": 3.6666666666666665,
+      "direction": "B->A"
+    },
+    {
+      "track_id": 14,
+      "frame": 193,
+      "time_s": 6.433333333333334,
+      "direction": "B->A"
+    },
+    {
+      "track_id": 7,
+      "frame": 248,
+      "time_s": 8.266666666666667,
+      "direction": "B->A"
+    },
+    {
+      "track_id": 16,
+      "frame": 286,
+      "time_s": 9.533333333333333,
+      "direction": "B->A"
+    },
+    {
+      "track_id": 22,
+      "frame": 322,
+      "time_s": 10.733333333333333,
+      "direction": "B->A"
+    },
+    {
+      "track_id": 17,
+      "frame": 396,
+      "time_s": 13.2,
+      "direction": "B->A"
+    }
+  ],
+  "independent_exhaustive_event_matching": [
+    {
+      "model": "generic",
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "f1": 1.0,
+      "temporally_matched": 6,
+      "summed_time_error_s": 0.5000000000000009,
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "model": "pilot",
+      "TP": 2,
+      "FP": 0,
+      "FN": 4,
+      "f1": 0.5,
+      "temporally_matched": 2,
+      "summed_time_error_s": 0.10000000000000142,
+      "pairs": [
+        [
+          2,
+          0
+        ],
+        [
+          5,
+          1
+        ]
+      ]
+    }
+  ],
+  "full_frame_coverage_runs": 14,
+  "pilot_checkpoint_verified": true,
+  "scope": "Evidence integrity and independent sample arithmetic; not field validation"
+}

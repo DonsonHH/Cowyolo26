@@ -1,0 +1,228 @@
+{
+  "condition": "C_letterbox_trained_seed26",
+  "rule": "P2_query_center70x80",
+  "threshold_method": "validation_calibrated",
+  "threshold": 0.8063585047977669,
+  "is_validation_selected_rule": false,
+  "curated_metrics": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 17,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 13,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 27,
+    "known_closed_top1_accuracy": 0.9,
+    "known_correct_accepted_rate": 0.5666666666666667,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 1,
+    "unknown_false_acceptance_rate": 0.03333333333333333,
+    "all_accepted_wrong_fraction": 0.05555555555555555,
+    "per_identity": [
+      {
+        "identity": "001",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "009",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.8,
+        "correct_accepted_rate": 0.8,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "010",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "020",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 1.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "026",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.6,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "028",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.2,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "031",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.6,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "033",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "035",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.2
+      },
+      {
+        "identity": "040",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "054",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.8,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "076",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      }
+    ],
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "real_event_queries": 12,
+  "real_event_passed_threshold": 2,
+  "real_event_accepted_candidates": [
+    {
+      "query_id": "E010_f9790_tid102",
+      "predicted_id": "020",
+      "similarity": 0.8266381291285102,
+      "source_sha256": "6742adcc02d92a8af8587292058de19fa5806db1306962bf3891b7c73e56a556",
+      "gallery_image_cosines": [
+        0.777286040538159,
+        0.7887426299095704,
+        0.7684671669386931,
+        0.7935608472866611,
+        0.7517683581925627,
+        0.7649911874500315,
+        0.7436397212493149,
+        0.7559421604891225,
+        0.8266381291285102,
+        0.7943980039389502,
+        0.6343875317558478,
+        0.5770007674058988,
+        0.5571825831734096,
+        0.5830764249053181,
+        0.5761533639793558,
+        0.604513907272945,
+        0.5439231338308892,
+        0.612179629830077,
+        0.45589465876300367,
+        0.44546174772016034,
+        0.6054823506404396,
+        0.6821362317680744,
+        0.6241019727425154,
+        0.7033754643991147,
+        0.6680775648509959,
+        0.618426555122322,
+        0.6253421616053871,
+        0.6019570752588004,
+        0.6001429550726198,
+        0.5710389445958222
+      ],
+      "identity_scores": {
+        "009": 0.7935608472866611,
+        "020": 0.8266381291285102,
+        "026": 0.6343875317558478,
+        "028": 0.612179629830077,
+        "031": 0.7033754643991147,
+        "054": 0.6253421616053871
+      },
+      "identity_reference": null,
+      "verified_identity": false,
+      "source_frame0": 9745,
+      "threshold": 0.8063585047977669,
+      "accepted": true
+    },
+    {
+      "query_id": "E011_f9900_tid117",
+      "predicted_id": "028",
+      "similarity": 0.8070715977062792,
+      "source_sha256": "3dd3181ce64d5e28bfab7e6f84eed8b497b336c698b08b8adbeb8639c87ca5af",
+      "gallery_image_cosines": [
+        0.5148547345684633,
+        0.49868439040746537,
+        0.5376543461772652,
+        0.5398566875984827,
+        0.526036083677575,
+        0.6296731389992554,
+        0.6374337105763512,
+        0.6765547835368924,
+        0.5907519931878027,
+        0.579918304619137,
+        0.6714313064978502,
+        0.658816493150876,
+        0.6416071688434211,
+        0.6707938123519668,
+        0.7381616082912028,
+        0.8070715977062792,
+        0.6913529618730969,
+        0.7337852011887249,
+        0.6695438599772604,
+        0.6978847834599635,
+        0.6875527278103217,
+        0.6849293848997069,
+        0.7167986793929326,
+        0.640211721041698,
+        0.6656982225572876,
+        0.663578489187573,
+        0.6272722979412151,
+        0.6073293357042266,
+        0.6150290351470262,
+        0.6111985752626117
+      ],
+      "identity_scores": {
+        "009": 0.5398566875984827,
+        "020": 0.6765547835368924,
+        "026": 0.7381616082912028,
+        "028": 0.8070715977062792,
+        "031": 0.7167986793929326,
+        "054": 0.663578489187573
+      },
+      "identity_reference": null,
+      "verified_identity": false,
+      "source_frame0": 9900,
+      "threshold": 0.8063585047977669,
+      "accepted": true
+    }
+  ],
+  "real_event_identity_accuracy_admitted": false
+}

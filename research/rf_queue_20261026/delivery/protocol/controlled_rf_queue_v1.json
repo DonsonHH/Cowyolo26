@@ -1,0 +1,98 @@
+{
+  "scope": "Software correctness and cost-sensitivity study using frozen real visual candidate scores and synthetic passage/RFID/timing inputs. Not a field RFID dataset or measured PYNQ performance.",
+  "visual_sources": "Five frozen conditions from identity_training/results/study; all declared seeds retained; no new threshold optimisation",
+  "population": "60 curated crop queries of12 author identity labels; each query mapped to a constructed event. Repeated images/identities across scenarios do not create independent real passages.",
+  "truth_separation": "Truth used only for generating controlled RF perturbations/dropouts and scoring. Resolver accepts opaque event/snapshot IDs, observed RF records, a tag registry and model candidate scores; no expected identity/cohort fields.",
+  "association": {
+    "reader": "lane1",
+    "capture_guard_ticks": 1,
+    "wait_after_close_ticks": 5,
+    "event_duration_ticks": 10,
+    "isolated_event_spacing_ticks": 50,
+    "rule": "Deduplicate codes within the event window; require a single usable code and one-to-one read/event eligibility. Shared reads across visible event windows remain ambiguous. Late arrivals are retained but never used retroactively at an earlier deadline. Unique valid wrong-code inputs remain an explicit failure case."
+  },
+  "rf_scenarios": [
+    "normal",
+    "missing_all",
+    "duplicate_same_code",
+    "received_after_deadline",
+    "multi_code_conflict",
+    "wrong_single_valid_code",
+    "missing_snapshot",
+    "visual_event_missed_every_fifth"
+  ],
+  "queue": {
+    "units": "abstract tick, no conversion to seconds or FPS",
+    "horizon_ticks": 1200,
+    "foreground_period_ticks": 10,
+    "foreground_cost_ticks": 3,
+    "background_cost_ticks": [
+      5,
+      20,
+      60
+    ],
+    "waiting_capacity": 4,
+    "completion_deadline_after_ready_ticks": 120,
+    "policies": [
+      "disabled",
+      "nonpreemptive",
+      "fits_next_gap",
+      "cooperative"
+    ],
+    "loads": {
+      "sparse": {
+        "jobs": 20,
+        "first_tick": 5,
+        "spacing_ticks": 50
+      },
+      "burst": {
+        "jobs": 20,
+        "first_tick": 100,
+        "batch_size": 5,
+        "batch_spacing_ticks": 100
+      },
+      "sustained": {
+        "jobs": 90,
+        "first_tick": 5,
+        "spacing_ticks": 10
+      }
+    },
+    "dispatch": "Release frontend and background arrivals, expire waiting jobs, enforce admission, then give frontend priority except inside nonpreemptive background execution. Background completion at deadline is accepted. No post-horizon drain.",
+    "cooperative_assumption": "Background work can pause/resume at one-tick boundaries. This requires an actual resumable execution path or independently provisioned resource on hardware; an opaque full-model call does not gain this capability from thread priority."
+  },
+  "accounting": "For constructed events N=C+W+U+M, extra outputs separately. Observed events with missing snapshots, admission failure, timeout or unfinished tasks are U; absent visual event is M. Queue-only experiment assumes event inputs and does not translate frame deadline misses into real counting recall.",
+  "review": "Test truth independence, timestamp boundaries, shared reads, duplicates, invalid/late inputs, return passages, unknown candidates, deadline and capacity behaviour, budget conservation and all ledger statuses. Independent scorer recomputes RF outcomes and queue timeline arithmetic.",
+  "source_study_summary_sha256": "b58871b746f838f7d160eadb00a13db43183ed089d89fdea03992df1a912e3cc",
+  "source_conditions": [
+    {
+      "name": "A_official_frozen",
+      "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+      "threshold": 0.873113640861386,
+      "prediction_file_sha256": "9e97da98fc00875e81831d4ee79e5ea4c11e643da826a6c92de3633a045d3680"
+    },
+    {
+      "name": "B_letterbox_frozen",
+      "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+      "threshold": 0.8952453223004778,
+      "prediction_file_sha256": "e1354fab5147a3118afe94db944d97821ca05e8bb14ec11a09c1bd4ecdf473c4"
+    },
+    {
+      "name": "C_letterbox_trained_seed26",
+      "checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "threshold": 0.8445389603236383,
+      "prediction_file_sha256": "3a938760ef61b00f0cde0ebcfa1a77daa10ef6e8f983238d00cd022674770e85"
+    },
+    {
+      "name": "C_letterbox_trained_seed27",
+      "checkpoint_sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+      "threshold": 0.8642478136864173,
+      "prediction_file_sha256": "624fe5b8ce0c0325d6221fe78296b4434f8c092e47de91f68a23289a326425cb"
+    },
+    {
+      "name": "C_letterbox_trained_seed28",
+      "checkpoint_sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+      "threshold": 0.8306161540247587,
+      "prediction_file_sha256": "2a7c2ad8985d0912cc3cef57f9c98c9b59d08eed0bf57ef20cf83ede76792d89"
+    }
+  ]
+}

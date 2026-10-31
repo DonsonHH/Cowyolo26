@@ -1,0 +1,256 @@
+{
+  "status": "ARITHMETIC_PASS_MIXED_GRAPH_PORTABILITY_DIFFERENCES",
+  "bundle_sha256": "c2e53f076253aa84de6298b5c366c81f9155f88e07d1ce36d59bb4b770c8fe63",
+  "manifest_files": 260,
+  "training_drift_witness_checks": [
+    {
+      "seed": 26,
+      "first_large_drift_Conv": 1,
+      "witness_RMSE": 0.5798893835071601
+    },
+    {
+      "seed": 27,
+      "first_large_drift_Conv": 1,
+      "witness_RMSE": 0.5837351296051009
+    },
+    {
+      "seed": 28,
+      "first_large_drift_Conv": 1,
+      "witness_RMSE": 0.7186616806302646
+    }
+  ],
+  "validation_conditions_recalculated": 12,
+  "validation_candidate_selection_reproduced": "front_and_depthwise_fp",
+  "model_Conv_precision_coverage_checked": true,
+  "future_images_decoded": 90,
+  "future_IDs_outside_all_previous_cohorts": true,
+  "future_identity_counts": {
+    "registered": 6,
+    "unknown": 6
+  },
+  "fresh_holdout_conditions_recalculated": [
+    {
+      "name": "FP32_seed26",
+      "method": "FP32",
+      "seed": 26,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 30,
+        "known_correct_accepted_C": 27,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 3,
+        "unknown_false_accepts": 6
+      }
+    },
+    {
+      "name": "full_conv_qdq_seed26",
+      "method": "full_conv_qdq",
+      "seed": 26,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 21,
+        "known_correct_accepted_C": 7,
+        "known_wrong_accepted_W": 3,
+        "known_rejected_U": 20,
+        "unknown_false_accepts": 8
+      }
+    },
+    {
+      "name": "front_and_depthwise_fp_seed26",
+      "method": "front_and_depthwise_fp",
+      "seed": 26,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 29,
+        "known_correct_accepted_C": 16,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 14,
+        "unknown_false_accepts": 6
+      }
+    },
+    {
+      "name": "FP32_seed27",
+      "method": "FP32",
+      "seed": 27,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 30,
+        "known_correct_accepted_C": 16,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 14,
+        "unknown_false_accepts": 3
+      }
+    },
+    {
+      "name": "full_conv_qdq_seed27",
+      "method": "full_conv_qdq",
+      "seed": 27,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 21,
+        "known_correct_accepted_C": 3,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 27,
+        "unknown_false_accepts": 1
+      }
+    },
+    {
+      "name": "front_and_depthwise_fp_seed27",
+      "method": "front_and_depthwise_fp",
+      "seed": 27,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 30,
+        "known_correct_accepted_C": 7,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 23,
+        "unknown_false_accepts": 2
+      }
+    },
+    {
+      "name": "FP32_seed28",
+      "method": "FP32",
+      "seed": 28,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 29,
+        "known_correct_accepted_C": 19,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 11,
+        "unknown_false_accepts": 0
+      }
+    },
+    {
+      "name": "full_conv_qdq_seed28",
+      "method": "full_conv_qdq",
+      "seed": 28,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 18,
+        "known_correct_accepted_C": 8,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 22,
+        "unknown_false_accepts": 7
+      }
+    },
+    {
+      "name": "front_and_depthwise_fp_seed28",
+      "method": "front_and_depthwise_fp",
+      "seed": 28,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 29,
+        "known_correct_accepted_C": 5,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 25,
+        "unknown_false_accepts": 0
+      }
+    }
+  ],
+  "Windows_actual_mixed_graph_forwards": [
+    {
+      "seed": 26,
+      "split": "gallery",
+      "image": "holdout_data/2023Aug14/025/00000_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 26,
+      "split": "gallery",
+      "image": "holdout_data/2023Aug14/025/00004_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 26,
+      "split": "query",
+      "image": "holdout_data/2023Aug20/025/00000_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 26,
+      "split": "query",
+      "image": "holdout_data/2023Aug20/025/00004_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 27,
+      "split": "gallery",
+      "image": "holdout_data/2023Aug14/025/00000_1.jpg",
+      "max_local_CPU_feature_error": 0.00971974153071642,
+      "predeclared_tolerance_passed": false
+    },
+    {
+      "seed": 27,
+      "split": "gallery",
+      "image": "holdout_data/2023Aug14/025/00004_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 27,
+      "split": "query",
+      "image": "holdout_data/2023Aug20/025/00000_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 27,
+      "split": "query",
+      "image": "holdout_data/2023Aug20/025/00004_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 28,
+      "split": "gallery",
+      "image": "holdout_data/2023Aug14/025/00000_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 28,
+      "split": "gallery",
+      "image": "holdout_data/2023Aug14/025/00004_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 28,
+      "split": "query",
+      "image": "holdout_data/2023Aug20/025/00000_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    },
+    {
+      "seed": 28,
+      "split": "query",
+      "image": "holdout_data/2023Aug20/025/00004_1.jpg",
+      "max_local_CPU_feature_error": 0.0,
+      "predeclared_tolerance_passed": true
+    }
+  ],
+  "mixed_graph_portability_tolerance_failures": [
+    {
+      "seed": 27,
+      "split": "gallery",
+      "image": "holdout_data/2023Aug14/025/00000_1.jpg",
+      "max_local_CPU_feature_error": 0.00971974153071642,
+      "predeclared_tolerance_passed": false
+    }
+  ],
+  "whole_goal_complete": false,
+  "scope": "Independent stored-metric/selection, graph precision, untouched-ID image integrity and selected-model CPU replay; no board or field RFID performance"
+}

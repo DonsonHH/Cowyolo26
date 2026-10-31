@@ -1,0 +1,123 @@
+Ultralytics 8.4.63 🚀 Python-3.13.9 torch-2.8.0+cu128 CPU (Intel Xeon Gold 6258R CPU @ 2.70GHz)
+YOLO26n summary (fused): 122 layers, 2,375,031 parameters, 0 gradients, 5.2 GFLOPs
+
+[34m[1mPyTorch:[0m starting from '/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/detector/yolo26n_pilot.pt' with input shape (1, 3, 192, 320) BCHW and output shape(s) (1, 300, 6) (5.1 MB)
+
+[34m[1mONNX:[0m starting export with onnx 1.19.0 opset 13...
+[34m[1mONNX:[0m export success ✅ 0.6s, saved as '/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/detector/yolo26n_pilot.onnx' (9.2 MB)
+
+Export complete (1.0s)
+Results saved to [1m/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/detector/yolo26n_pilot.onnx[0m
+Predict:         yolo predict task=detect model=/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/detector/yolo26n_pilot.onnx imgsz=192,320 
+Validate:        yolo val task=detect model=/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/detector/yolo26n_pilot.onnx imgsz=192,320 data=/share/home/renly/projects/idcoo_research_20261026/data/opencows2020/derived_detection/data.yaml  WARNING ⚠️ non-PyTorch val requires square images, 'imgsz=[192, 320]' will not work. Use export 'imgsz=320' if val is required.
+Visualize:       https://netron.app
+{
+  "name": "C_letterbox_trained_seed26",
+  "fp32": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 23,
+    "known_wrong_accepted_W": 1,
+    "known_rejected_U": 6,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 28,
+    "known_closed_top1_accuracy": 0.9333333333333333,
+    "known_correct_accepted_rate": 0.7666666666666667,
+    "known_wrong_accepted_rate": 0.03333333333333333,
+    "unknown_false_accepts": 1,
+    "unknown_false_acceptance_rate": 0.03333333333333333,
+    "all_accepted_wrong_fraction": 0.08,
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "qdq": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 4,
+    "known_wrong_accepted_W": 4,
+    "known_rejected_U": 22,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 19,
+    "known_closed_top1_accuracy": 0.6333333333333333,
+    "known_correct_accepted_rate": 0.13333333333333333,
+    "known_wrong_accepted_rate": 0.13333333333333333,
+    "unknown_false_accepts": 3,
+    "unknown_false_acceptance_rate": 0.1,
+    "all_accepted_wrong_fraction": 0.6363636363636364,
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  }
+}
+{
+  "name": "C_letterbox_trained_seed27",
+  "fp32": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 14,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 16,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 29,
+    "known_closed_top1_accuracy": 0.9666666666666667,
+    "known_correct_accepted_rate": 0.4666666666666667,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 3,
+    "unknown_false_acceptance_rate": 0.1,
+    "all_accepted_wrong_fraction": 0.17647058823529413,
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "qdq": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 0,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 30,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 19,
+    "known_closed_top1_accuracy": 0.6333333333333333,
+    "known_correct_accepted_rate": 0.0,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 0,
+    "unknown_false_acceptance_rate": 0.0,
+    "all_accepted_wrong_fraction": null,
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  }
+}
+{
+  "name": "C_letterbox_trained_seed28",
+  "fp32": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 17,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 13,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 29,
+    "known_closed_top1_accuracy": 0.9666666666666667,
+    "known_correct_accepted_rate": 0.5666666666666667,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 0,
+    "unknown_false_acceptance_rate": 0.0,
+    "all_accepted_wrong_fraction": 0.0,
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "qdq": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 5,
+    "known_wrong_accepted_W": 3,
+    "known_rejected_U": 22,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 15,
+    "known_closed_top1_accuracy": 0.5,
+    "known_correct_accepted_rate": 0.16666666666666666,
+    "known_wrong_accepted_rate": 0.1,
+    "unknown_false_accepts": 5,
+    "unknown_false_acceptance_rate": 0.16666666666666666,
+    "all_accepted_wrong_fraction": 0.6153846153846154,
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  }
+}
+{
+  "status": "GRAPH_EXPORT_AND_PTQ_HOST_AUDIT_COMPLETE",
+  "job_id": "129720",
+  "elapsed_s": 11.58960673213005
+}

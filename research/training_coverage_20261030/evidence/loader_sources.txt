@@ -1,0 +1,187 @@
+FILE data/build.py SHA256 834fd20ae8d33cf1c7fe4229cd13671e703c31c4bfbf578bf465a8f59950361c
+def seed_worker(worker_id: int) -> None:
+    """Set dataloader worker seed for reproducibility across worker processes."""
+    worker_seed = torch.initial_seed() % 2**32
+    np.random.seed(worker_seed)
+    random.seed(worker_seed)
+def build_yolo_dataset(
+    cfg: IterableSimpleNamespace,
+    img_path: str,
+    batch: int,
+    data: dict[str, Any],
+    mode: str = "train",
+    rect: bool = False,
+    stride: int = 32,
+    multi_modal: bool = False,
+    fraction: float | None = None,
+) -> Dataset:
+    """Build and return a YOLO dataset based on configuration parameters."""
+    pad = 0.0 if mode == "train" else 0.5
+    if cfg.task == "semantic":
+        data_path = Path(data.get("path", ""))
+        if "masks_dir" in data:
+            dataset = SemanticDataset
+        elif (data_path / "masks").exists():
+            dataset = SemanticDataset
+        else:
+            dataset = PolygonSemanticDataset
+        pad = 0.0  # no pad for semantic
+    elif multi_modal:
+        dataset = YOLOMultiModalDataset
+    else:
+        dataset = YOLODataset
+
+    if fraction is None:
+        fraction = cfg.fraction if mode == "train" else 1.0
+    return dataset(
+        img_path=img_path,
+        imgsz=cfg.imgsz,
+        batch_size=batch,
+        augment=mode == "train",
+        hyp=cfg,
+        rect=cfg.rect or rect,
+        cache=cfg.cache or None,
+        single_cls=cfg.single_cls or False,
+        stride=stride,
+        pad=pad,
+        prefix=colorstr(f"{mode}: "),
+        task=cfg.task,
+        classes=cfg.classes,
+        data=data,
+        fraction=fraction,
+    )
+def build_dataloader(
+    dataset,
+    batch: int,
+    workers: int,
+    shuffle: bool = True,
+    rank: int = -1,
+    drop_last: bool = False,
+    pin_memory: bool = True,
+) -> InfiniteDataLoader:
+    """Create and return an InfiniteDataLoader for training or validation.
+
+    Args:
+        dataset (Dataset): Dataset to load data from.
+        batch (int): Batch size for the dataloader.
+        workers (int): Number of worker processes for data loading.
+        shuffle (bool, optional): Whether to shuffle the dataset.
+        rank (int, optional): Process rank in distributed training. -1 for single-GPU training.
+        drop_last (bool, optional): Whether to drop the last incomplete batch.
+        pin_memory (bool, optional): Whether to use pinned memory for dataloader.
+
+    Returns:
+        (InfiniteDataLoader): A dataloader that can be used for training or validation.
+
+    Examples:
+        Create a dataloader for training
+        >>> dataset = YOLODataset(...)
+        >>> dataloader = build_dataloader(dataset, batch=16, workers=4, shuffle=True)
+    """
+    batch = min(batch, len(dataset))
+    nd = torch.cuda.device_count()  # number of CUDA devices
+    nw = min(os.cpu_count() // max(nd, 1), workers)  # number of workers
+    sampler = (
+        None
+        if rank == -1
+        else distributed.DistributedSampler(dataset, shuffle=shuffle)
+        if shuffle
+        else ContiguousDistributedSampler(dataset)
+    )
+    generator = torch.Generator()
+    generator.manual_seed(6148914691236517205 + RANK)
+    return InfiniteDataLoader(
+        dataset=dataset,
+        batch_size=batch,
+        shuffle=shuffle and sampler is None,
+        num_workers=nw,
+        sampler=sampler,
+        prefetch_factor=4 if nw > 0 else None,  # increase over default 2
+        pin_memory=nd > 0 and pin_memory,
+        collate_fn=getattr(dataset, "collate_fn", None),
+        worker_init_fn=seed_worker,
+        generator=generator,
+        drop_last=drop_last and len(dataset) % batch != 0,
+    )
+FILE models/yolo/detect/train.py SHA256 6ee70591311fe5910fa2ed8d94f5199e3812fbe2db6b22bf959e19f4f8801135
+    def build_dataset(self, img_path: str, mode: str = "train", batch: int | None = None):
+        """Build YOLO Dataset for training or validation.
+
+        Args:
+            img_path (str): Path to the folder containing images.
+            mode (str): 'train' mode or 'val' mode, users are able to customize different augmentations for each mode.
+            batch (int, optional): Size of batches, this is for 'rect' mode.
+
+        Returns:
+            (Dataset): YOLO dataset object configured for the specified mode.
+        """
+        gs = max(int(unwrap_model(self.model).stride.max()), 32)
+        return build_yolo_dataset(self.args, img_path, batch, self.data, mode=mode, rect=mode == "val", stride=gs)
+    def get_dataloader(self, dataset_path: str, batch_size: int = 16, rank: int = 0, mode: str = "train"):
+        """Construct and return dataloader for the specified mode.
+
+        Args:
+            dataset_path (str): Path to the dataset.
+            batch_size (int): Number of images per batch.
+            rank (int): Process rank for distributed training.
+            mode (str): 'train' for training dataloader, 'val' for validation dataloader.
+
+        Returns:
+            (DataLoader): PyTorch dataloader object.
+        """
+        assert mode in {"train", "val"}, f"Mode must be 'train' or 'val', not {mode}."
+        with torch_distributed_zero_first(rank):  # init dataset *.cache only once if DDP
+            dataset = self.build_dataset(dataset_path, mode, batch_size)
+        shuffle = mode == "train"
+        if getattr(dataset, "rect", False) and shuffle and not np.all(dataset.batch_shapes == dataset.batch_shapes[0]):
+            LOGGER.warning("'rect=True' is incompatible with DataLoader shuffle, setting shuffle=False")
+            shuffle = False
+        return build_dataloader(
+            dataset,
+            batch=batch_size,
+            workers=self.args.workers if mode == "train" else self.args.workers * 2,
+            shuffle=shuffle,
+            rank=rank,
+            drop_last=self.args.compile and mode == "train",
+        )
+    def preprocess_batch(self, batch: dict) -> dict:
+        """Preprocess a batch of images by scaling and converting to float.
+
+        Args:
+            batch (dict): Dictionary containing batch data with 'img' tensor.
+
+        Returns:
+            (dict): Preprocessed batch with normalized images.
+        """
+        for k, v in batch.items():
+            if isinstance(v, torch.Tensor):
+                batch[k] = v.to(self.device, non_blocking=self.device.type == "cuda")
+        batch["img"] = batch["img"].float() / 255
+        if self.args.multi_scale > 0.0:
+            imgs = batch["img"]
+            sz = (
+                random.randrange(
+                    max(self.stride, int(self.args.imgsz * (1.0 - self.args.multi_scale))),  # min imgsz
+                    int(self.args.imgsz * (1.0 + self.args.multi_scale) + self.stride),  # max imgsz
+                )
+                // self.stride
+                * self.stride
+            )  # size
+            sf = sz / max(imgs.shape[2:])  # scale factor
+            if sf != 1:
+                ns = [
+                    math.ceil(x * sf / self.stride) * self.stride for x in imgs.shape[2:]
+                ]  # new shape (stretched to gs-multiple)
+                imgs = nn.functional.interpolate(imgs, size=ns, mode="bilinear", align_corners=False)
+            batch["img"] = imgs
+        return batch
+FILE engine/trainer.py SHA256 61cf776b67bbf74d1f7739d5a64d5ee8797e1ca80cd1d0aacff1e516ff80d178
+358         if self.batch_size < 1 and RANK == -1:  # single-GPU only, estimate best batch size
+359             self.args.batch = self.batch_size = self.auto_batch()
+57     init_seeds,
+134         init_seeds(self.args.seed + 1 + RANK, deterministic=self.args.deterministic)
+155         if RANK == -1:
+358         if self.batch_size < 1 and RANK == -1:  # single-GPU only, estimate best batch size
+493                             broadcast_list = [self.stop if RANK == 0 else None]
+572                 broadcast_list = [self.stop if RANK == 0 else None]
+942             broadcast_list = [corrupted if RANK == 0 else None]

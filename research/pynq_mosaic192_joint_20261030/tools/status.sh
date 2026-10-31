@@ -1,0 +1,13 @@
+set -euo pipefail
+test "$(id -un)" = xilinx
+python3 - <<'PY'
+from pathlib import Path
+import json,subprocess
+root=Path('/home/xilinx/jupyter_notebooks/cow_research_mosaic192_joint_20261030');launch=json.loads((root/'launch.json').read_text())
+r={'launch':launch,'ps':subprocess.run(['ps','-p',str(launch['PID']),'-o','pid,state,etimes,rss,comm'],capture_output=True,text=True).stdout,
+ 'progress':(root/'results/progress.json').read_text() if (root/'results/progress.json').exists() else None,
+ 'terminal':(root/'results/terminal.json').read_text() if (root/'results/terminal.json').exists() else None,
+ 'completed_cases':json.loads((root/'results/record.json').read_text()).get('cases',[]) if (root/'results/record.json').exists() else [],
+ 'log_tail':(root/'run.log').read_text(errors='replace')[-2000:]}
+print(json.dumps(r))
+PY

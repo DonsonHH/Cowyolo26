@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/run_detector.py", line 29, in <module>
+    if __name__=='__main__':main()
+  File "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/run_detector.py", line 10, in main
+    p=argparse.ArgumentParser();p.add_argument('--profile',choices=('fast192','flagship224','quality256'),default='flagship224');p.add_argument('--image',type=pathlib.Path);p.add_argument('--camera',action='store_true');p.add_argument('--frames',type=int,default=10);p.add_argument('--threshold',type=float,default=.25);a=p.parse_args();verify(R);size={'fast192':192,'flagship224':224,'quality256':256}[a.profile];cv2.setNumThreads(2)
+  File "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/verify_release.py", line 5, in verify
+    p=root/row['path'];assert p.is_file(),str(p);assert hashlib.sha256(p.read_bytes()).hexdigest()==row['sha256'],'runtime hash mismatch: '+str(p)
+AssertionError: /home/xilinx/jupyter_notebooks/yolo26_optimization_8/program_r192/native_bus_raw.npy

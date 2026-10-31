@@ -1,0 +1,237 @@
+{
+  "status": "FROZEN_FULL_ASSOCIATION_REPLAY_OF_ACTUAL8_INPUT_SCHEDULES",
+  "created_UTC": "2026-10-31T09:45:17.861961+00:00",
+  "source_board_protocol_sha256": "7e2d82a5d6af9d67414544fd896b3c7cf73095d43304f097c12ecd48ddddd97a",
+  "video": {
+    "name": "original",
+    "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+    "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "width": 2560,
+    "height": 1440,
+    "fps": 25,
+    "decode_end_exclusive": 10874,
+    "inference_stride": 5,
+    "orientation": "clockwise90",
+    "axis": "y",
+    "perpendicular_ROI": [
+      0.34,
+      0.75
+    ],
+    "scope_start_frame0": 8912,
+    "scope_end_exclusive": 10874,
+    "counter_replay_strides": [
+      5
+    ],
+    "human_down_total": 12,
+    "formal_event_scoring": false,
+    "detection_crop_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "crop_size_WH": [
+      1050,
+      1440
+    ],
+    "pixel_control_frames": [
+      8995,
+      9345,
+      9790,
+      10830
+    ],
+    "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "cases": [
+    {
+      "run": "r1_A",
+      "raw": "tracker_input/r1_A/actual_raw.npz",
+      "trace": "tracker_input/r1_A/counter_trace.json.gz"
+    },
+    {
+      "run": "r2_B",
+      "raw": "tracker_input/r2_B/actual_raw.npz",
+      "trace": "tracker_input/r2_B/counter_trace.json.gz"
+    },
+    {
+      "run": "r3_C",
+      "raw": "tracker_input/r3_C/actual_raw.npz",
+      "trace": "tracker_input/r3_C/counter_trace.json.gz"
+    },
+    {
+      "run": "r4_D",
+      "raw": "tracker_input/r4_D/actual_raw.npz",
+      "trace": "tracker_input/r4_D/counter_trace.json.gz"
+    },
+    {
+      "run": "r5_D",
+      "raw": "tracker_input/r5_D/actual_raw.npz",
+      "trace": "tracker_input/r5_D/counter_trace.json.gz"
+    },
+    {
+      "run": "r6_C",
+      "raw": "tracker_input/r6_C/actual_raw.npz",
+      "trace": "tracker_input/r6_C/counter_trace.json.gz"
+    },
+    {
+      "run": "r7_B",
+      "raw": "tracker_input/r7_B/actual_raw.npz",
+      "trace": "tracker_input/r7_B/counter_trace.json.gz"
+    },
+    {
+      "run": "r8_A",
+      "raw": "tracker_input/r8_A/actual_raw.npz",
+      "trace": "tracker_input/r8_A/counter_trace.json.gz"
+    }
+  ],
+  "box_tolerance_pixels": 0.002,
+  "axis_tolerance": 2e-06,
+  "IDs_and_events_exact_required": true,
+  "model_forwards": 0,
+  "posthoc_dropped_frame_diagnosis": "All eight single missing-frame backfills and one all-missing control; previously seen source, no device change or human event accuracy claim.",
+  "files": [
+    {
+      "file": "tools/drop_counterfactual.py",
+      "sha256": "44a2f2f9a66400814c65b4eeb9ed3c69cb0f1540fd6779e71f904c348b474c0c"
+    },
+    {
+      "file": "tools/plot_results.py",
+      "sha256": "5602f7ffc6e6721fcdf3cdbd5d8be1341c9f13937a3c57736e3091bcb8281d05"
+    },
+    {
+      "file": "tools/replay_tracker.py",
+      "sha256": "9e6da5ed1f4c21c9fdf62117e0ba16bceab9a0d3c6fe3a083377cd28f3ee2ea6"
+    },
+    {
+      "file": "tools/tracker_replay.slurm",
+      "sha256": "c878bb582c321476a3d7d5163482e30e40b00ca0bdfc3d48438974eda2962dac"
+    },
+    {
+      "file": "tracker_input/history.json.gz",
+      "sha256": "60d68087a80fe4dca9538ac400c2912ea8a13cca0551a990d3d37541004efda3"
+    },
+    {
+      "file": "tracker_input/r1_A/actual_raw.npz",
+      "sha256": "268fc2094f9d42f6f96ad902ad0066beb2f19c3bb07fa6bfeed49723eb52aab8"
+    },
+    {
+      "file": "tracker_input/r1_A/counter_trace.json.gz",
+      "sha256": "9cd08e47032c62fe51ae4a401e8ca78c1af10b4a5b32d9cce773bb1e88fa8da9"
+    },
+    {
+      "file": "tracker_input/r2_B/actual_raw.npz",
+      "sha256": "096dfe30654cba9fae9c130ba98e2684c0108ef69a7d20841ea167c379137b33"
+    },
+    {
+      "file": "tracker_input/r2_B/counter_trace.json.gz",
+      "sha256": "e351f4060f608df9f8f72e6dcacf35b65ba199d99c2e80a10b61d7498761df2c"
+    },
+    {
+      "file": "tracker_input/r3_C/actual_raw.npz",
+      "sha256": "7611c5d1905c8eab239b50c8b5df19eb0ecb1d7ea55873dd0c0b5465e5668362"
+    },
+    {
+      "file": "tracker_input/r3_C/counter_trace.json.gz",
+      "sha256": "95d4d0a803561d3fc1741a4c6c24e20cac2777a6ca1efdc4ca83efebfb0334f9"
+    },
+    {
+      "file": "tracker_input/r4_D/actual_raw.npz",
+      "sha256": "aa7323cc0e8fbb01d0097363743375c5f171bf9340107b8ecc9b5ca466251f22"
+    },
+    {
+      "file": "tracker_input/r4_D/counter_trace.json.gz",
+      "sha256": "5abc19b91e37a927a0a88a623d72f3539b6774929d6d513ace28ede42b10abc6"
+    },
+    {
+      "file": "tracker_input/r5_D/actual_raw.npz",
+      "sha256": "cca4bf1103d88125effca7a7e43db970b4f5b678098f5dd1995f922beac8897e"
+    },
+    {
+      "file": "tracker_input/r5_D/counter_trace.json.gz",
+      "sha256": "8599cdf3c17db6f07a44c081d9efd6635488e0423d5c73a1d9afb62a29a02f42"
+    },
+    {
+      "file": "tracker_input/r6_C/actual_raw.npz",
+      "sha256": "c596c7cb137ade2a8521bb68a7c942c77ce7d4642286987e4b39c636f092d450"
+    },
+    {
+      "file": "tracker_input/r6_C/counter_trace.json.gz",
+      "sha256": "a53f8bc52f5404dd97a1d39769c23bb8d717b9f0dda34a2e5a8da0245e739d99"
+    },
+    {
+      "file": "tracker_input/r7_B/actual_raw.npz",
+      "sha256": "268fc2094f9d42f6f96ad902ad0066beb2f19c3bb07fa6bfeed49723eb52aab8"
+    },
+    {
+      "file": "tracker_input/r7_B/counter_trace.json.gz",
+      "sha256": "9cd08e47032c62fe51ae4a401e8ca78c1af10b4a5b32d9cce773bb1e88fa8da9"
+    },
+    {
+      "file": "tracker_input/r8_A/actual_raw.npz",
+      "sha256": "268fc2094f9d42f6f96ad902ad0066beb2f19c3bb07fa6bfeed49723eb52aab8"
+    },
+    {
+      "file": "tracker_input/r8_A/counter_trace.json.gz",
+      "sha256": "9cd08e47032c62fe51ae4a401e8ca78c1af10b4a5b32d9cce773bb1e88fa8da9"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "file": "tracker_input/source/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    },
+    {
+      "file": "tracker_input/workload_summary.json",
+      "sha256": "f9c533672f7ff176af04c745e6782c7207d06ae5fd7bfca8a6e0d987e72b61df"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "name": "Fixed cattle passage algorithm cross-scene regression on already-used Toros reference",
+  "created_UTC": "2026-10-28T12:26:07.611971+00:00",
+  "source": "Toros original-time footage",
+  "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+  "source_fps": 30,
+  "source_frames": 479,
+  "image_shape_H_W": [
+    1080,
+    1920
+  ],
+  "roi_axis": "x",
+  "perpendicular_roi_y": [
+    0.1,
+    0.95
+  ],
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "timing_scope": "Keep originalToros protocol: all30Hz frames, 3samples=2/30s; not the5Hz sourceclip0.4s observation duration",
+  "models": [
+    {
+      "name": "generic",
+      "checkpoint": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+        "bytes": 5544453,
+        "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+      },
+      "cache_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/raw_detector_boxes.csv",
+          "bytes": 142924,
+          "sha256": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/post_tracker_boxes.csv",
+          "bytes": 127553,
+          "sha256": "3319d021d6948eb5d125ede2e5d4dfd6364b98d75b9f712f923cb82d3f82f597"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/tracks.csv",
+          "bytes": 69021,
+          "sha256": "79dfb5cf6fa346102f01fce0036878747034b4c46835880cdb298700f58b324e"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/events.csv",
+          "bytes": 206,
+          "sha256": "df66528c264a4b3466808872641b78935c36777c75900d0a9cc745a471efcd5d"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/summary.json",
+          "bytes": 1340,
+          "sha256": "701000b1759f5ce6b264068add7b2e1f5d59cb9a9beefd3a041ece3f826d65c7"
+        }
+      ],
+      "prior_events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 54,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 34,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "expected_prior_TP": 6
+    },
+    {
+      "name": "pilot",
+      "checkpoint": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/results/detection_pilot/five_epoch_dev/weights/best.pt",
+        "bytes": 5341765,
+        "sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b"
+      },
+      "cache_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/raw_detector_boxes.csv",
+          "bytes": 113709,
+          "sha256": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/post_tracker_boxes.csv",
+          "bytes": 100383,
+          "sha256": "0b9fb8616995c42505de7f50392f999da2a03d781a287864fe816d82b8405196"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/tracks.csv",
+          "bytes": 53419,
+          "sha256": "c02c76d12bf269ac16fe5afa0d87684b89e76ef7d7e711a175b753499fbb7f42"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/events.csv",
+          "bytes": 82,
+          "sha256": "1c062c4d0503ee5a108e2e99c59a35225cb2b445f7e0881834aaa0f019f26f56"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/summary.json",
+          "bytes": 874,
+          "sha256": "263a557f371f4396971ca7c49f435af4a785d75aa74019fcb4a23d386b7f337f"
+        }
+      ],
+      "prior_events": [
+        {
+          "time_s": 8.2,
+          "track_id": 21,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 39,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "expected_prior_TP": 2
+    }
+  ],
+  "installed_source": [
+    {
+      "file": "installed_track.py",
+      "sha256": "1bc8673215b05db0b94d1e0b8930c34f6256d796eb3f633206ab69d162f59383"
+    },
+    {
+      "file": "installed_byte_tracker.py",
+      "sha256": "00c7c1ff8b1076fc89347071519ae0b06a30bfce00dded94826620e068b1928f"
+    },
+    {
+      "file": "installed_bytetrack.yaml",
+      "sha256": "9672c78cc508b265230fdace4c1cfa2ab7eaf51983fece9942e7d0dfc67a5128"
+    }
+  ],
+  "matching_source_sha256": "a98d246497b23f7210af5b7775e02ae5a51319eddb33f6ab29d3c8bb3e951b98",
+  "input_modules": {
+    "confirmation_counter.py": "43dc019982f23bd2cab92471d2bc4a5b1824258ec86edd2f17f4fd67f994976f",
+    "event_metrics.py": "049cb747a15ed180fa7f2679f2157c71def8182b69e801fdb433cad369f1e437",
+    "lost_tracker.py": "3bb2b4f1804f6cacb4e672adfa3b8e7ac68ed57d2b5231929cf74e7fdaed328d",
+    "secondstage_tracker.py": "6e4a33dbc3f1adb2551fff26dc3304722ccc4d73790dff7a1e9a4b5c2cc9abce",
+    "zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+  },
+  "publisher_GT_sha256": "a5826713c9e02c62b08bfbec099b415ef8ef67e90d95987fea1a98418bb028e7",
+  "reference_author_summary": {
+    "path": "/share/home/renly/projects/idcoo_research_20261026/phase2/results/author_gt_audit/summary.json",
+    "bytes": 4676,
+    "sha256": "31c3f9dd74b8ecf3377447d4ae13a34af652e5e9a2630faf929f7c5b6d4047c5"
+  },
+  "reference_events": [
+    {
+      "time_s": 3.6666666666666665,
+      "track_id": 1,
+      "direction": "B->A",
+      "frame": 110
+    },
+    {
+      "time_s": 6.433333333333334,
+      "track_id": 14,
+      "direction": "B->A",
+      "frame": 193
+    },
+    {
+      "time_s": 8.266666666666667,
+      "track_id": 7,
+      "direction": "B->A",
+      "frame": 248
+    },
+    {
+      "time_s": 9.533333333333333,
+      "track_id": 16,
+      "direction": "B->A",
+      "frame": 286
+    },
+    {
+      "time_s": 10.733333333333333,
+      "track_id": 22,
+      "direction": "B->A",
+      "frame": 322
+    },
+    {
+      "time_s": 13.2,
+      "track_id": 17,
+      "direction": "B->A",
+      "frame": 396
+    }
+  ],
+  "reference_scope": "Sixeventsderivedfrompublishertrajectorywithfrozenzone rule; not new independent test; GT clip/edge findings retained",
+  "variants": [
+    "installed",
+    "secondstage_iou",
+    "allow_lost_iou"
+  ],
+  "main_method_paths": [
+    "installed_confirmed_only",
+    "installed_handoff",
+    "secondstage_iou_handoff",
+    "allow_lost_iou_handoff"
+  ],
+  "diagnostic_paths": "confirmed-only events for each modifiedtracker also retained/scored",
+  "required_exact_baselines": [
+    "alloriginalposttrackerboxes",
+    "alloriginalROItracks",
+    "sixandtwo originalevents",
+    "known6and2 referenceTP"
+  ],
+  "event_matching_tolerance_s": 2.0,
+  "no_parameter_selection_or_training_on_reference": true,
+  "source_original_protocol_sha256": "faede0639ea4d8c9db44e0d37f7df53dd28da71d3b30df7b7cb92d22804b6687",
+  "new_detector_forwards": 0,
+  "training_updates": 0,
+  "new_independent_test": false,
+  "source_MultiCam_independent_truth_received": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

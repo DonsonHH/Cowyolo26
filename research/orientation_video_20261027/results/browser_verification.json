@@ -1,0 +1,203 @@
+{
+  "status": "ALL_THREE_NATIVE_COORDINATE_VIDEO_PAIRS_PLAYBACK_SEEK_EDIT_PAUSE_AND_BOUNDARIES_VERIFIED",
+  "created_UTC": "2026-10-27T15:47:34.549Z",
+  "url": "http://127.0.0.1:8779/annotation_workbench/video_rotation_preview.html",
+  "tests": [
+    {
+      "test": "edit_while_playing_pauses_and_preserves10873",
+      "state": {
+        "active": "jump",
+        "jump": "10873",
+        "videos": [
+          {
+            "error": null,
+            "paused": true
+          },
+          {
+            "error": null,
+            "paused": true
+          }
+        ]
+      }
+    },
+    {
+      "test": "last_frame10873_and_speed2",
+      "state": {
+        "clock": "源帧10873 · 434.92秒",
+        "jump": "10873",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "paused": true,
+            "rate": 2,
+            "time": 78.4412
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "paused": true,
+            "rate": 2,
+            "time": 78.4412
+          }
+        ]
+      }
+    },
+    {
+      "test": "first_frame8912_and_speed1",
+      "state": {
+        "clock": "源帧8912 · 356.48秒",
+        "videos": [
+          {
+            "error": null,
+            "paused": true,
+            "rate": 1,
+            "time": 0.0012
+          },
+          {
+            "error": null,
+            "paused": true,
+            "rate": 1,
+            "time": 0.0012
+          }
+        ]
+      }
+    },
+    {
+      "test": "paired_seed26_play_after_fix",
+      "state": {
+        "seed": "26",
+        "summaries": [
+          "本段预测向下0、向上0；ROI检测采样帧 91",
+          "本段预测向下8、向上0；ROI检测采样帧 364"
+        ],
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "paused": false,
+            "ready": 4,
+            "src": "http://127.0.0.1:8779/inputs/cows2021_seed26_f8912-10873.webm",
+            "time": 20.6258,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "paused": false,
+            "ready": 4,
+            "src": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+            "time": 20.6258,
+            "width": 1280
+          }
+        ]
+      }
+    },
+    {
+      "test": "paired_seed27_play_after_fix",
+      "state": {
+        "seed": "27",
+        "summaries": [
+          "本段预测向下1、向上0；ROI检测采样帧 138",
+          "本段预测向下6、向上0；ROI检测采样帧 348"
+        ],
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "paused": false,
+            "ready": 4,
+            "src": "http://127.0.0.1:8779/inputs/cows2021_seed27_f8912-10873.webm",
+            "time": 20.6257,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "paused": false,
+            "ready": 4,
+            "src": "http://127.0.0.1:8779/inputs/video_rotate90_seed27_f8912-10873.webm",
+            "time": 20.6257,
+            "width": 1280
+          }
+        ]
+      }
+    },
+    {
+      "test": "paired_seed28_play_after_fix",
+      "state": {
+        "seed": "28",
+        "summaries": [
+          "本段预测向下0、向上0；ROI检测采样帧 108",
+          "本段预测向下8、向上0；ROI检测采样帧 358"
+        ],
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "paused": false,
+            "ready": 4,
+            "src": "http://127.0.0.1:8779/inputs/cows2021_seed28_f8912-10873.webm",
+            "time": 20.6267,
+            "width": 1280
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "height": 720,
+            "paused": false,
+            "ready": 4,
+            "src": "http://127.0.0.1:8779/inputs/video_rotate90_seed28_f8912-10873.webm",
+            "time": 20.6266,
+            "width": 1280
+          }
+        ]
+      }
+    }
+  ],
+  "final_view": {
+    "clock": "源帧9420 · 376.80秒",
+    "jump": "9420",
+    "seed": "26",
+    "summaries": [
+      "本段预测向下0、向上0；ROI检测采样帧 91",
+      "本段预测向下8、向上0；ROI检测采样帧 364"
+    ],
+    "table": "original / 26\t91\t0 / 0\t0 / 0 / 6\t58\nclockwise90 / 26\t364\t8 / 0\t0 / 0 / 6\t356\noriginal / 27\t138\t1 / 0\t0 / 0 / 6\t98\nclockwise90 / 27\t348\t6 / 0\t0 / 0 / 6\t336\noriginal / 28\t108\t0 / 0\t0 / 0 / 6\t71\nclockwise90 / 28\t358\t8 / 0\t0 / 0 / 6\t353",
+    "videos": [
+      {
+        "duration": 78.48,
+        "error": null,
+        "height": 720,
+        "paused": true,
+        "rate": 1,
+        "ready": 4,
+        "src": "http://127.0.0.1:8779/inputs/cows2021_seed26_f8912-10873.webm",
+        "time": 20.321199,
+        "width": 1280
+      },
+      {
+        "duration": 78.48,
+        "error": null,
+        "height": 720,
+        "paused": true,
+        "rate": 1,
+        "ready": 4,
+        "src": "http://127.0.0.1:8779/inputs/video_rotate90_seed26_f8912-10873.webm",
+        "time": 20.321199,
+        "width": 1280
+      }
+    ]
+  },
+  "initial_jump_race_reproduced_and_fixed": true,
+  "initial_evidence_file": "browser_before_jump_fix.json",
+  "screenshot": "browser_source9420.png",
+  "source_annotation_draft_modified": false,
+  "source_count_accuracy_verified": false,
+  "whole_goal_complete": false
+}

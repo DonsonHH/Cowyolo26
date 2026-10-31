@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/factorial_lane_crop_20261029/tools/render_media.py", line 61, in <module>
+    video=p['videos'][0];assert sha(video['path'])==video['sha256'];capture=cv2.VideoCapture(video['path']);assert capture.isOpened();decoded=0
+                                ~~~^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/factorial_lane_crop_20261029/tools/render_media.py", line 13, in sha
+    def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+                                     ^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'read_bytes'

@@ -1,0 +1,96 @@
+{
+  "status": "STARTUP_MEASUREMENT_COMPLETE_WITH_40S_DEADLINE_RESULT_RECORDED",
+  "run": "r1_original",
+  "variant": "original",
+  "PID": 1894,
+  "boot_id": "e7059099-ecb8-451e-a9aa-a66c8222196b",
+  "protocol_sha256": "00098eb29e29c79949bdaaa577ab7d2f49782974a90efe909ea42c48be2eebeb",
+  "new_O8_image_forwards": 0,
+  "formal_identity_jobs": 0,
+  "whole_goal_complete": false,
+  "stationary_foreground": {
+    "framebank_bytes": 43352064,
+    "framebank_sha256": "35cd834855efc7110d35ee7c158918cad9335f216540410eff7138dbcd71eb01",
+    "prehistory_ticks": 1783,
+    "prehistory_four_traces_exact": true,
+    "graph_memory": {
+      "CMA_TX_bytes": 7102880,
+      "CMA_RX_bytes": 1059588,
+      "host_tensor_reserved_bytes": 22689653,
+      "host_plan_reserved_bytes": 0,
+      "TX_BO_count": 69,
+      "RX_BO_count": 69,
+      "TX_layer_pool": 1,
+      "RX_layer_pool": 1
+    },
+    "graph_status_before_child": {
+      "MM2S": "0x1002",
+      "S2MM": "0x1002",
+      "core": "0x2",
+      "error": "0x0",
+      "version": "0x80001"
+    },
+    "initialization": {
+      "primed": false,
+      "core": "0x80001",
+      "FCLK0_MHz": 100.0
+    },
+    "new_O8_image_forwards": 0
+  },
+  "parent_before_child": {
+    "PID": 1894,
+    "sample_started_monotonic_ns": 6257476673879,
+    "status": "Name:\tpython3\nUmask:\t0022\nState:\tR (running)\nTgid:\t1894\nNgid:\t0\nPid:\t1894\nPPid:\t1887\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t32\nGroups:\t0 \nNStgid:\t1894\nNSpid:\t1894\nNSpgid:\t1887\nNSsid:\t1887\nKthread:\t0\nVmPeak:\t  497100 kB\nVmSize:\t  496332 kB\nVmLck:\t      16 kB\nVmPin:\t       0 kB\nVmHWM:\t  239880 kB\nVmRSS:\t  224112 kB\nRssAnon:\t  146800 kB\nRssFile:\t   77312 kB\nRssShmem:\t       0 kB\nVmData:\t  197248 kB\nVmStk:\t     132 kB\nVmExe:\t    3832 kB\nVmLib:\t  235320 kB\nVmPTE:\t     412 kB\nVmSwap:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t0\nuntag_mask:\t0xffffffff\nThreads:\t2\nSigQ:\t0/2901\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t000001ffffffffff\nCapEff:\t000001ffffffffff\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tunknown\nSpeculationIndirectBranch:\tunsupported\nCpus_allowed:\t3\nCpus_allowed_list:\t0-1\nMems_allowed:\t1\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t981\nnonvoluntary_ctxt_switches:\t265\n",
+    "smaps_rollup": "00480000-beb53000 ---p 00000000 00:00 0          [rollup]\nRss:              224200 kB\nPss:              218612 kB\nPss_Dirty:        146920 kB\nPss_Anon:         146920 kB\nPss_File:          71692 kB\nPss_Shmem:             0 kB\nShared_Clean:       7988 kB\nShared_Dirty:          0 kB\nPrivate_Clean:     69292 kB\nPrivate_Dirty:    146920 kB\nReferenced:       221736 kB\nAnonymous:        146920 kB\nKSM:                   0 kB\nLazyFree:              0 kB\nAnonHugePages:         0 kB\nShmemPmdMapped:        0 kB\nFilePmdMapped:         0 kB\nShared_Hugetlb:        0 kB\nPrivate_Hugetlb:       0 kB\nSwap:                  0 kB\nSwapPss:               0 kB\nLocked:               16 kB\n",
+    "stat": "1894 (python3) R 1887 1887 1887 0 -1 4194560 67404 1536 138 42 2436 276 8 11 20 0 2 0 622619 508243968 56028 4294967295 4718592 8641352 3196656576 0 0 0 0 16781312 2 0 0 0 17 1 0 0 0 0 0 8707416 8850920 9003008 3196656889 3196657028 3196657028 3196657621 0\n",
+    "sample_finished_monotonic_ns": 6257504066286
+  },
+  "before_child_start_monotonic_ns": 6257579770938,
+  "after_child_start_return_monotonic_ns": 6257602094726,
+  "child_PID": 1908,
+  "before_READY_wait_monotonic_ns": 6257602123921,
+  "ready_wait_40s_expired": false,
+  "ready_received_monotonic_ns": 6274542057197,
+  "ready_response": {
+    "status": "READY",
+    "PID": 1908,
+    "before_READY_put_monotonic_ns": 6274538864573
+  },
+  "child_at_READY": {
+    "PID": 1908,
+    "sample_started_monotonic_ns": 6274542425753,
+    "status": "Name:\tpython3\nUmask:\t0022\nState:\tS (sleeping)\nTgid:\t1908\nNgid:\t0\nPid:\t1908\nPPid:\t1894\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t32\nGroups:\t0 \nNStgid:\t1908\nNSpid:\t1908\nNSpgid:\t1887\nNSsid:\t1887\nKthread:\t0\nVmPeak:\t  371596 kB\nVmSize:\t  370572 kB\nVmLck:\t      16 kB\nVmPin:\t       0 kB\nVmHWM:\t  128148 kB\nVmRSS:\t  127640 kB\nRssAnon:\t   59544 kB\nRssFile:\t   68096 kB\nRssShmem:\t       0 kB\nVmData:\t   95752 kB\nVmStk:\t     132 kB\nVmExe:\t    3832 kB\nVmLib:\t  233896 kB\nVmPTE:\t     306 kB\nVmSwap:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t0\nuntag_mask:\t0xffffffff\nThreads:\t2\nSigQ:\t0/2901\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t000001ffffffffff\nCapEff:\t000001ffffffffff\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tunknown\nSpeculationIndirectBranch:\tunsupported\nCpus_allowed:\t3\nCpus_allowed_list:\t0-1\nMems_allowed:\t1\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t195\nnonvoluntary_ctxt_switches:\t105\n",
+    "smaps_rollup": "00400000-bef66000 ---p 00000000 00:00 0          [rollup]\nRss:              127908 kB\nPss:               91615 kB\nPss_Dirty:         59658 kB\nPss_Anon:          59648 kB\nPss_File:          31957 kB\nPss_Shmem:            10 kB\nShared_Clean:      67720 kB\nShared_Dirty:          4 kB\nPrivate_Clean:       528 kB\nPrivate_Dirty:     59656 kB\nReferenced:       127700 kB\nAnonymous:         59648 kB\nKSM:                   0 kB\nLazyFree:              0 kB\nAnonHugePages:         0 kB\nShmemPmdMapped:        0 kB\nFilePmdMapped:         0 kB\nShared_Hugetlb:        0 kB\nPrivate_Hugetlb:       0 kB\nSwap:                  0 kB\nSwapPss:               0 kB\nLocked:               16 kB\n",
+    "stat": "1908 (python3) S 1894 1887 1887 0 -1 4194560 19610 0 144 0 1499 119 0 0 30 10 2 0 625758 379465728 31910 4294967295 4194304 8117064 3203550096 0 0 0 0 16781312 2 0 0 0 17 1 0 0 0 0 0 8183128 8326632 8478720 3203550420 3203550576 3203550576 3203551189 0\n",
+    "sample_finished_monotonic_ns": 6274561127828
+  },
+  "parent_at_READY": {
+    "PID": 1894,
+    "sample_started_monotonic_ns": 6274561367963,
+    "status": "Name:\tpython3\nUmask:\t0022\nState:\tR (running)\nTgid:\t1894\nNgid:\t0\nPid:\t1894\nPPid:\t1887\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t32\nGroups:\t0 \nNStgid:\t1894\nNSpid:\t1894\nNSpgid:\t1887\nNSsid:\t1887\nKthread:\t0\nVmPeak:\t  497100 kB\nVmSize:\t  496428 kB\nVmLck:\t      16 kB\nVmPin:\t       0 kB\nVmHWM:\t  239880 kB\nVmRSS:\t  224112 kB\nRssAnon:\t  146800 kB\nRssFile:\t   77312 kB\nRssShmem:\t       0 kB\nVmData:\t  197252 kB\nVmStk:\t     132 kB\nVmExe:\t    3832 kB\nVmLib:\t  235324 kB\nVmPTE:\t     412 kB\nVmSwap:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t0\nuntag_mask:\t0xffffffff\nThreads:\t2\nSigQ:\t0/2901\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t000001ffffffffff\nCapEff:\t000001ffffffffff\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tunknown\nSpeculationIndirectBranch:\tunsupported\nCpus_allowed:\t3\nCpus_allowed_list:\t0-1\nMems_allowed:\t1\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t987\nnonvoluntary_ctxt_switches:\t266\n",
+    "smaps_rollup": "00480000-beb53000 ---p 00000000 00:00 0          [rollup]\nRss:              224240 kB\nPss:              187947 kB\nPss_Dirty:        146918 kB\nPss_Anon:         146912 kB\nPss_File:          41029 kB\nPss_Shmem:             6 kB\nShared_Clean:      67720 kB\nShared_Dirty:          4 kB\nPrivate_Clean:      9600 kB\nPrivate_Dirty:    146916 kB\nReferenced:       221288 kB\nAnonymous:        146912 kB\nKSM:                   0 kB\nLazyFree:              0 kB\nAnonHugePages:         0 kB\nShmemPmdMapped:        0 kB\nFilePmdMapped:         0 kB\nShared_Hugetlb:        0 kB\nPrivate_Hugetlb:       0 kB\nSwap:                 16 kB\nSwapPss:              16 kB\nLocked:               16 kB\n",
+    "stat": "1894 (python3) R 1887 1887 1887 0 -1 4194560 67958 1536 139 42 2441 280 8 11 20 0 2 0 622619 508342272 56028 4294967295 4718592 8641352 3196656576 0 0 0 0 16781312 2 0 0 0 17 1 0 0 0 0 0 8707416 8850920 9003008 3196656889 3196657028 3196657028 3196657621 0\n",
+    "sample_finished_monotonic_ns": 6274589017583
+  },
+  "meminfo_at_READY": "MemTotal:         503464 kB\nMemFree:           15608 kB\nMemAvailable:     240068 kB\nBuffers:            4828 kB\nCached:           218164 kB\nSwapCached:         1232 kB\nActive:           131924 kB\nInactive:         309820 kB\nActive(anon):       1124 kB\nInactive(anon):   217948 kB\nActive(file):     130800 kB\nInactive(file):    91872 kB\nUnevictable:          32 kB\nMlocked:              32 kB\nHighTotal:             0 kB\nHighFree:              0 kB\nLowTotal:         503464 kB\nLowFree:           15608 kB\nSwapTotal:        524284 kB\nSwapFree:         447996 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        217876 kB\nMapped:            87268 kB\nShmem:               312 kB\nKReclaimable:      13628 kB\nSlab:              28224 kB\nSReclaimable:      13628 kB\nSUnreclaim:        14596 kB\nKernelStack:         752 kB\nPageTables:         2956 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      776016 kB\nCommitted_AS:     522188 kB\nVmallocTotal:     507904 kB\nVmallocUsed:        2028 kB\nVmallocChunk:          0 kB\nPercpu:              320 kB\nCmaTotal:         131072 kB\nCmaFree:            7848 kB\n",
+  "stop_requested_monotonic_ns": 6274589668847,
+  "child_exitcode": 0,
+  "identity_warmup_forwards": 1,
+  "child_absent_after_join": true,
+  "graph_status_before_close": {
+    "MM2S": "0x1002",
+    "S2MM": "0x1002",
+    "core": "0x2",
+    "error": "0x0",
+    "version": "0x80001"
+  },
+  "close_error": null,
+  "parent_after_child": {
+    "PID": 1894,
+    "sample_started_monotonic_ns": 6276666634154,
+    "status": "Name:\tpython3\nUmask:\t0022\nState:\tR (running)\nTgid:\t1894\nNgid:\t0\nPid:\t1894\nPPid:\t1887\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t32\nGroups:\t0 \nNStgid:\t1894\nNSpid:\t1894\nNSpgid:\t1887\nNSsid:\t1887\nKthread:\t0\nVmPeak:\t  506672 kB\nVmSize:\t  474900 kB\nVmLck:\t      16 kB\nVmPin:\t       0 kB\nVmHWM:\t  239880 kB\nVmRSS:\t  210140 kB\nRssAnon:\t  132700 kB\nRssFile:\t   77440 kB\nRssShmem:\t       0 kB\nVmData:\t  183084 kB\nVmStk:\t     132 kB\nVmExe:\t    3832 kB\nVmLib:\t  235324 kB\nVmPTE:\t     396 kB\nVmSwap:\t       0 kB\nCoreDumping:\t0\nTHP_enabled:\t0\nuntag_mask:\t0xffffffff\nThreads:\t3\nSigQ:\t0/2901\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t000001ffffffffff\nCapEff:\t000001ffffffffff\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tunknown\nSpeculationIndirectBranch:\tunsupported\nCpus_allowed:\t3\nCpus_allowed_list:\t0-1\nMems_allowed:\t1\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t992\nnonvoluntary_ctxt_switches:\t267\n",
+    "smaps_rollup": "00480000-beb53000 ---p 00000000 00:00 0          [rollup]\nRss:              210124 kB\nPss:              204212 kB\nPss_Dirty:        132716 kB\nPss_Anon:         132700 kB\nPss_File:          71496 kB\nPss_Shmem:            16 kB\nShared_Clean:       8004 kB\nShared_Dirty:          0 kB\nPrivate_Clean:     69404 kB\nPrivate_Dirty:    132716 kB\nReferenced:       206912 kB\nAnonymous:        132700 kB\nKSM:                   0 kB\nLazyFree:              0 kB\nAnonHugePages:         0 kB\nShmemPmdMapped:        0 kB\nFilePmdMapped:         0 kB\nShared_Hugetlb:        0 kB\nPrivate_Hugetlb:       0 kB\nSwap:                 16 kB\nSwapPss:              16 kB\nLocked:               16 kB\n",
+    "stat": "1894 (python3) R 1887 1887 1887 0 -1 4194560 68326 22055 140 245 2442 286 1624 144 20 0 3 0 622619 486297600 52535 4294967295 4718592 8641352 3196656576 0 0 0 0 16781312 2 0 0 0 17 1 0 0 0 0 0 8707416 8850920 9003008 3196656889 3196657028 3196657028 3196657621 0\n",
+    "sample_finished_monotonic_ns": 6276692925374
+  }
+}

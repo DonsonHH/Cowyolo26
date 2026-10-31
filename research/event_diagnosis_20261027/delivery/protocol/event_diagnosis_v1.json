@@ -1,0 +1,55 @@
+{
+  "name": "New detector event diagnosis v1",
+  "date": "2026-10-27",
+  "models": [
+    {
+      "name": "epoch20_seed26",
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed26/weights/last.pt",
+      "checkpoint_sha256": "35879f94b91e4f477693cf730c880b5f5174674578f0457ee2dbde9809d15c98"
+    },
+    {
+      "name": "epoch20_seed27",
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed27/weights/last.pt",
+      "checkpoint_sha256": "12270f8e7f14867cce464d9707a7b81f10d08c9777a40cfb17948e0e72f00c4c"
+    },
+    {
+      "name": "epoch20_seed28",
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed28/weights/last.pt",
+      "checkpoint_sha256": "a6eb9677a036550fedcfd8ee36601f389c13f6b586b9094be2668b8ac613d27f"
+    }
+  ],
+  "hypotheses_ranked": [
+    "Raw box coverage/geometry insufficient: reference-ID association still cannot form crossings",
+    "Post-tracker filtering or association loses usable observations: raw reference-ID better than actual and post interventions",
+    "Box-centre geometry interacts with stable-region rule: reference-box/tracker-ID intervention recovers events",
+    "Source disagreement may be distinct simultaneous cattle or duplicate/fragmented tracks: do not auto-deduplicate same-frame events without evidence"
+  ],
+  "inference": "Keep original320/conf0.2/iou0.5/ByteTrack/3samples/2secondgap; raw callback before tracker, actual events must exactly match frozen new model events",
+  "interventions": "Same previously fixed actual/raw+refID/post+refID/refBox+trackerID/ref+ref at IoU0.5 with prespecified0.3 sensitivity. All reference-assisted outputs diagnostic only.",
+  "control_input": "Previously used Toros6publisher-derived complete events, no new independent test claim",
+  "toros_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "source_scope": [
+    8912,
+    10873
+  ],
+  "source_disagreement_centres": [
+    9345,
+    9475,
+    9695,
+    9790
+  ],
+  "source_review_offsets_frames": [
+    -50,
+    -25,
+    0,
+    25,
+    50
+  ],
+  "source_snapshot_rule": "Fixed5frame positions per disagreement centre selected from predicted event times; within user interval; no author-identity or human-truth labels inferred",
+  "forbidden": "Do not call source predictions ground truth, choose best seed, feed reference IDs to deployable algorithm, retrain, or change counter thresholds in this stage",
+  "next_gate": "Use raw/post/control evidence to choose between detection/data and association work; preserve failures. Final new-test and board gates remain pending."
+}

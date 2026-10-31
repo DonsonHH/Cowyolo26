@@ -1,0 +1,15 @@
+{
+  "source_id": "mc_camera1_aug14",
+  "original_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "original_header_frames": 14009,
+  "original_fps": 25,
+  "strict_decoder": "Local FFmpeg with -xerror, full sequence",
+  "strict_decode_exit_code": -1094995529,
+  "strict_output_frames_before_failure": 14008,
+  "finding": "H264 macroblock error and corrupt decoded frame at the end of the file; earlier OpenCV frame-count checks allowed decoder concealment",
+  "unreliable_reference_frame_ranges": [[14008,14008]],
+  "range_status": "Conservative exclusion of terminal source frame pending original-source packet verification",
+  "proxy": "1280x720 VP9 browser derivative; 14009 frames at 25fps, full derivative decode passes; concealed source error is not repaired evidence",
+  "effect_on_prior_review": "Previously examined passage interval 350-435s precedes the reported terminal failure; full-video codec-clean status is withdrawn",
+  "original_preserved": true
+}

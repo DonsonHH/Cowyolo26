@@ -1,0 +1,27 @@
+{
+  "name": "Prospective Cows2021 date-grouped roles v1",
+  "scope": "Metadata-only candidate roles after complete10402XML recovery; eligibility for final independent evaluation remains pending image/source duplication audit.",
+  "selection_basis": "Chronological dates, public split-boundary provenance and previously observed raw-video dates; no new model prediction or metric used.",
+  "rules_in_order": [
+    {"role": "train_candidate", "first_date": "2020-02-05", "last_date": "2020-02-27"},
+    {"role": "validation_development_candidate", "first_date": "2020-02-28", "last_date": "2020-03-04"},
+    {"role": "development_reserve", "first_date": "2020-03-05", "last_date": "2020-03-09"},
+    {"role": "candidate_final_date_holdout", "first_date": "2020-03-10", "last_date": "2020-03-11"}
+  ],
+  "unparseable_or_outside_dates": "quarantine_metadata",
+  "previously_observed_raw_video_dates": ["2020-03-08", "2020-03-09"],
+  "prior_access_rule": "Existing Cows2021 March8/9 raw clips were used for development; neither date is a new final date holdout.",
+  "group_unit": "Complete source date across published Train/validation/Test roles. XML block and timestamp do not independently prove a video session ID.",
+  "same_original_filename": "Report duplicate source names; same source date must always get same candidate role. Do not infer byte identity from source name alone.",
+  "missing_or_bad_fields": "Preserve all10402metadata rows, flag/quarantine missing or invalid capture dates rather than silently dropping records.",
+  "further_eligibility_gates": [
+    "All metadata rows and source XML hashes independently verified",
+    "Actual image bytes and complete decode checked for selected development data",
+    "Exact/pixel/near-source overlap against prior OpenCows and prior used footage reviewed",
+    "Candidate final dates retained without score-based selection",
+    "Passage evaluation uses independent events and a consistent body-reference definition"
+  ],
+  "cross_farm_or_unseen_cow_claim": false,
+  "new_training_or_inference_authorised_by_this_file": false,
+  "final_independent_test_certified": false
+}

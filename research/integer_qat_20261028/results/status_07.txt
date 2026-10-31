@@ -1,0 +1,18 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+            129998|     4gpu|    idcoo-int-QAT-paired| RUNNING|      5:13|gpu02
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129998|idcoo-int-QAT-paired|RUNNING|0:0|00:05:13|
+129998.batch|batch|RUNNING|0:0|00:05:13|
+129998.0|python|RUNNING|0:0|00:05:13|
+{"event": "EPOCH", "seed": 28, "condition": "paired_float_continuation", "epoch": 4, "updates": 80, "mean_loss": 0.021442877361550927}
+{"event": "EPOCH", "seed": 28, "condition": "paired_float_continuation", "epoch": 5, "updates": 100, "mean_loss": 0.0236043272074312}
+{"event": "EPOCH", "seed": 28, "condition": "paired_float_continuation", "epoch": 6, "updates": 120, "mean_loss": 0.020588707458227874}
+{"event": "VALIDATION", "seed": 28, "condition": "paired_float_continuation", "C": 15, "W": 0, "U": 10, "unknown_false_accepts": 1, "closed_top1": 25}
+{"event": "EPOCH", "seed": 28, "condition": "integer_forward_qat", "epoch": 1, "updates": 20, "mean_loss": 0.599177998304367}
+{"event": "EPOCH", "seed": 28, "condition": "integer_forward_qat", "epoch": 2, "updates": 40, "mean_loss": 0.4888358637690544}
+{"event": "EPOCH", "seed": 28, "condition": "integer_forward_qat", "epoch": 3, "updates": 60, "mean_loss": 0.4310300529003143}
+{"event": "EPOCH", "seed": 28, "condition": "integer_forward_qat", "epoch": 4, "updates": 80, "mean_loss": 0.3991512060165405}
+/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py:29: TracerWarning: Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  bound = w.shape[1] * w.shape[2] * w.shape[3] * float(centered.abs().max()) * float(qw.abs().max())
+/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py:30: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert bound <= np.iinfo(np.int32).max

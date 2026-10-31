@@ -1,0 +1,77 @@
+{
+  "status": "DATA_TRAINING_FREEZE_AND_SIX_EVENT_REPLAYS_INDEPENDENTLY_VERIFIED",
+  "delivery_manifest_files": 249,
+  "protocol_sha256": "894848001296be9e017ac1fc1920dad67d2c9510dd1535933b44436611dd7b4b",
+  "roles": {
+    "train": 6809,
+    "val": 1571
+  },
+  "quarantined_cross_role_exact_images": 0,
+  "labels": {
+    "train": 8888,
+    "val": 1864
+  },
+  "seeds": [
+    26,
+    27,
+    28
+  ],
+  "epochs_each": 10,
+  "checks": [
+    {
+      "condition": "seed26",
+      "scene": "source",
+      "events": 0,
+      "state_replay": "PASS"
+    },
+    {
+      "condition": "seed26",
+      "scene": "Toros",
+      "events": 0,
+      "state_replay": "PASS",
+      "TP": 0,
+      "FP": 0,
+      "FN": 6,
+      "temporally_matched": 0,
+      "wrong_direction_matches": 0
+    },
+    {
+      "condition": "seed27",
+      "scene": "source",
+      "events": 1,
+      "state_replay": "PASS"
+    },
+    {
+      "condition": "seed27",
+      "scene": "Toros",
+      "events": 0,
+      "state_replay": "PASS",
+      "TP": 0,
+      "FP": 0,
+      "FN": 6,
+      "temporally_matched": 0,
+      "wrong_direction_matches": 0
+    },
+    {
+      "condition": "seed28",
+      "scene": "source",
+      "events": 0,
+      "state_replay": "PASS"
+    },
+    {
+      "condition": "seed28",
+      "scene": "Toros",
+      "events": 0,
+      "state_replay": "PASS",
+      "TP": 0,
+      "FP": 0,
+      "FN": 6,
+      "temporally_matched": 0,
+      "wrong_direction_matches": 0
+    }
+  ],
+  "source_independent_accuracy_verified": false,
+  "candidate_final_test_certified": false,
+  "Z2_joint_execution_verified": false,
+  "whole_goal_complete": false
+}

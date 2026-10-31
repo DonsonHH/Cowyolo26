@@ -1,0 +1,98 @@
+{
+  "index": 10,
+  "query_id": "E011_f9900_tid117",
+  "source_photo_sha256": "7ac8a931851e6c049a7c5a0f37989ef65fcd231559922adcff330ecdf29b0ee6",
+  "native_source_BGR_sha256": "a8fc9fbf00795c9b415732719a8a895a2719f05e40b3690181fa8cd72e451a1d",
+  "native_rotated_BGR_sha256": "360a19f369ddfbc4cf99f063b0d96263807833da548a24416519689d3224fbe0",
+  "native_cv2_rotate_pixel_exact": true,
+  "JPEG_read_ms": 458.531322,
+  "size_conditions": [
+    {
+      "size": 192,
+      "reference_BGR_sha256": "82b736c4a970ca11e36b5bde1dd3079b2365e7d59dd3a39a5fdadc2a0ad9fbf3",
+      "cv2native_BGR_sha256": "82b736c4a970ca11e36b5bde1dd3079b2365e7d59dd3a39a5fdadc2a0ad9fbf3",
+      "resizefirst_BGR_sha256": "964704bbcae51c24d29188a5ee3e961886439f479e9f521473b964d13e3ab269",
+      "native_rotate_letterbox_exact": true,
+      "resizefirst_letterbox_exact": false,
+      "resizefirst_different_channels": 4894,
+      "resizefirst_maximum_uint8_delta": 1,
+      "array_file": "10_s192_inputs.npz",
+      "array_file_sha256": "89429ef1acaa9a5236f27329a6c89721b28139a9f3145f44fb4acbf8bea1d0ce",
+      "timing_ms": {
+        "np_rot90_copy_native_baseline": [
+          1041.065875,
+          1046.091949,
+          1074.668903
+        ],
+        "cv2_rotate_native": [
+          308.945415,
+          309.137095,
+          308.530338
+        ],
+        "cv2_resize_before_rotate": [
+          6.297858,
+          6.312394,
+          6.391908
+        ]
+      }
+    },
+    {
+      "size": 256,
+      "reference_BGR_sha256": "2c314435001e287e4067e6b2f3b4c65c548e4743e824823a2f5eae4a735bcae2",
+      "cv2native_BGR_sha256": "2c314435001e287e4067e6b2f3b4c65c548e4743e824823a2f5eae4a735bcae2",
+      "resizefirst_BGR_sha256": "2c314435001e287e4067e6b2f3b4c65c548e4743e824823a2f5eae4a735bcae2",
+      "native_rotate_letterbox_exact": true,
+      "resizefirst_letterbox_exact": true,
+      "resizefirst_different_channels": 0,
+      "resizefirst_maximum_uint8_delta": 0,
+      "array_file": "10_s256_inputs.npz",
+      "array_file_sha256": "7ebb14e748893702204395e2203d1df77befa5b79cccaf48474ed9ceb509ccc7",
+      "timing_ms": {
+        "np_rot90_copy_native_baseline": [
+          1044.484294,
+          1046.65779,
+          1044.15046
+        ],
+        "cv2_rotate_native": [
+          311.657002,
+          311.650787,
+          312.227421
+        ],
+        "cv2_resize_before_rotate": [
+          10.10928,
+          10.14568,
+          10.111569
+        ]
+      }
+    },
+    {
+      "size": 320,
+      "reference_BGR_sha256": "2bce1db30ff24fc49598323c9863820973da1cabbbcf5f62b08a4c9513f3c6d9",
+      "cv2native_BGR_sha256": "2bce1db30ff24fc49598323c9863820973da1cabbbcf5f62b08a4c9513f3c6d9",
+      "resizefirst_BGR_sha256": "2bce1db30ff24fc49598323c9863820973da1cabbbcf5f62b08a4c9513f3c6d9",
+      "native_rotate_letterbox_exact": true,
+      "resizefirst_letterbox_exact": true,
+      "resizefirst_different_channels": 0,
+      "resizefirst_maximum_uint8_delta": 0,
+      "array_file": "10_s320_inputs.npz",
+      "array_file_sha256": "83d9d82520a83778f17f2d4f583f96cf178887f0f8f0136b99f00629d3637e74",
+      "timing_ms": {
+        "np_rot90_copy_native_baseline": [
+          1048.715032,
+          1047.252294,
+          1057.835285
+        ],
+        "cv2_rotate_native": [
+          344.542166,
+          315.27611,
+          315.332774
+        ],
+        "cv2_resize_before_rotate": [
+          14.858769,
+          14.758603,
+          14.886092
+        ]
+      }
+    }
+  ]
+}

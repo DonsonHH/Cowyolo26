@@ -1,0 +1,24 @@
+{
+  "exit_code": 1,
+  "result": {
+    "status": "PERIODIC_TARGET_RED",
+    "actual_board_trace_not_synthetic": true,
+    "target_FPS": 5.0,
+    "cases": [
+      {
+        "run": "r1_causal_ring",
+        "FPS": 4.834183673469387,
+        "skips": 13,
+        "late_frames": 253
+      },
+      {
+        "run": "r2_causal_ring",
+        "FPS": 4.795918367346938,
+        "skips": 16,
+        "late_frames": 281
+      }
+    ],
+    "source_verification_sha256": "52ab11aee26a475d6b13c20d8bd8f4aa432799e74754d6f325f066eac3cc99d3",
+    "scope": "Replay of original full periodic failure; isolated microbenchmarks cannot turn this green."
+  }
+}

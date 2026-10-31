@@ -1,0 +1,1832 @@
+{
+  "status": "PROVISIONAL_EVENT_TIMING_SETS_DERIVED_FROM_MANUAL_PIXEL_RANGES",
+  "created_UTC": "2026-10-28T17:03:38.491067+00:00",
+  "source_sha256": "8210a5bf206dd7f2356bc3d4653b439ab6de12ccfdc8209fe301ac7f02807058",
+  "original_draft_sha256": "35a6e0d5b4454cc2a6e6057c750f84cd6cf5d02f5d3fc73c4c1683c80b149bb7",
+  "manual_input_sha256": "79983d853f891ba3d9bbb574f5750cf2bf923441e00019790f1b827aab0fc721",
+  "native_contact_manifest_sha256": "68bd834c5a073d304408382a7084ae063003abbe879c2f104b554d6e0f73b0d1",
+  "annotation_authority": "assistant_provisional_native_visual_review",
+  "native_pixel_gate_y": 864,
+  "stable_samples": 3,
+  "source_stride": 5,
+  "nominal_FPS": 25,
+  "candidate_count": 12,
+  "pixel_working_range_rows": 68,
+  "uncertain_sample_rows": 20,
+  "resolved_binary_scenarios": 40,
+  "candidate_timing_values_total": 32,
+  "events": [
+    {
+      "reference_ID": "R01",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 2650,
+          "nominal_time_s": 106.0,
+          "native_centre_y_working_range": [
+            740,
+            840
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02650.jpg",
+          "source_sha256": "660a40f5fcb80c70da8faebdca12b004f24103f0cf9fb5f52b9bf5d0b92f88a8"
+        },
+        {
+          "frame0": 2655,
+          "nominal_time_s": 106.2,
+          "native_centre_y_working_range": [
+            810,
+            920
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02655.jpg",
+          "source_sha256": "b24c1b4f5ae294a6b849b90a5f6a790a3893c045166e03b71997c747cfc36231"
+        },
+        {
+          "frame0": 2660,
+          "nominal_time_s": 106.4,
+          "native_centre_y_working_range": [
+            850,
+            1000
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02660.jpg",
+          "source_sha256": "6f6e9f789496932be3fc6b29422473db399b38cd4920d9d2490774b390d1950a"
+        },
+        {
+          "frame0": 2665,
+          "nominal_time_s": 106.6,
+          "native_centre_y_working_range": [
+            1010,
+            1150
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02665.jpg",
+          "source_sha256": "d11343134ef6503ba6c46a35fa66d16b46e9ca612abac6c0d83c857dd6ad4f70"
+        },
+        {
+          "frame0": 2670,
+          "nominal_time_s": 106.8,
+          "native_centre_y_working_range": [
+            1100,
+            1330
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02670.jpg",
+          "source_sha256": "0673b3aced5f35cbeb0d00b6e710d7912543cd9c5e1d545bdf3d6a709341cde1"
+        },
+        {
+          "frame0": 2675,
+          "nominal_time_s": 107.0,
+          "native_centre_y_working_range": [
+            1190,
+            1440
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02675.jpg",
+          "source_sha256": "8c88f6ce149bf1fc0e7e562b909f17dabf8852af39e3a8595bdd0ec1ba74277b"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        2605,
+        2610,
+        2615
+      ],
+      "note": "Leading cow in a dense group; adjacent animals and partial torso near exit increase centre uncertainty.",
+      "uncertain_samples": 2,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2675
+        },
+        {
+          "uncertain_samples_as_B": [
+            false,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2670
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2675
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2665
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        2665,
+        2670,
+        2675
+      ],
+      "possible_nominal_times_s": [
+        106.6,
+        106.8,
+        107.0
+      ],
+      "completion_frame0_hull": [
+        2665,
+        2675
+      ],
+      "completion_hull_width_s": 0.4,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        2650,
+        2675
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R02",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 2675,
+          "nominal_time_s": 107.0,
+          "native_centre_y_working_range": [
+            740,
+            820
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02675.jpg",
+          "source_sha256": "8c88f6ce149bf1fc0e7e562b909f17dabf8852af39e3a8595bdd0ec1ba74277b"
+        },
+        {
+          "frame0": 2680,
+          "nominal_time_s": 107.2,
+          "native_centre_y_working_range": [
+            810,
+            890
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02680.jpg",
+          "source_sha256": "7429cdc07f6c0ac7506bacc36510d878ef6a049e74202cb2c102e444e2ddd813"
+        },
+        {
+          "frame0": 2685,
+          "nominal_time_s": 107.4,
+          "native_centre_y_working_range": [
+            880,
+            980
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02685.jpg",
+          "source_sha256": "ebf15ec82320afc8cc3fcd1aa6264c18c20f9773dd7115ba17ec4af5d75eac63"
+        },
+        {
+          "frame0": 2690,
+          "nominal_time_s": 107.6,
+          "native_centre_y_working_range": [
+            970,
+            1080
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02690.jpg",
+          "source_sha256": "caac1b99f7058b2b338c61334f03428af169b5422b183326098c31c9e98e5986"
+        },
+        {
+          "frame0": 2695,
+          "nominal_time_s": 107.8,
+          "native_centre_y_working_range": [
+            1060,
+            1190
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02695.jpg",
+          "source_sha256": "6306edaf987d7ae563ec49e85467e025e59f9199ba0737159111e20d8d079ad1"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        2645,
+        2650,
+        2655
+      ],
+      "note": "Left patched cow in first group; use its torso rather than the following white speckled cow.",
+      "uncertain_samples": 1,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2695
+        },
+        {
+          "uncertain_samples_as_B": [
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2690
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        2690,
+        2695
+      ],
+      "possible_nominal_times_s": [
+        107.6,
+        107.8
+      ],
+      "completion_frame0_hull": [
+        2690,
+        2695
+      ],
+      "completion_hull_width_s": 0.2,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        2680,
+        2700
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R03",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 2700,
+          "nominal_time_s": 108.0,
+          "native_centre_y_working_range": [
+            740,
+            830
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02700.jpg",
+          "source_sha256": "459368ed19a45b970969a0cb8e7d32aa142b86bf6f2072a0cb4d35211518370a"
+        },
+        {
+          "frame0": 2705,
+          "nominal_time_s": 108.2,
+          "native_centre_y_working_range": [
+            810,
+            920
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02705.jpg",
+          "source_sha256": "ab9b2b5fb159250f59bac758e2a3812d90af3315fd66c92421a303585840f206"
+        },
+        {
+          "frame0": 2710,
+          "nominal_time_s": 108.4,
+          "native_centre_y_working_range": [
+            860,
+            1000
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02710.jpg",
+          "source_sha256": "d5b395a7fc1f2b841e26aebc04078a08e25274ed673f9f780f71f95ddb8c1509"
+        },
+        {
+          "frame0": 2715,
+          "nominal_time_s": 108.6,
+          "native_centre_y_working_range": [
+            980,
+            1110
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02715.jpg",
+          "source_sha256": "28363728cf4e6a1901f7f9c5461155060be381331892099357647c6b53662100"
+        },
+        {
+          "frame0": 2720,
+          "nominal_time_s": 108.8,
+          "native_centre_y_working_range": [
+            1090,
+            1220
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02720.jpg",
+          "source_sha256": "0777834759acc1855a3462d6cedcdac819870466985165abea6c561af6660e06"
+        },
+        {
+          "frame0": 2725,
+          "nominal_time_s": 109.0,
+          "native_centre_y_working_range": [
+            1190,
+            1350
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02725.jpg",
+          "source_sha256": "44596a52be8d1d0291d50fce96ff8318ca075826f6f6cf4aa6441c2236d414a8"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        2655,
+        2660,
+        2665
+      ],
+      "note": "Right dark cow with transverse white marks; first previous B-witness was close to the gate and remains ambiguous here.",
+      "uncertain_samples": 2,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2725
+        },
+        {
+          "uncertain_samples_as_B": [
+            false,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2720
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2725
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2715
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        2715,
+        2720,
+        2725
+      ],
+      "possible_nominal_times_s": [
+        108.6,
+        108.8,
+        109.0
+      ],
+      "completion_frame0_hull": [
+        2715,
+        2725
+      ],
+      "completion_hull_width_s": 0.4,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        2690,
+        2715
+      ],
+      "all_grid_candidates_inside_previous_review_target": false,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R04",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 2705,
+          "nominal_time_s": 108.2,
+          "native_centre_y_working_range": [
+            760,
+            840
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02705.jpg",
+          "source_sha256": "ab9b2b5fb159250f59bac758e2a3812d90af3315fd66c92421a303585840f206"
+        },
+        {
+          "frame0": 2710,
+          "nominal_time_s": 108.4,
+          "native_centre_y_working_range": [
+            850,
+            950
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02710.jpg",
+          "source_sha256": "d5b395a7fc1f2b841e26aebc04078a08e25274ed673f9f780f71f95ddb8c1509"
+        },
+        {
+          "frame0": 2715,
+          "nominal_time_s": 108.6,
+          "native_centre_y_working_range": [
+            980,
+            1090
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02715.jpg",
+          "source_sha256": "28363728cf4e6a1901f7f9c5461155060be381331892099357647c6b53662100"
+        },
+        {
+          "frame0": 2720,
+          "nominal_time_s": 108.8,
+          "native_centre_y_working_range": [
+            1090,
+            1220
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02720.jpg",
+          "source_sha256": "0777834759acc1855a3462d6cedcdac819870466985165abea6c561af6660e06"
+        },
+        {
+          "frame0": 2725,
+          "nominal_time_s": 109.0,
+          "native_centre_y_working_range": [
+            1210,
+            1390
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02725.jpg",
+          "source_sha256": "44596a52be8d1d0291d50fce96ff8318ca075826f6f6cf4aa6441c2236d414a8"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        2670,
+        2675,
+        2680
+      ],
+      "note": "White speckled rear-left cow; neck/head outline separated from torso. Keep centre overlap with gate uncertain.",
+      "uncertain_samples": 1,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2725
+        },
+        {
+          "uncertain_samples_as_B": [
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2720
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        2720,
+        2725
+      ],
+      "possible_nominal_times_s": [
+        108.8,
+        109.0
+      ],
+      "completion_frame0_hull": [
+        2720,
+        2725
+      ],
+      "completion_hull_width_s": 0.2,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        2700,
+        2725
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R05",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 2910,
+          "nominal_time_s": 116.4,
+          "native_centre_y_working_range": [
+            690,
+            780
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02910.jpg",
+          "source_sha256": "3eb52d3407796cf7993f10257bb86ec38bd3b6f973c49601eaa8a1a93dc26470"
+        },
+        {
+          "frame0": 2915,
+          "nominal_time_s": 116.6,
+          "native_centre_y_working_range": [
+            780,
+            870
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02915.jpg",
+          "source_sha256": "abca5c4a82946215a65c2dd91f467f2b9d5226e9314047c180b2418ffbfb4fe2"
+        },
+        {
+          "frame0": 2920,
+          "nominal_time_s": 116.8,
+          "native_centre_y_working_range": [
+            850,
+            970
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02920.jpg",
+          "source_sha256": "390a4bc066e5122a202dfcadcaf02d670c5a0975d5cbf2ef9f8bf0a37948c3ff"
+        },
+        {
+          "frame0": 2925,
+          "nominal_time_s": 117.0,
+          "native_centre_y_working_range": [
+            950,
+            1060
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02925.jpg",
+          "source_sha256": "4fff581ba43c509a53a0fb5891ca3eb052651e0f4711614c1020583f57f4d895"
+        },
+        {
+          "frame0": 2930,
+          "nominal_time_s": 117.2,
+          "native_centre_y_working_range": [
+            1030,
+            1160
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02930.jpg",
+          "source_sha256": "e7195f94aa8fb0dffd97ad61d93240ff2bf1023ef07fd0e7aa6ed93491921f8f"
+        },
+        {
+          "frame0": 2935,
+          "nominal_time_s": 117.4,
+          "native_centre_y_working_range": [
+            1110,
+            1260
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_02935.jpg",
+          "source_sha256": "1edd08aa553b5032045c3f3fcb9d778cd12924812882b128620502178a80fb1a"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        2860,
+        2865,
+        2870
+      ],
+      "note": "Isolated patched cow; broad shoulder/neck transition makes two near-gate estimates uncertain.",
+      "uncertain_samples": 2,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2935
+        },
+        {
+          "uncertain_samples_as_B": [
+            false,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2930
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2935
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 2925
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        2925,
+        2930,
+        2935
+      ],
+      "possible_nominal_times_s": [
+        117.0,
+        117.2,
+        117.4
+      ],
+      "completion_frame0_hull": [
+        2925,
+        2935
+      ],
+      "completion_hull_width_s": 0.4,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        2910,
+        2935
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R06",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 3365,
+          "nominal_time_s": 134.6,
+          "native_centre_y_working_range": [
+            710,
+            800
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03365.jpg",
+          "source_sha256": "a05afaf2bc52792731502fbc384f69d3669f003142db4116a370773c8cf937cd"
+        },
+        {
+          "frame0": 3370,
+          "nominal_time_s": 134.8,
+          "native_centre_y_working_range": [
+            810,
+            890
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03370.jpg",
+          "source_sha256": "23a4f05870602ce9031725f2a67e869a1234d2654e38cfc38f817e2ed7097624"
+        },
+        {
+          "frame0": 3375,
+          "nominal_time_s": 135.0,
+          "native_centre_y_working_range": [
+            890,
+            1000
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03375.jpg",
+          "source_sha256": "396f80771b5eb0f5973555fabe308e02acb7739e10f34480f1d1d4db2ee2d1ad"
+        },
+        {
+          "frame0": 3380,
+          "nominal_time_s": 135.2,
+          "native_centre_y_working_range": [
+            950,
+            1080
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03380.jpg",
+          "source_sha256": "98d28854c2708f81917bcbfeb493022679237d3399f3e9164712ddb6a46f0c44"
+        },
+        {
+          "frame0": 3385,
+          "nominal_time_s": 135.4,
+          "native_centre_y_working_range": [
+            1030,
+            1160
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03385.jpg",
+          "source_sha256": "cf2cf292b1dc6d52ca65ac257352b6fdf370921095441354d7927599640e4ffc"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        3310,
+        3315,
+        3320
+      ],
+      "note": "Mostly dark cow; broad hump and narrower neck are distinguished by outline rather than white rump patch alone.",
+      "uncertain_samples": 1,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3385
+        },
+        {
+          "uncertain_samples_as_B": [
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3380
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        3380,
+        3385
+      ],
+      "possible_nominal_times_s": [
+        135.2,
+        135.4
+      ],
+      "completion_frame0_hull": [
+        3380,
+        3385
+      ],
+      "completion_hull_width_s": 0.2,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        3355,
+        3385
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R07",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 3590,
+          "nominal_time_s": 143.6,
+          "native_centre_y_working_range": [
+            730,
+            820
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03590.jpg",
+          "source_sha256": "375ab1ebb87d9bc0351235e3a6c5a7011a2420043d53fbfac06593f9d088224c"
+        },
+        {
+          "frame0": 3595,
+          "nominal_time_s": 143.8,
+          "native_centre_y_working_range": [
+            800,
+            890
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03595.jpg",
+          "source_sha256": "b78afb367ff5d215281db54e54ad9c3a522af397ce48f0fb03c89878f659c930"
+        },
+        {
+          "frame0": 3600,
+          "nominal_time_s": 144.0,
+          "native_centre_y_working_range": [
+            860,
+            980
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03600.jpg",
+          "source_sha256": "a117e5721f7a9d35022692511c63bb7e86e0bbcd2cbf7d4427771b3a2c84e395"
+        },
+        {
+          "frame0": 3605,
+          "nominal_time_s": 144.2,
+          "native_centre_y_working_range": [
+            930,
+            1060
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03605.jpg",
+          "source_sha256": "55060094ed8578a5608ee247768f815534cdc62baa603747b7e9fec4f16b9a76"
+        },
+        {
+          "frame0": 3610,
+          "nominal_time_s": 144.4,
+          "native_centre_y_working_range": [
+            1000,
+            1140
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03610.jpg",
+          "source_sha256": "3b012f35a6c25869129a9be7a93decedd9bac9366ae0b82b26389d62ff3f6c1d"
+        },
+        {
+          "frame0": 3615,
+          "nominal_time_s": 144.6,
+          "native_centre_y_working_range": [
+            1090,
+            1240
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03615.jpg",
+          "source_sha256": "603ab479e5a0fdcab73b749d621b7c80e6c9748c1856e8db232e2e2bd86f02fa"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        3520,
+        3525,
+        3530
+      ],
+      "note": "Tiny dorsal white spot is a visual association aid, not the torso-centre definition; following cow is excluded.",
+      "uncertain_samples": 2,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3615
+        },
+        {
+          "uncertain_samples_as_B": [
+            false,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3610
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3615
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3605
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        3605,
+        3610,
+        3615
+      ],
+      "possible_nominal_times_s": [
+        144.2,
+        144.4,
+        144.6
+      ],
+      "completion_frame0_hull": [
+        3605,
+        3615
+      ],
+      "completion_hull_width_s": 0.4,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        3595,
+        3635
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R08",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 3680,
+          "nominal_time_s": 147.2,
+          "native_centre_y_working_range": [
+            720,
+            820
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03680.jpg",
+          "source_sha256": "dfedbf1e56b43dbf4c46a0dc3669caaebd933d0948052b2c00b71ac2e55b0076"
+        },
+        {
+          "frame0": 3685,
+          "nominal_time_s": 147.4,
+          "native_centre_y_working_range": [
+            810,
+            900
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03685.jpg",
+          "source_sha256": "9ba2bd0ea4e3a868b2dbaca0183599fe5bb72e50662890150ea30d77115861fd"
+        },
+        {
+          "frame0": 3690,
+          "nominal_time_s": 147.6,
+          "native_centre_y_working_range": [
+            890,
+            1000
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03690.jpg",
+          "source_sha256": "e651f2139cc7f5e8e4ce2c09fe5700ac855edc8332e1ba23cd0b03b52f8e141f"
+        },
+        {
+          "frame0": 3695,
+          "nominal_time_s": 147.8,
+          "native_centre_y_working_range": [
+            970,
+            1100
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03695.jpg",
+          "source_sha256": "0702e9165564cfa6b6dd75750fc29a2647c3472f65be56cbb41ef6ac2437765f"
+        },
+        {
+          "frame0": 3700,
+          "nominal_time_s": 148.0,
+          "native_centre_y_working_range": [
+            1040,
+            1190
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03700.jpg",
+          "source_sha256": "0f6485d4e1fdf89673fe2cc6ecc7e7d23a29643d4ca40b6f36686e29885a05e5"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        3620,
+        3625,
+        3630
+      ],
+      "note": "Following dark cow; torso outline rather than the small dorsal white marks determines the working interval.",
+      "uncertain_samples": 1,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3700
+        },
+        {
+          "uncertain_samples_as_B": [
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3695
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        3695,
+        3700
+      ],
+      "possible_nominal_times_s": [
+        147.8,
+        148.0
+      ],
+      "completion_frame0_hull": [
+        3695,
+        3700
+      ],
+      "completion_hull_width_s": 0.2,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        3680,
+        3710
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R09",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 3830,
+          "nominal_time_s": 153.2,
+          "native_centre_y_working_range": [
+            720,
+            820
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03830.jpg",
+          "source_sha256": "85476f30aba27d09d9783afc3e6225111d1bebb97a9d8d2fbcda56de4d432347"
+        },
+        {
+          "frame0": 3835,
+          "nominal_time_s": 153.4,
+          "native_centre_y_working_range": [
+            800,
+            900
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03835.jpg",
+          "source_sha256": "2ef5a96d2337860da0806546dfd7ebcaa2daffac343fe1b85b2fc15be77df6f2"
+        },
+        {
+          "frame0": 3840,
+          "nominal_time_s": 153.6,
+          "native_centre_y_working_range": [
+            850,
+            970
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03840.jpg",
+          "source_sha256": "c2df2fb1c890f5a16070cd2d722669a4da16b7fd9a819012ffc698d544ca0523"
+        },
+        {
+          "frame0": 3845,
+          "nominal_time_s": 153.8,
+          "native_centre_y_working_range": [
+            930,
+            1060
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03845.jpg",
+          "source_sha256": "a3eea4c3899ad8638581073543483462ffc53fd0f72d4a840a970f96ce1e4afe"
+        },
+        {
+          "frame0": 3850,
+          "nominal_time_s": 154.0,
+          "native_centre_y_working_range": [
+            1010,
+            1150
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03850.jpg",
+          "source_sha256": "63862b8cb50593122b9c01ec1b72e87f39783b817368743d37cc6de40234d133"
+        },
+        {
+          "frame0": 3855,
+          "nominal_time_s": 154.2,
+          "native_centre_y_working_range": [
+            1090,
+            1220
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03855.jpg",
+          "source_sha256": "bc27f05d8703b7fb392c9790bbf71c81fef92a835471d36c9f4aa230f18bd353"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        3740,
+        3745,
+        3750
+      ],
+      "note": "Right member of parallel pair, dirty pale rump; its body centre is separate from the left animal.",
+      "uncertain_samples": 2,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3855
+        },
+        {
+          "uncertain_samples_as_B": [
+            false,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3850
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3855
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3845
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        3845,
+        3850,
+        3855
+      ],
+      "possible_nominal_times_s": [
+        153.8,
+        154.0,
+        154.2
+      ],
+      "completion_frame0_hull": [
+        3845,
+        3855
+      ],
+      "completion_hull_width_s": 0.4,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        3820,
+        3860
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R10",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 3805,
+          "nominal_time_s": 152.2,
+          "native_centre_y_working_range": [
+            690,
+            790
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03805.jpg",
+          "source_sha256": "e11eb1f7446422edd0f6e7b807b66da597384099bb3e4772e6d6388a369cf346"
+        },
+        {
+          "frame0": 3810,
+          "nominal_time_s": 152.4,
+          "native_centre_y_working_range": [
+            780,
+            880
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03810.jpg",
+          "source_sha256": "5bd815c48d786a32888d46c1e891ff1981a197cb8beee34ed3bea59d44be485b"
+        },
+        {
+          "frame0": 3815,
+          "nominal_time_s": 152.6,
+          "native_centre_y_working_range": [
+            840,
+            940
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03815.jpg",
+          "source_sha256": "d0185eac30c780460d6f927da672946386310e3acb6c692e63540d69a9ff456e"
+        },
+        {
+          "frame0": 3820,
+          "nominal_time_s": 152.8,
+          "native_centre_y_working_range": [
+            920,
+            1040
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03820.jpg",
+          "source_sha256": "36e866aeb4a53b96161d49e8ea8d0ececefd0281e7f8f2af6ec60b272a927f53"
+        },
+        {
+          "frame0": 3825,
+          "nominal_time_s": 153.0,
+          "native_centre_y_working_range": [
+            1010,
+            1140
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03825.jpg",
+          "source_sha256": "338bd9d325b54b1095a7af78962eccf24e79dc21eeea1e0523668bab15c253ed"
+        },
+        {
+          "frame0": 3830,
+          "nominal_time_s": 153.2,
+          "native_centre_y_working_range": [
+            1100,
+            1250
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03830.jpg",
+          "source_sha256": "85476f30aba27d09d9783afc3e6225111d1bebb97a9d8d2fbcda56de4d432347"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        3740,
+        3745,
+        3750
+      ],
+      "note": "Left member of parallel pair, white neck band; centre is estimated from dorsal torso, not the neck band.",
+      "uncertain_samples": 2,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3830
+        },
+        {
+          "uncertain_samples_as_B": [
+            false,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3825
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3830
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 3820
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        3820,
+        3825,
+        3830
+      ],
+      "possible_nominal_times_s": [
+        152.8,
+        153.0,
+        153.2
+      ],
+      "completion_frame0_hull": [
+        3820,
+        3830
+      ],
+      "completion_hull_width_s": 0.4,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        3805,
+        3835
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R11",
+      "window": "group_passage",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 3990,
+          "nominal_time_s": 159.6,
+          "native_centre_y_working_range": [
+            710,
+            810
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03990.jpg",
+          "source_sha256": "ea25d3cafa1cb0b777b554da099c51bbe3504ec3cadbd1177185c98852c39c55"
+        },
+        {
+          "frame0": 3995,
+          "nominal_time_s": 159.8,
+          "native_centre_y_working_range": [
+            780,
+            880
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_03995.jpg",
+          "source_sha256": "9a61453790d1e8d36e0cd76a002cddddc99771bf7703e4b3b226bbcbe3e3a31a"
+        },
+        {
+          "frame0": 4000,
+          "nominal_time_s": 160.0,
+          "native_centre_y_working_range": [
+            840,
+            950
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_04000.jpg",
+          "source_sha256": "13ac261d7dad07321d80c36f756feabf17387f5149e4e616c00a2f76515a3b22"
+        },
+        {
+          "frame0": 4005,
+          "nominal_time_s": 160.2,
+          "native_centre_y_working_range": [
+            910,
+            1020
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_04005.jpg",
+          "source_sha256": "f6aa1a9fb849668bd0865388bae2f167e7c11e7ed35b9dd257f37d7927d9e3d7"
+        },
+        {
+          "frame0": 4010,
+          "nominal_time_s": 160.4,
+          "native_centre_y_working_range": [
+            970,
+            1090
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_04010.jpg",
+          "source_sha256": "6ccbc07588004448530837133bfbfa749ae034a7ac25fc8c0917e78e061e319e"
+        },
+        {
+          "frame0": 4015,
+          "nominal_time_s": 160.6,
+          "native_centre_y_working_range": [
+            1030,
+            1160
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\group_passage\\ROI_04015.jpg",
+          "source_sha256": "51bfb1e6ba2e2e7dbca8e314771f957a299a82ee696ee83cee8b67b9997b6354"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        3910,
+        3915,
+        3920
+      ],
+      "note": "Final group cow, large white back; full torso/head boundary remains interpretive.",
+      "uncertain_samples": 2,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 4015
+        },
+        {
+          "uncertain_samples_as_B": [
+            false,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 4010
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 4015
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 4005
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        4005,
+        4010,
+        4015
+      ],
+      "possible_nominal_times_s": [
+        160.2,
+        160.4,
+        160.6
+      ],
+      "completion_frame0_hull": [
+        4005,
+        4015
+      ],
+      "completion_hull_width_s": 0.4,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        3990,
+        4035
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    },
+    {
+      "reference_ID": "R12",
+      "window": "late_single",
+      "direction": "A->B",
+      "observations": [
+        {
+          "frame0": 5300,
+          "nominal_time_s": 212.0,
+          "native_centre_y_working_range": [
+            710,
+            810
+          ],
+          "state": "N",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\late_single\\ROI_05300.jpg",
+          "source_sha256": "2e27338dcc064a61b8532fa4eac49b1f58a4899322b090dab2ebf1f580e177d3"
+        },
+        {
+          "frame0": 5305,
+          "nominal_time_s": 212.2,
+          "native_centre_y_working_range": [
+            790,
+            880
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\late_single\\ROI_05305.jpg",
+          "source_sha256": "644548eb49b3500a4e05f66b50b2a221d05c6d8da676c5b69698ba0ceeae340f"
+        },
+        {
+          "frame0": 5310,
+          "nominal_time_s": 212.4,
+          "native_centre_y_working_range": [
+            840,
+            940
+          ],
+          "state": "U",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\late_single\\ROI_05310.jpg",
+          "source_sha256": "2c06b429d85f29d85f3ff25587466f2302fa8c234f0d6db912c32114e223bbce"
+        },
+        {
+          "frame0": 5315,
+          "nominal_time_s": 212.6,
+          "native_centre_y_working_range": [
+            900,
+            1000
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\late_single\\ROI_05315.jpg",
+          "source_sha256": "745a388aeec752c233e511cba320433c8766fa040a2f0d7c181af36568929047"
+        },
+        {
+          "frame0": 5320,
+          "nominal_time_s": 212.8,
+          "native_centre_y_working_range": [
+            950,
+            1050
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\late_single\\ROI_05320.jpg",
+          "source_sha256": "7b6b9df41d039879bdff6247d82d973969fed58ba517fd9eff2dbf014839d1f8"
+        },
+        {
+          "frame0": 5325,
+          "nominal_time_s": 213.0,
+          "native_centre_y_working_range": [
+            990,
+            1090
+          ],
+          "state": "B",
+          "source_image_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\overhead_positive_reference_20261028\\focused_delivery\\results\\focused\\late_single\\ROI_05325.jpg",
+          "source_sha256": "5f5921b820190519c75f35d79d5953ac02519ed8f71b1e0e06357b74beb03e4a"
+        }
+      ],
+      "origin_evidence_retained_frame0": [
+        5200,
+        5205,
+        5210
+      ],
+      "note": "Later white cow; distinguish narrow neck from the broad torso. The first two near-gate intervals remain unresolved.",
+      "uncertain_samples": 2,
+      "scenarios": [
+        {
+          "uncertain_samples_as_B": [
+            false,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 5325
+        },
+        {
+          "uncertain_samples_as_B": [
+            false,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "N",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 5320
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            false
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "N",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 5325
+        },
+        {
+          "uncertain_samples_as_B": [
+            true,
+            true
+          ],
+          "resolved_states": [
+            "N",
+            "B",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          "first_three_B_completion_frame0": 5315
+        }
+      ],
+      "possible_completion_frames0_under_manual_ranges": [
+        5315,
+        5320,
+        5325
+      ],
+      "possible_nominal_times_s": [
+        212.6,
+        212.8,
+        213.0
+      ],
+      "completion_frame0_hull": [
+        5315,
+        5325
+      ],
+      "completion_hull_width_s": 0.4,
+      "single_grid_time_under_working_ranges": false,
+      "previous_review_target_frame0": [
+        5290,
+        5335
+      ],
+      "all_grid_candidates_inside_previous_review_target": true,
+      "exact_human_accepted_event_frame0": null,
+      "independently_accepted": false,
+      "interpretation": "Conditional on assistant working pixel intervals and the prior visual association; not certified measurement error or accepted GT."
+    }
+  ],
+  "exact_single_grid_times": 0,
+  "intervals_are_conditional_working_ranges_not_confidence_intervals": true,
+  "all_exact_human_event_frames_unfilled": true,
+  "independent_human_acceptance_received": false,
+  "eligible_for_final_scoring": false,
+  "new_model_predictions_or_training": false,
+  "previous_confirmed12_source_clip_unchanged": true,
+  "whole_goal_complete": false
+}

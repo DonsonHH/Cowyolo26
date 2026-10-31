@@ -1,0 +1,40 @@
+{
+  "name": "Extend current paired candidate intake with fixed original event matching",
+  "created_UTC": "2026-10-28T10:19:49.866165+00:00",
+  "catalog_sha256": "88e05ca9962ba64ec8349a42aabf291aad7478e3e75efe93d981471172e34049",
+  "source_frame_scope_inclusive": [
+    8912,
+    10873
+  ],
+  "source_fps": 25,
+  "matching_tolerance_s": 2.0,
+  "matching_rule": "Original time-only maximum-cardinality then minimum-total-time-error Hungarian assignment; direction judged afterward",
+  "source_files": {
+    "matcher": {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_eval_20261026\\tools\\event_metrics.py",
+      "sha256": "049cb747a15ed180fa7f2679f2157c71def8182b69e801fdb433cad369f1e437"
+    },
+    "intake_inspector": {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\evaluation_intake_20261028\\tools\\inspect_annotation.py",
+      "sha256": "8759162a97538930edb50d962fbc9bc69bd665d67e67ec3cb45b122abcfdf511"
+    },
+    "annotation_validator": {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\phase3_diagnosis_20261026\\tools\\validate_annotations.py",
+      "sha256": "625db969e0b7ddb1f5e0666915b0a8e95e22db953c2a73a16c8a3b5f44e277b0"
+    }
+  },
+  "scipy_version": "1.16.1",
+  "same_frame_events_preserved": true,
+  "temporal_candidate_ambiguity_reported_without_changing_matching": true,
+  "required_before_real_scores": [
+    "intake_pass",
+    "manual_provenance_and_native_frame_review_record",
+    "binding_SHA_and_scope_checks"
+  ],
+  "test_fixtures_never_promoted_to_reference": true,
+  "current_source_is_reused_development_data": true,
+  "new_reference_received": false,
+  "new_inference": false,
+  "board_execution": false,
+  "whole_goal_complete": false
+}

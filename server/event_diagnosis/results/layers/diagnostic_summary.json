@@ -1,0 +1,2382 @@
+{
+  "job_id": "129806",
+  "reference_events": [
+    {
+      "time_s": 3.6666666666666665,
+      "track_id": 1,
+      "direction": "B->A",
+      "frame": 110
+    },
+    {
+      "time_s": 6.433333333333334,
+      "track_id": 14,
+      "direction": "B->A",
+      "frame": 193
+    },
+    {
+      "time_s": 8.266666666666667,
+      "track_id": 7,
+      "direction": "B->A",
+      "frame": 248
+    },
+    {
+      "time_s": 9.533333333333333,
+      "track_id": 16,
+      "direction": "B->A",
+      "frame": 286
+    },
+    {
+      "time_s": 10.733333333333333,
+      "track_id": 22,
+      "direction": "B->A",
+      "frame": 322
+    },
+    {
+      "time_s": 13.2,
+      "track_id": 17,
+      "direction": "B->A",
+      "frame": 396
+    }
+  ],
+  "interventions": [
+    {
+      "model": "epoch20_seed26",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 3.7333333333333334,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 112
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.06666666666666687,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": false
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 13.433333333333334,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 403
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 5,
+            "prediction_index": 0,
+            "time_error_s": 0.23333333333333428,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 13.433333333333334,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 403
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 5,
+            "prediction_index": 0,
+            "time_error_s": 0.23333333333333428,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": [],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.933333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 118
+        },
+        {
+          "time_s": 13.433333333333334,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 403
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.2666666666666666,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.23333333333333428,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.7333333333333334,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 112
+        },
+        {
+          "time_s": 13.433333333333334,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 403
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.06666666666666687,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.23333333333333428,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 3.9,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 117
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 36,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.2333333333333334,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": false
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 13.3,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 399
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 5,
+            "prediction_index": 0,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 5,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 13.2,
+          "track_id": 36,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 5,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.9,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 117
+        },
+        {
+          "time_s": 10.3,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 309
+        },
+        {
+          "time_s": 13.3,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 399
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.2333333333333334,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 1,
+            "time_error_s": 0.4333333333333318,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.9,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 117
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.2333333333333334,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 36,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 3.933333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 118
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.2666666666666666,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": false
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 9.566666666666666,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 287
+        },
+        {
+          "time_s": 13.4,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 402
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 3,
+            "prediction_index": 0,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000107,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 289
+        },
+        {
+          "time_s": 13.866666666666667,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 416
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 3,
+            "prediction_index": 0,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.6666666666666679,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": [],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.933333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 118
+        },
+        {
+          "time_s": 9.566666666666666,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 287
+        },
+        {
+          "time_s": 13.4,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 402
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.2666666666666666,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 2,
+            "time_error_s": 0.20000000000000107,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.933333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 118
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 289
+        },
+        {
+          "time_s": 13.6,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 408
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.2666666666666666,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 1,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 2,
+            "time_error_s": 0.40000000000000036,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.7,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 111
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.03333333333333366,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    }
+  ],
+  "per_reference": [
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 1,
+      "association_iou": 0.5,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 11,
+      "matched_post_frames": 21,
+      "associated_tracker_ids": [
+        2
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 14,
+      "association_iou": 0.5,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 0,
+      "matched_post_frames": 0,
+      "associated_tracker_ids": [],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 7,
+      "association_iou": 0.5,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 60,
+      "matched_post_frames": 48,
+      "associated_tracker_ids": [
+        3,
+        4,
+        24
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 16,
+      "association_iou": 0.5,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 5,
+      "matched_post_frames": 4,
+      "associated_tracker_ids": [
+        24
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 22,
+      "association_iou": 0.5,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 0,
+      "matched_post_frames": 0,
+      "associated_tracker_ids": [],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 17,
+      "association_iou": 0.5,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 35,
+      "matched_post_frames": 33,
+      "associated_tracker_ids": [
+        23,
+        30,
+        32
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.433333333333334,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 403
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.433333333333334,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 403
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 1,
+      "association_iou": 0.3,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 114,
+      "matched_post_frames": 114,
+      "associated_tracker_ids": [
+        1,
+        2
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 3.933333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 118
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 3.7333333333333334,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 112
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 14,
+      "association_iou": 0.3,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 4,
+      "matched_post_frames": 4,
+      "associated_tracker_ids": [
+        4
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 7,
+      "association_iou": 0.3,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 65,
+      "matched_post_frames": 56,
+      "associated_tracker_ids": [
+        3,
+        4,
+        24
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 16,
+      "association_iou": 0.3,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 8,
+      "matched_post_frames": 8,
+      "associated_tracker_ids": [
+        18,
+        24
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 22,
+      "association_iou": 0.3,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 0,
+      "matched_post_frames": 0,
+      "associated_tracker_ids": [],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed26",
+      "reference_id": 17,
+      "association_iou": 0.3,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 45,
+      "matched_post_frames": 43,
+      "associated_tracker_ids": [
+        23,
+        27,
+        30,
+        32
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.433333333333334,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 403
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.433333333333334,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 403
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 1,
+      "association_iou": 0.5,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 24,
+      "matched_post_frames": 22,
+      "associated_tracker_ids": [
+        1
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 14,
+      "association_iou": 0.5,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 9,
+      "matched_post_frames": 7,
+      "associated_tracker_ids": [
+        3,
+        29
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 7,
+      "association_iou": 0.5,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 46,
+      "matched_post_frames": 33,
+      "associated_tracker_ids": [
+        3,
+        16,
+        25,
+        37
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 16,
+      "association_iou": 0.5,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 27,
+      "matched_post_frames": 22,
+      "associated_tracker_ids": [
+        15,
+        22,
+        37
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 22,
+      "association_iou": 0.5,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 17,
+      "matched_post_frames": 9,
+      "associated_tracker_ids": [
+        43
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 17,
+      "association_iou": 0.5,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 106,
+      "matched_post_frames": 103,
+      "associated_tracker_ids": [
+        36
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.3,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 399
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 1,
+      "association_iou": 0.3,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 154,
+      "matched_post_frames": 153,
+      "associated_tracker_ids": [
+        1
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 3.9,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 117
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 3.9,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 117
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 14,
+      "association_iou": 0.3,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 11,
+      "matched_post_frames": 10,
+      "associated_tracker_ids": [
+        3,
+        29
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 7,
+      "association_iou": 0.3,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 55,
+      "matched_post_frames": 47,
+      "associated_tracker_ids": [
+        3,
+        16,
+        25,
+        37
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 16,
+      "association_iou": 0.3,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 43,
+      "matched_post_frames": 38,
+      "associated_tracker_ids": [
+        14,
+        15,
+        22,
+        37
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 10.3,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 309
+        }
+      ],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 22,
+      "association_iou": 0.3,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 20,
+      "matched_post_frames": 13,
+      "associated_tracker_ids": [
+        22,
+        43
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed27",
+      "reference_id": 17,
+      "association_iou": 0.3,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 131,
+      "matched_post_frames": 125,
+      "associated_tracker_ids": [
+        36
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.3,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 399
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 1,
+      "association_iou": 0.5,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 33,
+      "matched_post_frames": 25,
+      "associated_tracker_ids": [
+        1
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 14,
+      "association_iou": 0.5,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 27,
+      "matched_post_frames": 26,
+      "associated_tracker_ids": [
+        4,
+        25
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 7,
+      "association_iou": 0.5,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 72,
+      "matched_post_frames": 56,
+      "associated_tracker_ids": [
+        4,
+        18,
+        30
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 16,
+      "association_iou": 0.5,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 36,
+      "matched_post_frames": 32,
+      "associated_tracker_ids": [
+        21,
+        30
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 9.566666666666666,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 287
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 289
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 22,
+      "association_iou": 0.5,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 22,
+      "matched_post_frames": 16,
+      "associated_tracker_ids": [
+        42,
+        46
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 17,
+      "association_iou": 0.5,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 89,
+      "matched_post_frames": 83,
+      "associated_tracker_ids": [
+        37,
+        49
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.4,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 402
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.866666666666667,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 416
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 1,
+      "association_iou": 0.3,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 180,
+      "matched_post_frames": 172,
+      "associated_tracker_ids": [
+        1,
+        9
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 3.933333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 118
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 3.933333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 118
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 14,
+      "association_iou": 0.3,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 33,
+      "matched_post_frames": 29,
+      "associated_tracker_ids": [
+        4,
+        25
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 7,
+      "association_iou": 0.3,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 81,
+      "matched_post_frames": 67,
+      "associated_tracker_ids": [
+        4,
+        18,
+        30
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 16,
+      "association_iou": 0.3,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 61,
+      "matched_post_frames": 56,
+      "associated_tracker_ids": [
+        11,
+        21,
+        30
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 9.566666666666666,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 287
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 289
+        }
+      ]
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 22,
+      "association_iou": 0.3,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 25,
+      "matched_post_frames": 18,
+      "associated_tracker_ids": [
+        11,
+        42,
+        46
+      ],
+      "raw_boxes_reference_ids_events": [],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "epoch20_seed28",
+      "reference_id": 17,
+      "association_iou": 0.3,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 128,
+      "matched_post_frames": 112,
+      "associated_tracker_ids": [
+        37,
+        49
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.4,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 402
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.6,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 408
+        }
+      ]
+    }
+  ],
+  "interpretation": "Reference-assisted diagnostic controls only; actual_pipeline is the preserved reference-free algorithm, not proof of board deployment. Temporal F1 may associate neighbouring events; reference-ID details are retained for intervention interpretation.",
+  "inputs_sha256": {
+    "results/capture/epoch20_seed26/events.csv": "3a9a70646f14fd32a2e11e2b4f69f23c1d9da238d30692f89dc6861926e7f7f5",
+    "results/capture/epoch20_seed26/post_tracker_boxes.csv": "51d12d2fa36b042a1f15d57fa029ffc2bbbf98dbe82baa60163de9b68a506173",
+    "results/capture/epoch20_seed26/raw_detector_boxes.csv": "42ed6da536ff32623eedf7f5a580fdc10882c2dda34270eaec993eb318a5f757",
+    "results/capture/epoch20_seed26/tracks.csv": "1c7ef1ff2473869353de25423fda24de44c9df36bbe9e66963018a55b258d03e",
+    "results/capture/epoch20_seed27/events.csv": "bb867ebc39f5e95dabfb4cd887e9777f375a8f544b1a417a803c4dcbc131bdf2",
+    "results/capture/epoch20_seed27/post_tracker_boxes.csv": "016475bfc37125ba4e90ead6a4d0f6d03f0563bf005fe0cfd89d342145a940e1",
+    "results/capture/epoch20_seed27/raw_detector_boxes.csv": "e2cb3bfaaaf29e02984ed76767127b340d0d277fc6abe500d01edc2448f6119e",
+    "results/capture/epoch20_seed27/tracks.csv": "42ef0efabaa481fd0c84f2fc233af4d91266d3e60e29637438c2056996ec2c56",
+    "results/capture/epoch20_seed28/events.csv": "e8e7d6e3b3b28b013d773a9ca7dbfe135b66a4caf0980a6d983b895c0a3bc67f",
+    "results/capture/epoch20_seed28/post_tracker_boxes.csv": "d263a17e1275e63de0f6bf5a01172d068eee05a5da23bf25834a384512d66b90",
+    "results/capture/epoch20_seed28/raw_detector_boxes.csv": "53f82c7f4aa47cccecb555f7a3c441ac26b1b35a827f4cd738af3b96a6493ff9",
+    "results/capture/epoch20_seed28/tracks.csv": "76bab6fe7610b93742965bb5e49b9dbd2dace4c4980e740272f8c5739233e1f3"
+  }
+}

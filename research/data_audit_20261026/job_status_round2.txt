@@ -1,0 +1,20 @@
+129655           idcoo-dense-review  COMPLETED      0:0   00:00:03            
+129655.batch                  batch  COMPLETED      0:0   00:00:03      1176K 
+129655.0                     python  COMPLETED      0:0   00:00:03       804K 
+129657             idcoo-clean-data  COMPLETED      0:0   00:00:11            
+129657.batch                  batch  COMPLETED      0:0   00:00:11      1180K 
+129657.0                     python  COMPLETED      0:0   00:00:11       804K 
+129658             idcoo-data-audit  COMPLETED      0:0   00:01:07            
+129658.batch                  batch  COMPLETED      0:0   00:01:07     13800K 
+129658.0                     python  COMPLETED      0:0   00:01:04    291836K 
+129659           idcoo-yolo26-probe  COMPLETED      0:0   00:00:20            
+129659.batch                  batch  COMPLETED      0:0   00:00:20      1172K 
+129659.0                     python  COMPLETED      0:0   00:00:20       804K 
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+{"job": "129659", "hostname": "gpu02", "torch": "2.8.0+cu128", "cuda_available": true, "cuda_device": "Tesla V100S-PCIE-32GB"}
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/share/home/renly/projects/idcoo_research_20261026/yolo_settings/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+{"job": "129659", "host": "gpu02", "torch": "2.8.0+cu128", "cuda_device": "Tesla V100S-PCIE-32GB", "test_inference": true, "classes": {"0": "person", "1": "bicycle", "2": "car", "3": "motorcycle", "4": "airplane", "5": "bus", "6": "train", "7": "truck", "8": "boat", "9": "traffic light", "10": "fire hydrant", "11": "stop sign", "12": "parking meter", "13": "bench", "14": "bird", "15": "cat", "16": "dog", "17": "horse", "18": "sheep", "19": "cow", "20": "elephant", "21": "bear", "22": "zebra", "23": "giraffe", "24": "backpack", "25": "umbrella", "26": "handbag", "27": "tie", "28": "suitcase", "29": "frisbee", "30": "skis", "31": "snowboard", "32": "sports ball", "33": "kite", "34": "baseball bat", "35": "baseball glove", "36": "skateboard", "37": "surfboard", "38": "tennis racket", "39": "bottle", "40": "wine glass", "41": "cup", "42": "fork", "43": "knife", "44": "spoon", "45": "bowl", "46": "banana", "47": "apple", "48": "sandwich", "49": "orange", "50": "broccoli", "51": "carrot", "52": "hot dog", "53": "pizza", "54": "donut", "55": "cake", "56": "chair", "57": "couch", "58": "potted plant", "59": "bed", "60": "dining table", "61": "toilet", "62": "tv", "63": "laptop", "64": "mouse", "65": "remote", "66": "keyboard", "67": "cell phone", "68": "microwave", "69": "oven", "70": "toaster", "71": "sink", "72": "refrigerator", "73": "book", "74": "clock", "75": "vase", "76": "scissors", "77": "teddy bear", "78": "hair drier", "79": "toothbrush"}, "params": 2408932}
+{"path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4", "bytes": 260096040, "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1", "open": true, "width": 2560, "height": 1440, "fps": 25.0, "frames_reported": 14009, "duration_s": 560.36, "seek_decode_samples": 6, "fully_decoded_frames": 14009, "decode_count_matches_header": true, "contact_sheet": "camera1_2023-08-14T12-54-48.jpg"}
+{"slurm_job": "129658", "video_count": 3, "opencows_extracted": false}

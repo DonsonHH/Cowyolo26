@@ -1,0 +1,24 @@
+{
+  "created_UTC": "2026-10-29T10:55:37.801129+00:00",
+  "host": "192.168.2.99",
+  "ports": [
+    {
+      "port": 22,
+      "TCP_connect": false,
+      "error_type": "TimeoutError",
+      "detail": "timed out"
+    },
+    {
+      "port": 9090,
+      "TCP_connect": false,
+      "error_type": "TimeoutError",
+      "detail": "timed out"
+    }
+  ],
+  "model_or_overlay_actions": 0,
+  "existing_PID8082_state": "NOT_OBSERVED",
+  "ping_exit_code": 1,
+  "ping_output": "\nPinging 192.168.2.99 with 32 bytes of data:\nRequest timed out.\nRequest timed out.\n\nPing statistics for 192.168.2.99:\n    Packets: Sent = 2, Received = 0, Lost = 2 (100% loss),\n",
+  "services_TCP_accessible": false,
+  "status": "TCP_GATE_RED_BOARD_SERVICES_UNREACHABLE"
+}

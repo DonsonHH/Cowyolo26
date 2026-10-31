@@ -1,0 +1,19 @@
+sacct: error: slurm_persist_conn_open_without_init: failed to open persistent connection to host:localhost:6819: Connection refused
+sacct: error: Sending PersistInit msg: Connection refused
+sacct: error: Problem talking to the database: Connection refused
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/tools/recover_completion.py", line 76, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/tools/recover_completion.py", line 17, in main
+    state=subprocess.check_output(['sacct','-j','130518_'+str(index),'-X','--noheader','--format=State,ExitCode','-P'],text=True).strip()
+          ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/subprocess.py", line 472, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['sacct', '-j', '130518_0', '-X', '--noheader', '--format=State,ExitCode', '-P']' returned non-zero exit status 1.

@@ -1,0 +1,20 @@
+renly
+mu01
+PARTITION|AVAIL|NODES|STATE|NODELIST|GRES
+cu*|up|1|mix|cu03|(null)
+cu*|up|2|alloc|cu[01-02]|(null)
+cu*|up|17|idle|cu[04-20]|(null)
+8gpu|up|1|idle|gpu01|gpu:V100S:8
+4gpu|up|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+  130675_[59-63%2]|       cu|           rsi-b4b1a-gen| PENDING|      0:00|(JobArrayTaskLimit)
+            130676|       cu|         rsi-b4b1a-audit| PENDING|      0:00|(Dependency)
+            130722|       cu|       rsi-b4b1a-package| PENDING|      0:00|(Dependency)
+         130675_58|       cu|           rsi-b4b1a-gen| RUNNING|      0:04|cu03
+         130675_57|       cu|           rsi-b4b1a-gen| RUNNING|      6:03|cu03
+{"name": "HF_info", "route": "existing_environment_default_no_configuration_change", "new_image_pixels": 0, "status": "FAILED_ACCESS_NOT_CONTENT_PROOF", "error": "<urlopen error [Errno 101] Network is unreachable>"}
+{"name": "HF_readme", "route": "existing_environment_default_no_configuration_change", "new_image_pixels": 0, "status": "FAILED_ACCESS_NOT_CONTENT_PROOF", "error": "<urlopen error [Errno 101] Network is unreachable>"}
+{"name": "HF_splits", "route": "existing_environment_default_no_configuration_change", "new_image_pixels": 0, "status": "FAILED_ACCESS_NOT_CONTENT_PROOF", "error": "<urlopen error [Errno 101] Network is unreachable>"}
+{"name": "COLO_zip_tail", "route": "existing_environment_default_no_configuration_change", "new_image_pixels": 0, "status": "FAILED_ACCESS_NOT_CONTENT_PROOF", "error": "The read operation timed out"}
+{"name": "Auto_samples1", "route": "existing_environment_default_no_configuration_change", "new_image_pixels": 0, "status": "FAILED_ACCESS_NOT_CONTENT_PROOF", "error": "<urlopen error [Errno 101] Network is unreachable>"}
+{"name": "Auto_samples2", "route": "existing_environment_default_no_configuration_change", "new_image_pixels": 0, "status": "FAILED_ACCESS_NOT_CONTENT_PROOF", "error": "<urlopen error [Errno 101] Network is unreachable>"}

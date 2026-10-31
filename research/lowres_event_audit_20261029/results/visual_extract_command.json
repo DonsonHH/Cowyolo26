@@ -1,0 +1,37 @@
+{
+  "command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-threads",
+    "2",
+    "-i",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\phase3_diagnosis_20261026\\inputs\\multicam_original.mp4",
+    "-vf",
+    "select=eq(n\\,9255)+eq(n\\,9260)+eq(n\\,9265)+eq(n\\,9300)+eq(n\\,9305)+eq(n\\,9310)+eq(n\\,9335)+eq(n\\,9340)+eq(n\\,9345)+eq(n\\,9475)+eq(n\\,9480)+eq(n\\,9485)+eq(n\\,9520)+eq(n\\,9525)+eq(n\\,9530)+eq(n\\,9680)+eq(n\\,9685)+eq(n\\,9690)",
+    "-fps_mode",
+    "vfr",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_event_audit_20261029\\media\\native\\source_%03d.png"
+  ],
+  "frames": [
+    9255,
+    9260,
+    9265,
+    9300,
+    9305,
+    9310,
+    9335,
+    9340,
+    9345,
+    9475,
+    9480,
+    9485,
+    9520,
+    9525,
+    9530,
+    9680,
+    9685,
+    9690
+  ],
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1"
+}

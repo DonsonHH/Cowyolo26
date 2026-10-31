@@ -1,0 +1,10 @@
+[0;93m2026-10-29 23:08:24.800234836 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer 'onnx::Tile_789'. It is not used by any node and should be removed from the model.[m
+[0;93m2026-10-29 23:08:24.800264575 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer '/model.23/Constant_17_output_0'. It is not used by any node and should be removed from the model.[m
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/tools/evaluate_quality.py", line 153, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/tools/evaluate_quality.py", line 88, in main
+    if anchor:assert inputsha==p['expected_NN_input_hashes'][spec['name']+'_f'+str(frame)+'_s192']
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

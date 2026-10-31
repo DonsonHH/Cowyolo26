@@ -1,0 +1,106 @@
+{
+  "status": "EVALUATION_INTAKE_AND_UI_FIX_PREPARATION_FULL_REVIEW_COMPLETE",
+  "created_UTC": "2026-10-28T03:58:08.012232+00:00",
+  "previous_goal_turn_classification": "progress",
+  "current_goal_turn_classification": "progress",
+  "phase_preparation_and_full_manual_review_complete": true,
+  "actual_results": {
+    "catalog_conditions": 17,
+    "browser_regressions": 9,
+    "intake_tests": 16,
+    "QA_draft_preserved_and_main_draft_not_operated": true,
+    "source_video_hash_reverified": true,
+    "known_QA_not_admitted_as_reference": true,
+    "current_compute_jobs_verified_terminal": true,
+    "independent_reference_JSON_or_board_parameters_received": false,
+    "same_external_input_gap_evidenced_by_three_prior_goal_audits": true,
+    "original_goal_complete": false
+  },
+  "synthesis_review_sha256": "5fddd5c5b4231e6b894f2f28112980446e74358f59c2bda39b9c08f7be840906",
+  "evidence_files": [
+    {
+      "path": "README.md",
+      "sha256": "128d484f4501aa281d3cdfcad24c9bd53d40c4d1018714b988d5992b1455811e"
+    },
+    {
+      "path": "Review与当前状态.md",
+      "sha256": "222abc8d93870ea86b73312471faeec539560199134f97c352b8bc828ada0c5a"
+    },
+    {
+      "path": "results/required_input_audit.json",
+      "sha256": "8177c0e8f9e3ce5e9a5218d7312067bd7bd45bcde69a3f235d39223395696451"
+    },
+    {
+      "path": "results/preparation_verification.json",
+      "sha256": "7a89dfc25be1c3d00343ef479cdfc954520580efd5da3d9ffa6a01fa3d218f93"
+    },
+    {
+      "path": "results/frozen_prediction_catalog.json",
+      "sha256": "f0b960b7bea0450c2ce8a288b36e09a81c53d217088ba123e598af6cf5eadc86"
+    },
+    {
+      "path": "results/annotation_jump_before_fix.json",
+      "sha256": "1cc9e5bb532d077dfd1c1f458c20e52bbe702f5fbbfd63ea3e7d475fb405824b"
+    },
+    {
+      "path": "results/annotation_jump_fix.json",
+      "sha256": "e133a28b3f4829deb5ae7b1b8d6ab5f6c7f06aa6c743127a2f5a501afa4459cb"
+    },
+    {
+      "path": "results/annotation_browser_retest.json",
+      "sha256": "416446f724e05002f5573f4192057023a2921f0841829872d2a4a0dde6ef0304"
+    },
+    {
+      "path": "results/annotation_jump_fixed.png",
+      "sha256": "96e2328d2af18c24dad9a3caa67ed214d39043cb7d98eca7fe306830bb47a21e"
+    },
+    {
+      "path": "results/known_QA_intake_check.json",
+      "sha256": "8ca975551d4d4c1706bdc2875bf4ee882ef12b85de2d03cb50d20e917255ccc8"
+    },
+    {
+      "path": "results/existing_public_annotation_inventory.json",
+      "sha256": "a7230c89c4934f5a87a55902a0a030128c15c2448f62ee040cfc264109bc8c80"
+    },
+    {
+      "path": "results/intake_test_results.json",
+      "sha256": "e1a866cf151b1d9c7427e0bd6a21f24958ff9027dc2e0cf1f08e19ddc5353ce6"
+    },
+    {
+      "path": "results/intake_test_results_v2.json",
+      "sha256": "71b8714fcefe6e41a6f9b7e131bbbb907ec375d362d72d0a8a0fbeeede7d02ae"
+    },
+    {
+      "path": "results/live_compute_audit.txt",
+      "sha256": "dacb67a845326ed86d92778302553552d987c4e65e73354922088f3573ffa7e3"
+    },
+    {
+      "path": "tools/catalog.py",
+      "sha256": "484b55a39988f4deded04f3e7625c075acd07c930e827e700480e011771ed972"
+    },
+    {
+      "path": "tools/inspect_annotation.py",
+      "sha256": "8759162a97538930edb50d962fbc9bc69bd665d67e67ec3cb45b122abcfdf511"
+    },
+    {
+      "path": "tools/test_intake.py",
+      "sha256": "b4d74e64728077c5c9f364c4d143d140325d7b1b6584a047d9693c9a6ef09e1e"
+    },
+    {
+      "path": "tools/test_intake_before_utf8_child.py",
+      "sha256": "04859202556867a83e8fcd72f66af110934e3219d63e633b687b5c08565f99a8"
+    }
+  ],
+  "completion_audit_result": "Originalgoal remainsunproven; independenttruthandactualboard informationrequired.",
+  "blocked_audit": {
+    "same_input_gap_recurred_at_least_three_consecutive_goal_turns": true,
+    "recurrence_evidence": "results/required_input_audit.json",
+    "necessary_available_preparation_completed": true,
+    "remaining_original_next_steps_require_external_inputs": true,
+    "more_seen_devset_training_not_a_substitute_for_required_evaluation": true
+  },
+  "new_reference_received": false,
+  "source_accuracy_certified": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

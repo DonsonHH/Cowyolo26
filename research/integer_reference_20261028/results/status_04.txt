@@ -1,0 +1,28 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129975|idcoo-intref|FAILED|1:0|00:00:01|
+129975.batch|batch|FAILED|1:0|00:00:01|1176K
+129975.0|python|FAILED|1:0|00:00:01|800K
+129976|idcoo-intref-v2|COMPLETED|0:0|00:00:06|
+129976.batch|batch|COMPLETED|0:0|00:00:06|1176K
+129976.0|python|COMPLETED|0:0|00:00:06|800K
+129977|idcoo-intref-check|COMPLETED|0:0|00:00:04|
+129977.batch|batch|COMPLETED|0:0|00:00:04|1176K
+129977.0|python|COMPLETED|0:0|00:00:04|804K
+129978|idcoo-intref-collect|COMPLETED|0:0|00:00:00|
+129978.batch|batch|COMPLETED|0:0|00:00:00|1176K
+129978.0|python|COMPLETED|0:0|00:00:00|804K
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/integer_reference_20261028/tools/run_reference.py", line 6, in <module>
+    import onnx
+ModuleNotFoundError: No module named 'onnx'
+srun: error: cu16: task 0: Exited with exit code 1
+{
+  "files_in_manifest": 35,
+  "archive_file_members": 36,
+  "bytes": 6222297,
+  "sha256": "71074c55c83cbe0c7a3fa693c42d9f977daad7ca0136159444e9fdc7f4f1537a",
+  "manifest_sha256": "561701422ff1f644d945d30997daee178462f51a2e83d31fe83e5bfa34f70cb2",
+  "new_training_updates": 0,
+  "whole_goal_complete": false
+}71074c55c83cbe0c7a3fa693c42d9f977daad7ca0136159444e9fdc7f4f1537a  /share/home/renly/projects/idcoo_research_20261026/integer_reference_20261028/results/delivery.tar.gz

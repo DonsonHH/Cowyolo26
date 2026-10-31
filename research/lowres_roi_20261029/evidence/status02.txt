@@ -1,0 +1,25 @@
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|20|alloc|cu[01-20]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS
+130506|cow-lowres-roi|4gpu|COMPLETED|0:0|00:02:23|8|12G|
+130506.batch|batch||COMPLETED|0:0|00:02:23|8||1942200K
+{"scene": "original", "decoded_frame0": 0, "source_image_forwards": 0}
+{"scene": "original", "decoded_frame0": 2500, "source_image_forwards": 5952}
+{"scene": "original", "decoded_frame0": 5000, "source_image_forwards": 11904}
+{"scene": "original", "decoded_frame0": 7500, "source_image_forwards": 17856}
+{"scene": "original", "decoded_frame0": 10000, "source_image_forwards": 24000}
+{"scene_complete": "original", "image_forwards": 26100, "crop_tracker_updates": 26100}
+{"scene": "toros", "decoded_frame0": 0, "source_image_forwards": 26100}
+{"scene_complete": "toros", "image_forwards": 31848, "crop_tracker_updates": 32808}
+{"status": "ALL12_FIXED_CHANNEL_INPUT_CONDITIONS_AND72_COUNTER_PATHS_COMPLETE", "created_UTC": "2026-10-29T10:19:44.036857+00:00", "Slurm_JOB_ID": "130506", "protocol_sha256": "40bb7ea7cd852038cefc3150b30d98b86b43514f4ca0559e1cb62729d84bec06", "condition_count": 12, "actual_detector_source_image_forwards": 31848, "active_predictor_inference_image_calls": 31848, "predictor_tensor_shape_counts": {"(16, 3, 192, 192)": 656, "(16, 3, 256, 256)": 656, "(16, 3, 320, 320)": 656, "(15, 3, 192, 192)": 8, "(15, 3, 256, 256)": 8, "(15, 3, 320, 320)": 8}, "baseline_full_cache_traces_exact": 36, "baseline_full_cache_counter_paths_exact": 72, "baseline_full_tracker_updates_replayed": 32808, "new_crop_tracker_updates": 32808, "new_crop_counter_paths": 72, "NN_input_anchor_hash_rows": 96, "unique_NN_input_arrays": 24, "source_crop_anchor_images": 8, "source_decode": [{"scene": "original", "decoded_frames": 10874, "sampled_frames": 2175, "crop_box": [870, 0, 1920, 1440]}, {"scene": "toros", "decoded_frames": 479, "sampled_frames": 479, "crop_box": [0, 108, 1920, 1026]}], "new_training_updates": 0, "identity_encoder_forwards": 0, "new_reference_labels": 0, "new_independent_test": false, "global_pipeline_changed": false, "board_actions_in_this_experiment": 0, "PYNQ5FPS_proven": false, "whole_goal_complete": false, "wall_s": 138.422774212, "peak_process_RSS_kib": 1991972}
+131679 /share/home/renly/projects/idcoo_research_20261026/lowres_roi_20261029/results/roi/summary.json
+22740 /share/home/renly/projects/idcoo_research_20261026/lowres_roi_20261029/results/roi/paired_full_vs_roi.json
+23775 /share/home/renly/projects/idcoo_research_20261026/lowres_roi_20261029/results/roi/input_tensor_controls.json
+26949 /share/home/renly/projects/idcoo_research_20261026/lowres_roi_20261029/results/artifact_manifest.json
+313 /share/home/renly/projects/idcoo_research_20261026/lowres_roi_20261029/results/roi/source_decode.json
+5887 /share/home/renly/projects/idcoo_research_20261026/lowres_roi_20261029/results/roi/full_input_cache_regression_gate.json
+7558 /share/home/renly/projects/idcoo_research_20261026/lowres_roi_20261029/results/roi/pixel_controls.json
+96008 /share/home/renly/projects/idcoo_research_20261026/lowres_roi_20261029/results/roi/video_metrics.json

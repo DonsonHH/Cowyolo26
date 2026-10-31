@@ -1,0 +1,357 @@
+{
+  "name": "Native paired videos and preregistered plus explicitly exploratory case panels",
+  "regression_protocol_sha256": "648d3f7d226fff6885245bdcd137c5bfcab9f0ecf263650f02965bcc2a985450",
+  "summary_sha256": "65110ee58a650392bc075a1e8e31a5b3c47994976dadff8045c8c5d330f0d421",
+  "videos": {
+    "new_long": {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/overhead_positive_reference_20261028/input/2023-08-17T13-25-38.mp4",
+      "sha256": "8210a5bf206dd7f2356bc3d4653b439ab6de12ccfdc8209fe301ac7f02807058",
+      "width": 2560,
+      "height": 1440,
+      "fps": 25,
+      "start_frame0": 2375,
+      "end_frame0_exclusive": 4375,
+      "render_stride": 5,
+      "output_fps": 5
+    },
+    "original_clip": {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+      "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+      "width": 2560,
+      "height": 1440,
+      "fps": 25,
+      "start_frame0": 8912,
+      "end_frame0_exclusive": 10874,
+      "render_stride": 1,
+      "output_fps": 25
+    },
+    "toros_used_reverse": {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/phase2/data/mendeley_counting/extracted/Ground Truth/Toros.mp4",
+      "sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "start_frame0": 0,
+      "end_frame0_exclusive": 479,
+      "render_stride": 1,
+      "output_fps": 30
+    }
+  },
+  "sources": [
+    {
+      "source_name": "long_official",
+      "scene": "new_long",
+      "anchors": [
+        2675,
+        2720,
+        3825
+      ],
+      "predefined_anchors": [
+        2675,
+        2720,
+        3825
+      ],
+      "exploratory_post_prediction_anchors": [],
+      "result_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_official__original_fused/post_tracker_boxes.csv",
+          "sha256": "178684df5266a4999fdb980de96f22a0043e6ec4b21e390e6934ab3575b50c59"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_official__original_fused/handoff_events_all_history.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_official__firststage_pure_IoU/post_tracker_boxes.csv",
+          "sha256": "178684df5266a4999fdb980de96f22a0043e6ec4b21e390e6934ab3575b50c59"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_official__firststage_pure_IoU/handoff_events_all_history.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        }
+      ]
+    },
+    {
+      "source_name": "long_seed26",
+      "scene": "new_long",
+      "anchors": [
+        2675,
+        2720,
+        3825
+      ],
+      "predefined_anchors": [
+        2675,
+        2720,
+        3825
+      ],
+      "exploratory_post_prediction_anchors": [],
+      "result_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed26__original_fused/post_tracker_boxes.csv",
+          "sha256": "2615ec18b3a989a5d28e7d6073d15c87f845baca569452e352c06d774a3ea2de"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed26__original_fused/handoff_events_all_history.json",
+          "sha256": "356be2ff8877ff093715f64404a26a8c71b613a3293d85a32bfa3c017a75171b"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed26__firststage_pure_IoU/post_tracker_boxes.csv",
+          "sha256": "90527003c246e9d0f68da4e5c5787f369b69be1f15123619a8e5cf4ad20ef175"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed26__firststage_pure_IoU/handoff_events_all_history.json",
+          "sha256": "1f2dbc9de477df8f5f3255f3943c86e30f7517174a5380f6454fd49ec321d856"
+        }
+      ]
+    },
+    {
+      "source_name": "long_seed27",
+      "scene": "new_long",
+      "anchors": [
+        2675,
+        2720,
+        3825
+      ],
+      "predefined_anchors": [
+        2675,
+        2720,
+        3825
+      ],
+      "exploratory_post_prediction_anchors": [],
+      "result_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed27__original_fused/post_tracker_boxes.csv",
+          "sha256": "29280381aba36d7ada8f422625d12dd6eccc3195cc265e70d2c74631f4cf13f6"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed27__original_fused/handoff_events_all_history.json",
+          "sha256": "8bf01aa54e85e4873bf3050f62a0f21c512eb4e75aaa662dc5487554645102ce"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed27__firststage_pure_IoU/post_tracker_boxes.csv",
+          "sha256": "6b11aa58e0386ca9257f00128265421a1c61df9959e5f25b897e62013faf9133"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed27__firststage_pure_IoU/handoff_events_all_history.json",
+          "sha256": "aad927d1d8bb7073ee40b7a632f21754433c8eae237402b43b9ec92e68406612"
+        }
+      ]
+    },
+    {
+      "source_name": "long_seed28",
+      "scene": "new_long",
+      "anchors": [
+        2675,
+        2720,
+        3825
+      ],
+      "predefined_anchors": [
+        2675,
+        2720,
+        3825
+      ],
+      "exploratory_post_prediction_anchors": [],
+      "result_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed28__original_fused/post_tracker_boxes.csv",
+          "sha256": "05fecb91aeda9583ead86db0d5f0dce823cbc6ffc5cdd61d0838c10ce479563f"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed28__original_fused/handoff_events_all_history.json",
+          "sha256": "f4f6f9fae8a0cf5aa7b4f87305f13f6174cd6da931ad76eff09f4fd2fa31aa8b"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed28__firststage_pure_IoU/post_tracker_boxes.csv",
+          "sha256": "bd46d5bac59748e5dc3c60f687a8dadb4cc4c080d67a44ae49d3ba65101d4972"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/long_seed28__firststage_pure_IoU/handoff_events_all_history.json",
+          "sha256": "569caf98fb29313ed4b1149fcc5604dc09e42c1bd075e0e93a7013246f4f164b"
+        }
+      ]
+    },
+    {
+      "source_name": "original_seed26",
+      "scene": "original_clip",
+      "anchors": [
+        9345,
+        9380,
+        10415
+      ],
+      "predefined_anchors": [
+        9345,
+        9380
+      ],
+      "exploratory_post_prediction_anchors": [
+        10415
+      ],
+      "result_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed26__original_fused/post_tracker_boxes.csv",
+          "sha256": "a49a65fb78772b45e8de33cfc5da95f1a62c4338a68de8e8945a23110c0c1839"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed26__original_fused/handoff_events_all_history.json",
+          "sha256": "aaaca7a9a725792e850889c985ce292ca9e0552b83a1fbe3dbf2974ee6beb034"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed26__firststage_pure_IoU/post_tracker_boxes.csv",
+          "sha256": "2456666ef5c0dc0e17c3efba63683a775095b73dcbbfba55dbf4dd441a9dfd76"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed26__firststage_pure_IoU/handoff_events_all_history.json",
+          "sha256": "4c7eb97c6fee980bd72a30ff28d5470866ee3d85ffa63495f091e42e7f95fda8"
+        }
+      ]
+    },
+    {
+      "source_name": "original_seed27",
+      "scene": "original_clip",
+      "anchors": [
+        9345,
+        9380
+      ],
+      "predefined_anchors": [
+        9345,
+        9380
+      ],
+      "exploratory_post_prediction_anchors": [],
+      "result_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed27__original_fused/post_tracker_boxes.csv",
+          "sha256": "0dd7c3d5448dc84e66cce14026ae34711a3108ee99711c323d428a03ef371023"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed27__original_fused/handoff_events_all_history.json",
+          "sha256": "c6f88df6b05e783b9dac92e59c101a5c01c9404455bdfd40838aaf6f44e7bc06"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed27__firststage_pure_IoU/post_tracker_boxes.csv",
+          "sha256": "e68581a136e1a53c099911f148edc4284bc0b1dbe90b5b23004d7d99a73242c0"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed27__firststage_pure_IoU/handoff_events_all_history.json",
+          "sha256": "cf7bbb011efb6f78cffe478784c6385ee3cdfa6b860cc032ba6dae1290071de3"
+        }
+      ]
+    },
+    {
+      "source_name": "original_seed28",
+      "scene": "original_clip",
+      "anchors": [
+        9345,
+        9380
+      ],
+      "predefined_anchors": [
+        9345,
+        9380
+      ],
+      "exploratory_post_prediction_anchors": [],
+      "result_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed28__original_fused/post_tracker_boxes.csv",
+          "sha256": "e55dda77303eae59784ac3e51176f21bbd0d6ddc796dde5f921f98d70598a0dc"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed28__original_fused/handoff_events_all_history.json",
+          "sha256": "ad114b09b1c2a9943348821a0fbf151c6d518b15173dc8148c5222da6e3de628"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed28__firststage_pure_IoU/post_tracker_boxes.csv",
+          "sha256": "fb9be3ec3aa0803f47ef962fe972d8dc51f007e2bcea2482577e2d2d04413a27"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed28__firststage_pure_IoU/handoff_events_all_history.json",
+          "sha256": "d70dfcbe0741961471fa31ecea93b05cd0e98e9ea9579312dbb55dce17f365bb"
+        }
+      ]
+    },
+    {
+      "source_name": "toros_generic",
+      "scene": "toros_used_reverse",
+      "anchors": [
+        150,
+        153,
+        162,
+        167,
+        193,
+        199,
+        245,
+        314,
+        397
+      ],
+      "predefined_anchors": [
+        245,
+        397
+      ],
+      "exploratory_post_prediction_anchors": [
+        150,
+        153,
+        162,
+        167,
+        193,
+        199,
+        314
+      ],
+      "result_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/toros_generic__original_fused/post_tracker_boxes.csv",
+          "sha256": "99fbca1b3741a87c9da05b8455412a9831c90ae06b29ed2e098aa8269fd058ac"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/toros_generic__original_fused/handoff_events_all_history.json",
+          "sha256": "1e2265581699ac09ad4ac8244d6dbc75598c4a601d4a010f66b610e7f715ff73"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/toros_generic__firststage_pure_IoU/post_tracker_boxes.csv",
+          "sha256": "d3b8ede1cc0d6bb080e818995aac372547393229f76f0468c4b178fd935ba5a1"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/toros_generic__firststage_pure_IoU/handoff_events_all_history.json",
+          "sha256": "12d1919366723d63dd519da5f773d00924e91d3b1407588806f6164414bafe7a"
+        }
+      ]
+    },
+    {
+      "source_name": "toros_pilot",
+      "scene": "toros_used_reverse",
+      "anchors": [
+        130,
+        245,
+        397
+      ],
+      "predefined_anchors": [
+        245,
+        397
+      ],
+      "exploratory_post_prediction_anchors": [
+        130
+      ],
+      "result_files": [
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/toros_pilot__original_fused/post_tracker_boxes.csv",
+          "sha256": "363a8fa66878550710502f17aafb001f41e4995dc25ec8fd4b48f550a0e17b06"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/toros_pilot__original_fused/handoff_events_all_history.json",
+          "sha256": "4caa9d8cd1ae8e0b0b9da0c1af08515c94aab9526cc0b6932fd48954d6f6e023"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/toros_pilot__firststage_pure_IoU/post_tracker_boxes.csv",
+          "sha256": "acae6d6c4a7b53dc3a4ab44077891a13d400cfb3b92d3349c73017d173995b83"
+        },
+        {
+          "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/toros_pilot__firststage_pure_IoU/handoff_events_all_history.json",
+          "sha256": "85aeb69fd9af2208f26b3c8f66a999ebe29a17e2cc276cba68c81e8f18226e5b"
+        }
+      ]
+    }
+  ],
+  "full_prediction_videos": 9,
+  "native_anchor_sheets": 31,
+  "publisher_GT_in_case_panels_only": true,
+  "new_long_reference_overlaid": false,
+  "new_model_forwards": 0,
+  "candidate_adopted": false,
+  "whole_goal_complete": false
+}

@@ -1,0 +1,495 @@
+{
+  "status": "PASSIVE_BOOT_CAPTURE_WINDOW_FINISHED",
+  "completed_UTC": "2026-10-31T07:22:00.163683+00:00",
+  "elapsed_s": 120.29699999999866,
+  "port": "COM6",
+  "baud": 115200,
+  "received_bytes": 34071,
+  "raw_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_access_resume_20261031\\evidence\\boot_capture01.bin",
+  "raw_SHA256": "08855a7c641adf075cadac9150cfe6b5b092b36dbd58b9fe061c6550eac198af",
+  "events": [
+    {
+      "at_s": 0.0,
+      "UTC": "2026-10-31T07:19:59.862071+00:00",
+      "event": "PASSIVE_CAPTURE_STARTED",
+      "port": "COM6",
+      "baud": 115200,
+      "maximum_s": 120
+    },
+    {
+      "at_s": 0.062,
+      "UTC": "2026-10-31T07:19:59.921790+00:00",
+      "event": "COM6_ABSENT"
+    },
+    {
+      "at_s": 4.781,
+      "UTC": "2026-10-31T07:20:04.637902+00:00",
+      "event": "COM6_PRESENT"
+    },
+    {
+      "at_s": 4.797,
+      "UTC": "2026-10-31T07:20:04.659048+00:00",
+      "event": "SERIAL_OPENED_NO_CONTROL_SIGNALS_OR_TX"
+    },
+    {
+      "at_s": 5.203,
+      "UTC": "2026-10-31T07:20:05.063596+00:00",
+      "event": "RX",
+      "bytes": 6,
+      "cumulative_bytes": 6,
+      "text": "\b\b\b 1 "
+    },
+    {
+      "at_s": 6.031,
+      "UTC": "2026-10-31T07:20:05.886413+00:00",
+      "event": "RX",
+      "bytes": 8,
+      "cumulative_bytes": 14,
+      "text": "\b\b\b 0 \r\n"
+    },
+    {
+      "at_s": 6.218,
+      "UTC": "2026-10-31T07:20:06.089138+00:00",
+      "event": "RX",
+      "bytes": 216,
+      "cumulative_bytes": 230,
+      "text": "switch to partitions #0, OK\r\nmmc0 is current device\r\nScanning mmc 0:1...\r\nFound U-Boot script /boot.scr\r\n3473 bytes read in 10 ms (338.9 KiB/s)\r\n## Executing script at 03000000\r\nTrying to load boot images from mmc0\r\n"
+    },
+    {
+      "at_s": 7.031,
+      "UTC": "2026-10-31T07:20:06.899534+00:00",
+      "event": "RX",
+      "bytes": 607,
+      "cumulative_bytes": 837,
+      "text": "7147780 bytes read in 765 ms (8.9 MiB/s)\r\n## Loading kernel from FIT Image at 10000000 ...\r\n   Using 'conf-1' configuration\r\n   Verifying Hash Integrity ... OK\r\n   Trying 'kernel-0' kernel subimage\r\n     Description:  Linux Kernel\r\n     Type:         Kernel Image\r\n     Compression:  uncompressed\r\n     Data Start:   0x100000d4\r\n     Data Size:    7126224 Bytes = 6.8 MiB\r\n     Architecture: ARM\r\n     OS:           Linux\r\n     Load Address: 0x00080000\r\n     Entry Point:  0x00080000\r\n     Hash algo:    sha1\r\n     Hash value:   8bfc093b06b7d38a04f6c3c2978374b94e53c093\r\n   Verifying Hash Integrity ... sha1"
+    },
+    {
+      "at_s": 7.234,
+      "UTC": "2026-10-31T07:20:07.103187+00:00",
+      "event": "RX",
+      "bytes": 707,
+      "cumulative_bytes": 1544,
+      "text": "+ OK\r\n## Loading fdt from FIT Image at 10000000 ...\r\n   Using 'conf-1' configuration\r\n   Verifying Hash Integrity ... OK\r\n   Trying 'fdt-0' fdt subimage\r\n     Description:  Flattened Device Tree blob\r\n     Type:         Flat Device Tree\r\n     Compression:  uncompressed\r\n     Data Start:   0x106cbe98\r\n     Data Size:    19738 Bytes = 19.3 KiB\r\n     Architecture: ARM\r\n     Hash algo:    sha1\r\n     Hash value:   e2261b986180d301f33459eb0193258edf7ff558\r\n   Verifying Hash Integrity ... sha1+ OK\r\n   Booting using the fdt blob at 0x106cbe98\r\nWorking FDT set to 106cbe98\r\n   Loading Kernel Image\r\n   Loading Device Tree to 1dabb000, end 1dac2d19 ... OK\r\nWorking FDT set to 1dabb000\r\n\r\nStarting kernel ...\r\n\r\n"
+    },
+    {
+      "at_s": 8.047,
+      "UTC": "2026-10-31T07:20:07.913109+00:00",
+      "event": "RX",
+      "bytes": 2069,
+      "cumulative_bytes": 3613,
+      "text": "Booting Linux on physical CPU 0x0\r\nLinux version 6.6.10-xilinx-v2024.1-g3c0eca68c652 (oe-user@oe-host) (arm-xilinx-linux-gnueabi-gcc (GCC) 12.2.0, GNU ld (GNU Binutils) 2.39.0.20220819) #1 SMP PREEMPT Sat Apr 27 05:22:24 UTC 2024\r\nCPU: ARMv7 Processor [413fc090] revision 0 (ARMv7), cr=18c5387d\r\nCPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache\r\nOF: fdt: Machine model: xlnx,zynq-7000\r\nMemory policy: Data cache writealloc\r\ncma: Reserved 128 MiB at 0x15800000 on node -1\r\nZone ranges:\r\n  Normal   [mem 0x0000000000000000-0x000000001fffffff]\r\n  HighMem  empty\r\nMovable zone start for each node\r\nEarly memory node ranges\r\n  node   0: [mem 0x0000000000000000-0x000000001fffffff]\r\nInitmem setup node 0 [mem 0x0000000000000000-0x000000001fffffff]\r\npercpu: Embedded 13 pages/cpu s23956 r8192 d21100 u53248\r\nKernel command line: root=/dev/mmcblk0p2 rw earlyprintk rootfstype=ext4 rootwait devtmpfs.mount=1 uio_pdrv_genirq.of_id=\"generic-uio\" clk_ignore_unused\r\nUnknown kernel command line parameters \"earlyprintk\", will be passed to user space.\r\nDentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)\r\nInode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)\r\nBuilt 1 zonelists, mobility grouping on.  Total pages: 129920\r\nmem auto-init: stack:all(zero), heap alloc:off, heap free:off\r\nMemory: 371368K/524288K available (10240K kernel code, 334K rwdata, 2860K rodata, 1024K init, 194K bss, 21848K reserved, 131072K cma-reserved, 0K highmem)\r\nSLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1\r\nrcu: Preemptible hierarchical RCU implementation.\r\nrcu: \tRCU event tracing is enabled.\r\nrcu: \tRCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.\r\n\tTrampoline variant of Tasks RCU enabled.\r\n\tTracing variant of Tasks RCU enabled.\r\nrcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.\r\nrcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2\r\nNR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16\r\nefuse mapped to (ptrval)\r\nslcr mapped to (ptrval)\r\nGIC physical location is 0xf8f01000\r\nL2C: platform mod"
+    },
+    {
+      "at_s": 8.25,
+      "UTC": "2026-10-31T07:20:08.114398+00:00",
+      "event": "RX",
+      "bytes": 2393,
+      "cumulative_bytes": 6006,
+      "text": "ifies aux control register: 0x72360000 -> 0x72760000\r\nL2C: DT/platform modifies aux control register: 0x72360000 -> 0x72760000\r\nL2C-310 erratum 769419 enabled\r\nL2C-310 enabling early BRESP for Cortex-A9\r\nL2C-310 full line of zeros enabled for Cortex-A9\r\nL2C-310 ID prefetch enabled, offset 1 lines\r\nL2C-310 dynamic clock gating enabled, standby mode enabled\r\nL2C-310 cache controller enabled, 8 ways, 512 kB\r\nL2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x76760001\r\nrcu: srcu_init: Setting srcu_struct sizes based on contention.\r\nzynq_clock_init: clkc starts at (ptrval)\r\nZynq clock init\r\nsched_clock: 64 bits at 163MHz, resolution 6ns, wraps every 4398046511101ns\r\nclocksource: arm_global_timer: mask: 0xffffffffffffffff max_cycles: 0x257a3bfb55, max_idle_ns: 440795207830 ns\r\nSwitching to timer-based delay loop, resolution 6ns\r\nConsole: colour dummy device 80x30\r\nprintk: console [tty0] enabled\r\nCalibrating delay loop (skipped), value calculated using timer frequency.. 325.00 BogoMIPS (lpj=1625000)\r\nCPU: Testing write buffer coherency: ok\r\nCPU0: Spectre v2: using BPIALL workaround\r\npid_max: default: 32768 minimum: 301\r\nMount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)\r\nMountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)\r\nCPU0: thread -1, cpu 0, socket 0, mpidr 80000000\r\nRCU Tasks: Setting shift to 1 and lim to 1 rcu_task_cb_adjust=1.\r\nRCU Tasks Trace: Setting shift to 1 and lim to 1 rcu_task_cb_adjust=1.\r\nSetting up static identity map for 0x100000 - 0x100060\r\nrcu: Hierarchical SRCU implementation.\r\nrcu: \tMax phase no-delay instances is 1000.\r\nsmp: Bringing up secondary CPUs ...\r\nCPU1: thread -1, cpu 1, socket 0, mpidr 80000001\r\nCPU1: Spectre v2: using BPIALL workaround\r\nsmp: Brought up 1 node, 2 CPUs\r\nSMP: Total of 2 processors activated (650.00 BogoMIPS).\r\nCPU: All CPU(s) started in SVC mode.\r\ndevtmpfs: initialized\r\nVFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4\r\nclocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns\r\nfutex hash table entries: 512 (order: 3, 32768 bytes, linear)\r\npinctrl core: initialized pinctrl subsystem\r\nNET: Registered PF_NETLINK/PF_ROUTE protocol family\r\nDMA: preallocated 256 KiB pool for atomic coherent allocations\r\nthermal_sys: Registered thermal governor 'step_wise'\r\ncpuidle: using governor menu\r\nplatform axi: Fixed dependency cycle(s) "
+    },
+    {
+      "at_s": 8.453,
+      "UTC": "2026-10-31T07:20:08.315776+00:00",
+      "event": "RX",
+      "bytes": 755,
+      "cumulative_bytes": 6761,
+      "text": "with /axi/interrupt-controller@f8f01000\r\namba f8801000.etb: Fixed dependency cycle(s) with /replicator/out-ports/port@1/endpoint\r\namba f8803000.tpiu: Fixed dependency cycle(s) with /replicator/out-ports/port@0/endpoint\r\namba f8804000.funnel: Fixed dependency cycle(s) with /replicator/in-ports/port/endpoint\r\namba f889c000.ptm: Fixed dependency cycle(s) with /axi/funnel@f8804000/in-ports/port@0/endpoint\r\namba f889d000.ptm: Fixed dependency cycle(s) with /axi/funnel@f8804000/in-ports/port@1/endpoint\r\nhw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.\r\nhw-breakpoint: maximum watchpoint size is 4 bytes.\r\ne0000000.serial: ttyPS0 at MMIO 0xe0000000 (irq = 26, base_baud = 6250000) is a xuartps\r\nprintk: console [ttyPS0] enabled\r\n"
+    },
+    {
+      "at_s": 8.656,
+      "UTC": "2026-10-31T07:20:08.517757+00:00",
+      "event": "RX",
+      "bytes": 34,
+      "cumulative_bytes": 6795,
+      "text": "raid6: int32x8  gen()   130 MB/s\r\n"
+    },
+    {
+      "at_s": 8.859,
+      "UTC": "2026-10-31T07:20:08.719046+00:00",
+      "event": "RX",
+      "bytes": 68,
+      "cumulative_bytes": 6863,
+      "text": "raid6: int32x4  gen()   132 MB/s\r\nraid6: int32x2  gen()   200 MB/s\r\n"
+    },
+    {
+      "at_s": 9.062,
+      "UTC": "2026-10-31T07:20:08.921114+00:00",
+      "event": "RX",
+      "bytes": 81,
+      "cumulative_bytes": 6944,
+      "text": "raid6: int32x1  gen()   178 MB/s\r\nraid6: using algorithm int32x2 gen() 200 MB/s\r\n"
+    },
+    {
+      "at_s": 9.265,
+      "UTC": "2026-10-31T07:20:09.124481+00:00",
+      "event": "RX",
+      "bytes": 769,
+      "cumulative_bytes": 7713,
+      "text": "raid6: .... xor() 124 MB/s, rmw enabled\r\nraid6: using intx1 recovery algorithm\r\nSCSI subsystem initialized\r\nusbcore: registered new interface driver usbfs\r\nusbcore: registered new interface driver hub\r\nusbcore: registered new device driver usb\r\nmc: Linux media interface: v0.10\r\nvideodev: Linux video capture interface: v2.00\r\npps_core: LinuxPPS API ver. 1 registered\r\npps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>\r\nPTP clock support registered\r\nEDAC MC: Ver: 3.0.0\r\nFPGA manager framework\r\nAdvanced Linux Sound Architecture Driver Initialized.\r\nvgaarb: loaded\r\nclocksource: Switched to clocksource arm_global_timer\r\nNET: Registered PF_INET protocol family\r\nIP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)\r\n"
+    },
+    {
+      "at_s": 9.468,
+      "UTC": "2026-10-31T07:20:09.328773+00:00",
+      "event": "RX",
+      "bytes": 1170,
+      "cumulative_bytes": 8883,
+      "text": "tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)\r\nTable-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)\r\nTCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)\r\nTCP bind hash table entries: 4096 (order: 4, 65536 bytes, linear)\r\nTCP: Hash tables configured (established 4096 bind 4096)\r\nUDP hash table entries: 256 (order: 1, 8192 bytes, linear)\r\nUDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)\r\nNET: Registered PF_UNIX/PF_LOCAL protocol family\r\nRPC: Registered named UNIX socket transport module.\r\nRPC: Registered udp transport module.\r\nRPC: Registered tcp transport module.\r\nRPC: Registered tcp-with-tls transport module.\r\nRPC: Registered tcp NFSv4.1 backchannel transport module.\r\nPCI: CLS 0 bytes, default 64\r\narmv7-pmu f8891000.pmu: hw perfevents: no interrupt-affinity property, guessing.\r\nhw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available\r\nInitialise system trusted keyrings\r\nworkingset: timestamp_bits=14 max_order=17 bucket_order=3\r\nsquashfs: version 4.0 (2009/01/31) Phillip Lougher\r\njffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.\r\n"
+    },
+    {
+      "at_s": 9.672,
+      "UTC": "2026-10-31T07:20:09.529838+00:00",
+      "event": "RX",
+      "bytes": 595,
+      "cumulative_bytes": 9478,
+      "text": "xor: measuring software checksum speed\r\n   arm4regs        :  1046 MB/sec\r\n   8regs           :   790 MB/sec\r\n   32regs          :   836 MB/sec\r\nxor: using function: arm4regs (1046 MB/sec)\r\nKey type asymmetric registered\r\nAsymmetric key parser 'x509' registered\r\nio scheduler mq-deadline registered\r\nio scheduler kyber registered\r\nio scheduler bfq registered\r\nzynq-pinctrl 700.pinctrl: zynq pinctrl initialized\r\ndma-pl330 f8003000.dma-controller: Loaded driver for PL330 DMAC-241330\r\ndma-pl330 f8003000.dma-controller: \tDBUFF-128x8bytes Num_Chans-8 Num_Peri-4 Num_Events-16\r\nbrd: module loaded\r\n"
+    },
+    {
+      "at_s": 9.875,
+      "UTC": "2026-10-31T07:20:09.731095+00:00",
+      "event": "RX",
+      "bytes": 296,
+      "cumulative_bytes": 9774,
+      "text": "loop: module loaded\r\nspi_master spi0: cannot find modalias for /axi/spi@e000d000/flash@0\r\nspi_master spi0: Failed to create SPI device for /axi/spi@e000d000/flash@0\r\ntun: Universal TUN/TAP device driver, 1.6\r\nCAN device driver interface\r\nmacb e000b000.ethernet: invalid hw address, using random\r\n"
+    },
+    {
+      "at_s": 25.078,
+      "UTC": "2026-10-31T07:20:24.945498+00:00",
+      "event": "CAPTURE_STILL_LISTENING",
+      "cumulative_bytes": 9774
+    },
+    {
+      "at_s": 47.812,
+      "UTC": "2026-10-31T07:20:47.672325+00:00",
+      "event": "RX",
+      "bytes": 402,
+      "cumulative_bytes": 10176,
+      "text": "macb e000b000.ethernet eth0: Cadence GEM rev 0x00020118 at 0xe000b000 irq 40 (c2:5e:5e:c6:d3:ea)\r\ne1000e: Intel(R) PRO/1000 Network Driver\r\ne1000e: Copyright(c) 1999 - 2015 Intel Corporation.\r\nusbcore: registered new interface driver cdc_acm\r\ncdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters\r\nusbcore: registered new interface driver cdc_wdm\r\nusbcore: registered new interfac"
+    },
+    {
+      "at_s": 48.015,
+      "UTC": "2026-10-31T07:20:47.877330+00:00",
+      "event": "RX",
+      "bytes": 1355,
+      "cumulative_bytes": 11531,
+      "text": "e driver usb-storage\r\nusbcore: registered new interface driver usbserial_generic\r\nusbserial: USB Serial support registered for generic\r\nusbcore: registered new interface driver usb_serial_simple\r\nusbserial: USB Serial support registered for carelink\r\nusbserial: USB Serial support registered for flashloader\r\nusbserial: USB Serial support registered for funsoft\r\nusbserial: USB Serial support registered for google\r\nusbserial: USB Serial support registered for hp4x\r\nusbserial: USB Serial support registered for kaufmann\r\nusbserial: USB Serial support registered for libtransistor\r\nusbserial: USB Serial support registered for moto_modem\r\nusbserial: USB Serial support registered for motorola_tetra\r\nusbserial: USB Serial support registered for nokia\r\nusbserial: USB Serial support registered for novatel_gps\r\nusbserial: USB Serial support registered for siemens_mpi\r\nusbserial: USB Serial support registered for suunto\r\nusbserial: USB Serial support registered for vivopay\r\nusbserial: USB Serial support registered for zio\r\nULPI transceiver vendor/product ID 0x0451/0x1507\r\nFound TI TUSB1210 ULPI transceiver.\r\nULPI integrity check: passed.\r\nci_hdrc ci_hdrc.0: EHCI Host Controller\r\nci_hdrc ci_hdrc.0: new USB bus registered, assigned bus number 1\r\nci_hdrc ci_hdrc.0: USB 2.0 started, EHCI 1.00\r\nhub 1-0:1.0: USB hub found\r\nhub 1-0:1.0: 1 port detected\r\n"
+    },
+    {
+      "at_s": 48.828,
+      "UTC": "2026-10-31T07:20:48.688711+00:00",
+      "event": "RX",
+      "bytes": 253,
+      "cumulative_bytes": 11784,
+      "text": "\r\n\r\nU-Boot 2024.01 (May 14 2024 - 03:31:48 +0000)\r\n\r\nCPU:   Zynq 7z020\r\nSilicon: v3.1\r\nDRAM:  ECC disabled 512 MiB\r\nCore:  22 devices, 16 uclasses, devicetree: board\r\nFlash: 0 Bytes\r\nNAND:  0 MiB\r\nMMC:   mmc@e0100000: 0\r\nLoading Environment from FAT... "
+    },
+    {
+      "at_s": 49.031,
+      "UTC": "2026-10-31T07:20:48.891986+00:00",
+      "event": "RX",
+      "bytes": 364,
+      "cumulative_bytes": 12148,
+      "text": "*** Error - No Valid Environment Area found\r\n*** Warning - bad env area, using default environment\r\n\r\nIn:    serial@e0000000\r\nOut:   serial@e0000000\r\nErr:   serial@e0000000\r\nNet:   \r\nZYNQ GEM: e000b000, mdio bus e000b000, phyaddr 0, interface rgmii-id\r\n\r\nError: ethernet@e000b000 No valid MAC address found.\r\nNo ethernet found.\r\n\r\nHit any key to stop autoboot:  2 "
+    },
+    {
+      "at_s": 50.047,
+      "UTC": "2026-10-31T07:20:49.903270+00:00",
+      "event": "RX",
+      "bytes": 6,
+      "cumulative_bytes": 12154,
+      "text": "\b\b\b 1 "
+    },
+    {
+      "at_s": 50.234,
+      "UTC": "2026-10-31T07:20:50.104659+00:00",
+      "event": "CAPTURE_STILL_LISTENING",
+      "cumulative_bytes": 12154
+    },
+    {
+      "at_s": 51.047,
+      "UTC": "2026-10-31T07:20:50.913832+00:00",
+      "event": "RX",
+      "bytes": 224,
+      "cumulative_bytes": 12378,
+      "text": "\b\b\b 0 \r\nswitch to partitions #0, OK\r\nmmc0 is current device\r\nScanning mmc 0:1...\r\nFound U-Boot script /boot.scr\r\n3473 bytes read in 11 ms (307.6 KiB/s)\r\n## Executing script at 03000000\r\nTrying to load boot images from mmc0\r\n"
+    },
+    {
+      "at_s": 51.656,
+      "UTC": "2026-10-31T07:20:51.521038+00:00",
+      "event": "RX",
+      "bytes": 608,
+      "cumulative_bytes": 12986,
+      "text": "7147780 bytes read in 590 ms (11.6 MiB/s)\r\n## Loading kernel from FIT Image at 10000000 ...\r\n   Using 'conf-1' configuration\r\n   Verifying Hash Integrity ... OK\r\n   Trying 'kernel-0' kernel subimage\r\n     Description:  Linux Kernel\r\n     Type:         Kernel Image\r\n     Compression:  uncompressed\r\n     Data Start:   0x100000d4\r\n     Data Size:    7126224 Bytes = 6.8 MiB\r\n     Architecture: ARM\r\n     OS:           Linux\r\n     Load Address: 0x00080000\r\n     Entry Point:  0x00080000\r\n     Hash algo:    sha1\r\n     Hash value:   8bfc093b06b7d38a04f6c3c2978374b94e53c093\r\n   Verifying Hash Integrity ... sha1"
+    },
+    {
+      "at_s": 51.859,
+      "UTC": "2026-10-31T07:20:51.723448+00:00",
+      "event": "RX",
+      "bytes": 76,
+      "cumulative_bytes": 13062,
+      "text": "+ OK\r\n## Loading fdt from FIT Image at 10000000 ...\r\n   Using 'conf-1' confi"
+    },
+    {
+      "at_s": 52.062,
+      "UTC": "2026-10-31T07:20:51.924590+00:00",
+      "event": "RX",
+      "bytes": 631,
+      "cumulative_bytes": 13693,
+      "text": "guration\r\n   Verifying Hash Integrity ... OK\r\n   Trying 'fdt-0' fdt subimage\r\n     Description:  Flattened Device Tree blob\r\n     Type:         Flat Device Tree\r\n     Compression:  uncompressed\r\n     Data Start:   0x106cbe98\r\n     Data Size:    19738 Bytes = 19.3 KiB\r\n     Architecture: ARM\r\n     Hash algo:    sha1\r\n     Hash value:   e2261b986180d301f33459eb0193258edf7ff558\r\n   Verifying Hash Integrity ... sha1+ OK\r\n   Booting using the fdt blob at 0x106cbe98\r\nWorking FDT set to 106cbe98\r\n   Loading Kernel Image\r\n   Loading Device Tree to 1dabb000, end 1dac2d19 ... OK\r\nWorking FDT set to 1dabb000\r\n\r\nStarting kernel ...\r\n\r\n"
+    },
+    {
+      "at_s": 52.672,
+      "UTC": "2026-10-31T07:20:52.532470+00:00",
+      "event": "RX",
+      "bytes": 1194,
+      "cumulative_bytes": 14887,
+      "text": "Booting Linux on physical CPU 0x0\r\nLinux version 6.6.10-xilinx-v2024.1-g3c0eca68c652 (oe-user@oe-host) (arm-xilinx-linux-gnueabi-gcc (GCC) 12.2.0, GNU ld (GNU Binutils) 2.39.0.20220819) #1 SMP PREEMPT Sat Apr 27 05:22:24 UTC 2024\r\nCPU: ARMv7 Processor [413fc090] revision 0 (ARMv7), cr=18c5387d\r\nCPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache\r\nOF: fdt: Machine model: xlnx,zynq-7000\r\nMemory policy: Data cache writealloc\r\ncma: Reserved 128 MiB at 0x15800000 on node -1\r\nZone ranges:\r\n  Normal   [mem 0x0000000000000000-0x000000001fffffff]\r\n  HighMem  empty\r\nMovable zone start for each node\r\nEarly memory node ranges\r\n  node   0: [mem 0x0000000000000000-0x000000001fffffff]\r\nInitmem setup node 0 [mem 0x0000000000000000-0x000000001fffffff]\r\npercpu: Embedded 13 pages/cpu s23956 r8192 d21100 u53248\r\nKernel command line: root=/dev/mmcblk0p2 rw earlyprintk rootfstype=ext4 rootwait devtmpfs.mount=1 uio_pdrv_genirq.of_id=\"generic-uio\" clk_ignore_unused\r\nUnknown kernel command line parameters \"earlyprintk\", will be passed to user space.\r\nDentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)\r\nInode-cache hash table entries: 32768 (order: 5, 131072 by"
+    },
+    {
+      "at_s": 52.875,
+      "UTC": "2026-10-31T07:20:52.734629+00:00",
+      "event": "RX",
+      "bytes": 2393,
+      "cumulative_bytes": 17280,
+      "text": "tes, linear)\r\nBuilt 1 zonelists, mobility grouping on.  Total pages: 129920\r\nmem auto-init: stack:all(zero), heap alloc:off, heap free:off\r\nMemory: 371368K/524288K available (10240K kernel code, 334K rwdata, 2860K rodata, 1024K init, 194K bss, 21848K reserved, 131072K cma-reserved, 0K highmem)\r\nSLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1\r\nrcu: Preemptible hierarchical RCU implementation.\r\nrcu: \tRCU event tracing is enabled.\r\nrcu: \tRCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.\r\n\tTrampoline variant of Tasks RCU enabled.\r\n\tTracing variant of Tasks RCU enabled.\r\nrcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.\r\nrcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2\r\nNR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16\r\nefuse mapped to (ptrval)\r\nslcr mapped to (ptrval)\r\nGIC physical location is 0xf8f01000\r\nL2C: platform modifies aux control register: 0x72360000 -> 0x72760000\r\nL2C: DT/platform modifies aux control register: 0x72360000 -> 0x72760000\r\nL2C-310 erratum 769419 enabled\r\nL2C-310 enabling early BRESP for Cortex-A9\r\nL2C-310 full line of zeros enabled for Cortex-A9\r\nL2C-310 ID prefetch enabled, offset 1 lines\r\nL2C-310 dynamic clock gating enabled, standby mode enabled\r\nL2C-310 cache controller enabled, 8 ways, 512 kB\r\nL2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x76760001\r\nrcu: srcu_init: Setting srcu_struct sizes based on contention.\r\nzynq_clock_init: clkc starts at (ptrval)\r\nZynq clock init\r\nsched_clock: 64 bits at 163MHz, resolution 6ns, wraps every 4398046511101ns\r\nclocksource: arm_global_timer: mask: 0xffffffffffffffff max_cycles: 0x257a3bfb55, max_idle_ns: 440795207830 ns\r\nSwitching to timer-based delay loop, resolution 6ns\r\nConsole: colour dummy device 80x30\r\nprintk: console [tty0] enabled\r\nCalibrating delay loop (skipped), value calculated using timer frequency.. 325.00 BogoMIPS (lpj=1625000)\r\nCPU: Testing write buffer coherency: ok\r\nCPU0: Spectre v2: using BPIALL workaround\r\npid_max: default: 32768 minimum: 301\r\nMount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)\r\nMountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)\r\nCPU0: thread -1, cpu 0, socket 0, mpidr 80000000\r\nRCU Tasks: Setting shift to 1 and lim to 1 rcu_task_cb_adjust=1.\r\nRCU Tasks Trace: Setting shift to 1 and lim to 1 rcu_task_cb_adjust=1.\r\nSetting up static identity map for 0x100000 - 0x100060\r\nrcu: Hiera"
+    },
+    {
+      "at_s": 53.078,
+      "UTC": "2026-10-31T07:20:52.937966+00:00",
+      "event": "RX",
+      "bytes": 1630,
+      "cumulative_bytes": 18910,
+      "text": "rchical SRCU implementation.\r\nrcu: \tMax phase no-delay instances is 1000.\r\nsmp: Bringing up secondary CPUs ...\r\nCPU1: thread -1, cpu 1, socket 0, mpidr 80000001\r\nCPU1: Spectre v2: using BPIALL workaround\r\nsmp: Brought up 1 node, 2 CPUs\r\nSMP: Total of 2 processors activated (650.00 BogoMIPS).\r\nCPU: All CPU(s) started in SVC mode.\r\ndevtmpfs: initialized\r\nVFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4\r\nclocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns\r\nfutex hash table entries: 512 (order: 3, 32768 bytes, linear)\r\npinctrl core: initialized pinctrl subsystem\r\nNET: Registered PF_NETLINK/PF_ROUTE protocol family\r\nDMA: preallocated 256 KiB pool for atomic coherent allocations\r\nthermal_sys: Registered thermal governor 'step_wise'\r\ncpuidle: using governor menu\r\nplatform axi: Fixed dependency cycle(s) with /axi/interrupt-controller@f8f01000\r\namba f8801000.etb: Fixed dependency cycle(s) with /replicator/out-ports/port@1/endpoint\r\namba f8803000.tpiu: Fixed dependency cycle(s) with /replicator/out-ports/port@0/endpoint\r\namba f8804000.funnel: Fixed dependency cycle(s) with /replicator/in-ports/port/endpoint\r\namba f889c000.ptm: Fixed dependency cycle(s) with /axi/funnel@f8804000/in-ports/port@0/endpoint\r\namba f889d000.ptm: Fixed dependency cycle(s) with /axi/funnel@f8804000/in-ports/port@1/endpoint\r\nhw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.\r\nhw-breakpoint: maximum watchpoint size is 4 bytes.\r\ne0000000.serial: ttyPS0 at MMIO 0xe0000000 (irq = 26, base_baud = 6250000) is a xuartps\r\nprintk: console [ttyPS0] enabled\r\n"
+    },
+    {
+      "at_s": 53.281,
+      "UTC": "2026-10-31T07:20:53.139689+00:00",
+      "event": "RX",
+      "bytes": 34,
+      "cumulative_bytes": 18944,
+      "text": "raid6: int32x8  gen()   130 MB/s\r\n"
+    },
+    {
+      "at_s": 53.484,
+      "UTC": "2026-10-31T07:20:53.344541+00:00",
+      "event": "RX",
+      "bytes": 34,
+      "cumulative_bytes": 18978,
+      "text": "raid6: int32x4  gen()   132 MB/s\r\n"
+    },
+    {
+      "at_s": 53.687,
+      "UTC": "2026-10-31T07:20:53.546578+00:00",
+      "event": "RX",
+      "bytes": 34,
+      "cumulative_bytes": 19012,
+      "text": "raid6: int32x2  gen()   199 MB/s\r\n"
+    },
+    {
+      "at_s": 53.89,
+      "UTC": "2026-10-31T07:20:53.747829+00:00",
+      "event": "RX",
+      "bytes": 224,
+      "cumulative_bytes": 19236,
+      "text": "raid6: int32x1  gen()   177 MB/s\r\nraid6: using algorithm int32x2 gen() 199 MB/s\r\nraid6: .... xor() 120 MB/s, rmw enabled\r\nraid6: using intx1 recovery algorithm\r\nSCSI subsystem initialized\r\nusbcore: registered new interface d"
+    },
+    {
+      "at_s": 54.093,
+      "UTC": "2026-10-31T07:20:53.950068+00:00",
+      "event": "RX",
+      "bytes": 1796,
+      "cumulative_bytes": 21032,
+      "text": "river usbfs\r\nusbcore: registered new interface driver hub\r\nusbcore: registered new device driver usb\r\nmc: Linux media interface: v0.10\r\nvideodev: Linux video capture interface: v2.00\r\npps_core: LinuxPPS API ver. 1 registered\r\npps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>\r\nPTP clock support registered\r\nEDAC MC: Ver: 3.0.0\r\nFPGA manager framework\r\nAdvanced Linux Sound Architecture Driver Initialized.\r\nvgaarb: loaded\r\nclocksource: Switched to clocksource arm_global_timer\r\nNET: Registered PF_INET protocol family\r\nIP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)\r\ntcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)\r\nTable-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)\r\nTCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)\r\nTCP bind hash table entries: 4096 (order: 4, 65536 bytes, linear)\r\nTCP: Hash tables configured (established 4096 bind 4096)\r\nUDP hash table entries: 256 (order: 1, 8192 bytes, linear)\r\nUDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)\r\nNET: Registered PF_UNIX/PF_LOCAL protocol family\r\nRPC: Registered named UNIX socket transport module.\r\nRPC: Registered udp transport module.\r\nRPC: Registered tcp transport module.\r\nRPC: Registered tcp-with-tls transport module.\r\nRPC: Registered tcp NFSv4.1 backchannel transport module.\r\nPCI: CLS 0 bytes, default 64\r\narmv7-pmu f8891000.pmu: hw perfevents: no interrupt-affinity property, guessing.\r\nhw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available\r\nInitialise system trusted keyrings\r\nworkingset: timestamp_bits=14 max_order=17 bucket_order=3\r\nsquashfs: version 4.0 (2009/01/31) Phillip Lougher\r\njffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.\r\n"
+    },
+    {
+      "at_s": 54.297,
+      "UTC": "2026-10-31T07:20:54.154439+00:00",
+      "event": "RX",
+      "bytes": 259,
+      "cumulative_bytes": 21291,
+      "text": "xor: measuring software checksum speed\r\n   arm4regs        :  1046 MB/sec\r\n   8regs           :   790 MB/sec\r\n   32regs          :   836 MB/sec\r\nxor: using function: arm4regs (1046 MB/sec)\r\nKey type asymmetric registered\r\nAsymmetric key parser 'x509' register"
+    },
+    {
+      "at_s": 54.5,
+      "UTC": "2026-10-31T07:20:54.356657+00:00",
+      "event": "RX",
+      "bytes": 632,
+      "cumulative_bytes": 21923,
+      "text": "ed\r\nio scheduler mq-deadline registered\r\nio scheduler kyber registered\r\nio scheduler bfq registered\r\nzynq-pinctrl 700.pinctrl: zynq pinctrl initialized\r\ndma-pl330 f8003000.dma-controller: Loaded driver for PL330 DMAC-241330\r\ndma-pl330 f8003000.dma-controller: \tDBUFF-128x8bytes Num_Chans-8 Num_Peri-4 Num_Events-16\r\nbrd: module loaded\r\nloop: module loaded\r\nspi_master spi0: cannot find modalias for /axi/spi@e000d000/flash@0\r\nspi_master spi0: Failed to create SPI device for /axi/spi@e000d000/flash@0\r\ntun: Universal TUN/TAP device driver, 1.6\r\nCAN device driver interface\r\nmacb e000b000.ethernet: invalid hw address, using random\r\n"
+    },
+    {
+      "at_s": 75.375,
+      "UTC": "2026-10-31T07:21:15.245537+00:00",
+      "event": "CAPTURE_STILL_LISTENING",
+      "cumulative_bytes": 21923
+    },
+    {
+      "at_s": 92.593,
+      "UTC": "2026-10-31T07:21:32.457353+00:00",
+      "event": "RX",
+      "bytes": 1516,
+      "cumulative_bytes": 23439,
+      "text": "macb e000b000.ethernet eth0: Cadence GEM rev 0x00020118 at 0xe000b000 irq 40 (76:b3:2a:cf:5b:e0)\r\ne1000e: Intel(R) PRO/1000 Network Driver\r\ne1000e: Copyright(c) 1999 - 2015 Intel Corporation.\r\nusbcore: registered new interface driver cdc_acm\r\ncdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters\r\nusbcore: registered new interface driver cdc_wdm\r\nusbcore: registered new interface driver usb-storage\r\nusbcore: registered new interface driver usbserial_generic\r\nusbserial: USB Serial support registered for generic\r\nusbcore: registered new interface driver usb_serial_simple\r\nusbserial: USB Serial support registered for carelink\r\nusbserial: USB Serial support registered for flashloader\r\nusbserial: USB Serial support registered for funsoft\r\nusbserial: USB Serial support registered for google\r\nusbserial: USB Serial support registered for hp4x\r\nusbserial: USB Serial support registered for kaufmann\r\nusbserial: USB Serial support registered for libtransistor\r\nusbserial: USB Serial support registered for moto_modem\r\nusbserial: USB Serial support registered for motorola_tetra\r\nusbserial: USB Serial support registered for nokia\r\nusbserial: USB Serial support registered for novatel_gps\r\nusbserial: USB Serial support registered for siemens_mpi\r\nusbserial: USB Serial support registered for suunto\r\nusbserial: USB Serial support registered for vivopay\r\nusbserial: USB Serial support registered for zio\r\nULPI transceiver vendor/product ID 0x0451/0x1507\r\nFound TI TUSB1210 ULPI transceiver.\r\nUL"
+    },
+    {
+      "at_s": 92.812,
+      "UTC": "2026-10-31T07:21:32.672422+00:00",
+      "event": "RX",
+      "bytes": 241,
+      "cumulative_bytes": 23680,
+      "text": "PI integrity check: passed.\r\nci_hdrc ci_hdrc.0: EHCI Host Controller\r\nci_hdrc ci_hdrc.0: new USB bus registered, assigned bus number 1\r\nci_hdrc ci_hdrc.0: USB 2.0 started, EHCI 1.00\r\nhub 1-0:1.0: USB hub found\r\nhub 1-0:1.0: 1 port detected\r\n"
+    },
+    {
+      "at_s": 93.406,
+      "UTC": "2026-10-31T07:21:33.275496+00:00",
+      "event": "RX",
+      "bytes": 116,
+      "cumulative_bytes": 23796,
+      "text": "\r\n\r\nU-Boot 2024.01 (May 14 2024 - 03:31:48 +0000)\r\n\r\nCPU:   Zynq 7z020\r\nSilicon: v3.1\r\nDRAM:  ECC disabled 512 MiB\r\n"
+    },
+    {
+      "at_s": 93.609,
+      "UTC": "2026-10-31T07:21:33.478177+00:00",
+      "event": "RX",
+      "bytes": 501,
+      "cumulative_bytes": 24297,
+      "text": "Core:  22 devices, 16 uclasses, devicetree: board\r\nFlash: 0 Bytes\r\nNAND:  0 MiB\r\nMMC:   mmc@e0100000: 0\r\nLoading Environment from FAT... *** Error - No Valid Environment Area found\r\n*** Warning - bad env area, using default environment\r\n\r\nIn:    serial@e0000000\r\nOut:   serial@e0000000\r\nErr:   serial@e0000000\r\nNet:   \r\nZYNQ GEM: e000b000, mdio bus e000b000, phyaddr 0, interface rgmii-id\r\n\r\nError: ethernet@e000b000 No valid MAC address found.\r\nNo ethernet found.\r\n\r\nHit any key to stop autoboot:  2 "
+    },
+    {
+      "at_s": 94.625,
+      "UTC": "2026-10-31T07:21:34.488239+00:00",
+      "event": "RX",
+      "bytes": 6,
+      "cumulative_bytes": 24303,
+      "text": "\b\b\b 1 "
+    },
+    {
+      "at_s": 95.64,
+      "UTC": "2026-10-31T07:21:35.505515+00:00",
+      "event": "RX",
+      "bytes": 125,
+      "cumulative_bytes": 24428,
+      "text": "\b\b\b 0 \r\nswitch to partitions #0, OK\r\nmmc0 is current device\r\nScanning mmc 0:1...\r\nFound U-Boot script /boot.scr\r\n3473 bytes r"
+    },
+    {
+      "at_s": 95.843,
+      "UTC": "2026-10-31T07:21:35.706547+00:00",
+      "event": "RX",
+      "bytes": 99,
+      "cumulative_bytes": 24527,
+      "text": "ead in 12 ms (282.2 KiB/s)\r\n## Executing script at 03000000\r\nTrying to load boot images from mmc0\r\n"
+    },
+    {
+      "at_s": 96.468,
+      "UTC": "2026-10-31T07:21:36.327860+00:00",
+      "event": "RX",
+      "bytes": 607,
+      "cumulative_bytes": 25134,
+      "text": "7147780 bytes read in 723 ms (9.4 MiB/s)\r\n## Loading kernel from FIT Image at 10000000 ...\r\n   Using 'conf-1' configuration\r\n   Verifying Hash Integrity ... OK\r\n   Trying 'kernel-0' kernel subimage\r\n     Description:  Linux Kernel\r\n     Type:         Kernel Image\r\n     Compression:  uncompressed\r\n     Data Start:   0x100000d4\r\n     Data Size:    7126224 Bytes = 6.8 MiB\r\n     Architecture: ARM\r\n     OS:           Linux\r\n     Load Address: 0x00080000\r\n     Entry Point:  0x00080000\r\n     Hash algo:    sha1\r\n     Hash value:   8bfc093b06b7d38a04f6c3c2978374b94e53c093\r\n   Verifying Hash Integrity ... sha1"
+    },
+    {
+      "at_s": 96.672,
+      "UTC": "2026-10-31T07:21:36.529447+00:00",
+      "event": "RX",
+      "bytes": 103,
+      "cumulative_bytes": 25237,
+      "text": "+ OK\r\n## Loading fdt from FIT Image at 10000000 ...\r\n   Using 'conf-1' configuration\r\n   Verifying Hash"
+    },
+    {
+      "at_s": 96.875,
+      "UTC": "2026-10-31T07:21:36.730542+00:00",
+      "event": "RX",
+      "bytes": 604,
+      "cumulative_bytes": 25841,
+      "text": " Integrity ... OK\r\n   Trying 'fdt-0' fdt subimage\r\n     Description:  Flattened Device Tree blob\r\n     Type:         Flat Device Tree\r\n     Compression:  uncompressed\r\n     Data Start:   0x106cbe98\r\n     Data Size:    19738 Bytes = 19.3 KiB\r\n     Architecture: ARM\r\n     Hash algo:    sha1\r\n     Hash value:   e2261b986180d301f33459eb0193258edf7ff558\r\n   Verifying Hash Integrity ... sha1+ OK\r\n   Booting using the fdt blob at 0x106cbe98\r\nWorking FDT set to 106cbe98\r\n   Loading Kernel Image\r\n   Loading Device Tree to 1dabb000, end 1dac2d19 ... OK\r\nWorking FDT set to 1dabb000\r\n\r\nStarting kernel ...\r\n\r\n"
+    },
+    {
+      "at_s": 97.468,
+      "UTC": "2026-10-31T07:21:37.338798+00:00",
+      "event": "RX",
+      "bytes": 1221,
+      "cumulative_bytes": 27062,
+      "text": "Booting Linux on physical CPU 0x0\r\nLinux version 6.6.10-xilinx-v2024.1-g3c0eca68c652 (oe-user@oe-host) (arm-xilinx-linux-gnueabi-gcc (GCC) 12.2.0, GNU ld (GNU Binutils) 2.39.0.20220819) #1 SMP PREEMPT Sat Apr 27 05:22:24 UTC 2024\r\nCPU: ARMv7 Processor [413fc090] revision 0 (ARMv7), cr=18c5387d\r\nCPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache\r\nOF: fdt: Machine model: xlnx,zynq-7000\r\nMemory policy: Data cache writealloc\r\ncma: Reserved 128 MiB at 0x15800000 on node -1\r\nZone ranges:\r\n  Normal   [mem 0x0000000000000000-0x000000001fffffff]\r\n  HighMem  empty\r\nMovable zone start for each node\r\nEarly memory node ranges\r\n  node   0: [mem 0x0000000000000000-0x000000001fffffff]\r\nInitmem setup node 0 [mem 0x0000000000000000-0x000000001fffffff]\r\npercpu: Embedded 13 pages/cpu s23956 r8192 d21100 u53248\r\nKernel command line: root=/dev/mmcblk0p2 rw earlyprintk rootfstype=ext4 rootwait devtmpfs.mount=1 uio_pdrv_genirq.of_id=\"generic-uio\" clk_ignore_unused\r\nUnknown kernel command line parameters \"earlyprintk\", will be passed to user space.\r\nDentry cache hash table entries: 65536 (order: 6, 262144 bytes, linear)\r\nInode-cache hash table entries: 32768 (order: 5, 131072 bytes, linear)\r\nBuilt 1 zonel"
+    },
+    {
+      "at_s": 97.672,
+      "UTC": "2026-10-31T07:21:37.539988+00:00",
+      "event": "RX",
+      "bytes": 2393,
+      "cumulative_bytes": 29455,
+      "text": "ists, mobility grouping on.  Total pages: 129920\r\nmem auto-init: stack:all(zero), heap alloc:off, heap free:off\r\nMemory: 371368K/524288K available (10240K kernel code, 334K rwdata, 2860K rodata, 1024K init, 194K bss, 21848K reserved, 131072K cma-reserved, 0K highmem)\r\nSLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1\r\nrcu: Preemptible hierarchical RCU implementation.\r\nrcu: \tRCU event tracing is enabled.\r\nrcu: \tRCU restricting CPUs from NR_CPUS=4 to nr_cpu_ids=2.\r\n\tTrampoline variant of Tasks RCU enabled.\r\n\tTracing variant of Tasks RCU enabled.\r\nrcu: RCU calculated value of scheduler-enlistment delay is 10 jiffies.\r\nrcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2\r\nNR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16\r\nefuse mapped to (ptrval)\r\nslcr mapped to (ptrval)\r\nGIC physical location is 0xf8f01000\r\nL2C: platform modifies aux control register: 0x72360000 -> 0x72760000\r\nL2C: DT/platform modifies aux control register: 0x72360000 -> 0x72760000\r\nL2C-310 erratum 769419 enabled\r\nL2C-310 enabling early BRESP for Cortex-A9\r\nL2C-310 full line of zeros enabled for Cortex-A9\r\nL2C-310 ID prefetch enabled, offset 1 lines\r\nL2C-310 dynamic clock gating enabled, standby mode enabled\r\nL2C-310 cache controller enabled, 8 ways, 512 kB\r\nL2C-310: CACHE_ID 0x410000c8, AUX_CTRL 0x76760001\r\nrcu: srcu_init: Setting srcu_struct sizes based on contention.\r\nzynq_clock_init: clkc starts at (ptrval)\r\nZynq clock init\r\nsched_clock: 64 bits at 163MHz, resolution 6ns, wraps every 4398046511101ns\r\nclocksource: arm_global_timer: mask: 0xffffffffffffffff max_cycles: 0x257a3bfb55, max_idle_ns: 440795207830 ns\r\nSwitching to timer-based delay loop, resolution 6ns\r\nConsole: colour dummy device 80x30\r\nprintk: console [tty0] enabled\r\nCalibrating delay loop (skipped), value calculated using timer frequency.. 325.00 BogoMIPS (lpj=1625000)\r\nCPU: Testing write buffer coherency: ok\r\nCPU0: Spectre v2: using BPIALL workaround\r\npid_max: default: 32768 minimum: 301\r\nMount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)\r\nMountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)\r\nCPU0: thread -1, cpu 0, socket 0, mpidr 80000000\r\nRCU Tasks: Setting shift to 1 and lim to 1 rcu_task_cb_adjust=1.\r\nRCU Tasks Trace: Setting shift to 1 and lim to 1 rcu_task_cb_adjust=1.\r\nSetting up static identity map for 0x100000 - 0x100060\r\nrcu: Hierarchical SRCU implementation"
+    },
+    {
+      "at_s": 97.875,
+      "UTC": "2026-10-31T07:21:37.741236+00:00",
+      "event": "RX",
+      "bytes": 1603,
+      "cumulative_bytes": 31058,
+      "text": ".\r\nrcu: \tMax phase no-delay instances is 1000.\r\nsmp: Bringing up secondary CPUs ...\r\nCPU1: thread -1, cpu 1, socket 0, mpidr 80000001\r\nCPU1: Spectre v2: using BPIALL workaround\r\nsmp: Brought up 1 node, 2 CPUs\r\nSMP: Total of 2 processors activated (650.00 BogoMIPS).\r\nCPU: All CPU(s) started in SVC mode.\r\ndevtmpfs: initialized\r\nVFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4\r\nclocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns\r\nfutex hash table entries: 512 (order: 3, 32768 bytes, linear)\r\npinctrl core: initialized pinctrl subsystem\r\nNET: Registered PF_NETLINK/PF_ROUTE protocol family\r\nDMA: preallocated 256 KiB pool for atomic coherent allocations\r\nthermal_sys: Registered thermal governor 'step_wise'\r\ncpuidle: using governor menu\r\nplatform axi: Fixed dependency cycle(s) with /axi/interrupt-controller@f8f01000\r\namba f8801000.etb: Fixed dependency cycle(s) with /replicator/out-ports/port@1/endpoint\r\namba f8803000.tpiu: Fixed dependency cycle(s) with /replicator/out-ports/port@0/endpoint\r\namba f8804000.funnel: Fixed dependency cycle(s) with /replicator/in-ports/port/endpoint\r\namba f889c000.ptm: Fixed dependency cycle(s) with /axi/funnel@f8804000/in-ports/port@0/endpoint\r\namba f889d000.ptm: Fixed dependency cycle(s) with /axi/funnel@f8804000/in-ports/port@1/endpoint\r\nhw-breakpoint: found 5 (+1 reserved) breakpoint and 1 watchpoint registers.\r\nhw-breakpoint: maximum watchpoint size is 4 bytes.\r\ne0000000.serial: ttyPS0 at MMIO 0xe0000000 (irq = 26, base_baud = 6250000) is a xuartps\r\nprintk: console [ttyPS0] enabled\r\n"
+    },
+    {
+      "at_s": 98.093,
+      "UTC": "2026-10-31T07:21:37.956419+00:00",
+      "event": "RX",
+      "bytes": 34,
+      "cumulative_bytes": 31092,
+      "text": "raid6: int32x8  gen()   130 MB/s\r\n"
+    },
+    {
+      "at_s": 98.297,
+      "UTC": "2026-10-31T07:21:38.157974+00:00",
+      "event": "RX",
+      "bytes": 34,
+      "cumulative_bytes": 31126,
+      "text": "raid6: int32x4  gen()   132 MB/s\r\n"
+    },
+    {
+      "at_s": 98.5,
+      "UTC": "2026-10-31T07:21:38.358175+00:00",
+      "event": "RX",
+      "bytes": 34,
+      "cumulative_bytes": 31160,
+      "text": "raid6: int32x2  gen()   199 MB/s\r\n"
+    },
+    {
+      "at_s": 98.703,
+      "UTC": "2026-10-31T07:21:38.561165+00:00",
+      "event": "RX",
+      "bytes": 428,
+      "cumulative_bytes": 31588,
+      "text": "raid6: int32x1  gen()   177 MB/s\r\nraid6: using algorithm int32x2 gen() 199 MB/s\r\nraid6: .... xor() 121 MB/s, rmw enabled\r\nraid6: using intx1 recovery algorithm\r\nSCSI subsystem initialized\r\nusbcore: registered new interface driver usbfs\r\nusbcore: registered new interface driver hub\r\nusbcore: registered new device driver usb\r\nmc: Linux media interface: v0.10\r\nvideodev: Linux video capture interface: v2.00\r\npps_core: LinuxPPS A"
+    },
+    {
+      "at_s": 98.906,
+      "UTC": "2026-10-31T07:21:38.762326+00:00",
+      "event": "RX",
+      "bytes": 1592,
+      "cumulative_bytes": 33180,
+      "text": "PI ver. 1 registered\r\npps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>\r\nPTP clock support registered\r\nEDAC MC: Ver: 3.0.0\r\nFPGA manager framework\r\nAdvanced Linux Sound Architecture Driver Initialized.\r\nvgaarb: loaded\r\nclocksource: Switched to clocksource arm_global_timer\r\nNET: Registered PF_INET protocol family\r\nIP idents hash table entries: 8192 (order: 4, 65536 bytes, linear)\r\ntcp_listen_portaddr_hash hash table entries: 512 (order: 0, 4096 bytes, linear)\r\nTable-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)\r\nTCP established hash table entries: 4096 (order: 2, 16384 bytes, linear)\r\nTCP bind hash table entries: 4096 (order: 4, 65536 bytes, linear)\r\nTCP: Hash tables configured (established 4096 bind 4096)\r\nUDP hash table entries: 256 (order: 1, 8192 bytes, linear)\r\nUDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)\r\nNET: Registered PF_UNIX/PF_LOCAL protocol family\r\nRPC: Registered named UNIX socket transport module.\r\nRPC: Registered udp transport module.\r\nRPC: Registered tcp transport module.\r\nRPC: Registered tcp-with-tls transport module.\r\nRPC: Registered tcp NFSv4.1 backchannel transport module.\r\nPCI: CLS 0 bytes, default 64\r\narmv7-pmu f8891000.pmu: hw perfevents: no interrupt-affinity property, guessing.\r\nhw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available\r\nInitialise system trusted keyrings\r\nworkingset: timestamp_bits=14 max_order=17 bucket_order=3\r\nsquashfs: version 4.0 (2009/01/31) Phillip Lougher\r\njffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.\r\n"
+    },
+    {
+      "at_s": 99.093,
+      "UTC": "2026-10-31T07:21:38.963327+00:00",
+      "event": "RX",
+      "bytes": 282,
+      "cumulative_bytes": 33462,
+      "text": "xor: measuring software checksum speed\r\n   arm4regs        :  1046 MB/sec\r\n   8regs           :   787 MB/sec\r\n   32regs          :   833 MB/sec\r\nxor: using function: arm4regs (1046 MB/sec)\r\nKey type asymmetric registered\r\nAsymmetric key parser 'x509' registered\r\nio scheduler mq-dea"
+    },
+    {
+      "at_s": 99.297,
+      "UTC": "2026-10-31T07:21:39.166720+00:00",
+      "event": "RX",
+      "bytes": 609,
+      "cumulative_bytes": 34071,
+      "text": "dline registered\r\nio scheduler kyber registered\r\nio scheduler bfq registered\r\nzynq-pinctrl 700.pinctrl: zynq pinctrl initialized\r\ndma-pl330 f8003000.dma-controller: Loaded driver for PL330 DMAC-241330\r\ndma-pl330 f8003000.dma-controller: \tDBUFF-128x8bytes Num_Chans-8 Num_Peri-4 Num_Events-16\r\nbrd: module loaded\r\nloop: module loaded\r\nspi_master spi0: cannot find modalias for /axi/spi@e000d000/flash@0\r\nspi_master spi0: Failed to create SPI device for /axi/spi@e000d000/flash@0\r\ntun: Universal TUN/TAP device driver, 1.6\r\nCAN device driver interface\r\nmacb e000b000.ethernet: invalid hw address, using random\r\n"
+    },
+    {
+      "at_s": 100.531,
+      "UTC": "2026-10-31T07:21:40.400554+00:00",
+      "event": "CAPTURE_STILL_LISTENING",
+      "cumulative_bytes": 34071
+    }
+  ],
+  "TX_bytes": 0,
+  "reset_DTR_RTS_or_baud_changed": false,
+  "new_model_forwards": 0,
+  "source_experiment_restarted": false
+}

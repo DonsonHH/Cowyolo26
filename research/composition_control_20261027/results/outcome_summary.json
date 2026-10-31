@@ -1,0 +1,122 @@
+{
+  "conditions": [
+    {
+      "name": "mixed_seed26",
+      "arm": "mixed",
+      "seed": 26,
+      "AP50": 0.98281,
+      "AP50_95": 0.77185,
+      "source_down": 7,
+      "source_up": 0,
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "batches": 1850,
+      "steps": 1064,
+      "checkpoint_sha256": "18d5c7e813f4af21268bae89b8cd48a50ed5f243c8ad5490300b21bb676a08e3"
+    },
+    {
+      "name": "real_repeated_seed26",
+      "arm": "real_repeated",
+      "seed": 26,
+      "AP50": 0.98812,
+      "AP50_95": 0.78761,
+      "source_down": 1,
+      "source_up": 0,
+      "TP": 0,
+      "FP": 0,
+      "FN": 6,
+      "batches": 1850,
+      "steps": 1064,
+      "checkpoint_sha256": "5c3437ee3b077ae68172cbf041a9233f70eecc5915decdfbd25a7b10e7e113e3"
+    },
+    {
+      "name": "mixed_seed27",
+      "arm": "mixed",
+      "seed": 27,
+      "AP50": 0.98524,
+      "AP50_95": 0.7744,
+      "source_down": 7,
+      "source_up": 0,
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "batches": 1850,
+      "steps": 1064,
+      "checkpoint_sha256": "1d16f31c20a62d2e20ba7202c786335657b460e53077a8791c9c90c4917639de"
+    },
+    {
+      "name": "real_repeated_seed27",
+      "arm": "real_repeated",
+      "seed": 27,
+      "AP50": 0.98547,
+      "AP50_95": 0.78421,
+      "source_down": 0,
+      "source_up": 0,
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "batches": 1850,
+      "steps": 1064,
+      "checkpoint_sha256": "92663466e7d806c1e23a65fbfc9e62df4b9c39f9ed1f146db6c0ee834836bf14"
+    },
+    {
+      "name": "mixed_seed28",
+      "arm": "mixed",
+      "seed": 28,
+      "AP50": 0.98099,
+      "AP50_95": 0.76153,
+      "source_down": 6,
+      "source_up": 0,
+      "TP": 2,
+      "FP": 0,
+      "FN": 4,
+      "batches": 1850,
+      "steps": 1064,
+      "checkpoint_sha256": "b8b963e8f882e55a0252ab7e21ae287c85e1913de8997345984a1a2d9b112c0b"
+    },
+    {
+      "name": "real_repeated_seed28",
+      "arm": "real_repeated",
+      "seed": 28,
+      "AP50": 0.98321,
+      "AP50_95": 0.78683,
+      "source_down": 0,
+      "source_up": 0,
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "batches": 1850,
+      "steps": 1064,
+      "checkpoint_sha256": "7c5e42655713d1b699490f789ba4940c67eb3741449d1798fce97983a3b5ecae"
+    }
+  ],
+  "AP_means": {
+    "mixed": 0.76926,
+    "real_repeated": 0.7862166666666667
+  },
+  "paired_AP_differences": [
+    {
+      "seed": 26,
+      "real_minus_mixed_AP50_95": 0.015759999999999996
+    },
+    {
+      "seed": 27,
+      "real_minus_mixed_AP50_95": 0.009809999999999985
+    },
+    {
+      "seed": 28,
+      "real_minus_mixed_AP50_95": 0.02529999999999999
+    }
+  ],
+  "mean_paired_AP_difference": 0.016956666666666658,
+  "unit": "Same development validation370images reused across models.3seeds are training replicates, not independent farms/cattle/event samples.",
+  "recording_retry_state_equality": {
+    "failed_record_job": "129841_0",
+    "recording_fixed_job": "129842_0",
+    "state_tensors_compared": 708,
+    "mismatched_state_tensors": [],
+    "all_checkpoint_state_tensors_bitwise_equal": true,
+    "scope": "Reproducibility check of retained10epoch run, not a method/seed selection gate"
+  }
+}

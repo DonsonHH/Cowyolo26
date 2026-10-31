@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "scope": "data audit, downloaded sample integrity, terminal Slurm jobs, weights, replay artifacts, document/code structure; not an independent accuracy or FPGA deployment certificate",
+  "errors": [],
+  "raw_archive_sha256": "53c437eb2e383092967d218655afac74a20403850ab9dde1d136a570d948362c",
+  "bundle_sha256": "bb7c4f1c8f0220a17f2d73d5e32e07df028af73e0c2634557c691be144052feb",
+  "model_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+  "required_successful_job_ids": [
+    "129649",
+    "129655",
+    "129657",
+    "129658",
+    "129659",
+    "129660",
+    "129661",
+    "129662",
+    "129663",
+    "129664",
+    "129666",
+    "129667"
+  ],
+  "exported_video_readability": {
+    "job_id": "129667",
+    "videos": [
+      {
+        "file": "cows2021_finetuned_dev.mp4",
+        "frame_count": 157,
+        "fps": 30.0,
+        "width": 1280.0,
+        "height": 720.0,
+        "first_frame_decodes": true,
+        "last_frame_decodes": true
+      },
+      {
+        "file": "multicam_finetuned_dev.mp4",
+        "frame_count": 2802,
+        "fps": 5.0,
+        "width": 1280.0,
+        "height": 720.0,
+        "first_frame_decodes": true,
+        "last_frame_decodes": true
+      }
+    ],
+    "scope": "exported first/last frame readability check; not full accuracy review"
+  },
+  "recorded_failed_attempts": [
+    "129650 dependency missing, repaired",
+    "129665 compute-node accounting lookup, repaired"
+  ],
+  "downloaded_video_samples": [
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/data/cows2021_samples/2020-03-08_12-52-23/RGB.avi",
+      "bytes": 39180792,
+      "sha256": "42ec5468667fc76be113447d2bfc57106eed9626fdee9585ac694b969e018ce7",
+      "open": true,
+      "width": 1280,
+      "height": 720,
+      "fps": 30.0,
+      "frames_reported": 158,
+      "duration_s": 5.266666666666667,
+      "seek_decode_samples": 6,
+      "fully_decoded_frames": 158,
+      "decode_count_matches_header": true,
+      "contact_sheet": "2020-03-08_12-52-23_RGB.jpg"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/data/cows2021_samples/2020-03-09_12-19-46/RGB.avi",
+      "bytes": 37293380,
+      "sha256": "ce359fc5ada04591561d5138cc2c0f5e0157f2743b7d074d923620cefa612ae4",
+      "open": true,
+      "width": 1280,
+      "height": 720,
+      "fps": 30.0,
+      "frames_reported": 157,
+      "duration_s": 5.233333333333333,
+      "seek_decode_samples": 6,
+      "fully_decoded_frames": 157,
+      "decode_count_matches_header": true,
+      "contact_sheet": "2020-03-09_12-19-46_RGB.jpg"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+      "bytes": 260096040,
+      "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+      "open": true,
+      "width": 2560,
+      "height": 1440,
+      "fps": 25.0,
+      "frames_reported": 14009,
+      "duration_s": 560.36,
+      "seek_decode_samples": 6,
+      "fully_decoded_frames": 14009,
+      "decode_count_matches_header": true,
+      "contact_sheet": "camera1_2023-08-14T12-54-48.jpg"
+    }
+  ],
+  "source_video_decode_warning": "H.264 macroblock warning retained; matching decoded count is not a bitstream corruption guarantee",
+  "counting_status": "development predictions, independent event ground truth not yet completed",
+  "identity_model_status": "not trained in this phase",
+  "pynq_board_status": "not deployed in this phase",
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\data_audit_20261026\\README.md",
+      "bytes": 3595,
+      "sha256": "3cb9a32fba4168234008477a3c82f84367add70319e17f6a5b840ba82430cc48"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\data_audit_20261026\\Review与复现状态.md",
+      "bytes": 5970,
+      "sha256": "9669aa14a5b90d6fc72d7a72eb877283c80d0828e18b2feaec859f35a288f521"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\data_audit_20261026\\数据集审计与基线进展.md",
+      "bytes": 12329,
+      "sha256": "8da944b569d9d9d79273c6d0d8fb28cb6c043af3c27308973a60d8087a335bcd"
+    }
+  ]
+}

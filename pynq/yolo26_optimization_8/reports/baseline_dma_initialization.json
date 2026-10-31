@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "reason": "Fresh loaded DMA had no completed transfer; frozen O7 native submit requires idle. Prime once outside init/frame measurement.",
+  "before": {
+    "tx": "0x0",
+    "rx": "0x0",
+    "txcontrol": "0x10003",
+    "rxcontrol": "0x10003"
+  },
+  "after": {
+    "tx": "0x1002",
+    "rx": "0x1002",
+    "core": "0x2",
+    "error": "0x0"
+  },
+  "input": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "actual": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "programming": false
+}

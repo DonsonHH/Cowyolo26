@@ -1,0 +1,59 @@
+{
+  "training_crop": "data/2023Aug15/049/00011_1.jpg",
+  "Conv": "/encoder/encoder.0/encoder.0.1/block/block.0/block.0.0/Conv",
+  "attributes": {
+    "dilations": [
+      1,
+      1
+    ],
+    "group": 16,
+    "kernel_shape": [
+      3,
+      3
+    ],
+    "pads": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "strides": [
+      2,
+      2
+    ]
+  },
+  "input_relative_RMSE": 0.11784331952847993,
+  "bias_relative_RMSE": 0.007539251651188117,
+  "controls": [
+    {
+      "condition": "float_reconstruction",
+      "relative_RMSE_to_float": 2.0388056951094282e-07,
+      "max_difference_to_actual_QDQ": 18.568970429253525
+    },
+    {
+      "condition": "only_actual_quantised_input",
+      "relative_RMSE_to_float": 0.5799213596884775,
+      "max_difference_to_actual_QDQ": 0.12226684578826763
+    },
+    {
+      "condition": "only_quantised_weights",
+      "relative_RMSE_to_float": 0.01724404584348284,
+      "max_difference_to_actual_QDQ": 18.51697769019173
+    },
+    {
+      "condition": "only_quantised_bias",
+      "relative_RMSE_to_float": 0.006619896941649845,
+      "max_difference_to_actual_QDQ": 18.581551934134907
+    },
+    {
+      "condition": "all_quantised_reconstruction",
+      "relative_RMSE_to_float": 0.5798893916561766,
+      "max_difference_to_actual_QDQ": 2.5554042295539148e-06
+    },
+    {
+      "condition": "actual_QDQ_output",
+      "relative_RMSE_to_float": 0.5798893835071601,
+      "max_difference_to_actual_QDQ": 0.0
+    }
+  ]
+}

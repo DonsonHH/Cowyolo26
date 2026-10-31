@@ -1,0 +1,16 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+   130518_[3-14%3]|     4gpu|    cow-lowres-factorial| PENDING|      0:00|     15:00|(JobArrayTaskLimit)
+          130518_2|     4gpu|    cow-lowres-factorial| RUNNING|      1:53|     15:00|gpu02
+          130518_1|     4gpu|    cow-lowres-factorial| RUNNING|      1:53|     15:00|gpu02
+          130518_0|     4gpu|    cow-lowres-factorial| RUNNING|      1:53|     15:00|gpu02
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+130518_0|cow-lowres-factorial|RUNNING|0:0|00:01:53|
+130518_0.batch|batch|RUNNING|0:0|00:01:53|
+130518_1|cow-lowres-factorial|RUNNING|0:0|00:01:53|
+130518_1.batch|batch|RUNNING|0:0|00:01:53|
+130518_2|cow-lowres-factorial|RUNNING|0:0|00:01:53|
+130518_2.batch|batch|RUNNING|0:0|00:01:53|
+130518_[3-14%3]|cow-lowres-factorial|PENDING|0:0|00:00:00|
+PROGRESS S192_plain_seed26 {'condition': 'S192_plain_seed26', 'epoch': 3, 'batches': 639, 'optimizer_steps': 479, 'elapsed_s': 99.741879809}
+PROGRESS S192_plain_seed27 {'condition': 'S192_plain_seed27', 'epoch': 3, 'batches': 639, 'optimizer_steps': 479, 'elapsed_s': 97.564110151}
+PROGRESS S192_plain_seed28 {'condition': 'S192_plain_seed28', 'epoch': 3, 'batches': 639, 'optimizer_steps': 479, 'elapsed_s': 95.713598036}

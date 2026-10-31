@@ -1,0 +1,86 @@
+{
+  "status": "ALL540_INPUT_TENSORS1080_FEATURES24000_RETRIEVAL_SCORES_THRESHOLDS_AND960_EVALUATION_DECISIONS_RECOMPUTED",
+  "created_UTC": "2026-10-30T08:14:20.940352+00:00",
+  "input_tensor_hashes_checked": 540,
+  "feature_vectors_checked": 1080,
+  "query_retrieval_rows_checked": 720,
+  "registered_identity_score_cells_checked": 24000,
+  "evaluation_decisions_checked": 960,
+  "maximum_double_normalization_difference": 2.9718404237488727e-08,
+  "maximum_independent_score_difference": 9.992007221626409e-16,
+  "both_thresholds_frozen_before_evaluation_feature_generation": true,
+  "calibration": [
+    {
+      "model": "B_ImageNet_letterbox",
+      "threshold": 0.8831211588802654,
+      "known_C_W": [
+        16,
+        5
+      ],
+      "unknown_FA": 3
+    },
+    {
+      "model": "C_trained_seed26",
+      "threshold": 0.845125353865119,
+      "known_C_W": [
+        17,
+        7
+      ],
+      "unknown_FA": 3
+    }
+  ],
+  "outcomes": [
+    {
+      "model": "B_ImageNet_letterbox",
+      "policy": "original_MultiCam",
+      "known_C_W_U": [
+        26,
+        6,
+        88
+      ],
+      "unknown_FA": 9,
+      "known_Top1": 69,
+      "known_Top5": 106
+    },
+    {
+      "model": "B_ImageNet_letterbox",
+      "policy": "Cows2021_calibrated",
+      "known_C_W_U": [
+        37,
+        11,
+        72
+      ],
+      "unknown_FA": 20,
+      "known_Top1": 69,
+      "known_Top5": 106
+    },
+    {
+      "model": "C_trained_seed26",
+      "policy": "original_MultiCam",
+      "known_C_W_U": [
+        30,
+        21,
+        69
+      ],
+      "unknown_FA": 21,
+      "known_Top1": 65,
+      "known_Top5": 100
+    },
+    {
+      "model": "C_trained_seed26",
+      "policy": "Cows2021_calibrated",
+      "known_C_W_U": [
+        30,
+        21,
+        69
+      ],
+      "unknown_FA": 20,
+      "known_Top1": 65,
+      "known_Top5": 100
+    }
+  ],
+  "per_identity_bootstrap_all4_conditions_reproduced": true,
+  "new_model_forwards": 0,
+  "new_training_updates": 0,
+  "whole_goal_complete": false
+}

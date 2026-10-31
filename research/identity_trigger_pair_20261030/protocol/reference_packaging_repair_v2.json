@@ -1,0 +1,15 @@
+{
+  "created_UTC": "2026-10-31T07:38:57.982181+00:00",
+  "status": "MISSING_FROZEN_TRACKER_BATCH_ARTIFACT_FOUND_BEFORE_MODEL_FORWARD",
+  "failed_job": "130922",
+  "terminal": "FAILED1:0",
+  "failure_layer": "Pre-replay provenance file availability check",
+  "missing_file": {
+    "file": "tools/tracker_replay.slurm",
+    "sha256": "cdea2daddfaef54bffe902c243902566824e617f639173bb54a4865c30c3e9fd"
+  },
+  "repair": "Transfer same already-frozen artifact; no code, inputs, tolerance, model or threshold change",
+  "actual_model_forwards_in_failed_job": 0,
+  "first_failure_logs_preserved": "evidence/verification_status01_20261031.txt",
+  "original_board_experiment_restarted": false
+}

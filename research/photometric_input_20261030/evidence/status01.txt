@@ -1,0 +1,11 @@
+             JOBID|PARTITION|                        NAME|   STATE|      TIME|NODELIST(REASON)
+            130611|       cu|             photometric-192| RUNNING|      1:01|cu03
+JobID|State|ExitCode|Elapsed|MaxRSS
+130611|RUNNING|0:0|00:01:01|
+130611.batch|RUNNING|0:0|00:01:01|
+{"condition": "none", "validation_done": 1, "forwards": {"FP32": 1, "QDQ": 1}}
+{"condition": "none", "validation_done": 501, "forwards": {"FP32": 501, "QDQ": 501}}
+{"condition": "none", "validation_done": 1001, "forwards": {"FP32": 1001, "QDQ": 1001}}
+{"condition": "none", "validation_done": 1501, "forwards": {"FP32": 1501, "QDQ": 1501}}
+[0;93m2026-10-30 02:49:14.522846289 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer 'onnx::Tile_789'. It is not used by any node and should be removed from the model.[m
+[0;93m2026-10-30 02:49:14.522876035 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer '/model.23/Constant_17_output_0'. It is not used by any node and should be removed from the model.[m

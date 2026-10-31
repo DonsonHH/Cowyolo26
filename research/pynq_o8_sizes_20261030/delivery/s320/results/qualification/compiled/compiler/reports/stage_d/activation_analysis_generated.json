@@ -1,0 +1,800 @@
+{
+  "fusable_convs": 44,
+  "fusions": {
+    "0": {
+      "output": "/model.0/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.21773552894592285,
+      "zp": -127,
+      "remove_nodes": [
+        "/model.0/conv/Conv_output_0_DequantizeLinear",
+        "/model.0/act/Sigmoid",
+        "/model.0/act/Mul",
+        "/model.0/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "1": {
+      "output": "/model.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.29729562997817993,
+      "zp": -127,
+      "remove_nodes": [
+        "/model.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.1/act/Sigmoid",
+        "/model.1/act/Mul",
+        "/model.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "3": {
+      "output": "/model.2/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.009530235081911087,
+      "zp": -99,
+      "remove_nodes": [
+        "/model.2/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.2/m.0/cv1/act/Sigmoid",
+        "/model.2/m.0/cv1/act/Mul",
+        "/model.2/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "5": {
+      "output": "/model.2/cv2/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.07501181960105896,
+      "zp": -124,
+      "remove_nodes": [
+        "/model.2/cv2/conv/Conv_output_0_DequantizeLinear",
+        "/model.2/cv2/act/Sigmoid",
+        "/model.2/cv2/act/Mul",
+        "/model.2/cv2/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "6": {
+      "output": "/model.3/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.03345050662755966,
+      "zp": -120,
+      "remove_nodes": [
+        "/model.3/conv/Conv_output_0_DequantizeLinear",
+        "/model.3/act/Sigmoid",
+        "/model.3/act/Mul",
+        "/model.3/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "8": {
+      "output": "/model.4/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.01829800382256508,
+      "zp": -113,
+      "remove_nodes": [
+        "/model.4/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.4/m.0/cv1/act/Sigmoid",
+        "/model.4/m.0/cv1/act/Mul",
+        "/model.4/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "10": {
+      "output": "/model.4/cv2/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.019313588738441467,
+      "zp": -114,
+      "remove_nodes": [
+        "/model.4/cv2/conv/Conv_output_0_DequantizeLinear",
+        "/model.4/cv2/act/Sigmoid",
+        "/model.4/cv2/act/Mul",
+        "/model.4/cv2/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "11": {
+      "output": "/model.5/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.024035803973674774,
+      "zp": -116,
+      "remove_nodes": [
+        "/model.5/conv/Conv_output_0_DequantizeLinear",
+        "/model.5/act/Sigmoid",
+        "/model.5/act/Mul",
+        "/model.5/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "13": {
+      "output": "/model.6/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.012718262150883675,
+      "zp": -106,
+      "remove_nodes": [
+        "/model.6/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.6/m.0/cv1/act/Sigmoid",
+        "/model.6/m.0/cv1/act/Mul",
+        "/model.6/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "15": {
+      "output": "/model.6/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.024238567799329758,
+      "zp": -117,
+      "remove_nodes": [
+        "/model.6/m.0/m/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.6/m.0/m/m.0/cv1/act/Sigmoid",
+        "/model.6/m.0/m/m.0/cv1/act/Mul",
+        "/model.6/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "17": {
+      "output": "/model.6/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.024851595982909203,
+      "zp": -117,
+      "remove_nodes": [
+        "/model.6/m.0/m/m.1/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.6/m.0/m/m.1/cv1/act/Sigmoid",
+        "/model.6/m.0/m/m.1/cv1/act/Mul",
+        "/model.6/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "20": {
+      "output": "/model.6/cv2/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.020929748192429543,
+      "zp": -115,
+      "remove_nodes": [
+        "/model.6/cv2/conv/Conv_output_0_DequantizeLinear",
+        "/model.6/cv2/act/Sigmoid",
+        "/model.6/cv2/act/Mul",
+        "/model.6/cv2/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "21": {
+      "output": "/model.7/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.024946510791778564,
+      "zp": -117,
+      "remove_nodes": [
+        "/model.7/conv/Conv_output_0_DequantizeLinear",
+        "/model.7/act/Sigmoid",
+        "/model.7/act/Mul",
+        "/model.7/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "23": {
+      "output": "/model.8/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.015068026259541512,
+      "zp": -110,
+      "remove_nodes": [
+        "/model.8/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.8/m.0/cv1/act/Sigmoid",
+        "/model.8/m.0/cv1/act/Mul",
+        "/model.8/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "25": {
+      "output": "/model.8/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.024216407909989357,
+      "zp": -117,
+      "remove_nodes": [
+        "/model.8/m.0/m/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.8/m.0/m/m.0/cv1/act/Sigmoid",
+        "/model.8/m.0/m/m.0/cv1/act/Mul",
+        "/model.8/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "27": {
+      "output": "/model.8/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.026443632319569588,
+      "zp": -117,
+      "remove_nodes": [
+        "/model.8/m.0/m/m.1/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.8/m.0/m/m.1/cv1/act/Sigmoid",
+        "/model.8/m.0/m/m.1/cv1/act/Mul",
+        "/model.8/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "30": {
+      "output": "/model.8/cv2/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.02547437511384487,
+      "zp": -117,
+      "remove_nodes": [
+        "/model.8/cv2/conv/Conv_output_0_DequantizeLinear",
+        "/model.8/cv2/act/Sigmoid",
+        "/model.8/cv2/act/Mul",
+        "/model.8/cv2/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "37": {
+      "output": "/model.10/m/m.0/ffn/ffn.0/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.019502298906445503,
+      "zp": -114,
+      "remove_nodes": [
+        "/model.10/m/m.0/ffn/ffn.0/conv/Conv_output_0_DequantizeLinear",
+        "/model.10/m/m.0/ffn/ffn.0/act/Sigmoid",
+        "/model.10/m/m.0/ffn/ffn.0/act/Mul",
+        "/model.10/m/m.0/ffn/ffn.0/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "41": {
+      "output": "/model.13/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.013701080344617367,
+      "zp": -108,
+      "remove_nodes": [
+        "/model.13/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.13/m.0/cv1/act/Sigmoid",
+        "/model.13/m.0/cv1/act/Mul",
+        "/model.13/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "43": {
+      "output": "/model.13/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.015492938458919525,
+      "zp": -110,
+      "remove_nodes": [
+        "/model.13/m.0/m/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.13/m.0/m/m.0/cv1/act/Sigmoid",
+        "/model.13/m.0/m/m.0/cv1/act/Mul",
+        "/model.13/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "45": {
+      "output": "/model.13/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.01838303729891777,
+      "zp": -113,
+      "remove_nodes": [
+        "/model.13/m.0/m/m.1/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.13/m.0/m/m.1/cv1/act/Sigmoid",
+        "/model.13/m.0/m/m.1/cv1/act/Mul",
+        "/model.13/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "50": {
+      "output": "/model.16/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.00806449819356203,
+      "zp": -93,
+      "remove_nodes": [
+        "/model.16/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.16/m.0/cv1/act/Sigmoid",
+        "/model.16/m.0/cv1/act/Mul",
+        "/model.16/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "52": {
+      "output": "/model.16/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.024407759308815002,
+      "zp": -117,
+      "remove_nodes": [
+        "/model.16/m.0/m/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.16/m.0/m/m.0/cv1/act/Sigmoid",
+        "/model.16/m.0/m/m.0/cv1/act/Mul",
+        "/model.16/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "54": {
+      "output": "/model.16/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.015446492470800877,
+      "zp": -110,
+      "remove_nodes": [
+        "/model.16/m.0/m/m.1/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.16/m.0/m/m.1/cv1/act/Sigmoid",
+        "/model.16/m.0/m/m.1/cv1/act/Mul",
+        "/model.16/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "57": {
+      "output": "/model.16/cv2/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.022454213351011276,
+      "zp": -116,
+      "remove_nodes": [
+        "/model.16/cv2/conv/Conv_output_0_DequantizeLinear",
+        "/model.16/cv2/act/Sigmoid",
+        "/model.16/cv2/act/Mul",
+        "/model.16/cv2/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "59": {
+      "output": "/model.23/one2one_cv2.0/one2one_cv2.0.0/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.0896405503153801,
+      "zp": -125,
+      "remove_nodes": [
+        "/model.23/one2one_cv2.0/one2one_cv2.0.0/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv2.0/one2one_cv2.0.0/act/Sigmoid",
+        "/model.23/one2one_cv2.0/one2one_cv2.0.0/act/Mul",
+        "/model.23/one2one_cv2.0/one2one_cv2.0.0/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "61": {
+      "output": "/model.23/one2one_cv2.0/one2one_cv2.0.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.023047132417559624,
+      "zp": -116,
+      "remove_nodes": [
+        "/model.23/one2one_cv2.0/one2one_cv2.0.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv2.0/one2one_cv2.0.1/act/Sigmoid",
+        "/model.23/one2one_cv2.0/one2one_cv2.0.1/act/Mul",
+        "/model.23/one2one_cv2.0/one2one_cv2.0.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "62": {
+      "output": "/model.23/one2one_cv3.0/one2one_cv3.0.0/one2one_cv3.0.0.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.0434914156794548,
+      "zp": -122,
+      "remove_nodes": [
+        "/model.23/one2one_cv3.0/one2one_cv3.0.0/one2one_cv3.0.0.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv3.0/one2one_cv3.0.0/one2one_cv3.0.0.1/act/Sigmoid",
+        "/model.23/one2one_cv3.0/one2one_cv3.0.0/one2one_cv3.0.0.1/act/Mul",
+        "/model.23/one2one_cv3.0/one2one_cv3.0.0/one2one_cv3.0.0.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "66": {
+      "output": "/model.19/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.008802863769233227,
+      "zp": -96,
+      "remove_nodes": [
+        "/model.19/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.19/m.0/cv1/act/Sigmoid",
+        "/model.19/m.0/cv1/act/Mul",
+        "/model.19/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "68": {
+      "output": "/model.23/one2one_cv3.0/one2one_cv3.0.1/one2one_cv3.0.1.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.05335395410656929,
+      "zp": -123,
+      "remove_nodes": [
+        "/model.23/one2one_cv3.0/one2one_cv3.0.1/one2one_cv3.0.1.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv3.0/one2one_cv3.0.1/one2one_cv3.0.1.1/act/Sigmoid",
+        "/model.23/one2one_cv3.0/one2one_cv3.0.1/one2one_cv3.0.1.1/act/Mul",
+        "/model.23/one2one_cv3.0/one2one_cv3.0.1/one2one_cv3.0.1.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "69": {
+      "output": "/model.19/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.017448343336582184,
+      "zp": -112,
+      "remove_nodes": [
+        "/model.19/m.0/m/m.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.19/m.0/m/m.0/cv1/act/Sigmoid",
+        "/model.19/m.0/m/m.0/cv1/act/Mul",
+        "/model.19/m.0/m/m.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "72": {
+      "output": "/model.19/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.027518488466739655,
+      "zp": -118,
+      "remove_nodes": [
+        "/model.19/m.0/m/m.1/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.19/m.0/m/m.1/cv1/act/Sigmoid",
+        "/model.19/m.0/m/m.1/cv1/act/Mul",
+        "/model.19/m.0/m/m.1/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "75": {
+      "output": "/model.19/cv2/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.024993082508444786,
+      "zp": -117,
+      "remove_nodes": [
+        "/model.19/cv2/conv/Conv_output_0_DequantizeLinear",
+        "/model.19/cv2/act/Sigmoid",
+        "/model.19/cv2/act/Mul",
+        "/model.19/cv2/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "77": {
+      "output": "/model.23/one2one_cv2.1/one2one_cv2.1.0/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.03777117654681206,
+      "zp": -121,
+      "remove_nodes": [
+        "/model.23/one2one_cv2.1/one2one_cv2.1.0/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv2.1/one2one_cv2.1.0/act/Sigmoid",
+        "/model.23/one2one_cv2.1/one2one_cv2.1.0/act/Mul",
+        "/model.23/one2one_cv2.1/one2one_cv2.1.0/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "79": {
+      "output": "/model.23/one2one_cv2.1/one2one_cv2.1.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.014827133156359196,
+      "zp": -109,
+      "remove_nodes": [
+        "/model.23/one2one_cv2.1/one2one_cv2.1.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv2.1/one2one_cv2.1.1/act/Sigmoid",
+        "/model.23/one2one_cv2.1/one2one_cv2.1.1/act/Mul",
+        "/model.23/one2one_cv2.1/one2one_cv2.1.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "80": {
+      "output": "/model.23/one2one_cv3.1/one2one_cv3.1.0/one2one_cv3.1.0.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.0466475673019886,
+      "zp": -122,
+      "remove_nodes": [
+        "/model.23/one2one_cv3.1/one2one_cv3.1.0/one2one_cv3.1.0.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv3.1/one2one_cv3.1.0/one2one_cv3.1.0.1/act/Sigmoid",
+        "/model.23/one2one_cv3.1/one2one_cv3.1.0/one2one_cv3.1.0.1/act/Mul",
+        "/model.23/one2one_cv3.1/one2one_cv3.1.0/one2one_cv3.1.0.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "84": {
+      "output": "/model.22/m.0/m.0.0/cv1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.01956344023346901,
+      "zp": -114,
+      "remove_nodes": [
+        "/model.22/m.0/m.0.0/cv1/conv/Conv_output_0_DequantizeLinear",
+        "/model.22/m.0/m.0.0/cv1/act/Sigmoid",
+        "/model.22/m.0/m.0.0/cv1/act/Mul",
+        "/model.22/m.0/m.0.0/cv1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "85": {
+      "output": "/model.23/one2one_cv3.1/one2one_cv3.1.1/one2one_cv3.1.1.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.08192377537488937,
+      "zp": -125,
+      "remove_nodes": [
+        "/model.23/one2one_cv3.1/one2one_cv3.1.1/one2one_cv3.1.1.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv3.1/one2one_cv3.1.1/one2one_cv3.1.1.1/act/Sigmoid",
+        "/model.23/one2one_cv3.1/one2one_cv3.1.1/one2one_cv3.1.1.1/act/Mul",
+        "/model.23/one2one_cv3.1/one2one_cv3.1.1/one2one_cv3.1.1.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "91": {
+      "output": "/model.22/m.0/m.0.1/ffn/ffn.0/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.03763240948319435,
+      "zp": -121,
+      "remove_nodes": [
+        "/model.22/m.0/m.0.1/ffn/ffn.0/conv/Conv_output_0_DequantizeLinear",
+        "/model.22/m.0/m.0.1/ffn/ffn.0/act/Sigmoid",
+        "/model.22/m.0/m.0.1/ffn/ffn.0/act/Mul",
+        "/model.22/m.0/m.0.1/ffn/ffn.0/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "93": {
+      "output": "/model.22/cv2/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.05563215911388397,
+      "zp": -123,
+      "remove_nodes": [
+        "/model.22/cv2/conv/Conv_output_0_DequantizeLinear",
+        "/model.22/cv2/act/Sigmoid",
+        "/model.22/cv2/act/Mul",
+        "/model.22/cv2/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "94": {
+      "output": "/model.23/one2one_cv2.2/one2one_cv2.2.0/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.026249820366501808,
+      "zp": -117,
+      "remove_nodes": [
+        "/model.23/one2one_cv2.2/one2one_cv2.2.0/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv2.2/one2one_cv2.2.0/act/Sigmoid",
+        "/model.23/one2one_cv2.2/one2one_cv2.2.0/act/Mul",
+        "/model.23/one2one_cv2.2/one2one_cv2.2.0/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "96": {
+      "output": "/model.23/one2one_cv2.2/one2one_cv2.2.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.0303193386644125,
+      "zp": -119,
+      "remove_nodes": [
+        "/model.23/one2one_cv2.2/one2one_cv2.2.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv2.2/one2one_cv2.2.1/act/Sigmoid",
+        "/model.23/one2one_cv2.2/one2one_cv2.2.1/act/Mul",
+        "/model.23/one2one_cv2.2/one2one_cv2.2.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "97": {
+      "output": "/model.23/one2one_cv3.2/one2one_cv3.2.0/one2one_cv3.2.0.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.02201249450445175,
+      "zp": -115,
+      "remove_nodes": [
+        "/model.23/one2one_cv3.2/one2one_cv3.2.0/one2one_cv3.2.0.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv3.2/one2one_cv3.2.0/one2one_cv3.2.0.1/act/Sigmoid",
+        "/model.23/one2one_cv3.2/one2one_cv3.2.0/one2one_cv3.2.0.1/act/Mul",
+        "/model.23/one2one_cv3.2/one2one_cv3.2.0/one2one_cv3.2.0.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    },
+    "100": {
+      "output": "/model.23/one2one_cv3.2/one2one_cv3.2.1/one2one_cv3.2.1.1/act/Mul_output_0_QuantizeLinear_Output",
+      "scale": 0.07043080031871796,
+      "zp": -124,
+      "remove_nodes": [
+        "/model.23/one2one_cv3.2/one2one_cv3.2.1/one2one_cv3.2.1.1/conv/Conv_output_0_DequantizeLinear",
+        "/model.23/one2one_cv3.2/one2one_cv3.2.1/one2one_cv3.2.1.1/act/Sigmoid",
+        "/model.23/one2one_cv3.2/one2one_cv3.2.1/one2one_cv3.2.1.1/act/Mul",
+        "/model.23/one2one_cv3.2/one2one_cv3.2.1/one2one_cv3.2.1.1/act/Mul_output_0_QuantizeLinear"
+      ]
+    }
+  },
+  "metrics": [
+    {
+      "node": "/model.0/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.10806846618652344,
+      "mean_absolute_error_after_INT8_output_quantization": 0.03304736688733101
+    },
+    {
+      "node": "/model.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.3483734130859375,
+      "mean_absolute_error_after_INT8_output_quantization": 0.03513580188155174
+    },
+    {
+      "node": "/model.2/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.004743129014968872,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0022838402073830366
+    },
+    {
+      "node": "/model.2/cv2/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.037445068359375,
+      "mean_absolute_error_after_INT8_output_quantization": 0.00627595791593194
+    },
+    {
+      "node": "/model.3/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.016722679138183594,
+      "mean_absolute_error_after_INT8_output_quantization": 0.007741814479231834
+    },
+    {
+      "node": "/model.4/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.00909566879272461,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0043282476253807545
+    },
+    {
+      "node": "/model.4/cv2/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.009604215621948242,
+      "mean_absolute_error_after_INT8_output_quantization": 0.004987488500773907
+    },
+    {
+      "node": "/model.5/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.012010902166366577,
+      "mean_absolute_error_after_INT8_output_quantization": 0.006503225304186344
+    },
+    {
+      "node": "/model.6/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.006314560770988464,
+      "mean_absolute_error_after_INT8_output_quantization": 0.003032358130440116
+    },
+    {
+      "node": "/model.6/m.0/m/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.012065932154655457,
+      "mean_absolute_error_after_INT8_output_quantization": 0.005976419895887375
+    },
+    {
+      "node": "/model.6/m.0/m/m.1/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.012376087717711926,
+      "mean_absolute_error_after_INT8_output_quantization": 0.006247889716178179
+    },
+    {
+      "node": "/model.6/cv2/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.010424613952636719,
+      "mean_absolute_error_after_INT8_output_quantization": 0.005198908969759941
+    },
+    {
+      "node": "/model.7/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.012381553649902344,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0055759865790605545
+    },
+    {
+      "node": "/model.8/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.007486134767532349,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0037698661908507347
+    },
+    {
+      "node": "/model.8/m.0/m/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.012061506509780884,
+      "mean_absolute_error_after_INT8_output_quantization": 0.005866392981261015
+    },
+    {
+      "node": "/model.8/m.0/m/m.1/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.013173418119549751,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0069100745022296906
+    },
+    {
+      "node": "/model.8/cv2/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.012725353240966797,
+      "mean_absolute_error_after_INT8_output_quantization": 0.005825033411383629
+    },
+    {
+      "node": "/model.10/m/m.0/ffn/ffn.0/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.009734143503010273,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0049910834059119225
+    },
+    {
+      "node": "/model.13/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.0068334490060806274,
+      "mean_absolute_error_after_INT8_output_quantization": 0.003259352408349514
+    },
+    {
+      "node": "/model.13/m.0/m/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.018936872482299805,
+      "mean_absolute_error_after_INT8_output_quantization": 0.003914463799446821
+    },
+    {
+      "node": "/model.13/m.0/m/m.1/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.009137719869613647,
+      "mean_absolute_error_after_INT8_output_quantization": 0.004568243399262428
+    },
+    {
+      "node": "/model.16/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.0040291547775268555,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0021643436048179865
+    },
+    {
+      "node": "/model.16/m.0/m/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.012069463729858398,
+      "mean_absolute_error_after_INT8_output_quantization": 0.00583689147606492
+    },
+    {
+      "node": "/model.16/m.0/m/m.1/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.01410984992980957,
+      "mean_absolute_error_after_INT8_output_quantization": 0.003785328706726432
+    },
+    {
+      "node": "/model.16/cv2/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.011187363415956497,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0022037411108613014
+    },
+    {
+      "node": "/model.23/one2one_cv2.0/one2one_cv2.0.0/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.044533729553222656,
+      "mean_absolute_error_after_INT8_output_quantization": 0.01579947955906391
+    },
+    {
+      "node": "/model.23/one2one_cv2.0/one2one_cv2.0.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.011501217260956764,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0043624890968203545
+    },
+    {
+      "node": "/model.23/one2one_cv3.0/one2one_cv3.0.0/one2one_cv3.0.0.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.021706104278564453,
+      "mean_absolute_error_after_INT8_output_quantization": 0.010495712980628014
+    },
+    {
+      "node": "/model.19/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.016730666160583496,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0023008903954178095
+    },
+    {
+      "node": "/model.23/one2one_cv3.0/one2one_cv3.0.1/one2one_cv3.0.1.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.026337647810578346,
+      "mean_absolute_error_after_INT8_output_quantization": 0.012799401767551899
+    },
+    {
+      "node": "/model.19/m.0/m/m.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.015867233276367188,
+      "mean_absolute_error_after_INT8_output_quantization": 0.004558822140097618
+    },
+    {
+      "node": "/model.19/m.0/m/m.1/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.018854141235351562,
+      "mean_absolute_error_after_INT8_output_quantization": 0.006971955299377441
+    },
+    {
+      "node": "/model.19/cv2/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.021221637725830078,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0023779403418302536
+    },
+    {
+      "node": "/model.23/one2one_cv2.1/one2one_cv2.1.0/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.01883840560913086,
+      "mean_absolute_error_after_INT8_output_quantization": 0.009588594548404217
+    },
+    {
+      "node": "/model.23/one2one_cv2.1/one2one_cv2.1.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.025743722915649414,
+      "mean_absolute_error_after_INT8_output_quantization": 0.003932279534637928
+    },
+    {
+      "node": "/model.23/one2one_cv3.1/one2one_cv3.1.0/one2one_cv3.1.0.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.02329730987548828,
+      "mean_absolute_error_after_INT8_output_quantization": 0.010215755552053452
+    },
+    {
+      "node": "/model.22/m.0/m.0.0/cv1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.009756505489349365,
+      "mean_absolute_error_after_INT8_output_quantization": 0.004974943585693836
+    },
+    {
+      "node": "/model.23/one2one_cv3.1/one2one_cv3.1.1/one2one_cv3.1.1.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.04094668850302696,
+      "mean_absolute_error_after_INT8_output_quantization": 0.016378549858927727
+    },
+    {
+      "node": "/model.22/m.0/m.0.1/ffn/ffn.0/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.02122020721435547,
+      "mean_absolute_error_after_INT8_output_quantization": 0.007373277097940445
+    },
+    {
+      "node": "/model.22/cv2/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.02760806679725647,
+      "mean_absolute_error_after_INT8_output_quantization": 0.010452679358422756
+    },
+    {
+      "node": "/model.23/one2one_cv2.2/one2one_cv2.2.0/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.03132486343383789,
+      "mean_absolute_error_after_INT8_output_quantization": 0.006816425360739231
+    },
+    {
+      "node": "/model.23/one2one_cv2.2/one2one_cv2.2.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.015053972601890564,
+      "mean_absolute_error_after_INT8_output_quantization": 0.006612825207412243
+    },
+    {
+      "node": "/model.23/one2one_cv3.2/one2one_cv3.2.0/one2one_cv3.2.0.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.011006027460098267,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0054227192886173725
+    },
+    {
+      "node": "/model.23/one2one_cv3.2/one2one_cv3.2.1/one2one_cv3.2.1.1/conv/Conv",
+      "codes": 256,
+      "lookup_integer_mismatches": 0,
+      "max_absolute_error_after_INT8_output_quantization": 0.035113394260406494,
+      "mean_absolute_error_after_INT8_output_quantization": 0.0170743465423584
+    }
+  ],
+  "method": "Exhaustive256-entry map of actual Conv INT8 Q/DQ -> FP32 SiLU -> actual next INT8 quantizer; no interpolation/PWL error"
+}

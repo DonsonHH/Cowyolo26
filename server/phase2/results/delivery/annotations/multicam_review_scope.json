@@ -1,0 +1,14 @@
+{
+  "source_id": "mc_camera1_aug14",
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "duration_s": 560.36,
+  "status": "produced_not_user_validated",
+  "origin": "Agent inspection of source-only coarse and dense contact sheets, no prediction overlays",
+  "blinding": "Not fully blinded: prior run summary and event list were previously visible; new labels are grounded in raw images and remain provisional",
+  "reviewed_source_sampling": {"full_video_step_s": 5, "active_interval_s": [330, 450], "active_step_s": 1, "overlap_refine_interval_s": [366, 390]},
+  "ignore_intervals": [{"start_s": 371, "end_s": 390, "reason": "Several overlapping animals and unclear individual completion times; do not infer total count from model predictions"}],
+  "reference_events_file": "multicam_source_events_v1.csv",
+  "gate": {"roi_x_fraction": [0.34, 0.75], "axis": "y", "boundaries": [0.4, 0.6], "A": "upper", "B": "lower"},
+  "metric_scope": "Isolated-event source review only. The crowded interval lacks a complete reference. Do not publish full-video F1, overall recall or bidirectional accuracy from this file.",
+  "human_review_pending": true
+}

@@ -1,0 +1,301 @@
+{
+  "condition": "seed26",
+  "split": "train",
+  "images": 6809,
+  "references": 8888,
+  "predictions": 5926,
+  "matched": 2920,
+  "unmatched_references": 5968,
+  "unmatched_predictions": 3006,
+  "reference_AABB_recall": 0.32853285328532855,
+  "prediction_precision_vs_reference_AABB": 0.49274384070199123,
+  "strata": {
+    "all": {
+      "reference_count": 8888,
+      "matched": 2920,
+      "unmatched": 5968,
+      "engineering_crop_gate_passes": 39,
+      "ideal_AABB_exterior_fraction_all_references": {
+        "count": 8888,
+        "minimum": 0.0,
+        "p10": 0.0,
+        "median": 0.33430271844189996,
+        "p90": 0.5244527545340063,
+        "maximum": 0.6206530337021632,
+        "mean": 0.30827549150995676
+      },
+      "metrics_on_matched": {
+        "reference_coverage": {
+          "count": 2920,
+          "minimum": 0.5436965616695849,
+          "p10": 0.6640567831719366,
+          "median": 0.7788952022293214,
+          "p90": 0.9224308225375862,
+          "maximum": 1.0,
+          "mean": 0.7859153067776501
+        },
+        "reference_exterior_fraction": {
+          "count": 2920,
+          "minimum": 0.08572933419862117,
+          "p10": 0.19185147264320399,
+          "median": 0.2983442522845225,
+          "p90": 0.4193123718109608,
+          "maximum": 0.6050905373806414,
+          "mean": 0.30181245145192176
+        },
+        "polygon_IoU": {
+          "count": 2920,
+          "minimum": 0.38122181585442405,
+          "p10": 0.5013932645465916,
+          "median": 0.5755565818469064,
+          "p90": 0.6650371480381911,
+          "maximum": 0.8337574833608636,
+          "mean": 0.5794517171716477
+        },
+        "center_error_native_px": {
+          "count": 2920,
+          "minimum": 0.22154700689905668,
+          "p10": 21.505237847285525,
+          "median": 62.95097512690396,
+          "p90": 102.28067248110307,
+          "maximum": 159.50226357976553,
+          "mean": 62.5327936749499
+        }
+      }
+    },
+    "complete": {
+      "reference_count": 4435,
+      "matched": 1281,
+      "unmatched": 3154,
+      "engineering_crop_gate_passes": 11,
+      "ideal_AABB_exterior_fraction_all_references": {
+        "count": 4435,
+        "minimum": 0.0,
+        "p10": 0.0,
+        "median": 0.30980288990043126,
+        "p90": 0.5345969798891159,
+        "maximum": 0.6062117876034931,
+        "mean": 0.2893633284787553
+      },
+      "metrics_on_matched": {
+        "reference_coverage": {
+          "count": 1281,
+          "minimum": 0.5436965616695849,
+          "p10": 0.6477466649272463,
+          "median": 0.7600885065575881,
+          "p90": 0.8861391034818644,
+          "maximum": 1.0,
+          "mean": 0.7636635665977443
+        },
+        "reference_exterior_fraction": {
+          "count": 1281,
+          "minimum": 0.08572933419862117,
+          "p10": 0.18894795303078393,
+          "median": 0.2895903673270146,
+          "p90": 0.4102980189123274,
+          "maximum": 0.6050905373806414,
+          "mean": 0.2945133996058714
+        },
+        "polygon_IoU": {
+          "count": 1281,
+          "minimum": 0.38122181585442405,
+          "p10": 0.4959477446781462,
+          "median": 0.569552380810633,
+          "p90": 0.6598182720200116,
+          "maximum": 0.8332131282238554,
+          "mean": 0.5731486566899334
+        },
+        "center_error_native_px": {
+          "count": 1281,
+          "minimum": 1.5,
+          "p10": 30.083217912982647,
+          "median": 69.11222757226105,
+          "p90": 105.63261806847353,
+          "maximum": 151.0,
+          "mean": 68.54563603760944
+        }
+      }
+    },
+    "clipped": {
+      "reference_count": 4453,
+      "matched": 1639,
+      "unmatched": 2814,
+      "engineering_crop_gate_passes": 28,
+      "ideal_AABB_exterior_fraction_all_references": {
+        "count": 4453,
+        "minimum": 0.0,
+        "p10": 0.1044912414417844,
+        "median": 0.34912050789520266,
+        "p90": 0.5165588699020547,
+        "maximum": 0.6206530337021632,
+        "mean": 0.3271112074415486
+      },
+      "metrics_on_matched": {
+        "reference_coverage": {
+          "count": 1639,
+          "minimum": 0.5484375467795568,
+          "p10": 0.678821743847957,
+          "median": 0.7997652901061048,
+          "p90": 0.946953300204224,
+          "maximum": 1.0,
+          "mean": 0.8033066912623721
+        },
+        "reference_exterior_fraction": {
+          "count": 1639,
+          "minimum": 0.08626037496499672,
+          "p10": 0.1946151945956385,
+          "median": 0.3090551718719087,
+          "p90": 0.42426152692430397,
+          "maximum": 0.5428261201887647,
+          "mean": 0.30751720155246504
+        },
+        "polygon_IoU": {
+          "count": 1639,
+          "minimum": 0.4291530043010826,
+          "p10": 0.5070598907283199,
+          "median": 0.5800239266860546,
+          "p90": 0.6678586209595743,
+          "maximum": 0.8337574833608636,
+          "mean": 0.5843780261875572
+        },
+        "center_error_native_px": {
+          "count": 1639,
+          "minimum": 0.22154700689905668,
+          "p10": 17.044955352344214,
+          "median": 57.42349170601915,
+          "p90": 98.77898171102743,
+          "maximum": 159.50226357976553,
+          "mean": 57.8333116331153
+        }
+      }
+    }
+  },
+  "by_date": {
+    "2020-02-05": {
+      "images": 203,
+      "references": 303,
+      "matched": 116,
+      "unmatched_references": 187,
+      "predictions": 187
+    },
+    "2020-02-10": {
+      "images": 238,
+      "references": 279,
+      "matched": 112,
+      "unmatched_references": 167,
+      "predictions": 228
+    },
+    "2020-02-11": {
+      "images": 545,
+      "references": 853,
+      "matched": 255,
+      "unmatched_references": 598,
+      "predictions": 545
+    },
+    "2020-02-12": {
+      "images": 447,
+      "references": 565,
+      "matched": 158,
+      "unmatched_references": 407,
+      "predictions": 343
+    },
+    "2020-02-13": {
+      "images": 442,
+      "references": 539,
+      "matched": 179,
+      "unmatched_references": 360,
+      "predictions": 374
+    },
+    "2020-02-14": {
+      "images": 415,
+      "references": 546,
+      "matched": 223,
+      "unmatched_references": 323,
+      "predictions": 380
+    },
+    "2020-02-15": {
+      "images": 465,
+      "references": 595,
+      "matched": 218,
+      "unmatched_references": 377,
+      "predictions": 481
+    },
+    "2020-02-16": {
+      "images": 444,
+      "references": 625,
+      "matched": 222,
+      "unmatched_references": 403,
+      "predictions": 518
+    },
+    "2020-02-18": {
+      "images": 344,
+      "references": 394,
+      "matched": 109,
+      "unmatched_references": 285,
+      "predictions": 218
+    },
+    "2020-02-19": {
+      "images": 413,
+      "references": 619,
+      "matched": 197,
+      "unmatched_references": 422,
+      "predictions": 423
+    },
+    "2020-02-20": {
+      "images": 332,
+      "references": 468,
+      "matched": 152,
+      "unmatched_references": 316,
+      "predictions": 289
+    },
+    "2020-02-21": {
+      "images": 374,
+      "references": 534,
+      "matched": 208,
+      "unmatched_references": 326,
+      "predictions": 347
+    },
+    "2020-02-22": {
+      "images": 405,
+      "references": 477,
+      "matched": 140,
+      "unmatched_references": 337,
+      "predictions": 286
+    },
+    "2020-02-23": {
+      "images": 337,
+      "references": 382,
+      "matched": 102,
+      "unmatched_references": 280,
+      "predictions": 230
+    },
+    "2020-02-24": {
+      "images": 318,
+      "references": 349,
+      "matched": 99,
+      "unmatched_references": 250,
+      "predictions": 183
+    },
+    "2020-02-25": {
+      "images": 424,
+      "references": 533,
+      "matched": 144,
+      "unmatched_references": 389,
+      "predictions": 314
+    },
+    "2020-02-26": {
+      "images": 406,
+      "references": 532,
+      "matched": 185,
+      "unmatched_references": 347,
+      "predictions": 344
+    },
+    "2020-02-27": {
+      "images": 257,
+      "references": 295,
+      "matched": 101,
+      "unmatched_references": 194,
+      "predictions": 236
+    }
+  }
+}

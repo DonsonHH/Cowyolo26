@@ -1,0 +1,23 @@
+{"status": "DRAFT_INTAKE_BLOCKED", "conditions": 23, "metrics_computed": false, "source_count_accuracy_verified": false}
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\ChatGPT\奶牛\paired_event_intake_20261028\tools\intake_pipeline.py", line 139, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "C:\Users\Donson\Documents\ChatGPT\奶牛\paired_event_intake_20261028\tools\intake_pipeline.py", line 138, in main
+    r=score_packet(args.packet,args.acceptance,args.output);print(json.dumps({'status':r['status'],'conditions':len(r['conditions']),'reference_events':r['reference_events']}));return 0
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Donson\Documents\ChatGPT\奶牛\paired_event_intake_20261028\tools\intake_pipeline.py", line 88, in score_packet
+    if blocks:raise ValueError('Unresolved intake findings: '+', '.join(blocks))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unresolved intake findings: REQUESTED_SCOPE_NOT_FULLY_REVIEWED, COMPLETE_EVENT_OUTSIDE_REVIEWED_COVERAGE, KNOWN_QA_FIXTURE_NOT_HUMAN_REFERENCE
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\ChatGPT\奶牛\paired_event_intake_20261028\tools\intake_pipeline.py", line 139, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "C:\Users\Donson\Documents\ChatGPT\奶牛\paired_event_intake_20261028\tools\intake_pipeline.py", line 137, in main
+    r=stage_annotation(args.annotation,args.catalog,args.output);print(json.dumps({k:r[k] for k in ['status','conditions','metrics_computed','source_count_accuracy_verified']}));return 2 if r['inspection']['blocking_findings'] else 0
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Donson\Documents\ChatGPT\奶牛\paired_event_intake_20261028\tools\intake_pipeline.py", line 28, in stage_annotation
+    if output.exists():raise FileExistsError(output)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: C:\Users\Donson\Documents\ChatGPT\奶牛\paired_event_intake_20261028\results\known_QA_cli_final

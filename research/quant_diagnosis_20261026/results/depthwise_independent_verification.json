@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "real_training_crop": "data/2023Aug15/049/00011_1.jpg",
+  "scope": "One-crop first-depthwise input/weight/bias intervention arithmetic; not a complete causal allocation across all layers",
+  "controls": [
+    {
+      "condition": "float_reconstruction",
+      "relative_RMSE_to_float": 2.0388056949919098e-07,
+      "independent_stencil_agreement": true
+    },
+    {
+      "condition": "only_actual_quantised_input",
+      "relative_RMSE_to_float": 0.5799213596884775,
+      "independent_stencil_agreement": true
+    },
+    {
+      "condition": "only_quantised_weights",
+      "relative_RMSE_to_float": 0.017244045843482828,
+      "independent_stencil_agreement": true
+    },
+    {
+      "condition": "only_quantised_bias",
+      "relative_RMSE_to_float": 0.006619896941649847,
+      "independent_stencil_agreement": true
+    },
+    {
+      "condition": "all_quantised_reconstruction",
+      "relative_RMSE_to_float": 0.5798893916561766,
+      "independent_stencil_agreement": true
+    }
+  ]
+}

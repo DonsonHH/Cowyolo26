@@ -1,0 +1,31 @@
+{
+  "status": "ALL13_NATIVE_SOURCE_CASE_PANELS_PIXEL_BOUND_WITH_SCORE_BAND_WITNESSES_ACTUALLY_VIEWED",
+  "created_UTC": "2026-10-30T06:29:12.159083+00:00",
+  "panels": 13,
+  "actually_viewed": true,
+  "files": [
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_error_diagnosis_20261030\\results\\case_panels_final\\page1.png",
+      "sha256": "3a00a21e2d8de70a594f9c55ff6fc1eb4f5590f765bf4b13d4a9c94085d201d3",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_error_diagnosis_20261030\\results\\case_panels_final\\page2.png",
+      "sha256": "09685b90f6a8c657784bb624ccddb9cd661917e5c4e4ce445e1f249f3985a46e",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_error_diagnosis_20261030\\results\\case_panels_final\\page3.png",
+      "sha256": "af2613b5690df50ec111b0bd23f05c91430460b3a6c0a71314dc141d0cf21ddc",
+      "actually_viewed": true
+    }
+  ],
+  "viewing_evidence": "Three separate view_image calls on final page1/page2/page3; previous v1 and unwrapped sheets retained but not counted as final review.",
+  "findings": [
+    "Highest-IoU cow candidate and score-band witness can differ; both are now separately marked and captioned.",
+    "Some formal IoU false positives cover the visible torso within a larger author cow box; viewing does not relabel them as TP.",
+    "Partial border cows and interior objects both occur; no independent physical-cow or identity labels added."
+  ],
+  "new_model_forwards": 0,
+  "whole_goal_complete": false
+}

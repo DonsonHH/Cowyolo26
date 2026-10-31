@@ -1,0 +1,69 @@
+{
+  "status": "DEVELOPMENT_CANDIDATE_FROZEN_AFTER_USER_TOTAL_CONFIRMATION",
+  "condition_id": "confirmation_handoff_20261028/seed26",
+  "checkpoint_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\cows2021_adaptation_20261027\\delivery\\results\\training\\seed26\\weights\\last.pt",
+  "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+  "reference_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\human_count_confirmation_20261028\\evidence\\user_confirmation.json",
+  "reference_sha256": "fe8a895cd6ac71815ff8e2f6ad8d932a6453c41971b6b7a18ea9c2f743dd0f9f",
+  "catalog_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\results\\frozen_prediction_catalog_v4.json",
+  "catalog_sha256": "26bd4c43a1345e12d0806409229976fa158efab11cc31529ea1f4255a53df8ac",
+  "source_event_record": {
+    "condition_id": "confirmation_handoff_20261028/seed26",
+    "title": "Full640 5Hz seed26: confirmation_handoff",
+    "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+    "seed": 26,
+    "orientation": "clockwise90",
+    "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "source_frame_scope": [
+      8912,
+      10873
+    ],
+    "history_start": 0,
+    "summary_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\summary.json",
+    "summary_sha256": "0740ae1ccc60986b0805e2b99008e616803ac0a0f703f77c1ad012518393f53a",
+    "protocol_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\protocol\\handoff_v1.json",
+    "protocol_sha256": "1053412172c665fb56e73960f012605abce9022766e31b67938eb422147fafa2",
+    "events_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed26\\handoff_events.json",
+    "events_sha256": "6975f4d6ceafc2bbef1a00081bf0499ca1bbbaa47ecdb420b943a49203fd4ad0",
+    "pipeline_contract": {
+      "orientation": "clockwise90",
+      "imgsz": 640,
+      "stride": 5,
+      "crop_x": [
+        0,
+        2560
+      ],
+      "confidence": 0.2,
+      "roi_x": [
+        0.34,
+        0.75
+      ],
+      "gate_y": [
+        0.4,
+        0.6
+      ],
+      "stable_samples": 3,
+      "maximum_gap_s": 2.0,
+      "tracker": "bytetrack.yaml",
+      "ultralytics": "8.4.63",
+      "base_counter_sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+      "counter_variant": "confirmation_handoff",
+      "retain_previous_tentative_observation": true,
+      "handoff_module_sha256": "43dc019982f23bd2cab92471d2bc4a5b1824258ec86edd2f17f4fd67f994976f"
+    },
+    "pipeline_contract_sha256": "7e90ff7689df7305b944667634efa4ab96a5e60ba4f4a5312463a2117c4ca581",
+    "predicted_A_to_B": 12,
+    "predicted_B_to_A": 0,
+    "predicted_events": 12,
+    "source_accuracy_verified": false
+  },
+  "selected_on_development_clip_after_feedback": true,
+  "human_total": 12,
+  "predicted_down": 12,
+  "absolute_total_error": 0,
+  "supports_claim": "The source development clip total matches the human-confirmed 12 complete downward passages.",
+  "per_event_correctness_proven": false,
+  "new_unseen_test_performed": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

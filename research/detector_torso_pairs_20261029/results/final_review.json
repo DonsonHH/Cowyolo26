@@ -1,0 +1,403 @@
+{
+  "status": "ACTUAL_DETECTOR_TORSO_PAIRS_INPUT_SCALE_CONTROL_AND_TRAINING_PRIORITY_REVIEWED",
+  "created_UTC": "2026-10-29T08:36:51.998354+00:00",
+  "phase_complete": true,
+  "whole_goal_complete": false,
+  "protocol_sha256": "3e26b4c19975e43dae1af1d17b54e93a02dd23c96b8d52ebbd8368958504287e",
+  "input_control_protocol_sha256": "c2fc69095010eed55af39932dd1bdc706cbd39231378b1fac9ad8639e82d4f42",
+  "source_images": 8380,
+  "unique_reference_objects": 10752,
+  "train_references": 8888,
+  "validation_references": 1864,
+  "main_actual_detector_forwards": 13093,
+  "adaptive_control_actual_detector_forwards": 288,
+  "total_actual_detector_forwards": 13381,
+  "source_image_forwards_exclude_framework_warmup": true,
+  "validation_four_model_matches": [
+    1141,
+    592,
+    505,
+    226
+  ],
+  "training_matched_targets": 2920,
+  "training_unmatched_references_preserved": 5968,
+  "all_condition_reference_rows_verified": 16344,
+  "all_condition_crop_targets_verified": 5384,
+  "assignment_candidate_IoUs_verified": 16625,
+  "multiple_optimal_assignment_images": 0,
+  "first_last_baseline_repeats_verified": 64,
+  "prior320_sample_correspondences_verified": 48,
+  "fixed8_CW_table_640rect_320rect_640square_320square": [
+    [
+      6,
+      3,
+      6,
+      5
+    ],
+    [
+      4,
+      11,
+      4,
+      11
+    ],
+    [
+      2,
+      10,
+      2,
+      10
+    ],
+    [
+      2,
+      7,
+      4,
+      8
+    ]
+  ],
+  "cached_replays_not_new_model_forwards": 9426,
+  "reference_complete_count": 919,
+  "ideal_AABB_exterior_above025": 512,
+  "all_four_models_and_all_three_seeds_retained": true,
+  "new_training_updates": 0,
+  "identity_encoder_forwards": 0,
+  "global_imgsz320_replacement_adopted": false,
+  "localizer_training_started": false,
+  "planned_new_training_candidate_runs": 9,
+  "animal_identity_labels_generated": false,
+  "native_passage_accuracy_computed": false,
+  "actual_event_identity_accuracy_admitted": false,
+  "original_human12_count_milestone_preserved": true,
+  "new_final_test": false,
+  "candidate_final_pixels_accessed": false,
+  "FPGA_execution_verified": false,
+  "actual_case_records": 24,
+  "case_native_images_pixel_verified": 18,
+  "all_local_rasters_decoded": 31,
+  "actually_viewed_figures": 12,
+  "actually_viewed_image_panels": 82,
+  "actual_crop_pixel_controls": 13,
+  "reference_warp_inverse_quad_controls": 24,
+  "SVG_bar_segments_verified": 12,
+  "SVG_CDF_curves_verified": 11,
+  "SVG_CDF_values_verified": 4973,
+  "SVG_CDF_vertices_verified": 9935,
+  "local_document_links_checked": 185,
+  "Slurm_jobs": {
+    "130498": "COMPLETED0:0 main9m17s",
+    "130499": "COMPLETED0:0 input13s",
+    "130500": "COMPLETED0:0 plot1s"
+  },
+  "evidence_hashes": {
+    "protocol/pairs_v1.json": "3e26b4c19975e43dae1af1d17b54e93a02dd23c96b8d52ebbd8368958504287e",
+    "protocol/input_controls_v1.json": "c2fc69095010eed55af39932dd1bdc706cbd39231378b1fac9ad8639e82d4f42",
+    "results/geometry_preflight.json": "4652d02d371061f8a21162ce7ba295752443816bab50c9129b827d5d2366f591",
+    "results/independent_verification.json": "96c4df2b013980672db2f551402333db3d151bb92050e6c2c294a5db1454131c",
+    "results/input_controls_verification.json": "a32b7debdb9a94cd6f8039504eb887a63bb0dfc47b257549ac8c60eafbbbea0c",
+    "results/plot_verification.json": "42e6e9a0f35afa959f929952bce89068cc2fe6034d2d8cccfc585837af452356",
+    "results/full_cache_vs_current640.json": "e0347ea54bfbf6f086674935d72afec420d312cacaad8b23b39122917b6ce1c5",
+    "results/training_route_decision.json": "2bba6be76f6e4392f6b03612289c0ccd6b9de9e7601c45e7b84a125e9a530d15",
+    "results/transfer_verification.json": "e05ac2f8de5432aaa3b8053dedd22caf7c8429013bc2c0b5a61a2df9843c45a2",
+    "results/source_review_record.json": "617cd4286d1ffda7fde8b4d6f418f0191336792dbdbe79a6f4a876f32851f3f9",
+    "evidence/visual_review.json": "25282379e74f8a721b56ae0b31978c7c576309c7bb4c7f43183b629356e70a80",
+    "results/case_source_pixel_verification.json": "08ee13b036f0a2c4a6c9fe018057e0fba72385382ef6177d399b2218959074f3",
+    "results/independent_metric_table.json": "48cdea671fa54eb4091d655d1c510bbb45fe5fef97f7056f87592f2b347e26d2",
+    "results/independent_crop_rows.json": "6a832f24db75ba498d010ce9740bfd3d4548c18e61cf04abae777e0977c0b92d",
+    "evidence/status06.txt": "8a6e02b806a8ac97452e2e7f4c033c044890a1d7488f7b1f82d9a7f634c5c10d",
+    "delivery/results/pairs/summary.json": "7a0c53eb7e275832f900abd7aea2ac64c6eb3ea604627ac15a89d5cbae555a87",
+    "delivery/results/pairs/gate_before_predictions.json": "a51115c4143d84c8fb978dfd58b901c6151d02488ed600f0c4ad40e4eac9edb3",
+    "delivery/results/pairs/source_geometry.json.gz": "fe3a1c1558bc0cad96b3f22dd23e9b823bc197d00cf7a9b7ddafeb523bf947a4",
+    "delivery/results/pairs/case_selection.json": "92fe34d6e269035b70fd05f1e07dafb5a8f7509a2928a0ca9897ebd2ae69f925",
+    "delivery/results/pairs/image_audit.json": "da972acbb917adef7f31d1500634847cac5df95531432b0678646369cdc18074",
+    "delivery/results/input_controls/summary.json": "e2f58b9ad61412974112606f91d36b091529d2b60f992175e4331ab3966c71cf",
+    "delivery/results/input_controls/rows.json": "f5500b8102de9ba393f9fbbb54f36da488a86dcfe0d3e6c246d3a544eb326c64",
+    "delivery/results/input_controls/tensor_records.json": "11e3135fb0aa63c6b05d05d641b19ca132692b61cd9e5db2cbf0ebc05a5d7287",
+    "delivery/results/plots/plot_data.json": "943fa41e627f8f9562e04ade4dd8de7fdf0868bcc0d3768c925153fdae9ab318",
+    "delivery/results/plots/reference_matching.svg": "6a9842c7fe3ca8217c9d8670c5ffbff517be347c2b804a6ffd8c4d3d4ff88ac7",
+    "delivery/results/plots/crop_geometry_CDF.svg": "b0c29cc8ace05e8666fd979c34ba602e6df21fdb1c71f285489823cdb4c50a88",
+    "tools/run_pairs.py": "8ae67ab6228729c4e5912f7efc2ea6fc24bd3ac5daab420a5e3373c3c300bb3a",
+    "tools/geometry.py": "42a4ddb57aa5b7da3ebd3123503aaa3362d62df0641e2fe7c263082d1709126e",
+    "tools/input_controls.py": "253d0615eaba312e3e4d2c7e652744703a1e4263d949d415079d92e5e01cae74"
+  },
+  "retained_artifact_hashes": {
+    "human_count_confirmation_20261028/results/frozen_development_candidate.json": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+    "human_count_confirmation_20261028/evidence/user_confirmation.json": "fe8a895cd6ac71815ff8e2f6ad8d932a6453c41971b6b7a18ea9c2f743dd0f9f",
+    "cows2021_adaptation_20261027/delivery/results/training/seed26/weights/last.pt": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+    "confirmation_handoff_20261028/delivery/results/replay_v2/seed26/handoff_events.json": "6975f4d6ceafc2bbef1a00081bf0499ca1bbbaa47ecdb420b943a49203fd4ad0",
+    "crop_domain_20261029/results/final_review.json": "e0b8c3164ddfbd98667441c1476b582bf4859a3cd1da231d3cc23f578780341d"
+  },
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\\u8ba1\u5212\u4e0e\u9a8c\u6536.md",
+      "sha256": "7d111c4c1ab1ae8ed45f716612c75f602d2382966dd41108a27744735a403a87"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\\u68c0\u6d4b\u6846\u8eaf\u5e72\u914d\u5bf9\u4e0e\u5c3a\u5ea6\u8bca\u65ad.md",
+      "sha256": "51d4d701cef25fffbf167d7dcbb379e49deb9917f222fa86625ce3365b62f14e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\Review\u4e0e\u5f53\u524d\u72b6\u6001.md",
+      "sha256": "87aed3b790cd75524f1c58a635d12dbb5e786825fae098c2de09f726fe81128a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\\u7814\u7a76\u603b\u89c8_\u4ece\u60f3\u6cd5\u5230\u8bba\u6587.md",
+      "sha256": "172af37948ba3497fc24b99f72bb35c7941370ab052fd9134a38dbd23858db67"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\\u7814\u7a76\u8fdb\u5ea6.md",
+      "sha256": "c5621df91a5b752e60b28f5f710726667691ad2c64b8f3f04395008fd40bcb70"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\phase3_diagnosis_20261026\\\u65b9\u6848\u4e0e\u6267\u884c\u72b6\u6001.md",
+      "sha256": "ae9e714571af82023bb1abcc338616b56d16ed8ed884ac1867fc8256a45047a1"
+    }
+  ],
+  "rasters": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\06856.jpg",
+      "sha256": "9be21fa7d5059837556ef8969c89f585b9819224a9d245d64c2abfbdae6d9829",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\06919.jpg",
+      "sha256": "08065563bda7adf2972797f349d83a4d6470d81d7e22baf59001c445d97c7e9f",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07037.jpg",
+      "sha256": "cf11b9e7b055b74c51de09aa3421c09d82f5f22cfc7db4b446a7af13c2043c4e",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07211.jpg",
+      "sha256": "0da82a86e20e918944ec458a40f90961ea1f17fa08c831a80b56a17b3db0890a",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07326.jpg",
+      "sha256": "1601b5b1015ba26d7aa802aab6c268a900cba320b15c00622c62f7b50328b6fb",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07332.jpg",
+      "sha256": "808d41e907dc7a2eb08dd1120da50844f66e2a8fb567a12e3679f54ea954400d",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07333.jpg",
+      "sha256": "cbb9f10d746b15ed3dcb4b73f50122f3b4be75b0d6861a133da1447bec00d30f",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07427.jpg",
+      "sha256": "8c33ffca8dd987f009ae42d20733bc2bafc599728fb07b501cef0873345915cf",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07437.jpg",
+      "sha256": "c910d00628a0be52f457481c198cad7c8c94c2e6557766d7f3ce451aeb4c3874",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07447.jpg",
+      "sha256": "f7a103c67016548c713924f74d32cfd25a03c7489a7dbb69a8a79369fe84ce05",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07507.jpg",
+      "sha256": "22340f878d256795184e5a6cd3d34eca0648fc41fe1b6d28e713d3398981f5a3",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07556.jpg",
+      "sha256": "9289d4326063af76120685346a4b31b0e354b6bea912e5a9a0902fab25def907",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07785.jpg",
+      "sha256": "e61f9b869d9a8b0908eed1292975036e77a2b96802254a3ae75c7deb90c44c9b",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\07878.jpg",
+      "sha256": "82c07fa12e750d8230dfcbd75b9b18084e11831411e5a2a7f0e2522a9ee0c1af",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\08229.jpg",
+      "sha256": "781e85d5e9fe6f5250e53708a77ba887c9b33b6818a32bc365c616a6d63a828f",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\08278.jpg",
+      "sha256": "64df1f1964fff48260b23bd24e5e80c8416131cda6fdb8b77a52c20d93c708d4",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\08354.jpg",
+      "sha256": "9b2916742dd14694febdb7c7978af066a8183ce24e72a26bd991df07992ce95d",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\pairs\\case_sources\\08377.jpg",
+      "sha256": "285543742e7a7e427526c00b94d2a05370bbf916718af473273d4d47ce0f9177",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\plots\\crop_geometry_CDF.png",
+      "sha256": "ce1b861ab08bab20891841c69e4b6fcf9916c73171c457bc53ac4221c37b674b",
+      "dimensions": [
+        2700,
+        864
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\delivery\\results\\plots\\reference_matching.png",
+      "sha256": "cf358d98bd9e52b3cc5c659e6d0c28d15645db752c409a552d860ebd0a35f96b",
+      "dimensions": [
+        2250,
+        882
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\evidence\\07556_source.jpg",
+      "sha256": "9289d4326063af76120685346a4b31b0e354b6bea912e5a9a0902fab25def907",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\case_page01.jpg",
+      "sha256": "87254fd9b254ab4e1f4c0b45d57a62ba5ba40d3259b916a0852a58aad43601f0",
+      "dimensions": [
+        1530,
+        1090
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\case_page02.jpg",
+      "sha256": "3fd2593fc7f29e1de3492fcbca81201be1c6f830eb58ebd7701a99d1ad8c4323",
+      "dimensions": [
+        1530,
+        1090
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\case_page03.jpg",
+      "sha256": "48f895d24b2283f7d7bde19dc0df8fa92fcda1e6d461d82e31b681e0c5803b38",
+      "dimensions": [
+        1530,
+        1090
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\case_page04.jpg",
+      "sha256": "8dfb1204ebbf2fb3ddc38080281eac7c7680cc10bf29774e54313fe438e7da99",
+      "dimensions": [
+        1530,
+        1090
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\case_page05.jpg",
+      "sha256": "4f56fc0e3f79ef86da7383c05ce84742a5560e85f69df7954f91fcd81dec2077",
+      "dimensions": [
+        1530,
+        1090
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\case_page06.jpg",
+      "sha256": "f8ecc6aa1e6ce0fdb3ba56788800b198fab32f1a05f99516ecde1f181e5dc31e",
+      "dimensions": [
+        1530,
+        1090
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\case_page07.jpg",
+      "sha256": "ea8d8c62c531e6be8844ba2b5661d8bfb7e0a569c36dfd38888f4ace040a2e0a",
+      "dimensions": [
+        1530,
+        1090
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\case_page08.jpg",
+      "sha256": "97d84dfc2db796eab5949216e2f892b95c6530d6c11b3c16de38b6fe9815e493",
+      "dimensions": [
+        1530,
+        1090
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\fixed8_320vs640_page1.jpg",
+      "sha256": "612d3535dece68e2f2e0f9be70f1d179a70fd70bf845d5828616a24698008f4b",
+      "dimensions": [
+        1470,
+        1690
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_torso_pairs_20261029\\results\\source_review\\fixed8_320vs640_page2.jpg",
+      "sha256": "8229bd00e30f1f1ee40c93b8794bcbbf314761c04d5e5e76ff13b56f6f7c4d35",
+      "dimensions": [
+        1470,
+        1690
+      ]
+    }
+  ]
+}

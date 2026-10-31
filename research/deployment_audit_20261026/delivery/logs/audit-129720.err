@@ -1,0 +1,12 @@
+test_dynamic_shape_is_flagged_as_incomplete (__main__.GraphAccountingContract.test_dynamic_shape_is_flagged_as_incomplete) ... ok
+test_grouped_depthwise_count_uses_per_group_channels (__main__.GraphAccountingContract.test_grouped_depthwise_count_uses_per_group_channels) ... ok
+test_standard_conv_macs_have_known_analytic_value (__main__.GraphAccountingContract.test_standard_conv_macs_have_known_analytic_value) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.015s
+
+OK
+/share/home/renly/miniconda3/lib/python3.13/site-packages/torch/onnx/symbolic_opset9.py:5350: UserWarning: Exporting aten::index operator of advanced indexing in opset 13 is achieved by combination of multiple ONNX operators, including Reshape, Transpose, Concat, and Gather. If indices include negative values, the exported graph will produce incorrect results.
+  warnings.warn(
+/share/home/renly/projects/idcoo_research_20261026/deployment_audit/tools/export_and_quantise.py:106: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter will be the default. To switch now, set dynamo=True in torch.onnx.export. This new exporter supports features like exporting LLMs with DynamicCache. We encourage you to try it and share feedback to help improve the experience. Learn more about the new export logic: https://pytorch.org/docs/stable/onnx_dynamo.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html.
+  torch.onnx.export(model,torch.from_numpy(validation_g[0][None]),str(float_path),opset_version=13,dynamo=False,

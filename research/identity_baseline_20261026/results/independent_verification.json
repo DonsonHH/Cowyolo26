@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "bundle_sha256": "e420ac9c2bf8ea233484ef551fb13b6427886828ead2892a6007e91919928364",
+  "manifest_files": 549,
+  "decoded_images": 400,
+  "exact_pixel_cross_split_duplicates": 0,
+  "score_and_threshold_independent_recalculation": "PASS",
+  "image_evaluation_counts": {
+    "known_queries": 100,
+    "unknown_queries": 50,
+    "known_closed_top1_correct": 52,
+    "known_correct_accepted_C": 16,
+    "known_wrong_accepted_W": 6,
+    "known_rejected_U": 78,
+    "unknown_false_accepts": 3
+  },
+  "aggregation": [
+    {
+      "method": "single_first",
+      "threshold": 0.8143519558437968,
+      "evaluation_counts": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_closed_top1_correct": 9,
+        "known_correct_accepted_C": 8,
+        "known_wrong_accepted_W": 4,
+        "known_rejected_U": 8,
+        "unknown_false_accepts": 7
+      },
+      "verification": "PASS"
+    },
+    {
+      "method": "mean_five",
+      "threshold": 0.9237236162406803,
+      "evaluation_counts": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_closed_top1_correct": 10,
+        "known_correct_accepted_C": 2,
+        "known_wrong_accepted_W": 1,
+        "known_rejected_U": 17,
+        "unknown_false_accepts": 0
+      },
+      "verification": "PASS"
+    }
+  ],
+  "statistical_boundary_review": {
+    "issue": "The five-image aggregation observed zero accepts among10 unknown identity groups; the empirical percentile bootstrap is degenerate at [0,0]. It does not bound future error at0.",
+    "zero_false_accepts": 0,
+    "unknown_identity_groups": 10,
+    "one_sided_95_binomial_upper_bound": 0.2588655508930523,
+    "assumption": "Independent Bernoulli identity-group samples; descriptive small-cohort bound, not farm-wide guarantee",
+    "recommendation": "Report 0/10 and sample size with this limit; do not use the zero-width bootstrap as a performance guarantee"
+  },
+  "scope": "Independent integrity and gallery/calibration arithmetic; this does not independently reproduce the neural encoder or establish field performance"
+}

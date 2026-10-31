@@ -1,0 +1,184 @@
+{
+  "status": "FRAME_ALIGNMENT_EVENTS_AND_FOUR_DERIVATIVES_VERIFIED_RGB_DIFFERENCES_RETAINED",
+  "scope": {
+    "schema_version": "user_selected_source_scope_v1",
+    "source_id": "mc_camera1_aug14",
+    "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "source_fps": 25,
+    "source_frame_count": 14009,
+    "indexing": "Same zero-based source-frame labels shown by existing annotation UI",
+    "first_frame_inclusive": 8912,
+    "last_frame_inclusive": 10873,
+    "frames": 1962,
+    "start_time_s": 356.48,
+    "end_last_frame_time_s": 434.92,
+    "exclusive_end_time_s": 434.96,
+    "duration_s": 78.48,
+    "scope_provenance": "Direct user observation: cattle in orange reference area only during this interval; use for demonstration/capture scope",
+    "event_ground_truth_created": false,
+    "training_source": "Use already labelled public OpenCows2020 training; retain official YOLO26n and existing five-epoch pilot for honest first comparison",
+    "display": "Frame and video times remain tied to original source. Detection track IDs are temporary visual IDs, not cow-record identities. Source clip is demonstration, not independent counting accuracy evaluation."
+  },
+  "native_endpoint_checks": [
+    {
+      "source_frame": 8912,
+      "best_of_independently_sequentially_decoded_neighbours": 8912,
+      "pixel_sha256_preserved_native_png": "dc0c3adfd40ad6f323f33ea788259d8fbd4c456c5b4982c991878652241b78c7",
+      "neighbour_comparison": [
+        {
+          "source_frame": 8911,
+          "mean_squared_RGB_error": 47.10780671296296,
+          "mean_absolute_RGB_error": 0.965240162037037,
+          "max_absolute_RGB_error": 230,
+          "bitwise_RGB_equal": false
+        },
+        {
+          "source_frame": 8912,
+          "mean_squared_RGB_error": 0.41610487196180557,
+          "mean_absolute_RGB_error": 0.3723564995659722,
+          "max_absolute_RGB_error": 15,
+          "bitwise_RGB_equal": false
+        },
+        {
+          "source_frame": 8913,
+          "mean_squared_RGB_error": 44.91441080729167,
+          "mean_absolute_RGB_error": 0.9658843315972222,
+          "max_absolute_RGB_error": 222,
+          "bitwise_RGB_equal": false
+        }
+      ],
+      "RGB_bitwise_parity": false,
+      "scope": "Frame-content alignment check; cross-decoder RGB colour output is not bitwise identical"
+    },
+    {
+      "source_frame": 10873,
+      "best_of_independently_sequentially_decoded_neighbours": 10873,
+      "pixel_sha256_preserved_native_png": "9ddf1931a2947b33d720b29bffc87aaa94022527dca979f2a7f070e960463062",
+      "neighbour_comparison": [
+        {
+          "source_frame": 10872,
+          "mean_squared_RGB_error": 45.414462619357636,
+          "mean_absolute_RGB_error": 1.2809435583043982,
+          "max_absolute_RGB_error": 223,
+          "bitwise_RGB_equal": false
+        },
+        {
+          "source_frame": 10873,
+          "mean_squared_RGB_error": 0.4257978877314815,
+          "mean_absolute_RGB_error": 0.37921893084490743,
+          "max_absolute_RGB_error": 16,
+          "bitwise_RGB_equal": false
+        },
+        {
+          "source_frame": 10874,
+          "mean_squared_RGB_error": 44.29596290870949,
+          "mean_absolute_RGB_error": 1.292982765480324,
+          "max_absolute_RGB_error": 223,
+          "bitwise_RGB_equal": false
+        }
+      ],
+      "RGB_bitwise_parity": false,
+      "scope": "Frame-content alignment check; cross-decoder RGB colour output is not bitwise identical"
+    }
+  ],
+  "independent_event_checks": [
+    {
+      "model": "generic",
+      "events": 0,
+      "independent_replay": "PASS",
+      "rows": []
+    },
+    {
+      "model": "pilot",
+      "events": 7,
+      "independent_replay": "PASS",
+      "rows": [
+        {
+          "source_frame": 8995,
+          "time_s": 359.8,
+          "track_id": 1,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9140,
+          "time_s": 365.6,
+          "track_id": 4,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9265,
+          "time_s": 370.6,
+          "track_id": 6,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9345,
+          "time_s": 373.8,
+          "track_id": 7,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9700,
+          "time_s": 388.0,
+          "track_id": 21,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 9900,
+          "time_s": 396.0,
+          "track_id": 45,
+          "direction": "A->B"
+        },
+        {
+          "source_frame": 10835,
+          "time_s": 433.4,
+          "track_id": 55,
+          "direction": "A->B"
+        }
+      ]
+    }
+  ],
+  "media": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\source_demo_20261026\\previews\\generic_f8912-10873.mp4",
+      "sha256": "4f73bf1389f35604e908cd1634c92b40adc1b3f1fee8b71bd23f5e33248e002f",
+      "bytes": 11346121,
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48,
+      "full_decode": "PASS",
+      "codec": "h264"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\source_demo_20261026\\previews\\generic_f8912-10873.webm",
+      "sha256": "442f509c1e10f91c6903b1fc577d331139f55935f0e9ae25ac0ce5fbcc4674ff",
+      "bytes": 16998970,
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48,
+      "full_decode": "PASS",
+      "codec": "vp9"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\source_demo_20261026\\previews\\pilot_f8912-10873.mp4",
+      "sha256": "53684a69bfe670f11b86c889c11d8ec99ac759f5c2e6b55bbad8f357aa473309",
+      "bytes": 12093181,
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48,
+      "full_decode": "PASS",
+      "codec": "h264"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\source_demo_20261026\\previews\\pilot_f8912-10873.webm",
+      "sha256": "9121d475785770a4cbad6bad60a30b9a1d7be0fe937342da82e8173d6d626b87",
+      "bytes": 18529413,
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48,
+      "full_decode": "PASS",
+      "codec": "vp9"
+    }
+  ],
+  "truth_accuracy_claim": false
+}

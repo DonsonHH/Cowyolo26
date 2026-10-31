@@ -1,0 +1,80 @@
+{
+  "name": "seed26",
+  "title": "Cows2021 dates10 seed26",
+  "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+  "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+  "seed": 26,
+  "arm": "Cows2021_date_grouped",
+  "scenes": [
+    {
+      "scene": "source",
+      "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+      "processed_frames": 10874,
+      "sampled_inference_frames": 2175,
+      "rendered_frames": 1962,
+      "A_to_B": 0,
+      "B_to_A": 0,
+      "events": 0,
+      "elapsed_s_host_replay": 83.2307260343805,
+      "counter_initialised_at_source_frame": 0,
+      "source_output_frame_range": [
+        8912,
+        10873
+      ],
+      "scope": "Previously observed development video; no new independent accuracy claim"
+    },
+    {
+      "scene": "Toros",
+      "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+      "processed_frames": 479,
+      "sampled_inference_frames": 479,
+      "rendered_frames": 0,
+      "A_to_B": 0,
+      "B_to_A": 0,
+      "events": 0,
+      "elapsed_s_host_replay": 5.405284633859992,
+      "counter_initialised_at_source_frame": 0,
+      "source_output_frame_range": [
+        0,
+        478
+      ],
+      "scope": "Previously used6-event diagnostic; not fresh generalisation"
+    }
+  ],
+  "Toros_event_metrics": {
+    "reference_events": 6,
+    "predicted_events": 0,
+    "temporally_matched": 0,
+    "correct_direction_matches": 0,
+    "wrong_direction_matches": 0,
+    "TP": 0,
+    "FP": 0,
+    "FN": 6,
+    "precision": null,
+    "recall": 0.0,
+    "f1": 0.0,
+    "direction_accuracy_given_temporal_match": null,
+    "counts": {
+      "A->B": {
+        "reference": 0,
+        "prediction": 0
+      },
+      "B->A": {
+        "reference": 6,
+        "prediction": 0
+      }
+    },
+    "mean_absolute_direction_count_error": 3.0,
+    "matching_tolerance_s": 2.0,
+    "pairs": [],
+    "unmatched_reference_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "unmatched_prediction_indices": []
+  }
+}

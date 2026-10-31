@@ -1,0 +1,97 @@
+{
+  "name": "Matched-update mixed vs real-repeated torso detector v1",
+  "date": "2026-10-27",
+  "scope": "Controlled development comparison of training composition/exposure; not independent generalisation or board validation.",
+  "source_manifest_sha256": "a7d2616c894bb28eb4d715de18f5723b11c1e014e43e2e2a5b1b1200ceda5d5d",
+  "source_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "arms": [
+    "mixed",
+    "real_repeated"
+  ],
+  "seeds": [
+    26,
+    27,
+    28
+  ],
+  "epochs": 10,
+  "slots_per_epoch": 5913,
+  "validation_images": 370,
+  "real_sampling": "All2596 real train images twice plus first721 by SHA256(real-only-exposure-v1:+basename) once more; fixed across all seeds. Aliases unique, source bytes unchanged.",
+  "conditions": [
+    {
+      "index": 0,
+      "arm": "mixed",
+      "seed": 26,
+      "name": "mixed_seed26"
+    },
+    {
+      "index": 1,
+      "arm": "real_repeated",
+      "seed": 26,
+      "name": "real_repeated_seed26"
+    },
+    {
+      "index": 2,
+      "arm": "mixed",
+      "seed": 27,
+      "name": "mixed_seed27"
+    },
+    {
+      "index": 3,
+      "arm": "real_repeated",
+      "seed": 27,
+      "name": "real_repeated_seed27"
+    },
+    {
+      "index": 4,
+      "arm": "mixed",
+      "seed": 28,
+      "name": "mixed_seed28"
+    },
+    {
+      "index": 5,
+      "arm": "real_repeated",
+      "seed": 28,
+      "name": "real_repeated_seed28"
+    }
+  ],
+  "object_definition": "OpenCows cow torso. Original checkpoint class cow0 retained; COCO cow19 only in archived official comparison.",
+  "checkpoint": "Final epoch10 last.pt for every condition. All6 freeze before source/Toros replay; no best arm/seed selected.",
+  "pairing_gate": "Same-seed arms must have identical initial model state digest, training batches, optimiser step counts and step batch-index schedule. Inspect and stop comparison certification on mismatch.",
+  "train_kwargs": {
+    "imgsz": 320,
+    "batch": 32,
+    "workers": 2,
+    "deterministic": true,
+    "pretrained": true,
+    "amp": false,
+    "plots": false,
+    "save": true,
+    "cache": false,
+    "close_mosaic": 0,
+    "patience": 0,
+    "verbose": false,
+    "optimizer": "AdamW",
+    "lr0": 0.002,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "lrf": 0.01
+  },
+  "preflight": "Actual full-loader length and aliases checked for both arms; exactly2 discarded real CUDA loss/backward/optimiser steps each; fresh models for formal training.",
+  "inference": {
+    "source_frame_range": [
+      8912,
+      10873
+    ],
+    "warmup_history_start": 0,
+    "source_sampling_stride": 5,
+    "imgsz": 320,
+    "conf": 0.2,
+    "iou": 0.5,
+    "tracker": "bytetrack.yaml",
+    "stable_samples": 3,
+    "maximum_gap_s": 2,
+    "Toros": "Previously used479frames and6event diagnostic; retain box extent mismatch in interpretation"
+  },
+  "forbidden": "No dev_test forward, source-video/Toros training or pseudo-labels, source count-based checkpoint selection, final holdout claim, whole-animal AP claim, synthetic-effect-only causal claim or PYNQ performance."
+}

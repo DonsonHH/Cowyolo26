@@ -1,0 +1,101 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+130003|idcoo-range-probe|COMPLETED|0:0|00:00:58|
+130003.batch|batch|COMPLETED|0:0|00:00:58|13960K
+130003.0|python|COMPLETED|0:0|00:00:58|1443212K
+130004|idcoo-range-check|COMPLETED|0:0|00:00:03|
+130004.batch|batch|COMPLETED|0:0|00:00:03|1172K
+130004.0|python|COMPLETED|0:0|00:00:03|800K
+{
+  "status": "36_TRAIN_ONLY_METRICS_1872_COUNT_ROWS_AND72_ARITHMETIC_FIXTURES_INDEPENDENTLY_VERIFIED",
+  "job_id": "130004",
+  "protocol_sha256": "991d29b99977339ce122d0164674aa93cb658302d9b94424ff2376f51c90e6f9",
+  "source_summary_sha256": "a42d2efd47ef5a9a02e123c6f6dc152efb913c2eb3a6f57303f54241a2bd986f",
+  "source_training_image_hashes": 64,
+  "validation_or_test_reads": 0,
+  "condition_view_metrics": 36,
+  "feature_condition_image_rows": 2304,
+  "layer_count_rows_arithmetic_checked": 1872,
+  "weight_count_rows_arithmetic_checked": 936,
+  "representative_integer_fixtures": 72,
+  "fixture_accumulator_elements_recomputed": 5682432,
+  "full_1872_layer_tensor_values_independently_replayed": false,
+  "counterfactual_effects": [
+    {
+      "seed": 26,
+      "view": "deterministic",
+      "condition": "QAT_no_activation_clipping",
+      "mean_teacher_cosine_difference": -0.01781801905710001
+    },
+    {
+      "seed": 26,
+      "view": "deterministic",
+      "condition": "QAT_no_weight_clipping",
+      "mean_teacher_cosine_difference": -0.01657727007352916
+    },
+    {
+      "seed": 26,
+      "view": "augmented",
+      "condition": "QAT_no_activation_clipping",
+      "mean_teacher_cosine_difference": -0.022715146648807027
+    },
+    {
+      "seed": 26,
+      "view": "augmented",
+      "condition": "QAT_no_weight_clipping",
+      "mean_teacher_cosine_difference": -0.016264689648262887
+    },
+    {
+      "seed": 27,
+      "view": "deterministic",
+      "condition": "QAT_no_activation_clipping",
+      "mean_teacher_cosine_difference": -0.013543794305224788
+    },
+    {
+      "seed": 27,
+      "view": "deterministic",
+      "condition": "QAT_no_weight_clipping",
+      "mean_teacher_cosine_difference": -0.01867538386425016
+    },
+    {
+      "seed": 27,
+      "view": "augmented",
+      "condition": "QAT_no_activation_clipping",
+      "mean_teacher_cosine_difference": -0.011346105842915177
+    },
+    {
+      "seed": 27,
+      "view": "augmented",
+      "condition": "QAT_no_weight_clipping",
+      "mean_teacher_cosine_difference": -0.0246646538091434
+    },
+    {
+      "seed": 28,
+      "view": "deterministic",
+      "condition": "QAT_no_activation_clipping",
+      "mean_teacher_cosine_difference": -0.009525143570444206
+    },
+    {
+      "seed": 28,
+      "view": "deterministic",
+      "condition": "QAT_no_weight_clipping",
+      "mean_teacher_cosine_difference": -0.002568528159660355
+    },
+    {
+      "seed": 28,
+      "view": "augmented",
+      "condition": "QAT_no_activation_clipping",
+      "mean_teacher_cosine_difference": -0.012272998709926597
+    },
+    {
+      "seed": 28,
+      "view": "augmented",
+      "condition": "QAT_no_weight_clipping",
+      "mean_teacher_cosine_difference": -0.0123171814805495
+    }
+  ],
+  "all_counterfactuals_are_non_deployable_code_ranges": true,
+  "new_training_updates": 0,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

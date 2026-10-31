@@ -1,0 +1,312 @@
+{
+  "status": "ALL2654_ACTUAL_FPGA_ARM_RAW_OUTPUTS6_COUNTER_PATHS_AND8_HELDOUT_INPUT_VECTORS_INDEPENDENTLY_VERIFIED",
+  "created_UTC": "2026-10-29T15:50:58.790041+00:00",
+  "actual_video_model_forwards": 2654,
+  "actual_warmups": 2,
+  "raw_boxes_inverse_verified": 1428,
+  "maximum_inverse_error": 0.0,
+  "counter_observation_ticks": 2734,
+  "independent_counter_paths": 6,
+  "actual8_video_anchor_CPU_integer_raw_bytes_exact": true,
+  "QDQ_ORT_vs_actual_O8_different_raw_frame_rows": 2654,
+  "source_counts": [
+    {
+      "scene": "original",
+      "stride": 5,
+      "counter": "confirmed_only_events",
+      "down": 10,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 24,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 384.4,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9610
+        },
+        {
+          "time_s": 387.8,
+          "track_id": 35,
+          "direction": "A->B",
+          "frame0": 9695
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 45,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 51,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 83,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ]
+    },
+    {
+      "scene": "original",
+      "stride": 5,
+      "counter": "handoff_events",
+      "down": 11,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 24,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 384.4,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9610
+        },
+        {
+          "time_s": 387.8,
+          "track_id": 35,
+          "direction": "A->B",
+          "frame0": 9695
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 45,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 51,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 83,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ]
+    },
+    {
+      "scene": "toros",
+      "stride": 6,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": []
+    },
+    {
+      "scene": "toros",
+      "stride": 6,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 5.2,
+          "track_id": 4,
+          "direction": "B->A",
+          "frame0": 156
+        }
+      ]
+    },
+    {
+      "scene": "toros",
+      "stride": 1,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.166666666666667,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 125
+        }
+      ]
+    },
+    {
+      "scene": "toros",
+      "stride": 1,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.166666666666667,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 125
+        }
+      ]
+    }
+  ],
+  "publisher_event_scores": [
+    {
+      "stride": 6,
+      "counter": "confirmed_only_events",
+      "TP": 0,
+      "FP": 0,
+      "FN": 6,
+      "assignment_optima": 1
+    },
+    {
+      "stride": 6,
+      "counter": "handoff_events",
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "assignment_optima": 1
+    },
+    {
+      "stride": 1,
+      "counter": "confirmed_only_events",
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "assignment_optima": 1
+    },
+    {
+      "stride": 1,
+      "counter": "handoff_events",
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "assignment_optima": 1
+    }
+  ],
+  "timing_ms": {
+    "PNG_read_ms": {
+      "mean": 10.741154754333083,
+      "p95": 18.335832449999998,
+      "max": 201.374529
+    },
+    "preprocess_ms": {
+      "mean": 4.795205791635268,
+      "p95": 5.103807,
+      "max": 15.727625
+    },
+    "input_hash_check_ms": {
+      "mean": 12.992776632253204,
+      "p95": 13.642628,
+      "max": 24.25768
+    },
+    "tensor_to_raw_ms": {
+      "mean": 142.0547710621703,
+      "p95": 142.85067089999998,
+      "max": 273.070215
+    },
+    "decode_restore_ms": {
+      "mean": 2.167257447249435,
+      "p95": 2.4093321999999997,
+      "max": 20.001225
+    },
+    "tracker_counter_ms": {
+      "mean": 5.121855956669179,
+      "p95": 17.359916049999995,
+      "max": 68.53488
+    },
+    "raw_memorymap_and_row_save_ms": {
+      "mean": 0.3674067418990204,
+      "p95": 0.6660735499999999,
+      "max": 5.169378
+    },
+    "PNG_to_counter_with_raw_save_ms": {
+      "mean": 178.2404283862095,
+      "p95": 198.01977244999998,
+      "max": 364.556596
+    }
+  },
+  "frame_times_over200ms": 118,
+  "scene_wall_replay": [
+    {
+      "scene": "original",
+      "images": 2175,
+      "wall_s": 387.5199701,
+      "unpaced_FPS": 5.612613975581022
+    },
+    {
+      "scene": "toros",
+      "images": 479,
+      "wall_s": 89.491202771,
+      "unpaced_FPS": 5.352481419047615
+    }
+  ],
+  "raw_source_and_trace_files_archived": true,
+  "old_failed_board_process_actual_forwards": 0,
+  "failed_evidence_preserved": true,
+  "live_camera_or_periodic_scheduler_tested": false,
+  "simultaneous_identity_tested": false,
+  "stable_joint5FPS_proven": false,
+  "whole_goal_complete": false,
+  "archive_sha256": "53e0bac96023a8b974ba0bfafafc4094037cceb3fe43c76b209559153808b5bb",
+  "archive_members": 23,
+  "manifest_hashes": 22
+}

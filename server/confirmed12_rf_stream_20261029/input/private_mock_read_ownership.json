@@ -1,0 +1,830 @@
+[
+  {
+    "case_id": "S00_missing",
+    "read_ownership_for_software_audit_only": []
+  },
+  {
+    "case_id": "S01_single",
+    "read_ownership_for_software_audit_only": [
+      {
+        "read_id": "S01_single_read001_primary",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S01_single_read002_primary",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S01_single_read003_primary",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S01_single_read004_primary",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S01_single_read005_primary",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S01_single_read006_primary",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S01_single_read007_primary",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S01_single_read008_primary",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S01_single_read009_primary",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S01_single_read010_primary",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S01_single_read011_primary",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S01_single_read012_primary",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      }
+    ]
+  },
+  {
+    "case_id": "S02_duplicates",
+    "read_ownership_for_software_audit_only": [
+      {
+        "read_id": "S02_duplicates_read001_primary",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S02_duplicates_read001_repeat1",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S02_duplicates_read001_repeat2",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S02_duplicates_read002_primary",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S02_duplicates_read002_repeat1",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S02_duplicates_read002_repeat2",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S02_duplicates_read003_primary",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S02_duplicates_read003_repeat1",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S02_duplicates_read003_repeat2",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S02_duplicates_read004_primary",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S02_duplicates_read004_repeat1",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S02_duplicates_read004_repeat2",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S02_duplicates_read005_primary",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S02_duplicates_read005_repeat1",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S02_duplicates_read005_repeat2",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S02_duplicates_read006_primary",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S02_duplicates_read006_repeat1",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S02_duplicates_read006_repeat2",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S02_duplicates_read007_primary",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S02_duplicates_read007_repeat1",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S02_duplicates_read007_repeat2",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S02_duplicates_read008_primary",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S02_duplicates_read008_repeat1",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S02_duplicates_read008_repeat2",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S02_duplicates_read009_primary",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S02_duplicates_read009_repeat1",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S02_duplicates_read009_repeat2",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S02_duplicates_read010_primary",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S02_duplicates_read010_repeat1",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S02_duplicates_read010_repeat2",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S02_duplicates_read011_primary",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S02_duplicates_read011_repeat1",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S02_duplicates_read011_repeat2",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S02_duplicates_read012_primary",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      },
+      {
+        "read_id": "S02_duplicates_read012_repeat1",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      },
+      {
+        "read_id": "S02_duplicates_read012_repeat2",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      }
+    ]
+  },
+  {
+    "case_id": "S03_delay_inside",
+    "read_ownership_for_software_audit_only": [
+      {
+        "read_id": "S03_delay_inside_read001_primary",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S03_delay_inside_read002_primary",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S03_delay_inside_read003_primary",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S03_delay_inside_read004_primary",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S03_delay_inside_read005_primary",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S03_delay_inside_read006_primary",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S03_delay_inside_read007_primary",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S03_delay_inside_read008_primary",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S03_delay_inside_read009_primary",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S03_delay_inside_read010_primary",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S03_delay_inside_read011_primary",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S03_delay_inside_read012_primary",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      }
+    ]
+  },
+  {
+    "case_id": "S04_late",
+    "read_ownership_for_software_audit_only": [
+      {
+        "read_id": "S04_late_read001_primary",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S04_late_read002_primary",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S04_late_read003_primary",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S04_late_read004_primary",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S04_late_read005_primary",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S04_late_read006_primary",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S04_late_read007_primary",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S04_late_read008_primary",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S04_late_read009_primary",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S04_late_read010_primary",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S04_late_read011_primary",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S04_late_read012_primary",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      }
+    ]
+  },
+  {
+    "case_id": "S05_conflict",
+    "read_ownership_for_software_audit_only": [
+      {
+        "read_id": "S05_conflict_read001_primary",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S05_conflict_read001_conflict",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S05_conflict_read002_primary",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S05_conflict_read002_conflict",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S05_conflict_read003_primary",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S05_conflict_read003_conflict",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S05_conflict_read004_primary",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S05_conflict_read004_conflict",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S05_conflict_read005_primary",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S05_conflict_read005_conflict",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S05_conflict_read006_primary",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S05_conflict_read006_conflict",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S05_conflict_read007_primary",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S05_conflict_read007_conflict",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S05_conflict_read008_primary",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S05_conflict_read008_conflict",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S05_conflict_read009_primary",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S05_conflict_read009_conflict",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S05_conflict_read010_primary",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S05_conflict_read010_conflict",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S05_conflict_read011_primary",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S05_conflict_read011_conflict",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S05_conflict_read012_primary",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      },
+      {
+        "read_id": "S05_conflict_read012_conflict",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      }
+    ]
+  },
+  {
+    "case_id": "S06_invalid",
+    "read_ownership_for_software_audit_only": [
+      {
+        "read_id": "S06_invalid_read001_wrong_lane",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S06_invalid_read001_invalid",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S06_invalid_read001_bad_clock",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S06_invalid_read002_wrong_lane",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S06_invalid_read002_invalid",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S06_invalid_read002_bad_clock",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S06_invalid_read003_wrong_lane",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S06_invalid_read003_invalid",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S06_invalid_read003_bad_clock",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S06_invalid_read004_wrong_lane",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S06_invalid_read004_invalid",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S06_invalid_read004_bad_clock",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S06_invalid_read005_wrong_lane",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S06_invalid_read005_invalid",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S06_invalid_read005_bad_clock",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S06_invalid_read006_wrong_lane",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S06_invalid_read006_invalid",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S06_invalid_read006_bad_clock",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S06_invalid_read007_wrong_lane",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S06_invalid_read007_invalid",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S06_invalid_read007_bad_clock",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S06_invalid_read008_wrong_lane",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S06_invalid_read008_invalid",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S06_invalid_read008_bad_clock",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S06_invalid_read009_wrong_lane",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S06_invalid_read009_invalid",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S06_invalid_read009_bad_clock",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S06_invalid_read010_wrong_lane",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S06_invalid_read010_invalid",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S06_invalid_read010_bad_clock",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S06_invalid_read011_wrong_lane",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S06_invalid_read011_invalid",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S06_invalid_read011_bad_clock",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S06_invalid_read012_wrong_lane",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      },
+      {
+        "read_id": "S06_invalid_read012_invalid",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      },
+      {
+        "read_id": "S06_invalid_read012_bad_clock",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      }
+    ]
+  },
+  {
+    "case_id": "S07_wrong_single",
+    "read_ownership_for_software_audit_only": [
+      {
+        "read_id": "S07_wrong_single_read001_primary",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S07_wrong_single_read002_primary",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S07_wrong_single_read003_primary",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S07_wrong_single_read004_primary",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S07_wrong_single_read005_primary",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S07_wrong_single_read006_primary",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S07_wrong_single_read007_primary",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S07_wrong_single_read008_primary",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S07_wrong_single_read009_primary",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S07_wrong_single_read010_primary",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S07_wrong_single_read011_primary",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S07_wrong_single_read012_primary",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      }
+    ]
+  },
+  {
+    "case_id": "S08_unregistered",
+    "read_ownership_for_software_audit_only": [
+      {
+        "read_id": "S08_unregistered_read001_primary",
+        "simulated_for_event_id": "E001_f8995_tid86",
+        "intended_mock_registry_record": "SIM-REGISTRY-001"
+      },
+      {
+        "read_id": "S08_unregistered_read002_primary",
+        "simulated_for_event_id": "E002_f9135_tid88",
+        "intended_mock_registry_record": "SIM-REGISTRY-002"
+      },
+      {
+        "read_id": "S08_unregistered_read003_primary",
+        "simulated_for_event_id": "E003_f9265_tid91",
+        "intended_mock_registry_record": "SIM-REGISTRY-003"
+      },
+      {
+        "read_id": "S08_unregistered_read004_primary",
+        "simulated_for_event_id": "E004_f9340_tid93",
+        "intended_mock_registry_record": "SIM-REGISTRY-004"
+      },
+      {
+        "read_id": "S08_unregistered_read005_primary",
+        "simulated_for_event_id": "E005_f9345_tid95",
+        "intended_mock_registry_record": "SIM-REGISTRY-005"
+      },
+      {
+        "read_id": "S08_unregistered_read006_primary",
+        "simulated_for_event_id": "E006_f9365_tid94",
+        "intended_mock_registry_record": "SIM-REGISTRY-006"
+      },
+      {
+        "read_id": "S08_unregistered_read007_primary",
+        "simulated_for_event_id": "E007_f9465_tid96",
+        "intended_mock_registry_record": "SIM-REGISTRY-007"
+      },
+      {
+        "read_id": "S08_unregistered_read008_primary",
+        "simulated_for_event_id": "E008_f9605_tid103",
+        "intended_mock_registry_record": "SIM-REGISTRY-008"
+      },
+      {
+        "read_id": "S08_unregistered_read009_primary",
+        "simulated_for_event_id": "E009_f9690_tid98",
+        "intended_mock_registry_record": "SIM-REGISTRY-009"
+      },
+      {
+        "read_id": "S08_unregistered_read010_primary",
+        "simulated_for_event_id": "E010_f9790_tid102",
+        "intended_mock_registry_record": "SIM-REGISTRY-010"
+      },
+      {
+        "read_id": "S08_unregistered_read011_primary",
+        "simulated_for_event_id": "E011_f9900_tid117",
+        "intended_mock_registry_record": "SIM-REGISTRY-011"
+      },
+      {
+        "read_id": "S08_unregistered_read012_primary",
+        "simulated_for_event_id": "E012_f10830_tid141",
+        "intended_mock_registry_record": "SIM-REGISTRY-012"
+      }
+    ]
+  },
+  {
+    "case_id": "S09_missing_snapshot",
+    "read_ownership_for_software_audit_only": []
+  }
+]

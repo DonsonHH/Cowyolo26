@@ -1,0 +1,283 @@
+{
+  "status": "THREE_NATIVE_FRAMES_AND_LABELLED_GT_HYPOTHESES_DECODED",
+  "frames": [
+    {
+      "video_display_frame0": 0,
+      "video_time_seconds": 0.0,
+      "GT_frame1_hypothesis": 1,
+      "GT_boxes": [
+        {
+          "track_ID": 3,
+          "xywh": [
+            528.0,
+            328.0,
+            146.0,
+            82.0
+          ]
+        },
+        {
+          "track_ID": 4,
+          "xywh": [
+            714.0,
+            286.0,
+            60.0,
+            140.0
+          ]
+        },
+        {
+          "track_ID": 5,
+          "xywh": [
+            820.0,
+            307.0,
+            58.0,
+            116.0
+          ]
+        }
+      ],
+      "decoded_frames": 30,
+      "native_png": "target_00000_native.png",
+      "native_sha256": "20ef507ba5808d32f0cb1aa5266a0e4113c602ca6216201584b18a08df7dbd82",
+      "GT_overlay": "target_00000_GT_hypothesis.png",
+      "GT_overlay_sha256": "295b53c5e0bfd69f4e57bb6725719d1d504cb05e639e6e96854837384a95c344",
+      "contains_overlay_assessment": "PENDING_VISUAL_REVIEW",
+      "decode_command": [
+        "ffmpeg",
+        "-hide_banner",
+        "-v",
+        "warning",
+        "-threads",
+        "2",
+        "-i",
+        "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_alignment_20261028\\evidence\\video_ranges\\target_00000.h264",
+        "-vf",
+        "select=eq(n\\,0)",
+        "-frames:v",
+        "1",
+        "-fps_mode",
+        "vfr",
+        "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_alignment_20261028\\results\\frame_review\\target_00000_native.png"
+      ],
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 2944,
+            "height": 2944,
+            "nb_read_frames": "30"
+          }
+        ]
+      },
+      "ffprobe_stderr": "[in#0/h264 @ 0000011970190000] Stream #0: not enough frames to estimate rate; consider increasing probesize\r\n[image2 @ 0000011970eff800] The specified filename 'C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_alignment_20261028\\results\\frame_review\\target_00000_native.png' does not contain an image sequence pattern or a pattern is invalid.\r\n[image2 @ 0000011970eff800] Use a pattern such as %03d for an image sequence or use the -update option (with -frames:v 1 if needed) to write a single image.\r\n"
+    },
+    {
+      "video_display_frame0": 8991,
+      "video_time_seconds": 599.9994,
+      "GT_frame1_hypothesis": 8992,
+      "GT_boxes": [
+        {
+          "track_ID": 0,
+          "xywh": [
+            820.0,
+            305.0,
+            98.0,
+            113.0
+          ]
+        },
+        {
+          "track_ID": 1,
+          "xywh": [
+            553.0,
+            304.0,
+            120.0,
+            128.0
+          ]
+        },
+        {
+          "track_ID": 2,
+          "xywh": [
+            928.0,
+            405.0,
+            146.0,
+            128.0
+          ]
+        },
+        {
+          "track_ID": 3,
+          "xywh": [
+            366.0,
+            434.0,
+            78.0,
+            76.0
+          ]
+        },
+        {
+          "track_ID": 4,
+          "xywh": [
+            659.0,
+            298.0,
+            99.0,
+            121.0
+          ]
+        },
+        {
+          "track_ID": 5,
+          "xywh": [
+            939.0,
+            378.0,
+            148.0,
+            84.0
+          ]
+        }
+      ],
+      "decoded_frames": 30,
+      "native_png": "target_08991_native.png",
+      "native_sha256": "572a42c9be35eddf429544882834c71ae9801eaa8fa5aea25e22299822db3e68",
+      "GT_overlay": "target_08991_GT_hypothesis.png",
+      "GT_overlay_sha256": "40f693c073b9c388dc1dde6fd30ba9f1e42f8efa1e31df34b1ab4fdf840d81bb",
+      "contains_overlay_assessment": "PENDING_VISUAL_REVIEW",
+      "decode_command": [
+        "ffmpeg",
+        "-hide_banner",
+        "-v",
+        "warning",
+        "-threads",
+        "2",
+        "-i",
+        "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_alignment_20261028\\evidence\\video_ranges\\target_08991.h264",
+        "-vf",
+        "select=eq(n\\,21)",
+        "-frames:v",
+        "1",
+        "-fps_mode",
+        "vfr",
+        "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_alignment_20261028\\results\\frame_review\\target_08991_native.png"
+      ],
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 2944,
+            "height": 2944,
+            "nb_read_frames": "30"
+          }
+        ]
+      },
+      "ffprobe_stderr": "[in#0/h264 @ 0000019e0a190c80] Stream #0: not enough frames to estimate rate; consider increasing probesize\r\n[image2 @ 0000019e0aa26d80] The specified filename 'C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_alignment_20261028\\results\\frame_review\\target_08991_native.png' does not contain an image sequence pattern or a pattern is invalid.\r\n[image2 @ 0000019e0aa26d80] Use a pattern such as %03d for an image sequence or use the -update option (with -frames:v 1 if needed) to write a single image.\r\n"
+    },
+    {
+      "video_display_frame0": 26973,
+      "video_time_seconds": 1799.9982,
+      "GT_frame1_hypothesis": 26974,
+      "GT_boxes": [
+        {
+          "track_ID": 0,
+          "xywh": [
+            1038.0,
+            644.0,
+            103.0,
+            166.0
+          ]
+        },
+        {
+          "track_ID": 1,
+          "xywh": [
+            397.0,
+            389.0,
+            84.0,
+            92.0
+          ]
+        },
+        {
+          "track_ID": 2,
+          "xywh": [
+            913.0,
+            384.0,
+            134.0,
+            133.0
+          ]
+        },
+        {
+          "track_ID": 3,
+          "xywh": [
+            527.0,
+            324.0,
+            148.0,
+            105.0
+          ]
+        },
+        {
+          "track_ID": 4,
+          "xywh": [
+            716.0,
+            302.0,
+            74.0,
+            114.0
+          ]
+        },
+        {
+          "track_ID": 5,
+          "xywh": [
+            899.0,
+            316.0,
+            80.0,
+            115.0
+          ]
+        },
+        {
+          "track_ID": 6,
+          "xywh": [
+            863.0,
+            1088.0,
+            110.0,
+            76.0
+          ]
+        }
+      ],
+      "decoded_frames": 30,
+      "native_png": "target_26973_native.png",
+      "native_sha256": "b96351201a3453acd7c44b6bde54d728ba1152054fbbc43bdfe29008acdb840b",
+      "GT_overlay": "target_26973_GT_hypothesis.png",
+      "GT_overlay_sha256": "8098c2c77bd31815f50dc949fe0f5907c5508ba16d36f1b4ff15f9e5257a78ec",
+      "contains_overlay_assessment": "PENDING_VISUAL_REVIEW",
+      "decode_command": [
+        "ffmpeg",
+        "-hide_banner",
+        "-v",
+        "warning",
+        "-threads",
+        "2",
+        "-i",
+        "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_alignment_20261028\\evidence\\video_ranges\\target_26973.h264",
+        "-vf",
+        "select=eq(n\\,3)",
+        "-frames:v",
+        "1",
+        "-fps_mode",
+        "vfr",
+        "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_alignment_20261028\\results\\frame_review\\target_26973_native.png"
+      ],
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 2944,
+            "height": 2944,
+            "nb_read_frames": "30"
+          }
+        ]
+      },
+      "ffprobe_stderr": "[in#0/h264 @ 0000027e9518fe40] Stream #0: not enough frames to estimate rate; consider increasing probesize\r\n[image2 @ 0000027e95a265c0] The specified filename 'C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mootrack_alignment_20261028\\results\\frame_review\\target_26973_native.png' does not contain an image sequence pattern or a pattern is invalid.\r\n[image2 @ 0000027e95a265c0] Use a pattern such as %03d for an image sequence or use the -update option (with -frames:v 1 if needed) to write a single image.\r\n"
+    }
+  ],
+  "total_native_video_frames_decoded_for_integrity_check": 90,
+  "ffmpeg_version": "ffmpeg version 9.0.1-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+  "all_frame_alignment_certified": false,
+  "new_inference_or_training": false,
+  "whole_goal_complete": false
+}

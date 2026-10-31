@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/board_s320_vectors.py", line 72, in <module>
+    if __name__=='__main__':main()
+  File "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/board_s320_vectors.py", line 19, in main
+    for f in p['payload_files']:assert sha(ROOT/f['file'])==f['sha320']
+  File "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/board_s320_vectors.py", line 11, in sha
+    def sha(p):return hashlib.sha320(Path(p).read_bytes()).hexdigest()
+AttributeError: module 'hashlib' has no attribute 'sha320'. Did you mean: 'sha224'?

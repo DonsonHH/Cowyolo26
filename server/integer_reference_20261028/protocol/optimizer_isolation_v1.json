@@ -1,0 +1,31 @@
+{
+  "name": "Same-input QLinearAdd isolation and one-node graph restoration v1",
+  "created_UTC": "2026-10-27T16:59:23.883234+00:00",
+  "serialized_ALL_sha256": "2f212f100f08bb6360a37ef12a31efc16e4d6bb4a2b29b8de8b00163e6fee329",
+  "source_candidate_sha256": "d5e5523600ef6b31f3ae2e33181754305251c6fffb7bdaf6443511797caeddf6",
+  "target_node": "/encoder/encoder.0/encoder.0.3/Add",
+  "vectors": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "data": "Same8already-used training regression tensors, no newdata",
+  "controls": [
+    "Capture identical upstream integerA/B tensors from frozenOFF and serializedALL, embedding unchanged",
+    "Run isolated actualQLinearAdd and originalDQ_Add_Q with exactlysameA/B andscales/zero-points",
+    "Replace onlythe identifiedQLinearAdd in actualserializedALL by fouroriginalstandardops, leaveeveryothernode unchanged",
+    "Separately test documentedALL session.disable_quant_qdq=1, not confounded with single-nodecontrol"
+  ],
+  "gate": {
+    "max_absolute_error": 0.001,
+    "minimum_cosine": 0.9999
+  },
+  "interpretation": "Causal claim restricted to these8traininginputs and thispinnedmodel/runtime; reportallfailures, no identity/FPGA/generalization claim.",
+  "new_training_updates": 0,
+  "whole_goal_complete": false
+}

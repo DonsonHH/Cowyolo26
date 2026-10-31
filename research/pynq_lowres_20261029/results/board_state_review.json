@@ -1,0 +1,180 @@
+{
+  "status": "LIVE_INVENTORY_CONFIRMED_BOARD_BENCHMARK_LAUNCHED_TERMINAL_UNOBSERVED_SERVICES_UNREACHABLE",
+  "created_UTC": "2026-10-29T09:53:58.996382+00:00",
+  "board_IP": "192.168.2.99",
+  "Jupyter_port": 9090,
+  "COM_port": "COM6",
+  "PYNQ_version": "3.1.1",
+  "OS_image_version_label": "PynqLinux3.0CarlisleUbuntu22.04",
+  "kernel": "6.6.10-xilinx-v2024.1-g3c0eca68c652",
+  "Python": "3.10.4 (main, Apr  2 2022, 09:04:19) [GCC 11.2.0]",
+  "architecture": "armv7l",
+  "memory_total_KiB": 503464,
+  "opencv": "4.5.4",
+  "board_inventory_sha256": "b9f12e24277243cfcbdae046fa0b5ab000e82716f98f752a2f36b041bc3da7f6",
+  "board_inventory_was_live": true,
+  "initial_PL_bitfile_metadata": null,
+  "initial_IP_names_saved_without_claiming_programmed_image_identity": true,
+  "own_benchmark_PID": 8082,
+  "launch_record_sha256": "cc03c37ebb68d28ab61f1f662018ad3832f00039cbd904f48aac8a2f22f4c52f",
+  "own_benchmark_terminal_state": "NOT_OBSERVED",
+  "own_benchmark_restart_count": 0,
+  "own_benchmark_results_retrieved": false,
+  "current_PL_bitfile_after_benchmark": "UNKNOWN_NOT_READ_BACK",
+  "hardware_programming_instructions_in_launched_script": true,
+  "no_further_PL_load_or_reboot_after_observation_loss": true,
+  "user_board_state_question_pending": true,
+  "initial_large_ws_upload_failed_no_launch_marker_then_HTTP_upload_verified": true,
+  "latest_TCP_revalidation": [
+    {
+      "port": 22,
+      "connected": false,
+      "error": "TimeoutError",
+      "elapsed_s": 2.0
+    },
+    {
+      "port": 80,
+      "connected": false,
+      "error": "TimeoutError",
+      "elapsed_s": 2.0
+    },
+    {
+      "port": 9090,
+      "connected": false,
+      "error": "TimeoutError",
+      "elapsed_s": 2.0
+    }
+  ],
+  "serial_read": {
+    "created_UTC": "2026-10-29T09:25:25.401255+00:00",
+    "port": "COM6",
+    "baud": 115200,
+    "data_bits": 8,
+    "stop_bits": 1,
+    "parity": "none",
+    "flow_control": false,
+    "no_reboot_or_reset_command_sent": true,
+    "status": "SERIAL_OPEN_READ_ONLY_NEWLINE_PROMPT",
+    "received": ""
+  },
+  "SSH_observation": {
+    "created_UTC": "2026-10-29T09:25:26.079541+00:00",
+    "host": "192.168.2.99",
+    "username": "xilinx",
+    "host_fingerprint_SHA256": "SHA256:TB0FfGjfMzgZUv/reJgTpeq/AM68sMCpGC5xm6Pit7o",
+    "host_key_source": "ReadviauserauthorizedJupyterbeforebenchmark",
+    "authentication_material_saved": false,
+    "status": "SSH_UNAVAILABLE",
+    "error_type": "NoValidConnectionsError",
+    "detail": "[Errno None] Unable to connect to port 22 on 192.168.2.99"
+  },
+  "unknown_root_cause": "Service/process/hardware/power state not determined; temporalassociationnotcausalproof.",
+  "past_performance_records": [
+    {
+      "size": 192,
+      "engine": "O8resident",
+      "record_type": "historical_read_not_live_remeasurement",
+      "mean_ms": 162.0248486500077,
+      "p95_ms": 160.69278494969694,
+      "maximum_ms": 251.27996300034283,
+      "FPS": 6.171892819724924,
+      "background_identity_active": false,
+      "source_scope": "fixed100 + separate stability",
+      "source_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\reports\\final_delivery\\candidate_pareto.csv",
+      "source_sha256": "4a02e1a7ff4c4c7562793977fb788caf8c8f3826a1f233dbc2679544c80a5380"
+    },
+    {
+      "size": 256,
+      "engine": "O8resident",
+      "record_type": "historical_read_not_live_remeasurement",
+      "mean_ms": 266.7878889199892,
+      "p95_ms": 267.7907355996467,
+      "maximum_ms": 354.8469719999048,
+      "FPS": 3.7482960866334682,
+      "background_identity_active": false,
+      "source_scope": "fixed100 + separate stability",
+      "source_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\reports\\final_delivery\\candidate_pareto.csv",
+      "source_sha256": "4a02e1a7ff4c4c7562793977fb788caf8c8f3826a1f233dbc2679544c80a5380"
+    },
+    {
+      "size": 320,
+      "engine": "O6legacy_different_engine",
+      "record_type": "historical_read_not_live_remeasurement",
+      "mean_ms": 994.3218698212877,
+      "p95_ms": 1057.760036419495,
+      "maximum_ms": 1101.3148229685612,
+      "FPS": 1.0057105554559842,
+      "background_identity_active": false,
+      "source_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runs\\r320_fixed100\\result.json",
+      "source_sha256": "f0a976ed5334891456b469491127b1f9b631c757ec45066a647610c5266aec8d"
+    }
+  ],
+  "historical256and320_use_distinct_engine_conditions": true,
+  "new_lowres_cow_weights_deployed": false,
+  "actual_live5FPS_measurement_available": false,
+  "foreground_and_background_joint5FPS_proven": false,
+  "reused_auth_material_persisted": false,
+  "own_Jupyter_kernels": [
+    {
+      "record": "benchmark_launch.json",
+      "kernel_id": "0f985538-206d-4b59-9ff3-2128c988b19b",
+      "removed": true,
+      "error": null
+    },
+    {
+      "record": "benchmark_launch02.json",
+      "kernel_id": "33f320e5-f992-451d-85ac-7aee1e1c6fe9",
+      "removed": true,
+      "error": null
+    },
+    {
+      "record": "benchmark_status01.json",
+      "kernel_id": "271f4808-d63f-4d63-abe2-f9ef81c7f755",
+      "removed": true,
+      "error": {
+        "error_type": "FileNotFoundError",
+        "detail": "[Errno 2] No such file or directory: '/home/xilinx/jupyter_notebooks/cow_research_lowres_20261029/launch.json'"
+      }
+    },
+    {
+      "record": "benchmark_status02.json",
+      "kernel_id": "a325794a-ecdc-4892-adb2-bf1e390f9bd3",
+      "removed": true,
+      "error": {
+        "error_type": "WebSocketTimeoutException",
+        "detail": "Connection timed out"
+      }
+    },
+    {
+      "record": "board_inventory.json",
+      "kernel_id": "1cec4ab9-d43a-42a9-bb05-49002b4c6259",
+      "removed": true,
+      "error": null
+    },
+    {
+      "record": "board_project_inventory.json",
+      "kernel_id": "7faee914-1db0-42d0-a7b4-59966589640a",
+      "removed": true,
+      "error": null
+    },
+    {
+      "record": "board_sources.json",
+      "kernel_id": "d88a5b2b-98b2-438b-b446-f5330410bea1",
+      "removed": true,
+      "error": null
+    },
+    {
+      "record": "release_evidence.json",
+      "kernel_id": "f8be0237-4bd0-44ff-84e3-60ddf7877fc0",
+      "removed": true,
+      "error": null
+    },
+    {
+      "record": "runtime_details.json",
+      "kernel_id": "86af8b08-9390-4bb6-8799-1a68af367a1f",
+      "removed": true,
+      "error": null
+    }
+  ],
+  "whole_goal_complete": false
+}

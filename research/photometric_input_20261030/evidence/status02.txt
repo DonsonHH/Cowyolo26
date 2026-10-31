@@ -1,0 +1,16 @@
+             JOBID|PARTITION|                        NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed|MaxRSS
+130611|FAILED|1:0|00:02:14|
+130611.batch|FAILED|1:0|00:02:14|428004K
+{"condition": "none", "validation_done": 1, "forwards": {"FP32": 1, "QDQ": 1}}
+{"condition": "none", "validation_done": 501, "forwards": {"FP32": 501, "QDQ": 501}}
+{"condition": "none", "validation_done": 1001, "forwards": {"FP32": 1001, "QDQ": 1001}}
+{"condition": "none", "validation_done": 1501, "forwards": {"FP32": 1501, "QDQ": 1501}}
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/photometric_input_20261030/tools/run_study.py", line 201, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/photometric_input_20261030/tools/run_study.py", line 170, in main
+    if condition=='none':assert trace==gz(prior/video['name']/mode/('stride'+str(stride)+'_counter_trace.json.gz'))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

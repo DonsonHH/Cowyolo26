@@ -1,0 +1,74 @@
+{
+  "job_id": "129717",
+  "status": "FUNCTIONAL_VIDEO_REPLAY_COMPLETE",
+  "protocol_sha256": "72bfc4a4dd062c55941cfa894150bd15b625bcadcf921443f1b15168870b9dae",
+  "parent_pid": 3580475,
+  "worker_pid": 3580489,
+  "worker_exitcode": 0,
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "source_frames_decoded": 14008,
+  "sampled_detection_frames": 2802,
+  "excluded_terminal_frame": 14008,
+  "source_size": [
+    2560,
+    1440
+  ],
+  "source_fps": 25.0,
+  "detection_sampling_fps": 5,
+  "observed_predicted_events": 7,
+  "A_to_B": 7,
+  "B_to_A": 0,
+  "event_terminal_status_counts": {
+    "ALL_CONDITIONS_REJECTED": 7
+  },
+  "actual_completed_identity_jobs": 7,
+  "true_model_query_forwards": 35,
+  "jobs_completed_after_frontend_eof": 0,
+  "jobs_overlapping_foreground_host_intervals": 7,
+  "retained_snapshot_peak_bytes": 11222577,
+  "retained_snapshot_byte_limit": 33554432,
+  "snapshot_evictions": 0,
+  "frontend_start_wall_ns": 5915818368966681,
+  "frontend_eof_wall_ns": 5915908300183994,
+  "run_finished_wall_ns": 5915908952719230,
+  "parent_maximum_rss_kib": 1704480,
+  "foreground_device": "Tesla V100S-PCIE-32GB",
+  "scope": "Actual full-resolution video capture plus GPU detector and separate CPU identity worker on Slurm. Mock missing-RF branch only; no board deployment or ground-truth recovery accuracy.",
+  "latency_clock": "Host monotonic ns, source-frame decode availability; no camera exposure clock or board measurement",
+  "recognition_accuracy": null,
+  "reference_labels": "No independent raw-video cow IDs or complete passage truth"
+}
+{
+  "ready": {
+    "kind": "ready",
+    "pid": 3580489,
+    "device": "cpu",
+    "threads": 2,
+    "conditions": 5,
+    "gallery_identities": [
+      "009",
+      "020",
+      "026",
+      "028",
+      "031",
+      "054"
+    ],
+    "gallery_images": 30,
+    "gallery_build_ns": 1261416386,
+    "monotonic_clock": "clock_gettime(CLOCK_MONOTONIC)"
+  },
+  "worker_stop": [
+    {
+      "kind": "stopped",
+      "pid": 3580489,
+      "maximum_rss_kib": 963132
+    }
+  ]
+}
+{"event": "event-001-f8995-t1", "time_s": 359.8, "snapshot_frame": 8945, "crop_size": [426, 604], "status": "ALL_CONDITIONS_REJECTED", "conditions": [{"name": "A_official_frozen", "candidate": "020", "score": 0.560569640661421, "passes": false}, {"name": "B_letterbox_frozen", "candidate": "031", "score": 0.7219466086294023, "passes": false}, {"name": "C_letterbox_trained_seed26", "candidate": "026", "score": 0.6575274822899843, "passes": false}, {"name": "C_letterbox_trained_seed27", "candidate": "031", "score": 0.6571861094984317, "passes": false}, {"name": "C_letterbox_trained_seed28", "candidate": "031", "score": 0.6198517121332522, "passes": false}]}
+{"event": "event-002-f9140-t4", "time_s": 365.6, "snapshot_frame": 9090, "crop_size": [494, 653], "status": "ALL_CONDITIONS_REJECTED", "conditions": [{"name": "A_official_frozen", "candidate": "020", "score": 0.7456511982197516, "passes": false}, {"name": "B_letterbox_frozen", "candidate": "028", "score": 0.7693423073393002, "passes": false}, {"name": "C_letterbox_trained_seed26", "candidate": "028", "score": 0.6722778312436153, "passes": false}, {"name": "C_letterbox_trained_seed27", "candidate": "028", "score": 0.6728889564095086, "passes": false}, {"name": "C_letterbox_trained_seed28", "candidate": "028", "score": 0.6544310205100389, "passes": false}]}
+{"event": "event-003-f9265-t6", "time_s": 370.6, "snapshot_frame": 9220, "crop_size": [384, 614], "status": "ALL_CONDITIONS_REJECTED", "conditions": [{"name": "A_official_frozen", "candidate": "031", "score": 0.7502334803038779, "passes": false}, {"name": "B_letterbox_frozen", "candidate": "031", "score": 0.7653927056124867, "passes": false}, {"name": "C_letterbox_trained_seed26", "candidate": "031", "score": 0.739519939406136, "passes": false}, {"name": "C_letterbox_trained_seed27", "candidate": "031", "score": 0.6959389632993607, "passes": false}, {"name": "C_letterbox_trained_seed28", "candidate": "020", "score": 0.7284364789019422, "passes": false}]}
+{"event": "event-004-f9345-t7", "time_s": 373.8, "snapshot_frame": 9300, "crop_size": [319, 517], "status": "ALL_CONDITIONS_REJECTED", "conditions": [{"name": "A_official_frozen", "candidate": "020", "score": 0.6806986803872128, "passes": false}, {"name": "B_letterbox_frozen", "candidate": "028", "score": 0.7870729080385617, "passes": false}, {"name": "C_letterbox_trained_seed26", "candidate": "028", "score": 0.7430529634537737, "passes": false}, {"name": "C_letterbox_trained_seed27", "candidate": "028", "score": 0.6955258641638142, "passes": false}, {"name": "C_letterbox_trained_seed28", "candidate": "028", "score": 0.6704457106664827, "passes": false}]}
+{"event": "event-005-f9700-t21", "time_s": 388.0, "snapshot_frame": 9690, "crop_size": [433, 640], "status": "ALL_CONDITIONS_REJECTED", "conditions": [{"name": "A_official_frozen", "candidate": "031", "score": 0.50241849924419, "passes": false}, {"name": "B_letterbox_frozen", "candidate": "031", "score": 0.68795249067537, "passes": false}, {"name": "C_letterbox_trained_seed26", "candidate": "028", "score": 0.6914839247913533, "passes": false}, {"name": "C_letterbox_trained_seed27", "candidate": "028", "score": 0.6343392435212147, "passes": false}, {"name": "C_letterbox_trained_seed28", "candidate": "028", "score": 0.581988116133136, "passes": false}]}
+{"event": "event-006-f9900-t45", "time_s": 396.0, "snapshot_frame": 9895, "crop_size": [333, 570], "status": "ALL_CONDITIONS_REJECTED", "conditions": [{"name": "A_official_frozen", "candidate": "031", "score": 0.7622547662859205, "passes": false}, {"name": "B_letterbox_frozen", "candidate": "020", "score": 0.7962821457387421, "passes": false}, {"name": "C_letterbox_trained_seed26", "candidate": "028", "score": 0.7716212424860509, "passes": false}, {"name": "C_letterbox_trained_seed27", "candidate": "031", "score": 0.7983448824855792, "passes": false}, {"name": "C_letterbox_trained_seed28", "candidate": "031", "score": 0.6764519230997579, "passes": false}]}
+{"event": "event-007-f10835-t55", "time_s": 433.4, "snapshot_frame": 10825, "crop_size": [307, 648], "status": "ALL_CONDITIONS_REJECTED", "conditions": [{"name": "A_official_frozen", "candidate": "054", "score": 0.6858695258354097, "passes": false}, {"name": "B_letterbox_frozen", "candidate": "028", "score": 0.7429522711949059, "passes": false}, {"name": "C_letterbox_trained_seed26", "candidate": "028", "score": 0.7444891372764728, "passes": false}, {"name": "C_letterbox_trained_seed27", "candidate": "028", "score": 0.6224063512989265, "passes": false}, {"name": "C_letterbox_trained_seed28", "candidate": "028", "score": 0.6226654462944119, "passes": false}]}

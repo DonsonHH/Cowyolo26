@@ -1,0 +1,121 @@
+{
+  "status": "FROZEN_IDENTITY_RISK_DIAGNOSTIC_AND_FULL_REPORT_REVIEW_COMPLETE",
+  "created_UTC": "2026-10-27T18:08:53.708406+00:00",
+  "previous_goal_turn_classification": "progress",
+  "current_goal_turn_classification": "progress",
+  "phase_deliverables_and_manual_report_review_complete": true,
+  "actual_results": {
+    "query_condition_rows": 660,
+    "identity_condition_groups": 132,
+    "independent_dotproducts": 16500,
+    "QAT_rank_correct_rejects": [
+      14,
+      16,
+      9
+    ],
+    "QAT_rank_wrong_rejects": [
+      0,
+      0,
+      8
+    ],
+    "matched_float_coverage_unknown_false_accepts_of30": [
+      12,
+      7,
+      26
+    ],
+    "matched_float_coverage_known_wrong_accepts": [
+      1,
+      0,
+      6
+    ],
+    "matched_coverage_is_label_using_diagnostic_not_adopted_threshold": true,
+    "frozen_thresholds_unchanged": true,
+    "new_inference_or_training": false,
+    "score_plot_points": 330,
+    "all_QAT_accepted_error_cases_visualized": 5,
+    "render_files_verified": 19,
+    "manual_visual_QA": "PASS",
+    "FPGA_execution_verified": false
+  },
+  "synthesis_review_sha256": "227cf9f77c3d9a989f34c5e873c4fd5ce64cebe23f121f1173e9c32a1706389b",
+  "evidence_files": [
+    {
+      "path": "身份错配拒识与下一步.md",
+      "sha256": "08aab1e29ae2621c118b9a10a685491447e0d66b09f2d2472835d721e9e7c2ff"
+    },
+    {
+      "path": "公开计数候选入口复查.md",
+      "sha256": "ffee696033e2f463dae6f3dfd6fa31041f7a9aaa83aed18df99e5e1717f5484e"
+    },
+    {
+      "path": "Review与当前状态.md",
+      "sha256": "5f0d5b5082137a1f64b7d3dedf62db7b4ed2b42e7f6f073d75c3fd67bfb0bedf"
+    },
+    {
+      "path": "protocol/frozen_risk_v1.json",
+      "sha256": "55cd1019f2fd14b776a81b0a9255875ab772f5dbac402792fb4fdfd9c3b83f61"
+    },
+    {
+      "path": "protocol/matched_coverage_v1.json",
+      "sha256": "69980313ac5c881c434d3dbd75fd1e4fba4cdeeca645a3d835b65b30c10e961c"
+    },
+    {
+      "path": "results/summary.json",
+      "sha256": "86217710483d8a3676a3563b7b7e26cf860dfc838f49a3e94aa7d9613114d200"
+    },
+    {
+      "path": "results/independent_verification.json",
+      "sha256": "9b8788cb3a3e9ac8857d7cd76e85d5ddc2cc54a0e7a4b8cfcdf8ccebc96e513b"
+    },
+    {
+      "path": "results/matched_coverage.json",
+      "sha256": "7d4d0804d13153a40a78d79a4fc706f20068258c48ca47b868459676972127b5"
+    },
+    {
+      "path": "results/local_delivery_verification.json",
+      "sha256": "fa03ccce115ebca37b255549f0d28e2b99f739895bc8fa7100a7a7f5cfc44b42"
+    },
+    {
+      "path": "results/render_status_01.txt",
+      "sha256": "ac506a0b129aa601d37318a2a77fd846e25e7763192807f1a461f009c530c406"
+    },
+    {
+      "path": "delivery/results/render_record.json",
+      "sha256": "017f1b0cf59426aa03d839d63ca4c0083feef347876688d3a6f6ded31c855045"
+    },
+    {
+      "path": "evidence/HF_connector_availability.json",
+      "sha256": "91ec674b29332fd8369b06ed81f307587f1e09df168be1eab8a08a1253d497dc"
+    }
+  ],
+  "public_counting_candidates": {
+    "new_qualified_independent_bidirectional_reference_obtained": false,
+    "HF_precomputed_predictions_not_admitted_as_truth": true,
+    "author_form_submitted": false
+  },
+  "new_training_or_inference": false,
+  "models_and_thresholds_unchanged": true,
+  "remaining_original_goal_requirements": [
+    {
+      "requirement": "Independent_real_bidirectional_count_accuracy",
+      "status": "incomplete",
+      "needed": "ReviewerJSON and fresh complete direction-labeled events"
+    },
+    {
+      "requirement": "Reliable_identity_RFID_recovery",
+      "status": "partial",
+      "needed": "Independent identities/RF mapping and validated chosen risk/coverage"
+    },
+    {
+      "requirement": "PYNQ_Z2_detector_and_background_identity_joint_execution",
+      "status": "unverified",
+      "needed": "SSH/image/toolversions, final arithmetic mapping and measured jointboard result"
+    },
+    {
+      "requirement": "Principal_scientific_contribution_and_publication_evidence",
+      "status": "not_yet_proven"
+    }
+  ],
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

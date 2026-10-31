@@ -1,0 +1,33 @@
+{
+  "status": "FIVE_NATIVE_SAMPLES_AND_THREE_CONTACT_SHEETS_VISUALLY_INSPECTED",
+  "inspection_method": "view_image on original native frame0 and three rendered contact sheets; native panels retained beside clearly labelled added GT layers",
+  "viewed_files": [
+    "results/frame_review/three_times_native_and_GT_hypothesis.jpg",
+    "results/frame_review/target_00000_native.png",
+    "results/scale_control/native_and_GT_x2_diagnostic.jpg",
+    "results/tail_review/endpoint_and_final_native_GT_context.jpg"
+  ],
+  "native_display_indices0_inspected": [0, 8991, 26973, 53919, 53945],
+  "native_dimensions": [2944, 2944],
+  "original_native_samples": "No tracking bounding boxes or track-ID labels observed in these five samples. Native source has a small blurred timestamp-like marking at the top left and blurred image regions outside the central pen; not described as entirely text-free or unprocessed raw sensor imagery.",
+  "direct_GT_coordinates_control": "At original scale, all three sampled overlays are too small and displaced toward the upper-left relative to the visible cows.",
+  "author_motivated_GT_times_2_control": "At video0 0, 8991 and 26973, scaled boxes are broadly consistent with the visible cows. Individual boundaries are approximate and no independent manual IoU was measured.",
+  "endpoint_sample": "At video0 53919, GT1 53920 times 2 broadly corresponds to eight visible cows. This supports a prefix-alignment hypothesis, not proof of every intermediate frame or its exact offset.",
+  "last_source_frame": "Video0 53945 is decodable and shows a very similar pen arrangement. Last-GT boxes were drawn ONLY as explicitly labelled context; no GT for this frame was fabricated.",
+  "scale_supported_in_samples": 2.0,
+  "annotated_anchor_frames_reviewed": 4,
+  "sampled_publisher_boxes_at_anchors": 24,
+  "scene_observation": "Enclosed fisheye view of a small pen with feeding and resting areas, a concrete lane and gate-like passages. Complete farm entrance/exit events and stable bidirectional passage regions have not been certified from these still images.",
+  "caption_and_layer_distinction": "Native and added GT layers are explicitly labelled, and missing tail GT is visible in the final contact sheet. Contact-sheet text is legible when opened at native output size.",
+  "whole_video_visual_QA": false,
+  "full_frame_alignment_certified": false,
+  "full_19GB_source_checksum_verified": false,
+  "new_independent_counting_test_certified": false,
+  "decoded_GOP_integrity_check_frames": 126,
+  "visually_viewed_native_frames": 5,
+  "original_summary_metadata_correction": "In results/frame_review/summary.json, the field named ffprobe_stderr actually contains the ffmpeg extraction stderr. Raw extraction .log files were retained. Decoder source has been corrected to use separate ffprobe_stderr and ffmpeg_stderr for future runs; historical summary is preserved without rerunning or overwriting images. Warnings concern short raw H264 rate estimation and single-image naming; packet count, image decode and dimensions passed.",
+  "no_accuracy_or_physical_identity_claim_from_box_correspondence": true,
+  "human_independent_event_JSON_received": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

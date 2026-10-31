@@ -1,0 +1,8 @@
+{
+  "purpose": "Final diagnostic review and arithmetic controls; no method/score selection",
+  "strict_ID_presence_control": "Repeat post-box/reference-ID intervention retaining only actual nonempty track IDs and original ROI 0.1<cy<0.95; preserve original unfiltered summary as archived v1",
+  "stable_region_checks": "Report matched frame count and longest consecutive A/B observations per publisher ID, with original ROI retained; longest runs do not by themselves establish correct order, gap continuity or crossing",
+  "local_spatial_support": "For each already frozen actual temporal matching pair, measure predicted-track versus paired publisher-ID IoU on same source frames within prediction event +/-15frames, clipped to0..478. Report count at0.5 and0.3 plus max IoU. Descriptive evidence, no accept/reject gate and no replacement of frozen TP/FP/FN.",
+  "source_images": "All20 native-resolution JPEG derivatives and80overlays matched to prior source trace rows; visual observations explicitly agent/nonblind, not independent human truth",
+  "new_checkpoint_training_or_test_selection": false
+}

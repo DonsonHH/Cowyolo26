@@ -1,0 +1,1377 @@
+{
+  "name": "C_letterbox_trained_seed27",
+  "seed": 27,
+  "checkpoint_sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+  "fp32_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed27/embedding_fp32.onnx",
+  "fp32_sha256": "aa7941708a5952e13c908fb8c204b0e52a1633b5c76be638f9673b745ff0d252",
+  "qdq_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed27/embedding_conv_qdq.onnx",
+  "qdq_sha256": "74e80350f08b704ee459eda958804f6db04382ccb71f4b112a29e937a2e6b667",
+  "original_fp32_threshold": 0.8642478136864173,
+  "qdq_threshold": {
+    "threshold": 0.9351450157334533,
+    "calibration_known_correct_accepted": 0,
+    "calibration_known_wrong_accepted": 0,
+    "calibration_unknown_false_accepts": 0,
+    "calibration_unknown_queries": 30,
+    "calibration_unknown_far": 0.0,
+    "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+  },
+  "quantised_validation": {
+    "known_queries": 25,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 0,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 25,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 20,
+    "known_closed_top1_accuracy": 0.8,
+    "known_correct_accepted_rate": 0.0,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 0,
+    "unknown_false_acceptance_rate": 0.0,
+    "all_accepted_wrong_fraction": null,
+    "per_identity": [
+      {
+        "identity": "007",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.6,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "011",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "012",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "019",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.6,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "022",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "024",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "030",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "039",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "041",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.8,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "045",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "081",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      }
+    ],
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "validation_fp32_max_feature_error": 2.562999725341797e-06,
+  "calibration_execution": {
+    "runtime": "1.23.2",
+    "calibration_intra_op_threads": 2,
+    "calibration_inter_op_threads": 1,
+    "method": "MinMax",
+    "activation_type": "QUInt8",
+    "weight_type": "QInt8",
+    "weight_per_channel": true,
+    "quantised_op_types": [
+      "Conv"
+    ],
+    "other_operators_float": true,
+    "library_files_modified": false
+  },
+  "fp32_graph": {
+    "file": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed27/embedding_fp32.onnx",
+    "file_bytes": 3726608,
+    "IR_version": 7,
+    "opset": {
+      "ai.onnx": 13
+    },
+    "checker_full_check": "PASS",
+    "nodes": 143,
+    "operator_counts": {
+      "Conv": 52,
+      "HardSigmoid": 27,
+      "Mul": 27,
+      "Relu": 14,
+      "GlobalAveragePool": 10,
+      "Add": 6,
+      "Flatten": 1,
+      "ReduceL2": 1,
+      "Constant": 1,
+      "Clip": 1,
+      "Shape": 1,
+      "Expand": 1,
+      "Div": 1
+    },
+    "initializers": 104,
+    "initializer_bytes": 3683808,
+    "initializer_bytes_by_dtype": {
+      "float32": 3683808
+    },
+    "largest_inferred_nonconstant_tensor_bytes": 903168,
+    "static_live_known_tensor_peak_bytes_sketch": 2408448,
+    "unknown_output_size_tensors": [],
+    "static_liveness_scope": "Sequential allocation sketch of known graph tensors; assumes no aliasing/reuse, excludes parameters, kernel workspaces, planner alignment, runtime/decoder/DMA buffers. Unknown shapes make the peak incomplete; it is not an upper bound or hardware BRAM utilisation.",
+    "Conv_MACs_direct_initializer_only": 54896576,
+    "Conv_details": [
+      {
+        "name": "/encoder/encoder.0/encoder.0.0/encoder.0.0.0/Conv",
+        "weight_shape": [
+          16,
+          3,
+          3,
+          3
+        ],
+        "output_shape": [
+          1,
+          16,
+          112,
+          112
+        ],
+        "MACs": 5419008,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.1/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          16,
+          1,
+          3,
+          3
+        ],
+        "output_shape": [
+          1,
+          16,
+          56,
+          56
+        ],
+        "MACs": 451584,
+        "group": 16
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.1/block/block.1/fc1/Conv",
+        "weight_shape": [
+          8,
+          16,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          8,
+          1,
+          1
+        ],
+        "MACs": 128,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.1/block/block.1/fc2/Conv",
+        "weight_shape": [
+          16,
+          8,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          16,
+          1,
+          1
+        ],
+        "MACs": 128,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.1/block/block.2/block.2.0/Conv",
+        "weight_shape": [
+          16,
+          16,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          16,
+          56,
+          56
+        ],
+        "MACs": 802816,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.2/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          72,
+          16,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          72,
+          56,
+          56
+        ],
+        "MACs": 3612672,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.2/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          72,
+          1,
+          3,
+          3
+        ],
+        "output_shape": [
+          1,
+          72,
+          28,
+          28
+        ],
+        "MACs": 508032,
+        "group": 72
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.2/block/block.2/block.2.0/Conv",
+        "weight_shape": [
+          24,
+          72,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          24,
+          28,
+          28
+        ],
+        "MACs": 1354752,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.3/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          88,
+          24,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          88,
+          28,
+          28
+        ],
+        "MACs": 1655808,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.3/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          88,
+          1,
+          3,
+          3
+        ],
+        "output_shape": [
+          1,
+          88,
+          28,
+          28
+        ],
+        "MACs": 620928,
+        "group": 88
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.3/block/block.2/block.2.0/Conv",
+        "weight_shape": [
+          24,
+          88,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          24,
+          28,
+          28
+        ],
+        "MACs": 1655808,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          96,
+          24,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          96,
+          28,
+          28
+        ],
+        "MACs": 1806336,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.4/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          96,
+          1,
+          5,
+          5
+        ],
+        "output_shape": [
+          1,
+          96,
+          14,
+          14
+        ],
+        "MACs": 470400,
+        "group": 96
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.4/block/block.2/fc1/Conv",
+        "weight_shape": [
+          24,
+          96,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          24,
+          1,
+          1
+        ],
+        "MACs": 2304,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.4/block/block.2/fc2/Conv",
+        "weight_shape": [
+          96,
+          24,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          96,
+          1,
+          1
+        ],
+        "MACs": 2304,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.4/block/block.3/block.3.0/Conv",
+        "weight_shape": [
+          40,
+          96,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          40,
+          14,
+          14
+        ],
+        "MACs": 752640,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.5/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          240,
+          40,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          240,
+          14,
+          14
+        ],
+        "MACs": 1881600,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.5/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          240,
+          1,
+          5,
+          5
+        ],
+        "output_shape": [
+          1,
+          240,
+          14,
+          14
+        ],
+        "MACs": 1176000,
+        "group": 240
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.5/block/block.2/fc1/Conv",
+        "weight_shape": [
+          64,
+          240,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "MACs": 15360,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.5/block/block.2/fc2/Conv",
+        "weight_shape": [
+          240,
+          64,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "MACs": 15360,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.5/block/block.3/block.3.0/Conv",
+        "weight_shape": [
+          40,
+          240,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          40,
+          14,
+          14
+        ],
+        "MACs": 1881600,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.6/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          240,
+          40,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          240,
+          14,
+          14
+        ],
+        "MACs": 1881600,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.6/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          240,
+          1,
+          5,
+          5
+        ],
+        "output_shape": [
+          1,
+          240,
+          14,
+          14
+        ],
+        "MACs": 1176000,
+        "group": 240
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.6/block/block.2/fc1/Conv",
+        "weight_shape": [
+          64,
+          240,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          64,
+          1,
+          1
+        ],
+        "MACs": 15360,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.6/block/block.2/fc2/Conv",
+        "weight_shape": [
+          240,
+          64,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          240,
+          1,
+          1
+        ],
+        "MACs": 15360,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.6/block/block.3/block.3.0/Conv",
+        "weight_shape": [
+          40,
+          240,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          40,
+          14,
+          14
+        ],
+        "MACs": 1881600,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.7/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          120,
+          40,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          120,
+          14,
+          14
+        ],
+        "MACs": 940800,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.7/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          120,
+          1,
+          5,
+          5
+        ],
+        "output_shape": [
+          1,
+          120,
+          14,
+          14
+        ],
+        "MACs": 588000,
+        "group": 120
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.7/block/block.2/fc1/Conv",
+        "weight_shape": [
+          32,
+          120,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "MACs": 3840,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.7/block/block.2/fc2/Conv",
+        "weight_shape": [
+          120,
+          32,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          120,
+          1,
+          1
+        ],
+        "MACs": 3840,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.7/block/block.3/block.3.0/Conv",
+        "weight_shape": [
+          48,
+          120,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          48,
+          14,
+          14
+        ],
+        "MACs": 1128960,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.8/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          144,
+          48,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          144,
+          14,
+          14
+        ],
+        "MACs": 1354752,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.8/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          144,
+          1,
+          5,
+          5
+        ],
+        "output_shape": [
+          1,
+          144,
+          14,
+          14
+        ],
+        "MACs": 705600,
+        "group": 144
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.8/block/block.2/fc1/Conv",
+        "weight_shape": [
+          40,
+          144,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          40,
+          1,
+          1
+        ],
+        "MACs": 5760,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.8/block/block.2/fc2/Conv",
+        "weight_shape": [
+          144,
+          40,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "MACs": 5760,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.8/block/block.3/block.3.0/Conv",
+        "weight_shape": [
+          48,
+          144,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          48,
+          14,
+          14
+        ],
+        "MACs": 1354752,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.9/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          288,
+          48,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          288,
+          14,
+          14
+        ],
+        "MACs": 2709504,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.9/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          288,
+          1,
+          5,
+          5
+        ],
+        "output_shape": [
+          1,
+          288,
+          7,
+          7
+        ],
+        "MACs": 352800,
+        "group": 288
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.9/block/block.2/fc1/Conv",
+        "weight_shape": [
+          72,
+          288,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          72,
+          1,
+          1
+        ],
+        "MACs": 20736,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.9/block/block.2/fc2/Conv",
+        "weight_shape": [
+          288,
+          72,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          288,
+          1,
+          1
+        ],
+        "MACs": 20736,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.9/block/block.3/block.3.0/Conv",
+        "weight_shape": [
+          96,
+          288,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          96,
+          7,
+          7
+        ],
+        "MACs": 1354752,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.10/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          576,
+          96,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          576,
+          7,
+          7
+        ],
+        "MACs": 2709504,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.10/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          576,
+          1,
+          5,
+          5
+        ],
+        "output_shape": [
+          1,
+          576,
+          7,
+          7
+        ],
+        "MACs": 705600,
+        "group": 576
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.10/block/block.2/fc1/Conv",
+        "weight_shape": [
+          144,
+          576,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "MACs": 82944,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.10/block/block.2/fc2/Conv",
+        "weight_shape": [
+          576,
+          144,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "MACs": 82944,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.10/block/block.3/block.3.0/Conv",
+        "weight_shape": [
+          96,
+          576,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          96,
+          7,
+          7
+        ],
+        "MACs": 2709504,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.11/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          576,
+          96,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          576,
+          7,
+          7
+        ],
+        "MACs": 2709504,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.11/block/block.1/block.1.0/Conv",
+        "weight_shape": [
+          576,
+          1,
+          5,
+          5
+        ],
+        "output_shape": [
+          1,
+          576,
+          7,
+          7
+        ],
+        "MACs": 705600,
+        "group": 576
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.11/block/block.2/fc1/Conv",
+        "weight_shape": [
+          144,
+          576,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          144,
+          1,
+          1
+        ],
+        "MACs": 82944,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.11/block/block.2/fc2/Conv",
+        "weight_shape": [
+          576,
+          144,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          576,
+          1,
+          1
+        ],
+        "MACs": 82944,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.11/block/block.3/block.3.0/Conv",
+        "weight_shape": [
+          96,
+          576,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          96,
+          7,
+          7
+        ],
+        "MACs": 2709504,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.12/encoder.0.12.0/Conv",
+        "weight_shape": [
+          576,
+          96,
+          1,
+          1
+        ],
+        "output_shape": [
+          1,
+          576,
+          7,
+          7
+        ],
+        "MACs": 2709504,
+        "group": 1
+      }
+    ],
+    "inputs": [
+      {
+        "name": "images",
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "embedding",
+        "shape": [
+          1,
+          576
+        ]
+      }
+    ],
+    "integer_quantised_initializers": 0,
+    "is_fpga_compile_proof": false
+  },
+  "qdq_graph": {
+    "file": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed27/embedding_conv_qdq.onnx",
+    "file_bytes": 1256000,
+    "IR_version": 7,
+    "opset": {
+      "ai.onnx": 13
+    },
+    "checker_full_check": "PASS",
+    "nodes": 445,
+    "operator_counts": {
+      "Constant": 1,
+      "DequantizeLinear": 203,
+      "QuantizeLinear": 99,
+      "Conv": 52,
+      "HardSigmoid": 27,
+      "Mul": 27,
+      "Relu": 14,
+      "GlobalAveragePool": 10,
+      "Add": 6,
+      "Flatten": 1,
+      "ReduceL2": 1,
+      "Shape": 1,
+      "Clip": 1,
+      "Expand": 1,
+      "Div": 1
+    },
+    "initializers": 510,
+    "initializer_bytes": 1064551,
+    "initializer_bytes_by_dtype": {
+      "uint8": 99,
+      "float32": 71948,
+      "int8": 920952,
+      "int32": 71552
+    },
+    "largest_inferred_nonconstant_tensor_bytes": 903168,
+    "static_live_known_tensor_peak_bytes_sketch": 6090464,
+    "unknown_output_size_tensors": [],
+    "static_liveness_scope": "Sequential allocation sketch of known graph tensors; assumes no aliasing/reuse, excludes parameters, kernel workspaces, planner alignment, runtime/decoder/DMA buffers. Unknown shapes make the peak incomplete; it is not an upper bound or hardware BRAM utilisation.",
+    "Conv_MACs_direct_initializer_only": 0,
+    "Conv_details": [],
+    "inputs": [
+      {
+        "name": "images",
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "embedding",
+        "shape": [
+          1,
+          576
+        ]
+      }
+    ],
+    "integer_quantised_initializers": 203,
+    "is_fpga_compile_proof": false
+  },
+  "parameters": 927008,
+  "fp32_evaluation": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 14,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 16,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 29,
+    "known_closed_top1_accuracy": 0.9666666666666667,
+    "known_correct_accepted_rate": 0.4666666666666667,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 3,
+    "unknown_false_acceptance_rate": 0.1,
+    "all_accepted_wrong_fraction": 0.17647058823529413,
+    "per_identity": [
+      {
+        "identity": "001",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "009",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.6,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "010",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "020",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.8,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "026",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.8,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "028",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.6,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "031",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.4,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "033",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "035",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.6
+      },
+      {
+        "identity": "040",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "054",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.4,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "076",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      }
+    ],
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "qdq_evaluation": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 0,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 30,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 19,
+    "known_closed_top1_accuracy": 0.6333333333333333,
+    "known_correct_accepted_rate": 0.0,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 0,
+    "unknown_false_acceptance_rate": 0.0,
+    "all_accepted_wrong_fraction": null,
+    "per_identity": [
+      {
+        "identity": "001",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "009",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.6,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "010",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "020",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.2,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "026",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.8,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "028",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.6,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "031",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.6,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "033",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "035",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "040",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "054",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "076",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      }
+    ],
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "evaluation_fp32_max_feature_error": 2.738088369369507e-06,
+  "evaluation_qdq_max_feature_error": 0.27931201457977295
+}

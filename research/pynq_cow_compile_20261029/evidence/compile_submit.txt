@@ -1,0 +1,11 @@
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|20|alloc|cu[01-20]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|1|mix|gpu02|gpu:V100S:4
+4gpu|up|infinite|1|idle|gpu03|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+   130518_[6-14%3]|     4gpu|    cow-lowres-factorial| PENDING|      0:00|     15:00|(JobArrayTaskLimit)
+          130518_5|     4gpu|    cow-lowres-factorial| RUNNING|      3:02|     15:00|gpu02
+          130518_4|     4gpu|    cow-lowres-factorial| RUNNING|      3:10|     15:00|gpu02
+          130518_3|     4gpu|    cow-lowres-factorial| RUNNING|      3:13|     15:00|gpu02
+/usr/bin/g++

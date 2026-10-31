@@ -1,0 +1,28 @@
+JobID|State|ExitCode|Elapsed|MaxRSS
+130609|COMPLETED|0:0|00:00:03|
+130609.batch|COMPLETED|0:0|00:00:03|1172K
+{
+  "status": "FIRST_ATTENTION_INT8_BOUNDARY_INTERVENTION_EXECUTED_DIAGNOSTIC_ONLY",
+  "created_UTC": "2026-10-29T17:51:18.017197+00:00",
+  "job_id": "130609",
+  "boundary": {
+    "tensor": "/model.10/m/m.0/attn/Add_output_0_QuantizeLinear_Output",
+    "flat_index": 7528,
+    "reference_int8": -49,
+    "native_int8": -50,
+    "reference_float": -1.7367326021194458,
+    "native_float": -1.736733078956604,
+    "scale": 0.0551343709230423,
+    "zero": -18,
+    "reference_float_over_scale": -31.499998092651367,
+    "native_float_over_scale": -31.50000762939453
+  },
+  "full_reference_matches_native_after_one_boundary_intervention": true,
+  "original_reference_vs_native_complete_raw_gate_passes": false,
+  "original_gates_or_weights_changed": false,
+  "conf02_kept_output_rows_were_exact_before_intervention": true,
+  "actual_network_forwards": 3,
+  "intervention_is_not_deployment_fix": true,
+  "whole_goal_complete": false
+}
+

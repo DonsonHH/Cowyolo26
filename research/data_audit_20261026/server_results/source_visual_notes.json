@@ -1,0 +1,15 @@
+{
+  "status": "produced_not_user_validated",
+  "review_method": "Agent visual inspection of source-only contact sheets, independent of detector predictions; not a human-validated benchmark",
+  "source": "MultiCamCows2024 camera1 2023-08-14T12-54-48.mp4",
+  "review_windows_seconds": [[390, 420], [420, 450], [450, 480]],
+  "sampling_interval_seconds": 1,
+  "gate": {"roi_x_fraction": [0.34, 0.75], "axis": "y", "A_y_less_than": 0.4, "B_y_greater_than": 0.6},
+  "observations": [
+    {"time_interval_seconds": [392, 396], "direction": "A->B", "description": "Cow with white back and large dark patches moves down across gate and then remains near lower area", "confidence": "provisional visual count; refine with full video/manual annotation"},
+    {"time_interval_seconds": [431, 435], "direction": "A->B", "description": "Mostly dark cow remaining above gate then moves down through it", "confidence": "provisional visual count; refine with full video/manual annotation"}
+  ],
+  "boundary_censored": "An earlier white spotted cow is already between the gate boundaries at t=390 and leaves below; its full crossing cannot be counted within this window alone",
+  "reverse_direction": "No complete B->A crossing established in these inspected windows; this is not proof about the rest of the video or dataset",
+  "timestamp_note": "The source filename and visible overlay differ by approximately one hour; investigate clock/timezone before any RF synchronization"
+}

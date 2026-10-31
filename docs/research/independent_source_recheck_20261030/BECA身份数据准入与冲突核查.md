@@ -1,0 +1,67 @@
+# BECA背部身份数据：日期信息可用，先隔离标签冲突
+
+2026-10-30。**已实际取得新官方归档的完整目录、说明与标注文本，并看完8张预先固定的质检图。** BECA提供值得保留的背部身份补充来源；目前不增加身份评分或训练，也不把它当作连续通道计数真值。关键原因是任务域差异，以及已确认的同图多身份问题。
+
+## 1. 原始来源与实际取得
+
+作者的[固定门户说明](https://github.com/xxzyq/BECA-A-Computer-Vision-Dataset-for-Long-Term-Recognition-In-Beef-Cattle/blob/942023bc1696081b753fb1678bae677e11e59e31/README.md)指出旧DOI失效，并迁移到[Figshare 32070171 v1](https://doi.org/10.6084/m9.figshare.32070171.v1)。本机已保存[固定版本API的原响应](<../../../research/independent_source_recheck_20261030/evidence/BECA_article_32070171_version1_powershell.json>)：许可CC BY 4.0，唯一文件BECA.zip为20,309,712,996字节，file_id为63928608。登记MD5为8f4c06835a7d2dba1a6dbc74e34d38b3；本项目没有下载整包，故没有核验整包MD5。
+
+直接Python和curl请求收到403；PowerShell/.NET方式实际取得JSON及严格206范围响应。原失败响应全部保留，尚未定位客户端差异的具体原因，没有修改代理、节点或网络配置。每次范围都检查Content-Range、长度并保存SHA；不是由HEAD成功推断GET成功。
+
+| 实际取得 | 核验 |
+|---|---|
+| ZIP64尾部与完整中央目录 | 68,350项；自写解析与Python zipfile逐项匹配名称、CRC、大小、压缩方法和偏移；目录与尾部重叠130,974字节相同 |
+| 包内readme、val_pair.txt及annotations.json | 解压长度、CRC和本地／中央头一致；原文本保留 |
+| 4个冲突文件成员 | 冻结两个组后定向取得，用字节SHA核对；其中2个代表输入随后按QA协议解码 |
+| 6张普通跨日期质检图 | 另行冻结3个QA身份及首末日期规则，再取得并解码；不进入未来最终测试 |
+
+对应[HTTP与目录计划](<../../../research/independent_source_recheck_20261030/results/BECA_directory_range_plan_v1.json>)、[索引摘要](<../../../research/independent_source_recheck_20261030/results/BECA_archive_index_summary_v1.json>)、[文本提取核验](<../../../research/independent_source_recheck_20261030/results/BECA_text_extraction_v1.json>)。取得部分字节和目录不代表整包已下载。
+
+## 2. 日期和身份到底能提供什么
+
+| 子集／存储目录 | 本次实际核查 |
+|---|---|
+| BECA-D/train | 16,083图、5,361个文件名ID |
+| BECA-D/val及配对表 | 806图、300个文件名ID；1,424对，正负各712；配对文件均存在且标签与文件名ID关系一致 |
+| BECA-L三个牛舍身份目录 | 6,686／2,158／3,328图 |
+| BECA-L/cowshed_sum | 12,172个文件、103个ID；文件名有日期与牛舍信息 |
+| BECA-L对象标注 | 8,321张原图登记、15,788个对象；bbox为作者定义的xyxy，关键点每对象26个坐标值；不能直接按标准COCO xywh或可见性三元组读取 |
+
+三个牛舍目录与合并目录共存储24,344个身份图文件；12,172组可按来源后缀、CRC、大小及重新编号关系一一对应，不能相加成24,344个独立样本。这里的全体副本对应基于元数据，不是逐张像素SHA核验。
+
+合并目录覆盖134个文件名日期，2023-12-10至2024-07-26；99个ID跨度至少30天，93个至少60天。全部103个ID都有至少7个日期，可继续设计跨日图库／查询。46.71%的文件名时间为0000，不把该字段当作准确曝光时钟。ZIP容器修改时间也不当作采集日期。[完整元数据审核](<../../../research/independent_source_recheck_20261030/results/BECA_metadata_audit_v1.json>)
+
+作者[数据论文](https://www.nature.com/articles/s41597-025-06326-5)说明，BECA-L采用聚类后人工复核建立视觉ID；来源为间隔拍照。当前文件不提供这12头通行牛的耳标映射、连续轨迹或人工过线时间。它支持身体身份组件研究的候选数据，并不补齐本项目原视频的永久牛号。
+
+## 3. 在模型预测前发现的标签冲突
+
+合并身份目录有40组相同来源后缀且CRC／文件大小相同的候选重复，每组位于两个不同ID下，共涉及80个文件、15个ID。冻结每个受影响牛舍的首个来源组后，取得4份成员并核验：
+
+| 发布方身份前缀 | 源日期与组 | 完整JPEG字节SHA256 |
+|---|---|---|
+| 16与5 | 2024-01-16，牛舍0 | d8246aac8b8c9cd53143aa4a62c85bece3becde3d5f845a5fc35265ad2588fc0 |
+| 71与79 | 2024-03-15，牛舍3 | 1475dfe8359be6c9b16a7b16e107f7247b7f277ff0decb44b0e34651c55f2bb9 |
+
+两组分别是完全相同的JPEG被赋予两个身份。其余38组只完成元数据检查，不能写成全40组都已字节核验。原标签未修改，也没有任取一边作为正确牛号。[固定取证协议](<../../../research/independent_source_recheck_20261030/protocol/BECA_duplicate_byte_proof_v1.json>) · [字节证明](<../../../research/independent_source_recheck_20261030/results/BECA_duplicate_byte_verification_v1.json>)
+
+受影响ID为5、16、67、68、70、71、72、73、74、75、78、79、80、81、86。后续评价先隔离这些ID及相应副本，等待有依据的标签澄清；隔离不意味着其他身份全部正确。其他已知来源仍按原命名空间独立处理。
+
+## 4. 8张实际图像检查
+
+普通QA身份按元数据固定为11、65、100，每个取首末日期各一张；加两个已取证冲突输入，共8张。协议在首次解码前保存，三QA身份此后属于已见开发材料。[视觉准入协议](<../../../research/independent_source_recheck_20261030/protocol/BECA_visual_QA_v1.json>) · [输入与像素hash](<../../../research/independent_source_recheck_20261030/results/BECA_visual_QA_manifest_v1.json>) · [逐组观察](<../../../research/independent_source_recheck_20261030/results/BECA_visual_review_v1.json>)
+
+两张联系表全部查看：图像是背部俯拍裁剪，包含棕色／棕白等外观，部分头颈被栏杆遮挡；有旋转裁剪的黑角、身体边界和原相机时间字样，跨日期光照及毛发有变化。视角与俯视要求相符，但来源为肉牛饲喂区，与目标荷斯坦通道存在任务域差异。这里不凭看图认证两个日期必为同牛，更没有认证数据集全部ID。
+
+[首末日期的已见开发质检图](<../../../ARCHIVE_CONTENTS.md#omitted>)
+
+[另一QA身份及两组冲突输入](<../../../ARCHIVE_CONTENTS.md#omitted>)
+
+## 5. 科研下一步与设备入口
+
+BECA保留为**待补标签审核的外来源身份组件候选**。若进一步评价，使用合并目录一次计入样本、隔离受影响ID及3个已见QA身份，按日期和个体冻结图库／查询及已登记／未知角色；阈值来自独立开发材料。它只能回答声明范围内的跨日期／跨域检索问题，不能代替当前通行场景的掉标恢复或计数结论。当前新增身份评分、训练更新和模型前向均为0。
+
+另一候选DazzleCows2025的固定作者仓库只有代码，尚未找到视频及人工身份清单的公共获取端点。此次来源检索与读取范围见[原始来源记录](<原始来源检索.md>)。该记录按子代理当时的读取范围保留，BECA后续范围下载和QA以本报告为准。
+
+设备优先级仍为取回PYNQ-Z2原实验。最后一次定向检查确认网关ARP可用，板卡旧静态地址未应答，路由器DNS没有pynq/pynq.local；异网段ARP失败不能证明断电、服务停止或数据丢失。没有更改网口、路由或板卡配置，没有复位或重跑原实验。[定向观察](<../../../research/identity_trigger_pair_20261030/evidence/router_static_probe_v1.json>)
+
+当前独立事件JSON、原12事件永久身份、实际触发四轮原始数据和现场输入验证继续待补。新的目录、标签检查和质检图均不能替代这些证据。

@@ -1,0 +1,13 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID                         JobName      State ExitCode    Elapsed  AllocCPUS     MaxRSS 
+------------ ------------------------ ---------- -------- ---------- ---------- ---------- 
+130643            cow-photo-reference  COMPLETED      0:0   00:00:04          4            
+130643.batch                    batch  COMPLETED      0:0   00:00:04          4      1176K 
+130643.0                       python  COMPLETED      0:0   00:00:04          4       800K 
+{"status": "ALL_ACTUAL_PHOTOS_AND30_GALLERY_TORCH_REFERENCE_PASS_FROZEN_NUMERIC_AND_RETRIEVAL_GATES", "created_UTC": "2026-10-30T00:15:24.043283+00:00", "job_id": "130643", "host": "cu03", "query_Torch_forwards": 40, "gallery_Torch_forwards": 30, "maximum_query_normalized_error": 2.168118953704834e-06, "maximum_gallery_normalized_error": 4.045665264129639e-06, "maximum_input_error": 0.0, "retrieval_conditions": 80, "all_top1_and_threshold_decisions_same": true, "permanent_ID_accuracy_verified": false, "new_training_updates": 0, "new_board_forwards": 0, "whole_goal_complete": false}
+{
+  "archive": "/share/home/renly/projects/idcoo_research_20261026/async_highres_20261030/reference_delivery_v1.tar.gz",
+  "bytes": 293910,
+  "sha256": "b289e998da58bfcad8014fe140ac52cc91b7dd737b925f4a2b325f87feb65309",
+  "members": 9
+}

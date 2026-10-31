@@ -1,0 +1,83 @@
+{
+  "status": "ALL71_DELIVERY_FILES_TWELVE_EVENT_PATHS_AND_SECONDSTAGE_COSTS_VERIFIED",
+  "protocol_sha256": "91170ac7894362a78f225f35397185cd75f600c92afdd97fdbc40db978883978",
+  "summary_sha256": "faaaccd4a94c07cef2c685cb1e58001b3411ed2aa3a06d009e1ec711cf05d305",
+  "candidate_module_sha256": "6e4a33dbc3f1adb2551fff26dc3304722ccc4d73790dff7a1e9a4b5c2cc9abce",
+  "files": 71,
+  "conditions": [
+    {
+      "condition": "installed_baseline_seed26",
+      "independent_event_paths": 2,
+      "handoff_events": 12,
+      "low_matches": 0
+    },
+    {
+      "condition": "secondstage_iou_seed26",
+      "independent_event_paths": 2,
+      "handoff_events": 12,
+      "low_matches": 338
+    },
+    {
+      "condition": "installed_baseline_seed27",
+      "independent_event_paths": 2,
+      "handoff_events": 11,
+      "low_matches": 0
+    },
+    {
+      "condition": "secondstage_iou_seed27",
+      "independent_event_paths": 2,
+      "handoff_events": 11,
+      "low_matches": 189
+    },
+    {
+      "condition": "installed_baseline_seed28",
+      "independent_event_paths": 2,
+      "handoff_events": 11,
+      "low_matches": 0
+    },
+    {
+      "condition": "secondstage_iou_seed28",
+      "independent_event_paths": 2,
+      "handoff_events": 11,
+      "low_matches": 259
+    }
+  ],
+  "event_paths": 12,
+  "full_baseline_regressions": 3,
+  "trace_updates": 13050,
+  "ROI_track_rows_with_history": 3415,
+  "secondstage_nonempty_decisions": 1190,
+  "secondstage_cost_entries": 1490,
+  "maximum_cost_or_IoU_difference": 2.821312160561362e-07,
+  "applied_low_stage_matches_all_history": 786,
+  "comparisons": [
+    {
+      "seed": 26,
+      "baseline_events": 12,
+      "candidate_events": 12,
+      "event_times_and_directions_exact_without_ID": true,
+      "full_event_records_exact": false
+    },
+    {
+      "seed": 27,
+      "baseline_events": 11,
+      "candidate_events": 11,
+      "event_times_and_directions_exact_without_ID": true,
+      "full_event_records_exact": false
+    },
+    {
+      "seed": 28,
+      "baseline_events": 11,
+      "candidate_events": 11,
+      "event_times_and_directions_exact_without_ID": true,
+      "full_event_records_exact": false
+    }
+  ],
+  "single_score_fusion_block_AST_change_verified": true,
+  "firststage_and_lost_eligibility_unchanged": true,
+  "independent_source_accuracy": null,
+  "new_detector_forwards": 0,
+  "training_updates": 0,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

@@ -1,0 +1,63 @@
+# QAT导出检查与后续训练
+
+更新：2026年10月27日。本轮完成了量化感知训练之前的数值检查和失败定位。**修正权重舍入后，8个训练向量有7个通过原容差，另1个仍失败，因此完整QAT与配对浮点训练尚未启动。**
+
+## 1 原定实验与训练前提
+
+从之前三个seed的身份编码器开始，先合并Conv与BatchNorm，再在52个Conv的输入、权重和输出放入模拟量化。激活UINT8、权重逐输出通道INT8；64张校准图全部来自训练角色，校准结束后固定尺度。偏置、激活函数、残差、SE和L2归一化等保留浮点，因此这是Conv边界的量化实验。
+
+完整实验原定每个seed固定6轮、每轮20个P8K4批次，比较QAT与相同源权重、样本、增强和更新次数的浮点继续训练，采用教师特征蒸馏加triplet损失，固定最后一轮，不选最佳seed。这样可以区分额外训练与量化训练本身的影响。本轮尚未进入这一步。
+
+预设导出验收为8个校准训练向量的最大特征绝对差≤0.001、余弦≥0.9999，权重打包前后差≤10^-6。当前协议与旧失败协议均保留，没有降低容差。
+
+[PyTorch FakeQuantize文档](https://docs.pytorch.org/docs/2.8/generated/torch.ao.quantization.fake_quantize.FakeQuantize.html)说明模拟量化用浮点表达舍入与截断；[Conv-BN合并接口](https://docs.pytorch.org/docs/2.8/generated/torch.nn.utils.fuse_conv_bn_eval.html)要求使用eval状态与既有运行统计。[ORT文档](https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html)支持直接运行从QAT导出的QDQ图。这些接口可用于训练与导出，其数值一致性仍以实际向量核查为准。
+
+## 2 第一个失败：激活量化参数形状
+
+首次作业129737在计算开始前因日志目录未建立而失败，目录修复后129738进入实际导出。其默认ORT优化融合残差加法时报告：`Scale and Zero-point must be a scalar`。
+
+Torch导出的激活scale/zero-point形状为[1]。按[ONNX QuantizeLinear-13定义](https://onnx.ai/onnx/operators/onnx__QuantizeLinear.html#quantizelinear-13)，逐张量量化可用标量。将这些单元素参数形状改为标量，数值保持不变，原始Torch导出图保留。单训练向量控制中，关闭优化的修正前后输出逐位相同，默认优化可以初始化。
+
+默认优化输出与参考路径仍有明显差异，最大特征差约0.1942；形状修正解决的是初始化兼容问题。
+
+## 3 第二个失败：权重舍入路径
+
+形状修正后的作业129740，8/8向量未通过Torch与ORT参考数值比较，最大特征绝对差0.064841。权重打包前后输出逐位一致，说明INT8常量打包没有引入该差异。
+
+作业129741在第一张校准训练图上，比较52个Conv的156个量化位置。47个权重量化张量中合计812/912008个元素不同；该输入上的104个激活量化位置没有不同元素。NumPy控制显示，这些权重差异对应“先乘倒数”和“直接除scale”在半整数附近的舍入区别：本例PyTorch内置操作匹配前者，ORT参考匹配后者。
+
+因此将权重模拟量化改为显式除scale、nearest-even舍入和截断，并为训练保留截断范围内的直通梯度；导出对应标准QDQ。协议v2单列数值实现修正，训练配置、源checkpoint、数据与容差保持原样。
+
+## 4 还剩一个输入没有通过
+
+作业129742得到：
+
+| 条件 | 通过原容差的训练向量 | 最大特征绝对差 |
+| --- | --- | --- |
+| 原内置权重量化，标量形状已修正 | 0/8 | 0.064841 |
+| 显式除法权重量化 | 7/8 | 0.0242545 |
+
+失败的是训练向量index3。作业129743对其实际ORT张量重算156个量化位置，显式除法与ORT量化输出一致；这一步比较相同输入处的单个量化操作。
+
+作业129744从已导出的实际权重、偏置、scale和zero-point恢复PyTorch模型，逐位重现保存的失败输出，再只切换CPU卷积后端：
+
+| PyTorch CPU条件 | 第一个量化后差异 | 最终特征最大差 |
+| --- | --- | --- |
+| MKLDNN开启 | `0.2.block.2.0`投影输出，量化前最大差约4.29×10^-6，经量化后1个元素跨过量化边界，差约0.120458 | 0.0242545 |
+| MKLDNN关闭 | 差异在后层首次出现，量化后仍有1个元素差一个量化步长 | 0.00526768 |
+
+这支持“微小浮点卷积差在量化边界被放大”的当前解释。切换后端改变出现位置但仍未通过，不能作为修复。默认ORT优化路径与关闭优化的差异也继续保留；它不是此前完整PTQ退化的全部解释。
+
+## 5 已具备的产物及下一步
+
+后续执行更新（2026年10月28日）：[新的整数累加候选](<C:/Users/Donson/Documents/ChatGPT/奶牛/integer_reference_20261028/整数卷积参考与导出边界.md>)已用相同8个训练向量检查，关闭优化8/8通过，默认优化6/8。它使用不同的明确数值合同，原QDQ仍7/8；当前只有seed26且前向禁止梯度，正式QAT更新仍0。以下保留原阶段的产物与当时安排，不改旧成绩。
+
+已打包52个实际INT8卷积权重，共912008字节；图约1.15MB，FP32偏置和其他操作保留。Windows本机ORT参考路径重放两个失败版本的第一张向量，与Linux保存值逐位一致。59个交付清单文件、312个单量化位置及8向量记录完成独立核查。
+
+后续先固定更明确的卷积累加、重定标和舍入参考，考虑适合定点实现的尺度策略，并用目前失败的精确向量回归。所有设计调整先在训练/验证侧进行；数值检查通过后，才运行6轮配对QAT实验。既有验证集已经反复用于开发，旧留出12身份也已使用，最终论文测试需另外保持独立。
+
+当前正式QAT更新次数为0，新的身份准确率不存在。这里完成的是可复现失败的定位；Arm/PL映射和PYNQ-Z2联合运行仍待板卡信息与实测。
+
+后续阶段更新：新的整数数值合同经过三seed可训练准入后，已完成[六轮配对QAT](<C:/Users/Donson/Documents/ChatGPT/奶牛/integer_qat_20261028/六轮配对QAT与身份验证结果.md>)，QAT360／浮点360更新。上述0次是本原QDQ失败阶段的历史状态，不改写原7/8结果。
+
+证据：[独立核查](<C:/Users/Donson/Documents/ChatGPT/奶牛/qat_study_20261026/results/independent_verification.json>)、[原失败8向量](<C:/Users/Donson/Documents/ChatGPT/奶牛/qat_study_20261026/delivery/results/smoke_failed_129740/export_parity.json>)、[修正后8向量](<C:/Users/Donson/Documents/ChatGPT/奶牛/qat_study_20261026/delivery/results/smoke/export_parity.json>)、[47个权重量化差异](<C:/Users/Donson/Documents/ChatGPT/奶牛/qat_study_20261026/delivery/results/rounding_probe.json>)、[精确恢复与卷积后端控制](<C:/Users/Donson/Documents/ChatGPT/奶牛/qat_study_20261026/delivery/results/remaining_drift_probe.json>)、[协议v1](<C:/Users/Donson/Documents/ChatGPT/奶牛/qat_study_20261026/protocol/qat_v1.json>)、[协议v2](<C:/Users/Donson/Documents/ChatGPT/奶牛/qat_study_20261026/protocol/qat_v2.json>)。

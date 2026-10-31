@@ -1,0 +1,104 @@
+[
+  {
+    "phase": "baseline_A",
+    "runs": [
+      {
+        "path": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/baseline_A_r224_1746747879194573959_0/summary.json",
+        "status": "FAIL",
+        "fixed_frames": 0,
+        "statistics": null,
+        "library_sha256": null,
+        "failure": "Traceback (most recent call last):\n  File \"/home/xilinx/jupyter_notebooks/yolo26_optimization_7/run_board.py\", line 23, in main\n    raw,boxes,item=one(image,'cold',0);cold_raw=raw.copy();result['cold_first_frame']=item;np.save(O/'cold_raw.npy',raw);cv2.imwrite(str(O/'bus_detected.jpg'),annotate(image,boxes));np.save(O/'bus_boxes.npy',boxes)\n  File \"/home/xilinx/jupyter_notebooks/yolo26_optimization_7/run_board.py\", line 16, in one\n    st=time.perf_counter();raw=g.run_image(im);before_decode=time.perf_counter();boxes=decode(raw,im.shape,size=a.size);end=time.perf_counter();tim=g.timers\n  File \"/home/xilinx/jupyter_notebooks/yolo26_optimization_7/native_graph.py\", line 73, in run_image\n    if rc:raise RuntimeError(self.lib.o7_error().decode(),self.failure)\nRuntimeError: ('node 1: DMA submit', None)\n"
+      },
+      {
+        "path": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/baseline_A_r224_1746748074813854579_0/summary.json",
+        "status": "PASS",
+        "fixed_frames": 100,
+        "statistics": {
+          "mean": 239.61266072999481,
+          "median": 236.84167999988404,
+          "min": 236.30290400001286,
+          "max": 359.17166100011855,
+          "p95": 237.75708204996135
+        },
+        "library_sha256": "3a0ecff56c6bba566e8068db45ddd0684e690b750a440bb78273b22ff1e9976e",
+        "failure": null
+      },
+      {
+        "path": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/baseline_A_r224_1746748074813854579_1/summary.json",
+        "status": "PASS",
+        "fixed_frames": 100,
+        "statistics": {
+          "mean": 238.4605958200132,
+          "median": 236.7198394999832,
+          "min": 236.1564919999637,
+          "max": 296.6476489998513,
+          "p95": 238.7967445498589
+        },
+        "library_sha256": "3a0ecff56c6bba566e8068db45ddd0684e690b750a440bb78273b22ff1e9976e",
+        "failure": null
+      },
+      {
+        "path": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/baseline_A_r224_1746748074813854579_2/summary.json",
+        "status": "PASS",
+        "fixed_frames": 100,
+        "statistics": {
+          "mean": 239.00412547999846,
+          "median": 237.0111039999756,
+          "min": 236.5703749999284,
+          "max": 331.5096110000013,
+          "p95": 241.06443035005896
+        },
+        "library_sha256": "3a0ecff56c6bba566e8068db45ddd0684e690b750a440bb78273b22ff1e9976e",
+        "failure": null
+      }
+    ]
+  },
+  {
+    "phase": "formal_B",
+    "runs": [
+      {
+        "path": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/formal_B_r224_1746749248150606855_0/summary.json",
+        "status": "PASS",
+        "fixed_frames": 100,
+        "statistics": {
+          "mean": 218.01503381000202,
+          "median": 215.62057799997092,
+          "min": 215.05361200024709,
+          "max": 315.5212669998946,
+          "p95": 216.71604244982063
+        },
+        "library_sha256": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+        "failure": null
+      },
+      {
+        "path": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/formal_B_r224_1746749248150606855_1/summary.json",
+        "status": "PASS",
+        "fixed_frames": 100,
+        "statistics": {
+          "mean": 217.34726372001205,
+          "median": 215.57565500006604,
+          "min": 215.1327320002565,
+          "max": 283.2711940000081,
+          "p95": 216.6557317998013
+        },
+        "library_sha256": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+        "failure": null
+      },
+      {
+        "path": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/formal_B_r224_1746749248150606855_2/summary.json",
+        "status": "PASS",
+        "fixed_frames": 100,
+        "statistics": {
+          "mean": 218.74082075002661,
+          "median": 215.61039649986924,
+          "min": 215.22616499987635,
+          "max": 321.3261410000996,
+          "p95": 222.37852505004412
+        },
+        "library_sha256": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+        "failure": null
+      }
+    ]
+  }
+]

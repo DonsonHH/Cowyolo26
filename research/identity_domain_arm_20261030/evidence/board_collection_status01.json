@@ -1,0 +1,16 @@
+{
+  "created_UTC": "2026-10-30T10:11:57.099522+00:00",
+  "port": "COM6",
+  "baud": 115200,
+  "command_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_domain_arm_20261030\\tools\\serial_collection_status.txt",
+  "command_sha256": "186a35f80671f45233283d834ab1bc84b7a89789d01b982425c823a7433ca754",
+  "password_recorded": false,
+  "command_scope": "readonly",
+  "hardware_reset_requested": false,
+  "status": "PRIVILEGED_UART_COMMAND_FINISHED",
+  "exit_code": 0,
+  "guarded_echo_off_observed": true,
+  "password_sent_only_after_actual_sudo_prompt": false,
+  "output": "{\"status\": \"ORIGINAL_ARM_COLLECTION_OBSERVATION\", \"PID\": 30916, \"proc_exists\": false, \"terminal\": null, \"log_tail\": \"Traceback (most recent call last):\\n  File \\\"/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/collect_results.py\\\", line 13, in <module>\\n    assert state['model_forwards']==97 and len(state['warmups'])==2 and sha(PL.bitfile_name)==plan['O8_bit_sha256']\\n  File \\\"/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/collect_results.py\\\", line 7, in sha\\n    def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()\\nAttributeError: 'str' object has no attribute 'read_bytes'\\n\"}\r\n",
+  "elapsed_s": 1.235000000000582
+}

@@ -1,0 +1,29 @@
+{
+  "status": "DIAGNOSTIC_ARITHMETIC_GRAPH_AND_LOCAL_REFERENCE_CHECKS_PASS_QAT_GATE_STILL_FAILS",
+  "graph_checks": [
+    {
+      "folder": "smoke_failed_129740",
+      "original_tolerance_passed_vectors": 0,
+      "failed_vectors": 8,
+      "packed_weight_tensors": 52,
+      "packed_weight_bytes": 912008,
+      "local_reference_forward_max_difference": 0.0
+    },
+    {
+      "folder": "smoke",
+      "original_tolerance_passed_vectors": 7,
+      "failed_vectors": 1,
+      "packed_weight_tensors": 52,
+      "packed_weight_bytes": 912008,
+      "local_reference_forward_max_difference": 0.0
+    }
+  ],
+  "quantiser_probe_cases": 312,
+  "weight_rounding_different_tensors": 47,
+  "weight_rounding_different_elements": 812,
+  "training_role_only_inputs_verified": true,
+  "formal_QAT_or_paired_training_updates": 0,
+  "remaining_original_tolerance_failures": 1,
+  "FPGA_execution_verified": false,
+  "full_goal_complete": false
+}

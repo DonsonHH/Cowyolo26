@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "bundle_sha256": "9a918bc12dea032b82ed0cc0b9526218e493dd47be18e79f76b07b0f00e07066",
+  "manifest_files_verified": 46,
+  "conditions": [
+    {
+      "model": "generic",
+      "variant": "baseline",
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 6
+    },
+    {
+      "model": "generic",
+      "variant": "match_090",
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 6
+    },
+    {
+      "model": "generic",
+      "variant": "match_095",
+      "TP": 5,
+      "FP": 0,
+      "FN": 1,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 5
+    },
+    {
+      "model": "generic",
+      "variant": "buffer_090",
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 6
+    },
+    {
+      "model": "generic",
+      "variant": "without_score_fusion",
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 6
+    },
+    {
+      "model": "generic",
+      "variant": "high_threshold_020",
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 6
+    },
+    {
+      "model": "pilot",
+      "variant": "baseline",
+      "TP": 2,
+      "FP": 0,
+      "FN": 4,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 2
+    },
+    {
+      "model": "pilot",
+      "variant": "match_090",
+      "TP": 3,
+      "FP": 0,
+      "FN": 3,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 3
+    },
+    {
+      "model": "pilot",
+      "variant": "match_095",
+      "TP": 4,
+      "FP": 0,
+      "FN": 2,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 4
+    },
+    {
+      "model": "pilot",
+      "variant": "buffer_090",
+      "TP": 2,
+      "FP": 0,
+      "FN": 4,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 2
+    },
+    {
+      "model": "pilot",
+      "variant": "without_score_fusion",
+      "TP": 4,
+      "FP": 0,
+      "FN": 2,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 3
+    },
+    {
+      "model": "pilot",
+      "variant": "high_threshold_020",
+      "TP": 2,
+      "FP": 0,
+      "FN": 4,
+      "event_reconstruction": "PASS",
+      "metric_recalculation": "PASS",
+      "spatially_supported_temporal_pairs": 2
+    }
+  ],
+  "one_variable_per_variant_and_frozen_raw_input_verified": true,
+  "scope": "Independent stored-track arithmetic; tracker implementation replay equivalence is separately gated, reference spatial support is a diagnostic threshold not definitive identity truth"
+}

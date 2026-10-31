@@ -1,0 +1,31 @@
+{
+  "case_id": "P00_burst_capacity",
+  "mode": "burst_capacity",
+  "event_ledgers": 12,
+  "terminal_status_counts": {
+    "VISUAL_ALL_CONDITIONS_REJECTED": 4,
+    "UNRESOLVED_QUEUE_CAPACITY": 8
+  },
+  "RF_status_counts": {},
+  "real_query_forward_calls": 20,
+  "completed_query_jobs": 4,
+  "worker_results_after_source_replay_end": 4,
+  "max_observed_inflight_including_service": 4,
+  "source_replay_done_wall_ns": 6109718425819156,
+  "late_observation_links": 0,
+  "pressure_control": {
+    "admission_gate_blocked_worker_before_dequeue": true,
+    "statuses_before_release": {
+      "QUEUED": 4,
+      "UNRESOLVED_QUEUE_CAPACITY": 8
+    },
+    "admissions_finished_wall_ns": 6109718425730450,
+    "gate_released_wall_ns": 6109718425815877,
+    "expired_deadlines_deliberately_injected": false
+  },
+  "worker_group": "P00_burst_capacity_worker",
+  "RF_hardware_connected": false,
+  "source_cow_identity_accuracy": null,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

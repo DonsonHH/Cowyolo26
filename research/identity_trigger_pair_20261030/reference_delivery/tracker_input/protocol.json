@@ -1,0 +1,171 @@
+{
+  "status": "FROZEN_FULL_ASSOCIATION_REPLAY_OF_ACTUAL4_INPUT_SCHEDULES",
+  "created_UTC": "2026-10-31T07:36:54.330421+00:00",
+  "video": {
+    "name": "original",
+    "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+    "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "width": 2560,
+    "height": 1440,
+    "fps": 25,
+    "decode_end_exclusive": 10874,
+    "inference_stride": 5,
+    "orientation": "clockwise90",
+    "axis": "y",
+    "perpendicular_ROI": [
+      0.34,
+      0.75
+    ],
+    "scope_start_frame0": 8912,
+    "scope_end_exclusive": 10874,
+    "counter_replay_strides": [
+      5
+    ],
+    "human_down_total": 12,
+    "formal_event_scoring": false,
+    "detection_crop_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "crop_size_WH": [
+      1050,
+      1440
+    ],
+    "pixel_control_frames": [
+      8995,
+      9345,
+      9790,
+      10830
+    ],
+    "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "cases": [
+    {
+      "run": "r1_old",
+      "raw": "tracker_input/r1_old/actual_raw.npz",
+      "trace": "tracker_input/r1_old/counter_trace.json.gz"
+    },
+    {
+      "run": "r1_new",
+      "raw": "tracker_input/r1_new/actual_raw.npz",
+      "trace": "tracker_input/r1_new/counter_trace.json.gz"
+    },
+    {
+      "run": "r2_new",
+      "raw": "tracker_input/r2_new/actual_raw.npz",
+      "trace": "tracker_input/r2_new/counter_trace.json.gz"
+    },
+    {
+      "run": "r2_old",
+      "raw": "tracker_input/r2_old/actual_raw.npz",
+      "trace": "tracker_input/r2_old/counter_trace.json.gz"
+    }
+  ],
+  "box_tolerance_pixels": 0.002,
+  "axis_tolerance": 2e-06,
+  "IDs_and_events_exact_required": true,
+  "model_forwards": 0,
+  "files": [
+    {
+      "file": "tools/replay_tracker.py",
+      "sha256": "4aa5cafce346142eb43862f5f8856b9b3b0837658a62a31093ed89bf96237ce0"
+    },
+    {
+      "file": "tools/tracker_replay.slurm",
+      "sha256": "cdea2daddfaef54bffe902c243902566824e617f639173bb54a4865c30c3e9fd"
+    },
+    {
+      "file": "tracker_input/history.json.gz",
+      "sha256": "60d68087a80fe4dca9538ac400c2912ea8a13cca0551a990d3d37541004efda3"
+    },
+    {
+      "file": "tracker_input/r1_new/actual_raw.npz",
+      "sha256": "a220a979f8bc3726d7c6fc3981ad501ad680d27337b64a682370522ece024e95"
+    },
+    {
+      "file": "tracker_input/r1_new/counter_trace.json.gz",
+      "sha256": "baa97f806e5f1e2f940275d47501a1338b1ede23be68b2a72160bcfe4f06407f"
+    },
+    {
+      "file": "tracker_input/r1_old/actual_raw.npz",
+      "sha256": "38802c26534724ab940b321c026a442d7e1c94cd79871bba9915ee854cb41ed2"
+    },
+    {
+      "file": "tracker_input/r1_old/counter_trace.json.gz",
+      "sha256": "68c926a1580a06fd10ab26b3efdf4a26a05f0643eb1975741d8aed13e6f7723f"
+    },
+    {
+      "file": "tracker_input/r2_new/actual_raw.npz",
+      "sha256": "a9365b67769aa200ac52474d78bfc15bf7e574c6f1bdc4cc98e704c5a5697a35"
+    },
+    {
+      "file": "tracker_input/r2_new/counter_trace.json.gz",
+      "sha256": "327af4e71b884471d64882c66363452018c4f3d2b902f26ab75da6e9a436ce9d"
+    },
+    {
+      "file": "tracker_input/r2_old/actual_raw.npz",
+      "sha256": "241875bd450844a985ce64db3bdd7300a44f77880fc50db69c9e11c2cff7fd39"
+    },
+    {
+      "file": "tracker_input/r2_old/counter_trace.json.gz",
+      "sha256": "28442dc64fdf72fd121c5a6e809a0d3453c15be2ae57546503c53e8ba9ab5ed7"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "file": "tracker_input/source/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    }
+  ]
+}

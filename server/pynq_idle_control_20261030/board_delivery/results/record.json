@@ -1,0 +1,240 @@
+{
+  "status": "BOTH392_SLOT_FOREGROUND_AND_IDLE_GATED_IDENTITY_CASES_COMPLETE",
+  "PID": 3918,
+  "boot_id": "9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f",
+  "protocol_sha256": "bb337836e2cbda43a25bd6f2bc47100a652fc3caad8bf1bfbec8b11c68835118",
+  "actual_O8_forwards": 783,
+  "qualification_forwards": 8,
+  "warmup_forwards": 4,
+  "cases": [
+    {
+      "case": "foreground_only",
+      "offered_slots": 392,
+      "processed_frames": 391,
+      "skipped_slots": 1,
+      "deadline_misses": 17,
+      "mean_processing_ms": 155.08288723785168,
+      "P95_release_to_count_ms": 189.48204800000002,
+      "source_down_count": 11,
+      "source_up_count": 0,
+      "processed_per_second_over_offered_duration": 4.987244897959183,
+      "periodic_events": [
+        {
+          "time_s": 359.8,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 24,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 384.4,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9610
+        },
+        {
+          "time_s": 387.8,
+          "track_id": 35,
+          "direction": "A->B",
+          "frame0": 9695
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 45,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 51,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 83,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "actual_background_jobs": 0,
+      "all_actual_O8_outputs_byte_exact_to_prior_real_video": true,
+      "clock_start_monotonic_ns": 21716937599270,
+      "period_end_monotonic_ns": 21795337599270
+    },
+    {
+      "case": "foreground_idle_identity",
+      "offered_slots": 392,
+      "processed_frames": 392,
+      "skipped_slots": 0,
+      "deadline_misses": 28,
+      "mean_processing_ms": 155.75373788265307,
+      "P95_release_to_count_ms": 225.55611479999985,
+      "source_down_count": 11,
+      "source_up_count": 0,
+      "processed_per_second_over_offered_duration": 5.0,
+      "periodic_events": [
+        {
+          "time_s": 359.8,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 24,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 384.4,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9610
+        },
+        {
+          "time_s": 387.8,
+          "track_id": 35,
+          "direction": "A->B",
+          "frame0": 9695
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 45,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 51,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 83,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "actual_background_jobs": 11,
+      "all_actual_O8_outputs_byte_exact_to_prior_real_video": true,
+      "clock_start_monotonic_ns": 21822690492405,
+      "period_end_monotonic_ns": 21901090492405
+    }
+  ],
+  "new_training_updates": 0,
+  "actual_camera_and_RFID_hardware": false,
+  "whole_goal_complete": false,
+  "initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "BGR_actual_vector_gate": [
+    {
+      "scene": "original",
+      "frame0": 8995,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "original",
+      "frame0": 9345,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "original",
+      "frame0": 9790,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "original",
+      "frame0": 10830,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "toros",
+      "frame0": 110,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "toros",
+      "frame0": 193,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "toros",
+      "frame0": 248,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "toros",
+      "frame0": 396,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    }
+  ],
+  "hardware_status": {
+    "MM2S": "0x1002",
+    "S2MM": "0x1002",
+    "core": "0x2",
+    "error": "0x0",
+    "version": "0x80001"
+  },
+  "close_error": null,
+  "PL_after": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.bit",
+  "PL_after_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "memory_after": "MemTotal:         503464 kB\nMemFree:          124068 kB\nMemAvailable:     319980 kB\nBuffers:           10828 kB\nCached:           181224 kB\nSwapCached:         2260 kB\nActive:           135396 kB\nInactive:         203084 kB\nActive(anon):      35812 kB\nInactive(anon):   111388 kB\nActive(file):      99584 kB\nInactive(file):    91696 kB\nUnevictable:          16 kB\nMlocked:              16 kB\nHighTotal:             0 kB\nHighFree:              0 kB\nLowTotal:         503464 kB\nLowFree:          124068 kB\nSwapTotal:        524284 kB\nSwapFree:         436732 kB\nDirty:              3080 kB\nWriteback:             0 kB\nAnonPages:        144916 kB\nMapped:            82892 kB\nShmem:               736 kB\nKReclaimable:      16472 kB\nSlab:              31364 kB\nSReclaimable:      16472 kB\nSUnreclaim:        14892 kB\nKernelStack:         792 kB\nPageTables:         2424 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      776016 kB\nCommitted_AS:     434724 kB\nVmallocTotal:     507904 kB\nVmallocUsed:        2016 kB\nVmallocChunk:          0 kB\nPercpu:              296 kB\nCmaTotal:         131072 kB\nCmaFree:           52552 kB\n"
+}

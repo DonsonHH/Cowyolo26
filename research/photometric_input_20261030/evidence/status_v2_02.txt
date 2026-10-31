@@ -1,0 +1,19 @@
+             JOBID|PARTITION|                        NAME|   STATE|      TIME|NODELIST(REASON)
+            130614|       cu|     photometric-input-check| PENDING|      0:00|(Dependency)
+            130613|       cu|             photometric-192| RUNNING|      3:05|cu03
+JobID|State|ExitCode|Elapsed|MaxRSS
+130613|RUNNING|0:0|00:03:05|
+130613.batch|RUNNING|0:0|00:03:05|
+130614|PENDING|0:0|00:00:00|
+{"condition": "none", "validation_done": 1, "forwards": {"FP32": 1, "QDQ": 1}}
+{"condition": "none", "validation_done": 501, "forwards": {"FP32": 501, "QDQ": 501}}
+{"condition": "none", "validation_done": 1001, "forwards": {"FP32": 1001, "QDQ": 1001}}
+{"condition": "none", "validation_done": 1501, "forwards": {"FP32": 1501, "QDQ": 1501}}
+{"condition": "none", "scene_complete": "original", "image_forwards": {"FP32": 3746, "QDQ": 3746}}
+{"condition": "none", "scene_complete": "toros", "image_forwards": {"FP32": 4225, "QDQ": 4225}}
+{"condition": "gamma07", "validation_done": 1, "forwards": {"FP32": 1, "QDQ": 1}}
+{"condition": "gamma07", "validation_done": 501, "forwards": {"FP32": 501, "QDQ": 501}}
+{"condition": "gamma07", "validation_done": 1001, "forwards": {"FP32": 1001, "QDQ": 1001}}
+{"condition": "gamma07", "validation_done": 1501, "forwards": {"FP32": 1501, "QDQ": 1501}}
+[0;93m2026-10-30 02:53:37.441494953 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer 'onnx::Tile_789'. It is not used by any node and should be removed from the model.[m
+[0;93m2026-10-30 02:53:37.441525914 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer '/model.23/Constant_17_output_0'. It is not used by any node and should be removed from the model.[m

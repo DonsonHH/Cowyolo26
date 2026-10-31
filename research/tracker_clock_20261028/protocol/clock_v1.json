@@ -1,0 +1,270 @@
+{
+  "name": "Cached ByteTrack exact regression and two fixed wallclock buffer controls",
+  "created_UTC": "2026-10-28T09:09:19.811748+00:00",
+  "source_frame_range_inclusive": [
+    8912,
+    10873
+  ],
+  "history_start": 0,
+  "source_fps": 25,
+  "previous_protocol_sha256": "3195353947c85c31f9b69498f91ab0a3593d11ec8c3d24781ccfbe24441d7b1c",
+  "source_video_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "weights": [
+    {
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+    },
+    {
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226"
+    },
+    {
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+    }
+  ],
+  "sources": [
+    {
+      "name": "full640_5hz_seed26",
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/full640_5hz_seed26",
+      "seed": 26,
+      "stride": 5,
+      "stable_samples": 3,
+      "files": [
+        {
+          "name": "pretracker_boxes.csv",
+          "sha256": "3a6cf60bed2fbe67ff3109a9a1273ee96025ee71492e16308dd07518b36941dd",
+          "bytes": 395497
+        },
+        {
+          "name": "source_tracks.csv",
+          "sha256": "b3768ce7de9797fbbf41ffe870bce4bc865261c2494ffd74100cffbcfadf8779",
+          "bytes": 70527
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052",
+          "bytes": 67
+        },
+        {
+          "name": "source_events.json",
+          "sha256": "10ac3a009b58b64ab334384d90d37ae0889bd97cfd58e1ecae24ad8899ac25cf",
+          "bytes": 1107
+        },
+        {
+          "name": "summary.json",
+          "sha256": "a6931780ebad01563302afb1797f21c60875bb9178084d03ee0011f4af0f0db4",
+          "bytes": 833
+        }
+      ],
+      "prior_predicted_down": 11,
+      "prior_predicted_up": 0
+    },
+    {
+      "name": "full640_5hz_seed27",
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed27",
+      "seed": 27,
+      "stride": 5,
+      "stable_samples": 3,
+      "files": [
+        {
+          "name": "pretracker_boxes.csv",
+          "sha256": "3854154ed3bdee7ddf99a3ecf77ffa0925581575e07e1cd17dbc532a070a357a",
+          "bytes": 321471
+        },
+        {
+          "name": "source_tracks.csv",
+          "sha256": "af0753a7da79f528371e41736cbefbfadb07032be6c823e32ed14aaa3c756870",
+          "bytes": 68414
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052",
+          "bytes": 67
+        },
+        {
+          "name": "source_events.json",
+          "sha256": "cd34d90b4e5a562c304a70b70cf112acb270b42bd8e0d7c3a537b9597360b171",
+          "bytes": 1004
+        },
+        {
+          "name": "summary.json",
+          "sha256": "d1988cb679cbe70ed9797d536887e4bbf0e6076899bc41a10f159d115d876db2",
+          "bytes": 833
+        }
+      ],
+      "prior_predicted_down": 10,
+      "prior_predicted_up": 0
+    },
+    {
+      "name": "full640_5hz_seed28",
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed28",
+      "seed": 28,
+      "stride": 5,
+      "stable_samples": 3,
+      "files": [
+        {
+          "name": "pretracker_boxes.csv",
+          "sha256": "18fe408f594dc8856477cd55172f65b402f6123756ab4bbcb34e1a672f910562",
+          "bytes": 637550
+        },
+        {
+          "name": "source_tracks.csv",
+          "sha256": "3051bab94dbd07b95077389aa43b58333027323287e7ad94b22d406a3be8584c",
+          "bytes": 71511
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "7c2820b177cf3526722719f5a18f11162c53f01880e85a36f4b796e7bb06d8a6",
+          "bytes": 182
+        },
+        {
+          "name": "source_events.json",
+          "sha256": "9a55bb4b84ca96cb1f42117a98283e1ffbf1c66609803617f4c1b061fa05a306",
+          "bytes": 1114
+        },
+        {
+          "name": "summary.json",
+          "sha256": "f14b90084574da94c3f86fbd7a38ce990c8f4d042629d328b34492cf5a58fbaf",
+          "bytes": 832
+        }
+      ],
+      "prior_predicted_down": 11,
+      "prior_predicted_up": 0
+    },
+    {
+      "name": "channel320_5hz_seed26",
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/channel320_5hz_seed26",
+      "seed": 26,
+      "stride": 5,
+      "stable_samples": 3,
+      "files": [
+        {
+          "name": "pretracker_boxes.csv",
+          "sha256": "df10a09277021da7320acecce514931582633a71ffb0a2f34c3762caa9a47e10",
+          "bytes": 174921
+        },
+        {
+          "name": "source_tracks.csv",
+          "sha256": "7433483e293031b5649d626b3b0eab81ae4e199b110ed30cffd3878395e33021",
+          "bytes": 68076
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "f8a9dfdc23066ffa47ba107b3db08af939276e4288fd364d69cb6a53eb3fe8cc",
+          "bytes": 200
+        },
+        {
+          "name": "source_events.json",
+          "sha256": "e42998dcd90ec90c5497dfb6d697fba5bd0865c6075b1087b95b06c994d5ac90",
+          "bytes": 1003
+        },
+        {
+          "name": "summary.json",
+          "sha256": "be7a7866837661cf79c8ab6bd48bdb785c9be8f4e517fdeba1105855f60b3f1a",
+          "bytes": 842
+        }
+      ],
+      "prior_predicted_down": 10,
+      "prior_predicted_up": 0
+    },
+    {
+      "name": "channel320_25hz_seed26",
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/channel320_25hz_seed26",
+      "seed": 26,
+      "stride": 1,
+      "stable_samples": 11,
+      "files": [
+        {
+          "name": "pretracker_boxes.csv",
+          "sha256": "646f849bcb349f69b53b3913bc5bef392d8b696103b3523b7b9cfad12ba486da",
+          "bytes": 880844
+        },
+        {
+          "name": "source_tracks.csv",
+          "sha256": "7901ad9ad5536e14f41a378362637fa4f2e9f7ae41b69fe02d453feaf40eb864",
+          "bytes": 363443
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "3d2addf3d89212b37deba8c52b71d02929eda3b6186847412288cb6ca5c4e25f",
+          "bytes": 2347
+        },
+        {
+          "name": "source_events.json",
+          "sha256": "d4852d081f2536d89293d851db28b04ffc0474ab04b23da056e976bc1b6f4e11",
+          "bytes": 1022
+        },
+        {
+          "name": "summary.json",
+          "sha256": "3eadce7a515e749ab1ecf837e3b08b78702bd55aa58da40f050d29bcb311ac1b",
+          "bytes": 846
+        }
+      ],
+      "prior_predicted_down": 10,
+      "prior_predicted_up": 0
+    }
+  ],
+  "installed_source": [
+    {
+      "file": "installed_track.py",
+      "sha256": "1bc8673215b05db0b94d1e0b8930c34f6256d796eb3f633206ab69d162f59383"
+    },
+    {
+      "file": "installed_byte_tracker.py",
+      "sha256": "00c7c1ff8b1076fc89347071519ae0b06a30bfce00dded94826620e068b1928f"
+    },
+    {
+      "file": "installed_bytetrack.yaml",
+      "sha256": "9672c78cc508b265230fdace4c1cfa2ab7eaf51983fece9942e7d0dfc67a5128"
+    }
+  ],
+  "baseline_buffer": 30,
+  "required_exact_replays_before_controls": 5,
+  "controls": [
+    {
+      "name": "crop25Hz_buffer150",
+      "source": "channel320_25hz_seed26",
+      "track_buffer": 150,
+      "nominal_lost_budget_s": 6.0,
+      "comparison": "same25Hz_buffer30; buffer only"
+    },
+    {
+      "name": "crop5Hz_buffer6",
+      "source": "channel320_5hz_seed26",
+      "track_buffer": 6,
+      "nominal_lost_budget_s": 1.2,
+      "comparison": "same5Hz_buffer30; buffer only"
+    }
+  ],
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "maximum_gap_s": 2.0,
+    "stable_samples_5Hz": 3,
+    "stable_samples_25Hz": 11
+  },
+  "roi_x": [
+    0.34,
+    0.75
+  ],
+  "native_image_height": 1440,
+  "native_image_width": 2560,
+  "hypotheses_ranked": [
+    "same30updatebuffer changes nominal lost retention at5Hz/25Hz",
+    "multiobject box changes affect association despite outputframecoverage",
+    "stable A/B observations insufficient; requires eventtruth to attribute realmisses"
+  ],
+  "prediction_if_clock_dominates": "buffer rescaling changes IDcontinuity and may change events; direction not assumed",
+  "negative_outcome_rule": "if both fixedcontrols reproduce baseline events, do not claim buffer resolves undercount",
+  "no_parameter_search_or_target_count": true,
+  "independent_source_reference_available": false,
+  "causal_scope": "Only samecachedinput samefrequency buffer change; does not normalize everyKalman component acrossfrequencies",
+  "new_detector_forwards": 0,
+  "training_updates": 0,
+  "board_execution": false,
+  "whole_goal_complete": false
+}

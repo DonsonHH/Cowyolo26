@@ -1,0 +1,512 @@
+{
+  "status": "V3_CLAIMS_BIND_RECOVERED_COMPLETE_ACTUAL_TRIGGER_STAGE_WITH_UNMET_TIMING_AND_GROUND_TRUTH_GATES",
+  "created_UTC": "2026-10-31T07:53:00.964024+00:00",
+  "sources": [
+    {
+      "name": "identity_CPU",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_final20_20261030\\delivery\\results\\evaluation\\summary.json",
+      "sha256": "1d01b61dbbaeefc5f06f48cc8e08e874d514e3e972b7fe5d8cee1f32f77e6e3e"
+    },
+    {
+      "name": "identity_ARM",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_final20_arm_20261030\\results\\independent_verification.json",
+      "sha256": "caa93fb9479f237e87632e4a88cfbd422b5fd772eb09beb5b5c8a6d4c9a86552"
+    },
+    {
+      "name": "fixed_workload",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_joint_pair_20261030\\results\\independent_verification.json",
+      "sha256": "3cfee989cce269804548d203814430cf617bf4d4d6dac45bbfc126e5628079aa"
+    },
+    {
+      "name": "detector_sizes",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_o8_sizes_20261030\\results\\final_review.json",
+      "sha256": "e1be512cb5966b730261150b3f6a88784536a01aea0b332dede48b6e5ca35a1a"
+    },
+    {
+      "name": "detector_video",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_mosaic192_eval_20261030\\results\\final_review.json",
+      "sha256": "6f39697aaf1de9ade5dadd30bf5f3803a5c1a644929ace288ce8736ff14cc98d"
+    },
+    {
+      "name": "training",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_domain_adapt_20261030\\results\\final_review.json",
+      "sha256": "2c807e8f3716190218fa472928fdfdf9a0465ff626a9129e29c1e1ff609cec6c"
+    },
+    {
+      "name": "actual_trigger_partial",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_trigger_pair_20261030\\results\\partial_observation_v1.json",
+      "sha256": "6171ffeac73684dfe7b561c3e00d4e416ecd7deb77985fe01f88c55f904e80a0"
+    },
+    {
+      "name": "BECA_fixed_transfer",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\beca_fixed_transfer_20261030\\results\\independent_verification.json",
+      "sha256": "cd5d226544774b66fe3373a80e75cbaaaf367f5dbddebef4c27a35498bd98180"
+    },
+    {
+      "name": "BECA_visual_dates",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\beca_fixed_transfer_20261030\\results\\visual_review.json",
+      "sha256": "acaa18282bbfa3f4900924b3ebe43cf0ffd2b5c7dd4c6aac6d2dcfb224c834c4"
+    },
+    {
+      "name": "BECA_score_oracle",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\beca_score_diagnosis_20261031\\results\\score_diagnosis_v1.json",
+      "sha256": "9a1b3406eca9b1793470a2561431e3b114b97d556ffcee500918b0df7e82f2e0"
+    },
+    {
+      "name": "BECA_score_recalculation",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\beca_score_diagnosis_20261031\\results\\independent_verification_v1.json",
+      "sha256": "f499804172444ce1964209fa07886284c81faddb6e37b8e8ab607df78b0a4557"
+    },
+    {
+      "name": "actual_trigger_verified",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_trigger_pair_20261030\\results\\independent_verification.json",
+      "sha256": "7f8917c86cead2b2dce52db4a31cc65e701f7bae1ec28d80923bdf921d0108d6"
+    },
+    {
+      "name": "actual_trigger_reference",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_trigger_pair_20261030\\results\\reference_independent_verification.json",
+      "sha256": "77815fc35e1b97b579dd2de6170ac31159883da529ee0b13f874776392866403"
+    },
+    {
+      "name": "actual_trigger_archive",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_trigger_pair_20261030\\results\\recovery_archive_verification_v2.json",
+      "sha256": "a80710b295bd82e7809d8fdd0bcb19a7afe011db78b36cb83a7564fce285a4d1"
+    },
+    {
+      "name": "actual_trigger_complete_review",
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\identity_trigger_pair_20261030\\results\\final_review_recovered_v2.json",
+      "sha256": "e5f347bfce134926e3602e7dca672d511d087f3db01b7a6b0b567667b741ceae"
+    }
+  ],
+  "claims": [
+    {
+      "ID": "C01",
+      "status": "supported_component",
+      "statement": "两套固定编码器在PYNQ-Z2上复现同90图的排名及8工作点接受决定。",
+      "source": "identity_ARM",
+      "fields": [
+        "actual_ARM_measured_forwards",
+        "actual_ARM_warmup_forwards",
+        "fixed_decisions",
+        "decision_changes"
+      ],
+      "unit": "180model-image forwards,4warmups,480decisions; one cohort repeated on ARM",
+      "limits": "实现一致性；同90图不算第二个独立测试。"
+    },
+    {
+      "ID": "C02",
+      "status": "supported_component",
+      "statement": "在10注册ID的30张查询中，新域编码器Top-1为30/30，旧编码器22/30。",
+      "source": "identity_CPU",
+      "fields": [
+        "outcomes[primary_cal10_fold0].known_Top1"
+      ],
+      "unit": "query image;10known identities with3queries each",
+      "limits": "Cows命名空间保留ID、同场景作者裁剪；不是任意牧场100%识别。"
+    },
+    {
+      "ID": "C03",
+      "status": "supported_tradeoff",
+      "statement": "新编码器主阈值下C3/W0/U27、未知FA0/30，旧编码器C10/W2/U18、未知FA3/30。",
+      "source": "identity_CPU",
+      "fields": [
+        "outcomes[primary_cal10_fold0]"
+      ],
+      "unit": "known query30 and unknown query30 separately",
+      "limits": "新模型正确自动接受覆盖10%；零错误观察不保证总体零风险。"
+    },
+    {
+      "ID": "C04",
+      "status": "supported_system_control",
+      "statement": "固定10照片负载时，四次处理率为5.000/4.974/4.974/5.000，迟到80/69/67/76，均计数10。",
+      "source": "fixed_workload",
+      "fields": [
+        "cases[].processed_per_second_over_offered_duration",
+        "cases[].deadline_misses",
+        "cases[].source_down_count"
+      ],
+      "unit": "processed frames divided by392offered slots x200ms;78.4s per run",
+      "limits": "两次同源设备重复；固定任务独立于本次计数，没有现场双流或永久身份GT。"
+    },
+    {
+      "ID": "C05",
+      "status": "supported_isolated_timing",
+      "statement": "同90图的新编码器纯网络均值150.35ms、P95 151.66ms。",
+      "source": "identity_ARM",
+      "fields": [
+        "timings.new_C_domain_seed26.network_mean_ms",
+        "timings.new_C_domain_seed26.network_P95_ms"
+      ],
+      "unit": "ready224tensor to576feature return",
+      "limits": "先预处理、旧后新、无O8并发；不是完整任务或系统FPS。"
+    },
+    {
+      "ID": "C06",
+      "status": "supported_isolated_timing",
+      "statement": "统一O8的256和320受控向量均值235.55/370.93ms，超过200ms预算。",
+      "source": "detector_sizes",
+      "fields": [
+        "s256_mean_tensor_to_raw_ms",
+        "s320_mean_tensor_to_raw_ms",
+        "s256_all8_over200ms",
+        "s320_all8_over200ms"
+      ],
+      "unit": "8training calibration vectors per separately trained resolution model",
+      "limits": "不是同一权重的纯尺寸消融，不是完整视频／后台性能。"
+    },
+    {
+      "ID": "C07",
+      "status": "supported_aggregate_count_only",
+      "statement": "新mosaic0.5模型的完整O8原片输出为10，人工总量12。",
+      "source": "detector_video",
+      "fields": [
+        "FP32_QDQ_actual_O8_original_counts"
+      ],
+      "unit": "one public clip aggregate count",
+      "limits": "绝对总量差2，不能推断只有2漏计或给逐事件F1。"
+    },
+    {
+      "ID": "C08",
+      "status": "supported_development_training",
+      "statement": "六个配对条件各300更新，共1800正式更新；新域为16ID/457图。",
+      "source": "training",
+      "fields": [
+        "formal_optimizer_updates",
+        "training_conditions",
+        "new_Cows_training_IDs",
+        "new_Cows_training_images"
+      ],
+      "unit": "optimizer update and publisher namespace ID",
+      "limits": "初值相同，来源图数/ID数一起变化；支持训练来源取舍而非单一场景因素因果归因。"
+    },
+    {
+      "ID": "C09",
+      "status": "supported_actual_replay_system_unmet_target",
+      "statement": "实际计数触发四轮原结果完整取回并复算；计数10／10／8／7、处理率4.630–4.770，35身份任务，未达到稳定5FPS。",
+      "source": "actual_trigger_verified",
+      "fields": [
+        "cases",
+        "backgrounds",
+        "actual_background_identity_jobs",
+        "actual_O8_timed_forwards"
+      ],
+      "unit": "4same-source repeats,392offered200ms slots perrun; original1519board image forwards,CPU reference89separately",
+      "limits": "实际JPEG读取＋模拟RF全未读；当前新boot的PL不作原状态推断；缺独立事件／永久牛号，任务与照片变化，不能据此认领方法优越性。"
+    },
+    {
+      "ID": "C10",
+      "status": "pending_ground_truth",
+      "statement": "耳标关联失败后可靠找回真实通行牛号，或减少逐事件漏计/重计。",
+      "source": null,
+      "fields": [],
+      "unit": "complete passage with independent identity and event reference",
+      "limits": "目前缺独立逐事件JSON和当前12事件的永久ID映射。"
+    },
+    {
+      "ID": "C11",
+      "status": "pending_live_input_and_energy",
+      "statement": "真实相机/RFID输入下稳定5FPS、功耗/每事件能量或长期可靠性。",
+      "source": null,
+      "fields": [],
+      "unit": "continuous system under declared input and workload",
+      "limits": "现有证据是公开回放、模拟RF输入；功率与现场输入尚未测量。"
+    },
+    {
+      "ID": "C12",
+      "status": "pending_novelty",
+      "statement": "本系统或方法相对近期最接近论文构成明确的新贡献。",
+      "source": null,
+      "fields": [],
+      "unit": "specific methodological or system contribution and matched comparison",
+      "limits": "检测、跟踪、花纹识别及边缘部署都有先例；组合可运行本身不构成新颖性证明。"
+    },
+    {
+      "ID": "C13",
+      "status": "supported_external_component_under_publisher_labels",
+      "statement": "BECA固定20ID／90图迁移评价中，旧／新Top-1为14／30、15／30，主工作点未知FA均26／30；新mAP48.50%，旧51.46%。",
+      "source": "BECA_fixed_transfer",
+      "fields": [
+        "main_outcomes"
+      ],
+      "unit": "30 registered and30 unknown query images,10publisher IDs each; filename-based chronological split",
+      "limits": "肉牛饲喂区作者OBB；已隔离15冲突ID及3QA身份；其余作者标签未独立认证；不提供通道身份或实机时序。"
+    },
+    {
+      "ID": "C14",
+      "status": "supported_date_discrepancy_not_resolved",
+      "statement": "索引40、41的文件名日期与原图相机叠字日期不一致；本轮日期间隔只按文件名定义。",
+      "source": "BECA_visual_dates",
+      "fields": [
+        "filename_camera_date_discrepancy_examples"
+      ],
+      "unit": "2 observed examples, not a complete dataset timestamp audit",
+      "limits": "未判定哪一时钟正确；不改日期、不排除或重跑；不认领已验证真实跨日52–167天。"
+    },
+    {
+      "ID": "C15",
+      "status": "supported_posthoc_observed_set_bound_not_calibration",
+      "statement": "在BECA保存分数全部可达最高余弦阈值中，若W=FA=0，旧／新最大正确接受仅1／30和3／30。",
+      "source": "BECA_score_oracle",
+      "fields": [
+        "models.*.constrained_correct_acceptance_upper_bounds.zero_observed_W_and_FA"
+      ],
+      "unit": "2x61 reachable observed decision states; bound uses evaluation labels after scoring",
+      "limits": "事后诊断；未选择部署门限，不构成独立校准或总体风险保证。"
+    }
+  ],
+  "numbers": {
+    "identity_primary_outcomes": [
+      {
+        "model": "old_C",
+        "policy": "primary_cal10_fold0",
+        "threshold": 0.8348239883357427,
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "C": 10,
+        "W": 2,
+        "U": 18,
+        "M": 0,
+        "unknown_FA": 3,
+        "known_Top1": 22,
+        "known_Top5": 28,
+        "accepted_wrong_fraction": 0.3333333333333333
+      },
+      {
+        "model": "new_C_domain_seed26",
+        "policy": "primary_cal10_fold0",
+        "threshold": 0.8304473380979187,
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "C": 3,
+        "W": 0,
+        "U": 27,
+        "M": 0,
+        "unknown_FA": 0,
+        "known_Top1": 30,
+        "known_Top5": 30,
+        "accepted_wrong_fraction": 0.0
+      }
+    ],
+    "identity_network_timing": {
+      "old_C": {
+        "images": 90,
+        "warmups": [
+          160.76528,
+          149.029649
+        ],
+        "network_mean_ms": 149.28506152222224,
+        "network_P95_ms": 152.35788495,
+        "network_min_ms": 148.215772,
+        "network_max_ms": 170.262449,
+        "maximum_normalized_ARM_CPU_error": 1.6167759895324707e-06
+      },
+      "new_C_domain_seed26": {
+        "images": 90,
+        "warmups": [
+          160.593421,
+          149.965347
+        ],
+        "network_mean_ms": 150.3542705111111,
+        "network_P95_ms": 151.65547235,
+        "network_min_ms": 149.209545,
+        "network_max_ms": 168.408227,
+        "maximum_normalized_ARM_CPU_error": 1.8328428268432617e-06
+      }
+    },
+    "fixed_workload_cases": [
+      {
+        "run": "r1_old",
+        "identity_model": "old",
+        "policy": "shared",
+        "background_affinity": [
+          0,
+          1
+        ],
+        "repeat": 1,
+        "offered_slots": 392,
+        "processed_frames": 392,
+        "skipped_slots": 0,
+        "deadline_misses": 80,
+        "mean_processing_ms": 162.74687727551023,
+        "P95_release_to_count_ms": 275.2673734,
+        "processed_per_second_over_offered_duration": 5.0,
+        "source_down_count": 10,
+        "source_up_count": 0,
+        "actual_background_jobs": 10,
+        "fixed_jobs_not_triggered_by_this_counter": true,
+        "clock_start_monotonic_ns": 85017350734028,
+        "period_end_monotonic_ns": 85095750734028,
+        "maximum_fixed_job_publisher_lateness_ms": 4.443446,
+        "foreground_affinity": [
+          0,
+          1
+        ],
+        "mean_model_ms": 148.66407948724492,
+        "maximum_identity_result_ms": 3780.293632,
+        "maximum_identity_queue_ms": 882.320688,
+        "accepted_predictions": 1,
+        "secondary_Cows_threshold_accepted": 0
+      },
+      {
+        "run": "r1_new",
+        "identity_model": "new",
+        "policy": "shared",
+        "background_affinity": [
+          0,
+          1
+        ],
+        "repeat": 1,
+        "offered_slots": 392,
+        "processed_frames": 390,
+        "skipped_slots": 2,
+        "deadline_misses": 69,
+        "mean_processing_ms": 162.02715255384615,
+        "P95_release_to_count_ms": 304.65484334999985,
+        "processed_per_second_over_offered_duration": 4.974489795918367,
+        "source_down_count": 10,
+        "source_up_count": 0,
+        "actual_background_jobs": 10,
+        "fixed_jobs_not_triggered_by_this_counter": true,
+        "clock_start_monotonic_ns": 85122116573349,
+        "period_end_monotonic_ns": 85200516573349,
+        "maximum_fixed_job_publisher_lateness_ms": 5.797422,
+        "foreground_affinity": [
+          0,
+          1
+        ],
+        "mean_model_ms": 147.96275007435898,
+        "maximum_identity_result_ms": 1878.578047,
+        "maximum_identity_queue_ms": 948.048571,
+        "accepted_predictions": 0,
+        "secondary_Cows_threshold_accepted": 0
+      },
+      {
+        "run": "r2_new",
+        "identity_model": "new",
+        "policy": "shared",
+        "background_affinity": [
+          0,
+          1
+        ],
+        "repeat": 2,
+        "offered_slots": 392,
+        "processed_frames": 390,
+        "skipped_slots": 2,
+        "deadline_misses": 67,
+        "mean_processing_ms": 162.09633438205125,
+        "P95_release_to_count_ms": 302.7288397499999,
+        "processed_per_second_over_offered_duration": 4.974489795918367,
+        "source_down_count": 10,
+        "source_up_count": 0,
+        "actual_background_jobs": 10,
+        "fixed_jobs_not_triggered_by_this_counter": true,
+        "clock_start_monotonic_ns": 85222927499149,
+        "period_end_monotonic_ns": 85301327499149,
+        "maximum_fixed_job_publisher_lateness_ms": 8.027244,
+        "foreground_affinity": [
+          0,
+          1
+        ],
+        "mean_model_ms": 148.0944950974359,
+        "maximum_identity_result_ms": 1709.665862,
+        "maximum_identity_queue_ms": 780.876744,
+        "accepted_predictions": 0,
+        "secondary_Cows_threshold_accepted": 0
+      },
+      {
+        "run": "r2_old",
+        "identity_model": "old",
+        "policy": "shared",
+        "background_affinity": [
+          0,
+          1
+        ],
+        "repeat": 2,
+        "offered_slots": 392,
+        "processed_frames": 392,
+        "skipped_slots": 0,
+        "deadline_misses": 76,
+        "mean_processing_ms": 161.56842827295918,
+        "P95_release_to_count_ms": 305.44954649999994,
+        "processed_per_second_over_offered_duration": 5.0,
+        "source_down_count": 10,
+        "source_up_count": 0,
+        "actual_background_jobs": 10,
+        "fixed_jobs_not_triggered_by_this_counter": true,
+        "clock_start_monotonic_ns": 85324201242808,
+        "period_end_monotonic_ns": 85402601242808,
+        "maximum_fixed_job_publisher_lateness_ms": 4.509489,
+        "foreground_affinity": [
+          0,
+          1
+        ],
+        "mean_model_ms": 147.6074118137755,
+        "maximum_identity_result_ms": 1789.056644,
+        "maximum_identity_queue_ms": 695.326879,
+        "accepted_predictions": 1,
+        "secondary_Cows_threshold_accepted": 0
+      }
+    ],
+    "detector_sizes_mean_ms": [
+      235.54665725,
+      370.925488
+    ],
+    "aggregate_original_prediction": 10,
+    "human_confirmed_aggregate": 12,
+    "BECA_primary_outcomes": [
+      {
+        "model": "old_C",
+        "policy": "primary_cal10_fold0",
+        "threshold": 0.8348239883357427,
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "C": 13,
+        "W": 15,
+        "U": 2,
+        "M": 0,
+        "unknown_FA": 26,
+        "known_Top1": 14,
+        "known_Top5": 24,
+        "known_mAP": 0.5146416761635835,
+        "accepted_wrong_fraction": 0.7592592592592593
+      },
+      {
+        "model": "new_C_domain_seed26",
+        "policy": "primary_cal10_fold0",
+        "threshold": 0.8304473380979187,
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "C": 13,
+        "W": 11,
+        "U": 6,
+        "M": 0,
+        "unknown_FA": 26,
+        "known_Top1": 15,
+        "known_Top5": 26,
+        "known_mAP": 0.4849808748220858,
+        "accepted_wrong_fraction": 0.74
+      }
+    ],
+    "BECA_zero_observed_error_max_C": [
+      1,
+      3
+    ],
+    "actual_trigger_counts": [
+      10,
+      10,
+      8,
+      7
+    ],
+    "actual_trigger_timed_O8": 1464,
+    "actual_trigger_jobs": 35,
+    "actual_trigger_CPU_reference_forwards": 89
+  },
+  "new_model_forwards": 0,
+  "ready_for_submission": false,
+  "whole_goal_complete": false,
+  "previous_ledger": {
+    "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\paper_readiness_20261030\\results\\claim_ledger_v2.json",
+    "sha256": "f0887e7e4faa765144db51d1d7b6f82d636f9529aebf0fbc41d0e6ff89fe79e7"
+  },
+  "actual_trigger_originals_obtained": true
+}

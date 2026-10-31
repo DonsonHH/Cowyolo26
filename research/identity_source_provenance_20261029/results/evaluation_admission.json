@@ -1,0 +1,48 @@
+{
+  "status": "CURRENT_E010_ID009_AUG14_GALLERY_PAIR_EXCLUDED_FROM_INDEPENDENT_IDENTITY_EVALUATION",
+  "created_UTC": "2026-10-29T04:59:27.972469+00:00",
+  "reason": "Three published gallery crops align to native source frames in the same baseline track102passage used by E010query.",
+  "source_link_verification_sha256": "36dd939a57ed0a382dc49f01b8ac73e491275c2177f87a4b9150e983f83e7f19",
+  "affected_event_id": "E010_f9790_tid102",
+  "affected_query_source_frame0": 9745,
+  "affected_count_event_frame0": 9790,
+  "affected_gallery_day": "2023Aug14",
+  "affected_gallery_public_anonymous_ID": "009",
+  "core_geometry_source_pairs": [
+    {
+      "gallery_filename": "00024_1.jpg",
+      "source_frame0": 9610,
+      "NCC": 0.995841505476812,
+      "best_native_track_ID": 102,
+      "quad_box_IoU": 0.8555256562564963
+    },
+    {
+      "gallery_filename": "00039_1.jpg",
+      "source_frame0": 9685,
+      "NCC": 0.9963770016456279,
+      "best_native_track_ID": 102,
+      "quad_box_IoU": 0.7060861729960142
+    },
+    {
+      "gallery_filename": "00054_1.jpg",
+      "source_frame0": 9760,
+      "NCC": 0.9966021565115304,
+      "best_native_track_ID": 102,
+      "quad_box_IoU": 0.5961304362279576
+    }
+  ],
+  "reference_authority": "Computed geometric/pixel provenance candidate plus assistant source review; no independent human label acceptance.",
+  "allowed_use": "Functional/development replay with full provenance disclosure.",
+  "independent_event_identity_accuracy_admitted": false,
+  "training_or_new_threshold_label_admitted": false,
+  "source_cow_identity_reference_promoted": false,
+  "ear_tag_identity_mapping_proven": false,
+  "other25_gallery_images_absence_or_identity_error_inferred": false,
+  "existing_Aug20_curated_query_results_recomputed_or_invalidated_in_this_audit": false,
+  "original_human12_count_milestone_preserved": true,
+  "original_model_gallery_thresholds_or_raw_files_changed": false,
+  "new_identity_model_forwards": 0,
+  "new_training_updates": 0,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

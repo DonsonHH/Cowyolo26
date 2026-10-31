@@ -1,0 +1,16 @@
+{
+  "created_UTC": "2026-10-30T06:39:56.573670+00:00",
+  "port": "COM6",
+  "baud": 115200,
+  "command_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cpu_partition_free_20261030\\tools\\serial_launch.txt",
+  "command_sha256": "b1989377dc02794d7cac0a0a6489c8baa76d5fe4e80a9719d87275f92cb91646",
+  "password_recorded": false,
+  "command_scope": "launch",
+  "hardware_reset_requested": false,
+  "status": "PRIVILEGED_UART_COMMAND_FINISHED",
+  "exit_code": 1,
+  "guarded_echo_off_observed": true,
+  "password_sent_only_after_actual_sudo_prompt": false,
+  "output": "  File \"<string>\", line 1\r\n    from pathlib import Path; import subprocess,os,json; r=Path('/home/xilinx/jupyter_notebooks/cow_research_cpu_partition_free_20261030'); assert all(not (Path(/proc)/str(pid)).exists() for pid in [11554,12397]); assert os.geteuid()==0 and not (r/'launch.json').exists() and not (r/'results').exists(); log=(r/'run.log').open('xb'); child=subprocess.Popen(['/usr/local/share/pynq-venv/bin/python3','-u','-B',str(r/'board_partition_repeats.py')],stdout=log,stderr=subprocess.STDOUT,cwd=r,start_new_session=True); value={'PID':child.pid,'scope':'followup_foreground_both_cores_four_ABBA_fixed10_jobs','host_command_new_experiment':True}; (r/'launch.json').write_text(json.dumps(value)+'\\n'); print(json.dumps(value))\r\n                                                                                                                                                                 ^\r\nSyntaxError: invalid syntax\r\n",
+  "elapsed_s": 2.2809999999881256
+}

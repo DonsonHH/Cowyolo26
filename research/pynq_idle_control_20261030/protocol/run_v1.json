@@ -1,0 +1,191 @@
+{
+  "status": "FROZEN_BEFORE_IDLE_GATED_CONTROL_RUN",
+  "created_UTC": "2026-10-29T16:59:24.737375+00:00",
+  "workload_protocol_sha256": "0469cb65b29abe10c52df59f395e319a2a4d8d010f28c5d3e02b60ec156c0271",
+  "period_ns": 200000000,
+  "cases": [
+    "foreground_only",
+    "foreground_idle_identity"
+  ],
+  "video": {
+    "name": "original",
+    "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+    "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "width": 2560,
+    "height": 1440,
+    "fps": 25,
+    "decode_end_exclusive": 10874,
+    "inference_stride": 5,
+    "orientation": "clockwise90",
+    "axis": "y",
+    "perpendicular_ROI": [
+      0.34,
+      0.75
+    ],
+    "scope_start_frame0": 8912,
+    "scope_end_exclusive": 10874,
+    "counter_replay_strides": [
+      5
+    ],
+    "human_down_total": 12,
+    "formal_event_scoring": false,
+    "detection_crop_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "crop_size_WH": [
+      1050,
+      1440
+    ],
+    "pixel_control_frames": [
+      8995,
+      9345,
+      9790,
+      10830
+    ],
+    "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "registered_IDs": [
+    "009",
+    "020",
+    "026",
+    "028",
+    "031",
+    "054"
+  ],
+  "fixed_identity_threshold": 0.8445389603236383,
+  "backend_nice_increment": 10,
+  "foreground_source_model": "7b01cead4841f17d561f2a6bd768f9b229f1b3bd142818d8302135d3c69ffd45",
+  "background_encoder": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+  "O8_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "highres_inputs_lossy": true,
+  "highres_physical_crop_original_xyxy": [
+    870,
+    0,
+    1920,
+    1440
+  ],
+  "highres_jpeg_quality": 95,
+  "source_frame0_first": 8915,
+  "source_frame0_last": 10870,
+  "offered_slots_per_case": 392,
+  "runtime_files": [
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/libcow_encoder_v2.so",
+      "sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.param",
+      "sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.bin",
+      "sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/ncnn_encoder_v3.py",
+      "sha256": "c7e83e2638b9cb80e4e0720b5338ac802d05b37241526226da1e482a3172027c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/all_normalized_features.npz",
+      "sha256": "a23bf0714a0d8ef12f23ea5198fc2ad82f209b61c058f692613114f0d1f05ac1"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/image_groups.json",
+      "sha256": "f89a5f4501b0d8b896ada40431a1e58405117fe8593c512163aec130924bfad6"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/record.json",
+      "sha256": "f84a4de6797638a090f6514c1cd718f9e86e39019f191db41c9ece6ee3718d14"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    }
+  ],
+  "runtime_binding_required_before_start": true,
+  "input_quant256_equivalence_sha256": "a0891a14ef57eaa8ac8b0e2651c143931f3ca136373a32788c32c5121d7750db",
+  "simulated_no_RFID_condition": true,
+  "real_camera_capture_or_permanent_identity_accuracy_claimed": false,
+  "source_count_total_control": 12,
+  "previous_actual_no_skip_model_count": 11,
+  "whole_goal_complete": false,
+  "payload_files": [
+    {
+      "file": "board_idle.py",
+      "sha256": "8068e97b440bf0a0204a9f573600a07074a2d9981ec9f7e90e7b0f659374726e",
+      "bytes": 11952
+    },
+    {
+      "file": "background_idle_worker.py",
+      "sha256": "5aff960a436732a51d69227b61444f6d2cb8cc211f155fa579389ffa986a5c0a",
+      "bytes": 5018
+    }
+  ],
+  "previous_template_sha256": "741eb395604d38b3701bb4eefd95a1c2971079118f384b8405bcd167e380a427",
+  "identity_vector_gate_version": 3,
+  "identity_preprocessing": "SamePillow11roundinggeometryasfrozenservertransform;globalboardPillowunchanged.",
+  "identity_vector_protocol_sha256": "63e89edc9c0d617e27c40719f274ed72b440fa6f16cfbe0724a806c94f976d6b",
+  "periodic_inputs_model_threshold_sampling_policy_unchanged": true,
+  "previous_periodic_execution_started": false,
+  "runtime_binding_status": "QUALIFIED_A9_ENCODER_AND_COUNTER_FILES_HASHED_BEFORE_CHILD_START",
+  "camera_root": "/home/xilinx/jupyter_notebooks/cow_research_periodic_joint_20261030/camera",
+  "previous_both_cases_review_sha256": "6d1993c8c7b9d50484da247a8ba8ac9b805e88efb34ecb22ca317242c9265616",
+  "scheduling_intervention": "Onlyoneactualworkerprocess:SIGSTOPandwaitackbeforeeachforeground;SIGCONTafterrecordedcountcompletion. Networkresumesfromactualcomputeinsideidlewindows.",
+  "all_other_input_model_threshold_gallery_photo_stage_and_periodic_rules_unchanged": true,
+  "record_worker_process_CPU_and_network_CPU_ms": true,
+  "model_and_calibration_changes": false
+}

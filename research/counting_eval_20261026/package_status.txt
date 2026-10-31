@@ -1,0 +1,10 @@
+JobID|JobName|State|ExitCode|Elapsed
+129688|idcoo-eval-package|FAILED|1:0|00:00:01
+129688.batch|batch|FAILED|1:0|00:00:01
+129688.0|python|FAILED|1:0|00:00:01
+    subprocess.run(command,check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/share/home/renly/miniconda3/envs/sd/bin/ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/share/home/renly/projects/idcoo_research_20261026/phase2/results/external_counting/generic/Toros/annotated.mp4', '-vf', 'scale=960:-2', '-an', '-c:v', 'libx264', '-threads', '2', '-preset', 'fast', '-crf', '24', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-n', '/share/home/renly/projects/idcoo_research_20261026/phase2/results/delivery/media/reverse_generic.mp4']' returned non-zero exit status 1.

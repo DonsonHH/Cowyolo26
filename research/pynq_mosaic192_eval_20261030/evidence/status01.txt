@@ -1,0 +1,101 @@
+             JOBID|PARTITION|                        NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed
+130635|COMPLETED|0:0|00:02:33
+{
+  "status": "MOSAIC192_FP32_QDQ_FULL_VALIDATION_TWO_VIDEO_QUALITY_AND8_NATIVE_INTEGER_ANCHORS_COMPLETE",
+  "forwards": {
+    "FP32": 4225,
+    "QDQ": 4225
+  },
+  "validation": [
+    {
+      "mode": "FP32",
+      "images": 1571,
+      "references": 1864,
+      "TP": 1838,
+      "unmatched_reference": 26,
+      "unmatched_prediction": 230,
+      "recall": 0.9860515021459227,
+      "precision_vs_reference": 0.8887814313346228
+    },
+    {
+      "mode": "QDQ",
+      "images": 1571,
+      "references": 1864,
+      "TP": 1839,
+      "unmatched_reference": 25,
+      "unmatched_prediction": 241,
+      "recall": 0.9865879828326181,
+      "precision_vs_reference": 0.8841346153846154
+    }
+  ],
+  "video": [
+    {
+      "scene": "original",
+      "mode": "FP32",
+      "stride": 5,
+      "down": 10,
+      "up": 0,
+      "TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "mode": "QDQ",
+      "stride": 5,
+      "down": 10,
+      "up": 0,
+      "TP_FP_FN": null
+    },
+    {
+      "scene": "toros",
+      "mode": "FP32",
+      "stride": 6,
+      "down": 0,
+      "up": 3,
+      "TP_FP_FN": [
+        3,
+        0,
+        3
+      ]
+    },
+    {
+      "scene": "toros",
+      "mode": "FP32",
+      "stride": 1,
+      "down": 0,
+      "up": 4,
+      "TP_FP_FN": [
+        4,
+        0,
+        2
+      ]
+    },
+    {
+      "scene": "toros",
+      "mode": "QDQ",
+      "stride": 6,
+      "down": 0,
+      "up": 3,
+      "TP_FP_FN": [
+        3,
+        0,
+        3
+      ]
+    },
+    {
+      "scene": "toros",
+      "mode": "QDQ",
+      "stride": 1,
+      "down": 0,
+      "up": 4,
+      "TP_FP_FN": [
+        4,
+        0,
+        2
+      ]
+    }
+  ]
+}
+STDERR_TAIL [0;93m2026-10-30 05:28:30.579086329 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer 'onnx::Tile_789'. It is not used by any node and should be removed from the model.[m
+[0;93m2026-10-30 05:28:30.579117062 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer '/model.23/Constant_17_output_0'. It is not used by any node and should be removed from the model.[m
+

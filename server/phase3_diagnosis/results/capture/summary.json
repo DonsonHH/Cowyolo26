@@ -1,0 +1,104 @@
+[
+  {
+    "model": "generic",
+    "job_id": "129692",
+    "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "frames": 479,
+    "raw_boxes": 1323,
+    "post_tracker_boxes": 1158,
+    "events": [
+      {
+        "time_s": 3.6666666666666665,
+        "track_id": 2,
+        "direction": "B->A",
+        "frame": 110
+      },
+      {
+        "time_s": 6.633333333333334,
+        "track_id": 5,
+        "direction": "B->A",
+        "frame": 199
+      },
+      {
+        "time_s": 8.166666666666666,
+        "track_id": 25,
+        "direction": "B->A",
+        "frame": 245
+      },
+      {
+        "time_s": 9.7,
+        "track_id": 31,
+        "direction": "B->A",
+        "frame": 291
+      },
+      {
+        "time_s": 10.733333333333333,
+        "track_id": 54,
+        "direction": "B->A",
+        "frame": 322
+      },
+      {
+        "time_s": 13.233333333333333,
+        "track_id": 34,
+        "direction": "B->A",
+        "frame": 397
+      }
+    ],
+    "callback_order": [
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.utils.callbacks.base"
+      },
+      {
+        "name": "capture_before_tracker",
+        "module": "__main__"
+      },
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.trackers.track"
+      }
+    ],
+    "frozen_baseline_event_equality": true,
+    "elapsed_s": 7.387482408434153,
+    "cuda_device": "Tesla V100S-PCIE-32GB"
+  },
+  {
+    "model": "pilot",
+    "job_id": "129692",
+    "checkpoint_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+    "frames": 479,
+    "raw_boxes": 1064,
+    "post_tracker_boxes": 905,
+    "events": [
+      {
+        "time_s": 8.2,
+        "track_id": 21,
+        "direction": "B->A",
+        "frame": 246
+      },
+      {
+        "time_s": 13.166666666666666,
+        "track_id": 39,
+        "direction": "B->A",
+        "frame": 395
+      }
+    ],
+    "callback_order": [
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.utils.callbacks.base"
+      },
+      {
+        "name": "capture_before_tracker",
+        "module": "__main__"
+      },
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.trackers.track"
+      }
+    ],
+    "frozen_baseline_event_equality": true,
+    "elapsed_s": 6.3442930076271296,
+    "cuda_device": "Tesla V100S-PCIE-32GB"
+  }
+]

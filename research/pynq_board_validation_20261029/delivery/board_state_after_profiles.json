@@ -1,0 +1,129 @@
+{
+  "boot_id": "9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f",
+  "PL_before_final_O8_attach_or_load": "/home/xilinx/jupyter_notebooks/yolo26_optimization_6/runtime/optimization_5_exact.bit",
+  "profiles_terminal": [
+    {
+      "run": "probe192",
+      "size": 192,
+      "status": "PROBE_COMPLETED",
+      "PID": 2148,
+      "engine": "O8resident",
+      "detector": {
+        "samples": 1,
+        "mean_ms": 331.764258,
+        "p50_ms": 331.764258,
+        "p95_ms": 331.764258,
+        "maximum_ms": 331.764258,
+        "fps_from_mean": 3.01418846631755,
+        "above200ms": 1
+      },
+      "photo_rotation_detector": {
+        "samples": 1,
+        "mean_ms": 1846.5011049999998,
+        "p50_ms": 1846.5011049999998,
+        "p95_ms": 1846.5011049999998,
+        "maximum_ms": 1846.5011049999998,
+        "fps_from_mean": 0.5415647991177347,
+        "above200ms": 1
+      },
+      "record_sha256": "0c7d55dcbd331a01821e395c61d29d68a3637f0259b95bb070ce6b6917af6384",
+      "actual_forwards": 1,
+      "cow_present_photos": 0
+    },
+    {
+      "run": "formal192",
+      "size": 192,
+      "status": "PROFILE_COMPLETED",
+      "PID": 2551,
+      "engine": "O8resident",
+      "detector": {
+        "samples": 32,
+        "mean_ms": 158.79472534374997,
+        "p50_ms": 159.1374735,
+        "p95_ms": 161.19209525,
+        "maximum_ms": 162.09299,
+        "fps_from_mean": 6.29743839309055,
+        "above200ms": 0
+      },
+      "photo_rotation_detector": {
+        "samples": 32,
+        "mean_ms": 1688.5579235937498,
+        "p50_ms": 1679.7670225,
+        "p95_ms": 1777.8345694999998,
+        "maximum_ms": 1918.555745,
+        "fps_from_mean": 0.5922213185744346,
+        "above200ms": 32
+      },
+      "record_sha256": "4e787d4e3edef6350d0bdc52a2d00eb7ff9aa95249765f40d3e7f9d4772cdc04",
+      "actual_forwards": 34,
+      "cow_present_photos": 0
+    },
+    {
+      "run": "formal256",
+      "size": 256,
+      "status": "PROFILE_COMPLETED",
+      "PID": 2842,
+      "engine": "O8resident",
+      "detector": {
+        "samples": 32,
+        "mean_ms": 261.8192415,
+        "p50_ms": 261.701043,
+        "p95_ms": 263.4747474,
+        "maximum_ms": 281.067249,
+        "fps_from_mean": 3.819428985703482,
+        "above200ms": 32
+      },
+      "photo_rotation_detector": {
+        "samples": 32,
+        "mean_ms": 1793.7255545624998,
+        "p50_ms": 1788.4100560000002,
+        "p95_ms": 1824.9077447,
+        "maximum_ms": 2039.259875,
+        "fps_from_mean": 0.5574988868594816,
+        "above200ms": 32
+      },
+      "record_sha256": "fbe76bd93f348804e6d33215e7ef986b17b8f082d58839971920031f66d657b4",
+      "actual_forwards": 34,
+      "cow_present_photos": 0
+    },
+    {
+      "run": "formal320",
+      "size": 320,
+      "status": "PROFILE_COMPLETED",
+      "PID": 3168,
+      "engine": "O6legacy",
+      "detector": {
+        "samples": 32,
+        "mean_ms": 1056.3909678750001,
+        "p50_ms": 1046.9368814999998,
+        "p95_ms": 1122.08460625,
+        "maximum_ms": 1268.606607,
+        "fps_from_mean": 0.9466192256561656,
+        "above200ms": 32
+      },
+      "photo_rotation_detector": {
+        "samples": 32,
+        "mean_ms": 2579.2190746875,
+        "p50_ms": 2570.0121035,
+        "p95_ms": 2642.9009676,
+        "maximum_ms": 2951.842149,
+        "fps_from_mean": 0.38771425421516814,
+        "above200ms": 32
+      },
+      "record_sha256": "5aafe63291bcf842a2baf24ed9534dc2dfb1c7910bd1f4056068d5f051409625",
+      "actual_forwards": 34,
+      "cow_present_photos": 0
+    }
+  ],
+  "probe_and_formal_image_forwards": 103,
+  "programmed_known_O8_for_next192_stage": true,
+  "PL_after": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.bit",
+  "PL_after_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "PL_after_IP_names": [
+    "axi_dma_0",
+    "conv_accel_0",
+    "processing_system7_0"
+  ],
+  "memory": "MemTotal:         503464 kB\nMemFree:           89948 kB\nMemAvailable:     343012 kB\nBuffers:           18064 kB\nCached:           244000 kB\nSwapCached:         1916 kB\nActive:           204164 kB\nInactive:         173580 kB\nActive(anon):       8496 kB\nInactive(anon):   108392 kB\nActive(file):     195668 kB\nInactive(file):    65188 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nHighTotal:             0 kB\nHighFree:              0 kB\nLowTotal:         503464 kB\nLowFree:           89948 kB\nSwapTotal:        524284 kB\nSwapFree:         504060 kB\nDirty:               676 kB\nWriteback:          5536 kB\nAnonPages:        113720 kB\nMapped:            46448 kB\nShmem:              1208 kB\nKReclaimable:      13244 kB\nSlab:              27544 kB\nSReclaimable:      13244 kB\nSUnreclaim:        14300 kB\nKernelStack:         784 kB\nPageTables:         1832 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      776016 kB\nCommitted_AS:     283432 kB\nVmallocTotal:     507904 kB\nVmallocUsed:        2008 kB\nVmallocChunk:          0 kB\nPercpu:              296 kB\nCmaTotal:         131072 kB\nCmaFree:           44916 kB\n",
+  "no_inference_in_collection": true
+}

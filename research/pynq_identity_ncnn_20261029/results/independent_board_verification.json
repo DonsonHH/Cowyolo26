@@ -1,0 +1,59 @@
+{
+  "status": "ALL132_REAL_ARM_IDENTITY_FEATURES132_PHOTO_INPUT_TENSORS_AND144_RETRIEVAL_DECISIONS_INDEPENDENTLY_VERIFIED",
+  "created_UTC": "2026-10-29T16:49:48.946390+00:00",
+  "encoder_checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+  "bridge_library_sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731",
+  "actual_model_vectors": 132,
+  "warmups": 2,
+  "prior_failed_model_vectors": 4,
+  "prior_failed_warmups": 2,
+  "all132_runtime_photo_tensor_bytes_exact_to_server": true,
+  "maximum_normalized_feature_difference": 4.492700099945068e-06,
+  "retrieval_decisions": 144,
+  "all_retrieval_decisions_exact": true,
+  "retrieval_checks": [
+    {
+      "gallery": "old_gallery",
+      "query_group": "labelled_query",
+      "images": 60,
+      "rank1_and_threshold_decisions_exact": true,
+      "maximum_score_difference": 2.3279236007756055e-06
+    },
+    {
+      "gallery": "old_gallery",
+      "query_group": "real_event_query",
+      "images": 12,
+      "rank1_and_threshold_decisions_exact": true,
+      "maximum_score_difference": 1.787639988704015e-06
+    },
+    {
+      "gallery": "new_gallery",
+      "query_group": "labelled_query",
+      "images": 60,
+      "rank1_and_threshold_decisions_exact": true,
+      "maximum_score_difference": 2.00564097951883e-06
+    },
+    {
+      "gallery": "new_gallery",
+      "query_group": "real_event_query",
+      "images": 12,
+      "rank1_and_threshold_decisions_exact": true,
+      "maximum_score_difference": 1.812120228428249e-06
+    }
+  ],
+  "model_ms": {
+    "mean": 147.1552043181818,
+    "p95": 159.05584939999994,
+    "max": 175.980019
+  },
+  "CortexA9_no_VFPv4": true,
+  "old_native_instruction_and_preprocessing_failures_preserved": true,
+  "global_Pillow_or_numpy_changed": false,
+  "new_training_updates": 0,
+  "PL_actions": 0,
+  "new_permanent_identity_accuracy_proven": false,
+  "whole_goal_complete": false,
+  "archive_sha256": "58d9e99107fb63f445b989881bd425571317b766f087bfd845f3cedc094c3316",
+  "archive_members": 199,
+  "manifest_files": 198
+}

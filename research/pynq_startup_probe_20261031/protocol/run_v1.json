@@ -1,0 +1,304 @@
+{
+  "video": {
+    "name": "original",
+    "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+    "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "width": 2560,
+    "height": 1440,
+    "fps": 25,
+    "decode_end_exclusive": 10874,
+    "inference_stride": 5,
+    "orientation": "clockwise90",
+    "axis": "y",
+    "perpendicular_ROI": [
+      0.34,
+      0.75
+    ],
+    "scope_start_frame0": 8912,
+    "scope_end_exclusive": 10874,
+    "counter_replay_strides": [
+      5
+    ],
+    "human_down_total": 12,
+    "formal_event_scoring": false,
+    "detection_crop_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "crop_size_WH": [
+      1050,
+      1440
+    ],
+    "pixel_control_frames": [
+      8995,
+      9345,
+      9790,
+      10830
+    ],
+    "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "registered_IDs": [
+    "009",
+    "020",
+    "026",
+    "028",
+    "031",
+    "054"
+  ],
+  "fixed_identity_threshold": 0.8445389603236383,
+  "secondary_Cows_threshold": 0.8707458695890389,
+  "models": {
+    "old": {
+      "encoder_directory": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029",
+      "encoder_bin_sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b",
+      "gallery_features_file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/all_normalized_features.npz",
+      "gallery_array_key": "new_gallery"
+    }
+  },
+  "backend_nice_increment": 10,
+  "O8_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "O8_hwh_sha256": "d6cf7f228c93f06523ad8e71efa9c280ba924ecc93d13f8ecdf90351238b4a6a",
+  "status": "FROZEN_BEFORE_FIRST_STARTUP_DIAGNOSTIC_WARMUP",
+  "created_UTC": "2026-10-31T09:06:54.600495+00:00",
+  "expected_boot_id": "e7059099-ecb8-451e-a9aa-a66c8222196b",
+  "runtime_files": [
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/libcow_encoder_v2.so",
+      "sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.param",
+      "sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.bin",
+      "sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/ncnn_encoder_v3.py",
+      "sha256": "c7e83e2638b9cb80e4e0720b5338ac802d05b37241526226da1e482a3172027c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/all_normalized_features.npz",
+      "sha256": "a23bf0714a0d8ef12f23ea5198fc2ad82f209b61c058f692613114f0d1f05ac1"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/image_groups.json",
+      "sha256": "f89a5f4501b0d8b896ada40431a1e58405117fe8593c512163aec130924bfad6"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/record.json",
+      "sha256": "f84a4de6797638a090f6514c1cd718f9e86e39019f191db41c9ece6ee3718d14"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/program/graph.bin",
+      "sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/resident_plan/resident_plan.bin",
+      "sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/encoder.ncnn.param",
+      "sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/encoder.ncnn.bin",
+      "sha256": "2a587d0fe293d244eb5632feb0e3665cf6091243198612b59363a6a7bb173252"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/libcow_encoder_v2.so",
+      "sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/device_initialize.py",
+      "sha256": "c87f8671cb6d27af790928618a1d8cb7e20127cb09e9f7378a417a54fa85ac98"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/native_graph.py",
+      "sha256": "84bd2d829f4b70408585eaabcb742176b04703ac1777f1e8a8d7f65801b9b01e"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/native_sources/native_queue.so",
+      "sha256": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/firmware_manifest.json",
+      "sha256": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/program/program.json",
+      "sha256": "0ed8cd953352dd0a9c1ceeb02bf4241997dfa4975c7d5fd91eaa0dec6aec2749"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/resident_plan/resident_plan.json",
+      "sha256": "e5f4b7c1c9265ed03ddc97d73509213b5851465b4493db87eba6b0188068d324"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_workload_ablation_20261031/board_workload_ablation.py",
+      "sha256": "d59cb9b56a16f666f5837028b35304571bbef6e1c4fb45ad9b9a09c8043c6e72"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_workload_ablation_20261031/background_fixed_worker.py",
+      "sha256": "ea9261e51592ad81ef756cd7776aed48d18e311a0fb7042138437027a43cb961"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_mosaic192_video_20261030/board_input_manifest.json",
+      "sha256": "7f316114c1eb654cbaf34c5e401119c87a1ce125899930ca3439ddc8fbc5380c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors/old_gallery_000.npz",
+      "sha256": "3b2e3ba40bb2884f1022bc15cf1ae33a3b917bd7275fc35a89623b4ad954601f"
+    }
+  ],
+  "source_driver_sha256": "d59cb9b56a16f666f5837028b35304571bbef6e1c4fb45ad9b9a09c8043c6e72",
+  "source_worker_sha256": "ea9261e51592ad81ef756cd7776aed48d18e311a0fb7042138437027a43cb961",
+  "parent_entry_variants_differ_only_by_six_foreground_import_statements": [
+    "import cv2",
+    "from pynq import PL, Overlay",
+    "from native_graph import NativeGraph",
+    "from device_initialize import initialize",
+    "from board_runtime import decode",
+    "from frame_pipeline import FramePipeline"
+  ],
+  "original_unused_function_bodies_omitted_from_both_probe_entries": true,
+  "input_manifest_sha256": "7f316114c1eb654cbaf34c5e401119c87a1ce125899930ca3439ddc8fbc5380c",
+  "history_predictions_sha256": "f898768d5d1881a4a404f6cae917e1da4a3fc6db4a4c47b4f7b9a023f22a98eb",
+  "history_trace_sha256": "98eb9f35369c8ab73e20ed30b5ea2baf49ff61bd9ae0087b4ab81970b29744b4",
+  "warmup_file_sha256": "3b2e3ba40bb2884f1022bc15cf1ae33a3b917bd7275fc35a89623b4ad954601f",
+  "warmup_input_tensor_sha256": "1c0830e1271ac7f99c9a506a404caa3f03249a696d24e8e1fd71333f69682099",
+  "warmup_prior_actual_ARM_raw_sha256": "5634ba2be0933c422c9bb2da253c0c1178283d26cd9e22621e2c40c02f1890f7",
+  "READY_queue_wait_timeout_s": 40,
+  "after_deadline_same_child_observation_timeout_s": 120,
+  "stationary_foreground_workset_not_periodic_replay": true,
+  "expected_identity_warmups": 4,
+  "maximum_all_new_board_image_forwards": 4,
+  "formal_identity_jobs": 0,
+  "O8_image_forwards": 0,
+  "PL_programming_permitted": false,
+  "new_closed_pixels_or_training_updates": 0,
+  "whole_goal_complete": false,
+  "measurement_scope": "Known identity warmup with paused native graph, ready framebank and cached prehistory resident; not same accumulated five-period state, full load or field startup.",
+  "measurement_overheads": "Identical phase clocks/hash checks and post-READY PSS sampling; warmup vectors saved only after parent requests stop. Warm-end to READY interval retains hash/affinity overhead.",
+  "runs": [
+    {
+      "run": "r1_original",
+      "variant": "original",
+      "entry_file": "original_entry.py"
+    },
+    {
+      "run": "r2_parent_only",
+      "variant": "parent_only",
+      "entry_file": "parent_only_entry.py"
+    },
+    {
+      "run": "r3_parent_only",
+      "variant": "parent_only",
+      "entry_file": "parent_only_entry.py"
+    },
+    {
+      "run": "r4_original",
+      "variant": "original",
+      "entry_file": "original_entry.py"
+    }
+  ],
+  "payload_files": [
+    {
+      "file": "background_fixed_worker.py",
+      "bytes": 9054,
+      "sha256": "796a8622358bbc702fda6b628cd8c1799e64bd3dfef1a464fb84951fee363a97"
+    },
+    {
+      "file": "board_controller.py",
+      "bytes": 3487,
+      "sha256": "99de23f1460bd24ac19feb0f2e8264476a7bddfdd2078cfb978834af9d31c391"
+    },
+    {
+      "file": "fixed_arrivals.py",
+      "bytes": 2532,
+      "sha256": "a71f1b3b7dd7b9f640f560cf339020cd567c53eb59454ce2dd0fcb41efca7241"
+    },
+    {
+      "file": "jpeg_producer.py",
+      "bytes": 5293,
+      "sha256": "3b70d38740c60d87fcd8399916c4b0d98dd627592e72e8908a280b810c863483"
+    },
+    {
+      "file": "original_entry.py",
+      "bytes": 1325,
+      "sha256": "7468889c9320fa9dc475637a2947ddd4333ae5e7c47b906270284efdc7714a88"
+    },
+    {
+      "file": "parent_only_entry.py",
+      "bytes": 1133,
+      "sha256": "396a8d3c464c50c63cf2b7acc2a2b960178629544d4321185ce86a4290ebc724"
+    },
+    {
+      "file": "process_cpu.py",
+      "bytes": 798,
+      "sha256": "d0ccc4f972e0066f8d0ebc02a1a5232733cda4164c9ffe4cf0358534373540a4"
+    },
+    {
+      "file": "startup_support.py",
+      "bytes": 10017,
+      "sha256": "9624de85edceace35d0b7f8e13ae704af8997f9c54639481e6dfb3ea5cef82f5"
+    }
+  ]
+}

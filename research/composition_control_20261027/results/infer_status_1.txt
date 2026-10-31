@@ -1,0 +1,28 @@
+JobID                         JobName      State ExitCode    Elapsed 
+------------ ------------------------ ---------- -------- ---------- 
+129842_0      idcoo-composition-train  COMPLETED      0:0   00:04:36 
+JobID                         JobName      State ExitCode    Elapsed 
+------------ ------------------------ ---------- -------- ---------- 
+129844_1      idcoo-composition-train  COMPLETED      0:0   00:04:45 
+129844_2      idcoo-composition-train  COMPLETED      0:0   00:04:44 
+129844_3      idcoo-composition-train  COMPLETED      0:0   00:04:39 
+129844_4      idcoo-composition-train  COMPLETED      0:0   00:04:47 
+129844_5      idcoo-composition-train  COMPLETED      0:0   00:04:29 
+JobID                         JobName      State ExitCode    Elapsed 
+------------ ------------------------ ---------- -------- ---------- 
+129847       idcoo-composition-freeze  COMPLETED      0:0   00:00:04 
+JobID                         JobName      State ExitCode    Elapsed 
+------------ ------------------------ ---------- -------- ---------- 
+129848        idcoo-composition-video    RUNNING      0:0   00:02:17 
+JobID                         JobName      State ExitCode    Elapsed 
+------------ ------------------------ ---------- -------- ---------- 
+129849       idcoo-composition-colle+    PENDING      0:0   00:00:00 
+{"condition": "mixed_seed26", "epoch": 10, "epochs": 10, "batches": 1850, "optimizer_steps": 1064}
+{"condition": "mixed_seed27", "epoch": 10, "epochs": 10, "batches": 1850, "optimizer_steps": 1064}
+{"condition": "mixed_seed28", "epoch": 10, "epochs": 10, "batches": 1850, "optimizer_steps": 1064}
+{"condition": "real_repeated_seed26", "epoch": 10, "epochs": 10, "batches": 1850, "optimizer_steps": 1064}
+{"condition": "real_repeated_seed27", "epoch": 10, "epochs": 10, "batches": 1850, "optimizer_steps": 1064}
+{"condition": "real_repeated_seed28", "epoch": 10, "epochs": 10, "batches": 1850, "optimizer_steps": 1064}
+{"freeze": "SIX_MODELS_AND_PAIRED_STEP_GATES_FROZEN", "paired_controls": [{"seed": 26, "training_batches_each": 1850, "optimizer_steps_each": 1064, "optimizer_step_batch_schedule_equal": true, "initial_model_digest_equal": true, "fixed_training_args_equal": true}, {"seed": 27, "training_batches_each": 1850, "optimizer_steps_each": 1064, "optimizer_step_batch_schedule_equal": true, "initial_model_digest_equal": true, "fixed_training_args_equal": true}, {"seed": 28, "training_batches_each": 1850, "optimizer_steps_each": 1064, "optimizer_step_batch_schedule_equal": true, "initial_model_digest_equal": true, "fixed_training_args_equal": true}]}
+{"model": "mixed_seed26", "scene": "source", "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1", "processed_frames": 10874, "sampled_inference_frames": 2175, "rendered_frames": 1962, "A_to_B": 7, "B_to_A": 0, "events": 7, "elapsed_s_host_replay": 82.82897236850113, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [8912, 10873], "scope": "Previously observed development video; no new independent accuracy claim"}
+{"model": "mixed_seed26", "scene": "Toros", "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c", "processed_frames": 479, "sampled_inference_frames": 479, "rendered_frames": 0, "A_to_B": 0, "B_to_A": 1, "events": 1, "elapsed_s_host_replay": 5.92371729016304, "counter_initialised_at_source_frame": 0, "source_output_frame_range": [0, 478], "scope": "Previously used6-event diagnostic; not fresh generalisation"}

@@ -1,0 +1,18 @@
+{
+  "purpose": "Frozen diagnostic interventions on an already used external clip; not new test-set performance",
+  "source": "phase2/data/mendeley_counting/extracted/Ground Truth/Toros.mp4",
+  "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+  "checkpoint_and_counting": "Reuse phase2/evaluation_protocol_v1 unchanged; image 320, confidence 0.2, IoU 0.5, ByteTrack, regions 0.4/0.6, stable 3, maximum gap 2s",
+  "ranked_hypotheses": [
+    {"id":"H1", "hypothesis":"Box geometry shifts region centres", "prediction":"Reference boxes with the same assigned tracker IDs recover events relative to tracked boxes"},
+    {"id":"H2", "hypothesis":"Track IDs fragment between stable regions", "prediction":"Post-tracker boxes assigned reference IDs recover events relative to actual tracker IDs"},
+    {"id":"H3", "hypothesis":"Detector misses stable entrance or exit observations", "prediction":"Raw detector boxes with reference association still fail complete crossings, while reference boxes and reference IDs recover them"},
+    {"id":"H4", "hypothesis":"Tracker filtering removes useful detections", "prediction":"Raw detector boxes with reference IDs recover events lost using post-tracker boxes with reference IDs"}
+  ],
+  "raw_capture": "on_predict_postprocess_end callback registered before tracker callback; copy boxes before tracker mutation; record ordering and exact baseline-event replay",
+  "association": "Per frame one-to-one maximum-cardinality then maximum IoU matching; primary IoU >=0.5; predeclared sensitivity IoU >=0.3",
+  "controls": ["reference boxes + reference IDs", "raw detector boxes + reference IDs", "post-tracker boxes + reference IDs", "reference boxes + actual tracker IDs", "actual tracked boxes + tracker IDs"],
+  "scoring": "Keep frozen event-matching tolerance 2s and scoring implementation; also inspect per-reference-ID intervention events",
+  "interpretation": "Reference-assisted results diagnose layers and are not deployable system results. Retain interaction and association-threshold sensitivity instead of forcing a unique causal explanation.",
+  "label_status": "Publisher reference trajectories checked previously; new source-only annotations remain agent drafts pending independent human review"
+}

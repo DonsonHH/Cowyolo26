@@ -1,0 +1,27 @@
+{
+  "name": "Dataset composition and bounding-box definition audit v1",
+  "question": "Can raw detections and publisher boxes be compared as the same annotated object extent before attributing lowIoU to missed cattle?",
+  "OpenCows_evidence": {
+    "readme": "https://data.bris.ac.uk/datasets/10m32xl88x2b61zlkkgz3fml17/ReadMe.txt",
+    "paper": "https://arxiv.org/pdf/2006.09205",
+    "section": "3.1, page8 in PDF: torso annotation excluding head, neck, legs and tail",
+    "real_filename_last": "003707.jpg",
+    "derived_training": {"real_images": 2596, "synthetic_images": 3317},
+    "train_visual_samples": "6real+6synthetic, hash-rank prefix definition-audit-v1:, only existing train role. No validation/test image viewing or model selection."
+  },
+  "Toros_evidence": {
+    "publisher": "https://data.mendeley.com/datasets/dk54zg67dd/1",
+    "publisher_description": "COCO-pretrained YOLOv8 and DeepSORT initialisation plus manual box/ID correction. Page does not explicitly declare a torso-only extent.",
+    "visual_source_frames": [110,193,248,286,322,396],
+    "scope": "Six previously used publisher-derived events. Review actual boxes; do not assume all annotations follow a whole-animal extent from text alone."
+  },
+  "geometry_descriptions": {
+    "source": "Existing frozen pre-tracker raw outputs for official, five-epoch and three20epoch models; no new inference",
+    "best_candidate": "For each clipped nonempty publisher row, highestIoU same-frame raw candidate; descriptive per-row matching, not one-to-one accuracy evaluation",
+    "flag": "A retained geometric candidate has intersection/prediction_area >=0.9, prediction/reference_area in[0.15,0.75], and IoU<0.5. This is a review flag, not a TP and not proof it covers the right torso.",
+    "witness_selection": "Per model, earliest flagged source frame then lowest publisher ID. No inference score or event-count tuning.",
+    "no_score_change": "All frozen event scores and original IoU diagnostic outputs retained. No shrinking reference boxes or relabeling them automatically."
+  },
+  "training_decision": "Do not start real/synthetic training ablation until box-definition comparability is reviewed. This stage prepares evidence and a corrected evaluation interpretation.",
+  "forbidden": "No new cow identity labels, independent human ground truth, augmented mother-image linkage, causal synthetic-data claim or board performance assertion."
+}

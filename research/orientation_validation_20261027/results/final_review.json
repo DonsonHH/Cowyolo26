@@ -1,0 +1,66 @@
+{
+  "status": "PAIRED_ROTATION_DIAGNOSTIC_FULLY_REVIEWED_VIDEO_FAILURE_CAUSE_NOT_PROVEN",
+  "reviewed_client_time": "2026-10-27T23:14:02.142952+08:00",
+  "control_job": "129929 COMPLETED 0:0",
+  "collection_job": "129930 COMPLETED 0:0",
+  "final_figure_job": "129933 COMPLETED 0:0",
+  "source_validation_images": 1571,
+  "source_dates": 6,
+  "source_objects": 1864,
+  "frozen_models": 3,
+  "image_orientation_conditions": 6,
+  "metrics_conditions_independently_recomputed": 24,
+  "prediction_image_records": 9426,
+  "GT_objects_transform_checks": 11184,
+  "pixel_rotation_and_letterbox_max_difference": 0,
+  "independent_GT_rotation_max_difference": 0,
+  "primary_recall_results": [
+    {
+      "seed": 26,
+      "GT": 1864,
+      "original_TP": 1833,
+      "clockwise90_TP": 1690,
+      "original_recall": 0.9833690987124464,
+      "clockwise90_recall": 0.9066523605150214,
+      "drop_percentage_points": 7.671673819742497
+    },
+    {
+      "seed": 27,
+      "GT": 1864,
+      "original_TP": 1816,
+      "clockwise90_TP": 1770,
+      "original_recall": 0.9742489270386266,
+      "clockwise90_recall": 0.9495708154506438,
+      "drop_percentage_points": 2.467811158798283
+    },
+    {
+      "seed": 28,
+      "GT": 1864,
+      "original_TP": 1824,
+      "clockwise90_TP": 1602,
+      "original_recall": 0.9785407725321889,
+      "clockwise90_recall": 0.8594420600858369,
+      "drop_percentage_points": 11.909871244635195
+    }
+  ],
+  "date_cluster_interval_seed27_contains_zero": true,
+  "date_clusters_are_sufficient_for_farm_population_guarantee": false,
+  "delivered_files_hash_verified": 77,
+  "native_overlay_images_complete_decode": 48,
+  "manual_visual_sample": "first pre-fixed sample07802, all3seeds x2orientations",
+  "figure_and_table_hashes_verified": 3,
+  "first_plot_preserved_after_layout_only_revision": true,
+  "training_updates": 0,
+  "source_or_Toros_or_final_pixels_opened_this_control": false,
+  "source_count_accuracy_improved_or_verified": false,
+  "source_video_failure_cause_proven": false,
+  "new_deployment_configuration_adopted": false,
+  "PYNQ_joint_execution_verified": false,
+  "local_report_links_checked": 13,
+  "reviewed_document_hashes": {
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\orientation_validation_20261027\\\u56fa\u5b9a\u6a21\u578b\u671d\u5411\u5bf9\u7167\u4e0e\u4e0b\u4e00\u6b65.md": "58d9d17047c6dc801a846207cb5e42186699f40c128ac98b27e7a5878a5ddb66",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\orientation_validation_20261027\\Review\u4e0e\u5f53\u524d\u72b6\u6001.md": "bc2c4bb3a2cb02800496f9a93e35bf67ed1f876922666c3b4e0cbb160a09c490"
+  },
+  "whole_goal_complete": false,
+  "next_action": "paired0/90 input replay on already-used development videos, invert output boxes before unchanged ROI/event logic, reproduce original condition; decide controlled augmentation only after evidence"
+}

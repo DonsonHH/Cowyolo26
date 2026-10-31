@@ -1,0 +1,54 @@
+{
+  "status": "FROZEN_BEFORE_PREPARING_PERIODIC_AND_CONCURRENT_WORKLOAD",
+  "created_UTC": "2026-10-29T16:08:51.097764+00:00",
+  "frontend_model": "S192_rot90_seed26",
+  "source_scope_inclusive": [
+    8912,
+    10873
+  ],
+  "sample_frame0_start": 8915,
+  "sample_frame0_end": 10870,
+  "offered_periodic_slots": 392,
+  "period_ns": 200000000,
+  "policy": "Fixed5Hzrelease,newestavailableonly,skipslogged;deadlinefromrelease+200ms;allstagewalltimecounted.",
+  "frontend_cases": [
+    "foreground_only",
+    "foreground_with_actual_count_triggered_background_identity"
+  ],
+  "backend_encoder": "C_letterbox_trained_seed26",
+  "backend_threads": 1,
+  "backend_nice_increment": 10,
+  "backend_gallery": "new_Aug19",
+  "RFID_condition": "SimulatednoRFIDresponseforallactualconfirmedhandoffcount_events;noRFIDhardwareclaim.",
+  "background_trigger": "OnlyactualfrontendA->B/B->Aevents;currenttrackedboxcroppedfromsameframehighresolutioncamera-replayimage.",
+  "high_resolution_camera_replay": {
+    "source_crop_native_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "JPEG_quality": 95,
+    "output_size_WH": [
+      1050,
+      1440
+    ],
+    "slots": 392,
+    "reencode_lossy": true,
+    "network_resize": false,
+    "actual_camera_connected": false,
+    "no_preselected_cow_box": "StorephysicalROIonly;actualruntimeboxselectsthephotocrop."
+  },
+  "prewarm_tracker_history": "ReplaypreviousactualO8raw0..8910inclusiveinsideboardcounter;exactobservationsandbothlistschecked;noneofthosecachedoutputsusedfor392timedslotinference.",
+  "frontend_fast_entry": "ExistingO8run_imageBGRentry;all256inputquantcodesand8boardanchorrawexactrequired;noFP32runtimehashinsidetimedslots.",
+  "expected_no_skip_count_control": 11,
+  "manual_confirmed_total": 12,
+  "same_clip_used_for_development": true,
+  "no_camera_pipeline_latency_claim": true,
+  "no_real_RF_readfailure_claim": true,
+  "no_verified_permanent_ID_labels": true,
+  "all_inputs_frozen_before_run_and_checked_before_timer": true,
+  "global_O8_assets_modified": false,
+  "new_training_updates": 0,
+  "whole_goal_complete": false
+}

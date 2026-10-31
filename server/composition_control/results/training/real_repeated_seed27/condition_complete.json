@@ -1,0 +1,185 @@
+{
+  "status": "ONE_COMPOSITION_CONDITION_COMPLETE",
+  "job_id": "129851",
+  "array_task_id": 3,
+  "condition": {
+    "index": 3,
+    "arm": "real_repeated",
+    "seed": 27,
+    "name": "real_repeated_seed27"
+  },
+  "protocol_sha256": "aa99a723e95e1d7a593aec9d0de83f9de0f9c7a1d883985f91ab1637bc1f9cd5",
+  "source_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "data_slot_manifest_sha256": "0212a83a9b944723d2b67d5ceadb77592e5fe399bf4705f79cb740a34ba59a4e",
+  "initial_model_digest": "11296502b0bc72fe633c8b7a2f592fae8e269fac9d5c0d87471dbb2ec3a9c5eb",
+  "epochs": 10,
+  "training_batches": 1850,
+  "optimizer_steps": 1064,
+  "optimizer_step_schedule_sha256": "73dbc933d05858580d1725c515bcc46ef9d3f6ccb9b26645a521dd18c2c7ec58",
+  "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/composition_control/results/training/real_repeated_seed27/weights/last.pt",
+  "checkpoint_sha256": "92663466e7d806c1e23a65fbfc9e62df4b9c39f9ed1f146db6c0ee834836bf14",
+  "last_epoch_validation": {
+    "metrics/precision(B)": 0.94918,
+    "metrics/recall(B)": 0.95706,
+    "metrics/mAP50(B)": 0.98547,
+    "metrics/mAP50-95(B)": 0.78421
+  },
+  "trainer_return_metrics_for_archived_best": {
+    "metrics/precision(B)": 0.9493230992434833,
+    "metrics/recall(B)": 0.95900439238653,
+    "metrics/mAP50(B)": 0.9854710798361008,
+    "metrics/mAP50-95(B)": 0.783620470011221,
+    "fitness": 0.783620470011221
+  },
+  "args_sha256": "dcc6160c8ab4d61f62221ae9836de086a702926b9a7b29e7e60b32131a279b2b",
+  "training_csv_sha256": "d39e6fdf24fcfabe2c92c7d996b4a8aa159e23bedad1137e38c634b0eda1172e",
+  "history": [
+    {
+      "epoch": 1,
+      "training_batches": 185,
+      "optimizer_steps": 185,
+      "validation": {
+        "metrics/precision(B)": 0.84001,
+        "metrics/recall(B)": 0.69954,
+        "metrics/mAP50(B)": 0.80794,
+        "metrics/mAP50-95(B)": 0.50425,
+        "val/box_loss": 1.33554,
+        "val/cls_loss": 1.12444,
+        "val/dfl_loss": 0.01782
+      }
+    },
+    {
+      "epoch": 2,
+      "training_batches": 370,
+      "optimizer_steps": 324,
+      "validation": {
+        "metrics/precision(B)": 0.84149,
+        "metrics/recall(B)": 0.94827,
+        "metrics/mAP50(B)": 0.94005,
+        "metrics/mAP50-95(B)": 0.65856,
+        "val/box_loss": 1.10484,
+        "val/cls_loss": 0.63824,
+        "val/dfl_loss": 0.01377
+      }
+    },
+    {
+      "epoch": 3,
+      "training_batches": 555,
+      "optimizer_steps": 416,
+      "validation": {
+        "metrics/precision(B)": 0.87849,
+        "metrics/recall(B)": 0.87855,
+        "metrics/mAP50(B)": 0.94453,
+        "metrics/mAP50-95(B)": 0.63495,
+        "val/box_loss": 1.17342,
+        "val/cls_loss": 0.56557,
+        "val/dfl_loss": 0.01453
+      }
+    },
+    {
+      "epoch": 4,
+      "training_batches": 740,
+      "optimizer_steps": 509,
+      "validation": {
+        "metrics/precision(B)": 0.89481,
+        "metrics/recall(B)": 0.95168,
+        "metrics/mAP50(B)": 0.96652,
+        "metrics/mAP50-95(B)": 0.72539,
+        "val/box_loss": 0.96518,
+        "val/cls_loss": 0.41122,
+        "val/dfl_loss": 0.01143
+      }
+    },
+    {
+      "epoch": 5,
+      "training_batches": 925,
+      "optimizer_steps": 601,
+      "validation": {
+        "metrics/precision(B)": 0.92711,
+        "metrics/recall(B)": 0.93851,
+        "metrics/mAP50(B)": 0.97519,
+        "metrics/mAP50-95(B)": 0.72688,
+        "val/box_loss": 0.94692,
+        "val/cls_loss": 0.37585,
+        "val/dfl_loss": 0.01158
+      }
+    },
+    {
+      "epoch": 6,
+      "training_batches": 1110,
+      "optimizer_steps": 694,
+      "validation": {
+        "metrics/precision(B)": 0.93228,
+        "metrics/recall(B)": 0.94735,
+        "metrics/mAP50(B)": 0.97831,
+        "metrics/mAP50-95(B)": 0.72201,
+        "val/box_loss": 0.98938,
+        "val/cls_loss": 0.36692,
+        "val/dfl_loss": 0.01228
+      }
+    },
+    {
+      "epoch": 7,
+      "training_batches": 1295,
+      "optimizer_steps": 786,
+      "validation": {
+        "metrics/precision(B)": 0.9425,
+        "metrics/recall(B)": 0.95989,
+        "metrics/mAP50(B)": 0.98339,
+        "metrics/mAP50-95(B)": 0.77374,
+        "val/box_loss": 0.83545,
+        "val/cls_loss": 0.30319,
+        "val/dfl_loss": 0.00954
+      }
+    },
+    {
+      "epoch": 8,
+      "training_batches": 1480,
+      "optimizer_steps": 879,
+      "validation": {
+        "metrics/precision(B)": 0.94294,
+        "metrics/recall(B)": 0.97365,
+        "metrics/mAP50(B)": 0.98764,
+        "metrics/mAP50-95(B)": 0.77851,
+        "val/box_loss": 0.833,
+        "val/cls_loss": 0.30084,
+        "val/dfl_loss": 0.00981
+      }
+    },
+    {
+      "epoch": 9,
+      "training_batches": 1665,
+      "optimizer_steps": 971,
+      "validation": {
+        "metrics/precision(B)": 0.9292,
+        "metrics/recall(B)": 0.94729,
+        "metrics/mAP50(B)": 0.98049,
+        "metrics/mAP50-95(B)": 0.76949,
+        "val/box_loss": 0.84089,
+        "val/cls_loss": 0.32545,
+        "val/dfl_loss": 0.0095
+      }
+    },
+    {
+      "epoch": 10,
+      "training_batches": 1850,
+      "optimizer_steps": 1064,
+      "validation": {
+        "metrics/precision(B)": 0.94918,
+        "metrics/recall(B)": 0.95706,
+        "metrics/mAP50(B)": 0.98547,
+        "metrics/mAP50-95(B)": 0.78421,
+        "val/box_loss": 0.78781,
+        "val/cls_loss": 0.28734,
+        "val/dfl_loss": 0.00902
+      }
+    }
+  ],
+  "torch": "2.8.0+cu128",
+  "ultralytics": "8.4.63",
+  "device": "Tesla V100S-PCIE-32GB",
+  "elapsed_s": 274.35688732843846,
+  "scope": "Controlled development comparison of training composition/exposure; not independent generalisation or board validation.",
+  "source_video_or_Toros_forward_this_job": false,
+  "dev_test_forward": false
+}

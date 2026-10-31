@@ -1,0 +1,4 @@
+/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py:29: TracerWarning: Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  bound = w.shape[1] * w.shape[2] * w.shape[3] * float(centered.abs().max()) * float(qw.abs().max())
+/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py:30: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert bound <= np.iinfo(np.int32).max

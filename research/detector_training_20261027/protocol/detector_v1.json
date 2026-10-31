@@ -1,0 +1,77 @@
+{
+  "name": "Public-label detector expansion v1",
+  "date": "2026-10-27",
+  "scope": "OpenCows development training; MultiCam user-selected demonstration and previously used Toros diagnostic. Not independent farm or PYNQ performance.",
+  "source_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "seeds": [
+    26,
+    27,
+    28
+  ],
+  "epochs": 20,
+  "expected_split_counts": {
+    "train": 5913,
+    "val": 370,
+    "dev_test": 741,
+    "quarantine_duplicate_of_holdout": 19
+  },
+  "checkpoint_selection": "Use fixed final epoch last.pt for every seed; retain best.pt as additional archive only, no seed selection. All3 freeze before any new source or Toros model inference.",
+  "comparison": "Retrain from same official checkpoint, not resume five-epoch weights. Longer schedule and explicitly fixed AdamW; report all seeds as development, not a pure epoch-only causal ablation.",
+  "input_restrictions": "Only existing public training body-box labels and development validation enter training. No raw source video, no source pseudo-labels, no Toros training, no OpenCows dev_test forward.",
+  "train_kwargs": {
+    "imgsz": 320,
+    "batch": 32,
+    "workers": 4,
+    "deterministic": true,
+    "pretrained": true,
+    "amp": false,
+    "plots": false,
+    "save": true,
+    "cache": false,
+    "close_mosaic": 0,
+    "patience": 0,
+    "verbose": false,
+    "optimizer": "AdamW",
+    "lr0": 0.002,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "lrf": 0.01
+  },
+  "source_replay": {
+    "first_frame_inclusive": 8912,
+    "last_frame_inclusive": 10873,
+    "source_fps": 25,
+    "detection_stride": 5,
+    "warmup": "Decode from source0 and infer at frames divisible by5, preserving original tracking history. Save only requested source interval.",
+    "input_size": 320,
+    "confidence": 0.2,
+    "iou": 0.5,
+    "tracker": "bytetrack.yaml",
+    "roi_x": [
+      0.34,
+      0.75
+    ],
+    "gate_y": [
+      0.4,
+      0.6
+    ],
+    "stable_samples": 3,
+    "maximum_gap_s": 2
+  },
+  "known_diagnostic": "Reuse Toros full479frames30fps, ROIy0.1..0.95/gatex0.4/0.6, same threshold/ByteTrack/3samples/2second gap and 2second event matching. Already used diagnostic, not untouched evaluation.",
+  "browser_default_seed": 26,
+  "browser_rule": "Default seed26 fixed before results. Keep all seeds available; retain official and five-epoch views.",
+  "required_gates": [
+    "input hashes and cleaned label bounds",
+    "exactly20 epochs per seed",
+    "all3checkpoint freeze before new video inference",
+    "actual source frame IDs and traces",
+    "independent count arithmetic and full media decode",
+    "self review before delivery"
+  ],
+  "remaining_external_inputs": [
+    "independent counting review JSON",
+    "PYNQ SSH/image/Vivado versions",
+    "raw video identity mapping"
+  ]
+}

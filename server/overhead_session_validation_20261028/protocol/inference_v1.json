@@ -1,0 +1,53 @@
+{
+  "name": "Two frozen models on four metadata-selected ordinary overhead Cows2021 sessions",
+  "selection_protocol_sha256": "6059dc9c4562410e605d69790a6eb9e1ee1f67d6f8e08a1751d8c13b3f203da1",
+  "admission_summary_sha256": "3768029beae2f6bb45a33fae968d0f1a3c315efdf239c87cec02e019562fd4c5",
+  "native_visual_review_sha256": "0f3c2bd463b0aca1162480dbaffaf6d08c3bf21f86123eb069cadb425e59a69c",
+  "accepted_12_candidate_sha256": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+  "camera": {
+    "rotation_degrees": 0,
+    "axis": "x",
+    "perpendicular_ROI": [
+      0.05,
+      0.9
+    ],
+    "calibrated_from_native_scene_before_predictions": true,
+    "A_to_B": "left_to_right"
+  },
+  "imgsz": 640,
+  "detector_confidence": 0.2,
+  "NMS_IoU": 0.5,
+  "observation_hz": 5,
+  "cold_start_each_clip": true,
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "counter_variant": "confirmation_handoff",
+  "tracker": "Installed original ByteTrack with unchanged defaults; no pure-IoU or Lost-eligibility modification",
+  "ultralytics_version": "8.4.63",
+  "input_module_sha256": {
+    "zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+    "confirmation_counter.py": "43dc019982f23bd2cab92471d2bc4a5b1824258ec86edd2f17f4fd67f994976f"
+  },
+  "models": [
+    {
+      "name": "official_yolo26n",
+      "checkpoint_path": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "name": "accepted_seed26",
+      "checkpoint_path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+    }
+  ],
+  "conditions_expected": 8,
+  "all_selected_sessions_retained": true,
+  "new_training_updates": 0,
+  "event_GT_available": false,
+  "count_accuracy_F1_or_final_unseen_test_not_claimed": true,
+  "whole_goal_complete": false
+}

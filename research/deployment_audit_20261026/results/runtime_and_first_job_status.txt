@@ -1,0 +1,22 @@
+{"status": "OFFLINE_TARGET_IMPORT_PASS", "original_slow_download_pid": 2886036, "original_helper_is_no_longer_present": true, "initial_record_write_issue": "Missing results directory fixed after import success; no package reinstall or result rerun", "dependencies_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/dependencies_offline", "versions": {"onnx": "1.19.0", "onnxruntime": "1.23.2", "numpy": "2.2.6", "protobuf": "7.36.2", "ml_dtypes": "0.6.0", "flatbuffers": "25.12.19", "packaging": "26.3", "sympy": "1.14.0", "typing_extensions": "4.16.0"}, "shared_training_environment_modified": false, "pip_warnings": "Isolated target has packaging26.3 outside an unused langchain bound; pre-existing base xformers2.7.1 requirement vs torch2.8.0 warning retained. Export path import/forward will be checked independently."}
+JobID|JobName|State|ExitCode|Elapsed
+129719|idcoo-export-ptq-audit|COMPLETED|0:0|00:00:21
+129719.batch|batch|COMPLETED|0:0|00:00:21
+129719.0|python|COMPLETED|0:0|00:00:00
+129719.1|python|COMPLETED|0:0|00:00:21
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  }
+}
+{
+  "status": "GRAPH_EXPORT_AND_PTQ_HOST_AUDIT_COMPLETE",
+  "job_id": "129719",
+  "elapsed_s": 16.20529130101204
+}
+[1;31m2026-10-26 22:19:17.179191296 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 2337292, index: 50, mask: {51, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+[1;31m2026-10-26 22:19:17.187165491 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 2337250, index: 8, mask: {9, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+[1;31m2026-10-26 22:19:17.190150657 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 2337246, index: 4, mask: {5, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+[1;31m2026-10-26 22:19:17.190187290 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 2337295, index: 53, mask: {54, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+[1;31m2026-10-26 22:19:17.201150611 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 2337249, index: 7, mask: {8, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+[1;31m2026-10-26 22:19:17.201187701 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 2337245, index: 3, mask: {4, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+[1;31m2026-10-26 22:19:17.212171568 [E:onnxruntime:Default, env.cc:226 ThreadMain] pthread_setaffinity_np failed for thread: 2337248, index: 6, mask: {7, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.[m
+WARNING:root:Please consider pre-processing before quantization. See https://github.com/microsoft/onnxruntime-inference-examples/blob/main/quantization/image_classification/cpu/ReadMe.md 

@@ -1,0 +1,45 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+   130518_[9-14%3]|     4gpu|    cow-lowres-factorial| PENDING|      0:00|     15:00|(JobArrayTaskLimit)
+          130518_8|     4gpu|    cow-lowres-factorial| RUNNING|      0:36|     15:00|gpu02
+          130518_7|     4gpu|    cow-lowres-factorial| RUNNING|      0:51|     15:00|gpu02
+          130518_6|     4gpu|    cow-lowres-factorial| RUNNING|      0:56|     15:00|gpu02
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+130518_0|cow-lowres-factorial|FAILED|1:0|00:05:05|
+130518_0.batch|batch|FAILED|1:0|00:05:05|6403012K
+130518_1|cow-lowres-factorial|FAILED|1:0|00:04:56|
+130518_1.batch|batch|FAILED|1:0|00:04:56|6403940K
+130518_2|cow-lowres-factorial|FAILED|1:0|00:04:54|
+130518_2.batch|batch|FAILED|1:0|00:04:54|6460584K
+130518_3|cow-lowres-factorial|FAILED|1:0|00:04:55|
+130518_3.batch|batch|FAILED|1:0|00:04:55|6397064K
+130518_4|cow-lowres-factorial|FAILED|1:0|00:04:57|
+130518_4.batch|batch|FAILED|1:0|00:04:57|6347856K
+130518_5|cow-lowres-factorial|FAILED|1:0|00:05:04|
+130518_5.batch|batch|FAILED|1:0|00:05:04|6424440K
+130518_6|cow-lowres-factorial|RUNNING|0:0|00:00:56|
+130518_6.batch|batch|RUNNING|0:0|00:00:56|
+130518_7|cow-lowres-factorial|RUNNING|0:0|00:00:51|
+130518_7.batch|batch|RUNNING|0:0|00:00:51|
+130518_8|cow-lowres-factorial|RUNNING|0:0|00:00:36|
+130518_8.batch|batch|RUNNING|0:0|00:00:36|
+130518_[9-14%3]|cow-lowres-factorial|PENDING|0:0|00:00:00|
+PROGRESS S192_plain_seed26 {'condition': 'S192_plain_seed26', 'epoch': 10, 'batches': 2130, 'optimizer_steps': 1225, 'elapsed_s': 297.580901668}
+PROGRESS S192_plain_seed27 {'condition': 'S192_plain_seed27', 'epoch': 10, 'batches': 2130, 'optimizer_steps': 1225, 'elapsed_s': 288.580925921}
+PROGRESS S192_plain_seed28 {'condition': 'S192_plain_seed28', 'epoch': 10, 'batches': 2130, 'optimizer_steps': 1225, 'elapsed_s': 285.947950921}
+PROGRESS S192_rot90_seed26 {'condition': 'S192_rot90_seed26', 'epoch': 10, 'batches': 2130, 'optimizer_steps': 1225, 'elapsed_s': 286.894857432}
+PROGRESS S192_rot90_seed27 {'condition': 'S192_rot90_seed27', 'epoch': 10, 'batches': 2130, 'optimizer_steps': 1225, 'elapsed_s': 289.438557823}
+PROGRESS S192_rot90_seed28 {'condition': 'S192_rot90_seed28', 'epoch': 10, 'batches': 2130, 'optimizer_steps': 1225, 'elapsed_s': 296.069790263}
+PROGRESS S256_plain_seed26 {'condition': 'S256_plain_seed26', 'epoch': 1, 'batches': 213, 'optimizer_steps': 213, 'elapsed_s': 38.050724667}
+PROGRESS S256_plain_seed27 {'condition': 'S256_plain_seed27', 'epoch': 1, 'batches': 213, 'optimizer_steps': 213, 'elapsed_s': 37.455271546}
+    assert sha(folder/'optimizer_step_batch_indices.json')==expected['optimizer_step_schedule_sha256']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Exception in thread Thread-2 (_pin_memory_loop):
+  File "/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/tools/train_condition.py", line 63, in main
+    assert sha(folder/'optimizer_step_batch_indices.json')==expected['optimizer_step_schedule_sha256']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+    assert sha(folder/'optimizer_step_batch_indices.json')==expected['optimizer_step_schedule_sha256']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Exception in thread Thread-2 (_pin_memory_loop):

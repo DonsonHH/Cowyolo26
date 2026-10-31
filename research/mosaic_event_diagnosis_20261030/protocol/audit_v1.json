@@ -1,0 +1,98 @@
+{
+  "status": "FROZEN_BEFORE_TWO_REAL_O8_MODELS_READ_ONLY_EVENT_COMPARISON",
+  "created_host_UTC": "2026-10-29T22:15:13.225534+00:00",
+  "source_frame0_scope_inclusive": [
+    8912,
+    10873
+  ],
+  "width": 2560,
+  "height": 1440,
+  "source_fps": 25,
+  "inference_stride": 5,
+  "caches": [
+    {
+      "condition": "old_O8",
+      "group": "two_frozen_real_O8_models",
+      "size": 192,
+      "seed": 26,
+      "raw_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\board_delivery\\results_v2\\original\\raw_predictions.json.gz",
+      "raw_sha256": "b28f42fc71fb50ab83f208fca07356f0e27b9eadfc5d11c9e603cda3d39c5226",
+      "trace_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\board_delivery\\results_v2\\original\\stride5_counter_trace.json.gz",
+      "trace_sha256": "d4825539b7a84e06be71d00d4c8e9146bd0fe4cd7f09867a27afe3045737ca26",
+      "summary_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mosaic_event_diagnosis_20261030\\input\\old_O8_summary.json",
+      "summary_sha256": "86a10513585dc77d0877da98635d962cfa3724619749b1cdec873dad86e955cd",
+      "review_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\results\\final_review.json",
+      "review_sha256": "df91eac8d3e065782b456d11b129d59fffec9623e9f3fb138082137fe0c5b938"
+    },
+    {
+      "condition": "new_O8",
+      "group": "two_frozen_real_O8_models",
+      "size": 192,
+      "seed": 26,
+      "raw_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_mosaic192_eval_20261030\\board_delivery\\results\\original\\raw_predictions.json.gz",
+      "raw_sha256": "f898768d5d1881a4a404f6cae917e1da4a3fc6db4a4c47b4f7b9a023f22a98eb",
+      "trace_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_mosaic192_eval_20261030\\board_delivery\\results\\original\\stride5_counter_trace.json.gz",
+      "trace_sha256": "98eb9f35369c8ab73e20ed30b5ea2baf49ff61bd9ae0087b4ab81970b29744b4",
+      "summary_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mosaic_event_diagnosis_20261030\\input\\new_O8_summary.json",
+      "summary_sha256": "fabf7934233f1f1b7a2adab1f1a1b8b735600b59a1b1e5d004840b109acb6db7",
+      "review_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_mosaic192_eval_20261030\\results\\final_review.json",
+      "review_sha256": "6f39697aaf1de9ade5dadd30bf5f3803a5c1a644929ace288ce8736ff14cc98d"
+    }
+  ],
+  "IoU_thresholds": [
+    0.5,
+    0.3
+  ],
+  "primary_IoU": 0.5,
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "perpendicular_ROI": [
+    0.34,
+    0.75
+  ],
+  "reference_tracks": 12,
+  "reference_box_samples": 581,
+  "reference_raw_prior_admissions": 12,
+  "reference_is_independent_ground_truth": false,
+  "actual_animal_identity_claimed": false,
+  "oracles": [
+    "presence_using_reference_center",
+    "raw_box_center_assisted_identity",
+    "post_confirmed_plus_valid_admitted_center_assisted_identity"
+  ],
+  "correspondence": "Perframeone-to-one,maxcardinalitythenmaximumtotalIoU;fixedthreshold;tiesflagged.",
+  "new_post_admission": "Onlyactualcounteradmissions;currentconfirmedIDmustmatchreference;previousrawmatchsame_referenceandaxiswithin1e-4;unresolvedkept.",
+  "primary_case": "S192_rot90_seed26",
+  "no_new_hyperparameters_or_crop_search": true,
+  "input_sha256": {
+    "new_O8_summary.json": "fabf7934233f1f1b7a2adab1f1a1b8b735600b59a1b1e5d004840b109acb6db7",
+    "old_O8_summary.json": "86a10513585dc77d0877da98635d962cfa3724619749b1cdec873dad86e955cd",
+    "reference_admissions.json": "b47fac2a8370c1b1d8fc54dd0349d194a6c63fd13c053e50c72ce5995c5e341d",
+    "reference_boxes.json": "0ab13bb366a6ac805cbdd98d6adb04a220fec05e7e58f71b6e77efce8b9e5c03",
+    "reference_events.json": "e37f06c252257259bf4872926f2e542229d60b184a91617ad9edf1c28a37eb5c",
+    "zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+  },
+  "baseline_candidate_sha256": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+  "model_forwards": 0,
+  "training_updates": 0,
+  "board_actions": 0,
+  "whole_goal_complete": false,
+  "reference_boxes_are_development640_model_outputs_not_GT": true,
+  "no_new_network_forwards": true,
+  "source_used_for_development": true,
+  "actual_model_count_regression": [
+    11,
+    10
+  ],
+  "conditions": 2,
+  "expected_cases": 4,
+  "expected_associations": 2864,
+  "expected_reference_rows": 2324,
+  "expected_oracle_paths": 12,
+  "analysis_script_sha256": "a3df246c7450439423821e5bad3481a9896562f50a0a95bd271646f48f1d12ac",
+  "separate_verifier_sha256": "c11e754077167493b0c7ede26101f233cebdd7997acea62c4ae55e691986ddfd"
+}

@@ -1,0 +1,76 @@
+{
+  "status": "INPUT_COST256_READS138_REAL_O8_FORWARDS_FILE_RESIDENCY_DEVICE_STATS_AND_NONADOPTION_REVIEWED",
+  "created_UTC": "2026-10-29T23:47:38.316501+00:00",
+  "source_images": 16,
+  "read_cases": 256,
+  "groups": 8,
+  "conditions_per_group": 32,
+  "actual_O8_measured_forwards": 128,
+  "actual_O8_qualification_forwards": 8,
+  "actual_O8_warmups": 2,
+  "failed_v1_read_cases": 0,
+  "failed_v1_all_model_forwards": 0,
+  "process_IO_counter_absent_preserved": true,
+  "file_mincore_and_device_stats_verified": true,
+  "cold_cases_with_nonresident_pages_and_positive_device_read_delta": 128,
+  "hot_cases_all_pages_resident_and_zero_device_read_delta": 128,
+  "all16_raws_byte_exact_to_prior_actual_same_model": true,
+  "all128_raw_hashes_verified": true,
+  "whole_device_bytes_claimed_process_bytes": false,
+  "full_periodic_target_still_RED": true,
+  "microbenchmark_is_full_pipeline_performance": false,
+  "new_periodic_counter_or_identity_run": false,
+  "new_policy_adopted": false,
+  "immutable_copy_and_pickle_scope_disclosed": true,
+  "global_cache_or_swap_changed": false,
+  "parent_processes_terminal_absent": true,
+  "original_O8_and_services_retained": true,
+  "reviewer_kind": "assistant_self_review_and_separate_raw_output_hash_and_group_statistics_recomputation_not_independent_human",
+  "new_training_updates": 0,
+  "new_independent_test": false,
+  "whole_goal_complete": false,
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\input_cost_20261030\\\u8ba1\u5212\u4e0e\u9a8c\u6536.md",
+      "sha256": "96eab85192590a33ec00ed02601b1020d2fea44a5482657ae22dda5b0cc342c9",
+      "lines_read_and_reviewed": 11
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\input_cost_20261030\\\u8ba1\u91cf\u517c\u5bb9\u4fee\u6b63_v2.md",
+      "sha256": "8ec65171a6146aea0ac579ad813b2208179b663cd35aa4821c6ad1ea50842141",
+      "lines_read_and_reviewed": 9
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\input_cost_20261030\\\u9ad8\u5206\u8f93\u5165\u53d6\u5f97\u6210\u672c\u4e0e\u4e0b\u4e00\u6b65.md",
+      "sha256": "e1af32702fbce37dcd96eeb996b2e01bd38e8693040a2d1069e6b8f26ba50957",
+      "lines_read_and_reviewed": 54
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\input_cost_20261030\\Review\u4e0e\u5f53\u524d\u72b6\u6001.md",
+      "sha256": "abda98581211d53f7cb8b992dbde1a7aecf5a38323e3481bfdc473b2eccd30ff",
+      "lines_read_and_reviewed": 11
+    }
+  ],
+  "local_links_checked": 5,
+  "evidence_hashes": {
+    "protocol/run_v1.json": "26945e0392065e951b92703c5adc5aa55420a0f3822c2e2612d5b36189b975c0",
+    "protocol/run_v2.json": "30a66d718060196d2ec4c895dcfa196314cde666572d71def2abe98414927ec9",
+    "results/original_periodic_target_red.json": "6b68ebf22736674bdd15f7be1c9238dfc25a35ac12dae33df2aad7325f6c7949",
+    "results/independent_verification.json": "0a9b7d5ab7d411dcdfda9b56ef26115cceb23306e0cd31a78f1873cf325db954",
+    "evidence/failed_run_record.json": "abab1cc3e6703e0098c644500ce690803caa00ed68d026a11dc129ba739e5b4c",
+    "evidence/failed_record_get.json": "d1b377a62e2126dcce1f7ff4281f19278822c8f8e7e11a43b5daf00bdce84341",
+    "evidence/board_preflight.json": "70aec04fd347a22187b7b4cc7dfdcc47bdf84541f3bad3033a5ab56dbe832507",
+    "evidence/accounting_probe.json": "90cee4326dceb930f371e9ad7c839a319ee6b3ded02a9db424c7a305a5272a13",
+    "evidence/launch_v2.json": "1d8a6937ee02d1202d3effdba48c7517d9f41667d294700cd9dadfc5a536cfbe",
+    "evidence/status_v2_01.json": "350f54f151957ead7562773ba327a4eed947bb5bee47326df0e9c450bb39d4c6",
+    "evidence/collection_v2.json": "f030f0e239112cf09d2a8f11dd265ebf306d05404900d83fc1482cb5824d0457",
+    "evidence/archive_get_v2.json": "07b33c8a3be8d4703552c88913a23ef06b5587301dc831a6469daec141e60f65",
+    "delivery_v2/results/record.json": "29d02715b2a4dd62696dd1e0d3b6c4a9a924e734b3f723cd16b86bcf589bdefa",
+    "delivery_v2/results/terminal.json": "3733dbbc9b561094d0e83287b49649234e7eb15bfdc44660499ca4d641a490ef",
+    "delivery_v2/final_state.json": "7af626ab8e0e6b590837d01dd698bc68a56c162d07f9c599ecbb8c69f5ba1ac4",
+    "tools/board_benchmark.py": "65584dc48aa207c61b44fdd13b547d0725487de33a940d290b7c0da9badc2b14",
+    "tools/board_benchmark_v2.py": "12374c8fc0d7352d0d339e1f8f1771ba688e948266be5ce581a5f33b4f54c13f",
+    "tools/verify_delivery.py": "f5106914e89f0f17a0fd6e04718b305e2edd0ee87360f46900febaacba66841d",
+    "tools/check_target.py": "430166f21c9e292b64426dbb1308ff124157befe6b9a2e98e390d18c6b47bd1e"
+  }
+}

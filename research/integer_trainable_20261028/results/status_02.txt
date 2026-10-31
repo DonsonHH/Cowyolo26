@@ -1,0 +1,21 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129989|idcoo-int-trainable|FAILED|1:0|00:00:30|
+129989.batch|batch|FAILED|1:0|00:00:30|13876K
+129989.0|python|FAILED|1:0|00:00:30|1912116K
+{"event": "ALL_SEED_INITIAL_GATE", "seed": 26, "required_all_vectors_pass": true, "runtime_passes": {"OFF": 8, "ALL_disable_quant_qdq": 8, "ALL_default_diagnostic": 8}, "CPU_GPU_passes": 8}
+{"event": "ALL_SEED_INITIAL_GATE", "seed": 27, "required_all_vectors_pass": true, "runtime_passes": {"OFF": 8, "ALL_disable_quant_qdq": 8, "ALL_default_diagnostic": 8}, "CPU_GPU_passes": 8}
+{"event": "ALL_SEED_INITIAL_GATE", "seed": 28, "required_all_vectors_pass": true, "runtime_passes": {"OFF": 8, "ALL_disable_quant_qdq": 8, "ALL_default_diagnostic": 8}, "CPU_GPU_passes": 8}
+/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py:29: TracerWarning: Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  bound = w.shape[1] * w.shape[2] * w.shape[3] * float(centered.abs().max()) * float(qw.abs().max())
+/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py:30: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  assert bound <= np.iinfo(np.int32).max
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/smoke.py", line 202, in <module>
+    main()
+    ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/smoke.py", line 164, in main
+    assert len(grads) == len(initial_parameters) and all(g is not None and torch.isfinite(g).all() for g in grads.values())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: gpu02: task 0: Exited with exit code 1

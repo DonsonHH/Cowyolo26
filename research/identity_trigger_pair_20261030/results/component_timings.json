@@ -1,0 +1,114 @@
+{
+  "status": "TIMING_COMPONENTS_AND_PROCESS_MEMORY_DERIVED_WITHOUT_RETROACTIVE_OVERHEAD_SUBTRACTION",
+  "runs": [
+    {
+      "run": "r1_old",
+      "identity_model": "old",
+      "foreground_component_means_ms": {
+        "model_ms": 187.02917407162536,
+        "after_model_to_count_ms": 18.856417311294766,
+        "JPEG_frontend_read_ms": 1.1874941873278237,
+        "selector_ms": 0.23771471625344354
+      },
+      "foreground_proc_memory": {
+        "VmHWM": "236936 kB",
+        "VmRSS": "151892 kB",
+        "VmSwap": "23168 kB"
+      },
+      "background_component_means_ms": {
+        "queue_wait_ms": 94.80760910000001,
+        "highres_JPEG_read_decode_and_hash_ms": 292.97040890000005,
+        "runtime_native_crop_and_photo_save_ms": 221.22831889999998,
+        "Pillow_preprocess_ms": 89.2193544,
+        "actual_identity_network_ms": 174.2004933,
+        "worker_process_CPU_ms": 975.0731886,
+        "enqueue_to_result_ms": 1306.6715791000001
+      },
+      "actual_jobs": 10,
+      "accepted_predictions": 1,
+      "secondary_threshold_accepted": 0
+    },
+    {
+      "run": "r1_new",
+      "identity_model": "new",
+      "foreground_component_means_ms": {
+        "model_ms": 164.74180872459894,
+        "after_model_to_count_ms": 19.319123221925135,
+        "JPEG_frontend_read_ms": 2.114020398395722,
+        "selector_ms": 0.25585306417112297
+      },
+      "foreground_proc_memory": {
+        "VmHWM": "236936 kB",
+        "VmRSS": "101072 kB",
+        "VmSwap": "74880 kB"
+      },
+      "background_component_means_ms": {
+        "queue_wait_ms": 132.88318070000003,
+        "highres_JPEG_read_decode_and_hash_ms": 300.10224639999996,
+        "runtime_native_crop_and_photo_save_ms": 217.9637486,
+        "Pillow_preprocess_ms": 77.58715500000001,
+        "actual_identity_network_ms": 193.14088569999998,
+        "worker_process_CPU_ms": 940.6710305,
+        "enqueue_to_result_ms": 1391.3415966999999
+      },
+      "actual_jobs": 10,
+      "accepted_predictions": 0,
+      "secondary_threshold_accepted": 0
+    },
+    {
+      "run": "r2_new",
+      "identity_model": "new",
+      "foreground_component_means_ms": {
+        "model_ms": 188.9662503489011,
+        "after_model_to_count_ms": 18.01385367032967,
+        "JPEG_frontend_read_ms": 0.22797457692307693,
+        "selector_ms": 0.2636400576923077
+      },
+      "foreground_proc_memory": {
+        "VmHWM": "236936 kB",
+        "VmRSS": "108572 kB",
+        "VmSwap": "66304 kB"
+      },
+      "background_component_means_ms": {
+        "queue_wait_ms": 30.141443,
+        "highres_JPEG_read_decode_and_hash_ms": 281.43936562499994,
+        "runtime_native_crop_and_photo_save_ms": 252.34347437499997,
+        "Pillow_preprocess_ms": 81.132102875,
+        "actual_identity_network_ms": 190.993483125,
+        "worker_process_CPU_ms": 976.637707875,
+        "enqueue_to_result_ms": 1303.010148
+      },
+      "actual_jobs": 8,
+      "accepted_predictions": 0,
+      "secondary_threshold_accepted": 0
+    },
+    {
+      "run": "r2_old",
+      "identity_model": "old",
+      "foreground_component_means_ms": {
+        "model_ms": 179.03643195592286,
+        "after_model_to_count_ms": 20.98338464738292,
+        "JPEG_frontend_read_ms": 2.897492614325069,
+        "selector_ms": 0.21667030303030302
+      },
+      "foreground_proc_memory": {
+        "VmHWM": "236936 kB",
+        "VmRSS": "87860 kB",
+        "VmSwap": "86144 kB"
+      },
+      "background_component_means_ms": {
+        "queue_wait_ms": 31.527206142857146,
+        "highres_JPEG_read_decode_and_hash_ms": 286.92404442857145,
+        "runtime_native_crop_and_photo_save_ms": 205.365387,
+        "Pillow_preprocess_ms": 78.33425028571428,
+        "actual_identity_network_ms": 181.9437878571429,
+        "worker_process_CPU_ms": 975.4775292857141,
+        "enqueue_to_result_ms": 1215.6457908571429
+      },
+      "actual_jobs": 7,
+      "accepted_predictions": 0,
+      "secondary_threshold_accepted": 0
+    }
+  ],
+  "new_model_forwards": 0
+}

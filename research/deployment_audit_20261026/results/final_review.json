@@ -1,0 +1,35 @@
+{
+  "status": "VERIFIED_GRAPH_EXPORT_AND_NEGATIVE_PTQ_RESULT",
+  "video_photos_checked": 7,
+  "video_true_query_forwards": 35,
+  "video_recognition_ground_truth": null,
+  "exported_graphs_checked": 7,
+  "windows_actual_model_forwards": 55,
+  "local_metric_conditions": 6,
+  "calibration_images": 64,
+  "calibration_identity_overlap_with_validation_or_evaluation": false,
+  "quantisation_accepted_for_deployment": false,
+  "quantisation_known_correct_accepts_fp32": [
+    23,
+    14,
+    17
+  ],
+  "quantisation_known_correct_accepts_qdq": [
+    4,
+    0,
+    5
+  ],
+  "documents_reviewed": 6,
+  "local_file_links_checked": 24,
+  "hardware_compilation_or_Arm_execution": false,
+  "pynq_latency_or_power_measured": false,
+  "whole_goal_complete": false,
+  "pending": [
+    "independent counting-review JSON and real reverse same-camera coverage",
+    "raw video cow-ID source verification and registry coverage",
+    "board SSH/image/Vivado-HLS versions",
+    "quantisation-sensitive-layer diagnosis or QAT/mixed precision on training/validation",
+    "actual PS/PL mapping and joint board session",
+    "paper contribution comparison and final held-out experiments"
+  ]
+}

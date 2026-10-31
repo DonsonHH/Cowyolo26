@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/phase4_tracker/tools/replay_tracker.py", line 43, in <module>
+    effective={**config,**case['changes']};tracker=BYTETracker(args=IterableSimpleNamespace(**effective),frame_rate=30)
+                                                   ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BYTETracker.__init__() got an unexpected keyword argument 'frame_rate'
+srun: error: cu16: task 0: Exited with exit code 1

@@ -1,0 +1,50 @@
+{
+  "status": "FROZEN_AFTER_JPEG_STREAM_DIAGNOSIS_BEFORE_SAME_PIXEL_FRAMEBANK_CONTROL",
+  "created_host_UTC": "2026-10-29T11:36:54.235960+00:00",
+  "parent_profile_protocol_sha256": "b48985eeb6bb90bb9dbe5d75346d3a8253d291e83e8bffbabd410b7bdc5db213",
+  "profile_verification_sha256": "92327d77ff49b68eaa4d5ed49b74910f50b7f53099aef98b86494841c89018a2",
+  "sizes": [
+    192,
+    256,
+    320
+  ],
+  "engines": {
+    "192": "O8resident",
+    "256": "O8resident",
+    "320": "O6legacy"
+  },
+  "source_photos": 12,
+  "source_order": "Cycle12fixedpubliceventphotosbyofferedslotmod12;notnewindependentanimals.",
+  "decode": "Decodeall12sourcephotosonceonboardwithsameIMREAD_REDUCED_COLOR_8beforeclock;withinclockcopylowresBGR,cv2rotate,actualnetworkanddecode.",
+  "new_input_condition": "SamepixelsaspreviousreducedJPEGcase;storagefrontendreplacedwith2MBinputframebank;eachprocessedslotstillactualNNforward,notcachedoutputs.",
+  "offered_Hz": 5,
+  "period_ns": 200000000,
+  "offered_slots": 100,
+  "policy": "Latestavailableframe;skipstaleofferedslotswhenprocessingfallsbehind;nosyntheticpredictionfortheskippedslots.",
+  "warmups": 2,
+  "timing_start": "BeforecopyofalreadyavailablelowresolutionBGRframe",
+  "timing_end": "AfteractualFPGA/ARMnetwork,copyrawanddecode",
+  "save_rule": "Keepalltimesandrawarrays;durablecheckpointaftereach10processedframes;arrivalclockcontinuesduringlogging.",
+  "foreground_tracking_active": false,
+  "background_identity_active": false,
+  "camera_hardware_active": false,
+  "report": [
+    "processed",
+    "skipped",
+    "processed_frames_above200ms",
+    "deadline_misses",
+    "p50",
+    "p95",
+    "maximum",
+    "observation_window_fps"
+  ],
+  "pass_statement": "Onlythislowresphotoreplayfrontendconditioncanbemeasured;wholepipeline5FPSremainstoverify.",
+  "count_or_identity_accuracy_admitted": false,
+  "whole_goal_complete": false,
+  "parent_stream_protocol_sha256": "b339710040e4f20e1813f50e0c611660f4928c973c7e9115e8f12503e0ce6415",
+  "source_stream_archive_sha256": "37f1b3447d4d48a2f57d5507c48850c8b56f3b4bcbc4478ff44c5774e5f9b16d",
+  "match_gate": "AllframebankrotatedBGRhashesandrawoutputsforcommonqueryIDscomparedtopreviousactualJPEGstream;exactrequired.",
+  "physical_camera_validation": false,
+  "frontend_image_acquisition_or_JPEG_decoder_time_included": false,
+  "script_sha256": "892f43817b051254f22aaea18ddcdfce580d907741fe0c9407da0b5b75fc60dc"
+}

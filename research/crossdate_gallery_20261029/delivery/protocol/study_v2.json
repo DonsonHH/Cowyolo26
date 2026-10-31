@@ -1,0 +1,733 @@
+{
+  "name": "Fixed fiveencoders and thresholds, Aug14vsAug19gallery on existing curated and realevent queries",
+  "created_UTC": "2026-10-29T05:04:58.711429+00:00",
+  "source_provenance_final_sha256": "940b6ce5656dd8e72ba508320b79c8ca20f8bcdc21e845a2c474b4416492d785",
+  "source_pair_exclusion_sha256": "c6bf9ef82509f68c6655559dc8143a9be770defea294de84e83b2383112aa023",
+  "official_index_sha256": "bb2c6b8c47ff9c712953f001392aa360f389a9cd2c726c7978da1b0d6e281576",
+  "official_info_sha256": "70f465c5e5209fd5bbe8c8740d95539e66ee06a8d4da5b9790195c5d3a5b8b87",
+  "registered_IDs": [
+    "009",
+    "020",
+    "026",
+    "028",
+    "031",
+    "054"
+  ],
+  "new_gallery_day": "2023Aug19",
+  "new_gallery_directory_camera1_counts": {
+    "009": 21,
+    "020": 21,
+    "026": 23,
+    "028": 17,
+    "031": 25,
+    "054": 18
+  },
+  "new_gallery_images": 30,
+  "old_gallery_images": 30,
+  "labelled_query_images": 60,
+  "real_event_query_images": 12,
+  "selection": "Sorted officialcamera1filenames;5uniform positions incl endpoints perID, before image download and model scoring.",
+  "conditions": [
+    {
+      "name": "A_official_frozen",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/models/mobilenet_v3_small-047dcff4.pth",
+      "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+      "threshold": 0.873113640861386,
+      "preprocess": "official"
+    },
+    {
+      "name": "B_letterbox_frozen",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/models/mobilenet_v3_small-047dcff4.pth",
+      "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+      "threshold": 0.8952453223004778,
+      "preprocess": "letterbox"
+    },
+    {
+      "name": "C_letterbox_trained_seed26",
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+      "checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "threshold": 0.8445389603236383,
+      "preprocess": "letterbox"
+    },
+    {
+      "name": "C_letterbox_trained_seed27",
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/best_encoder.pt",
+      "checkpoint_sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+      "threshold": 0.8642478136864173,
+      "preprocess": "letterbox"
+    },
+    {
+      "name": "C_letterbox_trained_seed28",
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/best_encoder.pt",
+      "checkpoint_sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+      "threshold": 0.8306161540247587,
+      "preprocess": "letterbox"
+    }
+  ],
+  "baselines": [
+    {
+      "condition": "A_official_frozen",
+      "prediction_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/A_official_frozen/evaluation_predictions.json",
+      "local_prediction_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\A_official_frozen\\evaluation_predictions.json",
+      "prediction_sha256": "9e97da98fc00875e81831d4ee79e5ea4c11e643da826a6c92de3633a045d3680",
+      "feature_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/A_official_frozen/evaluation_embeddings.npz",
+      "local_feature_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\A_official_frozen\\evaluation_embeddings.npz",
+      "feature_sha256": "2746c6c52306848caddbfa30aedbc1098d6a8b0c6f093037b68226c13d71dda3",
+      "expected_summary": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_correct_accepted_C": 11,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 19,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 30,
+        "known_closed_top1_accuracy": 1.0,
+        "known_correct_accepted_rate": 0.36666666666666664,
+        "known_wrong_accepted_rate": 0.0,
+        "unknown_false_accepts": 0,
+        "unknown_false_acceptance_rate": 0.0,
+        "all_accepted_wrong_fraction": 0.0,
+        "per_identity": [
+          {
+            "identity": "001",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "009",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "010",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "020",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "026",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.2,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "028",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.2,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "031",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.4,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "033",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "035",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "040",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "054",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.2,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "076",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      }
+    },
+    {
+      "condition": "B_letterbox_frozen",
+      "prediction_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/B_letterbox_frozen/evaluation_predictions.json",
+      "local_prediction_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\B_letterbox_frozen\\evaluation_predictions.json",
+      "prediction_sha256": "e1354fab5147a3118afe94db944d97821ca05e8bb14ec11a09c1bd4ecdf473c4",
+      "feature_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/B_letterbox_frozen/evaluation_embeddings.npz",
+      "local_feature_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\B_letterbox_frozen\\evaluation_embeddings.npz",
+      "feature_sha256": "1f6eb92edf415079b933d6ecf084d538197615a41bb5445463b834c891a4f06b",
+      "expected_summary": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_correct_accepted_C": 9,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 21,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 26,
+        "known_closed_top1_accuracy": 0.8666666666666667,
+        "known_correct_accepted_rate": 0.3,
+        "known_wrong_accepted_rate": 0.0,
+        "unknown_false_accepts": 0,
+        "unknown_false_acceptance_rate": 0.0,
+        "all_accepted_wrong_fraction": 0.0,
+        "per_identity": [
+          {
+            "identity": "001",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "009",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "010",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "020",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.4,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "026",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 0.4,
+            "correct_accepted_rate": 0.2,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "028",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.4,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "031",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 0.8,
+            "correct_accepted_rate": 0.2,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "033",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "035",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "040",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "054",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "076",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      }
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "prediction_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/evaluation_predictions.json",
+      "local_prediction_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\C_letterbox_trained_seed26\\evaluation_predictions.json",
+      "prediction_sha256": "3a938760ef61b00f0cde0ebcfa1a77daa10ef6e8f983238d00cd022674770e85",
+      "feature_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/evaluation_embeddings.npz",
+      "local_feature_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\C_letterbox_trained_seed26\\evaluation_embeddings.npz",
+      "feature_sha256": "a02f18a5a62bb4976ceea1651283b35a2fe805219dfe286298cc2798656f7515",
+      "expected_summary": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_correct_accepted_C": 23,
+        "known_wrong_accepted_W": 1,
+        "known_rejected_U": 6,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 28,
+        "known_closed_top1_accuracy": 0.9333333333333333,
+        "known_correct_accepted_rate": 0.7666666666666667,
+        "known_wrong_accepted_rate": 0.03333333333333333,
+        "unknown_false_accepts": 1,
+        "unknown_false_acceptance_rate": 0.03333333333333333,
+        "all_accepted_wrong_fraction": 0.08,
+        "per_identity": [
+          {
+            "identity": "001",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "009",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.8,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "010",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "020",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "026",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 0.8,
+            "correct_accepted_rate": 0.6,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "028",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "031",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 0.8,
+            "correct_accepted_rate": 0.8,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "033",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "035",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.2
+          },
+          {
+            "identity": "040",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "054",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.8,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "076",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      }
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "prediction_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/evaluation_predictions.json",
+      "local_prediction_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\C_letterbox_trained_seed27\\evaluation_predictions.json",
+      "prediction_sha256": "624fe5b8ce0c0325d6221fe78296b4434f8c092e47de91f68a23289a326425cb",
+      "feature_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/evaluation_embeddings.npz",
+      "local_feature_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\C_letterbox_trained_seed27\\evaluation_embeddings.npz",
+      "feature_sha256": "6070da61fbceed55c2afefcb8b92ff16533ea643a5755cb7d1978b49a15c972a",
+      "expected_summary": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_correct_accepted_C": 14,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 16,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 29,
+        "known_closed_top1_accuracy": 0.9666666666666667,
+        "known_correct_accepted_rate": 0.4666666666666667,
+        "known_wrong_accepted_rate": 0.0,
+        "unknown_false_accepts": 3,
+        "unknown_false_acceptance_rate": 0.1,
+        "all_accepted_wrong_fraction": 0.17647058823529413,
+        "per_identity": [
+          {
+            "identity": "001",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "009",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "010",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "020",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.8,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "026",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 0.8,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "028",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "031",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.4,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "033",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "035",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6
+          },
+          {
+            "identity": "040",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "054",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.4,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "076",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      }
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "prediction_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/evaluation_predictions.json",
+      "local_prediction_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\C_letterbox_trained_seed28\\evaluation_predictions.json",
+      "prediction_sha256": "2a7c2ad8985d0912cc3cef57f9c98c9b59d08eed0bf57ef20cf83ede76792d89",
+      "feature_path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/evaluation_embeddings.npz",
+      "local_feature_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\C_letterbox_trained_seed28\\evaluation_embeddings.npz",
+      "feature_sha256": "aee96ac0cda39f5e71fe5fe24af4bee4a0dd149e5229214f1eef190476b249ae",
+      "expected_summary": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_correct_accepted_C": 17,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 13,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 29,
+        "known_closed_top1_accuracy": 0.9666666666666667,
+        "known_correct_accepted_rate": 0.5666666666666667,
+        "known_wrong_accepted_rate": 0.0,
+        "unknown_false_accepts": 0,
+        "unknown_false_acceptance_rate": 0.0,
+        "all_accepted_wrong_fraction": 0.0,
+        "per_identity": [
+          {
+            "identity": "001",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "009",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "010",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "020",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "026",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "028",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 0.8,
+            "correct_accepted_rate": 0.4,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "031",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.8,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "033",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "035",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "040",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "054",
+            "is_known": true,
+            "queries": 5,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "076",
+            "is_known": false,
+            "queries": 5,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      }
+    }
+  ],
+  "gallery_conditions": [
+    "old_Aug14",
+    "new_Aug19"
+  ],
+  "retrieval": "L2normalized576dim embeddings;maxcosine over5gallery images perID then maxidentity;originalfixedthresholds;ties earlier sortedanonymousID.",
+  "input_module_sha256": {
+    "identity_metrics.py": "2d3a3ceb4ca0599e2d96d782aee57e767e1459dd9a900676d14a31ca3bb1ed60",
+    "labelled_queries.json": "5cd01b83d3efe9c6395c1d766bd9593b2104581801ac91c10f6bd51c91fdb79a",
+    "new_gallery_selection.json": "727b6dfe893a69e5a46f7ccc8e12254946653c0a1d9c8b6192ede0d40a2d1727",
+    "old_gallery.json": "c84b284d9c327af83e9708d71da90895b4496261c5842164630e4b1d3c35ad86",
+    "real_event_queries.json": "ef2be04de9cfd59df40873ac2279eb61539d3aa85a12a97e5627d2d70dc3e8ba",
+    "training_primitives.py": "b47ca84f25810f875ff3eb95f430ffbcec3d180ae9b6d0ac8aa0823ada8d67d3"
+  },
+  "new_gallery_file_integrity": "Official size,CRC32,SHA1 then localSHA256;fullimage decode and pixelduplicate checks before model gate.",
+  "old_baseline_tolerances": {
+    "maximum_feature_absolute_difference": 1e-05,
+    "maximum_similarity_absolute_difference": 1e-05,
+    "candidate_and_acceptance_exact": true
+  },
+  "all_conditions_retained": true,
+  "new_training_updates": 0,
+  "new_threshold_optimisation": false,
+  "Aug20curated_queries_previously_used_development": true,
+  "Aug14event_withAug19gallery_is_retrospective_not_deployment_chronology": true,
+  "real_event_identity_reference_available": false,
+  "source_ID009_evidence_does_not_enable_event_accuracy_scoring": true,
+  "new_independent_test": false,
+  "RF_hardware_connected": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false,
+  "version": 2,
+  "original_protocol_sha256": "26111ab11ef29ea67092ff07834ff38c03255c91a82fb9d395e7b344ff79da6b",
+  "previous_CPU_gallery_reference": {
+    "path": "/share/home/renly/projects/idcoo_research_20261026/confirmed12_capture_identity_20261029/results/replay/gallery_vectors.json",
+    "local_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmed12_capture_identity_20261029\\delivery\\results\\replay\\gallery_vectors.json",
+    "sha256": "47af2034d3b3389d4b53552cd67642bd20ad395aef5940d19ce2df26dc5087f5"
+  },
+  "numerical_gate_revision": {
+    "reason": "Failedattempt130422C28GPUgallerymaxcomponentdelta1.2129545211791992e-5;all60predictions/acceptancesandmetricsunchanged;maxscore9.722674536027931e-6beloworiginal1e-5.",
+    "old_GPU_component_delta": "Retainedandreporteddiagnostic,notusedtoadmitnewgallery.",
+    "current_gate": "ActualoldCPUgalleryfeaturecomponentdelta<=original1e-5;oldGPUmaxcosinescoredelta<=original1e-5;exactall60candidate/acceptance/metrics.",
+    "models_thresholds_selection_queries_same_as_v1": true,
+    "new_gallery_results_from_failedattempt_examined_to_change_gate": false
+  }
+}

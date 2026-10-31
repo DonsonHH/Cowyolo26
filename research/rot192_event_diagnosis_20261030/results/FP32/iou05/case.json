@@ -1,0 +1,903 @@
+{
+  "condition": "FP32",
+  "threshold": 0.5,
+  "reference_is_GT": false,
+  "actual_global_down_count": 10,
+  "actual_global_up_count": 0,
+  "actual_events_with_direct_reference_correspondence": 10,
+  "actual_unmapped_event_count": 0,
+  "oracle_down_counts": {
+    "presence_using_reference_center": 10,
+    "raw_box_center_assisted_identity": 10,
+    "post_confirmed_plus_valid_admitted_center_assisted_identity": 8
+  },
+  "oracle_distinct_reference_tracks_with_down_event": {
+    "presence_using_reference_center": 10,
+    "raw_box_center_assisted_identity": 10,
+    "post_confirmed_plus_valid_admitted_center_assisted_identity": 8
+  },
+  "per_track_diagnostic_buckets": {
+    "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE": 10,
+    "MATCHED_RAW_COVERAGE_CANNOT_FORM_CURRENT_STABLE_REGIONS": 2
+  },
+  "tracks": [
+    {
+      "reference_track_id": 86,
+      "reference_box_samples": 20,
+      "raw_correspondence_samples": 20,
+      "post_correspondence_samples": 8,
+      "post_ID_frequencies": {
+        "2": 8
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 0
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 8,
+          "B": 8
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 8,
+          "B": 8
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 0,
+          "B": 7
+        }
+      }
+    },
+    {
+      "reference_track_id": 88,
+      "reference_box_samples": 18,
+      "raw_correspondence_samples": 17,
+      "post_correspondence_samples": 14,
+      "post_ID_frequencies": {
+        "10": 14
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 1
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 6,
+          "B": 6
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 6,
+          "B": 6
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 4,
+          "B": 6
+        }
+      }
+    },
+    {
+      "reference_track_id": 91,
+      "reference_box_samples": 29,
+      "raw_correspondence_samples": 29,
+      "post_correspondence_samples": 29,
+      "post_ID_frequencies": {
+        "6": 29
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 1
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 13,
+          "B": 11
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 13,
+          "B": 11
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 13,
+          "B": 11
+        }
+      }
+    },
+    {
+      "reference_track_id": 93,
+      "reference_box_samples": 47,
+      "raw_correspondence_samples": 45,
+      "post_correspondence_samples": 44,
+      "post_ID_frequencies": {
+        "18": 44
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 1
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 3,
+          "B": 24
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 3,
+          "B": 24
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 3,
+          "B": 24
+        }
+      }
+    },
+    {
+      "reference_track_id": 95,
+      "reference_box_samples": 12,
+      "raw_correspondence_samples": 11,
+      "post_correspondence_samples": 11,
+      "post_ID_frequencies": {
+        "23": 11
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 1
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 3,
+          "B": 4
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 3,
+          "B": 4
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 3,
+          "B": 4
+        }
+      }
+    },
+    {
+      "reference_track_id": 94,
+      "reference_box_samples": 15,
+      "raw_correspondence_samples": 2,
+      "post_correspondence_samples": 1,
+      "post_ID_frequencies": {
+        "31": 1
+      },
+      "actual_direct_corresponding_down_events": 0,
+      "oracle_down_events": {
+        "presence_using_reference_center": 0,
+        "raw_box_center_assisted_identity": 0,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 0
+      },
+      "diagnostic_bucket": "MATCHED_RAW_COVERAGE_CANNOT_FORM_CURRENT_STABLE_REGIONS",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 0,
+          "B": 2
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 0,
+          "B": 1
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 0,
+          "B": 1
+        }
+      }
+    },
+    {
+      "reference_track_id": 96,
+      "reference_box_samples": 52,
+      "raw_correspondence_samples": 38,
+      "post_correspondence_samples": 37,
+      "post_ID_frequencies": {
+        "32": 37
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 0
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 3,
+          "B": 19
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 3,
+          "B": 10
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 2,
+          "B": 18
+        }
+      }
+    },
+    {
+      "reference_track_id": 103,
+      "reference_box_samples": 35,
+      "raw_correspondence_samples": 32,
+      "post_correspondence_samples": 31,
+      "post_ID_frequencies": {
+        "45": 4,
+        "46": 26,
+        "52": 1
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 1
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 8,
+          "B": 19
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 8,
+          "B": 19
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 8,
+          "B": 19
+        }
+      }
+    },
+    {
+      "reference_track_id": 98,
+      "reference_box_samples": 66,
+      "raw_correspondence_samples": 43,
+      "post_correspondence_samples": 34,
+      "post_ID_frequencies": {
+        "32": 4,
+        "41": 29,
+        "55": 1
+      },
+      "actual_direct_corresponding_down_events": 0,
+      "oracle_down_events": {
+        "presence_using_reference_center": 0,
+        "raw_box_center_assisted_identity": 0,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 0
+      },
+      "diagnostic_bucket": "MATCHED_RAW_COVERAGE_CANNOT_FORM_CURRENT_STABLE_REGIONS",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 6,
+          "B": 2
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 6,
+          "B": 2
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 5,
+          "B": 1
+        }
+      }
+    },
+    {
+      "reference_track_id": 102,
+      "reference_box_samples": 75,
+      "raw_correspondence_samples": 66,
+      "post_correspondence_samples": 65,
+      "post_ID_frequencies": {
+        "43": 65
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 1
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 3,
+          "B": 17
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 3,
+          "B": 17
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 3,
+          "B": 17
+        }
+      }
+    },
+    {
+      "reference_track_id": 117,
+      "reference_box_samples": 183,
+      "raw_correspondence_samples": 161,
+      "post_correspondence_samples": 152,
+      "post_ID_frequencies": {
+        "51": 3,
+        "63": 141,
+        "68": 1,
+        "71": 4,
+        "73": 1,
+        "79": 1,
+        "80": 1
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 1
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 4,
+          "B": 102
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 3,
+          "B": 101
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 3,
+          "B": 31
+        }
+      }
+    },
+    {
+      "reference_track_id": 141,
+      "reference_box_samples": 29,
+      "raw_correspondence_samples": 23,
+      "post_correspondence_samples": 26,
+      "post_ID_frequencies": {
+        "83": 8,
+        "84": 18
+      },
+      "actual_direct_corresponding_down_events": 1,
+      "oracle_down_events": {
+        "presence_using_reference_center": 1,
+        "raw_box_center_assisted_identity": 1,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 1
+      },
+      "diagnostic_bucket": "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE",
+      "longest_stable_region_runs": {
+        "presence_using_reference_center": {
+          "A": 9,
+          "B": 7
+        },
+        "raw_box_center_assisted_identity": {
+          "A": 9,
+          "B": 7
+        },
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": {
+          "A": 10,
+          "B": 7
+        }
+      }
+    }
+  ],
+  "tie_optima_frame_problems": 0,
+  "actual_events_direct_correspondence": [
+    {
+      "time_s": 360.0,
+      "track_id": 2,
+      "direction": "A->B",
+      "frame0": 9000,
+      "reference_track_id": 86,
+      "direct_event_frame_spatial_match": true
+    },
+    {
+      "time_s": 365.4,
+      "track_id": 10,
+      "direction": "A->B",
+      "frame0": 9135,
+      "reference_track_id": 88,
+      "direct_event_frame_spatial_match": true
+    },
+    {
+      "time_s": 370.6,
+      "track_id": 6,
+      "direction": "A->B",
+      "frame0": 9265,
+      "reference_track_id": 91,
+      "direct_event_frame_spatial_match": true
+    },
+    {
+      "time_s": 373.6,
+      "track_id": 18,
+      "direction": "A->B",
+      "frame0": 9340,
+      "reference_track_id": 93,
+      "direct_event_frame_spatial_match": true
+    },
+    {
+      "time_s": 373.8,
+      "track_id": 23,
+      "direction": "A->B",
+      "frame0": 9345,
+      "reference_track_id": 95,
+      "direct_event_frame_spatial_match": true
+    },
+    {
+      "time_s": 378.8,
+      "track_id": 32,
+      "direction": "A->B",
+      "frame0": 9470,
+      "reference_track_id": 96,
+      "direct_event_frame_spatial_match": true
+    },
+    {
+      "time_s": 384.2,
+      "track_id": 46,
+      "direction": "A->B",
+      "frame0": 9605,
+      "reference_track_id": 103,
+      "direct_event_frame_spatial_match": true
+    },
+    {
+      "time_s": 391.6,
+      "track_id": 43,
+      "direction": "A->B",
+      "frame0": 9790,
+      "reference_track_id": 102,
+      "direct_event_frame_spatial_match": true
+    },
+    {
+      "time_s": 396.2,
+      "track_id": 63,
+      "direction": "A->B",
+      "frame0": 9905,
+      "reference_track_id": 117,
+      "direct_event_frame_spatial_match": true
+    },
+    {
+      "time_s": 433.2,
+      "track_id": 84,
+      "direction": "A->B",
+      "frame0": 10830,
+      "reference_track_id": 141,
+      "direct_event_frame_spatial_match": true
+    }
+  ],
+  "oracle_events": {
+    "presence_using_reference_center": [
+      {
+        "time_s": 359.8,
+        "track_id": 86,
+        "direction": "A->B",
+        "frame0": 8995
+      },
+      {
+        "time_s": 365.4,
+        "track_id": 88,
+        "direction": "A->B",
+        "frame0": 9135
+      },
+      {
+        "time_s": 370.6,
+        "track_id": 91,
+        "direction": "A->B",
+        "frame0": 9265
+      },
+      {
+        "time_s": 373.6,
+        "track_id": 93,
+        "direction": "A->B",
+        "frame0": 9340
+      },
+      {
+        "time_s": 373.8,
+        "track_id": 95,
+        "direction": "A->B",
+        "frame0": 9345
+      },
+      {
+        "time_s": 378.6,
+        "track_id": 96,
+        "direction": "A->B",
+        "frame0": 9465
+      },
+      {
+        "time_s": 384.2,
+        "track_id": 103,
+        "direction": "A->B",
+        "frame0": 9605
+      },
+      {
+        "time_s": 391.6,
+        "track_id": 102,
+        "direction": "A->B",
+        "frame0": 9790
+      },
+      {
+        "time_s": 396.0,
+        "track_id": 117,
+        "direction": "A->B",
+        "frame0": 9900
+      },
+      {
+        "time_s": 433.2,
+        "track_id": 141,
+        "direction": "A->B",
+        "frame0": 10830
+      }
+    ],
+    "raw_box_center_assisted_identity": [
+      {
+        "time_s": 359.8,
+        "track_id": 86,
+        "direction": "A->B",
+        "frame0": 8995
+      },
+      {
+        "time_s": 365.4,
+        "track_id": 88,
+        "direction": "A->B",
+        "frame0": 9135
+      },
+      {
+        "time_s": 370.6,
+        "track_id": 91,
+        "direction": "A->B",
+        "frame0": 9265
+      },
+      {
+        "time_s": 373.6,
+        "track_id": 93,
+        "direction": "A->B",
+        "frame0": 9340
+      },
+      {
+        "time_s": 373.8,
+        "track_id": 95,
+        "direction": "A->B",
+        "frame0": 9345
+      },
+      {
+        "time_s": 378.8,
+        "track_id": 96,
+        "direction": "A->B",
+        "frame0": 9470
+      },
+      {
+        "time_s": 384.2,
+        "track_id": 103,
+        "direction": "A->B",
+        "frame0": 9605
+      },
+      {
+        "time_s": 391.6,
+        "track_id": 102,
+        "direction": "A->B",
+        "frame0": 9790
+      },
+      {
+        "time_s": 396.2,
+        "track_id": 117,
+        "direction": "A->B",
+        "frame0": 9905
+      },
+      {
+        "time_s": 433.2,
+        "track_id": 141,
+        "direction": "A->B",
+        "frame0": 10830
+      }
+    ],
+    "post_confirmed_plus_valid_admitted_center_assisted_identity": [
+      {
+        "time_s": 365.4,
+        "track_id": 88,
+        "direction": "A->B",
+        "frame0": 9135
+      },
+      {
+        "time_s": 370.6,
+        "track_id": 91,
+        "direction": "A->B",
+        "frame0": 9265
+      },
+      {
+        "time_s": 373.6,
+        "track_id": 93,
+        "direction": "A->B",
+        "frame0": 9340
+      },
+      {
+        "time_s": 373.8,
+        "track_id": 95,
+        "direction": "A->B",
+        "frame0": 9345
+      },
+      {
+        "time_s": 384.2,
+        "track_id": 103,
+        "direction": "A->B",
+        "frame0": 9605
+      },
+      {
+        "time_s": 391.6,
+        "track_id": 102,
+        "direction": "A->B",
+        "frame0": 9790
+      },
+      {
+        "time_s": 396.2,
+        "track_id": 117,
+        "direction": "A->B",
+        "frame0": 9905
+      },
+      {
+        "time_s": 433.2,
+        "track_id": 141,
+        "direction": "A->B",
+        "frame0": 10830
+      }
+    ]
+  },
+  "post_admission_checks": [
+    {
+      "candidate_track_id": 2,
+      "confirmation_frame0": 8895,
+      "observation_frame0": 8890,
+      "reference_track_id": null,
+      "actual_axis_position": 0.03562100728352865,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 6,
+      "confirmation_frame0": 9035,
+      "observation_frame0": 9030,
+      "reference_track_id": null,
+      "actual_axis_position": 0.0925111558702257,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 10,
+      "confirmation_frame0": 9085,
+      "observation_frame0": 9080,
+      "reference_track_id": 88,
+      "actual_axis_position": 0.23771557278103297,
+      "admitted_to_oracle": true
+    },
+    {
+      "candidate_track_id": 16,
+      "confirmation_frame0": 9160,
+      "observation_frame0": 9155,
+      "reference_track_id": null,
+      "actual_axis_position": 0.8178563435872396,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 18,
+      "confirmation_frame0": 9225,
+      "observation_frame0": 9220,
+      "reference_track_id": null,
+      "actual_axis_position": 0.08234151204427083,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 23,
+      "confirmation_frame0": 9290,
+      "observation_frame0": 9285,
+      "reference_track_id": null,
+      "actual_axis_position": 0.08358569675021701,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 27,
+      "confirmation_frame0": 9330,
+      "observation_frame0": 9325,
+      "reference_track_id": null,
+      "actual_axis_position": 0.5868722703721788,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 31,
+      "confirmation_frame0": 9360,
+      "observation_frame0": 9355,
+      "reference_track_id": 94,
+      "actual_axis_position": 0.5583848317464193,
+      "admitted_to_oracle": true
+    },
+    {
+      "candidate_track_id": 32,
+      "confirmation_frame0": 9365,
+      "observation_frame0": 9360,
+      "reference_track_id": 98,
+      "actual_axis_position": 0.0889662848578559,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 41,
+      "confirmation_frame0": 9465,
+      "observation_frame0": 9460,
+      "reference_track_id": 98,
+      "actual_axis_position": 0.29182764689127605,
+      "admitted_to_oracle": true
+    },
+    {
+      "candidate_track_id": 43,
+      "confirmation_frame0": 9485,
+      "observation_frame0": 9480,
+      "reference_track_id": 102,
+      "actual_axis_position": 0.12382727728949652,
+      "admitted_to_oracle": true
+    },
+    {
+      "candidate_track_id": 45,
+      "confirmation_frame0": 9515,
+      "observation_frame0": 9510,
+      "reference_track_id": null,
+      "actual_axis_position": 0.06442074245876736,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 46,
+      "confirmation_frame0": 9545,
+      "observation_frame0": 9540,
+      "reference_track_id": 103,
+      "actual_axis_position": 0.1924382315741645,
+      "admitted_to_oracle": true
+    },
+    {
+      "candidate_track_id": 51,
+      "confirmation_frame0": 9585,
+      "observation_frame0": 9580,
+      "reference_track_id": null,
+      "actual_axis_position": 0.1093581305609809,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 52,
+      "confirmation_frame0": 9610,
+      "observation_frame0": 9605,
+      "reference_track_id": 103,
+      "actual_axis_position": 0.6982565561930338,
+      "admitted_to_oracle": false,
+      "reason": "REFERENCE_ALREADY_HAS_CONFIRMED_OBSERVATION"
+    },
+    {
+      "candidate_track_id": 55,
+      "confirmation_frame0": 9695,
+      "observation_frame0": 9690,
+      "reference_track_id": null,
+      "actual_axis_position": 0.7964119805230034,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 63,
+      "confirmation_frame0": 9830,
+      "observation_frame0": 9825,
+      "reference_track_id": 117,
+      "actual_axis_position": 0.34816703796386717,
+      "admitted_to_oracle": true
+    },
+    {
+      "candidate_track_id": 67,
+      "confirmation_frame0": 10005,
+      "observation_frame0": 10000,
+      "reference_track_id": null,
+      "actual_axis_position": 0.8115116543240017,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 68,
+      "confirmation_frame0": 10040,
+      "observation_frame0": 10035,
+      "reference_track_id": 117,
+      "actual_axis_position": 0.8139580408732097,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 69,
+      "confirmation_frame0": 10065,
+      "observation_frame0": 10060,
+      "reference_track_id": null,
+      "actual_axis_position": 0.8191080305311415,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 71,
+      "confirmation_frame0": 10135,
+      "observation_frame0": 10130,
+      "reference_track_id": 117,
+      "actual_axis_position": 0.8200931972927518,
+      "admitted_to_oracle": false,
+      "reason": "REFERENCE_ALREADY_HAS_CONFIRMED_OBSERVATION"
+    },
+    {
+      "candidate_track_id": 73,
+      "confirmation_frame0": 10190,
+      "observation_frame0": 10185,
+      "reference_track_id": 117,
+      "actual_axis_position": 0.8238952424791124,
+      "admitted_to_oracle": false,
+      "reason": "REFERENCE_ALREADY_HAS_CONFIRMED_OBSERVATION"
+    },
+    {
+      "candidate_track_id": 74,
+      "confirmation_frame0": 10205,
+      "observation_frame0": 10200,
+      "reference_track_id": null,
+      "actual_axis_position": 0.8249730216132269,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 77,
+      "confirmation_frame0": 10490,
+      "observation_frame0": 10485,
+      "reference_track_id": null,
+      "actual_axis_position": 0.8174506505330403,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 79,
+      "confirmation_frame0": 10575,
+      "observation_frame0": 10570,
+      "reference_track_id": null,
+      "actual_axis_position": 0.8098261091444228,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 80,
+      "confirmation_frame0": 10605,
+      "observation_frame0": 10600,
+      "reference_track_id": 117,
+      "actual_axis_position": 0.8319586647881402,
+      "admitted_to_oracle": false,
+      "reason": "REFERENCE_ALREADY_HAS_CONFIRMED_OBSERVATION"
+    },
+    {
+      "candidate_track_id": 83,
+      "confirmation_frame0": 10720,
+      "observation_frame0": 10715,
+      "reference_track_id": 141,
+      "actual_axis_position": 0.1058884514702691,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    },
+    {
+      "candidate_track_id": 84,
+      "confirmation_frame0": 10760,
+      "observation_frame0": 10755,
+      "reference_track_id": null,
+      "actual_axis_position": 0.2381834454006619,
+      "admitted_to_oracle": false,
+      "reason": "NO_SAME_REFERENCE_RAW_MATCH_OR_AXIS_DOES_NOT_MATCH"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "status": "POSTHOC20_VS40_ID_GALLERIES16_FIXED_CONTROLS2880_DECISIONS_AND_SCOPE_REVIEWED",
+  "created_UTC": "2026-10-30T08:24:45.769950+00:00",
+  "conditions": 16,
+  "query_decisions": 2880,
+  "independently_recomputed_ID_score_cells": 86400,
+  "score_monotonicity_pairs": 720,
+  "current_encoder_calibrated_FA_by_fold20_then40": [
+    12,
+    20,
+    16,
+    20
+  ],
+  "unknown_queries_per_condition": 120,
+  "same_query_and_threshold_within_gallery_expansion": true,
+  "both_folds_preserved": true,
+  "posthoc_control_and_repeated_unknown_queries_disclosed": true,
+  "new_model_forwards": 0,
+  "new_training_updates": 0,
+  "new_threshold_search": false,
+  "new_independent_test": false,
+  "new_deployment_policy_adopted": false,
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\cows2021_identity_gallery_control_20261030\\计划与验收.md",
+      "sha256": "d968e822560d73e63bac7d0802008ef71d0143be479fee787ac11b73b2ccfad6"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\cows2021_identity_gallery_control_20261030\\图库规模控制与拒识限制.md",
+      "sha256": "04dc38c88f0a9277311f860429f84af5f989f7b6147f36da5e6b2c1194e3c0d4"
+    }
+  ],
+  "evidence_hashes": {
+    "tools/final_review.py": "5771b29463a662c899bb201f5ea63e02032ad68c5634d3b0b0e96bb4c6974c45",
+    "tools/run_control.py": "1586d1b09b5a11ddc80cc735739ad9f8207e1807dca6fc32dd2ff69dfe13cea6",
+    "tools/verify_control.py": "f95e0cae5b30050a88c2e291962cb56374fdd423ace6b8215b13524b1cf8a63c",
+    "protocol/run_v1.json": "9ea255d4c4c17b4cd7f6d054e91c2007e57b39cbd99201340c4e9727e7cc5856",
+    "results/decisions.json": "4e99a4ed591cd9ef3fe8a35ca71b71900b017cfa20dbdf808113d89e1f5cdebb",
+    "results/independent_verification.json": "f70cbb1b05d58e1c8fd2917af9951a8f7314090b4347494d21fe66daea4e692a",
+    "results/score_monotonicity.json": "6acd6007e0cf704187f5e379135c0a7e9eceffa0af636afc363ccf96f5577317",
+    "results/summary.json": "ba4bc8abefb4eee2153eee210e09edeef4a6d753e44ccefaf22194ba9b966f6a"
+  },
+  "local_links_checked": 2,
+  "assistant_self_review_not_independent_human": true,
+  "whole_goal_complete": false
+}

@@ -1,0 +1,2875 @@
+{
+  "status": "TWO_FIXED_ENCODERS540_CROPS1080_CPU_FORWARDS_CALIBRATION_THEN_EVALUATION_COMPLETE",
+  "created_UTC": "2026-10-30T08:09:55.818225+00:00",
+  "Slurm_job_id": "130743",
+  "host": "cu03",
+  "protocol_sha256": "19bf1a1d208aadc2357615c98605a68bf621824a4cf8ac768119b4a81d266df7",
+  "actual_model_image_forwards": 1080,
+  "actual_network_calls": 90,
+  "by_model_and_phase_forwards": {
+    "B_ImageNet_letterbox:calibration": 180,
+    "C_trained_seed26:calibration": 180,
+    "B_ImageNet_letterbox:evaluation": 360,
+    "C_trained_seed26:evaluation": 360
+  },
+  "warmup_forwards": 0,
+  "calibration_threshold_freeze_sha256": "a210ff586924d9e5b9218968faaf2e0b0d4168a1f0d4234a32c6b9d116075ed4",
+  "timeline": [
+    {
+      "model": "B_ImageNet_letterbox",
+      "phase": "calibration",
+      "source_image_forwards": 180,
+      "finished_UTC": "2026-10-30T08:09:47.864480+00:00",
+      "cumulative_source_image_forwards": 180,
+      "feature_file_sha256": "18ec855054478fcbd650cc16b79973725acbf2f814c44ef7c21aee089965e513"
+    },
+    {
+      "model": "C_trained_seed26",
+      "phase": "calibration",
+      "source_image_forwards": 180,
+      "finished_UTC": "2026-10-30T08:09:49.402790+00:00",
+      "cumulative_source_image_forwards": 360,
+      "feature_file_sha256": "567eacc02218829677e868eef1414df60a98c6798639e4316e44cda3371a299c"
+    },
+    {
+      "model": "B_ImageNet_letterbox",
+      "phase": "evaluation",
+      "source_image_forwards": 360,
+      "finished_UTC": "2026-10-30T08:09:52.427143+00:00",
+      "cumulative_source_image_forwards": 720,
+      "feature_file_sha256": "7f6c3053938604b25c0e4fef026ab06091d8602c3fde404ce8cb3fb9a0b83a72"
+    },
+    {
+      "model": "C_trained_seed26",
+      "phase": "evaluation",
+      "source_image_forwards": 360,
+      "finished_UTC": "2026-10-30T08:09:55.584931+00:00",
+      "cumulative_source_image_forwards": 1080,
+      "feature_file_sha256": "18dfd80e1e2f6d7ec645ed1892f02a6a4437d761458dbdf7fde038904120e66b"
+    }
+  ],
+  "calibration": [
+    {
+      "model": "B_ImageNet_letterbox",
+      "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+      "threshold": {
+        "threshold": 0.8831211588802654,
+        "calibration_known_correct_accepted": 16,
+        "calibration_known_wrong_accepted": 5,
+        "calibration_unknown_false_accepts": 3,
+        "calibration_unknown_queries": 60,
+        "calibration_unknown_far": 0.05,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+      },
+      "original_MultiCam_threshold": 0.8952453223004778,
+      "calibration_feature_sha256": "18ec855054478fcbd650cc16b79973725acbf2f814c44ef7c21aee089965e513",
+      "calibration_retrieval_sha256": "a9b3694cb90ab0ec43ebb697ae8f2ec46876ce951e0ba82555e1bad7359019b2"
+    },
+    {
+      "model": "C_trained_seed26",
+      "checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "threshold": {
+        "threshold": 0.845125353865119,
+        "calibration_known_correct_accepted": 17,
+        "calibration_known_wrong_accepted": 7,
+        "calibration_unknown_false_accepts": 3,
+        "calibration_unknown_queries": 60,
+        "calibration_unknown_far": 0.05,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+      },
+      "original_MultiCam_threshold": 0.8445389603236383,
+      "calibration_feature_sha256": "567eacc02218829677e868eef1414df60a98c6798639e4316e44cda3371a299c",
+      "calibration_retrieval_sha256": "6ba7d5013264ca1fad9e84e4b5d55a000adf89d6bb403a9d0893bc45f948bb51"
+    }
+  ],
+  "outcomes": [
+    {
+      "model": "B_ImageNet_letterbox",
+      "threshold_policy": "original_MultiCam",
+      "threshold": 0.8952453223004778,
+      "metrics": {
+        "known_queries": 120,
+        "unknown_queries": 120,
+        "known_correct_accepted_C": 26,
+        "known_wrong_accepted_W": 6,
+        "known_rejected_U": 88,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 69,
+        "known_closed_top1_accuracy": 0.575,
+        "known_correct_accepted_rate": 0.21666666666666667,
+        "known_wrong_accepted_rate": 0.05,
+        "unknown_false_accepts": 9,
+        "unknown_false_acceptance_rate": 0.075,
+        "all_accepted_wrong_fraction": 0.36585365853658536,
+        "per_identity": [
+          {
+            "identity": "Cows2021_IdentificationTest:000",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:001",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:002",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:003",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:004",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:005",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:009",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:011",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:013",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:014",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:017",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:018",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:019",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:022",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:025",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:028",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:030",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:032",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:039",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:042",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:043",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:044",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:045",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:050",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:051",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:053",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:058",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:060",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:061",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:062",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:067",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:072",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:075",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:080",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:081",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:084",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:085",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:088",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:089",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:090",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:093",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:095",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:099",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:101",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:103",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:106",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:107",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:109",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:110",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:111",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:113",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:114",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:117",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:119",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:120",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:125",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:129",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:131",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:132",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:134",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:136",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:137",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:140",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:141",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:145",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:146",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:147",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:150",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:152",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:153",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:159",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:161",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:163",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:167",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:168",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:172",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:175",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:177",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:178",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:180",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event",
+        "known_closed_top5_correct": 106,
+        "known_closed_top5_accuracy": 0.8833333333333333
+      },
+      "ID_cluster_intervals": {
+        "closed_top1_accuracy": {
+          "macro_mean": 0.575,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.45,
+            0.6916666666666667
+          ],
+          "bootstrap_draws": 2000
+        },
+        "correct_accepted_rate": {
+          "macro_mean": 0.21666666666666665,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.125,
+            0.30833333333333335
+          ],
+          "bootstrap_draws": 2000
+        },
+        "false_accept_rate": {
+          "macro_mean": 0.075,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.025,
+            0.125
+          ],
+          "bootstrap_draws": 2000
+        }
+      }
+    },
+    {
+      "model": "B_ImageNet_letterbox",
+      "threshold_policy": "Cows2021_calibrated",
+      "threshold": 0.8831211588802654,
+      "metrics": {
+        "known_queries": 120,
+        "unknown_queries": 120,
+        "known_correct_accepted_C": 37,
+        "known_wrong_accepted_W": 11,
+        "known_rejected_U": 72,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 69,
+        "known_closed_top1_accuracy": 0.575,
+        "known_correct_accepted_rate": 0.30833333333333335,
+        "known_wrong_accepted_rate": 0.09166666666666666,
+        "unknown_false_accepts": 20,
+        "unknown_false_acceptance_rate": 0.16666666666666666,
+        "all_accepted_wrong_fraction": 0.45588235294117646,
+        "per_identity": [
+          {
+            "identity": "Cows2021_IdentificationTest:000",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:001",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:002",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:003",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:004",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:005",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:009",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:011",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:013",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:014",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:017",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:018",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:019",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:022",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:025",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:028",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:030",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:032",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:039",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:042",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:043",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:044",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:045",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:050",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:051",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:053",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:058",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:060",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:061",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:062",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:067",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:072",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:075",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:080",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:081",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:084",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:085",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:088",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:089",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:090",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:093",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:095",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:099",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:101",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:103",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:106",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:107",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:109",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:110",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:111",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:113",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:114",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:117",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:119",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:120",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:125",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:129",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:131",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:132",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:134",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:136",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:137",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:140",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:141",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:145",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:146",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:147",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:150",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:152",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:153",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:159",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:161",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:163",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:167",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:168",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:172",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:175",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:177",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:178",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:180",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event",
+        "known_closed_top5_correct": 106,
+        "known_closed_top5_accuracy": 0.8833333333333333
+      },
+      "ID_cluster_intervals": {
+        "closed_top1_accuracy": {
+          "macro_mean": 0.575,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.45,
+            0.6916666666666667
+          ],
+          "bootstrap_draws": 2000
+        },
+        "correct_accepted_rate": {
+          "macro_mean": 0.3083333333333333,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.20833333333333331,
+            0.41666666666666663
+          ],
+          "bootstrap_draws": 2000
+        },
+        "false_accept_rate": {
+          "macro_mean": 0.16666666666666666,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.09166666666666666,
+            0.24166666666666664
+          ],
+          "bootstrap_draws": 2000
+        }
+      }
+    },
+    {
+      "model": "C_trained_seed26",
+      "threshold_policy": "original_MultiCam",
+      "threshold": 0.8445389603236383,
+      "metrics": {
+        "known_queries": 120,
+        "unknown_queries": 120,
+        "known_correct_accepted_C": 30,
+        "known_wrong_accepted_W": 21,
+        "known_rejected_U": 69,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 65,
+        "known_closed_top1_accuracy": 0.5416666666666666,
+        "known_correct_accepted_rate": 0.25,
+        "known_wrong_accepted_rate": 0.175,
+        "unknown_false_accepts": 21,
+        "unknown_false_acceptance_rate": 0.175,
+        "all_accepted_wrong_fraction": 0.5833333333333334,
+        "per_identity": [
+          {
+            "identity": "Cows2021_IdentificationTest:000",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:001",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:002",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:003",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:004",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:005",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:009",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:011",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:013",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:014",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:017",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:018",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:019",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:022",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:025",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:028",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:030",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:032",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:039",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:042",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:043",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:044",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:045",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:050",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:051",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:053",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:058",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:060",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:061",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:062",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:067",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:072",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:075",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:080",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:081",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:084",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:085",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:088",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:089",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:090",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:093",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:095",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:099",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:101",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:103",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:106",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:107",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:109",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:110",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:111",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:113",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:114",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:117",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:119",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:120",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:125",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:129",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:131",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:132",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:134",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:136",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:137",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:140",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:141",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:145",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:146",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:147",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:150",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:152",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:153",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:159",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:161",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:163",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:167",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:168",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:172",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:175",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:177",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:178",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:180",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event",
+        "known_closed_top5_correct": 100,
+        "known_closed_top5_accuracy": 0.8333333333333334
+      },
+      "ID_cluster_intervals": {
+        "closed_top1_accuracy": {
+          "macro_mean": 0.5416666666666666,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.4333333333333333,
+            0.65
+          ],
+          "bootstrap_draws": 2000
+        },
+        "correct_accepted_rate": {
+          "macro_mean": 0.25,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.15833333333333333,
+            0.3418749999999989
+          ],
+          "bootstrap_draws": 2000
+        },
+        "false_accept_rate": {
+          "macro_mean": 0.175,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.09166666666666665,
+            0.26666666666666666
+          ],
+          "bootstrap_draws": 2000
+        }
+      }
+    },
+    {
+      "model": "C_trained_seed26",
+      "threshold_policy": "Cows2021_calibrated",
+      "threshold": 0.845125353865119,
+      "metrics": {
+        "known_queries": 120,
+        "unknown_queries": 120,
+        "known_correct_accepted_C": 30,
+        "known_wrong_accepted_W": 21,
+        "known_rejected_U": 69,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 65,
+        "known_closed_top1_accuracy": 0.5416666666666666,
+        "known_correct_accepted_rate": 0.25,
+        "known_wrong_accepted_rate": 0.175,
+        "unknown_false_accepts": 20,
+        "unknown_false_acceptance_rate": 0.16666666666666666,
+        "all_accepted_wrong_fraction": 0.5774647887323944,
+        "per_identity": [
+          {
+            "identity": "Cows2021_IdentificationTest:000",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:001",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:002",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:003",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:004",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:005",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:009",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:011",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:013",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:014",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:017",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:018",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:019",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:022",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:025",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:028",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:030",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:032",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:039",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:042",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:043",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:044",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:045",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:050",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:051",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:053",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:058",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:060",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:061",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:062",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:067",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:072",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:075",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:080",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:081",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:084",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:085",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:088",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:089",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:090",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:093",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:095",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:099",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:101",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:103",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:106",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:107",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:109",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:110",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:111",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:113",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:114",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:117",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:119",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:120",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:125",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:129",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:131",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:132",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:134",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.6666666666666666
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:136",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:137",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:140",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:141",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:145",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:146",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:147",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:150",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:152",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:153",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:159",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:161",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.6666666666666666,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:163",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:167",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:168",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.3333333333333333,
+            "correct_accepted_rate": 0.3333333333333333,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:172",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:175",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:177",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:178",
+            "is_known": false,
+            "queries": 3,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.3333333333333333
+          },
+          {
+            "identity": "Cows2021_IdentificationTest:180",
+            "is_known": true,
+            "queries": 3,
+            "closed_top1_accuracy": 0.6666666666666666,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event",
+        "known_closed_top5_correct": 100,
+        "known_closed_top5_accuracy": 0.8333333333333334
+      },
+      "ID_cluster_intervals": {
+        "closed_top1_accuracy": {
+          "macro_mean": 0.5416666666666666,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.4333333333333333,
+            0.65
+          ],
+          "bootstrap_draws": 2000
+        },
+        "correct_accepted_rate": {
+          "macro_mean": 0.25,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.15833333333333333,
+            0.3418749999999989
+          ],
+          "bootstrap_draws": 2000
+        },
+        "false_accept_rate": {
+          "macro_mean": 0.16666666666666666,
+          "identity_clusters": 40,
+          "percentile_95_interval": [
+            0.08333333333333333,
+            0.2583333333333333
+          ],
+          "bootstrap_draws": 2000
+        }
+      }
+    }
+  ],
+  "preprocessing_byte_exact_to_frozen_original_BodyTransform": true,
+  "actual_input_hashes_equal_for_both_models": 540,
+  "environment": {
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "PIL": "11.3.0",
+    "numpy": "2.2.6"
+  },
+  "new_training_updates": 0,
+  "new_board_forwards": 0,
+  "original12_events_permanent_IDs_obtained": false,
+  "whole_goal_complete": false
+}

@@ -1,0 +1,70 @@
+{
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "frames": [
+    9355,
+    9360,
+    9365,
+    9370,
+    9375,
+    9380
+  ],
+  "selection": "posthoc algorithm transition sequence of existing ID117 B interruption",
+  "source_files": [
+    {
+      "frame": 9355,
+      "path": "native_01.jpg",
+      "sha256": "1dd1a840bc564593d3a63bd78111b6804216ee221ef1ae5a4531c4e24af349e2"
+    },
+    {
+      "frame": 9360,
+      "path": "native_02.jpg",
+      "sha256": "4c8c3d497c40bb22a015e7b6d0b9af32383ba94e7789624dfbf6b8be5631382f"
+    },
+    {
+      "frame": 9365,
+      "path": "native_03.jpg",
+      "sha256": "a589afd7b989702bc7fd0b7f35dacd23b7d63d66b923c0debbeffd12c7d984c2"
+    },
+    {
+      "frame": 9370,
+      "path": "native_04.jpg",
+      "sha256": "601caff1fe00c8dbb37314ef799b69aef73b9e57e6793cef123c24dbf27e6bd8"
+    },
+    {
+      "frame": 9375,
+      "path": "native_05.jpg",
+      "sha256": "a29d5f86ab9f228cb22c4ec2d341222534d952298254afa814895fb8b11ea846"
+    },
+    {
+      "frame": 9380,
+      "path": "native_06.jpg",
+      "sha256": "568b02fa617e2cf35277eead889f7cdf0229e51b99182555b11946e442a70110"
+    }
+  ],
+  "figures": [
+    {
+      "path": "B_case_native_frames.jpg",
+      "sha256": "1698d12d3ee26e1b40ec6b72050960bd3fc253b35022b4aed221b105f005b4e4"
+    },
+    {
+      "path": "B_case_raw_and_tracker.jpg",
+      "sha256": "72f344efb7cd653169b9e16619ff7587e86e64da35639190fc53e9aa2e34592e"
+    }
+  ],
+  "legend": {
+    "cyan": "raw confidence>=0.25",
+    "yellow": "raw confidence<0.25",
+    "pink_solid": "ID117 actual tracked output",
+    "pink_dashed": "ID117 lost state prediction, not observation"
+  },
+  "raw_index_labels_reference_original_frame_rows": true,
+  "new_inference": false,
+  "independent_ground_truth": false,
+  "visual_QA": "PASS",
+  "manual_visual_observations": [
+    "Six nativeframes and two contact sheets inspected; orangeROI and gates unchanged.",
+    "At9365 a lowscore box overlaps the darker moving object; at9370 the lowscore box is on a different/right-side extent.",
+    "Dashedpink ID117 box is a lost Kalman state, never drawn or counted as an observed detection.",
+    "Geometric overlap and visual case inspection do not certify physical identity correspondence or independent event truth."
+  ]
+}

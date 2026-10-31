@@ -1,0 +1,40 @@
+               JOBID|PARTITION|                        NAME|   STATE|      TIME|NODELIST(REASON)
+      130622_[3-5%3]|     4gpu|           mosaic-pair-train| PENDING|      0:00|(JobArrayTaskLimit)
+            130622_2|     4gpu|           mosaic-pair-train| RUNNING|      4:08|gpu02
+            130622_1|     4gpu|           mosaic-pair-train| RUNNING|      4:08|gpu02
+            130622_0|     4gpu|           mosaic-pair-train| RUNNING|      4:08|gpu02
+JobID|State|ExitCode|Elapsed
+130622_0|RUNNING|0:0|00:04:08
+130622_1|RUNNING|0:0|00:04:08
+130622_2|RUNNING|0:0|00:04:08
+130622_[3-5%3]|PENDING|0:0|00:00:00
+mosaic100_seed26 {
+  "epoch": 6,
+  "training_batches": 1278,
+  "optimizer_updates": 799,
+  "persisted_batch_rows": 1278,
+  "persisted_gradient_rows": 799,
+  "elapsed_s": 234.260319058
+}
+
+mosaic050_seed26 {
+  "epoch": 6,
+  "training_batches": 1278,
+  "optimizer_updates": 799,
+  "persisted_batch_rows": 1278,
+  "persisted_gradient_rows": 799,
+  "elapsed_s": 229.930175901
+}
+
+mosaic100_seed27 {
+  "epoch": 6,
+  "training_batches": 1278,
+  "optimizer_updates": 799,
+  "persisted_batch_rows": 1278,
+  "persisted_gradient_rows": 799,
+  "elapsed_s": 230.778530259
+}
+
+mosaic050_seed27 NOT_STARTED_OR_BEFORE_FIRST_EPOCH
+mosaic100_seed28 NOT_STARTED_OR_BEFORE_FIRST_EPOCH
+mosaic050_seed28 NOT_STARTED_OR_BEFORE_FIRST_EPOCH

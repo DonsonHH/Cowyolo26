@@ -1,0 +1,275 @@
+{
+  "status": "FROZEN_BEFORE_LOCAL_PHOTO_SELECTION_AND_SIX_BOARD_RUNS",
+  "created_UTC": "2026-10-29T22:57:14.623876+00:00",
+  "workload_protocol_sha256": "0469cb65b29abe10c52df59f395e319a2a4d8d010f28c5d3e02b60ec156c0271",
+  "period_ns": 200000000,
+  "cases": [
+    "foreground_only",
+    "current_frame",
+    "causal_ring"
+  ],
+  "video": {
+    "name": "original",
+    "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+    "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "width": 2560,
+    "height": 1440,
+    "fps": 25,
+    "decode_end_exclusive": 10874,
+    "inference_stride": 5,
+    "orientation": "clockwise90",
+    "axis": "y",
+    "perpendicular_ROI": [
+      0.34,
+      0.75
+    ],
+    "scope_start_frame0": 8912,
+    "scope_end_exclusive": 10874,
+    "counter_replay_strides": [
+      5
+    ],
+    "human_down_total": 12,
+    "formal_event_scoring": false,
+    "detection_crop_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "crop_size_WH": [
+      1050,
+      1440
+    ],
+    "pixel_control_frames": [
+      8995,
+      9345,
+      9790,
+      10830
+    ],
+    "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "registered_IDs": [
+    "009",
+    "020",
+    "026",
+    "028",
+    "031",
+    "054"
+  ],
+  "fixed_identity_threshold": 0.8445389603236383,
+  "backend_nice_increment": 10,
+  "foreground_source_model": "628db893fa8be090df206b32c35d8b81839eab2f497925ccbd0c6d855ad9d3eb",
+  "background_encoder": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+  "O8_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "highres_inputs_lossy": true,
+  "highres_physical_crop_original_xyxy": [
+    870,
+    0,
+    1920,
+    1440
+  ],
+  "highres_jpeg_quality": 95,
+  "source_frame0_first": 8915,
+  "source_frame0_last": 10870,
+  "offered_slots_per_case": 392,
+  "runtime_files": [
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/libcow_encoder_v2.so",
+      "sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.param",
+      "sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.bin",
+      "sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/ncnn_encoder_v3.py",
+      "sha256": "c7e83e2638b9cb80e4e0720b5338ac802d05b37241526226da1e482a3172027c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/all_normalized_features.npz",
+      "sha256": "a23bf0714a0d8ef12f23ea5198fc2ad82f209b61c058f692613114f0d1f05ac1"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/image_groups.json",
+      "sha256": "f89a5f4501b0d8b896ada40431a1e58405117fe8593c512163aec130924bfad6"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/record.json",
+      "sha256": "f84a4de6797638a090f6514c1cd718f9e86e39019f191db41c9ece6ee3718d14"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/program/graph.bin",
+      "sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/resident_plan/resident_plan.bin",
+      "sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4"
+    }
+  ],
+  "runtime_binding_required_before_start": true,
+  "input_quant256_equivalence_sha256": "a0891a14ef57eaa8ac8b0e2651c143931f3ca136373a32788c32c5121d7750db",
+  "simulated_no_RFID_condition": true,
+  "real_camera_capture_or_permanent_identity_accuracy_claimed": false,
+  "source_count_total_control": 12,
+  "whole_goal_complete": false,
+  "payload_files": [
+    {
+      "file": "board_causal_repeats.py",
+      "sha256": "c5c8f8e2569048af07bf9d2741a13d1f543b5b0485a47b716739d2cc8c7d383e",
+      "bytes": 14531
+    },
+    {
+      "file": "background_selected_worker.py",
+      "sha256": "58d305d84ee8259c1de31fb489b21829cb7909dc2d6618e894d21024be1b6f5c",
+      "bytes": 5517
+    },
+    {
+      "file": "causal_selector.py",
+      "sha256": "5f1611ff42b660032cb4806b60e898409440ba65a9e3c7c7dba6976846859b18",
+      "bytes": 2713
+    }
+  ],
+  "identity_vector_gate_version": 3,
+  "identity_preprocessing": "SamePillow11roundinggeometryasfrozenservertransform;globalboardPillowunchanged.",
+  "identity_vector_protocol_sha256": "63e89edc9c0d617e27c40719f274ed72b440fa6f16cfbe0724a806c94f976d6b",
+  "runtime_binding_status": "QUALIFIED_A9_ENCODER_AND_COUNTER_FILES_HASHED_BEFORE_CHILD_START",
+  "camera_root": "/home/xilinx/jupyter_notebooks/cow_research_periodic_joint_20261030/camera",
+  "scheduling_intervention": "Onlyoneactualworkerprocess:SIGSTOPandwaitackbeforeeachforeground;SIGCONTafterrecordedcountcompletion. Networkresumesfromactualcomputeinsideidlewindows.",
+  "record_worker_process_CPU_and_network_CPU_ms": true,
+  "PNG_compress_level": 0,
+  "independent_board_encoding_benchmark_sha256": "b373f24d084146064eefebed13f35618bd552d3965f6d99944caa228b1c708e6",
+  "fixed_intervention": "One_frozen_past_only_geometry_photo_selector_and_actual_bounded_compressed_ring",
+  "file_storage_tradeoff": "About3xencodedbytesinthe22writebenchmark;actualpipelinefilesizesrecorded.",
+  "previous_idle_validation_sha256": "735d9ddd705f84142576f0e2c96ab81bd38aeb725ea95b6afdbe9c4cb0703da9",
+  "runs": [
+    {
+      "run": "r1_foreground_only",
+      "policy": "foreground_only",
+      "repeat": 1
+    },
+    {
+      "run": "r1_current_frame",
+      "policy": "current_frame",
+      "repeat": 1
+    },
+    {
+      "run": "r1_causal_ring",
+      "policy": "causal_ring",
+      "repeat": 1
+    },
+    {
+      "run": "r2_causal_ring",
+      "policy": "causal_ring",
+      "repeat": 2
+    },
+    {
+      "run": "r2_current_frame",
+      "policy": "current_frame",
+      "repeat": 2
+    },
+    {
+      "run": "r2_foreground_only",
+      "policy": "foreground_only",
+      "repeat": 2
+    }
+  ],
+  "repeats": 2,
+  "same_public_replay_repeats_not_independent_farm_sessions": true,
+  "model_name": "mosaic050_seed26",
+  "graph_sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538",
+  "resident_plan_sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4",
+  "actual_same_model_full_video_terminal_required_before_worker_start": true,
+  "actual_video_state_bound_at_execution": true,
+  "older_model_single_run_not_same_workload_causal_baseline": true,
+  "mosaic_model_and_calibration_changed_relative_to_prior_joint_phase": true,
+  "current_identity_gallery_and_threshold_unchanged": true,
+  "count_triggered_jobs_per_run_not_fixed_assumed11": true,
+  "retrospective_gallery_registered_after_Aug14_source_event": true,
+  "new_training_updates": 0,
+  "new_independent_test": false,
+  "previous_protocol_sha256": "a7999c756c4466dc64b426bfb041a02e557c16bbbd3189c9f4ab5b5419676f0d",
+  "selector": {
+    "maximum_age_frames_at25fps": 25,
+    "maximum_compressed_JPEG_frames": 6,
+    "edge_guard_px": 16,
+    "formula": "visible_box_area*(1-max_other_confirmed_box_intersection_fraction)*min(1,max(0,minimum_ROI_edge_margin)/16)",
+    "ties": "Most_recent_available_frame",
+    "uses_future_frames": false,
+    "uses_identity_labels_or_gallery_scores": false,
+    "uses_highres_pixels_to_rank": false,
+    "candidate_evidence": "Only_current_or_past_actual_processed_confirmed_post_tracker_rows_of_same_temporary_ID"
+  },
+  "timing_scope": "Detector_input_is_ready192BGR_replay;causal_policy_adds_per_processed_frame_actual_highres_JPEG_file_read_ring_and_queue_payload;not_exposure_or_live_camera",
+  "treatment_comparison": "Current_frame_backend_file_read_vs_causal_compressed_ring_plus_geometry_selection;combined_policy_not_pure_scoring_causality",
+  "photo_selector_candidate_count": 1,
+  "new_identity_threshold_tuning": false,
+  "build_source": {
+    "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_mosaic192_joint_20261030\\tools\\board_joint_repeats.py",
+    "sha256": "c334966859585383fd14b25d7367382f2c47068751b6b3588db38650fc63bda0"
+  },
+  "plan_sha256": "8ca30b87024b9d319c0a3afa5ee8c123c3cc1c5d6c34d62529415f92cdfe585d",
+  "local_readonly_source": {
+    "trace": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_mosaic192_eval_20261030\\board_delivery\\results\\original\\stride5_counter_trace.json.gz",
+    "trace_sha256": "98eb9f35369c8ab73e20ed30b5ea2baf49ff61bd9ae0087b4ab81970b29744b4",
+    "camera_manifest_sha256": "f7972dba7b20aca4cf6a720339bc886cccdfb4b5218f131d7935b879b206b5aa"
+  }
+}

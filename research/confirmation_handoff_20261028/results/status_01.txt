@@ -1,0 +1,17 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed|MaxRSS
+130241|FAILED|1:0|00:00:04|
+130241.batch|FAILED|1:0|00:00:04|1176K
+130241.0|FAILED|1:0|00:00:04|796K
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/tools/replay.py", line 85, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/tools/replay.py", line 80, in main
+    results=[run(p,s) for s in p['sources']]
+             ~~~^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/tools/replay.py", line 45, in run
+    x1,y1,x2,y2=np.asarray(t.tlbr,dtype=np.float32).astype(float)
+                           ^^^^^^
+AttributeError: 'STrack' object has no attribute 'tlbr'
+srun: error: cu03: task 0: Exited with exit code 1

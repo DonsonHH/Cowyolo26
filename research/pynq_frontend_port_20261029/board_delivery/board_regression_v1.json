@@ -1,0 +1,2737 @@
+{
+  "status": "FROZEN_BEFORE_ACTUAL_ARM_TRACKER_REGRESSION",
+  "created_host_UTC": "2026-10-29T14:50:26.275016+00:00",
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "caches": [
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S192_plain_seed26",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "d645510ff14b8b2753d464c9236b259638b6de52caf7d05359f37b59c9036722",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "2282a7ef9ef634515fcbc3af102453ed5b7942d2cbc129204921d147536908f4",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S192_plain_seed27",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "7b0c41983e5fbdc72b276d391ffc47c152e9d4762026b7675a5423b9a0f0aaed",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "f31c27493342d134767da4b3a5487a8f01aea8b6f704776a1a3ce41d02091237",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S192_plain_seed28",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "7827de4d43d6c99297bf1eb986bcac5dd16ccba33d15cf9944c6870aa7db86d1",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "9109fba3a36a8a17bf0e1ded39189e9a443c1b74f99322e571602c7be5b7c136",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S192_rot90_seed26",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "ec8e428747fc97b0c94b73de9a7251ff26e5f2aad8bdc0ba654b6b0fd068dd68",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "af2f286252f0d51825f52409441e617f3d9ac274a170541d6ea7a836bfbb7f09",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S192_rot90_seed27",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "0391f044dbfa9e24fceb68c1d6636eac04b752593b3f4d9261af4bef25511220",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "c62d0c2ab4a12189cf869abeef3aa0a74d9939025cc35dbeb9fdabe9b62ac073",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S192_rot90_seed28",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "19f8d54758bc33f4d02f91fe0240ffd6ac7ba5e5f8ead0ea509654fe78eccff2",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "c9bee93d3517af24eaf91d774dc3f71239f2062c5566b76bc5d421e3674044e1",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S256_plain_seed26",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "4601aa5c0f55735ad451dafedebd41828fad1c1ea5bf7516dc028a7bc5f2ae31",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "f30d01a9615825246e35793a9506f08740bd5b22147039541a38f83010042f36",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S256_plain_seed27",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "c77bbdeeca8d7d2d57b320f4253f7326ad6921561c5e6d766f4f6d2dee508d62",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "4ff3b06f0caed501781b74a213475ecf8e83b7b8c46f856351c4416ad7969f17",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S256_plain_seed28",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "7d6ef30363486d76c50002044a66d0c3238167d0a44790c469be4a0ea0aa9679",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "de029dd199123d900c0835591cb6edfd98180da4f1158a8fdf2ff67c7fa0ed33",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S256_rot90_seed26",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "f71eb5f622c6969f8bb481e1f7846670e2ac02c0f050df406cc6b8f03117d519",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "edf7c6ef2645d85e07fcb8d80a9eca734dd81a41f88f1aee868bdcc6526efd46",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S256_rot90_seed27",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "dd889e0ed0676a5e014fc0e0c951de6110861e11faee9a7e471982363e5f21fa",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "1e9f607a8ecc940e517167337e39b7cf9c1034c79d627ad2f993a70d65dc35ca",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S256_rot90_seed28",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "3f9079f8dc51b09b300a0899f9ad3f585ada23a73312e03ef4440f7cb005332e",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "c0b8be10d65a5c373c98aa1d36faf5bfe57d8a4ff425ea1dbcc4f46315cee8e8",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S320_rot90_seed26",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "cf29e563b15309a719551bf905a8a2d71db0cf156f7853f7074a0428a7cd788d",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "d589df5fe6934e2d3e0b692dabc4f83598236d0b523d7d44783fddf184149310",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S320_rot90_seed27",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "72a4df677503ea1af0e1255531482d9ac21eaec451be24d2958a5241c3621697",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "523c65c7ada25fdcaf9aa026f2ec364955b3118c10be4b88decc171a4cef6072",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "original",
+      "condition": "S320_rot90_seed28",
+      "stride": 5,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "1140d61430999c7d489cba13807af7ac5025f3c96a050c73ede8f381a316b279",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "d4df09e7413210070f252355b7caf5c17c8780a797148217bf4ed48fa6474a60",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "65b2e26a615f90bf701586c981700df44445dfb44d54bc404bfaa307cecdd247",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "bd3a6f52d5e543da1b6f25800833e2fcb7e459fdeb1ce698b5fe96e92727eb61",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "65b2e26a615f90bf701586c981700df44445dfb44d54bc404bfaa307cecdd247",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "05caa1ffe768dc88085c22db6ee878c42515f138f3d10426b1edcc311d4c4655",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "fbf85ca751cae6eef566dec5faa7802191a3cb29bc991a2b7672290540679af8",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "e28b70b40c0db54a6a1f764d4bf8ca7d20e847e9d420319dc82ee897423eb579",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "fbf85ca751cae6eef566dec5faa7802191a3cb29bc991a2b7672290540679af8",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "8b352a3af0516a8be393ea913ceb10ff65340c83cb89e263422e718cf0e367ee",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "9c3559ce8c1040428ccc7fdd1aed65f5f5854a7fb0f39d8d12f35247a3c899fd",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "a387edfeee7d1b068889371c9e9cdd764c11dcdf46e18cf1f2627b97e08e4f4f",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "9c3559ce8c1040428ccc7fdd1aed65f5f5854a7fb0f39d8d12f35247a3c899fd",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "ca2e5588d4c63703e3c68d3385cd21181984e06de040562520a75c6e703a0598",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "0945463a2bfb156a5afde75661d820ad8118c631492d80861f3370e1a537cceb",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "992f74fb87cd1e89555b5bcf20e2f0cf9d393e0262051b0cb076f3e8dd30ca98",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "0945463a2bfb156a5afde75661d820ad8118c631492d80861f3370e1a537cceb",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "e9818dedaa2e6552b3c951de8a8ff8b49bc8ad04e12a36e68c3269bac6c3fdbc",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "20738516857ba9267787b1b1b87453b3e63f1fbfdc43f1904fb73f1f5284e51e",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "9b8e73e5a6be5d36e4df12ed7ec7a17a2b47ef009eaf974a1700c682af0bb846",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "20738516857ba9267787b1b1b87453b3e63f1fbfdc43f1904fb73f1f5284e51e",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "4949b2b581ed280d9b8e4eb6f4405d4e7db3b66b02b7fc7a929e78010bada7de",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "ae6b7a303ed77610d29fca63f2494586cff4c7869515b08ecb9253f112db2f36",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "5ea1e18358a6ac5cbc158f3729f32d5d03d686bfe4711aff1d978bea3ea039dd",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "ae6b7a303ed77610d29fca63f2494586cff4c7869515b08ecb9253f112db2f36",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "24ae1c565566e5c70679be8a85a150d2a67bacbfbb77b0fb8107d5e06036717c",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "50da2b3f1a15845a7781cc5931775b9e0ef007bb91369e988cc0ed09ee327bd7",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "c8bdff2b16a782c8e1a041e919f2a6f15e28f37d3f34b4751cfbdc32f34ace5d",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "50da2b3f1a15845a7781cc5931775b9e0ef007bb91369e988cc0ed09ee327bd7",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "84028803b8435031dd921a6ee805163686a1f3db508a064b95265886b1e47e3d",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "ab88d97e68f4956181f6b898587ff241b85ff0897f6198d9482f9dbaf42bf9e7",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "984a162a31af819cc31649b61f5bab8755be33e39f8b31c9246b509fe2fd4500",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "ab88d97e68f4956181f6b898587ff241b85ff0897f6198d9482f9dbaf42bf9e7",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "eeab049eb56f08c7b96ad716848f6c61256ae31a7b813375d73e4bd20f8c357b",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "a64a0055bd3012eb33f5da940dc454a06a0d967bf1ef757658446c6202be4b44",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "fd6b676a2f5cf58620dc3758660c11bb1eab1558884d160b3836d0581cac69b4",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "a64a0055bd3012eb33f5da940dc454a06a0d967bf1ef757658446c6202be4b44",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "f87804ac11a4f5c1689de18ae159321588176fea7a64e042f50b8b01f46a7900",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "689555e2c7d21b63c8e5fda48bd8a226ec8753f92450cffac83b759f16d1bd47",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "1959d5deaf53eb2e673e49892b6c121a274b9d5e0716b28f784030398c6ef825",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "689555e2c7d21b63c8e5fda48bd8a226ec8753f92450cffac83b759f16d1bd47",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "c4baa095c197f6423765b2e2116b1bf749964be08fae693340e60f2ef1fbcaab",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "2f9647102803bd93b7b58ab7e9b0aed5debd152b70493e925328da6e0985eeef",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "96435923d55288672fd2de4b8dd74b2dd08af47ba52c5b70e209c9307c78f0d6",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "2f9647102803bd93b7b58ab7e9b0aed5debd152b70493e925328da6e0985eeef",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "b3ff1356d35da70b84ed41640aab5e01b622ce656e5cfef475728f8febf2ac18",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "636a02943efb27cb1ede010d16c3d4839eefaf9ae4317eee0c261bd7db96e905",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "de1eceae03cb708291a7ef2f060f3e4bd20841928a4a7a49a118f91e7d62f356",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "636a02943efb27cb1ede010d16c3d4839eefaf9ae4317eee0c261bd7db96e905",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "f512162e9a6292154b545984a1e0f78dc8501dfcec95f76ea1696ea0df2c80a1",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "147a1cb2d7227405ae2c466a6164d9c252b6b0467e24b6cd87d384fc81930f18",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "068846daa9003f1d92a454055e83d6406c8a54b15574d3edc01272e8218af5ea",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "147a1cb2d7227405ae2c466a6164d9c252b6b0467e24b6cd87d384fc81930f18",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "18469ba24de51baab5d1e05437b9fd23f152b109f798cc7762ef136d5a082411",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "951fe2d1661cfb10e9e834c7f956ac6b67d7d3cd146b4c2de070e0b86a6f7ad6",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "5fbc504e0bbfadf9465653a62ee26c745d5baee37311ab881f480a0e6379ba38",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "951fe2d1661cfb10e9e834c7f956ac6b67d7d3cd146b4c2de070e0b86a6f7ad6",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "1b952dac104aa44bb5a2a02d750b618fbad4de101b0965e152002bce69f411bc",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "stride": 6,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "9599dca4f4bc265d56e3f35469824b047398c583242dc8cc45f409679d469fe1",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "7f653596af1c212d9ff18e8e8bb717fa5e24383846a99990d339355f2fac0346",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "crop",
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "stride": 1,
+      "raw_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "9599dca4f4bc265d56e3f35469824b047398c583242dc8cc45f409679d469fe1",
+      "trace_file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "da56b1463c293906bd3c24fa30a13144c5315b061b2415342741174609a0f90d",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S192_plain_seed26",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "c151c32ae353a50207fa2e4a6c6ce24df9adbdcf12449f197bf6ff0584ed4afc",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "a044369a24d855ce77adb96c694b3ed8096cd4015b5d271652bccc414b0c3d61",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S192_plain_seed27",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "0f2c951351f76bdaa4ed9aa4dc64905ab78fc10cfa91c5b8ce92fce3f0e65f67",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "324052cc0e826aa9dc2c3a06bd373bdae1306835cb429c27f0ed79db84b3c84b",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S192_plain_seed28",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "2779871265fabead62364e2049e0e49c2e7f90e36c2487cba7503d2695ccb02b",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "a3c252f00a177dd10d0cd5ebb10d8cb8f191a8ba08e6bb01bf320386aadcc5b8",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S192_rot90_seed26",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "ff3beb3bcb185e517b5718f8fb8823b6764ce6e34a1576194b1801d3ddc37f6f",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "f04e1f9ba4e4cc416b80c703f422182950528f6bc40415d8419ce9d76f0bb1cd",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S192_rot90_seed27",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "bf29ba86a1d115327ff3d8feb673021366f2cf3b366792fda1923ae249998ca0",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "6e3fbb2d21405a31421ff21ffc72edb5306e46b6170c0b2f86c0848a3cc81d20",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S192_rot90_seed28",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "b17f593218663ae909c8af63ccc01d3fde06b2878ec7d2877ca3efecd6c5fd0f",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "781ebc2dc0c775040d5ee91a81224a3521717a48884a9fa501b169c9b8be7f82",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S256_plain_seed26",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "949be39020f68796a4c90feb31b79d1e5e3f248353d9711ce73dfeabaf2e1495",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "177d1f83ee31ef32258d6b1f90979b30af7c5e142a228f787e0aeb4ca4fc0a7d",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S256_plain_seed27",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "aaf6648d803d557040b1d95f817e89e680b809f92ce6313c2161d5f017fed1f4",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "1678e40a944d319eb82a6f1df6e8e02b430a95570c1233c22488e8dd97f1bb5c",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S256_plain_seed28",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "266f864ed7eb5ab96a3c169238859b4eb0ec44cac3b5ee7ad5d5ab2bb3bf96f3",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "1e24341fde49467778ffe55af524c963313caa3a3acdf3633e1dbd2f2567d69e",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S256_rot90_seed26",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "f01266442714391f59d34b6a72427776f60b54f6c292a89b71549498c74a63bb",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "1c379dec9be281ebf221d8da622d8fdae7368c7c8fe3f7463205382e16f43d4c",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S256_rot90_seed27",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "ae492ff09863a7424399eb4551eabaa667fd7faf976225efbca7845d24ba4d12",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "3ba4093a3c93ae118a77c25b202f03b364fb7fe6d565318a1365db3dac7a99b3",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S256_rot90_seed28",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "51e25a450dbc87e1433a4d4b768d25a1ff5a22c99a8310f321e070b569038b62",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "b5c5e4af58c77d4688818c10d17281aee07a3cd95b85616525aee0e09e8eb931",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S320_rot90_seed26",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "c87b1abb8700602838786c60bfb74b00399da433438d33e5ce9327d04490eaec",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed26/stride5_counter_trace.json.gz",
+      "trace_sha256": "5235fdf2691e8627e1244af9df63779b170ba65b9818611ac4902e7bfc1fa855",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S320_rot90_seed27",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "debf03c36632614d86407561ee9f810ead4c90bf40673e54120d8c873db342a0",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed27/stride5_counter_trace.json.gz",
+      "trace_sha256": "71f2ef59e1f07fa4136278ab8adf5b432941be1ecb34df5bcd40a600315537ab",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "original",
+      "condition": "S320_rot90_seed28",
+      "stride": 5,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "f3ddc71b8401609258854b791aaba2263d51bbf136d7db9f813229a04c7fff05",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed28/stride5_counter_trace.json.gz",
+      "trace_sha256": "bcf4ce365e275c80b0cf213be6aeff2851b98d6a91deda14b497361b9bbbe5ae",
+      "spec": {
+        "width": 2560,
+        "height": 1440,
+        "fps": 25,
+        "axis": "y",
+        "perpendicular_ROI": [
+          0.34,
+          0.75
+        ],
+        "decode_end_exclusive": 10874
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "b334540be51c16256d11d13d406fb88fd37f2598a4471f5dcca919f07da3e4ea",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "c4c59f117fb5e1cfe66fcd759e635a2978f0a8231fcb40ba3d6c1e74e653bbcc",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "b334540be51c16256d11d13d406fb88fd37f2598a4471f5dcca919f07da3e4ea",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "985bdaeebe9551bd1af118308a02da414cd89418024b61b73f6f15e1270f0767",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "6c648612b1684616b99ad9e5449da622cfd2e9c7b2ca8159b264d3d9aedb495d",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "f1d89a16d55972639260e08e2bd319bd1857301d323a9c06df0e2fef4ced1718",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "6c648612b1684616b99ad9e5449da622cfd2e9c7b2ca8159b264d3d9aedb495d",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "eed1daba31f24b680b7eeb31bd81f573d748cdd01d772c900a7cd93eb59dcc16",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "9a345ab4e6f2672ccd261bcd28b48a9915923dcf3645a136395063d9614a2862",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "67445dda4e72e9ffbf2157445bdcea2cd63ee61733eab043e5dcab92baed72c5",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "9a345ab4e6f2672ccd261bcd28b48a9915923dcf3645a136395063d9614a2862",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "776b7bb1219fc2e1522c10f650a0e8bf94e176d978f661f9de7f7e0cdb58431a",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "ef749e1bfe53895a3175166064b65311fa2f0908427037c54556d1307c8f17be",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "dc47436754d719a7209a007b9822c52327f68775295eb71ca1094d8b9b400e51",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "ef749e1bfe53895a3175166064b65311fa2f0908427037c54556d1307c8f17be",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "3b07e44e615aa8ce5736bdbba1802a0129eaaf161da3337492bd4c406dce3045",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "04a3093b4ca9fe1e26658bfb98c1842b40da3b1f462378fb85d616a615ef5942",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "409ae7f78356eec4e0438ca8f336976f34e11691cbd63db6a7b333f63e890b0d",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "04a3093b4ca9fe1e26658bfb98c1842b40da3b1f462378fb85d616a615ef5942",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "dca2db4f80e384865c0d5bd8890c91334d3fe412d98069fd58c44909d82e0957",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "f168545df3631c62cf5bab38364c1965f04f118b0f3a449e7d572e515eb1ca63",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "25fdef2c839211500de5da3a068886f3f61867902fdea9399fd4021e33cf6f75",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "f168545df3631c62cf5bab38364c1965f04f118b0f3a449e7d572e515eb1ca63",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "fffc7abe33a7bd3f245b22b441875534a90b7b96a35f942efb853edb161f8242",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "932c6b5cbdc78cf2162aea7ffcaf82aa6f154a55805e7a8b81066effe40d1b4c",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "48a0c15d22839b1df9e1f3e0d8b3e2a083ac62f33e1bb49a8e02a8b2290661db",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed26/raw_predictions.json.gz",
+      "raw_sha256": "932c6b5cbdc78cf2162aea7ffcaf82aa6f154a55805e7a8b81066effe40d1b4c",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "8beb1bbc219a5ae368343169dccd25b75d99c4fd0bb41c6c672d42ab1e3624b9",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "733160e3829dc6a90a5f0a23d56d3cf46928f919b3cc4dc39c40e542280d1741",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "12542d8d1124b2b8db577eed8999267e26c37c1e5e065f5d0bfe8098651e4759",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed27/raw_predictions.json.gz",
+      "raw_sha256": "733160e3829dc6a90a5f0a23d56d3cf46928f919b3cc4dc39c40e542280d1741",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "0e4b2ec643e141fd42becc73f31591356d86a0e940a5cadfb982f03e75ecde3d",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "aac1236b8aab31cf966cd05cc1dbc78deba057b15f82a5ec3ec6cc9df46967aa",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "a1aec3bf6059124d84b3ad6b6b62a9a0b0328c4d9d79f9390444510989d02f8e",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed28/raw_predictions.json.gz",
+      "raw_sha256": "aac1236b8aab31cf966cd05cc1dbc78deba057b15f82a5ec3ec6cc9df46967aa",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "3a04f013a1b87beb57231c336b5d69bd0bdd57f59e3e7e4a4cb963cc87a38a9c",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "d89edca4d9abf3d3cd5f3e13e7c722edd6a0f5873c8a09b22cb3651bab02b1e2",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "9abec902aa1284468806cc34f52eb41a879d6f10fbad40e5bb24846b13fc11bd",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "d89edca4d9abf3d3cd5f3e13e7c722edd6a0f5873c8a09b22cb3651bab02b1e2",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "158ef55754ec6efec65efc990c99e9c372777baa61a4d21a85d5ccbbb417f400",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "b540f37d15193c461db2194091cc3648f74eb3dd84afe9813a2f01a0c245207a",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "358000aae49d393490eb147e1f40f5e0524f71a628004d6c7c8882db244b54dc",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "b540f37d15193c461db2194091cc3648f74eb3dd84afe9813a2f01a0c245207a",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "2ea389dd4c6c148a54563121dc5e277c361c4a9f7b0f55dce0080bf972fd3024",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "711f935e050c98dd2c17218f93632dbe7a26da527a10bf27cdbd024a958b9a0f",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "58a66d40697a093692ebd82e8c1953ad6f1dd191ce091b1f327f99125f3cfe2b",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "711f935e050c98dd2c17218f93632dbe7a26da527a10bf27cdbd024a958b9a0f",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "5c59bf5926c96be8dfddb8f10ef99b080d3f7503c568c62b8643e8bb6aee721a",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "fa92915ba8d5caff65628fd6e1246867721189604e6ee37df33ad87d23015c76",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed26/stride6_counter_trace.json.gz",
+      "trace_sha256": "80dc527bef1098632196a83dc7772a208c210c06a0bcc9df9780208a99f2abfb",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed26/raw_predictions.json.gz",
+      "raw_sha256": "fa92915ba8d5caff65628fd6e1246867721189604e6ee37df33ad87d23015c76",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed26/stride1_counter_trace.json.gz",
+      "trace_sha256": "3d2e1fcc6d16f31c9b8395d05140822201a332e6154f12b99b9d37fca6e722e6",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "4639a92f18326038c62f887e014e456f8ce39ae14de4aa7a0990c9a6f60c2065",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed27/stride6_counter_trace.json.gz",
+      "trace_sha256": "68ad4d3164ea21ccf5a3f5d442a8e8d70bea275634e0daa87e8f5877c172e82b",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed27/raw_predictions.json.gz",
+      "raw_sha256": "4639a92f18326038c62f887e014e456f8ce39ae14de4aa7a0990c9a6f60c2065",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed27/stride1_counter_trace.json.gz",
+      "trace_sha256": "a2eef67d54a51860a9ae8b6db4a8e720a6371eb86c5a1b4d0ab5c71f7082a614",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "stride": 6,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "d00d659d3499d78db53d5dce6264d91f1f11e500fcbc5c9d376bf1429275c4a1",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed28/stride6_counter_trace.json.gz",
+      "trace_sha256": "2a756e369e834f478dcec934467cc1d2042c0e48799d786ccc66e003f6f74012",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    },
+    {
+      "mode": "full",
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "stride": 1,
+      "raw_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed28/raw_predictions.json.gz",
+      "raw_sha256": "d00d659d3499d78db53d5dce6264d91f1f11e500fcbc5c9d376bf1429275c4a1",
+      "trace_file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed28/stride1_counter_trace.json.gz",
+      "trace_sha256": "9d09ea14504b2fb1c0adff849ea82c656e98a00669440e49b79f647145bd926e",
+      "spec": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "axis": "x",
+        "perpendicular_ROI": [
+          0.1,
+          0.95
+        ],
+        "decode_end_exclusive": 479
+      }
+    }
+  ],
+  "trace_count": 90,
+  "counter_paths": 180,
+  "observation_ticks": 82020,
+  "full_trace_exact_required_in_reference_environment": true,
+  "board_coordinate_tolerance_pixels": 0.002,
+  "board_ID_event_and_counter_observation_keys_exact_required": true,
+  "source_changes_scope": "Package imports, NumPy-only boxes interface, hard fail instead of automatic dependency install; AABB math and LAP0.5.13 unchanged.",
+  "files": [
+    {
+      "file": "board_regression.py",
+      "sha256": "62d2477030195c1846d6ce96de30248a638b142bfddd32c1f6164af3ca40db53",
+      "bytes": 5396
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed26/raw_predictions.json.gz",
+      "sha256": "c151c32ae353a50207fa2e4a6c6ce24df9adbdcf12449f197bf6ff0584ed4afc",
+      "bytes": 68084
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed26/stride5_counter_trace.json.gz",
+      "sha256": "a044369a24d855ce77adb96c694b3ed8096cd4015b5d271652bccc414b0c3d61",
+      "bytes": 54782
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed27/raw_predictions.json.gz",
+      "sha256": "0f2c951351f76bdaa4ed9aa4dc64905ab78fc10cfa91c5b8ce92fce3f0e65f67",
+      "bytes": 35619
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed27/stride5_counter_trace.json.gz",
+      "sha256": "324052cc0e826aa9dc2c3a06bd373bdae1306835cb429c27f0ed79db84b3c84b",
+      "bytes": 34161
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed28/raw_predictions.json.gz",
+      "sha256": "2779871265fabead62364e2049e0e49c2e7f90e36c2487cba7503d2695ccb02b",
+      "bytes": 209208
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_plain_seed28/stride5_counter_trace.json.gz",
+      "sha256": "a3c252f00a177dd10d0cd5ebb10d8cb8f191a8ba08e6bb01bf320386aadcc5b8",
+      "bytes": 150162
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "ff3beb3bcb185e517b5718f8fb8823b6764ce6e34a1576194b1801d3ddc37f6f",
+      "bytes": 142189
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed26/stride5_counter_trace.json.gz",
+      "sha256": "f04e1f9ba4e4cc416b80c703f422182950528f6bc40415d8419ce9d76f0bb1cd",
+      "bytes": 99841
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "bf29ba86a1d115327ff3d8feb673021366f2cf3b366792fda1923ae249998ca0",
+      "bytes": 218767
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed27/stride5_counter_trace.json.gz",
+      "sha256": "6e3fbb2d21405a31421ff21ffc72edb5306e46b6170c0b2f86c0848a3cc81d20",
+      "bytes": 139703
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "b17f593218663ae909c8af63ccc01d3fde06b2878ec7d2877ca3efecd6c5fd0f",
+      "bytes": 133099
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S192_rot90_seed28/stride5_counter_trace.json.gz",
+      "sha256": "781ebc2dc0c775040d5ee91a81224a3521717a48884a9fa501b169c9b8be7f82",
+      "bytes": 94703
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed26/raw_predictions.json.gz",
+      "sha256": "949be39020f68796a4c90feb31b79d1e5e3f248353d9711ce73dfeabaf2e1495",
+      "bytes": 89813
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed26/stride5_counter_trace.json.gz",
+      "sha256": "177d1f83ee31ef32258d6b1f90979b30af7c5e142a228f787e0aeb4ca4fc0a7d",
+      "bytes": 74105
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed27/raw_predictions.json.gz",
+      "sha256": "aaf6648d803d557040b1d95f817e89e680b809f92ce6313c2161d5f017fed1f4",
+      "bytes": 73931
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed27/stride5_counter_trace.json.gz",
+      "sha256": "1678e40a944d319eb82a6f1df6e8e02b430a95570c1233c22488e8dd97f1bb5c",
+      "bytes": 59843
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed28/raw_predictions.json.gz",
+      "sha256": "266f864ed7eb5ab96a3c169238859b4eb0ec44cac3b5ee7ad5d5ab2bb3bf96f3",
+      "bytes": 93618
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_plain_seed28/stride5_counter_trace.json.gz",
+      "sha256": "1e24341fde49467778ffe55af524c963313caa3a3acdf3633e1dbd2f2567d69e",
+      "bytes": 76800
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "f01266442714391f59d34b6a72427776f60b54f6c292a89b71549498c74a63bb",
+      "bytes": 40829
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed26/stride5_counter_trace.json.gz",
+      "sha256": "1c379dec9be281ebf221d8da622d8fdae7368c7c8fe3f7463205382e16f43d4c",
+      "bytes": 38436
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "ae492ff09863a7424399eb4551eabaa667fd7faf976225efbca7845d24ba4d12",
+      "bytes": 42969
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed27/stride5_counter_trace.json.gz",
+      "sha256": "3ba4093a3c93ae118a77c25b202f03b364fb7fe6d565318a1365db3dac7a99b3",
+      "bytes": 39347
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "51e25a450dbc87e1433a4d4b768d25a1ff5a22c99a8310f321e070b569038b62",
+      "bytes": 104955
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S256_rot90_seed28/stride5_counter_trace.json.gz",
+      "sha256": "b5c5e4af58c77d4688818c10d17281aee07a3cd95b85616525aee0e09e8eb931",
+      "bytes": 85864
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "c87b1abb8700602838786c60bfb74b00399da433438d33e5ce9327d04490eaec",
+      "bytes": 86343
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed26/stride5_counter_trace.json.gz",
+      "sha256": "5235fdf2691e8627e1244af9df63779b170ba65b9818611ac4902e7bfc1fa855",
+      "bytes": 73812
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "debf03c36632614d86407561ee9f810ead4c90bf40673e54120d8c873db342a0",
+      "bytes": 40202
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed27/stride5_counter_trace.json.gz",
+      "sha256": "71f2ef59e1f07fa4136278ab8adf5b432941be1ecb34df5bcd40a600315537ab",
+      "bytes": 39009
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "f3ddc71b8401609258854b791aaba2263d51bbf136d7db9f813229a04c7fff05",
+      "bytes": 105348
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/original/S320_rot90_seed28/stride5_counter_trace.json.gz",
+      "sha256": "bcf4ce365e275c80b0cf213be6aeff2851b98d6a91deda14b497361b9bbbe5ae",
+      "bytes": 86746
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed26/raw_predictions.json.gz",
+      "sha256": "b334540be51c16256d11d13d406fb88fd37f2598a4471f5dcca919f07da3e4ea",
+      "bytes": 10375
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed26/stride1_counter_trace.json.gz",
+      "sha256": "985bdaeebe9551bd1af118308a02da414cd89418024b61b73f6f15e1270f0767",
+      "bytes": 12097
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed26/stride6_counter_trace.json.gz",
+      "sha256": "c4c59f117fb5e1cfe66fcd759e635a2978f0a8231fcb40ba3d6c1e74e653bbcc",
+      "bytes": 2147
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed27/raw_predictions.json.gz",
+      "sha256": "6c648612b1684616b99ad9e5449da622cfd2e9c7b2ca8159b264d3d9aedb495d",
+      "bytes": 16805
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed27/stride1_counter_trace.json.gz",
+      "sha256": "eed1daba31f24b680b7eeb31bd81f573d748cdd01d772c900a7cd93eb59dcc16",
+      "bytes": 19403
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed27/stride6_counter_trace.json.gz",
+      "sha256": "f1d89a16d55972639260e08e2bd319bd1857301d323a9c06df0e2fef4ced1718",
+      "bytes": 3654
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed28/raw_predictions.json.gz",
+      "sha256": "9a345ab4e6f2672ccd261bcd28b48a9915923dcf3645a136395063d9614a2862",
+      "bytes": 7913
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed28/stride1_counter_trace.json.gz",
+      "sha256": "776b7bb1219fc2e1522c10f650a0e8bf94e176d978f661f9de7f7e0cdb58431a",
+      "bytes": 9054
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_plain_seed28/stride6_counter_trace.json.gz",
+      "sha256": "67445dda4e72e9ffbf2157445bdcea2cd63ee61733eab043e5dcab92baed72c5",
+      "bytes": 1897
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "ef749e1bfe53895a3175166064b65311fa2f0908427037c54556d1307c8f17be",
+      "bytes": 32462
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed26/stride1_counter_trace.json.gz",
+      "sha256": "3b07e44e615aa8ce5736bdbba1802a0129eaaf161da3337492bd4c406dce3045",
+      "bytes": 33427
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed26/stride6_counter_trace.json.gz",
+      "sha256": "dc47436754d719a7209a007b9822c52327f68775295eb71ca1094d8b9b400e51",
+      "bytes": 5886
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "04a3093b4ca9fe1e26658bfb98c1842b40da3b1f462378fb85d616a615ef5942",
+      "bytes": 44833
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed27/stride1_counter_trace.json.gz",
+      "sha256": "dca2db4f80e384865c0d5bd8890c91334d3fe412d98069fd58c44909d82e0957",
+      "bytes": 44146
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed27/stride6_counter_trace.json.gz",
+      "sha256": "409ae7f78356eec4e0438ca8f336976f34e11691cbd63db6a7b333f63e890b0d",
+      "bytes": 7727
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "f168545df3631c62cf5bab38364c1965f04f118b0f3a449e7d572e515eb1ca63",
+      "bytes": 19009
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed28/stride1_counter_trace.json.gz",
+      "sha256": "fffc7abe33a7bd3f245b22b441875534a90b7b96a35f942efb853edb161f8242",
+      "bytes": 21953
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S192_rot90_seed28/stride6_counter_trace.json.gz",
+      "sha256": "25fdef2c839211500de5da3a068886f3f61867902fdea9399fd4021e33cf6f75",
+      "bytes": 4332
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed26/raw_predictions.json.gz",
+      "sha256": "932c6b5cbdc78cf2162aea7ffcaf82aa6f154a55805e7a8b81066effe40d1b4c",
+      "bytes": 3870
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed26/stride1_counter_trace.json.gz",
+      "sha256": "8beb1bbc219a5ae368343169dccd25b75d99c4fd0bb41c6c672d42ab1e3624b9",
+      "bytes": 4528
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed26/stride6_counter_trace.json.gz",
+      "sha256": "48a0c15d22839b1df9e1f3e0d8b3e2a083ac62f33e1bb49a8e02a8b2290661db",
+      "bytes": 958
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed27/raw_predictions.json.gz",
+      "sha256": "733160e3829dc6a90a5f0a23d56d3cf46928f919b3cc4dc39c40e542280d1741",
+      "bytes": 6514
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed27/stride1_counter_trace.json.gz",
+      "sha256": "0e4b2ec643e141fd42becc73f31591356d86a0e940a5cadfb982f03e75ecde3d",
+      "bytes": 7568
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed27/stride6_counter_trace.json.gz",
+      "sha256": "12542d8d1124b2b8db577eed8999267e26c37c1e5e065f5d0bfe8098651e4759",
+      "bytes": 1487
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed28/raw_predictions.json.gz",
+      "sha256": "aac1236b8aab31cf966cd05cc1dbc78deba057b15f82a5ec3ec6cc9df46967aa",
+      "bytes": 3807
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed28/stride1_counter_trace.json.gz",
+      "sha256": "3a04f013a1b87beb57231c336b5d69bd0bdd57f59e3e7e4a4cb963cc87a38a9c",
+      "bytes": 4267
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_plain_seed28/stride6_counter_trace.json.gz",
+      "sha256": "a1aec3bf6059124d84b3ad6b6b62a9a0b0328c4d9d79f9390444510989d02f8e",
+      "bytes": 798
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "d89edca4d9abf3d3cd5f3e13e7c722edd6a0f5873c8a09b22cb3651bab02b1e2",
+      "bytes": 23954
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed26/stride1_counter_trace.json.gz",
+      "sha256": "158ef55754ec6efec65efc990c99e9c372777baa61a4d21a85d5ccbbb417f400",
+      "bytes": 25469
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed26/stride6_counter_trace.json.gz",
+      "sha256": "9abec902aa1284468806cc34f52eb41a879d6f10fbad40e5bb24846b13fc11bd",
+      "bytes": 5652
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "b540f37d15193c461db2194091cc3648f74eb3dd84afe9813a2f01a0c245207a",
+      "bytes": 31795
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed27/stride1_counter_trace.json.gz",
+      "sha256": "2ea389dd4c6c148a54563121dc5e277c361c4a9f7b0f55dce0080bf972fd3024",
+      "bytes": 34648
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed27/stride6_counter_trace.json.gz",
+      "sha256": "358000aae49d393490eb147e1f40f5e0524f71a628004d6c7c8882db244b54dc",
+      "bytes": 5931
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "711f935e050c98dd2c17218f93632dbe7a26da527a10bf27cdbd024a958b9a0f",
+      "bytes": 25012
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed28/stride1_counter_trace.json.gz",
+      "sha256": "5c59bf5926c96be8dfddb8f10ef99b080d3f7503c568c62b8643e8bb6aee721a",
+      "bytes": 27232
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S256_rot90_seed28/stride6_counter_trace.json.gz",
+      "sha256": "58a66d40697a093692ebd82e8c1953ad6f1dd191ce091b1f327f99125f3cfe2b",
+      "bytes": 5241
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "fa92915ba8d5caff65628fd6e1246867721189604e6ee37df33ad87d23015c76",
+      "bytes": 17924
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed26/stride1_counter_trace.json.gz",
+      "sha256": "3d2e1fcc6d16f31c9b8395d05140822201a332e6154f12b99b9d37fca6e722e6",
+      "bytes": 20941
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed26/stride6_counter_trace.json.gz",
+      "sha256": "80dc527bef1098632196a83dc7772a208c210c06a0bcc9df9780208a99f2abfb",
+      "bytes": 3747
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "4639a92f18326038c62f887e014e456f8ce39ae14de4aa7a0990c9a6f60c2065",
+      "bytes": 11568
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed27/stride1_counter_trace.json.gz",
+      "sha256": "a2eef67d54a51860a9ae8b6db4a8e720a6371eb86c5a1b4d0ab5c71f7082a614",
+      "bytes": 13557
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed27/stride6_counter_trace.json.gz",
+      "sha256": "68ad4d3164ea21ccf5a3f5d442a8e8d70bea275634e0daa87e8f5877c172e82b",
+      "bytes": 2428
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "d00d659d3499d78db53d5dce6264d91f1f11e500fcbc5c9d376bf1429275c4a1",
+      "bytes": 28460
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed28/stride1_counter_trace.json.gz",
+      "sha256": "9d09ea14504b2fb1c0adff849ea82c656e98a00669440e49b79f647145bd926e",
+      "bytes": 31866
+    },
+    {
+      "file": "cached/detector_factorial_20261029/results/evaluation/toros/S320_rot90_seed28/stride6_counter_trace.json.gz",
+      "sha256": "2a756e369e834f478dcec934467cc1d2042c0e48799d786ccc66e003f6f74012",
+      "bytes": 5943
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed26/raw_predictions.json.gz",
+      "sha256": "d645510ff14b8b2753d464c9236b259638b6de52caf7d05359f37b59c9036722",
+      "bytes": 42998
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed26/stride5_counter_trace.json.gz",
+      "sha256": "2282a7ef9ef634515fcbc3af102453ed5b7942d2cbc129204921d147536908f4",
+      "bytes": 36446
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed27/raw_predictions.json.gz",
+      "sha256": "7b0c41983e5fbdc72b276d391ffc47c152e9d4762026b7675a5423b9a0f0aaed",
+      "bytes": 42876
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed27/stride5_counter_trace.json.gz",
+      "sha256": "f31c27493342d134767da4b3a5487a8f01aea8b6f704776a1a3ce41d02091237",
+      "bytes": 35505
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed28/raw_predictions.json.gz",
+      "sha256": "7827de4d43d6c99297bf1eb986bcac5dd16ccba33d15cf9944c6870aa7db86d1",
+      "bytes": 44012
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_plain_seed28/stride5_counter_trace.json.gz",
+      "sha256": "9109fba3a36a8a17bf0e1ded39189e9a443c1b74f99322e571602c7be5b7c136",
+      "bytes": 37470
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "ec8e428747fc97b0c94b73de9a7251ff26e5f2aad8bdc0ba654b6b0fd068dd68",
+      "bytes": 57545
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed26/stride5_counter_trace.json.gz",
+      "sha256": "af2f286252f0d51825f52409441e617f3d9ac274a170541d6ea7a836bfbb7f09",
+      "bytes": 46361
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "0391f044dbfa9e24fceb68c1d6636eac04b752593b3f4d9261af4bef25511220",
+      "bytes": 56525
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed27/stride5_counter_trace.json.gz",
+      "sha256": "c62d0c2ab4a12189cf869abeef3aa0a74d9939025cc35dbeb9fdabe9b62ac073",
+      "bytes": 45212
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "19f8d54758bc33f4d02f91fe0240ffd6ac7ba5e5f8ead0ea509654fe78eccff2",
+      "bytes": 52385
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S192_rot90_seed28/stride5_counter_trace.json.gz",
+      "sha256": "c9bee93d3517af24eaf91d774dc3f71239f2062c5566b76bc5d421e3674044e1",
+      "bytes": 43361
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed26/raw_predictions.json.gz",
+      "sha256": "4601aa5c0f55735ad451dafedebd41828fad1c1ea5bf7516dc028a7bc5f2ae31",
+      "bytes": 48349
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed26/stride5_counter_trace.json.gz",
+      "sha256": "f30d01a9615825246e35793a9506f08740bd5b22147039541a38f83010042f36",
+      "bytes": 41567
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed27/raw_predictions.json.gz",
+      "sha256": "c77bbdeeca8d7d2d57b320f4253f7326ad6921561c5e6d766f4f6d2dee508d62",
+      "bytes": 51283
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed27/stride5_counter_trace.json.gz",
+      "sha256": "4ff3b06f0caed501781b74a213475ecf8e83b7b8c46f856351c4416ad7969f17",
+      "bytes": 43505
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed28/raw_predictions.json.gz",
+      "sha256": "7d6ef30363486d76c50002044a66d0c3238167d0a44790c469be4a0ea0aa9679",
+      "bytes": 48358
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_plain_seed28/stride5_counter_trace.json.gz",
+      "sha256": "de029dd199123d900c0835591cb6edfd98180da4f1158a8fdf2ff67c7fa0ed33",
+      "bytes": 41502
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "f71eb5f622c6969f8bb481e1f7846670e2ac02c0f050df406cc6b8f03117d519",
+      "bytes": 55447
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed26/stride5_counter_trace.json.gz",
+      "sha256": "edf7c6ef2645d85e07fcb8d80a9eca734dd81a41f88f1aee868bdcc6526efd46",
+      "bytes": 47198
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "dd889e0ed0676a5e014fc0e0c951de6110861e11faee9a7e471982363e5f21fa",
+      "bytes": 58813
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed27/stride5_counter_trace.json.gz",
+      "sha256": "1e9f607a8ecc940e517167337e39b7cf9c1034c79d627ad2f993a70d65dc35ca",
+      "bytes": 49169
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "3f9079f8dc51b09b300a0899f9ad3f585ada23a73312e03ef4440f7cb005332e",
+      "bytes": 55452
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S256_rot90_seed28/stride5_counter_trace.json.gz",
+      "sha256": "c0b8be10d65a5c373c98aa1d36faf5bfe57d8a4ff425ea1dbcc4f46315cee8e8",
+      "bytes": 47012
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "cf29e563b15309a719551bf905a8a2d71db0cf156f7853f7074a0428a7cd788d",
+      "bytes": 61357
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed26/stride5_counter_trace.json.gz",
+      "sha256": "d589df5fe6934e2d3e0b692dabc4f83598236d0b523d7d44783fddf184149310",
+      "bytes": 52358
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "72a4df677503ea1af0e1255531482d9ac21eaec451be24d2958a5241c3621697",
+      "bytes": 55970
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed27/stride5_counter_trace.json.gz",
+      "sha256": "523c65c7ada25fdcaf9aa026f2ec364955b3118c10be4b88decc171a4cef6072",
+      "bytes": 48247
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "1140d61430999c7d489cba13807af7ac5025f3c96a050c73ede8f381a316b279",
+      "bytes": 58744
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/original/S320_rot90_seed28/stride5_counter_trace.json.gz",
+      "sha256": "d4df09e7413210070f252355b7caf5c17c8780a797148217bf4ed48fa6474a60",
+      "bytes": 50839
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed26/raw_predictions.json.gz",
+      "sha256": "65b2e26a615f90bf701586c981700df44445dfb44d54bc404bfaa307cecdd247",
+      "bytes": 13244
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed26/stride1_counter_trace.json.gz",
+      "sha256": "05caa1ffe768dc88085c22db6ee878c42515f138f3d10426b1edcc311d4c4655",
+      "bytes": 13844
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed26/stride6_counter_trace.json.gz",
+      "sha256": "bd3a6f52d5e543da1b6f25800833e2fcb7e459fdeb1ce698b5fe96e92727eb61",
+      "bytes": 2597
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed27/raw_predictions.json.gz",
+      "sha256": "fbf85ca751cae6eef566dec5faa7802191a3cb29bc991a2b7672290540679af8",
+      "bytes": 26835
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed27/stride1_counter_trace.json.gz",
+      "sha256": "8b352a3af0516a8be393ea913ceb10ff65340c83cb89e263422e718cf0e367ee",
+      "bytes": 25679
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed27/stride6_counter_trace.json.gz",
+      "sha256": "e28b70b40c0db54a6a1f764d4bf8ca7d20e847e9d420319dc82ee897423eb579",
+      "bytes": 4925
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed28/raw_predictions.json.gz",
+      "sha256": "9c3559ce8c1040428ccc7fdd1aed65f5f5854a7fb0f39d8d12f35247a3c899fd",
+      "bytes": 15409
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed28/stride1_counter_trace.json.gz",
+      "sha256": "ca2e5588d4c63703e3c68d3385cd21181984e06de040562520a75c6e703a0598",
+      "bytes": 15709
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_plain_seed28/stride6_counter_trace.json.gz",
+      "sha256": "a387edfeee7d1b068889371c9e9cdd764c11dcdf46e18cf1f2627b97e08e4f4f",
+      "bytes": 2954
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "0945463a2bfb156a5afde75661d820ad8118c631492d80861f3370e1a537cceb",
+      "bytes": 43000
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed26/stride1_counter_trace.json.gz",
+      "sha256": "e9818dedaa2e6552b3c951de8a8ff8b49bc8ad04e12a36e68c3269bac6c3fdbc",
+      "bytes": 38153
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed26/stride6_counter_trace.json.gz",
+      "sha256": "992f74fb87cd1e89555b5bcf20e2f0cf9d393e0262051b0cb076f3e8dd30ca98",
+      "bytes": 6910
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "20738516857ba9267787b1b1b87453b3e63f1fbfdc43f1904fb73f1f5284e51e",
+      "bytes": 56621
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed27/stride1_counter_trace.json.gz",
+      "sha256": "4949b2b581ed280d9b8e4eb6f4405d4e7db3b66b02b7fc7a929e78010bada7de",
+      "bytes": 48316
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed27/stride6_counter_trace.json.gz",
+      "sha256": "9b8e73e5a6be5d36e4df12ed7ec7a17a2b47ef009eaf974a1700c682af0bb846",
+      "bytes": 8533
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "ae6b7a303ed77610d29fca63f2494586cff4c7869515b08ecb9253f112db2f36",
+      "bytes": 29566
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed28/stride1_counter_trace.json.gz",
+      "sha256": "24ae1c565566e5c70679be8a85a150d2a67bacbfbb77b0fb8107d5e06036717c",
+      "bytes": 25958
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S192_rot90_seed28/stride6_counter_trace.json.gz",
+      "sha256": "5ea1e18358a6ac5cbc158f3729f32d5d03d686bfe4711aff1d978bea3ea039dd",
+      "bytes": 5142
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed26/raw_predictions.json.gz",
+      "sha256": "50da2b3f1a15845a7781cc5931775b9e0ef007bb91369e988cc0ed09ee327bd7",
+      "bytes": 6669
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed26/stride1_counter_trace.json.gz",
+      "sha256": "84028803b8435031dd921a6ee805163686a1f3db508a064b95265886b1e47e3d",
+      "bytes": 7098
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed26/stride6_counter_trace.json.gz",
+      "sha256": "c8bdff2b16a782c8e1a041e919f2a6f15e28f37d3f34b4751cfbdc32f34ace5d",
+      "bytes": 1436
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed27/raw_predictions.json.gz",
+      "sha256": "ab88d97e68f4956181f6b898587ff241b85ff0897f6198d9482f9dbaf42bf9e7",
+      "bytes": 11687
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed27/stride1_counter_trace.json.gz",
+      "sha256": "eeab049eb56f08c7b96ad716848f6c61256ae31a7b813375d73e4bd20f8c357b",
+      "bytes": 12121
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed27/stride6_counter_trace.json.gz",
+      "sha256": "984a162a31af819cc31649b61f5bab8755be33e39f8b31c9246b509fe2fd4500",
+      "bytes": 2696
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed28/raw_predictions.json.gz",
+      "sha256": "a64a0055bd3012eb33f5da940dc454a06a0d967bf1ef757658446c6202be4b44",
+      "bytes": 8004
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed28/stride1_counter_trace.json.gz",
+      "sha256": "f87804ac11a4f5c1689de18ae159321588176fea7a64e042f50b8b01f46a7900",
+      "bytes": 8425
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_plain_seed28/stride6_counter_trace.json.gz",
+      "sha256": "fd6b676a2f5cf58620dc3758660c11bb1eab1558884d160b3836d0581cac69b4",
+      "bytes": 1562
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "689555e2c7d21b63c8e5fda48bd8a226ec8753f92450cffac83b759f16d1bd47",
+      "bytes": 42646
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed26/stride1_counter_trace.json.gz",
+      "sha256": "c4baa095c197f6423765b2e2116b1bf749964be08fae693340e60f2ef1fbcaab",
+      "bytes": 38816
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed26/stride6_counter_trace.json.gz",
+      "sha256": "1959d5deaf53eb2e673e49892b6c121a274b9d5e0716b28f784030398c6ef825",
+      "bytes": 7382
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "2f9647102803bd93b7b58ab7e9b0aed5debd152b70493e925328da6e0985eeef",
+      "bytes": 43631
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed27/stride1_counter_trace.json.gz",
+      "sha256": "b3ff1356d35da70b84ed41640aab5e01b622ce656e5cfef475728f8febf2ac18",
+      "bytes": 40707
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed27/stride6_counter_trace.json.gz",
+      "sha256": "96435923d55288672fd2de4b8dd74b2dd08af47ba52c5b70e209c9307c78f0d6",
+      "bytes": 7160
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "636a02943efb27cb1ede010d16c3d4839eefaf9ae4317eee0c261bd7db96e905",
+      "bytes": 40419
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed28/stride1_counter_trace.json.gz",
+      "sha256": "f512162e9a6292154b545984a1e0f78dc8501dfcec95f76ea1696ea0df2c80a1",
+      "bytes": 34678
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S256_rot90_seed28/stride6_counter_trace.json.gz",
+      "sha256": "de1eceae03cb708291a7ef2f060f3e4bd20841928a4a7a49a118f91e7d62f356",
+      "bytes": 6944
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed26/raw_predictions.json.gz",
+      "sha256": "147a1cb2d7227405ae2c466a6164d9c252b6b0467e24b6cd87d384fc81930f18",
+      "bytes": 27637
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed26/stride1_counter_trace.json.gz",
+      "sha256": "18469ba24de51baab5d1e05437b9fd23f152b109f798cc7762ef136d5a082411",
+      "bytes": 27374
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed26/stride6_counter_trace.json.gz",
+      "sha256": "068846daa9003f1d92a454055e83d6406c8a54b15574d3edc01272e8218af5ea",
+      "bytes": 4866
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed27/raw_predictions.json.gz",
+      "sha256": "951fe2d1661cfb10e9e834c7f956ac6b67d7d3cd146b4c2de070e0b86a6f7ad6",
+      "bytes": 21602
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed27/stride1_counter_trace.json.gz",
+      "sha256": "1b952dac104aa44bb5a2a02d750b618fbad4de101b0965e152002bce69f411bc",
+      "bytes": 21434
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed27/stride6_counter_trace.json.gz",
+      "sha256": "5fbc504e0bbfadf9465653a62ee26c745d5baee37311ab881f480a0e6379ba38",
+      "bytes": 4034
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed28/raw_predictions.json.gz",
+      "sha256": "9599dca4f4bc265d56e3f35469824b047398c583242dc8cc45f409679d469fe1",
+      "bytes": 44260
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed28/stride1_counter_trace.json.gz",
+      "sha256": "da56b1463c293906bd3c24fa30a13144c5315b061b2415342741174609a0f90d",
+      "bytes": 41253
+    },
+    {
+      "file": "cached/factorial_lane_crop_20261029/results/roi/toros/S320_rot90_seed28/stride6_counter_trace.json.gz",
+      "sha256": "7f653596af1c212d9ff18e8e8bb717fa5e24383846a99990d339355f2fac0346",
+      "bytes": 7245
+    },
+    {
+      "file": "cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed",
+      "bytes": 85
+    },
+    {
+      "file": "cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8",
+      "bytes": 3752
+    },
+    {
+      "file": "cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c",
+      "bytes": 22755
+    },
+    {
+      "file": "cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e",
+      "bytes": 3163
+    },
+    {
+      "file": "cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa",
+      "bytes": 21382
+    },
+    {
+      "file": "cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33",
+      "bytes": 8005
+    },
+    {
+      "file": "cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba",
+      "bytes": 7521
+    },
+    {
+      "file": "cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733",
+      "bytes": 2830
+    },
+    {
+      "file": "cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+      "bytes": 1882
+    },
+    {
+      "file": "frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b",
+      "bytes": 3395
+    },
+    {
+      "file": "tracker_config.json",
+      "sha256": "9b8eda6cc19be8ff933f21de64f18dbade41d8630340d826823d6b9c18666231",
+      "bytes": 194
+    }
+  ],
+  "real_network_forwards": 0,
+  "new_training_updates": 0,
+  "whole_goal_complete": false,
+  "created_UTC": "2026-10-29T15:01:02.099722+00:00",
+  "board_normalized_axis_tolerance": 2e-06,
+  "board_LAP_source_sha256": "9eff7169e3ca452995af0493cc20d35452c4bfd06122c36c06457119ffbd411b",
+  "board_global_numpy_unchanged": "1.21.5; task-specific native extension; upstream LAP dependency minimum1.21.6 not certified globally"
+}

@@ -1,0 +1,14 @@
+{
+  "runtime": "1.23.2",
+  "calibration_intra_op_threads": 2,
+  "calibration_inter_op_threads": 1,
+  "method": "MinMax",
+  "activation_type": "QUInt8",
+  "weight_type": "QInt8",
+  "weight_per_channel": true,
+  "quantised_op_types": [
+    "Conv"
+  ],
+  "other_operators_float": true,
+  "library_files_modified": false
+}

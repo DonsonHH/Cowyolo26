@@ -1,0 +1,48 @@
+{
+  "status": "NEW_EVENT_CASE_OVERLAPPING_PREDICTION_IDS_REVIEWED",
+  "frame": 120,
+  "model": "pilot",
+  "variant": "allow_lost_iou",
+  "predictions": [
+    {
+      "track_ID": 1,
+      "xyxy": [
+        405.79730224609375,
+        292.6811218261719,
+        946.1868286132812,
+        577.4420776367188
+      ],
+      "confidence": 0.21617551147937775
+    },
+    {
+      "track_ID": 8,
+      "xyxy": [
+        406.1050720214844,
+        293.4775390625,
+        914.2820434570312,
+        553.141845703125
+      ],
+      "confidence": 0.20413421094417572
+    }
+  ],
+  "predicted_box_pair_IoU": 0.8575113387044181,
+  "publisher_ID": 1,
+  "publisher_box_clipped": [
+    292.0,
+    288.0,
+    1009.0,
+    695.0
+  ],
+  "predicted_to_publisher_box_IoUs": [
+    0.5273194618524806,
+    0.452182417658014
+  ],
+  "ID1_emitted_event_frames": [
+    125
+  ],
+  "ID8_emitted_event_frames": [],
+  "manual_visual_observation": "Both predicted boxes overlap the same left visible cow at frame120; right visible cow is separate.",
+  "event_FP_zero_does_not_prove_no_duplicate_track": true,
+  "physical_identity_correctness_over_entire_clip_certified": false,
+  "new_independent_test": false
+}

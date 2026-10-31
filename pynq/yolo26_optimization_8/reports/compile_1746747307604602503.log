@@ -1,0 +1,23 @@
+In file included from /usr/include/c++/11/vector:72,
+                 from native_runtime.cpp:5,
+                 from queue_runtime.cpp:1:
+/usr/include/c++/11/bits/vector.tcc: In member function ‘void std::vector<_Tp, _Alloc>::_M_realloc_insert(std::vector<_Tp, _Alloc>::iterator, _Args&& ...) [with _Args = {const o7::Xrt::Buffer&}; _Tp = o7::Xrt::Buffer; _Alloc = std::allocator<o7::Xrt::Buffer>]’:
+/usr/include/c++/11/bits/vector.tcc:426:7: note: parameter passing for argument of type ‘std::vector<o7::Xrt::Buffer>::iterator’ changed in GCC 7.1
+  426 |       vector<_Tp, _Alloc>::
+      |       ^~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/bits/vector.tcc:426:7: note: parameter passing for argument of type ‘std::vector<o7::Xrt::Buffer>::iterator’ changed in GCC 7.1
+/usr/include/c++/11/bits/vector.tcc: In member function ‘void std::vector<_Tp, _Alloc>::_M_realloc_insert(std::vector<_Tp, _Alloc>::iterator, _Args&& ...) [with _Args = {o7::Node}; _Tp = o7::Node; _Alloc = std::allocator<o7::Node>]’:
+/usr/include/c++/11/bits/vector.tcc:426:7: note: parameter passing for argument of type ‘std::vector<o7::Node>::iterator’ changed in GCC 7.1
+/usr/include/c++/11/bits/vector.tcc: In constructor ‘o7::Engine::Engine(const char*, volatile uint32_t*, volatile uint32_t*, o7::Golden)’:
+/usr/include/c++/11/bits/vector.tcc:121:28: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<o7::Node*, std::vector<o7::Node> >’ changed in GCC 7.1
+  121 |           _M_realloc_insert(end(), std::forward<_Args>(__args)...);
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/vector:67,
+                 from native_runtime.cpp:5,
+                 from queue_runtime.cpp:1:
+/usr/include/c++/11/bits/stl_vector.h:1198:28: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<o7::Xrt::Buffer*, std::vector<o7::Xrt::Buffer> >’ changed in GCC 7.1
+ 1198 |           _M_realloc_insert(end(), __x);
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+/usr/include/c++/11/bits/stl_vector.h:1198:28: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<o7::Xrt::Buffer*, std::vector<o7::Xrt::Buffer> >’ changed in GCC 7.1
+ 1198 |           _M_realloc_insert(end(), __x);
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~

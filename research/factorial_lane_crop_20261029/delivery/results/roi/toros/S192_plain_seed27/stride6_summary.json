@@ -1,0 +1,115 @@
+[
+  {
+    "scene": "toros",
+    "condition": "S192_plain_seed27",
+    "model": "S192_plain_seed27",
+    "input_size": 192,
+    "sample_stride": 6,
+    "nominal_inference_Hz": 5.0,
+    "counter": "confirmed_only_events",
+    "down": 0,
+    "up": 0,
+    "events": [],
+    "human_down_total": null,
+    "absolute_down_total_error": null,
+    "formal_event_metrics": {
+      "reference_events": 6,
+      "predicted_events": 0,
+      "temporally_matched": 0,
+      "correct_direction_matches": 0,
+      "wrong_direction_matches": 0,
+      "TP": 0,
+      "FP": 0,
+      "FN": 6,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "direction_accuracy_given_temporal_match": null,
+      "counts": {
+        "A->B": {
+          "reference": 0,
+          "prediction": 0
+        },
+        "B->A": {
+          "reference": 6,
+          "prediction": 0
+        }
+      },
+      "mean_absolute_direction_count_error": 3.0,
+      "matching_tolerance_s": 2.0,
+      "pairs": [],
+      "unmatched_reference_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unmatched_prediction_indices": []
+    }
+  },
+  {
+    "scene": "toros",
+    "condition": "S192_plain_seed27",
+    "model": "S192_plain_seed27",
+    "input_size": 192,
+    "sample_stride": 6,
+    "nominal_inference_Hz": 5.0,
+    "counter": "handoff_events",
+    "down": 0,
+    "up": 1,
+    "events": [
+      {
+        "time_s": 5.0,
+        "track_id": 5,
+        "direction": "B->A",
+        "frame0": 150
+      }
+    ],
+    "human_down_total": null,
+    "absolute_down_total_error": null,
+    "formal_event_metrics": {
+      "reference_events": 6,
+      "predicted_events": 1,
+      "temporally_matched": 1,
+      "correct_direction_matches": 1,
+      "wrong_direction_matches": 0,
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "f1": 0.2857142857142857,
+      "direction_accuracy_given_temporal_match": 1.0,
+      "counts": {
+        "A->B": {
+          "reference": 0,
+          "prediction": 0
+        },
+        "B->A": {
+          "reference": 6,
+          "prediction": 1
+        }
+      },
+      "mean_absolute_direction_count_error": 2.5,
+      "matching_tolerance_s": 2.0,
+      "pairs": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "time_error_s": 1.3333333333333335,
+          "direction_correct": true
+        }
+      ],
+      "unmatched_reference_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unmatched_prediction_indices": []
+    }
+  }
+]

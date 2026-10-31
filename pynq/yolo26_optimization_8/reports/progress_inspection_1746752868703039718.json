@@ -1,0 +1,43 @@
+{
+  "monotonic": 6695.501135285,
+  "jobs": [
+    {
+      "pid": 12610,
+      "comm": "sudo",
+      "arguments": [
+        "inline-source-sha256=71b237840c2b9ccef4b98c48e5222b6b3ad39d86f2ec8e935867f0ee1a86bd5d",
+        "tags=representative_D,formal_A_D,formal_C_D,continuous1000,resident_vectors,sampled_profile"
+      ],
+      "RSS": [
+        "State:\tS (sleeping)",
+        "VmRSS:\t    3944 kB"
+      ]
+    },
+    {
+      "pid": 12616,
+      "comm": "timeout",
+      "arguments": [
+        "inline-source-sha256=71b237840c2b9ccef4b98c48e5222b6b3ad39d86f2ec8e935867f0ee1a86bd5d",
+        "tags=representative_D,formal_A_D,formal_C_D,continuous1000,resident_vectors,sampled_profile"
+      ],
+      "RSS": [
+        "State:\tS (sleeping)",
+        "VmRSS:\t    1280 kB"
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "path": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/representative_D_1746752619997064150",
+      "summary": true,
+      "rows": {
+        "r224_per_image.jsonl": 40,
+        "r192_per_image.jsonl": 100
+      },
+      "status": "FAIL",
+      "failure": "Traceback (most recent call last):\n  File \"<string>\", line 24, in <module>\nBrokenPipeError: [Errno 32] Broken pipe\n"
+    }
+  ],
+  "recent_memory_errors": [],
+  "memstat": "0 0 13844815946100772864\n"
+}

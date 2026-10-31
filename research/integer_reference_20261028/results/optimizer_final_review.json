@@ -1,0 +1,83 @@
+{
+  "status": "OPTIMIZER_CAUSAL_CONTROL_AND_FULL_REPORT_REVIEW_COMPLETE",
+  "created_UTC": "2026-10-27T17:15:14.840729+00:00",
+  "goal_turn_classification": "progress",
+  "full_manual_report_review_complete": true,
+  "actual_results": {
+    "training_seed": 26,
+    "existing_training_inputs": 8,
+    "single_QLinearAdd_restoration_causal_control_passed": true,
+    "same_upstream_inputs_and_other_nodes_initializers_verified": true,
+    "serialized_graph_and_tracing_preservation_verified": true,
+    "condition_pass_counts": {
+      "OFF": 8,
+      "BASIC": 8,
+      "EXTENDED": 6,
+      "ALL": 6,
+      "patched": 8,
+      "ALL_disable_quant_qdq": 8
+    },
+    "local_operator_difference_vectors": [
+      2,
+      5,
+      7
+    ],
+    "final_default_failure_vectors": [
+      2,
+      5
+    ],
+    "metric_conditions": 48,
+    "files_verified": 43,
+    "all_seeds_gradients_or_FPGA_verified": false,
+    "new_training_updates": 0
+  },
+  "synthesis_review_sha256": "fb06d1d8934524e8458fedbe546e8b1094e21b7f0b955796de24d8ea57166f40",
+  "files": [
+    {
+      "path": "图优化残差加法定位与下一步.md",
+      "sha256": "fcc8a6b333f834665fde5135d8721d730be4686d041010de13744914ab835877"
+    },
+    {
+      "path": "图优化Review.md",
+      "sha256": "d16ed8769ba1fb3cd9f331b3113d10d5963d73868eeeccc935c6b65b733590b9"
+    },
+    {
+      "path": "protocol/optimizer_probe_v1.json",
+      "sha256": "62659469475dad6e06f481ed3c9c6555ca3432ceb1e75a4c273d2078a6679e7b"
+    },
+    {
+      "path": "protocol/optimizer_isolation_v1.json",
+      "sha256": "2293762a54e94957c395644c559068d380f0ba75666d3262818f0f6bec86093e"
+    },
+    {
+      "path": "results/optimizer_local_verification.json",
+      "sha256": "fad91c1511860cfc0d9d992e49321dfc6ee53aa46d056df190bb50ec27b47f11"
+    },
+    {
+      "path": "results/optimizer_delivery_status_01.txt",
+      "sha256": "aab2cb16840b79a4c4100f5390bc66a8ee784e1a131459d717eec2c5e1fdcf56"
+    },
+    {
+      "path": "optimizer_delivery/results/optimizer_probe/summary.json",
+      "sha256": "d1f3032e63a46117a471116175cc2fe12c7707e726a3ba7498eb27bf6d9593a2"
+    },
+    {
+      "path": "optimizer_delivery/results/optimizer_isolation/summary.json",
+      "sha256": "d100a19ca4e15388f7fafad367781fd084cba66c05978b1b33becd9a661e3017"
+    },
+    {
+      "path": "optimizer_delivery/results/optimizer_independent_verification.json",
+      "sha256": "f32a07930ca5f836c7f20b9e9a1322a29993a9f36c6ef0dbc715b2e946e86ba0"
+    }
+  ],
+  "formal_QAT_updates": 0,
+  "all_seeds_training_or_FPGA_verified": false,
+  "remaining_goal_requirements": [
+    "independent_real_bidirectional_events",
+    "identity_RF_mapping_and_calibration",
+    "trainable_multi_seed_numeric_gate",
+    "PYNQ_Z2_joint_inference",
+    "principal_contribution_and_publication_evidence"
+  ],
+  "whole_goal_complete": false
+}

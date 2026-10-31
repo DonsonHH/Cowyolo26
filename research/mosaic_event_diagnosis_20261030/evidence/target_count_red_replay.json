@@ -1,0 +1,7 @@
+{
+  "returncode": 1,
+  "stdout": "{\"actual_counter_replay\": [{\"model\": \"old_mosaic100\", \"observation_ticks\": 2175, \"down_count\": 11, \"events_exact_to_real_ARM_output\": true}, {\"model\": \"new_mosaic050\", \"observation_ticks\": 2175, \"down_count\": 10, \"events_exact_to_real_ARM_output\": true}], \"human_confirmed_total\": 12, \"human_event_GT_available\": false, \"new_neural_forwards\": 0}\n",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\mosaic_event_diagnosis_20261030\\tools\\replay_count.py\", line 24, in <module>\n    if a.require_total is not None:assert rows[-1]['down_count']==a.require_total,('new model count',rows[-1]['down_count'],'required human total',a.require_total)\n                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('new model count', 10, 'required human total', 12)\n",
+  "no_new_neural_forwards": true,
+  "scope": "actual_counter_on_frozen_O8_observations;human_total_only;red_is_unresolved_quality_not_software_crash"
+}

@@ -1,0 +1,9 @@
+JobID|State|ExitCode|Elapsed|MaxRSS
+130620|FAILED|1:0|00:00:00|
+130620.batch|FAILED|1:0|00:00:00|1176K
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['sacct', '-j', '130619', '-X', '--noheader', '--format=State,ExitCode', '-P']' returned non-zero exit status 1.

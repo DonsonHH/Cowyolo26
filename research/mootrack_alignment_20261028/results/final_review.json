@@ -1,0 +1,946 @@
+{
+  "status": "BOUNDED_NATIVE_SAMPLES_GT_SCALE_HYPOTHESIS_AND_ADMISSION_LIMITS_REVIEWED",
+  "created_UTC": "2026-10-28T13:57:21.053448+00:00",
+  "author_commit": "9782faa9ca2702f29298f0a5af58046a83a79f8d",
+  "author_text_files": 30,
+  "Git_tree_objects_reconstructed_to_commit_tree": 183,
+  "video_sample_table_entries": 53946,
+  "range_requests_checked": 7,
+  "range_bytes_checked": 44740482,
+  "GOPs": 5,
+  "video_samples_reconstructed_and_decode_count_checked": 126,
+  "native_frames_visually_inspected": 5,
+  "GT_anchor_frames_visually_inspected": 4,
+  "GT_anchor_boxes": 24,
+  "image_files_decoded": 21,
+  "GT_rows_independently_rechecked": 350272,
+  "GT_track_IDs": 8,
+  "GT_last_frame1": 53920,
+  "scale_hypothesis": 2.0,
+  "scale_hypothesis_support": "Pinned author half-res setting, whole-GT bounds and four visual anchors; no manual quantitative IoU",
+  "time_mapping_hypothesis": "video display0 n -> GT frame1 n+1, not certified for whole prefix",
+  "source_tail_extra_frames_under_prefix_hypothesis": 26,
+  "control_packets_checked_against_ffprobe": 606,
+  "catalog_conditions_preserved": 29,
+  "catalog_event_summary_protocol_files_reverified": 87,
+  "current_predicted_down": [
+    12,
+    11,
+    11
+  ],
+  "new_training_or_model_forwards": false,
+  "new_independent_counting_reference_certified": false,
+  "whole_video_GT_alignment_certified": false,
+  "tail_truncation_proven": false,
+  "full_video_MD5_verified": false,
+  "FPGA_execution_verified": false,
+  "local_links_checked": 129,
+  "source_records": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_reference_candidates_20261027\\catalog\\MooTrack360_TrackEval_evaluation_code.zip",
+      "sha256": "26800ea3b6e653e4e9d7c54a2587060bd2a920b4e862f0b84afef624234b6478",
+      "bytes": 23441568
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_reference_candidates_20261027\\results\\MooTrack360_container_probe\\moov.bin",
+      "sha256": "f060958b4bd3120c0e35070f0532930e41a97e349a8d8e448f8d60031b2e18d3",
+      "bytes": 1076007
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\LICENSE",
+      "sha256": "8698bbffb8589387fe10e09001cdf36589145ed7781e1d95fcec8e16531320be",
+      "bytes": 800
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Cam_models\\__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Detectors\\__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Detectors\\base_detector.py",
+      "sha256": "2e65ade5d8c3a8685583878f76146830e8f6b4a5abd0d4e2224029b5552914ae",
+      "bytes": 1272
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Detectors\\rtdetr_detector.py",
+      "sha256": "5f2dafbfdabd54a79e6326acca77f26b4d7ef9000334cb8ef203e70207c9baa5",
+      "bytes": 2846
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Detectors\\yolo_detector.py",
+      "sha256": "11af97bee8d1a8659326faade0e6ee100a3e9eb9b4b87ce04b926aa9c24f48df",
+      "bytes": 3349
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Processors\\__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Processors\\processors.py",
+      "sha256": "eb5e425e184dd351e69d71b62bcff0e029bf42821ae02d892338837ef4556dff",
+      "bytes": 16653
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Storage\\__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Storage\\cow_instance.py",
+      "sha256": "ca04bc340a006581c6778c6439421ef38719638b19e808069f485ebefb03ee41",
+      "bytes": 1925
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Storage\\database.py",
+      "sha256": "f786e03684d0bd3af4f59fa00c11f69555f0e2a95073df40cc18b594fb1fd518",
+      "bytes": 656
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\base_tracker.py",
+      "sha256": "921502b142fbeec59e3d48a78d4fc680e6dbc4bdc3272f82dfef886dbd87bd0d",
+      "bytes": 2379
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\botsorttrack_tracker.py",
+      "sha256": "27eecc10c2620090b9f13a9451f8d2dc491ebce5982eff2dd7c7ba8808f20019",
+      "bytes": 6339
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\bytetrack_tracker.py",
+      "sha256": "b9a9d1301bf8ed49a65d72ffc7ce2c6269a531dbe9b13aecb05e8da5bebdbcb1",
+      "bytes": 4727
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\conftrack_tracker.py",
+      "sha256": "b82b48ae42aacca77123f32da34c4a7a401970bd46455f4b10587a08bffa2d98",
+      "bytes": 5963
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\deepsort_tracker.py",
+      "sha256": "175c0d3dd0fc61266ff45947c904f0e24e226dc32119638372c3859908206099",
+      "bytes": 6075
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\ocsort_tracker.py",
+      "sha256": "942eec1fee251fb9f391eca2c76962069c35ff64e73b5ff11883b16ae439373f",
+      "bytes": 4551
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\single_camera_tracker.py",
+      "sha256": "32ea2c875f55ae41ce286aae2db821f95a8216b1b642bd9dbf124b28fb6a7fb2",
+      "bytes": 2840
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\smiletrack_tracker.py",
+      "sha256": "487f885674bda6a8f715740c048a33c368acffa296277dd58cbb121b0180061a",
+      "bytes": 5400
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Trackers\\sort_tracker.py",
+      "sha256": "253fe1d0a4e4a284cc5b785324bd2c75a432a9ba76080e5bc431cdf92fcee76a",
+      "bytes": 3250
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\Visualizers\\instance_viz.py",
+      "sha256": "76369a59ecae5ecf03c65f20760b9d25ce6014b6e2603accf17b37d8ea6700f1",
+      "bytes": 8062
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\main_threaded.py",
+      "sha256": "cfe643f8a06737df2ea1dd877ffc7b4a9a0ac7995694b6922f94219ce0c5ef57",
+      "bytes": 6686
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\utils\\__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\utils\\create_yolo_coco_dataset.py",
+      "sha256": "9f7547304afa5a86fa8e04f33221511a63967aeda43da523e1852e5832b0b7c2",
+      "bytes": 22884
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\utils\\curve_mask_determine.py",
+      "sha256": "1201e23449c77bb38a8f7aeb4af81853fafd868ef7a2ad6cb1e9ca81c0d08826",
+      "bytes": 11277
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\utils\\database_annotation_viz_ori_with_stats.py",
+      "sha256": "8d15c9a4c74ce34c04476fdc7dd4415ee17600f546551796ff94abdc01800161",
+      "bytes": 10096
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\utils\\train_models.py",
+      "sha256": "cbe8a06a6c03b7c75672b74a9ad028646e5db81a7cd14abb06d8428cdce89e69",
+      "bytes": 12199
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\MooTrack360_code\\src\\viz_database.py",
+      "sha256": "cec5e96d481a50bbe71d4fa216f0b1a88da50656d9988c27bd73467e0e51bf94",
+      "bytes": 6970
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\author\\files\\README.md",
+      "sha256": "4bc9f19bc1f145d3c476f1fe0a23a612152668612cb49c4d3409fcd60e3d0c98",
+      "bytes": 15004
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\video_ranges\\moov_recheck.bin",
+      "sha256": "f060958b4bd3120c0e35070f0532930e41a97e349a8d8e448f8d60031b2e18d3",
+      "bytes": 1076007
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\video_ranges\\target_00000.range.bin",
+      "sha256": "1de073d319358741ea930d6a45b5a9e2c4e84cbd2b9e647439284c49fab6cc72",
+      "bytes": 7753271
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\video_ranges\\target_08991.range.bin",
+      "sha256": "ad1a7e618c3d6906a7da5a91c8dcfc731581cc1d6529a2bc2c36eafd6441e457",
+      "bytes": 9810800
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\video_ranges\\target_26973.range.bin",
+      "sha256": "ef8fe9ee9408e60d049d74f85e139b0f4c306daf32fe6039e1ea4c699fe54116",
+      "bytes": 11206967
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\video_ranges\\target_00000.h264",
+      "sha256": "14b4414952440445b067418badf00a7d03ef326fc9ce4bc177ad385b7a3ff21f",
+      "bytes": 7700665
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_00000_native.png",
+      "sha256": "20ef507ba5808d32f0cb1aa5266a0e4113c602ca6216201584b18a08df7dbd82",
+      "bytes": 7217184
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\video_ranges\\target_08991.h264",
+      "sha256": "d60705140e27a16069faef8787ea13f202c37012c4aa4918ff53e379c4ddaa26",
+      "bytes": 9758359
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_08991_native.png",
+      "sha256": "572a42c9be35eddf429544882834c71ae9801eaa8fa5aea25e22299822db3e68",
+      "bytes": 8005746
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\video_ranges\\target_26973.h264",
+      "sha256": "0ac5628e012fdddd5544bb2181a8861980a03ac86b4af3eeaf9c59aa216d5edd",
+      "bytes": 11153681
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_26973_native.png",
+      "sha256": "b96351201a3453acd7c44b6bde54d728ba1152054fbbc43bdfe29008acdb840b",
+      "bytes": 7915904
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\tail_ranges\\moov_recheck.bin",
+      "sha256": "f060958b4bd3120c0e35070f0532930e41a97e349a8d8e448f8d60031b2e18d3",
+      "bytes": 1076007
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\tail_ranges\\target_53919.range.bin",
+      "sha256": "c19f70c56964c9e2403a5668a129f22aaac867edfa5249e7385799c2d1abbe18",
+      "bytes": 10236897
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\tail_ranges\\target_53945.range.bin",
+      "sha256": "ce199785cc68e81830c27951cc4250cf2cc53b1be577276c4c82334efc48fc7e",
+      "bytes": 3580533
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\tail_ranges\\target_53919.h264",
+      "sha256": "2c27f8a32e923b8e0bd257a68693d5322538979be3e01330befa087d402c4b01",
+      "bytes": 10184458
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\tail_review\\target_53919_native.png",
+      "sha256": "a2ca9bdc9db48b302e001c13516f209857ce86d71746657bd7bd7a7f8b5f795d",
+      "bytes": 8031076
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\evidence\\tail_ranges\\target_53945.h264",
+      "sha256": "7858ac2501f6e2b54be44dce53b1d3fa3d791c59b0c4f171747862a3c8ab2bab",
+      "bytes": 3580566
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\tail_review\\target_53945_native.png",
+      "sha256": "b1e949d77ad01bb9c09158ea7dd1ff39fa2229f0cf08b6982a129616ba707b05",
+      "bytes": 7995283
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_eval_20261026\\previews\\forward_generic.mp4",
+      "sha256": "b16e8e99627025d895975ea5714648631fb290a0e56033323b07adc8049b2c89",
+      "bytes": 6447886
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\results\\frozen_prediction_catalog_v4.json",
+      "sha256": "26bd4c43a1345e12d0806409229976fa158efab11cc31529ea1f4255a53df8ac",
+      "bytes": 65618
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\generic\\source_events.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "cb0a43cacfa29b26b1b3ada26f425da7cdb9b4afc9208e27cc139ebdcd8acd45",
+      "bytes": 14894
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\protocol\\detector_v1.json",
+      "sha256": "c3a1cf3cb8f34c27a2a6945ac705f2beb45abdb851c6bd70cccc92f1fc2e6eff",
+      "bytes": 2917
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\pilot\\source_events.json",
+      "sha256": "1f779dfdea8e058f1f6231273b130871632746f7acfffff095773979adc36b16",
+      "bytes": 699
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "cb0a43cacfa29b26b1b3ada26f425da7cdb9b4afc9208e27cc139ebdcd8acd45",
+      "bytes": 14894
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\protocol\\detector_v1.json",
+      "sha256": "c3a1cf3cb8f34c27a2a6945ac705f2beb45abdb851c6bd70cccc92f1fc2e6eff",
+      "bytes": 2917
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\epoch20_seed26\\source_events.json",
+      "sha256": "d82ecc1563312fca57c96100c5c1e24dbd70c6d3c1f8851fe1f821be589e603a",
+      "bytes": 799
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "cb0a43cacfa29b26b1b3ada26f425da7cdb9b4afc9208e27cc139ebdcd8acd45",
+      "bytes": 14894
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\protocol\\detector_v1.json",
+      "sha256": "c3a1cf3cb8f34c27a2a6945ac705f2beb45abdb851c6bd70cccc92f1fc2e6eff",
+      "bytes": 2917
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\epoch20_seed27\\source_events.json",
+      "sha256": "f0f17bddf5b19f5ab26f70284c37c1d7f671313e99b2f97306dbf34f73286fca",
+      "bytes": 603
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "cb0a43cacfa29b26b1b3ada26f425da7cdb9b4afc9208e27cc139ebdcd8acd45",
+      "bytes": 14894
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\protocol\\detector_v1.json",
+      "sha256": "c3a1cf3cb8f34c27a2a6945ac705f2beb45abdb851c6bd70cccc92f1fc2e6eff",
+      "bytes": 2917
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\epoch20_seed28\\source_events.json",
+      "sha256": "35909c7fd25b1e05822e0bdc57067e6c9a51919fa1a48dd81ad01a19a1b7e908",
+      "bytes": 803
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "cb0a43cacfa29b26b1b3ada26f425da7cdb9b4afc9208e27cc139ebdcd8acd45",
+      "bytes": 14894
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\detector_training_20261027\\protocol\\detector_v1.json",
+      "sha256": "c3a1cf3cb8f34c27a2a6945ac705f2beb45abdb851c6bd70cccc92f1fc2e6eff",
+      "bytes": 2917
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\mixed_seed26\\source_events.json",
+      "sha256": "fa2cc39fcab9e0dba77082b651d61b5513e5717f86afb3bcaf214641504363ef",
+      "bytes": 703
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "9f9068c4fbe2bcd241f7e92f5701b9ac840edc2e613c62ff22e96ef55f8f0864",
+      "bytes": 16666
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\protocol\\composition_v1.json",
+      "sha256": "aa99a723e95e1d7a593aec9d0de83f9de0f9c7a1d883985f91ab1637bc1f9cd5",
+      "bytes": 3176
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\real_repeated_seed26\\source_events.json",
+      "sha256": "73c69e4d343bc19f4343fc9f087492e0c10090de54ada134d28bd2c8f4cb1d31",
+      "bytes": 101
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "9f9068c4fbe2bcd241f7e92f5701b9ac840edc2e613c62ff22e96ef55f8f0864",
+      "bytes": 16666
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\protocol\\composition_v1.json",
+      "sha256": "aa99a723e95e1d7a593aec9d0de83f9de0f9c7a1d883985f91ab1637bc1f9cd5",
+      "bytes": 3176
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\mixed_seed27\\source_events.json",
+      "sha256": "12945335e56d7fc7ed57dccc7f2565b9ceb6f9c6402351649d2433b230c9b38c",
+      "bytes": 699
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "9f9068c4fbe2bcd241f7e92f5701b9ac840edc2e613c62ff22e96ef55f8f0864",
+      "bytes": 16666
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\protocol\\composition_v1.json",
+      "sha256": "aa99a723e95e1d7a593aec9d0de83f9de0f9c7a1d883985f91ab1637bc1f9cd5",
+      "bytes": 3176
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\real_repeated_seed27\\source_events.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "9f9068c4fbe2bcd241f7e92f5701b9ac840edc2e613c62ff22e96ef55f8f0864",
+      "bytes": 16666
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\protocol\\composition_v1.json",
+      "sha256": "aa99a723e95e1d7a593aec9d0de83f9de0f9c7a1d883985f91ab1637bc1f9cd5",
+      "bytes": 3176
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\mixed_seed28\\source_events.json",
+      "sha256": "29cf9f21cb1267070713bcf34070536d5def32f76a27a0d9f708bce320b235df",
+      "bytes": 601
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "9f9068c4fbe2bcd241f7e92f5701b9ac840edc2e613c62ff22e96ef55f8f0864",
+      "bytes": 16666
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\protocol\\composition_v1.json",
+      "sha256": "aa99a723e95e1d7a593aec9d0de83f9de0f9c7a1d883985f91ab1637bc1f9cd5",
+      "bytes": 3176
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\real_repeated_seed28\\source_events.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "9f9068c4fbe2bcd241f7e92f5701b9ac840edc2e613c62ff22e96ef55f8f0864",
+      "bytes": 16666
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\composition_control_20261027\\protocol\\composition_v1.json",
+      "sha256": "aa99a723e95e1d7a593aec9d0de83f9de0f9c7a1d883985f91ab1637bc1f9cd5",
+      "bytes": 3176
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\original_seed26\\source_events.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "06523a95ffd0017f50c539a245e6663671497787e6d355f54a49fab0ef35368c",
+      "bytes": 19412
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\protocol\\video_rotation_v1.json",
+      "sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+      "bytes": 2546
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\clockwise90_seed26\\source_events.json",
+      "sha256": "cea4c7f1e06acca296f83501c2ed8412e150ea609ff38aa210e03ce800bf07eb",
+      "bytes": 803
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "06523a95ffd0017f50c539a245e6663671497787e6d355f54a49fab0ef35368c",
+      "bytes": 19412
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\protocol\\video_rotation_v1.json",
+      "sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+      "bytes": 2546
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\original_seed27\\source_events.json",
+      "sha256": "254ba1104f26ae8f0bf5a98bf99f52edcdfe27d2a61e5883aeaa6961f8d28ab3",
+      "bytes": 102
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "06523a95ffd0017f50c539a245e6663671497787e6d355f54a49fab0ef35368c",
+      "bytes": 19412
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\protocol\\video_rotation_v1.json",
+      "sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+      "bytes": 2546
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\clockwise90_seed27\\source_events.json",
+      "sha256": "9d4be654d8e64b42aae7293ec48ed5dac09f2308a5149cecf27211c35c2e6720",
+      "bytes": 602
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "06523a95ffd0017f50c539a245e6663671497787e6d355f54a49fab0ef35368c",
+      "bytes": 19412
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\protocol\\video_rotation_v1.json",
+      "sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+      "bytes": 2546
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\original_seed28\\source_events.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "06523a95ffd0017f50c539a245e6663671497787e6d355f54a49fab0ef35368c",
+      "bytes": 19412
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\protocol\\video_rotation_v1.json",
+      "sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+      "bytes": 2546
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\clockwise90_seed28\\source_events.json",
+      "sha256": "28f2d14f5f97bb19d20e94a38159b6140422d4a6f4822cabe1199f09a2415c28",
+      "bytes": 803
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\delivery\\results\\inference\\summary.json",
+      "sha256": "06523a95ffd0017f50c539a245e6663671497787e6d355f54a49fab0ef35368c",
+      "bytes": 19412
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\orientation_video_20261027\\protocol\\video_rotation_v1.json",
+      "sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+      "bytes": 2546
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_recovery_20261028\\delivery\\results\\replay_v2\\full640_5hz_seed26\\source_events.json",
+      "sha256": "10ac3a009b58b64ab334384d90d37ae0889bd97cfd58e1ecae24ad8899ac25cf",
+      "bytes": 1107
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_recovery_20261028\\delivery\\results\\replay_v2\\full640_5hz_seed26\\summary.json",
+      "sha256": "a6931780ebad01563302afb1797f21c60875bb9178084d03ee0011f4af0f0db4",
+      "bytes": 833
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_recovery_20261028\\protocol\\recovery_v2.json",
+      "sha256": "3195353947c85c31f9b69498f91ab0a3593d11ec8c3d24781ccfbe24441d7b1c",
+      "bytes": 4230
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed26\\handoff_events.json",
+      "sha256": "6975f4d6ceafc2bbef1a00081bf0499ca1bbbaa47ecdb420b943a49203fd4ad0",
+      "bytes": 1207
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\summary.json",
+      "sha256": "0740ae1ccc60986b0805e2b99008e616803ac0a0f703f77c1ad012518393f53a",
+      "bytes": 3505
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\protocol\\handoff_v1.json",
+      "sha256": "1053412172c665fb56e73960f012605abce9022766e31b67938eb422147fafa2",
+      "bytes": 6967
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed27\\source_events.json",
+      "sha256": "cd34d90b4e5a562c304a70b70cf112acb270b42bd8e0d7c3a537b9597360b171",
+      "bytes": 1004
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed27\\summary.json",
+      "sha256": "d1988cb679cbe70ed9797d536887e4bbf0e6076899bc41a10f159d115d876db2",
+      "bytes": 833
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_recovery_20261028\\protocol\\recovery_v2.json",
+      "sha256": "3195353947c85c31f9b69498f91ab0a3593d11ec8c3d24781ccfbe24441d7b1c",
+      "bytes": 4230
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed27\\handoff_events.json",
+      "sha256": "452e4fa4fd979294dcc161d029c4b7ea04d833a4fc1d261ff3fdc028db1e47c9",
+      "bytes": 1104
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\summary.json",
+      "sha256": "0740ae1ccc60986b0805e2b99008e616803ac0a0f703f77c1ad012518393f53a",
+      "bytes": 3505
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\protocol\\handoff_v1.json",
+      "sha256": "1053412172c665fb56e73960f012605abce9022766e31b67938eb422147fafa2",
+      "bytes": 6967
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed28\\source_events.json",
+      "sha256": "9a55bb4b84ca96cb1f42117a98283e1ffbf1c66609803617f4c1b061fa05a306",
+      "bytes": 1114
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed28\\summary.json",
+      "sha256": "f14b90084574da94c3f86fbd7a38ce990c8f4d042629d328b34492cf5a58fbaf",
+      "bytes": 832
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\counting_recovery_20261028\\protocol\\recovery_v2.json",
+      "sha256": "3195353947c85c31f9b69498f91ab0a3593d11ec8c3d24781ccfbe24441d7b1c",
+      "bytes": 4230
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed28\\handoff_events.json",
+      "sha256": "9a55bb4b84ca96cb1f42117a98283e1ffbf1c66609803617f4c1b061fa05a306",
+      "bytes": 1114
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\summary.json",
+      "sha256": "0740ae1ccc60986b0805e2b99008e616803ac0a0f703f77c1ad012518393f53a",
+      "bytes": 3505
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\confirmation_handoff_20261028\\protocol\\handoff_v1.json",
+      "sha256": "1053412172c665fb56e73960f012605abce9022766e31b67938eb422147fafa2",
+      "bytes": 6967
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\secondstage_iou_20261028\\delivery\\results\\secondstage_iou_seed26\\handoff_events.json",
+      "sha256": "ec0268ebe9e70fe940eaee0de2c1d325ecb281c6faab19fb5e90720a2891f5e4",
+      "bytes": 1205
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\secondstage_iou_20261028\\delivery\\results\\summary.json",
+      "sha256": "faaaccd4a94c07cef2c685cb1e58001b3411ed2aa3a06d009e1ec711cf05d305",
+      "bytes": 13880
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\secondstage_iou_20261028\\protocol\\secondstage_v1.json",
+      "sha256": "91170ac7894362a78f225f35397185cd75f600c92afdd97fdbc40db978883978",
+      "bytes": 7769
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\secondstage_iou_20261028\\delivery\\results\\secondstage_iou_seed27\\handoff_events.json",
+      "sha256": "f1293e9d9fb0700ddebd001c5d5970b7e48bed99e9e1408d682c3738f4775bff",
+      "bytes": 1103
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\secondstage_iou_20261028\\delivery\\results\\summary.json",
+      "sha256": "faaaccd4a94c07cef2c685cb1e58001b3411ed2aa3a06d009e1ec711cf05d305",
+      "bytes": 13880
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\secondstage_iou_20261028\\protocol\\secondstage_v1.json",
+      "sha256": "91170ac7894362a78f225f35397185cd75f600c92afdd97fdbc40db978883978",
+      "bytes": 7769
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\secondstage_iou_20261028\\delivery\\results\\secondstage_iou_seed28\\handoff_events.json",
+      "sha256": "be69b06512287855abf5388b57bc57a48c95beaa38a2b4e07afa72e5fd04fae8",
+      "bytes": 1114
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\secondstage_iou_20261028\\delivery\\results\\summary.json",
+      "sha256": "faaaccd4a94c07cef2c685cb1e58001b3411ed2aa3a06d009e1ec711cf05d305",
+      "bytes": 13880
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\secondstage_iou_20261028\\protocol\\secondstage_v1.json",
+      "sha256": "91170ac7894362a78f225f35397185cd75f600c92afdd97fdbc40db978883978",
+      "bytes": 7769
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\delivery\\results\\allow_lost_iou_seed26\\handoff_events.json",
+      "sha256": "0b2477c73262a698bdde501ab8407ef363a70e03af4330ffbf9e96042601a6e7",
+      "bytes": 1204
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\delivery\\results\\summary.json",
+      "sha256": "833945bf66933ea2d4d99063decd32e3d784529839a4c13da88a290d335d7a22",
+      "bytes": 13150
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\protocol\\lost_v1.json",
+      "sha256": "a921b8bde430c4b58481002b9de261d3f5080d33870d7be9d898419df4fd5643",
+      "bytes": 12072
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\delivery\\results\\allow_lost_iou_seed27\\handoff_events.json",
+      "sha256": "57003c43ba2c86a2c65dc4ca660fc7390e91eadfc1405a2a3fbd2d6c66cce7e5",
+      "bytes": 1102
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\delivery\\results\\summary.json",
+      "sha256": "833945bf66933ea2d4d99063decd32e3d784529839a4c13da88a290d335d7a22",
+      "bytes": 13150
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\protocol\\lost_v1.json",
+      "sha256": "a921b8bde430c4b58481002b9de261d3f5080d33870d7be9d898419df4fd5643",
+      "bytes": 12072
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\delivery\\results\\allow_lost_iou_seed28\\handoff_events.json",
+      "sha256": "76b7c07b246dbacf16e80d912c27d6031cfbdb6a3a5799c95668e1b8b7fbe974",
+      "bytes": 1112
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\delivery\\results\\summary.json",
+      "sha256": "833945bf66933ea2d4d99063decd32e3d784529839a4c13da88a290d335d7a22",
+      "bytes": 13150
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\lost_recovery_20261028\\protocol\\lost_v1.json",
+      "sha256": "a921b8bde430c4b58481002b9de261d3f5080d33870d7be9d898419df4fd5643",
+      "bytes": 12072
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\cows2021_adaptation_20261027\\delivery\\results\\training\\seed26\\weights\\last.pt",
+      "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "bytes": 5336965
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\cows2021_adaptation_20261027\\delivery\\results\\training\\seed27\\weights\\last.pt",
+      "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "bytes": 5336965
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\cows2021_adaptation_20261027\\delivery\\results\\training\\seed28\\weights\\last.pt",
+      "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "bytes": 5336965
+    }
+  ],
+  "images": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_00000_GT_hypothesis.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "295b53c5e0bfd69f4e57bb6725719d1d504cb05e639e6e96854837384a95c344"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_00000_native.jpg",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "c0e5e50706f0c13eda851b86c0fff69e089e1181adaed460149362849a0fb0da"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_00000_native.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "20ef507ba5808d32f0cb1aa5266a0e4113c602ca6216201584b18a08df7dbd82"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_08991_GT_hypothesis.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "40f693c073b9c388dc1dde6fd30ba9f1e42f8efa1e31df34b1ab4fdf840d81bb"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_08991_native.jpg",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "8f953040de35e4cd3ccddf696ec53725a4755caa90d8430f2ef5eac4e87fcdaf"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_08991_native.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "572a42c9be35eddf429544882834c71ae9801eaa8fa5aea25e22299822db3e68"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_26973_GT_hypothesis.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "8098c2c77bd31815f50dc949fe0f5907c5508ba16d36f1b4ff15f9e5257a78ec"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_26973_native.jpg",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "e1bd73f102ce9687726d56f0cb372fec9a051f2c4028984d069416efad57e6b0"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\target_26973_native.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "b96351201a3453acd7c44b6bde54d728ba1152054fbbc43bdfe29008acdb840b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\frame_review\\three_times_native_and_GT_hypothesis.jpg",
+      "dimensions": [
+        1800,
+        2940
+      ],
+      "sha256": "27a1affd27d20a25823ca6660bc493c1a199004b61000d5aa2bfc1ec65a7f164"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\scale_control\\native_and_GT_x2_diagnostic.jpg",
+      "dimensions": [
+        1800,
+        3000
+      ],
+      "sha256": "af8ac0a0cf0df3d6c097682338eeeb1e5d2fd11ba130bc56b7d5ebffdb00d738"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\scale_control\\target_00000_GT_x2.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "2ca1fc7e6ea83a50137cf1bd57eabbe9477395031462d6dfa4140581f11b8b4f"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\scale_control\\target_08991_GT_x2.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "c08fe1f1c657283c426a7dff973ea729d08b5224651b2d7da965d9edcf6f469a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\scale_control\\target_26973_GT_x2.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "ccad8a5df8f8552e1e500b64fe2d376ce48c212a146f9f7ebd750bd6f68d47cc"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\tail_review\\endpoint_and_final_native_GT_context.jpg",
+      "dimensions": [
+        1800,
+        2000
+      ],
+      "sha256": "c75cf8394d5fb191718c06bc2707e8fe001543167badda58ab5df26ec147b550"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\tail_review\\target_53919_last_GT_context.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "67154007ad4b453433332090e477d35db3ce13a578eab97a488aabb8fdb83b11"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\tail_review\\target_53919_native.jpg",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "d35f9ff764ce35f40eb45f78df194ed8b1069f1f51c7a97becca90fa9e614103"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\tail_review\\target_53919_native.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "a2ca9bdc9db48b302e001c13516f209857ce86d71746657bd7bd7a7f8b5f795d"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\tail_review\\target_53945_last_GT_context.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "1d4ba3b75c67765bdb5ef58a13eb24cd238eb829631712b13ebcfa1f0b6ba027"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\tail_review\\target_53945_native.jpg",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "782cc7cf5b69dbc420b457d9a9d101060b39169d516597e684585d3ecc71e486"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\results\\tail_review\\target_53945_native.png",
+      "dimensions": [
+        2944,
+        2944
+      ],
+      "sha256": "b1e949d77ad01bb9c09158ea7dd1ff39fa2229f0cf08b6982a129616ba707b05"
+    }
+  ],
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\计划与验收.md",
+      "sha256": "a3f8ecae2268c74cf5c77b944171b3b0bd343d07bd8f76301324565fd0ce4179"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\MooTrack原片对齐核查与准入决策.md",
+      "sha256": "a361fbe46b4547e095d5909f1d53edd88101771759453e1737b341d6607a49a4"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\mootrack_alignment_20261028\\Review与当前状态.md",
+      "sha256": "69acaf1c7bc623a25fdd89a3c369cf223cb608c496d3207b9a44fb99066ec68e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究进度.md",
+      "sha256": "e0439f84a4473f56e2ea4c6fe3dac4bfd6c596c3ce2653978fc0d69e4cdb3cbd"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究总览_从想法到论文.md",
+      "sha256": "617be2e832d71edaa4bc4c125b45f5593c6140ab67d1db9d041cd07f6bed145a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\phase3_diagnosis_20261026\\方案与执行状态.md",
+      "sha256": "60f49de7e56f845733139ed40fa7c043f9dd6eba9d464afd37f3a8d86c3ea23b"
+    }
+  ],
+  "previous_goal_turn_classification": "progress: six-output duplicate-track audit with raw-box links and distinct-cow counterexample",
+  "this_goal_turn_classification": "progress: native video acquired by bounded ranges; spatial mismatch found and author-supported scale control checked",
+  "next_priority": "Continuous public-video alignment windows and fixed event admission; independent user reference and real board validation when available",
+  "whole_goal_complete": false,
+  "goal_should_remain_active": true
+}

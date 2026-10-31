@@ -1,0 +1,47 @@
+{
+  "name": "Read-only six-update state/eligibility/cost diagnostic, after exact reproduction",
+  "reproduction_job_id": "130347",
+  "reproduction_terminal_state": "COMPLETED",
+  "full_replay_protocol_sha256": "d78d81326b9f702f1596ab9a03408f6c3db6e074bdc7661e62c4f0d263c8e434",
+  "full_replay_ticks": 2025,
+  "short_reproduction_red_exit_codes": [
+    1,
+    1
+  ],
+  "short_replay_frames": [
+    2650,
+    2655,
+    2660,
+    2665,
+    2670,
+    2675
+  ],
+  "target_ID": 19,
+  "fragment_ID": 23,
+  "hypotheses_ranked": [
+    {
+      "id": "H1",
+      "claim": "The leading cow has no retained detector observation in the three-tick gap.",
+      "observable_prediction": "No matching source-supported leading-cow raw box exists at2650/2655/2660; cached raw row list and native source evidence must be retained.",
+      "authority": "Raw presence is algorithmic evidence; physical cow correspondence requires visual case review."
+    },
+    {
+      "id": "H2",
+      "claim": "When a cow box reappears, association cost or global competition prevents original-ID recovery.",
+      "observable_prediction": "The trace records the target predicted geometry, candidate IoU/score costs, accepted assignments and unmatched indices at2665/2670/2675."
+    },
+    {
+      "id": "H3",
+      "claim": "The original target is absent from the association pool or ineligible for a relevant stage.",
+      "observable_prediction": "Target pool membership, state and second-stage eligibility differ from merely exceeding a numeric threshold; removal pools and duplicate cleanup are captured."
+    },
+    {
+      "id": "H4",
+      "claim": "Output exists but native ROI filtering removes it.",
+      "observable_prediction": "ID19 appears among confirmed full-image outputs on a missing ROI tick and its center lies outside(0.34,0.75)."
+    }
+  ],
+  "parameters_or_models_changed": false,
+  "formal_scores_computed": false,
+  "whole_goal_complete": false
+}

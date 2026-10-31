@@ -1,0 +1,9 @@
+             JOBID|PARTITION|                     NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+            130345|     4gpu|  long-video-fixed-replay| RUNNING|      0:55|     20:00|gpu02
+JobID                          JobName  Partition      State ExitCode    Elapsed  AllocCPUS     ReqMem     MaxRSS                                                                        AllocTRES 
+------------ ------------------------- ---------- ---------- -------- ---------- ---------- ---------- ---------- -------------------------------------------------------------------------------- 
+130345         long-video-fixed-replay       4gpu    RUNNING      0:0   00:00:55          4        16G                                                           billing=4,cpu=4,gres/gpu=1,node=1 
+130345.batch                     batch               RUNNING      0:0   00:00:55          4                                                                          cpu=4,gres/gpu=1,mem=0,node=1 
+{"model": "official", "processed_source_frame0": 0, "observation_ticks": 1}
+{"model": "official", "processed_source_frame0": 1250, "observation_ticks": 251}
+{"model": "official", "processed_source_frame0": 2500, "observation_ticks": 501}

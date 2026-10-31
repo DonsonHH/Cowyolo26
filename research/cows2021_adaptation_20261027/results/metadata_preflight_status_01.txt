@@ -1,0 +1,36 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS
+129903|idcoo-cows21-metadata|cu|COMPLETED|0:0|00:00:04|2|4G|
+129903.batch|batch||COMPLETED|0:0|00:00:04|2||1176K
+129903.0|python||COMPLETED|0:0|00:00:04|2||3060K
+{
+  "status": "ACTUAL_NEW_MODULE_IMPORTS_AND_ALL_METADATA_GEOMETRIES_PASS",
+  "job_id": "129903",
+  "host": "cu16",
+  "protocol_sha256": "894848001296be9e017ac1fc1920dad67d2c9510dd1535933b44436611dd7b4b",
+  "catalog_sha256": "ab19bcbf2c40419d38a4f933923ab79aa706ed42b8aec68de8454830d6ab2f5e",
+  "rows_checked": 13165,
+  "maximum_envelope_difference_pixels": 2.2737367544323206e-13,
+  "source_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "torch": "2.8.0+cu128",
+  "ultralytics": "8.4.63",
+  "Pillow": "11.3.0",
+  "OpenCV": "4.12.0",
+  "candidate_final_image_pixels_opened": false,
+  "new_Cows_image_pixels_opened": false,
+  "actual_dataset_loader_executed": false,
+  "CUDA_or_model_forward_performed": false,
+  "formal_training_updates": 0,
+  "whole_goal_complete": false
+}{"status": "ACTUAL_NEW_MODULE_IMPORTS_AND_ALL_METADATA_GEOMETRIES_PASS", "job_id": "129903", "host": "cu16", "protocol_sha256": "894848001296be9e017ac1fc1920dad67d2c9510dd1535933b44436611dd7b4b", "catalog_sha256": "ab19bcbf2c40419d38a4f933923ab79aa706ed42b8aec68de8454830d6ab2f5e", "rows_checked": 13165, "maximum_envelope_difference_pixels": 2.2737367544323206e-13, "source_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef", "torch": "2.8.0+cu128", "ultralytics": "8.4.63", "Pillow": "11.3.0", "OpenCV": "4.12.0", "candidate_final_image_pixels_opened": false, "new_Cows_image_pixels_opened": false, "actual_dataset_loader_executed": false, "CUDA_or_model_forward_performed": false, "formal_training_updates": 0, "whole_goal_complete": false}
+    PID                  STARTED     ELAPSED S COMMAND
+2794954 Tue Oct 27 16:05:51 2026       20:08 S /share/home/renly/projects/idcoo_research_20261026/env/bin/python -u /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/tools/fetch_images.py --attempt 01
+{
+  "status": "DOWNLOADING_DEVELOPMENT_IMAGES",
+  "expected_images": 8380,
+  "saved_images": 500,
+  "failed_images": 0,
+  "elapsed_s": 1136.9285651510581,
+  "complete_decode_or_training_started": false,
+  "candidate_final_pixels_accessed": false
+}

@@ -1,0 +1,60 @@
+{
+  "status": "FAILED",
+  "PID": 1634,
+  "boot_id": "9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f",
+  "protocol_sha256": "f73e198f2e6ee8a3de08f15fc86bd2476ed69b0992e7d7e0bf6afe4450b18478",
+  "rows": [
+    {
+      "name": "old_gallery_000",
+      "group": "old_gallery",
+      "index": 0,
+      "tensor_sha256": "1c0830e1271ac7f99c9a506a404caa3f03249a696d24e8e1fd71333f69682099",
+      "max_normalized_embedding_difference": 1.296401023864746e-06,
+      "cosine": 0.9999999960436813,
+      "runtime_Pillow_tensor_max_difference": 0.0,
+      "model_ms": 142.309421,
+      "output_file": "old_gallery_000.npz",
+      "output_sha256": "1dc292ab478fabe2a94b2d4f1b81d81b559d4765625d47aff6eba43e2582f4f8"
+    },
+    {
+      "name": "old_gallery_001",
+      "group": "old_gallery",
+      "index": 1,
+      "tensor_sha256": "8636669af6121973730c9172a2a5649387421fecc9dd5e6117d9d405ae98f79a",
+      "max_normalized_embedding_difference": 1.5310943126678467e-06,
+      "cosine": 0.999999903347299,
+      "runtime_Pillow_tensor_max_difference": 0.0,
+      "model_ms": 142.366646,
+      "output_file": "old_gallery_001.npz",
+      "output_sha256": "d0ba80b770095ad632602fae957229c563cab0c0ae68e915921bdf65851e9264"
+    },
+    {
+      "name": "old_gallery_002",
+      "group": "old_gallery",
+      "index": 2,
+      "tensor_sha256": "ca04fe887688b0eec248d010a63fa23acc822f92f1aba2e0f9ebaf4c9854cdfe",
+      "max_normalized_embedding_difference": 1.8849968910217285e-06,
+      "cosine": 0.9999998674233667,
+      "runtime_Pillow_tensor_max_difference": 0.0,
+      "model_ms": 142.391883,
+      "output_file": "old_gallery_002.npz",
+      "output_sha256": "3cdbdbc3a91be9724e612f17486f5cb88337380282099a964545cb95590bae70"
+    }
+  ],
+  "warmups": [
+    {
+      "index": 0,
+      "ms": 153.266842
+    },
+    {
+      "index": 1,
+      "ms": 142.735336
+    }
+  ],
+  "model_forwards": 4,
+  "PL_actions": 0,
+  "whole_goal_complete": false,
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/board_vectors_v2.py\", line 32, in main\n    preprocessing_error=float(np.max(np.abs(runtime_tensor-x)));assert preprocessing_error<=p['Pillow_preprocessing_max_absolute_tolerance']\nAssertionError\n",
+  "wall_s": 4.0171668
+}

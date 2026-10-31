@@ -1,0 +1,52 @@
+{
+  "status": "FINAL20_ALL90_SOURCE_INPUTS180_RAW_FEATURES1200_ID_SCORES480_DECISIONS8_INTERVALS20_PAIRED_CONTRASTS_INDEPENDENTLY_RECOMPUTED",
+  "created_UTC": "2026-10-30T11:15:06.411679+00:00",
+  "image_inputs": 90,
+  "model_image_forwards": 180,
+  "network_calls": 16,
+  "input_tensor_anchors": 6,
+  "identity_score_cells": 1200,
+  "decisions": 480,
+  "per_ID_interval_sets": 8,
+  "paired_ID_contrasts": 20,
+  "new_model_forwards_by_verification": 0,
+  "main_outcomes": [
+    {
+      "model": "old_C",
+      "policy": "primary_cal10_fold0",
+      "threshold": 0.8348239883357427,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 10,
+      "W": 2,
+      "U": 18,
+      "M": 0,
+      "unknown_FA": 3,
+      "known_Top1": 22,
+      "known_Top5": 28,
+      "accepted_wrong_fraction": 0.3333333333333333
+    },
+    {
+      "model": "new_C_domain_seed26",
+      "policy": "primary_cal10_fold0",
+      "threshold": 0.8304473380979187,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 3,
+      "W": 0,
+      "U": 27,
+      "M": 0,
+      "unknown_FA": 0,
+      "known_Top1": 30,
+      "known_Top5": 30,
+      "accepted_wrong_fraction": 0.0
+    }
+  ],
+  "same_scene_component_identity_namespace_disjointness_only": true,
+  "unknown_and_perfect_Top1_bootstrap_boundaries_not_population_guarantees": true,
+  "final20_IDs_now_seen": true,
+  "reservedMar05toMar11_pixels_opened": false,
+  "current12_passage_permanent_ID_GT_obtained": false,
+  "new_default_model_or_threshold_adopted": false,
+  "whole_goal_complete": false
+}

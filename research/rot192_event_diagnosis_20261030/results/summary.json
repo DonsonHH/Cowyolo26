@@ -1,0 +1,169 @@
+{
+  "status": "THREE_FIXED_NUMERIC_IMPLEMENTATIONS_SIX_CASES18_REFERENCE_CONDITIONED_PATHS_COMPLETE",
+  "created_host_UTC": "2026-10-29T17:22:23.461059+00:00",
+  "protocol_sha256": "865f15e779db62f7538a897a3e819b003d1b7b99cf1fea033d9338b21c955818",
+  "cached_conditions": 3,
+  "IoU_levels": [
+    0.5,
+    0.3
+  ],
+  "cases": [
+    {
+      "condition": "FP32",
+      "threshold": 0.5,
+      "reference_is_GT": false,
+      "actual_global_down_count": 10,
+      "actual_global_up_count": 0,
+      "actual_events_with_direct_reference_correspondence": 10,
+      "actual_unmapped_event_count": 0,
+      "oracle_down_counts": {
+        "presence_using_reference_center": 10,
+        "raw_box_center_assisted_identity": 10,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 8
+      },
+      "oracle_distinct_reference_tracks_with_down_event": {
+        "presence_using_reference_center": 10,
+        "raw_box_center_assisted_identity": 10,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 8
+      },
+      "per_track_diagnostic_buckets": {
+        "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE": 10,
+        "MATCHED_RAW_COVERAGE_CANNOT_FORM_CURRENT_STABLE_REGIONS": 2
+      },
+      "tie_optima_frame_problems": 0
+    },
+    {
+      "condition": "FP32",
+      "threshold": 0.3,
+      "reference_is_GT": false,
+      "actual_global_down_count": 10,
+      "actual_global_up_count": 0,
+      "actual_events_with_direct_reference_correspondence": 10,
+      "actual_unmapped_event_count": 0,
+      "oracle_down_counts": {
+        "presence_using_reference_center": 11,
+        "raw_box_center_assisted_identity": 11,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 10
+      },
+      "oracle_distinct_reference_tracks_with_down_event": {
+        "presence_using_reference_center": 11,
+        "raw_box_center_assisted_identity": 11,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 10
+      },
+      "per_track_diagnostic_buckets": {
+        "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE": 10,
+        "MATCHED_RAW_COVERAGE_CANNOT_FORM_CURRENT_STABLE_REGIONS": 1,
+        "ID_FRAGMENTATION_COUNTER_STATE_OR_UNRESOLVED_EVENT_CORRESPONDENCE": 1
+      },
+      "tie_optima_frame_problems": 0
+    },
+    {
+      "condition": "QDQ",
+      "threshold": 0.5,
+      "reference_is_GT": false,
+      "actual_global_down_count": 11,
+      "actual_global_up_count": 0,
+      "actual_events_with_direct_reference_correspondence": 11,
+      "actual_unmapped_event_count": 0,
+      "oracle_down_counts": {
+        "presence_using_reference_center": 10,
+        "raw_box_center_assisted_identity": 11,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 10
+      },
+      "oracle_distinct_reference_tracks_with_down_event": {
+        "presence_using_reference_center": 10,
+        "raw_box_center_assisted_identity": 11,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 10
+      },
+      "per_track_diagnostic_buckets": {
+        "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE": 11,
+        "MATCHED_RAW_COVERAGE_CANNOT_FORM_CURRENT_STABLE_REGIONS": 1
+      },
+      "tie_optima_frame_problems": 0
+    },
+    {
+      "condition": "QDQ",
+      "threshold": 0.3,
+      "reference_is_GT": false,
+      "actual_global_down_count": 11,
+      "actual_global_up_count": 0,
+      "actual_events_with_direct_reference_correspondence": 11,
+      "actual_unmapped_event_count": 0,
+      "oracle_down_counts": {
+        "presence_using_reference_center": 11,
+        "raw_box_center_assisted_identity": 11,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 11
+      },
+      "oracle_distinct_reference_tracks_with_down_event": {
+        "presence_using_reference_center": 11,
+        "raw_box_center_assisted_identity": 11,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 11
+      },
+      "per_track_diagnostic_buckets": {
+        "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE": 11,
+        "MATCHED_RAW_COVERAGE_CANNOT_FORM_CURRENT_STABLE_REGIONS": 1
+      },
+      "tie_optima_frame_problems": 0
+    },
+    {
+      "condition": "actual_O8",
+      "threshold": 0.5,
+      "reference_is_GT": false,
+      "actual_global_down_count": 11,
+      "actual_global_up_count": 0,
+      "actual_events_with_direct_reference_correspondence": 11,
+      "actual_unmapped_event_count": 0,
+      "oracle_down_counts": {
+        "presence_using_reference_center": 10,
+        "raw_box_center_assisted_identity": 10,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 11
+      },
+      "oracle_distinct_reference_tracks_with_down_event": {
+        "presence_using_reference_center": 10,
+        "raw_box_center_assisted_identity": 10,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 11
+      },
+      "per_track_diagnostic_buckets": {
+        "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE": 11,
+        "MATCHED_RAW_COVERAGE_CANNOT_FORM_CURRENT_STABLE_REGIONS": 1
+      },
+      "tie_optima_frame_problems": 0
+    },
+    {
+      "condition": "actual_O8",
+      "threshold": 0.3,
+      "reference_is_GT": false,
+      "actual_global_down_count": 11,
+      "actual_global_up_count": 0,
+      "actual_events_with_direct_reference_correspondence": 11,
+      "actual_unmapped_event_count": 0,
+      "oracle_down_counts": {
+        "presence_using_reference_center": 11,
+        "raw_box_center_assisted_identity": 11,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 11
+      },
+      "oracle_distinct_reference_tracks_with_down_event": {
+        "presence_using_reference_center": 11,
+        "raw_box_center_assisted_identity": 11,
+        "post_confirmed_plus_valid_admitted_center_assisted_identity": 11
+      },
+      "per_track_diagnostic_buckets": {
+        "ACTUAL_EVENT_HAS_DIRECT_REFERENCE_CORRESPONDENCE": 11,
+        "MATCHED_RAW_COVERAGE_CANNOT_FORM_CURRENT_STABLE_REGIONS": 1
+      },
+      "tie_optima_frame_problems": 0
+    }
+  ],
+  "reference_box_samples": 581,
+  "case_reference_rows": 3486,
+  "frame_assignment_problems": 4296,
+  "counter_oracle_paths": 18,
+  "reference_is_independent_GT": false,
+  "identity_labels_generated": false,
+  "new_model_forwards": 0,
+  "new_training_updates": 0,
+  "board_actions": 0,
+  "global_pipeline_changed": false,
+  "whole_goal_complete": false,
+  "elapsed_s": 0.953
+}

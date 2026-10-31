@@ -1,0 +1,19 @@
+JobID|JobName|State|ExitCode|Elapsed
+129716|idcoo-rf-queue|COMPLETED|0:0|00:00:03
+129716.batch|batch|COMPLETED|0:0|00:00:03
+129716.0|python|COMPLETED|0:0|00:00:00
+129716.1|python|COMPLETED|0:0|00:00:00
+129716.2|python|COMPLETED|0:0|00:00:03
+test_resource_and_completion_conservation (__main__.QueueContract.test_resource_and_completion_conservation) ... ok
+test_short_job_fits_gap_positive_control (__main__.QueueContract.test_short_job_fits_gap_positive_control) ... ok
+test_whole_job_must_fit_idle_gap (__main__.QueueContract.test_whole_job_must_fit_idle_gap) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.012s
+
+OK
+efd0b501fa74f0ee5e46eafe344f30ee5f64561e09078acddc55f537e7e27f44  /share/home/renly/projects/idcoo_research_20261026/rf_queue/tools/association.py
+3d52357187506250a40cbe852b98adedce3d740ff375d7b63449e39be1482f53  /share/home/renly/projects/idcoo_research_20261026/rf_queue/tools/queue_simulator.py
+f012b1cd6c7ae6b2c1028d315468c6aeabb5c15aea6d8917358a4b41143b39f6  /share/home/renly/projects/idcoo_research_20261026/rf_queue/tools/run_controlled.py
+400e9a8c9a115a5475e05ba227f8af7169912ac0449018fa616ac0c8cabd25f7  /share/home/renly/projects/idcoo_research_20261026/rf_queue/protocol/controlled_rf_queue_v1.json
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)

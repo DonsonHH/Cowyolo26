@@ -1,0 +1,89 @@
+{
+  "name": "Fixed CPU-fold sixepoch paired integerforward QAT and float continuation v1",
+  "created_UTC": "2026-10-27T17:40:15.320768+00:00",
+  "source_models": [
+    {
+      "seed": 26,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+      "sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "original_selected_epoch": 5,
+      "integer_initial_state": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/results/smoke_v2/seed26_initial/state.pt",
+      "integer_initial_state_sha256": "28c4fe3caa18ecfe0098aeb4e93d032c6cc8032bf2f0130343a72278190e2d31"
+    },
+    {
+      "seed": 27,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/best_encoder.pt",
+      "sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+      "original_selected_epoch": 5,
+      "integer_initial_state": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/results/smoke_v2/seed27_initial/state.pt",
+      "integer_initial_state_sha256": "56243824eec64b6f833963d4a22436863ca68226e7ee02b78f4e38dbffc9fe21"
+    },
+    {
+      "seed": 28,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/best_encoder.pt",
+      "sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+      "original_selected_epoch": 10,
+      "integer_initial_state": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/results/smoke_v2/seed28_initial/state.pt",
+      "integer_initial_state_sha256": "32122e2d152e817245cd4346a9b18582ea2c4d87ea8d9df6528c76f4cc9cd606"
+    }
+  ],
+  "scope": "Existing training and reused developmentvalidation only; no oldevaluation/newholdout, sourcevideo orboard inference.",
+  "admitted_smoke_summary_sha256": "f065d15543d3e42aad6e63d3c2fbcc38df8390c91cc7a1de250a396b6a5ff5fb",
+  "admitted_independent_verification_sha256": "d733785fc22c64384220d0bfb6053beb37d030e1232e3375d1d54b8f57ec6f5f",
+  "source_manifest_sha256": "dda82ba39a8a8f1b82bd309f5272ceb0471f74103850678e7355e6faff078aba",
+  "calibration_manifest_sha256": "2977907ef64834918fcf1f4bc5748b0285f08a4fb455574fa4da6eefc6a1e110",
+  "code_freeze": [
+    {
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py",
+      "sha256": "5fdcc1a5b5005faf8aaf98f95c979215495e39d1bae0f5ae3608d628cb645163"
+    },
+    {
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/export_integer.py",
+      "sha256": "40e69374dd4eba765085fda1f7eacf685c4e4fa6a4facbac1b1ddce94f4887d8"
+    },
+    {
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/smoke.py",
+      "sha256": "73ce7885d6555cc969e6f018c3debafdd9efdcb8a81cdb6a51099f2190753629"
+    }
+  ],
+  "training": {
+    "epochs": 6,
+    "batches_per_epoch": 20,
+    "identities_per_batch": 8,
+    "images_per_identity": 4,
+    "learning_rate": 3e-05,
+    "optimiser": "AdamW",
+    "weight_decay": 0.0001,
+    "loss": "mean(1-cos(student, frozen source teacher)) +0.25*batch-hard Euclidean triplet margin0.3",
+    "teacher": "Source trained encoder in eval on same augmented image; no validation/query training",
+    "checkpoint": "Fixed final epoch6; no checkpoint/seed selection"
+  },
+  "seeds": [
+    26,
+    27,
+    28
+  ],
+  "initialization": "CPU ConvBNfold from sourcecheckpoint for bothbranches. Integerbranch restore exact admittedinitialstate; assert FP32masterweights/biases identical to pairedfloat. Discarded2update smoke states neverused.",
+  "calibration": "Use exact stored64traincalibration manifest and fixed admitted qparams, no recalc/calibration onvalidation.",
+  "paired_control": "Reset seedperbranch; identical120P8K4indices, augmented image tensor SHA256 and optimizer/loss/stepbudget. All104weights/bias parameter tensors enabled.",
+  "conditions": [
+    "source_folded_fp32",
+    "initial_integer",
+    "paired_float_continuation",
+    "integer_forward_qat"
+  ],
+  "export_gate": {
+    "vectors": 8,
+    "maximum_absolute_error": 0.001,
+    "minimum_cosine": 0.9999,
+    "maximum_packing_error": 1e-06
+  },
+  "adopted_validation_runtime": "CPU ORT1.23.2 ALL withsession.disable_quant_qdq=1; OFF anddefaultALL reported in numericgate. Float graph usesOFFreference.",
+  "validation": "Existing25gallery55queries, maximagecosinescoreperidentity; empiricalunknownFAR<=.05 threshold maxC/minW/higherthreshold tie rule. Exploratory calibration andvalidation on reusedqueries, not independenttestperformance.",
+  "checkpoint": "Fixedlast epoch6, allseedsreported, no checkpoint/seed selection.",
+  "formal_QAT_target_updates": 360,
+  "paired_float_target_updates": 360,
+  "smoke_updates_carried_into_training": 0,
+  "FPGA_execution": false,
+  "whole_goal_complete": false
+}

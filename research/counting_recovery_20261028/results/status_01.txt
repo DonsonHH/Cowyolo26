@@ -1,0 +1,15 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed|MaxRSS
+130214|FAILED|1:0|00:00:06|
+130214.batch|FAILED|1:0|00:00:06|1172K
+130214.0|FAILED|1:0|00:00:06|800K
+    callback(self)
+    ~~~~~~~~^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/trackers/track.py", line 47, in on_predict_start
+    tracker = check_yaml(predictor.args.tracker)
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/utils/checks.py", line 707, in check_yaml
+    return check_file(file, suffix, hard=hard)
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/utils/checks.py", line 690, in check_file
+    raise FileNotFoundError(f"'{file}' does not exist")
+FileNotFoundError: 'samebuiltinbytetrack.yaml' does not exist
+srun: error: gpu02: task 0: Exited with exit code 1

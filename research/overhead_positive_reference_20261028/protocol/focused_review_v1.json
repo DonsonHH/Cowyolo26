@@ -1,0 +1,64 @@
+{
+  "name": "Prediction-free focused native review for assistant event-reference draft",
+  "source_sha256": "8210a5bf206dd7f2356bc3d4653b439ab6de12ccfdc8209fe301ac7f02807058",
+  "overview_visual_review_sha256": "6fe42a37657a8aa2dac5cc2e2dbc0c6110a3c6d7469d94e7d95f7d845a463b5d",
+  "source_fps": 25,
+  "ROI_native_xyxy": [
+    870,
+    0,
+    1920,
+    1440
+  ],
+  "gate_y_native": [
+    576,
+    864
+  ],
+  "center_ROI_x": [
+    0.34,
+    0.75
+  ],
+  "nominal_gate_y": [
+    0.4,
+    0.6
+  ],
+  "sample_hz": 5,
+  "contact_hz": 1,
+  "windows": [
+    {
+      "name": "group_passage",
+      "start_frame0": 2375,
+      "end_frame0_exclusive": 4375,
+      "sample_hz": 5,
+      "sample_stride": 5,
+      "contact_stride": 25,
+      "sample_frames": 400,
+      "contact_frames": 80
+    },
+    {
+      "name": "late_single",
+      "start_frame0": 5000,
+      "end_frame0_exclusive": 5625,
+      "sample_hz": 5,
+      "sample_stride": 5,
+      "contact_stride": 25,
+      "sample_frames": 125,
+      "contact_frames": 25
+    },
+    {
+      "name": "person_control",
+      "start_frame0": 9625,
+      "end_frame0_exclusive": 10125,
+      "sample_hz": 5,
+      "sample_stride": 5,
+      "contact_stride": 25,
+      "sample_frames": 100,
+      "contact_frames": 20
+    }
+  ],
+  "total_sample_frames": 625,
+  "total_contact_frames": 125,
+  "native_body_center_manual_annotation_planned": true,
+  "reference_authority": "assistant provisional annotation from original pixels, requires independent review",
+  "new_models_or_pseudolabels_used": false,
+  "whole_goal_complete": false
+}

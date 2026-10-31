@@ -1,0 +1,85 @@
+# Cows2021图像准入与后续训练
+
+2026年10月27日。承接[完整来源核查](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_labels_20261027/原始标注准入与来源恢复.md>)。本阶段按已经独立复核的日期清单取得原图，再检查完整解码、重复来源和实际标签加载。新一轮模型训练尚未开始。
+
+## 1. 固定输入与用途
+
+| 用途 | 日期 | 图像条目 | 本阶段动作 |
+| --- | --- | --- | --- |
+| 训练候选 | 2020-02-05至02-27 | 6809 | 下载原图并审计 |
+| 验证开发候选 | 2020-02-28至03-04 | 1571 | 下载原图并审计 |
+| 开发保留 | 2020-03-05至03-09 | 1400 | 本阶段不取得像素 |
+| 最终日期留出候选 | 2020-03-10至03-11 | 622 | 本阶段不取得像素；最终独立性仍待确认 |
+
+下载清单合计8380张，均来自大学目录中实际观察到的JPEG链接。按发布方目录看，包含Train/train的7248张、Train/val的1023张及Test/val的109张。这109张拍摄于3月4日，与原验证集同日期，依预先日期规则进入本项目验证开发角色。本项目不声称重现发布方原始split成绩。
+
+元数据仍保留全部10402张的来源角色、原始名称和日期。3月8/9日原视频已用于开发，不进入新的最终日期留出。数据没有因模型分数、原片计数或预期效果而重分组。[图像清单](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/input/image_fetch_manifest.json>)、[准入协议](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/protocol/data_admission_v1.json>)。
+
+## 2. 服务器上已经执行什么
+
+已核对renly账户、mu01主机、HOME、当前分区和队列。计算节点没有网络，因此下载在mu01进行；解码、重复检查、标签加载和模型计算交给Slurm。其他正在运行的用户作业没有改动。
+
+已上传元数据包5,756,386字节，SHA256为`0b7b8f4a356f5a31ff28ca1505a86840742ed4219683164fc67b44403cde02fd`，服务器逐项核对14个文件。网络进程于服务器本地时间2026-10-27 16:05:51启动，PID2794954，命令为本阶段`tools/fetch_images.py --attempt 01`。后续判断存活必须检查实际进程及命令，不能只看这个历史PID。
+
+2026年10月27日北京时间20:24（日志12:24 UTC）状态核查时，原进程仍在运行且命令/归属一致，进度记录7089张成功、11项请求失败，磁盘实际7103张、2,350,614,769字节；这是部分下载状态，不是完整清单。日志每100项更新一次。失败清单在当前轮次终态保存，之后确认原进程结束再补缺项。权威实时文件在：
+
+```text
+/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/download_attempt_01/
+/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/logs/download-attempt-01.log
+```
+
+本地保存[启动记录](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/download_launch_01.txt>)、[下载与衔接进程实查](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/wait_transfer_a_30.json>)及[元数据包校验](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/staging_metadata.json>)。最终下载结果取回并复核后再更新此处。
+
+本轮抽查一个早先缺失图，默认TLS重取返回200；该诊断没有写入正在下载的原图目录，也不据此推定所有失败已恢复。已准备终态补取入口，先检查真实`/proc`命令确认没有活动下载者，再逐项核对已保存成功文件的hash，使用新attempt复用旧文件并补缺，原失败清单保留。
+
+已用同一375518字节图像做有限传输比较：服务器约16.33秒，本机约27.72秒。该测量只说明当前路径慢，不建立稳定带宽或整批ETA。当前保持6个网络线程和默认TLS证书/域名校验；没有通过关掉证书校验处理之前的TLS问题。
+
+## 3. 图像和重复检查怎样验收
+
+本轮另作一次官方ZIP中央目录探测：8380张目标图像均找到唯一成员，但约10.9MB目录用了491秒，未显示明显传输收益，继续当前逐JPEG下载。探测没有读取图像成员；同时找到并核实作者身份/检测权重的实际公共入口。详见[官方归档与作者权重核查](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/官方归档与作者权重核查.md>)。
+
+2026年10月27日北京时间20:35增加一个传输缓存：在固定8380条清单中只选末尾300张开发图（08080–08379），使用3个低并发线程独立获取。主下载保持6线程，合计最多9个请求工作线程。缓存先关闭完整字节流、检查JPEG头并记录SHA256，再以不覆盖已有文件的原子硬链接放入原目录，供主清单写入者复用。该缓存不增加新样本、不改角色、标签或模型训练配置。全量解码仍由后续Slurm检查完成。[缓存协议](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/protocol/tail_cache_transport_v1.json>)、[启动记录](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/tail_cache_launch_01.txt>)。
+
+20:41实查主进程、缓存进程和衔接进程均存活，原图目录7475张，缓存进度50/300、0失败；主下载进度记录7389成功、11项失败。原图目录数量包含已提交的缓存，所以可以高于主下载进度。缓存的文件/字节记录最终仍须在主下载的完整manifest中复核，不能以目录数量代替下载完整终态。
+
+`audit_images.py`已经准备并传入服务器，尚未提交运行。它要求下载完整终态，先重新核对清单、日期、来源URL与每张原图hash，再执行Pillow验证/完整解码和OpenCV解码，检查1280×720尺寸。
+
+旧OpenCows归档在同一个Slurm作业内重新校验，并对11779张旧图重新解码和计算RGB指纹。新旧像素比较使用同一解码器；先前Windows索引保留为跨平台对照，若有差异单独报告，不由平台差异推断图像独立。
+
+处理规则在取得本批结果前写入协议：跨训练/验证的完全字节或RGB重复图，所有成员进入隔离，不迁移到另一个角色；组内重复显式保留为同源组，不当成多个独立来源。与旧数据完全重复的内容记录为开发材料重用。dHash只筛查需人工查看的相似候选，不直接判定同一次通行或同一头牛，也不据此自动批准独立测试。
+
+本阶段即使没有完全重复，也只证明所检查的字节/像素条件。跨日期牛群重合、同场背景或跨公开集关系仍需按论文具体主张处理。
+
+## 4. 标签与真实加载器
+
+`prepare_labels.py`已准备并传入服务器，在完整图像审计通过后执行。它从发布JSON重新计算可见旋转多边形包围框，与全部13165个派生框交叉核对；随后为被准入的图像建立独立别名和九位小数YOLO文本，不改原图和原标注。
+
+实际加载器锁定现有Ultralytics8.4.63，使用`check_det_dataset`和`build_yolo_dataset`核查全体训练/验证成员、类别、float32框和加载数量。此检查不运行模型前向或梯度更新；实际loader结果尚不存在。
+
+两个脚本与Slurm配置的hash均已核对。[辅助代码清单](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/auxiliary_tools_v1.json>)、[远端核对](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/auxiliary_tools_remote_verification.txt>)。单纯脚本存在和语法通过不等于图像或加载器关口通过。
+
+## 5. 之后怎样进入训练和原片展示
+
+顺序为：完整下载终态 → Slurm图像审计 → 相似候选及隔离复核 → 实际标签加载 → 固定训练协议 → GPU短跑并丢弃短跑权重 → 正式多seed训练 → 全部模型冻结 → 相同配置源片回放。
+
+在新图像完整性结果产生前，已经写定[训练协议v1](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/protocol/detector_v1.json>)：官方YOLO26n原权重重新初始化每次运行，seed为26/27/28，各10轮；320输入、batch32、显式AdamW、初始学习率0.002、AMP关闭。采用每个seed最后一轮`last.pt`，全部冻结后才回放源片，不凭视频计数挑选seed或checkpoint。
+
+该配置比较Cows日期分组适配后的开发效果。它与此前OpenCows实验的图像来源、标签和验证集不同，不能将结果变化归为纯粹的数据量或合成比例效应。实际隔离成员由预先准入规则决定，记录完整数量；不会根据模型成绩去掉困难图像。
+
+已准备2次真实CUDA更新的短跑、实际训练批次/优化器调用记录和三个模型共同冻结逻辑。短跑权重丢弃，正式训练重新读官方权重。模型计算没有提前开始。官方模型、旧微调模型及不利结果继续作为对照；原片回放范围仍为8912–10873帧，独立人工事件JSON用于计数评分。服务器训练与回放结果继续与PYNQ-Z2实测分别报告。
+
+## 6. 已在Slurm完成的早期检查
+
+作业**129903**在cu16正常结束，`COMPLETED / 0:0`，耗时4秒。它实际导入新标签准备、训练与短跑模块，确认Torch2.8.0+cu128、Ultralytics8.4.63、Pillow11.3.0与OpenCV4.12.0；重新计算全部13165个元数据包围框，最大差2.27×10^-13像素。官方源权重hash也一致。
+
+此作业没有打开新Cows原图、运行实际dataset loader或模型前向。检查的是环境和几何代码，图像解码、真实加载器及CUDA门槛继续待原图齐全后验收。[实际结果](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/metadata_preflight.json>)、[作业终态与日志检查](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/metadata_preflight_status_01.txt>)、[新代码版本清单](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/training_tools_v1.json>)。短作业的Slurm内存采样没有证明实际峰值，本轮不由其采样数推导部署内存。
+
+随后作业**129907**在Slurm正常完成，`COMPLETED / 0:0`，以固定清单的前64张训练图执行Pillow与OpenCV完整解码，实际Ultralytics加载了99个躯干标签。本机另从源派生目录重新生成相同float32标签并逐项对上，所用清单hash一致。该小范围检查没有运行模型前向、训练或打开验证/最终候选图像；它不是8380张全量准入。独立临时目录中的val路径只用于通过数据schema，未建立验证dataset或计算成绩。[64图实际结果](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/sample_loader64.json>)、[作业终态](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/sample_loader64_status_01.txt>)。
+
+## 7. 下载之后的衔接
+
+已启动一次有2小时上限的轻量衔接进程，实际PID219725。它跟踪当前下载者的真实命令与归属，等其终止；只有8380条目的完整终态、成员清单和代码hash通过后，才提交CPU图像审计。如果下载仍有失败，则保存状态等待补取，不启动模型训练。[启动记录](<C:/Users/Donson/Documents/ChatGPT/奶牛/cows2021_adaptation_20261027/results/download_handoff_launch_01.txt>)。后续存活及是否提交以实际进程/结果重新核查，不能由此启动记录推断已完成。
+
+三个新模型的回放代码已适配原有帧/跟踪/计数逻辑，新增独立事件复算和媒体验证入口。页面目前仅在本阶段templates中准备，未加入实际标注页面，也没有填入不存在的模型结果。正式权重冻结、回放、独立复算和六份MP4/WebM完整解码通过后再展示。
+
+当前图像下载尚未结束，全量图像完整性、全量实际loader和新模型结果均待产生。总研究目标仍包括独立双向事件、身份风险、板上联合运行和论文主张验收。

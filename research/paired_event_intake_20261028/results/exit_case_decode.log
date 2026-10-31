@@ -1,0 +1,16 @@
+[in#0/mpeg @ 0000025c65194300] Packet corrupt (stream = 0, dts = NOPTS).
+Input #0, mpeg, from 'C:\Users\Donson\Documents\ChatGPT\奶牛\phase3_diagnosis_20261026\inputs\multicam_original.mp4':
+  Duration: 00:09:20.37, start: 94431.435511, bitrate: 3713 kb/s
+  Stream #0:0[0x1e0]: Video: h264 (Main), yuvj420p(pc, bt709, progressive), 2560x1440, 25 fps, 25 tbr, 90k tbn, start 94431.435511
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Output #0, image2, to 'C:\Users\Donson\Documents\ChatGPT\奶牛\paired_event_intake_20261028\figures\native_%02d.jpg':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0: Video: mjpeg, yuvj420p(pc, bt709, progressive), 2560x1440, q=2-31, 200 kb/s, 25 fps, 25 tbn
+    Metadata:
+      encoder         : Lavc63.1.101 mjpeg
+    Side data:
+      CPB properties: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+[out#0/image2 @ 0000025c65194e80] video:5292KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=    6 fps=0.7 q=2.0 Lsize=N/A time=00:06:15.24 bitrate=N/A speed=43.6x elapsed=0:00:08.61    

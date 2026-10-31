@@ -1,0 +1,76 @@
+{
+  "schema_version": "paired-cattle-review-packet-v1",
+  "status": "DRAFT_INTAKE_BLOCKED",
+  "annotation_sha256": "f5ba12a01dab254cda864321ae5c7b0878a6dd077753af06753f99e5970c2c20",
+  "catalog_sha256": "88e05ca9962ba64ec8349a42aabf291aad7478e3e75efe93d981471172e34049",
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "frame_scope_inclusive": [
+    8912,
+    10873
+  ],
+  "conditions": 23,
+  "evaluation_protocol_sha256": "85a131c7261fdc0ef2e85b5783bdb5e7f70d120c4fc89a6f8be8fbb3b87f6e23",
+  "inspection": {
+    "status": "DRAFT_INSPECTION_COMPLETE_REFERENCE_NOT_CERTIFIED",
+    "structural_check": {
+      "structural_status": "PASS",
+      "reviewer_declaration": "QA-fixture-not-human-truth",
+      "blinding_declaration": "prior_outputs_seen",
+      "events": 2,
+      "event_status_counts": {
+        "complete": 2
+      },
+      "merged_reviewed_intervals": [],
+      "covered_frames": 0,
+      "full_video_coverage_declared": false,
+      "complete_events_outside_declared_coverage": [
+        "63e75afa-bef8-453a-a145-dd93872b5011",
+        "000ec6a1-2bba-484f-8e64-994f1fc7708f"
+      ],
+      "complete_events_on_unreliable_source_frame": [],
+      "coincident_event_groups_for_review": [
+        {
+          "source_frame": 1200,
+          "direction": "A->B",
+          "events": 2
+        }
+      ],
+      "frozen_reference_status": "PENDING_INDEPENDENT_REVIEW_AND_SOURCE_FRAME_CHECK",
+      "scope": "Schema and declared coverage only; does not establish correctness, human authorship or independence"
+    },
+    "requested_scope_inclusive": [
+      8912,
+      10873
+    ],
+    "coverage_complete": false,
+    "blocking_findings": [
+      "REQUESTED_SCOPE_NOT_FULLY_REVIEWED",
+      "COMPLETE_EVENT_OUTSIDE_REVIEWED_COVERAGE",
+      "KNOWN_QA_FIXTURE_NOT_HUMAN_REFERENCE"
+    ],
+    "warnings": [
+      "REVIEWER_DECLARES_PRIOR_PREDICTIONS_SEEN_DO_NOT_CLAIM_BLIND_TEST",
+      "COINCIDENT_EVENTS_REQUIRE_VISUAL_REVIEW_NOT_AUTOMATIC_DEDUPLICATION"
+    ],
+    "known_QA_event_ids_present": [
+      "63e75afa-bef8-453a-a145-dd93872b5011",
+      "000ec6a1-2bba-484f-8e64-994f1fc7708f"
+    ],
+    "unresolved_scoped_event_ids": [],
+    "complete_scoped_events_for_later_matching": [],
+    "ready_for_source_frame_and_provenance_check": false,
+    "independent_reference_certified": false,
+    "model_count_accuracy_calculated": false,
+    "next_required_evidence": [
+      "Trustedhumanreview/provenance confirmation",
+      "Native sourceframe verification andeventdefinition",
+      "Recordedresolution ofambiguities"
+    ],
+    "scope": "File structure and declaredcoverage only; declarations alone do not provehumanorigin or independence"
+  },
+  "reference_acceptance_record_present": false,
+  "metrics_computed": false,
+  "independent_reference_certified_by_software": false,
+  "source_count_accuracy_verified": false,
+  "inspection_sha256": "155121281aa3f4e3fe8094d9265ea371b97ddf7d83771bb15e883dec58588d31"
+}

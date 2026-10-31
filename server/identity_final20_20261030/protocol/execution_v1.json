@@ -1,0 +1,75 @@
+{
+  "status": "MODEL_PATHS_FOUR_WORKPOINTS_CODE_AND_INFERENCE_METRICS_ARCHIVE_FROZEN_BEFORE_FIRST_FINAL_PIXEL_REQUEST",
+  "created_UTC": "2026-10-30T11:08:54.485453+00:00",
+  "protocol_sha256": "8d16342abc1c36fd13a85c7b42a758521158d6908b196d477b07ba34ab6a593a",
+  "pre_pixel_review_sha256": "fd681e9eddad89ee58535e6b12d1c18c5ee497c92bed8387d47c07074ad9da9f",
+  "files_sha256": {
+    "tools/evaluate_final.py": "cf740f65be8d3b263b4db902510baefca747a96a1a9e6cdcdd2f16739811a608",
+    "tools/acquire_final_images.py": "e3343bf9953168da02355f60858dfc36ebc8935b3df3bc8173862a14d918785c",
+    "tools/frozen_body_tensor.py": "c7e83e2638b9cb80e4e0720b5338ac802d05b37241526226da1e482a3172027c",
+    "tools/evaluation.slurm": "780e85616f0ccd71725cdb99583a74edf478ecb611b315947516fc46b80b2c77",
+    "tools/collect_final.sh": "0173caa4b178ab70dcb2a1a8d5f1236bf573bffdfaad315391c446cda5901500",
+    "tools/freeze_execution.py": "36c3a08d9f2496c71370a1b37162aeff6c19b4a8fa4475ffadd7706ccdb57ab0"
+  },
+  "models": [
+    {
+      "name": "old_C",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+      "checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "local_checkpoint": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_training_20261026\\delivery\\results\\study\\C_letterbox_trained_seed26\\best_encoder.pt"
+    },
+    {
+      "name": "new_C_domain_seed26",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_domain_adapt_20261030/results/training/C_domain_seed26/last_encoder.pt",
+      "checkpoint_sha256": "b435fb4599d307c0dd8bf3adccb42a466c271a3fdf23ab91d585d463b70cc912",
+      "local_checkpoint": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\identity_domain_adapt_20261030\\delivery\\results\\training\\C_domain_seed26\\last_encoder.pt"
+    }
+  ],
+  "threshold_policies": {
+    "old_C": {
+      "primary_cal10_fold0": 0.8348239883357427,
+      "stability_cal10_fold1": 0.8451253538651191,
+      "legacy_MultiCam": 0.8445389603236383,
+      "prior_cal20": 0.845125353865119
+    },
+    "new_C_domain_seed26": {
+      "primary_cal10_fold0": 0.8304473380979187,
+      "stability_cal10_fold1": 0.870745869589039,
+      "legacy_MultiCam": 0.8445389603236383,
+      "prior_cal20": 0.8707458695890389
+    }
+  },
+  "batch": 12,
+  "Torch_version": "2.8.0+cu128",
+  "Pillow_version": "11.3.0",
+  "expected_model_image_forwards": 180,
+  "expected_network_calls": 16,
+  "warmups": 0,
+  "bootstrap_seed": 26030,
+  "bootstrap_draws": 2000,
+  "bootstrap_unit": "publisher_cow_ID",
+  "tensor_anchor_indices": [
+    0,
+    3,
+    30,
+    59,
+    60,
+    89
+  ],
+  "source_visual_indices": [
+    0,
+    3,
+    30,
+    33,
+    59,
+    60,
+    75,
+    89
+  ],
+  "exact_primary_workpoint_fixed": "primary_cal10_fold0",
+  "appendix_workpoints_are_not_model_selection": true,
+  "entire_project_unseen_pixels_claimed": false,
+  "new_pixels_requested_at_freeze": 0,
+  "new_model_forwards_at_freeze": 0,
+  "whole_goal_complete": false
+}

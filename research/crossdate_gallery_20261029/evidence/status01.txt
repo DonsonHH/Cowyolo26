@@ -1,0 +1,16 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS
+130422|cow-crossdate-gallery|4gpu|FAILED|1:0|00:00:10|4|8G|
+130422.batch|batch||FAILED|1:0|00:00:10|4||1168K
+{"finished_model": "A_official_frozen", "actual_image_forwards_so_far": 132, "elapsed_model_s": 1.422949588}
+{"finished_model": "B_letterbox_frozen", "actual_image_forwards_so_far": 264, "elapsed_model_s": 1.29610321}
+{"finished_model": "C_letterbox_trained_seed26", "actual_image_forwards_so_far": 396, "elapsed_model_s": 1.266195901}
+{"finished_model": "C_letterbox_trained_seed27", "actual_image_forwards_so_far": 528, "elapsed_model_s": 1.308293141}
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/crossdate_gallery_20261029/tools/run_study.py", line 114, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/crossdate_gallery_20261029/tools/run_study.py", line 82, in main
+    assert max(gdiff,qdiff)<=tol['maximum_feature_absolute_difference'] and maximum_score_diff<=tol['maximum_similarity_absolute_difference']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

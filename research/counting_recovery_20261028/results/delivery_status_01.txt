@@ -1,0 +1,41 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed|MaxRSS
+130214|FAILED|1:0|00:00:06|
+130214.batch|FAILED|1:0|00:00:06|1172K
+130214.0|FAILED|1:0|00:00:06|800K
+130215|COMPLETED|0:0|00:20:02|
+130215.batch|COMPLETED|0:0|00:20:02|13652K
+130215.0|COMPLETED|0:0|00:20:02|1836256K
+130217|COMPLETED|0:0|00:04:55|
+130217.batch|COMPLETED|0:0|00:04:55|13940K
+130217.0|COMPLETED|0:0|00:04:55|1738156K
+130220|COMPLETED|0:0|00:00:02|
+130220.batch|COMPLETED|0:0|00:00:02|1180K
+130220.0|COMPLETED|0:0|00:00:02|796K
+130221|COMPLETED|0:0|00:00:15|
+130221.batch|COMPLETED|0:0|00:00:15|1180K
+130221.0|COMPLETED|0:0|00:00:15|796K
+{
+  "manifest_files": 190,
+  "archive_members": 191,
+  "bytes": 337780353,
+  "sha256": "371ab3203fb9d84ded7c6928b6e376018fc0e0942c301f652349a369c358cf79",
+  "manifest_sha256": "3ca7f863f19f802d87af88377e7487e9a85039c5636be8893ec211fa24cabae8",
+  "three_seed_full640_and_dense_diagnostic_transfer_videos": [
+    "full640_5hz_seed26",
+    "channel320_25hz_seed26",
+    "full640_5hz_seed27",
+    "full640_5hz_seed28"
+  ],
+  "other_full_videos_retained_remote_not_downloaded": [
+    "results/replay_v2/baseline_full320_5hz_seed26/transfer.mp4",
+    "results/replay_v2/channel320_5hz_seed26/transfer.mp4",
+    "results/replay_v2/channel640_5hz_seed26/transfer.mp4",
+    "results/replay_v2/channel320_lowconf_5hz_seed26/transfer.mp4",
+    "results/replay_v2/channel320_lowconf_5hz_seed27/transfer.mp4",
+    "results/replay_v2/channel320_lowconf_5hz_seed28/transfer.mp4"
+  ],
+  "all_traces_snapshots_and_results_included": true,
+  "active_collection_logs_excluded": true,
+  "whole_goal_complete": false
+}

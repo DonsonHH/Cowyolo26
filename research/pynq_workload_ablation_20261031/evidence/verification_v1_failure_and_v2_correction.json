@@ -1,0 +1,11 @@
+{
+  "created_UTC": "2026-10-31T08:38:57.101296+00:00",
+  "status": "VERIFIER_V1_ASSUMED_COUNTER_SNAPSHOT_PRECEDED_OFFER_CLOCK_CORRECTED_IN_V2",
+  "v1_sha256": "93a42059a51e55ef804663d9f55e0023d166c74999131a1e78659f1561b12de2",
+  "failed_v1_line": 253,
+  "failure": "AssertionError: before sample <= period start is not guaranteed by the executable measurement code",
+  "observed_r5_before_minus_start_ms": 37.018878,
+  "correction": "Check actual timestamp ordering and retain per-run sample offsets; do not call the counter delta an atomic full-period measurement.",
+  "model_results_or_protocol_modified": false,
+  "new_model_forwards": 0
+}

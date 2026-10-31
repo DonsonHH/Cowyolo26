@@ -1,0 +1,151 @@
+{
+  "name": "FP32_seed27",
+  "seed": 27,
+  "method": "FP32",
+  "model_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed27/embedding_fp32.onnx",
+  "model_sha256": "aa7941708a5952e13c908fb8c204b0e52a1633b5c76be638f9673b745ff0d252",
+  "threshold": 0.8642478136864173,
+  "metrics": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 16,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 14,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 30,
+    "known_closed_top1_accuracy": 1.0,
+    "known_correct_accepted_rate": 0.5333333333333333,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 3,
+    "unknown_false_acceptance_rate": 0.1,
+    "all_accepted_wrong_fraction": 0.15789473684210525,
+    "per_identity": [
+      {
+        "identity": "025",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 1.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "037",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "052",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "058",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "065",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.8,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "066",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "068",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.4,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "069",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.2
+      },
+      {
+        "identity": "070",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 1.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "074",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "082",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "088",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.4
+      }
+    ],
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "identity_cluster_intervals": {
+    "closed_top1_accuracy": {
+      "macro_mean": 1.0,
+      "identity_clusters": 6,
+      "percentile_95_interval": [
+        1.0,
+        1.0
+      ],
+      "bootstrap_draws": 2000
+    },
+    "correct_accepted_rate": {
+      "macro_mean": 0.5333333333333333,
+      "identity_clusters": 6,
+      "percentile_95_interval": [
+        0.20000000000000004,
+        0.8666666666666667
+      ],
+      "bootstrap_draws": 2000
+    },
+    "false_accept_rate": {
+      "macro_mean": 0.10000000000000002,
+      "identity_clusters": 6,
+      "percentile_95_interval": [
+        0.0,
+        0.2333333333333333
+      ],
+      "bootstrap_draws": 2000
+    }
+  }
+}

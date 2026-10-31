@@ -1,0 +1,17 @@
+JobID                         JobName      State ExitCode    Elapsed     MaxRSS        NodeList 
+------------ ------------------------ ---------- -------- ---------- ---------- --------------- 
+129742                idcoo-qat-smoke     FAILED      1:0   00:00:10                      gpu02 
+129742.batch                    batch     FAILED      1:0   00:00:10      1176K           gpu02 
+129742.0                       python     FAILED      1:0   00:00:10       800K           gpu02 
+  if self.observer_enabled[0] == 1:
+/share/home/renly/projects/idcoo_research_20261026/qat_study/tools/qat_components.py:41: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if self.fake_quant_enabled[0] == 1:
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/qat_study/tools/smoke_qat.py", line 86, in <module>
+    main()
+    ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/qat_study/tools/smoke_qat.py", line 47, in main
+    assert equality['reference_all_pass'], 'Reference QAT/ONNX parity failed; retain vectors and stop before full training'
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Reference QAT/ONNX parity failed; retain vectors and stop before full training
+srun: error: gpu02: task 0: Exited with exit code 1

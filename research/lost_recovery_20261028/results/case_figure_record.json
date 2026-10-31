@@ -1,0 +1,97 @@
+{
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "selection": "Allfouractual lowLost recoveries whose raw detection centers inROI and scope; no subset selection",
+  "source_frames": [
+    9355,
+    9365,
+    9370,
+    9600,
+    9625,
+    9630,
+    9690,
+    9705,
+    9710,
+    9785,
+    9795,
+    9800
+  ],
+  "source_images": [
+    {
+      "frame": 9355,
+      "file": "native_01.jpg",
+      "sha256": "1dd1a840bc564593d3a63bd78111b6804216ee221ef1ae5a4531c4e24af349e2"
+    },
+    {
+      "frame": 9365,
+      "file": "native_02.jpg",
+      "sha256": "a589afd7b989702bc7fd0b7f35dacd23b7d63d66b923c0debbeffd12c7d984c2"
+    },
+    {
+      "frame": 9370,
+      "file": "native_03.jpg",
+      "sha256": "601caff1fe00c8dbb37314ef799b69aef73b9e57e6793cef123c24dbf27e6bd8"
+    },
+    {
+      "frame": 9600,
+      "file": "native_04.jpg",
+      "sha256": "67b128b83e3f826f1ba6ad9082782c26a9aba1a2f7f939b78f4f8328bc5635e5"
+    },
+    {
+      "frame": 9625,
+      "file": "native_05.jpg",
+      "sha256": "8ed6a575a5caaf3a8283de96ea9c388495701af95a6c7542fba6a9a72e7551d2"
+    },
+    {
+      "frame": 9630,
+      "file": "native_06.jpg",
+      "sha256": "f643c42bae999501f807aefcdf558c755e64c1333db3242f43a647713ea01eed"
+    },
+    {
+      "frame": 9690,
+      "file": "native_07.jpg",
+      "sha256": "001a254400e685dcc7027cbbb085029fe27ee9133032b687435ff27d97f00b39"
+    },
+    {
+      "frame": 9705,
+      "file": "native_08.jpg",
+      "sha256": "0a985260daf14df168ce26f530b3439115d3671e4c872859025377233385e17e"
+    },
+    {
+      "frame": 9710,
+      "file": "native_09.jpg",
+      "sha256": "d6936bd4cf5461acbe574132af026bdd0a20490bf1613e4fb041fe0ca956a64d"
+    },
+    {
+      "frame": 9785,
+      "file": "native_10.jpg",
+      "sha256": "97d3121e305253353668dae3aaa43131f64f8d9ef3194a61789806a61a88874f"
+    },
+    {
+      "frame": 9795,
+      "file": "native_11.jpg",
+      "sha256": "89866184b7bbd17b8200efe9d7df238f91e334bb27ab325ea51815586e9a23bf"
+    },
+    {
+      "frame": 9800,
+      "file": "native_12.jpg",
+      "sha256": "7a5d6114a9174940901eb9f6e2fec4dedacd5612c1b2fc29df4f3623eae8d504"
+    }
+  ],
+  "figures": [
+    {
+      "file": "four_ROI_recoveries.jpg",
+      "sha256": "75395deb24ed74771eda308a04d36830c554875a80e831194def3660b27937d5"
+    }
+  ],
+  "pink": "selected ID observed boxes, not predicted boxes",
+  "green": "other actual tracker outputs",
+  "new_inference": false,
+  "independent_ground_truth": false,
+  "visual_QA": "PASS",
+  "manual_notes": [
+    "Allfour ROIrecovery cases, before/recovery/nextframe panels viewed together; selected pinkboxes are actual outputs.",
+    "seed28 ID105 low recovery at9365 is followed by no target output at9370, matching the interrupted B streak.",
+    "The other three selected recoveries occur near the upper A region; recoveredID129 and ID136 have interrupted observations there.",
+    "Panels do not prove physicalID correctness or exclude association switches; no independent truth assigned."
+  ]
+}

@@ -1,0 +1,10 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS
+129907|idcoo-cows21-loader64|cu|COMPLETED|0:0|00:00:04|2|4G|
+129907.batch|batch||COMPLETED|0:0|00:00:04|2||1176K
+129907.0|python||COMPLETED|0:0|00:00:04|2||800K
+{"status": "FIXED_64_TRAIN_IMAGES_DECODE_AND_ACTUAL_LABEL_LOADER_PASS", "job_id": "129907", "source_fetch_manifest_sha256": "a0483f65e57c7f45bb329d0515ef19aff76e66f47c92e39ce19f5b84af6eaa4b", "selection": "first64 train basenames in fixed fetch manifest; no prediction selection", "images": 64, "loaded_labels": 99, "candidate_final_or_validation_pixels_opened": false, "full_8380_image_admission_certified": false, "new_model_forward_or_training": false, "source_native_files_modified": false, "full_goal_complete": false}
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 3364.6±369.6 MB/s, size: 341.7 KB)
+[K[34m[1mtrain: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/sample_loader_64/data/labels/train... 64 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 64/64 2.2Kit/s 0.0s
+[34m[1mtrain: [0mNew cache created: /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/sample_loader_64/data/labels/train.cache
+{"status": "FIXED_64_TRAIN_IMAGES_DECODE_AND_ACTUAL_LABEL_LOADER_PASS", "job_id": "129907", "source_fetch_manifest_sha256": "a0483f65e57c7f45bb329d0515ef19aff76e66f47c92e39ce19f5b84af6eaa4b", "selection": "first64 train basenames in fixed fetch manifest; no prediction selection", "images": 64, "loaded_labels": 99, "candidate_final_or_validation_pixels_opened": false, "full_8380_image_admission_certified": false, "new_model_forward_or_training": false, "source_native_files_modified": false, "full_goal_complete": false}

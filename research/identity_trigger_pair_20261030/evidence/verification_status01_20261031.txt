@@ -1,0 +1,20 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|AllocCPUS|MaxRSS
+130922|cow-trigger-verify|FAILED|1:0|00:00:01|4|
+130922.batch|batch|FAILED|1:0|00:00:01|4|1180K
+130922.0|python|FAILED|1:0|00:00:01|4|800K
+Traceback (most recent call last):
+srun: error: cu03: task 0: Exited with exit code 1
+  File "/share/home/renly/projects/idcoo_research_20261026/identity_trigger_pair_20261030/tools/replay_tracker.py", line 14, in <module>
+    for row in plan['files']:assert sha(ROOT/row['file'])==row['sha256']
+                                    ~~~^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/identity_trigger_pair_20261030/tools/replay_tracker.py", line 11, in sha
+    def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+                                     ~~~~~~~~~~~~^^
+  File "/share/home/renly/miniconda3/lib/python3.13/pathlib/_abc.py", line 625, in read_bytes
+    with self.open(mode='rb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/share/home/renly/projects/idcoo_research_20261026/identity_trigger_pair_20261030/tools/tracker_replay.slurm'

@@ -1,0 +1,35 @@
+{
+  "status": "NUMERICAL_PORTABILITY_CONTROL_COMPLETE",
+  "local_pillow": "12.3.0",
+  "input_tensors_bitwise_equal": true,
+  "resized_pixels_bitwise_equal": true,
+  "max_preprocessed_input_error": 0.0,
+  "comparisons": [
+    {
+      "Windows_optimisation": "default",
+      "input": "Windows_preprocessed",
+      "max_feature_error_to_Linux_default": 0.00971974153071642,
+      "max_feature_error_to_Linux_disabled": 0.00971974153071642
+    },
+    {
+      "Windows_optimisation": "default",
+      "input": "Linux_exact_input",
+      "max_feature_error_to_Linux_default": 0.00971974153071642,
+      "max_feature_error_to_Linux_disabled": 0.00971974153071642
+    },
+    {
+      "Windows_optimisation": "disabled",
+      "input": "Windows_preprocessed",
+      "max_feature_error_to_Linux_default": 0.0,
+      "max_feature_error_to_Linux_disabled": 0.0
+    },
+    {
+      "Windows_optimisation": "disabled",
+      "input": "Linux_exact_input",
+      "max_feature_error_to_Linux_default": 0.0,
+      "max_feature_error_to_Linux_disabled": 0.0
+    }
+  ],
+  "model_or_threshold_changed": false,
+  "interpretation": "A numerical diagnostic on an already evaluated gallery image; retain differences rather than relax tolerance or alter holdout selection"
+}

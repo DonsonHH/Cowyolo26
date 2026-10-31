@@ -1,0 +1,337 @@
+{
+  "video": {
+    "name": "original",
+    "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+    "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "width": 2560,
+    "height": 1440,
+    "fps": 25,
+    "decode_end_exclusive": 10874,
+    "inference_stride": 5,
+    "orientation": "clockwise90",
+    "axis": "y",
+    "perpendicular_ROI": [
+      0.34,
+      0.75
+    ],
+    "scope_start_frame0": 8912,
+    "scope_end_exclusive": 10874,
+    "counter_replay_strides": [
+      5
+    ],
+    "human_down_total": 12,
+    "formal_event_scoring": false,
+    "detection_crop_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "crop_size_WH": [
+      1050,
+      1440
+    ],
+    "pixel_control_frames": [
+      8995,
+      9345,
+      9790,
+      10830
+    ],
+    "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "registered_IDs": [
+    "009",
+    "020",
+    "026",
+    "028",
+    "031",
+    "054"
+  ],
+  "fixed_identity_threshold": 0.8445389603236383,
+  "backend_nice_increment": 10,
+  "foreground_source_model": "628db893fa8be090df206b32c35d8b81839eab2f497925ccbd0c6d855ad9d3eb",
+  "O8_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "camera_root": "/home/xilinx/jupyter_notebooks/cow_research_periodic_joint_20261030/camera",
+  "graph_sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538",
+  "resident_plan_sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4",
+  "selector": {
+    "maximum_age_frames_at25fps": 25,
+    "maximum_compressed_JPEG_frames": 6,
+    "edge_guard_px": 16,
+    "formula": "visible_box_area*(1-max_other_confirmed_box_intersection_fraction)*min(1,max(0,minimum_ROI_edge_margin)/16)",
+    "ties": "Most_recent_available_frame",
+    "uses_future_frames": false,
+    "uses_identity_labels_or_gallery_scores": false,
+    "uses_highres_pixels_to_rank": false,
+    "candidate_evidence": "Only_current_or_past_actual_processed_confirmed_post_tracker_rows_of_same_temporary_ID"
+  },
+  "period_ns": 200000000,
+  "runs": [
+    {
+      "run": "r1_old",
+      "identity_model": "old",
+      "policy": "low_priority_parallel",
+      "repeat": 1
+    },
+    {
+      "run": "r1_new",
+      "identity_model": "new",
+      "policy": "low_priority_parallel",
+      "repeat": 1
+    },
+    {
+      "run": "r2_new",
+      "identity_model": "new",
+      "policy": "low_priority_parallel",
+      "repeat": 2
+    },
+    {
+      "run": "r2_old",
+      "identity_model": "old",
+      "policy": "low_priority_parallel",
+      "repeat": 2
+    }
+  ],
+  "foreground_affinity": [
+    0,
+    1
+  ],
+  "background_affinity": [
+    0,
+    1
+  ],
+  "models": {
+    "old": {
+      "encoder_directory": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029",
+      "encoder_bin_sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b",
+      "gallery_features_file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/all_normalized_features.npz",
+      "gallery_array_key": "new_gallery",
+      "gallery_SHA256": "a23bf0714a0d8ef12f23ea5198fc2ad82f209b61c058f692613114f0d1f05ac1"
+    },
+    "new": {
+      "encoder_directory": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030",
+      "encoder_bin_sha256": "2a587d0fe293d244eb5632feb0e3665cf6091243198612b59363a6a7bb173252",
+      "gallery_features_file": "/home/xilinx/jupyter_notebooks/cow_research_identity_joint_pair_20261030/results/identity_qualification/all_features.npz",
+      "gallery_array_key": "normalized",
+      "gallery_SHA256": "0eb51bda110e1f2e1abb5d447db9db576f5e901a779c44cc187ed3f1bb8e351c"
+    }
+  },
+  "secondary_Cows_threshold": 0.8707458695890389,
+  "status": "FROZEN_BEFORE_PARENT_ONLY_ACTUAL_COUNT_TRIGGER_REPEATS",
+  "created_UTC": "2026-10-31T10:16:06.283615+00:00",
+  "expected_boot_id": "e7059099-ecb8-451e-a9aa-a66c8222196b",
+  "source_original_protocol_sha256": "4217824d2964e56218c566a73096a2f282c94020f3176c74bf86cef9a270513c",
+  "source_original_driver_sha256": "7955c47c93aa08efa4ade09e4efcc1de3f589facaed965f5f68bca392166def5",
+  "source_parent_only_fixed8_review_sha256": "455711b3c2f1a7ddcef4015320671da46c922d97b918c9d108cfa5d9c4d5fb21",
+  "runtime_files": [
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/libcow_encoder_v2.so",
+      "sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.param",
+      "sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.bin",
+      "sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/ncnn_encoder_v3.py",
+      "sha256": "c7e83e2638b9cb80e4e0720b5338ac802d05b37241526226da1e482a3172027c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/all_normalized_features.npz",
+      "sha256": "a23bf0714a0d8ef12f23ea5198fc2ad82f209b61c058f692613114f0d1f05ac1"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/image_groups.json",
+      "sha256": "f89a5f4501b0d8b896ada40431a1e58405117fe8593c512163aec130924bfad6"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/record.json",
+      "sha256": "f84a4de6797638a090f6514c1cd718f9e86e39019f191db41c9ece6ee3718d14"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/program/graph.bin",
+      "sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/resident_plan/resident_plan.bin",
+      "sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/encoder.ncnn.param",
+      "sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/encoder.ncnn.bin",
+      "sha256": "2a587d0fe293d244eb5632feb0e3665cf6091243198612b59363a6a7bb173252"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/libcow_encoder_v2.so",
+      "sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_joint_pair_20261030/results/identity_qualification/all_features.npz",
+      "sha256": "0eb51bda110e1f2e1abb5d447db9db576f5e901a779c44cc187ed3f1bb8e351c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/device_initialize.py",
+      "sha256": "c87f8671cb6d27af790928618a1d8cb7e20127cb09e9f7378a417a54fa85ac98"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/native_graph.py",
+      "sha256": "84bd2d829f4b70408585eaabcb742176b04703ac1777f1e8a8d7f65801b9b01e"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/native_sources/native_queue.so",
+      "sha256": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/firmware_manifest.json",
+      "sha256": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/program/program.json",
+      "sha256": "0ed8cd953352dd0a9c1ceeb02bf4241997dfa4975c7d5fd91eaa0dec6aec2749"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/resident_plan/resident_plan.json",
+      "sha256": "e5f4b7c1c9265ed03ddc97d73509213b5851465b4493db87eba6b0188068d324"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_periodic_joint_20261030/camera/manifest.json",
+      "sha256": "f7972dba7b20aca4cf6a720339bc886cccdfb4b5218f131d7935b879b206b5aa"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors/old_gallery_000.npz",
+      "sha256": "3b2e3ba40bb2884f1022bc15cf1ae33a3b917bd7275fc35a89623b4ad954601f"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/terminal.json",
+      "sha256": "28f8b618b1ee8f4d5b9bf7b69d979a10cb0846805260439e9590d948e8352c95"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_mosaic192_video_20261030/results/record.json",
+      "sha256": "f423add3e07e614c9064341f84ebea69006fb9a128a6d83fa64f159d88573e35"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_mosaic192_video_20261030/results/terminal.json",
+      "sha256": "7828dffd778d3169f7e803dbf8a7718412c1d8a13cda5857016e5102b71b073d"
+    }
+  ],
+  "O8_hwh_sha256": "d6cf7f228c93f06523ad8e71efa9c280ba924ecc93d13f8ecdf90351238b4a6a",
+  "cases": [
+    "low_priority_parallel"
+  ],
+  "offered_slots_per_case": 392,
+  "maximum_identity_jobs_per_case": 16,
+  "maximum_formal_identity_queries": 64,
+  "expected_qualification_O8_forwards": 8,
+  "expected_detection_warmups": 8,
+  "maximum_timed_O8_forwards": 1568,
+  "expected_identity_warmups": 4,
+  "maximum_total_board_image_forwards": 1652,
+  "maximum_new_CPU_query_reference_forwards": 64,
+  "reuse_verified_CPU_galleries_if_hashes_match": true,
+  "source_change_scope": "Split combined cv2/numpy import; move six foreground imports into main. Add current-boot and dynamic-job budget guards; historical source PID checks replaced by boot-aware provenance metadata. Numeric paths and four helper files unchanged.",
+  "historical_qualification_PIDs_not_compared_to_current_boot": true,
+  "PNG_compress_level": 0,
+  "lowres192_is_ready_replay_not_derived_from_current_JPEG_at_runtime": true,
+  "simulated_RFID_all_unread": true,
+  "jobs_decoupled_from_current_counter": false,
+  "exactly10_identity_jobs_forced": false,
+  "actual_camera_or_RFID_hardware": false,
+  "source_all_JPEG_integrity_hash_read_before_first_period": true,
+  "same_replay_repeats_not_independent_sessions": true,
+  "global_cache_or_swap_controls": false,
+  "selector_or_counter_or_identity_threshold_changed": false,
+  "default_model_or_threshold_changed": false,
+  "new_training_updates": 0,
+  "new_independent_test": false,
+  "posthoc_development_after_fixed8_and_startup_probe": true,
+  "whole_goal_complete": false,
+  "payload_files": [
+    {
+      "file": "background_selected_worker.py",
+      "bytes": 6790,
+      "sha256": "7edc1ce50e9726e8c3fb4b1e20af5a1e59da4e33a9247fe054ffa7b8b71e265a"
+    },
+    {
+      "file": "board_trigger_repeats.py",
+      "bytes": 17858,
+      "sha256": "36f8d5c8f8647993bac8767e64fb9e647db17b2d4ddf7cda111f2cccfb830d75"
+    },
+    {
+      "file": "causal_selector.py",
+      "bytes": 2713,
+      "sha256": "5f1611ff42b660032cb4806b60e898409440ba65a9e3c7c7dba6976846859b18"
+    },
+    {
+      "file": "jpeg_producer.py",
+      "bytes": 5293,
+      "sha256": "3b70d38740c60d87fcd8399916c4b0d98dd627592e72e8908a280b810c863483"
+    },
+    {
+      "file": "process_cpu.py",
+      "bytes": 798,
+      "sha256": "d0ccc4f972e0066f8d0ebc02a1a5232733cda4164c9ffe4cf0358534373540a4"
+    }
+  ]
+}

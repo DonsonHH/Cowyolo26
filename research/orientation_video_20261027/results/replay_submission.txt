@@ -1,0 +1,13 @@
+{"pixel_box_empty_and_real_nonempty_seams_pass": true, "protocol_sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b", "new_training_updates": 0}
+PARTITION|AVAIL|NODES|STATE|NODELIST|GRES
+cu*|up|5|mix|cu[16-20]|(null)
+cu*|up|15|idle|cu[01-15]|(null)
+8gpu|up|1|idle|gpu01|gpu:V100S:8
+4gpu|up|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|NODELIST(REASON)
+    129937_[2-5%2]|       cu|        renly-active-m11| PENDING|(JobArrayTaskLimit)
+          129937_0|       cu|        renly-active-m11| RUNNING|cu16
+          129937_1|       cu|        renly-active-m11| RUNNING|cu16
+129940
+             JOBID|PARTITION|                    NAME|   STATE|NODELIST(REASON)
+            129940|     4gpu|    idcoo-video-rotation| PENDING|(None)

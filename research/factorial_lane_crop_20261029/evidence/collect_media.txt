@@ -1,0 +1,9 @@
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+130563|cow-factor-crop-media|FAILED|1:0|00:00:05|
+130563.batch|batch|FAILED|1:0|00:00:05|1172K
+    video=p['videos'][0];assert sha(video['path'])==video['sha256'];capture=cv2.VideoCapture(video['path']);assert capture.isOpened();decoded=0
+                                ~~~^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/factorial_lane_crop_20261029/tools/render_media.py", line 13, in sha
+    def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+                                     ^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'read_bytes'

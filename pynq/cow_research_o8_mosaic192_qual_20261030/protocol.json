@@ -1,0 +1,95 @@
+{
+  "status": "FROZEN_BEFORE_MOSAIC050_SEED26_REAL_O8_VECTOR_QUALIFICATION",
+  "created_host_UTC": "2026-10-29T21:08:55.068346+00:00",
+  "size": 192,
+  "class_count": 1,
+  "primary_model": "mosaic050_seed26",
+  "model_checkpoint_sha256": "628db893fa8be090df206b32c35d8b81839eab2f497925ccbd0c6d855ad9d3eb",
+  "qualification_summary_sha256": "e8e98c3e52f30ed5ed98b38e8b074fc8b2e268106e0c8ecd3f0e40a2efa58c90",
+  "expected_O8_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "parity_gate": {
+    "box_max_absolute_pixels": 0.002,
+    "score_max_absolute": 0.0001,
+    "classes_exact": true
+  },
+  "vectors": 8,
+  "warmups": 2,
+  "expected_model_forwards": 10,
+  "all_input_images_from_train_calibration": true,
+  "source_video_Toros_or_development_validation_images_used": false,
+  "real_video_count_accuracy_claimed": false,
+  "background_identity_active": false,
+  "reference_primary": "previously_frozen_ordered_FP32_nonconv_and_fixed_integerConv_contract",
+  "legacy_numpy_reference_retained_in_vector_files": true,
+  "existing_O8_hardware_must_already_be_loaded": true,
+  "new_bitstream_programming": false,
+  "original_O8_directory_modified": false,
+  "payload_files": [
+    {
+      "file": "program/graph.bin",
+      "bytes": 14605165,
+      "sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538"
+    },
+    {
+      "file": "program/program.json",
+      "bytes": 463014,
+      "sha256": "0ed8cd953352dd0a9c1ceeb02bf4241997dfa4975c7d5fd91eaa0dec6aec2749"
+    },
+    {
+      "file": "resident_plan/resident_plan.bin",
+      "bytes": 2396,
+      "sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4"
+    },
+    {
+      "file": "resident_plan/resident_plan.json",
+      "bytes": 13112,
+      "sha256": "e5f4b7c1c9265ed03ddc97d73509213b5851465b4493db87eba6b0188068d324"
+    },
+    {
+      "file": "vectors/parity_train_0.npz",
+      "bytes": 103513,
+      "sha256": "197e85437d53d35a7e3cdf7225ee46d3ddbc2458ebcf40d1cf3e062ee05f625c"
+    },
+    {
+      "file": "vectors/parity_train_1.npz",
+      "bytes": 108925,
+      "sha256": "4a2cadf6a0e3014dd4481df69fab52dc8feb9274299299986c45da4661128738"
+    },
+    {
+      "file": "vectors/parity_train_2.npz",
+      "bytes": 103031,
+      "sha256": "df70d82948d3e1753bce88edf0c244289a73b0b66db2af4c320bca0e5f79768d"
+    },
+    {
+      "file": "vectors/parity_train_3.npz",
+      "bytes": 104170,
+      "sha256": "75054e771ee1fb443bf9bbd45995ca3086260b44a5b4c2ca5ce5881d3a5de0b3"
+    },
+    {
+      "file": "vectors/parity_train_4.npz",
+      "bytes": 103059,
+      "sha256": "1510d55ed97a2f5d6a2706baa9a7cbb10c3a06e1394091e0bd132f187f8a02a5"
+    },
+    {
+      "file": "vectors/parity_train_5.npz",
+      "bytes": 112271,
+      "sha256": "f31cf8f45551c4b3b3fe07a8cb827fb2a72f99845eee350c8cd9b1722bc3b7ff"
+    },
+    {
+      "file": "vectors/parity_train_6.npz",
+      "bytes": 100913,
+      "sha256": "140d6a4bd67661a798f937d0f0885fdd8109f63e174fb4d4ce15e7ef1e7a13e6"
+    },
+    {
+      "file": "vectors/parity_train_7.npz",
+      "bytes": 113143,
+      "sha256": "f799695f669b85f17a861b28cfccc861ed6aa78740db03e45c61c0215dbce6ff"
+    },
+    {
+      "file": "board_cow_vectors.py",
+      "bytes": 6394,
+      "sha256": "ebad2e4f51ccee8d0d9eb9baa9c6b3c9a6f38c2f6b686ed99ba0f46f083830c2"
+    }
+  ],
+  "whole_goal_complete": false
+}

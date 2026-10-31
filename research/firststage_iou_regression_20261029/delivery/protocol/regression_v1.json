@@ -1,0 +1,967 @@
+{
+  "name": "Firststage-only IoU candidate paired regression, all predefined models and scenes retained",
+  "created_UTC": "2026-10-28T18:15:27.048330+00:00",
+  "prior_candidate_review_sha256": "8cd23eeacfe8c2b30a180419fccfcb41cd07d49b7f276150d14708eafd436968",
+  "prior_candidate_class_source_sha256": "799ed1e181b1aa840362632c6f51f26a32cdec9f02a9d1d4dfee7958f5dd9f58",
+  "input_modules": {
+    "confirmation_counter.py": "43dc019982f23bd2cab92471d2bc4a5b1824258ec86edd2f17f4fd67f994976f",
+    "event_metrics.py": "049cb747a15ed180fa7f2679f2157c71def8182b69e801fdb433cad369f1e437",
+    "firststage_tracker.py": "24c27f80cdee33c2e572d665ce77fbb2c3f7e9962eac7647665b4c0b212cf29a",
+    "publisher_event_summary.json": "31c3f9dd74b8ecf3377447d4ae13a34af652e5e9a2630faf929f7c5b6d4047c5",
+    "publisher_gt_original.txt": "a5826713c9e02c62b08bfbec099b415ef8ef67e90d95987fea1a98418bb028e7",
+    "zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+  },
+  "installed_source": [
+    {
+      "file": "installed_track.py",
+      "sha256": "1bc8673215b05db0b94d1e0b8930c34f6256d796eb3f633206ab69d162f59383"
+    },
+    {
+      "file": "installed_byte_tracker.py",
+      "sha256": "00c7c1ff8b1076fc89347071519ae0b06a30bfce00dded94826620e068b1928f"
+    },
+    {
+      "file": "installed_bytetrack.yaml",
+      "sha256": "9672c78cc508b265230fdace4c1cfa2ab7eaf51983fece9942e7d0dfc67a5128"
+    }
+  ],
+  "matching_source_sha256": "a98d246497b23f7210af5b7775e02ae5a51319eddb33f6ab29d3c8bb3e951b98",
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "variants": [
+    "original_fused",
+    "firststage_pure_IoU"
+  ],
+  "sources": [
+    {
+      "name": "long_official",
+      "scene": "new_long",
+      "model": "official",
+      "weights": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+        "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+      },
+      "files": [
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\official\\raw_detector_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/official/raw_detector_boxes.csv",
+          "bytes": 1209,
+          "sha256": "b2dd079fba17d576b35bded0b7677cdbdead3d0e9e469c9466a4c0d485658692"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\official\\post_tracker_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/official/post_tracker_boxes.csv",
+          "bytes": 768,
+          "sha256": "178684df5266a4999fdb980de96f22a0043e6ec4b21e390e6934ab3575b50c59"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\official\\tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/official/tracks.csv",
+          "bytes": 61,
+          "sha256": "e66c79a2851a236b360c4a5f66fcf3fe167ae4909f0d3de2b9c39785f9e902c8"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\official\\observations.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/official/observations.json",
+          "bytes": 331493,
+          "sha256": "e65477bd52172a1a55e8ceef16941b1a1e66faaf403dc1d72ac4ec7edc855948"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\official\\handoff_events_all_history.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/official/handoff_events_all_history.json",
+          "bytes": 2,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\official\\confirmed_only_events_all_history.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/official/confirmed_only_events_all_history.json",
+          "bytes": 2,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\official\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/official/summary.json",
+          "bytes": 54798,
+          "sha256": "9e4f899e685e65f055e5ead850e452eee4ea951753c26eab4575d377598153b3"
+        }
+      ],
+      "raw_path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/official/raw_detector_boxes.csv",
+      "raw_frame_key": "frame",
+      "height": 1440,
+      "width": 2560,
+      "fps": 25,
+      "stride": 5,
+      "history_end_frame0_exclusive": 10125,
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "windows": [
+        {
+          "name": "group_passage",
+          "start_frame0": 2375,
+          "end_frame0_exclusive": 4375
+        },
+        {
+          "name": "late_single",
+          "start_frame0": 5000,
+          "end_frame0_exclusive": 5625
+        },
+        {
+          "name": "person_control",
+          "start_frame0": 9625,
+          "end_frame0_exclusive": 10125
+        }
+      ],
+      "prior_remote_folder": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/official",
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "formal_event_scoring_allowed": false
+    },
+    {
+      "name": "long_seed26",
+      "scene": "new_long",
+      "model": "seed26",
+      "weights": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+        "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+      },
+      "files": [
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed26\\raw_detector_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26/raw_detector_boxes.csv",
+          "bytes": 164377,
+          "sha256": "e3505e9bd8cfe41d912eadb86a5870ec93ddd3f6e24b7ac1c35ebf421fda0a23"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed26\\post_tracker_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26/post_tracker_boxes.csv",
+          "bytes": 93724,
+          "sha256": "2615ec18b3a989a5d28e7d6073d15c87f845baca569452e352c06d774a3ea2de"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed26\\tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26/tracks.csv",
+          "bytes": 36571,
+          "sha256": "b1d6aa78cd3c52af1d237810ae0a3d4555dd1001b2ad04b20b29c16176631dee"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed26\\observations.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26/observations.json",
+          "bytes": 353941,
+          "sha256": "4f96a5e4ce5d2ef7c3cbc4a7c6dd6bb717bdc01d6037fb0625afa1d9a352f2ff"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed26\\handoff_events_all_history.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26/handoff_events_all_history.json",
+          "bytes": 1036,
+          "sha256": "dea579583cfb0513d9d42b4bc460b10cc717a9a66f6de5dfda00dec571867b5d"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed26\\confirmed_only_events_all_history.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26/confirmed_only_events_all_history.json",
+          "bytes": 1036,
+          "sha256": "dea579583cfb0513d9d42b4bc460b10cc717a9a66f6de5dfda00dec571867b5d"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed26\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26/summary.json",
+          "bytes": 58475,
+          "sha256": "ae954b1d5b4cf9d06daf53af5d8964599b210c4ee3c84728b1dc176732e19fbc"
+        }
+      ],
+      "raw_path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26/raw_detector_boxes.csv",
+      "raw_frame_key": "frame",
+      "height": 1440,
+      "width": 2560,
+      "fps": 25,
+      "stride": 5,
+      "history_end_frame0_exclusive": 10125,
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "windows": [
+        {
+          "name": "group_passage",
+          "start_frame0": 2375,
+          "end_frame0_exclusive": 4375
+        },
+        {
+          "name": "late_single",
+          "start_frame0": 5000,
+          "end_frame0_exclusive": 5625
+        },
+        {
+          "name": "person_control",
+          "start_frame0": 9625,
+          "end_frame0_exclusive": 10125
+        }
+      ],
+      "prior_remote_folder": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26",
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "formal_event_scoring_allowed": false
+    },
+    {
+      "name": "long_seed27",
+      "scene": "new_long",
+      "model": "seed27",
+      "weights": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+        "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226"
+      },
+      "files": [
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed27\\raw_detector_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed27/raw_detector_boxes.csv",
+          "bytes": 63349,
+          "sha256": "bbce8271916b81bbfb369ed4f605375f42af472bbe9eb7b886eb0fabe4c320b8"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed27\\post_tracker_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed27/post_tracker_boxes.csv",
+          "bytes": 38000,
+          "sha256": "29280381aba36d7ada8f422625d12dd6eccc3195cc265e70d2c74631f4cf13f6"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed27\\tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed27/tracks.csv",
+          "bytes": 26254,
+          "sha256": "665d8ab855273ebde46e1c23ac59b6e4bdee439b07933ac708e3d2281adce4dd"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed27\\observations.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed27/observations.json",
+          "bytes": 344915,
+          "sha256": "b1169d63f25ccbc14d74ba251536bbb33d67d5db42a3af8dfece2907f4a6ee5a"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed27\\handoff_events_all_history.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed27/handoff_events_all_history.json",
+          "bytes": 1130,
+          "sha256": "2b277564c95aaf2692052ddf849f87bf0c9026dcd346793c35fc9cdfdeba315b"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed27\\confirmed_only_events_all_history.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed27/confirmed_only_events_all_history.json",
+          "bytes": 1036,
+          "sha256": "9c2de0e39017aa9682677000d714fc560584b0c2261bbdf4e1880c6ed95091a5"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed27\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed27/summary.json",
+          "bytes": 58538,
+          "sha256": "de224a3bc26081d33be4e21e540ecae8c2dfa5deb8c5221df93b4c22ff866a22"
+        }
+      ],
+      "raw_path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed27/raw_detector_boxes.csv",
+      "raw_frame_key": "frame",
+      "height": 1440,
+      "width": 2560,
+      "fps": 25,
+      "stride": 5,
+      "history_end_frame0_exclusive": 10125,
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "windows": [
+        {
+          "name": "group_passage",
+          "start_frame0": 2375,
+          "end_frame0_exclusive": 4375
+        },
+        {
+          "name": "late_single",
+          "start_frame0": 5000,
+          "end_frame0_exclusive": 5625
+        },
+        {
+          "name": "person_control",
+          "start_frame0": 9625,
+          "end_frame0_exclusive": 10125
+        }
+      ],
+      "prior_remote_folder": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed27",
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "formal_event_scoring_allowed": false
+    },
+    {
+      "name": "long_seed28",
+      "scene": "new_long",
+      "model": "seed28",
+      "weights": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+        "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+      },
+      "files": [
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed28\\raw_detector_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed28/raw_detector_boxes.csv",
+          "bytes": 518055,
+          "sha256": "c560bddab06ff284183827c071dbf11f25416ec0fe782972a488bddd8d2c5f20"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed28\\post_tracker_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed28/post_tracker_boxes.csv",
+          "bytes": 297925,
+          "sha256": "05fecb91aeda9583ead86db0d5f0dce823cbc6ffc5cdd61d0838c10ce479563f"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed28\\tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed28/tracks.csv",
+          "bytes": 26951,
+          "sha256": "04b8b8196a7de8033147285679093c2facfc02c041fc2b6b5829f5b88026b49e"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed28\\observations.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed28/observations.json",
+          "bytes": 375935,
+          "sha256": "c4c70c7d64b502909944a16dc79d228969b0121e56a8fc3522b9ca8caed82abc"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed28\\handoff_events_all_history.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed28/handoff_events_all_history.json",
+          "bytes": 1130,
+          "sha256": "6aa4eb6bc1490b45d2024510433a845fb4509efb02decea1a593c971e16a907a"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed28\\confirmed_only_events_all_history.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed28/confirmed_only_events_all_history.json",
+          "bytes": 1130,
+          "sha256": "6aa4eb6bc1490b45d2024510433a845fb4509efb02decea1a593c971e16a907a"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\long_video_fixed_replay_20261029\\delivery\\results\\seed28\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed28/summary.json",
+          "bytes": 58723,
+          "sha256": "ed396936839f3f09d7a7fb7f24513dc5df2da7b46a1dc9ab1e3e496167ffb460"
+        }
+      ],
+      "raw_path": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed28/raw_detector_boxes.csv",
+      "raw_frame_key": "frame",
+      "height": 1440,
+      "width": 2560,
+      "fps": 25,
+      "stride": 5,
+      "history_end_frame0_exclusive": 10125,
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "windows": [
+        {
+          "name": "group_passage",
+          "start_frame0": 2375,
+          "end_frame0_exclusive": 4375
+        },
+        {
+          "name": "late_single",
+          "start_frame0": 5000,
+          "end_frame0_exclusive": 5625
+        },
+        {
+          "name": "person_control",
+          "start_frame0": 9625,
+          "end_frame0_exclusive": 10125
+        }
+      ],
+      "prior_remote_folder": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed28",
+      "reference_authority": "assistant_provisional_reference_unaccepted",
+      "formal_event_scoring_allowed": false
+    },
+    {
+      "name": "original_seed26",
+      "scene": "original_clip",
+      "model": "seed26",
+      "weights": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+        "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+      },
+      "files": [
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\replay_v2\\full640_5hz_seed26\\pretracker_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/full640_5hz_seed26/pretracker_boxes.csv",
+          "bytes": 395497,
+          "sha256": "3a6cf60bed2fbe67ff3109a9a1273ee96025ee71492e16308dd07518b36941dd"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\replay_v2\\full640_5hz_seed26\\source_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/full640_5hz_seed26/source_tracks.csv",
+          "bytes": 70527,
+          "sha256": "b3768ce7de9797fbbf41ffe870bce4bc865261c2494ffd74100cffbcfadf8779"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\replay_v2\\full640_5hz_seed26\\source_warmup_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/full640_5hz_seed26/source_warmup_tracks.csv",
+          "bytes": 67,
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\replay_v2\\full640_5hz_seed26\\source_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/full640_5hz_seed26/source_events.json",
+          "bytes": 1107,
+          "sha256": "10ac3a009b58b64ab334384d90d37ae0889bd97cfd58e1ecae24ad8899ac25cf"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\replay_v2\\full640_5hz_seed26\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/full640_5hz_seed26/summary.json",
+          "bytes": 833,
+          "sha256": "a6931780ebad01563302afb1797f21c60875bb9178084d03ee0011f4af0f0db4"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed26\\observations.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed26/observations.json",
+          "bytes": 367137,
+          "sha256": "b5df4189b8cc43fdc9c63b78a5bac39d937eb553e62aba1aaa69dffd52a6438a"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed26\\baseline_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed26/baseline_events.json",
+          "bytes": 1107,
+          "sha256": "10ac3a009b58b64ab334384d90d37ae0889bd97cfd58e1ecae24ad8899ac25cf"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed26\\handoff_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed26/handoff_events.json",
+          "bytes": 1207,
+          "sha256": "6975f4d6ceafc2bbef1a00081bf0499ca1bbbaa47ecdb420b943a49203fd4ad0"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed26\\source_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed26/source_tracks.csv",
+          "bytes": 70527,
+          "sha256": "b3768ce7de9797fbbf41ffe870bce4bc865261c2494ffd74100cffbcfadf8779"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed26\\source_warmup_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed26/source_warmup_tracks.csv",
+          "bytes": 67,
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed26\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed26/summary.json",
+          "bytes": 907,
+          "sha256": "4111b478691baf029a732bfd5486b0958bf1e8a15f4e8841ae47689eb3e831de"
+        }
+      ],
+      "raw_path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/full640_5hz_seed26/pretracker_boxes.csv",
+      "raw_frame_key": "frame",
+      "height": 1440,
+      "width": 2560,
+      "fps": 25,
+      "stride": 5,
+      "history_end_frame0_exclusive": 10874,
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "windows": [
+        {
+          "name": "confirmed12_scope",
+          "start_frame0": 8912,
+          "end_frame0_exclusive": 10874
+        }
+      ],
+      "prior_remote_folder": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed26",
+      "reference_authority": "user_confirmed_down_total12_development_clip",
+      "human_down_total": 12,
+      "formal_event_scoring_allowed": false
+    },
+    {
+      "name": "original_seed27",
+      "scene": "original_clip",
+      "model": "seed27",
+      "weights": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+        "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226"
+      },
+      "files": [
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed27\\pretracker_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed27/pretracker_boxes.csv",
+          "bytes": 321471,
+          "sha256": "3854154ed3bdee7ddf99a3ecf77ffa0925581575e07e1cd17dbc532a070a357a"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed27\\source_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed27/source_tracks.csv",
+          "bytes": 68414,
+          "sha256": "af0753a7da79f528371e41736cbefbfadb07032be6c823e32ed14aaa3c756870"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed27\\source_warmup_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed27/source_warmup_tracks.csv",
+          "bytes": 67,
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed27\\source_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed27/source_events.json",
+          "bytes": 1004,
+          "sha256": "cd34d90b4e5a562c304a70b70cf112acb270b42bd8e0d7c3a537b9597360b171"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed27\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed27/summary.json",
+          "bytes": 833,
+          "sha256": "d1988cb679cbe70ed9797d536887e4bbf0e6076899bc41a10f159d115d876db2"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed27\\observations.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed27/observations.json",
+          "bytes": 369026,
+          "sha256": "4ffe388b24503039f8217e18f51c7f0a5496e2becf8cdf451e1a1690d827891c"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed27\\baseline_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed27/baseline_events.json",
+          "bytes": 1004,
+          "sha256": "cd34d90b4e5a562c304a70b70cf112acb270b42bd8e0d7c3a537b9597360b171"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed27\\handoff_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed27/handoff_events.json",
+          "bytes": 1104,
+          "sha256": "452e4fa4fd979294dcc161d029c4b7ea04d833a4fc1d261ff3fdc028db1e47c9"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed27\\source_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed27/source_tracks.csv",
+          "bytes": 68414,
+          "sha256": "af0753a7da79f528371e41736cbefbfadb07032be6c823e32ed14aaa3c756870"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed27\\source_warmup_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed27/source_warmup_tracks.csv",
+          "bytes": 67,
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed27\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed27/summary.json",
+          "bytes": 907,
+          "sha256": "cefe73cb1d701dfe05bb1f7ee97b5ba556c52b9d786754acb2faedf901c958ef"
+        }
+      ],
+      "raw_path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed27/pretracker_boxes.csv",
+      "raw_frame_key": "frame",
+      "height": 1440,
+      "width": 2560,
+      "fps": 25,
+      "stride": 5,
+      "history_end_frame0_exclusive": 10874,
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "windows": [
+        {
+          "name": "confirmed12_scope",
+          "start_frame0": 8912,
+          "end_frame0_exclusive": 10874
+        }
+      ],
+      "prior_remote_folder": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed27",
+      "reference_authority": "user_confirmed_down_total12_development_clip",
+      "human_down_total": 12,
+      "formal_event_scoring_allowed": false
+    },
+    {
+      "name": "original_seed28",
+      "scene": "original_clip",
+      "model": "seed28",
+      "weights": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+        "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+      },
+      "files": [
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed28\\pretracker_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed28/pretracker_boxes.csv",
+          "bytes": 637550,
+          "sha256": "18fe408f594dc8856477cd55172f65b402f6123756ab4bbcb34e1a672f910562"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed28\\source_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed28/source_tracks.csv",
+          "bytes": 71511,
+          "sha256": "3051bab94dbd07b95077389aa43b58333027323287e7ad94b22d406a3be8584c"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed28\\source_warmup_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed28/source_warmup_tracks.csv",
+          "bytes": 182,
+          "sha256": "7c2820b177cf3526722719f5a18f11162c53f01880e85a36f4b796e7bb06d8a6"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed28\\source_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed28/source_events.json",
+          "bytes": 1114,
+          "sha256": "9a55bb4b84ca96cb1f42117a98283e1ffbf1c66609803617f4c1b061fa05a306"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\counting_recovery_20261028\\delivery\\results\\full640_confirmation\\full640_5hz_seed28\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed28/summary.json",
+          "bytes": 832,
+          "sha256": "f14b90084574da94c3f86fbd7a38ce990c8f4d042629d328b34492cf5a58fbaf"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed28\\observations.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed28/observations.json",
+          "bytes": 390189,
+          "sha256": "6b33460b48d0be24d444a73b1f411106a19b60f668f4c404d042b0f44ec7cc4a"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed28\\baseline_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed28/baseline_events.json",
+          "bytes": 1114,
+          "sha256": "9a55bb4b84ca96cb1f42117a98283e1ffbf1c66609803617f4c1b061fa05a306"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed28\\handoff_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed28/handoff_events.json",
+          "bytes": 1114,
+          "sha256": "9a55bb4b84ca96cb1f42117a98283e1ffbf1c66609803617f4c1b061fa05a306"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed28\\source_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed28/source_tracks.csv",
+          "bytes": 71511,
+          "sha256": "3051bab94dbd07b95077389aa43b58333027323287e7ad94b22d406a3be8584c"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed28\\source_warmup_tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed28/source_warmup_tracks.csv",
+          "bytes": 182,
+          "sha256": "7c2820b177cf3526722719f5a18f11162c53f01880e85a36f4b796e7bb06d8a6"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\confirmation_handoff_20261028\\delivery\\results\\replay_v2\\seed28\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed28/summary.json",
+          "bytes": 793,
+          "sha256": "8b1616ed4ef93bb4d35e8b9f1e89a16fbb328ce0e2cf268d228dad3580179973"
+        }
+      ],
+      "raw_path": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed28/pretracker_boxes.csv",
+      "raw_frame_key": "frame",
+      "height": 1440,
+      "width": 2560,
+      "fps": 25,
+      "stride": 5,
+      "history_end_frame0_exclusive": 10874,
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "windows": [
+        {
+          "name": "confirmed12_scope",
+          "start_frame0": 8912,
+          "end_frame0_exclusive": 10874
+        }
+      ],
+      "prior_remote_folder": "/share/home/renly/projects/idcoo_research_20261026/confirmation_handoff_20261028/results/replay_v2/seed28",
+      "reference_authority": "user_confirmed_down_total12_development_clip",
+      "human_down_total": 12,
+      "formal_event_scoring_allowed": false
+    },
+    {
+      "name": "toros_generic",
+      "scene": "toros_used_reverse",
+      "model": "generic",
+      "weights": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+        "bytes": 5544453,
+        "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+      },
+      "files": [
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\generic\\raw_detector_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/raw_detector_boxes.csv",
+          "bytes": 142924,
+          "sha256": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\generic\\post_tracker_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/post_tracker_boxes.csv",
+          "bytes": 127553,
+          "sha256": "3319d021d6948eb5d125ede2e5d4dfd6364b98d75b9f712f923cb82d3f82f597"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\generic\\tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/tracks.csv",
+          "bytes": 69021,
+          "sha256": "79dfb5cf6fa346102f01fce0036878747034b4c46835880cdb298700f58b324e"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\generic\\events.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/events.csv",
+          "bytes": 206,
+          "sha256": "df66528c264a4b3466808872641b78935c36777c75900d0a9cc745a471efcd5d"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\generic\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/summary.json",
+          "bytes": 1340,
+          "sha256": "701000b1759f5ce6b264068add7b2e1f5d59cb9a9beefd3a041ece3f826d65c7"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\results\\generic_installed\\observations.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/generic_installed/observations.json",
+          "bytes": 124730,
+          "sha256": "9434e6d0c7c130e3191b80cdc8588c281cf70ce16dcd37325ff53e5b6cedbe51"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\results\\generic_installed\\confirmed_only_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/generic_installed/confirmed_only_events.json",
+          "bytes": 613,
+          "sha256": "6d447a75e6f7252a54971db8de93939d811c9fe5d198d241c5fd587576fe9781"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\results\\generic_installed\\handoff_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/generic_installed/handoff_events.json",
+          "bytes": 613,
+          "sha256": "6d447a75e6f7252a54971db8de93939d811c9fe5d198d241c5fd587576fe9781"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\results\\generic_installed\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/generic_installed/summary.json",
+          "bytes": 8885,
+          "sha256": "e75c66dd1985722649fc0fe657b57d39ff0c785d452a3aed5d01f8f2f506dfac"
+        }
+      ],
+      "raw_path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/generic/raw_detector_boxes.csv",
+      "raw_frame_key": "frame",
+      "height": 1080,
+      "width": 1920,
+      "fps": 30,
+      "stride": 1,
+      "history_end_frame0_exclusive": 479,
+      "axis": "x",
+      "perpendicular_ROI": [
+        0.1,
+        0.95
+      ],
+      "windows": [
+        {
+          "name": "publisher6_scope",
+          "start_frame0": 0,
+          "end_frame0_exclusive": 479
+        }
+      ],
+      "prior_remote_folder": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/generic_installed",
+      "reference_authority": "already_used_publisher_trajectory_derived_six_events",
+      "reference_events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "formal_event_scoring_allowed": true,
+      "event_tolerance_s": 2.0
+    },
+    {
+      "name": "toros_pilot",
+      "scene": "toros_used_reverse",
+      "model": "pilot",
+      "weights": {
+        "path": "/share/home/renly/projects/idcoo_research_20261026/results/detection_pilot/five_epoch_dev/weights/best.pt",
+        "bytes": 5341765,
+        "sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b"
+      },
+      "files": [
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\pilot\\raw_detector_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/raw_detector_boxes.csv",
+          "bytes": 113709,
+          "sha256": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\pilot\\post_tracker_boxes.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/post_tracker_boxes.csv",
+          "bytes": 100383,
+          "sha256": "0b9fb8616995c42505de7f50392f999da2a03d781a287864fe816d82b8405196"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\pilot\\tracks.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/tracks.csv",
+          "bytes": 53419,
+          "sha256": "c02c76d12bf269ac16fe5afa0d87684b89e76ef7d7e711a175b753499fbb7f42"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\pilot\\events.csv",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/events.csv",
+          "bytes": 82,
+          "sha256": "1c062c4d0503ee5a108e2e99c59a35225cb2b445f7e0881834aaa0f019f26f56"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\original_cache\\pilot\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/summary.json",
+          "bytes": 874,
+          "sha256": "263a557f371f4396971ca7c49f435af4a785d75aa74019fcb4a23d386b7f337f"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\results\\pilot_installed\\observations.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/pilot_installed/observations.json",
+          "bytes": 116118,
+          "sha256": "1845722ffcf6782af6514a42bfe33f349c87f69aff10942d2a4385831aeb95b2"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\results\\pilot_installed\\confirmed_only_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/pilot_installed/confirmed_only_events.json",
+          "bytes": 197,
+          "sha256": "2e359d21e03ca34f29064564c150d0f4f87bc9a8cf6269285d7844d9f3e7c471"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\results\\pilot_installed\\handoff_events.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/pilot_installed/handoff_events.json",
+          "bytes": 197,
+          "sha256": "2e359d21e03ca34f29064564c150d0f4f87bc9a8cf6269285d7844d9f3e7c471"
+        },
+        {
+          "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\external_method_regression_20261028\\delivery\\results\\pilot_installed\\summary.json",
+          "path": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/pilot_installed/summary.json",
+          "bytes": 6425,
+          "sha256": "8d5be00512968f0965360c77e7eb582aa59fb5f1261db9b2e41cfb4bfc93f1a9"
+        }
+      ],
+      "raw_path": "/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/results/capture/pilot/raw_detector_boxes.csv",
+      "raw_frame_key": "frame",
+      "height": 1080,
+      "width": 1920,
+      "fps": 30,
+      "stride": 1,
+      "history_end_frame0_exclusive": 479,
+      "axis": "x",
+      "perpendicular_ROI": [
+        0.1,
+        0.95
+      ],
+      "windows": [
+        {
+          "name": "publisher6_scope",
+          "start_frame0": 0,
+          "end_frame0_exclusive": 479
+        }
+      ],
+      "prior_remote_folder": "/share/home/renly/projects/idcoo_research_20261026/external_method_regression_20261028/results/pilot_installed",
+      "reference_authority": "already_used_publisher_trajectory_derived_six_events",
+      "reference_events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "formal_event_scoring_allowed": true,
+      "event_tolerance_s": 2.0
+    }
+  ],
+  "baseline_gate_required_before_candidate_runs": true,
+  "full_tracker_runs": 18,
+  "expected_full_tracker_updates": 31166,
+  "counter_paths": 36,
+  "fixed_overlap_candidate_IoU": 0.5,
+  "overlap_candidates_are_not_physical_duplicates": true,
+  "fixed_visual_anchors": {
+    "original_clip": [
+      9345,
+      9380
+    ],
+    "new_long": [
+      2675,
+      2720,
+      3825
+    ],
+    "toros_used_reverse": [
+      245,
+      397
+    ]
+  },
+  "current_confirmed12_candidate_sha256": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+  "current_29_condition_catalog_sha256": "26bd4c43a1345e12d0806409229976fa158efab11cc31529ea1f4255a53df8ac",
+  "new_long_draft_sha256": "35a6e0d5b4454cc2a6e6057c750f84cd6cf5d02f5d3fc73c4c1683c80b149bb7",
+  "new_long_timing_draft_sha256": "188079a8754c495485c284b8e0a29519181100033166fe953e9f7547c600dc6a",
+  "no_parameter_selection_or_new_training": true,
+  "candidate_adoption_not_automatic": true,
+  "new_independent_test": false,
+  "new_detector_forwards": 0,
+  "new_training_updates": 0,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

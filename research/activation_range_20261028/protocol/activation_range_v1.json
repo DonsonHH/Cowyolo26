@@ -1,0 +1,163 @@
+{
+  "name": "Train-only fixed range clipping and fixed-weight controls v1",
+  "created_UTC": "2026-10-27T18:16:54.383946+00:00",
+  "source_models": [
+    {
+      "seed": 26,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+      "sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "original_selected_epoch": 5,
+      "integer_initial_state": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/results/smoke_v2/seed26_initial/state.pt",
+      "integer_initial_state_sha256": "28c4fe3caa18ecfe0098aeb4e93d032c6cc8032bf2f0130343a72278190e2d31"
+    },
+    {
+      "seed": 27,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/best_encoder.pt",
+      "sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+      "original_selected_epoch": 5,
+      "integer_initial_state": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/results/smoke_v2/seed27_initial/state.pt",
+      "integer_initial_state_sha256": "56243824eec64b6f833963d4a22436863ca68226e7ee02b78f4e38dbffc9fe21"
+    },
+    {
+      "seed": 28,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/best_encoder.pt",
+      "sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+      "original_selected_epoch": 10,
+      "integer_initial_state": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/results/smoke_v2/seed28_initial/state.pt",
+      "integer_initial_state_sha256": "32122e2d152e817245cd4346a9b18582ea2c4d87ea8d9df6528c76f4cc9cd606"
+    }
+  ],
+  "models": [
+    {
+      "seed": 26,
+      "condition": "source_folded_fp32",
+      "quantized": false,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed26_source_folded_fp32/state.pt",
+      "sha256": "78aba373d85735a0a92773a57e3d71b42be6bb52ec7e3ab84a31fc61a0541fa0"
+    },
+    {
+      "seed": 26,
+      "condition": "initial_integer",
+      "quantized": true,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed26_initial_integer/state.pt",
+      "sha256": "28c4fe3caa18ecfe0098aeb4e93d032c6cc8032bf2f0130343a72278190e2d31"
+    },
+    {
+      "seed": 26,
+      "condition": "paired_float_continuation",
+      "quantized": false,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed26_paired_float_continuation/state.pt",
+      "sha256": "2838328e7ee597000b5e4f37b0bc6884437e742081df974454ff74057d52c53c"
+    },
+    {
+      "seed": 26,
+      "condition": "integer_forward_qat",
+      "quantized": true,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed26_integer_forward_qat/state.pt",
+      "sha256": "7dabfda8a8cbb317311d12f1fcc72e510209182f7fb63cfb84b85f69b2d28b3f"
+    },
+    {
+      "seed": 27,
+      "condition": "source_folded_fp32",
+      "quantized": false,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed27_source_folded_fp32/state.pt",
+      "sha256": "eaba67c032d8339f84c4987a05ac14ccea1a5cafe01be9ab8ae4ef6f61b21b09"
+    },
+    {
+      "seed": 27,
+      "condition": "initial_integer",
+      "quantized": true,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed27_initial_integer/state.pt",
+      "sha256": "56243824eec64b6f833963d4a22436863ca68226e7ee02b78f4e38dbffc9fe21"
+    },
+    {
+      "seed": 27,
+      "condition": "paired_float_continuation",
+      "quantized": false,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed27_paired_float_continuation/state.pt",
+      "sha256": "fcf946d02019d0bd563fbb92636851e1198fcf9911824b38babe0e8b1f3e387b"
+    },
+    {
+      "seed": 27,
+      "condition": "integer_forward_qat",
+      "quantized": true,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed27_integer_forward_qat/state.pt",
+      "sha256": "fcfa0b92088c408f582a672130efdb2eb951fadd2fb97965cb89979d81da8f4a"
+    },
+    {
+      "seed": 28,
+      "condition": "source_folded_fp32",
+      "quantized": false,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed28_source_folded_fp32/state.pt",
+      "sha256": "dd2e23fc981243376ddde4223ce5b1e59e8833a0f4a592562379f08d57c33e99"
+    },
+    {
+      "seed": 28,
+      "condition": "initial_integer",
+      "quantized": true,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed28_initial_integer/state.pt",
+      "sha256": "32122e2d152e817245cd4346a9b18582ea2c4d87ea8d9df6528c76f4cc9cd606"
+    },
+    {
+      "seed": 28,
+      "condition": "paired_float_continuation",
+      "quantized": false,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed28_paired_float_continuation/state.pt",
+      "sha256": "9f1d9afe6c53b087d1c3241a76358012de8ac658888db0db30ff3de3450d9539"
+    },
+    {
+      "seed": 28,
+      "condition": "integer_forward_qat",
+      "quantized": true,
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed28_integer_forward_qat/state.pt",
+      "sha256": "8292db9d55603b54cd5288760f580648f6abc4acf05260fe0a0230affbdb378d"
+    }
+  ],
+  "formal_QAT_summary_sha256": "31aff5af101e40f76b5952b26c5b8d266da790d34a8fd9cbf251d55e09e037e9",
+  "calibration_manifest_sha256": "2977907ef64834918fcf1f4bc5748b0285f08a4fb455574fa4da6eefc6a1e110",
+  "manifest_sha256": "dda82ba39a8a8f1b82bd309f5272ceb0471f74103850678e7355e6faff078aba",
+  "code_freeze": [
+    {
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/integer_trainable.py",
+      "sha256": "5fdcc1a5b5005faf8aaf98f95c979215495e39d1bae0f5ae3608d628cb645163"
+    },
+    {
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/export_integer.py",
+      "sha256": "40e69374dd4eba765085fda1f7eacf685c4e4fa6a4facbac1b1ddce94f4887d8"
+    },
+    {
+      "remote_path": "/share/home/renly/projects/idcoo_research_20261026/integer_trainable_20261028/tools/smoke.py",
+      "sha256": "73ce7885d6555cc969e6f018c3debafdd9efdcb8a81cdb6a51099f2190753629"
+    }
+  ],
+  "images": "Same64existingcalibration trainingimages, deterministicBodyTransform and onefixedaugmentedversioneach. Nevervalidation/query/test images.",
+  "augmentation_seed_base": 84028,
+  "batch_size": 4,
+  "conditions": [
+    "source_folded_fp32",
+    "paired_float_continuation",
+    "initial_integer",
+    "integer_forward_qat",
+    "QAT_no_activation_clipping",
+    "QAT_no_weight_clipping"
+  ],
+  "measurements": "52Convinput/output roundedcode below/above representablerange, endpointcounts anddenominators; weightcode clippedcounts; normalizedfeatureteacher cosine pertrainingimage.",
+  "hypotheses": [
+    "Fixedfloatcalibrationranges may encounter moreout-of-rangecodes afterQAT oraugmentation; compare sameimages acrossstages.",
+    "Ifactivationclipping explains a substantialteacherfeaturedeviation, removingonlyactivationclipping withsameweights may reduce it.",
+    "Ifweightclipping explains deviation, removingonlyweightclipping shouldchange teacherfeatureerror. Report noimprovement aswell."
+  ],
+  "controls": "Noactivationclip leaves quantizationsteps butunbounded input/outputintegercodes; noweightclip leavesactivationclipping butunboundedweightcodes. Theseare nondeployable diagnosticinterventions, notnewlowbitmodels.",
+  "gates": {
+    "frozen8vector_baseline_max_absolute_error": 0.001,
+    "minimum_cosine": 0.9999,
+    "all_actual_accumulator_bounds_fit_INT32": true,
+    "alloutputs_finite": true
+  },
+  "fixtures": "Quantizedbranches, firsttrainingimage ofeachview, preselectedConvindices0,20,51; saveactualcodeinputs/weights/accumulators/raw/output forindependentarithmetic.",
+  "float_clipping_interpretation": "Potentialrange violations under sameinitialqparams, monitoredwithoutchangingfloatforward.",
+  "metric_scope": "Teacherfeatureagreement andclipping only, noidentityaccuracy/FAR/test orFPGAclaim.",
+  "new_training_updates": 0,
+  "validation_or_test_access_allowed": false,
+  "whole_goal_complete": false
+}

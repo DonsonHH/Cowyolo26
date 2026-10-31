@@ -1,0 +1,36 @@
+renly
+mu01
+/share/home/renly
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|5|mix|cu[16-20]|(null)
+cu*|up|infinite|15|idle|cu[01-15]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+PartitionName=cu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=YES QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=cu[01-20] PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=1120 TotalNodes=20 SelectTypeParameters=NONE JobDefaults=(null) DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=1120,mem=3820000M,node=20,billing=1120
+PartitionName=8gpu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=NO QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=gpu01 PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=32 TotalNodes=1 SelectTypeParameters=NONE JobDefaults=DefCpuPerGPU=4 DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=32,mem=385000M,node=1,billing=32,gres/gpu=8
+PartitionName=4gpu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=NO QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=gpu[02-03] PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=64 TotalNodes=2 SelectTypeParameters=NONE JobDefaults=DefCpuPerGPU=8 DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=64,mem=770000M,node=2,billing=64,gres/gpu=8
+Filesystem     Type  Size  Used Avail Use% Mounted on
+ibio01:/public nfs    44T   42T  2.5T  95% /share
+/share/home/renly/miniconda3/bin/python
+/share/home/renly/miniconda3/bin/python3
+conda
+/usr/bin/curl
+/usr/bin/wget
+/share/home/renly/.local/bin/mihomo
+/share/home/renly/miniconda3/envs
+/share/home/renly/.local/venvs
+/share/home/renly/stable-diffusion-webui/venv
+/share/home/renly/.venvs
+{"python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:16:10) [GCC 11.2.0]", "packages": {"torch": true, "cv2": true, "numpy": true, "PIL": true, "ultralytics": false, "yaml": true}}
+HTTP/1.1 200 OK
+Server: nginx/1.24.0 (Ubuntu)
+Date: Mon, 26 Oct 2026 07:26:54 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 8509
+Last-Modified: Thu, 17 Oct 2024 08:50:23 GMT
+Connection: keep-alive
+ETag: "6710cfcf-213d"
+Accept-Ranges: bytes
+Set-Cookie: BIGipServerDATA.BRIS.AC.UK-DATASET-WEBSHARE_POP_POOL=3188267436.47873.0000; path=/; Httponly; Secure
+

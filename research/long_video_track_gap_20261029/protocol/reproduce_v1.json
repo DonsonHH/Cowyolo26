@@ -1,0 +1,106 @@
+{
+  "name": "Native long-video seed26 fixed-output gap reproduction before association instrumentation",
+  "created_UTC": "2026-10-28T17:44:07.854990+00:00",
+  "prior_protocol_sha256": "90bac31ca2224544a1ca62c3a7046842c1c744b584e976d1a4b745d1c9b4bd0a",
+  "prior_review_sha256": "db4335ae1c07b463850aec98e3133f5980a6a8ef145fab5c2dfc2b2859a0563f",
+  "source_folder": "/share/home/renly/projects/idcoo_research_20261026/long_video_fixed_replay_20261029/results/seed26",
+  "source_files": [
+    {
+      "name": "raw_detector_boxes.csv",
+      "sha256": "e3505e9bd8cfe41d912eadb86a5870ec93ddd3f6e24b7ac1c35ebf421fda0a23",
+      "bytes": 164377
+    },
+    {
+      "name": "post_tracker_boxes.csv",
+      "sha256": "2615ec18b3a989a5d28e7d6073d15c87f845baca569452e352c06d774a3ea2de",
+      "bytes": 93724
+    },
+    {
+      "name": "tracks.csv",
+      "sha256": "b1d6aa78cd3c52af1d237810ae0a3d4555dd1001b2ad04b20b29c16176631dee",
+      "bytes": 36571
+    },
+    {
+      "name": "observations.json",
+      "sha256": "4f96a5e4ce5d2ef7c3cbc4a7c6dd6bb717bdc01d6037fb0625afa1d9a352f2ff",
+      "bytes": 353941
+    },
+    {
+      "name": "handoff_events_all_history.json",
+      "sha256": "dea579583cfb0513d9d42b4bc460b10cc717a9a66f6de5dfda00dec571867b5d",
+      "bytes": 1036
+    },
+    {
+      "name": "confirmed_only_events_all_history.json",
+      "sha256": "dea579583cfb0513d9d42b4bc460b10cc717a9a66f6de5dfda00dec571867b5d",
+      "bytes": 1036
+    },
+    {
+      "name": "summary.json",
+      "sha256": "ae954b1d5b4cf9d06daf53af5d8964599b210c4ee3c84728b1dc176732e19fbc",
+      "bytes": 58475
+    }
+  ],
+  "source_sha256": "8210a5bf206dd7f2356bc3d4653b439ab6de12ccfdc8209fe301ac7f02807058",
+  "weights": {
+    "name": "seed26",
+    "seed": 26,
+    "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+    "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+  },
+  "installed_source": [
+    {
+      "file": "installed_track.py",
+      "sha256": "1bc8673215b05db0b94d1e0b8930c34f6256d796eb3f633206ab69d162f59383"
+    },
+    {
+      "file": "installed_byte_tracker.py",
+      "sha256": "00c7c1ff8b1076fc89347071519ae0b06a30bfce00dded94826620e068b1928f"
+    },
+    {
+      "file": "installed_bytetrack.yaml",
+      "sha256": "9672c78cc508b265230fdace4c1cfa2ab7eaf51983fece9942e7d0dfc67a5128"
+    }
+  ],
+  "matching_source_sha256": "a98d246497b23f7210af5b7775e02ae5a51319eddb33f6ab29d3c8bb3e951b98",
+  "input_modules": {
+    "zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+    "confirmation_counter.py": "43dc019982f23bd2cab92471d2bc4a5b1824258ec86edd2f17f4fd67f994976f"
+  },
+  "history_start0": 0,
+  "history_end0_exclusive": 10125,
+  "stride": 5,
+  "source_fps": 25,
+  "native_size_WH": [
+    2560,
+    1440
+  ],
+  "ROI_x": [
+    0.34,
+    0.75
+  ],
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "target_ID": 19,
+  "fragment_ID": 23,
+  "snapshot_before_frame0": 2650,
+  "short_replay_frames": [
+    2650,
+    2655,
+    2660,
+    2665,
+    2670,
+    2675
+  ],
+  "diagnostic_signal": "Expected under assistant same-cow case hypothesis: recover original ID19 on a raw-supported observation and emit its A-to-B event by frame2675.",
+  "signal_is_independent_human_identity_ground_truth": false,
+  "reason_not_remove_neighbour_frames_or_tracks": "Association depends on complete competitor matrices; preserve actual state and every neighbour rather than change the mechanism under study.",
+  "new_model_forwards": 0,
+  "new_training_updates": 0,
+  "formal_scores_computed": false,
+  "whole_goal_complete": false
+}

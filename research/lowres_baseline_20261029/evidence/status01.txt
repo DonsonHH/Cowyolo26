@@ -1,0 +1,12 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS
+130501|cow-lowres-baseline|4gpu|FAILED|1:0|00:00:04|8|12G|
+130501.batch|batch||FAILED|1:0|00:00:04|8||1172K
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/lowres_baseline_20261029/tools/run_baseline.py", line 83, in main
+    out=ROOT/'results/baseline';out.mkdir(exist_ok=False);started=time.monotonic_ns();models={};shape_counts=Counter();image_forwards=0;actual_hook_count=0
+                                ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/pathlib/_local.py", line 722, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/share/home/renly/projects/idcoo_research_20261026/lowres_baseline_20261029/results/baseline'

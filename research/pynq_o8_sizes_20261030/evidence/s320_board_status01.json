@@ -1,0 +1,13 @@
+{
+  "created_UTC": "2026-10-29T18:04:55.224195+00:00",
+  "host": "192.168.2.99",
+  "user": "xilinx",
+  "host_fingerprint_SHA256": "SHA256:TB0FfGjfMzgZUv/reJgTpeq/AM68sMCpGC5xm6Pit7o",
+  "authentication_material_saved": false,
+  "stdout": "{\"launch\": {\"status\": \"REAL_BOARD_SINGLE_CLASS_COW_VECTOR_PROCESS_STARTED\", \"PID\": 10019, \"boot_id\": \"9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f\", \"size\": 320, \"class_count\": 1, \"expected_actual_model_forwards\": 10, \"new_bitstream_programming\": false, \"candidate_final_or_source_video_inputs\": false}, \"ps\": \"  PID S ELAPSED   RSS COMMAND\\n\", \"progress\": null, \"terminal\": null, \"log_tail\": \"Traceback (most recent call last):\\n  File \\\"/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/board_s320_vectors.py\\\", line 72, in <module>\\n    if __name__=='__main__':main()\\n  File \\\"/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/board_s320_vectors.py\\\", line 19, in main\\n    for f in p['payload_files']:assert sha(ROOT/f['file'])==f['sha320']\\n  File \\\"/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/board_s320_vectors.py\\\", line 11, in sha\\n    def sha(p):return hashlib.sha320(Path(p).read_bytes()).hexdigest()\\nAttributeError: module 'hashlib' has no attribute 'sha320'. Did you mean: 'sha224'?\\n\"}\n",
+  "stderr": "",
+  "status": "SSH_COMMAND_FINISHED",
+  "exit_code": 0,
+  "sudo": false,
+  "command_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_o8_sizes_20261030\\tools\\s320_status_board_vectors.sh"
+}

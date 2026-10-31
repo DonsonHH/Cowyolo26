@@ -1,0 +1,1400 @@
+{
+  "status": "FROZEN_BEFORE_PRESELECTED_ROT192_EXPORT_OR_PTQ",
+  "created_host_UTC": "2026-10-29T14:44:31.391040+00:00",
+  "size": 192,
+  "source_checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/training/S192_rot90_seed26/weights/last.pt",
+  "source_checkpoint_sha256": "7b01cead4841f17d561f2a6bd768f9b229f1b3bd142818d8302135d3c69ffd45",
+  "model_classes": {
+    "0": "cow"
+  },
+  "pipeline_qualification_only": true,
+  "new_factorial_weights_used": true,
+  "source_archive_sha256": "e7f4d7f07ab935a15972157d4c101811eb5e9946e60f510dd5639226e2b2cef5",
+  "compiler_modification_record_sha256": "88b50783ca46126a68db4839af446ce41f6439401e3a78a48094447cbf9f1190",
+  "workspace_files": [
+    {
+      "relative_file": "compiler/resident_plan.py",
+      "bytes": 4380,
+      "sha256": "5be03995d0ea176da7c8e5c7e4719ffd6222c7b595a017a6a79035efef153cd7"
+    },
+    {
+      "relative_file": "compiler_sources/prepare_activation.py",
+      "bytes": 2933,
+      "sha256": "467223f031bca07abaf198fca5c7c3048b680d8bc5175e9024fe433b70caa999"
+    },
+    {
+      "relative_file": "compiler_sources/prepare_cpu_heads.py",
+      "bytes": 2231,
+      "sha256": "ee725cd291bfbc730623153bd48d98fc06060a53b1d754497b779b7985e8f2ca"
+    },
+    {
+      "relative_file": "compiler_sources/prepare_fixed_parameters.py",
+      "bytes": 1229,
+      "sha256": "668660343cf128e7e4ce4673bb9e8cbd40d49fe4357d48e335379af3c9d7e199"
+    },
+    {
+      "relative_file": "compiler_sources/prepare_graph.py",
+      "bytes": 6407,
+      "sha256": "4f3dbcef3d289d3d9d28782386668aa06bfa1b125a54b68b87f55f68aeb5fc2a"
+    },
+    {
+      "relative_file": "dataset_split.json",
+      "bytes": 72727,
+      "sha256": "436188f3548aeceb104e9ee7d6644f1b6587816e02a28eaa44657262a379f7d9"
+    },
+    {
+      "relative_file": "native_graph.py",
+      "bytes": 8684,
+      "sha256": "84bd2d829f4b70408585eaabcb742176b04703ac1777f1e8a8d7f65801b9b01e"
+    },
+    {
+      "relative_file": "native_sources/graph_executor.cpp",
+      "bytes": 38136,
+      "sha256": "f9438e47b48c16bdcad66bc76dcd1fc1eb22069fedcf94701257cc09494bfcf3"
+    },
+    {
+      "relative_file": "native_sources/legacy_v6/graph_executor.cpp",
+      "bytes": 31418,
+      "sha256": "76d866f4ec9b3b1a6d38296ff0f329d5b3b3006234ddc0c5c037ecce7617da9f"
+    },
+    {
+      "relative_file": "native_sources/legacy_v6/native_runtime.cpp",
+      "bytes": 21927,
+      "sha256": "b66a7a8af5764b6c2e04171cae3dc6d563adb39f6bfcd8bd5f78c2546c36e3b9"
+    },
+    {
+      "relative_file": "native_sources/legacy_v6/queue_runtime.cpp",
+      "bytes": 4706,
+      "sha256": "f6e059b7bbcab05403e679ee2c1882b7f447b2b0f63bcbe2726143592b99557c"
+    },
+    {
+      "relative_file": "native_sources/native_queue_eval_v2.dll",
+      "bytes": 2606864,
+      "sha256": "e1873dfb381bdc7cfa455bf6dc9ce0c8d0c7678820cf4f901b3656415474fb62"
+    },
+    {
+      "relative_file": "native_sources/native_queue_pc.dll",
+      "bytes": 2647315,
+      "sha256": "01c8de116eba1f1a124c0d7fefe937d96222c90823b0de2870d31a0645f636a4"
+    },
+    {
+      "relative_file": "native_sources/native_queue_pc_candidate.dll",
+      "bytes": 2647315,
+      "sha256": "01c8de116eba1f1a124c0d7fefe937d96222c90823b0de2870d31a0645f636a4"
+    },
+    {
+      "relative_file": "native_sources/native_queue_pc_fusion.dll",
+      "bytes": 2643391,
+      "sha256": "d1064acf8959698ce82137e004f797ce667145dbb1d6ed41867aaf5a6519a449"
+    },
+    {
+      "relative_file": "native_sources/native_queue_pc_o8_preboard.dll",
+      "bytes": 2631799,
+      "sha256": "fadab7fe669d59d341ea8e31db6f1ece653e9db1bd4b062e2a93f65d99696147"
+    },
+    {
+      "relative_file": "native_sources/native_queue_pc_v4.dll",
+      "bytes": 2607792,
+      "sha256": "7ebbea258f1901ac45003347765a563f84b236d5aab40a83e176d07cec6da5aa"
+    },
+    {
+      "relative_file": "native_sources/native_queue_pc_v5.dll",
+      "bytes": 2608340,
+      "sha256": "1a1b75dc84a3b8496fad1f0f26202adf5d38270231d5c488aa57c60641db4138"
+    },
+    {
+      "relative_file": "native_sources/native_queue_pc_v6.dll",
+      "bytes": 2608461,
+      "sha256": "866d51ce735484c90370bf0a6abd269872522d62fffc0f5b0fc3bf248f26ea05"
+    },
+    {
+      "relative_file": "native_sources/native_queue_pc_v7.dll",
+      "bytes": 2608704,
+      "sha256": "306aa847c8f62ec949d89c94ea8411663cfe4d87764031334c76cbb91741eb89"
+    },
+    {
+      "relative_file": "native_sources/native_runtime.cpp",
+      "bytes": 21927,
+      "sha256": "b66a7a8af5764b6c2e04171cae3dc6d563adb39f6bfcd8bd5f78c2546c36e3b9"
+    },
+    {
+      "relative_file": "native_sources/pc_dependencies/libwinpthread-1.dll",
+      "bytes": 90600,
+      "sha256": "609089f045eda398f0af1592f240f446d5ec9e1edb0de755f334a385660e3d76"
+    },
+    {
+      "relative_file": "native_sources/queue_runtime.cpp",
+      "bytes": 4706,
+      "sha256": "f6e059b7bbcab05403e679ee2c1882b7f447b2b0f63bcbe2726143592b99557c"
+    },
+    {
+      "relative_file": "native_sources/resident_methods.inc",
+      "bytes": 4971,
+      "sha256": "60ea2c12dac852b681ccb811a2eb7f6940e00c1b3abb4ccf6f57c4e7b54afe39"
+    },
+    {
+      "relative_file": "native_sources/software_fusion.inc",
+      "bytes": 3265,
+      "sha256": "8a692eed81a97c42e643acdfb49407eb1eb35c4cafb514849730dd3d69f9183a"
+    },
+    {
+      "relative_file": "pc_intdw/accuracy_common.py",
+      "bytes": 2909,
+      "sha256": "b00f72a90a863bac6a8fad7c58bf3f7328ed4ba7f40a84bd6f8b26466339becd"
+    },
+    {
+      "relative_file": "pc_intdw/board_runtime.py",
+      "bytes": 3587,
+      "sha256": "684c91d58d17986a85ad35b408f8383a873c2d2a65fd692cfa7b04aafbf9c13a"
+    },
+    {
+      "relative_file": "pc_intdw/common.py",
+      "bytes": 4222,
+      "sha256": "4571d46cd61d511be7e789352b02afd7959d0d08527776020c993eb46cfc509d"
+    },
+    {
+      "relative_file": "pc_intdw/fast_topk.py",
+      "bytes": 914,
+      "sha256": "07e5008ed58a9764c9549e71f6dbde7451b2de4397c4bab6ee7dcbcf967faf9c"
+    },
+    {
+      "relative_file": "pc_intdw/fixed_point.py",
+      "bytes": 1697,
+      "sha256": "020fe484bbea9df2d939966ad5d886f0ea297576eb6cd5cb554b1984ef3dd613"
+    },
+    {
+      "relative_file": "pc_intdw/head_lut.py",
+      "bytes": 2639,
+      "sha256": "bbdacbbeb6876404d8809bc22fdbeee3b91cb1e9e399cdbec112ef28ed738fa6"
+    },
+    {
+      "relative_file": "pc_intdw/hybrid_executor.py",
+      "bytes": 15859,
+      "sha256": "49d549fbc5a645f65bf84016cb8ecd70f924365b1f96bd4d440f424c19c8774f"
+    },
+    {
+      "relative_file": "pc_intdw/integer_backend.py",
+      "bytes": 1181,
+      "sha256": "e6904b9e6cd9c2bdffffb1d8f38f4a349213d64910bca1a10eb6f91e455ef519"
+    },
+    {
+      "relative_file": "pc_intdw/integer_conv_reference.py",
+      "bytes": 2559,
+      "sha256": "908b389b0edd3fb2e12be4f2156f7fd39991994197455a138d3a027cbb69748d"
+    },
+    {
+      "relative_file": "pc_intdw/integer_graph.py",
+      "bytes": 8146,
+      "sha256": "f0304fc58c74a739d40eb596239e55f5cae23001a636f53efe71e6e25b6cd5cd"
+    },
+    {
+      "relative_file": "recompile_release.py",
+      "bytes": 1686,
+      "sha256": "42f835546146beda772b0364d0647378396ddeb5d3780be0bc5ee234bf0e7668"
+    },
+    {
+      "relative_file": "regenerate_release.py",
+      "bytes": 3992,
+      "sha256": "928b26f5929f9bb2f44bdb0be047a65233478d169a2d3f648f5b4072847b6746"
+    },
+    {
+      "relative_file": "release_manifest.json",
+      "bytes": 87149,
+      "sha256": "5014c6dad9074ef144deedf350c71c87239a499ccb7da04c4280ca850e9906b6"
+    },
+    {
+      "relative_file": "requirements_pc.txt",
+      "bytes": 171,
+      "sha256": "1136dff70c30c677b9dada1f9b131e6d0a270f46d49ad09381dc41265ba34a41"
+    },
+    {
+      "relative_file": "runtime/board_runtime.py",
+      "bytes": 2333,
+      "sha256": "4a4a9aa4a517705099ca3a7e03c8fa4379c819ec0bd0d1d9ecb3fedf8f008c8f"
+    },
+    {
+      "relative_file": "runtime/fixed_point.py",
+      "bytes": 1697,
+      "sha256": "020fe484bbea9df2d939966ad5d886f0ea297576eb6cd5cb554b1984ef3dd613"
+    },
+    {
+      "relative_file": "runtime/hybrid_executor.py",
+      "bytes": 19969,
+      "sha256": "842adebc9d1f31c9dabe9df1002d22785fb4c3f3a2d0ca295c69617ea8c9d0ad"
+    },
+    {
+      "relative_file": "runtime/integer_graph.py",
+      "bytes": 8146,
+      "sha256": "f0304fc58c74a739d40eb596239e55f5cae23001a636f53efe71e6e25b6cd5cd"
+    },
+    {
+      "relative_file": "runtime/native_ops.py",
+      "bytes": 4807,
+      "sha256": "4dae81828b188a07c6bad26082061cba0cc7d7387f47c85bdf39ccc8502695ed"
+    },
+    {
+      "relative_file": "runtime/queue_conv.py",
+      "bytes": 4713,
+      "sha256": "a0da029072e6bf2b4f2c7a0e5be756fb42f6147b0fa31b81c2144bc2535362f4"
+    },
+    {
+      "relative_file": "runtime/queue_device.py",
+      "bytes": 3284,
+      "sha256": "d76246e67a3cedb2808c6e38d2eb2042d81a219ae0f74617e63682e63899876b"
+    },
+    {
+      "relative_file": "runtime_fast/board_runtime.py",
+      "bytes": 2579,
+      "sha256": "2affc0f270a4c2f04f8ceb800934248b8c35483b02b284d77215dba38adb64b3"
+    },
+    {
+      "relative_file": "runtime_fast/fast_topk.py",
+      "bytes": 914,
+      "sha256": "07e5008ed58a9764c9549e71f6dbde7451b2de4397c4bab6ee7dcbcf967faf9c"
+    },
+    {
+      "relative_file": "runtime_fast/fixed_point.py",
+      "bytes": 1697,
+      "sha256": "020fe484bbea9df2d939966ad5d886f0ea297576eb6cd5cb554b1984ef3dd613"
+    },
+    {
+      "relative_file": "runtime_fast/head_lut.py",
+      "bytes": 2639,
+      "sha256": "bbdacbbeb6876404d8809bc22fdbeee3b91cb1e9e399cdbec112ef28ed738fa6"
+    },
+    {
+      "relative_file": "runtime_fast/hybrid_executor.py",
+      "bytes": 20547,
+      "sha256": "959a025435cf2ca54cf7ddff7ebbe890c7f4c09369e2bf608047c44163d815f2"
+    },
+    {
+      "relative_file": "runtime_fast/integer_graph.py",
+      "bytes": 8146,
+      "sha256": "f0304fc58c74a739d40eb596239e55f5cae23001a636f53efe71e6e25b6cd5cd"
+    },
+    {
+      "relative_file": "runtime_fast/native_ops.py",
+      "bytes": 4807,
+      "sha256": "4dae81828b188a07c6bad26082061cba0cc7d7387f47c85bdf39ccc8502695ed"
+    },
+    {
+      "relative_file": "runtime_fast/queue_conv.py",
+      "bytes": 4713,
+      "sha256": "a0da029072e6bf2b4f2c7a0e5be756fb42f6147b0fa31b81c2144bc2535362f4"
+    },
+    {
+      "relative_file": "runtime_fast/queue_device.py",
+      "bytes": 3284,
+      "sha256": "d76246e67a3cedb2808c6e38d2eb2042d81a219ae0f74617e63682e63899876b"
+    },
+    {
+      "relative_file": "test_images/bus.jpg",
+      "bytes": 137419,
+      "sha256": "c02019c4979c191eb739ddd944445ef408dad5679acab6fd520ef9d434bfbc63"
+    },
+    {
+      "relative_file": "tools/compiler.py",
+      "bytes": 2333,
+      "sha256": "4c87570d62ce6ffdc09188ec70a0590b01a44b4ad72257c1a6b9046c99487e13"
+    },
+    {
+      "relative_file": "tools/evaluate_o6_partition_original.py",
+      "bytes": 3567,
+      "sha256": "19f0768f177df49fcdf89fba0fd158da48120dc0cb296297419bb5e71874095d"
+    },
+    {
+      "relative_file": "tools/export_program.py",
+      "bytes": 6311,
+      "sha256": "c8a2ae4157bde3f045127106372fa76584410fb77fc8b9dff45b5c4f92d673b2"
+    },
+    {
+      "relative_file": "tools/prepare_integer_models_original.py",
+      "bytes": 1707,
+      "sha256": "0bfc98fe61da536f0b32d148b3f93ea4204f97d1f9b78822d5992b8d851b55c5"
+    }
+  ],
+  "source_label_manifest_sha256": "fd664b040229d249fc0fd4135466696141f95e3449fad5bb98aeb2f3062f5423",
+  "calibration": [
+    {
+      "order": 0,
+      "file_name": "04930.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04930.jpg",
+      "sha256": "7043eeaaa5942417a51155b3a1c3dea1d3be80e9bdf0350ebce8cd7184b718b7",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 1,
+      "file_name": "06639.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06639.jpg",
+      "sha256": "c442df7b0e5d2d80b0381ce8865e5fa72e718d2ed2d714c863a28ce50d2285f0",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 2,
+      "file_name": "00902.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00902.jpg",
+      "sha256": "043f7831483f908feb64a69fd8ffab09254739dc327d7c72fdc85b7300f42796",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 3,
+      "file_name": "00644.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00644.jpg",
+      "sha256": "9ebb85d91714cd7d516f3242b2ff19612619b812afc340672a8d565430aadbe7",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 4,
+      "file_name": "01348.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01348.jpg",
+      "sha256": "e4424a18db8b8765a9dc02f24d31615b15aa025cef1427e0bc04fecfd3e05810",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 5,
+      "file_name": "01786.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01786.jpg",
+      "sha256": "f6e0cf9873ebdde532409de36fe20ddcc24b82f81c9a8ea1fd716f6a4a5002fd",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 6,
+      "file_name": "02761.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02761.jpg",
+      "sha256": "7ab74369c5469cfe42bc2e33ee8fd15986e3a774fb088481790fdc28e4c8da3d",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 7,
+      "file_name": "03923.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03923.jpg",
+      "sha256": "4a6b476cc8c998c6c36ff337be21055642f5a50c04ccb8ea040e5f116f9794ac",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 8,
+      "file_name": "04191.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04191.jpg",
+      "sha256": "4925eec8902e996e099b97efa9580bd313967cce026c1f88fd21dfbdc1014a9b",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 9,
+      "file_name": "03324.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03324.jpg",
+      "sha256": "ed964d62ecf01f8eef961b67de21d50e3ec900bc36e4cb4c62ce7e7c1efd5496",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 10,
+      "file_name": "03839.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03839.jpg",
+      "sha256": "264b8b57b196889f59a1e600087e744c2493a2ebde2613914c8b6f6c2a73542d",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 11,
+      "file_name": "01687.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01687.jpg",
+      "sha256": "021c553dc66d3ee36268a857be43a77b33c92d76d55c48ba5f5f60126b132e21",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 12,
+      "file_name": "01277.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01277.jpg",
+      "sha256": "cd62531415d613b6cf24f95601c90d2d5bde4aedd52e010aca4b09ddb472a330",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 13,
+      "file_name": "05809.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05809.jpg",
+      "sha256": "f56a74695b49b870a90a449e2e6e92ea87e357671f390f4056401c2f2203efeb",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 14,
+      "file_name": "00668.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00668.jpg",
+      "sha256": "359c098c90f8d33f721edb44d8c4bf83a3818077b943b46fc82e93745d5bd5a5",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 15,
+      "file_name": "00126.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00126.jpg",
+      "sha256": "face899613c5ece8d00aa2c9e10fb5acfcd7ac528305c9c29aa7ae3195c8bf06",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 16,
+      "file_name": "01043.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01043.jpg",
+      "sha256": "06f98b954cf23040ad3823fc66807d733aca58878f50443698f3f7ace012a6e0",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 17,
+      "file_name": "03369.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03369.jpg",
+      "sha256": "1351cbfaa84622c1aa8afe83ccbe5ff8ff7f4d147fc6acc7ef9dd5417d7fe050",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 18,
+      "file_name": "04370.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04370.jpg",
+      "sha256": "91c922e40f65f35f8a67573e0281f8094201b971010253b9eb1f8653734c31ba",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 19,
+      "file_name": "00093.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00093.jpg",
+      "sha256": "e040b70df65397eab493f0406e35bb4288c1089e6c017d08038a3843af9ae430",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 20,
+      "file_name": "05327.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05327.jpg",
+      "sha256": "4353afd73559c671975eb80006420e179dd8d6a17e55ba6f37446394fbe1a6ef",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 21,
+      "file_name": "05944.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05944.jpg",
+      "sha256": "845cbf72f11ab6d991072ea2cc9ce92db0d343d1897b160759960ba254c636a5",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 22,
+      "file_name": "06079.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06079.jpg",
+      "sha256": "37318fd3ff3dba94cd6d02ef80565e1569b7e7dadb4dfcbb136a84987ebf9c87",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 23,
+      "file_name": "02545.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02545.jpg",
+      "sha256": "bbf6e6678b608f92b61bd73885d10ca93ac4c6a3e17e124be4898f8592cec671",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 24,
+      "file_name": "04206.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04206.jpg",
+      "sha256": "67e7f1117b240f16d1fad7e1d9f863567499855d12c1ccae68fed05062c3e835",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 25,
+      "file_name": "02175.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02175.jpg",
+      "sha256": "cd9126d2b85f52ae00f67f7bb4568862fc4b0d8648cf904152afde16cd45bcd0",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 26,
+      "file_name": "06550.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06550.jpg",
+      "sha256": "156e322d32268940add0d6d74c931447ffdd7d88c3ad5e0ab21f2315cd7dc60d",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 27,
+      "file_name": "03980.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03980.jpg",
+      "sha256": "098cf26444f3cac56858bd32ec34b37aae58eeb143843c93c60dd9e56301e55e",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 28,
+      "file_name": "01111.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01111.jpg",
+      "sha256": "3e927810fcbb0f68cdd23199c9fe0ab81f7265b2414af6e7dd233395a2067eec",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 29,
+      "file_name": "00573.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00573.jpg",
+      "sha256": "fd961f158db89863b0effce73a75294b843c25eb4cd7e8554131e2d5f14f9090",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 30,
+      "file_name": "04797.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04797.jpg",
+      "sha256": "ec05dfdf8115500bfc489d242b1a6bb8123652aea74e895f50ac6afdcedefc35",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 31,
+      "file_name": "06212.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06212.jpg",
+      "sha256": "6b91bd21f4297b01eeedaa8ff6d10b029a88d5df0dd24d9abc02d59196195ee8",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 32,
+      "file_name": "06343.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06343.jpg",
+      "sha256": "38bb81baacbccd663c496f474769e3ae40a9753dc0223ad236c4005df3c82401",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 33,
+      "file_name": "02278.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02278.jpg",
+      "sha256": "e9d38d95094cafd9d47657e79bf690b4dd77255670e36cbe5ab3de3e22835c10",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 34,
+      "file_name": "00721.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00721.jpg",
+      "sha256": "a4e1b7193ca9227e83a68bb8f03b722bcf17f77eb80c63e87a8138c768dd6e07",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 35,
+      "file_name": "05914.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05914.jpg",
+      "sha256": "cf76103524c5b617907a4f19ea375b54fbbb7250582547009d9f1d7196cfa32e",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 36,
+      "file_name": "05921.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05921.jpg",
+      "sha256": "6c00743526f6fc9f59a97ae272db26ca02267dba14a331d4debf70e0317cccb7",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 37,
+      "file_name": "04767.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04767.jpg",
+      "sha256": "5708e607a041bcd66790fdd83620d323909931205d7e3251ada0c16811b8b354",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 38,
+      "file_name": "05631.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05631.jpg",
+      "sha256": "f20f23b84510d96773872c320aff6b66fcaf220e64648f9713f315b16f6147df",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 39,
+      "file_name": "00965.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00965.jpg",
+      "sha256": "c8c231c339c54d5fc8e5df935b6571865652fd0685d70130480d87503e33cb96",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 40,
+      "file_name": "05926.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05926.jpg",
+      "sha256": "a577412425ae46d73950cd584e5046399d2d95a3dafabd662fc7e861abdedccd",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 41,
+      "file_name": "00707.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00707.jpg",
+      "sha256": "894ecf4d7ec2d8f83de3964d20bac2ffd3f5b7b26a2afe6b186e1c6645d99ccb",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 42,
+      "file_name": "01943.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01943.jpg",
+      "sha256": "79744e2fd096dd59c09163539861d6c4adce45d2cb9dd23cb65c2ef54c48674a",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 43,
+      "file_name": "06602.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06602.jpg",
+      "sha256": "92ba2fcfac3faf068423fc5c72ecbe111f72daf030e43106c3298f97c08a1481",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 44,
+      "file_name": "03445.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03445.jpg",
+      "sha256": "2c9a9db31bbcea487daf47298d24e022785f2e8e4ebe69042857379b9f0179f1",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 45,
+      "file_name": "04978.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04978.jpg",
+      "sha256": "36e6d1040ccae265cadb409e54931e8a445f47865862a6a34b8aa75dfbfc85ff",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 46,
+      "file_name": "05367.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05367.jpg",
+      "sha256": "eb7a457052ed63368c1fc3d6a53eba9c155b509258a3caa24f9316e73704a77d",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 47,
+      "file_name": "05328.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05328.jpg",
+      "sha256": "328d30072e81a94a139b87afbe487cbc9bc8088a93b7479e4e888947270b01b6",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 48,
+      "file_name": "00729.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00729.jpg",
+      "sha256": "3a02500d788a254f2d1b81bda5969e14488418324065306f52607c87a0f856e0",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 49,
+      "file_name": "01726.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01726.jpg",
+      "sha256": "3f5512bdeb86edada380461ac3cda9d154938b71b9feb39f5ea75c55a3748558",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 50,
+      "file_name": "04336.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04336.jpg",
+      "sha256": "261cb18f6138fb5bb28d575cbcab97eac7cbea64987e68c0a9a172197dcb3b48",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 51,
+      "file_name": "02336.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02336.jpg",
+      "sha256": "3385d317ad104a6b5e5ec73484849893e198988c6642e592ba90598f9c0867aa",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 52,
+      "file_name": "00842.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00842.jpg",
+      "sha256": "5f2e9458f726583484139bc1c394f8cd80db7a57aac6591553790d3d80219eb4",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 53,
+      "file_name": "02033.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02033.jpg",
+      "sha256": "f140e1027861910d7b44d030c8dfc109059c781b66ec2456209032fab995b577",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 54,
+      "file_name": "06594.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06594.jpg",
+      "sha256": "8d1dbd0f93f417d6d864c7a89db52ee220b5b360e7c0a3d2850c8e81c3638abd",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 55,
+      "file_name": "00190.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00190.jpg",
+      "sha256": "2731c72e68c32998068c7a791b40803d6422716a1e0b83dcfd47063a595d4559",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 56,
+      "file_name": "04322.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04322.jpg",
+      "sha256": "87c0872ea32c126963d0175ba2a7ebb5c89aaed0e6288a14b6fab8d8a5eff756",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 57,
+      "file_name": "05867.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05867.jpg",
+      "sha256": "81d01d8745985eef0651f354dbce3af0323003584a68d27f0025be3d1ada2ab0",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 58,
+      "file_name": "01465.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01465.jpg",
+      "sha256": "2e0cba92be251de2e8623a7c47a384ebf77fd5bdb327c7e71a55095a829af24b",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 59,
+      "file_name": "03455.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03455.jpg",
+      "sha256": "0602be68b418d160b781c2f34fab630cf8487c95d16829e956741c0134a7a2ad",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 60,
+      "file_name": "06617.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06617.jpg",
+      "sha256": "f5d1b740497532bcf104840717cdb9377b2239094f480b519896716754020f43",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 61,
+      "file_name": "04218.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04218.jpg",
+      "sha256": "3f84b744173d59be36a6c774e9dd6c7ef39f681d8a70e0663c7c9ac464acc67b",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 62,
+      "file_name": "05094.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05094.jpg",
+      "sha256": "65adac147b26bf10bec762bfff293e9a2434b4f6aad79e8186717a9a4eef404f",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 63,
+      "file_name": "03241.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03241.jpg",
+      "sha256": "81b6d41f4b5ccf295162bd6feae139f8307233bc94ea6848ccfb7398c6ea261d",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 64,
+      "file_name": "00862.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00862.jpg",
+      "sha256": "743d0a0dc807adb328ae57e9871f1ebfca8bc4f40390103b13326c6d7cb942d6",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 65,
+      "file_name": "02001.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02001.jpg",
+      "sha256": "48549540758c317ff894eeca2dadfdc4df878c198a47d7a621dcf69d049809c8",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 66,
+      "file_name": "04148.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04148.jpg",
+      "sha256": "e8664399ab1c9bfb0a3051368ff2850aac30df96eda73ddd39f62872d27dc43e",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 67,
+      "file_name": "01657.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01657.jpg",
+      "sha256": "9656da10aa28af25a23eb3309ab1e548109edbc0a80d797964b5455c999f62d8",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 68,
+      "file_name": "04434.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04434.jpg",
+      "sha256": "ddef5b83910a5152423d32d8b09ad32016cc9cacc536f6a8a9cb7238e07ce79c",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 69,
+      "file_name": "00220.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00220.jpg",
+      "sha256": "5bc52da0fabd15b18b003f5e0f73fa78ad8cdb08546fe53dafb9135a85d26994",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 70,
+      "file_name": "03908.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03908.jpg",
+      "sha256": "7b71d0fe033b0d554e90d312e69b397d1d51556ddd3dc89efd7affb199ce61fc",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 71,
+      "file_name": "04985.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04985.jpg",
+      "sha256": "727de9ce3883149e6d4e0b1c265f449f0b812610a4117a0cc0098ac66ee4437f",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 72,
+      "file_name": "02972.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02972.jpg",
+      "sha256": "dc65bb1b4d4c19d02a95607b554010050daa2ca339350f4093c484b49e2a104a",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 73,
+      "file_name": "00118.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00118.jpg",
+      "sha256": "9407c052e6da57c81c8c94ee732ba184a592ed5489866e92e9d0da07d5917aa3",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 74,
+      "file_name": "03895.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03895.jpg",
+      "sha256": "1481ed5ff95dc8081642f6c074ec51d873f327c1fb524404a8dd664589ee4610",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 75,
+      "file_name": "03125.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03125.jpg",
+      "sha256": "859ac964e72e91d9fd17f8ba8054171f6e28d489cb7e0c57e50058b3985187d8",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 76,
+      "file_name": "04382.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04382.jpg",
+      "sha256": "0c14037f1c2885b41fe83a7f6d93d087f68060f6ff06b6f49dc33659fb6a9917",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 77,
+      "file_name": "02592.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02592.jpg",
+      "sha256": "6da5d14de766da8405abda7f844a7b4ae95c604026703635ad39a9484b76296b",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 78,
+      "file_name": "06351.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06351.jpg",
+      "sha256": "1551f917275a5cef3c091163300358dd771a339f0e18ece13241c62aec9ecc6c",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 79,
+      "file_name": "05135.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05135.jpg",
+      "sha256": "ec0436ffb5344efa0b954bc8d9e7ae96dabee19b09645d24b3ad7459d14bf029",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 80,
+      "file_name": "05542.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05542.jpg",
+      "sha256": "fb8dd53e5af5681ed30160d418b4145c92390f49e9ecb6e209516731428baf62",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 81,
+      "file_name": "02329.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02329.jpg",
+      "sha256": "0b02fcd327d96735549fb9170c4cc292f0a562e6de06b0ef0d357fea9d850003",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 82,
+      "file_name": "02702.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02702.jpg",
+      "sha256": "178e0a5a4cd921f4416ddba041b69134badea6ee0134e9d7c756afe03b5fa380",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 83,
+      "file_name": "06484.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06484.jpg",
+      "sha256": "e52448a76c81514766ab3e1917e9642f50aa0137f691a4ad2d3a095f38b9b4c7",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 84,
+      "file_name": "02757.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02757.jpg",
+      "sha256": "d26ae1156c38f1564bc4a173b978105cc1246638c84d359bfe5cffa99ff9fd1a",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 85,
+      "file_name": "01422.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01422.jpg",
+      "sha256": "885df20825f11cd88f34e27b1201029da85df5af4b33231acf11f50c1ac4b8cd",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 86,
+      "file_name": "04421.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04421.jpg",
+      "sha256": "e3f12973ebbf7c0ea1514870c13ea5ecc6a253c79b79199294a12f72498a2cbd",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 87,
+      "file_name": "06488.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06488.jpg",
+      "sha256": "5f00ff0b3b50a76c6294c9004bb342b3e664db0bbbe5f3ad49d1dce6de242334",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 88,
+      "file_name": "05993.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05993.jpg",
+      "sha256": "b45123fe449665bc22814225e70771f5c6de2bbcbf27dcb03382118c9cc315b1",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 89,
+      "file_name": "02901.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02901.jpg",
+      "sha256": "93246c2d03d7a2a60208eb78bc35aa3f20cf493928713493181aabb8cf3834ff",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 90,
+      "file_name": "03297.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03297.jpg",
+      "sha256": "fa52867f207612b7d83614b336339543594ed9af4313be72b0e17953b44d6bf1",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 91,
+      "file_name": "01238.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01238.jpg",
+      "sha256": "6e093189beee189c537630d1be8fa7258f0b7b91c9cb4d524df07bb06352fd7e",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 92,
+      "file_name": "05939.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05939.jpg",
+      "sha256": "55dbb1c5fbffe9a8b2852fdb6390431ea563c070bbf49351e1d3559c6fe35204",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 93,
+      "file_name": "00457.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00457.jpg",
+      "sha256": "75ba8cb486636f793de989c3e94600d7bf2025e09865f590828925e940006b66",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 94,
+      "file_name": "02555.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02555.jpg",
+      "sha256": "7a88465baa1cec10027fb2f15d746c12656a9f0638eea8443aca1f5ff657ec0d",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 95,
+      "file_name": "06700.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06700.jpg",
+      "sha256": "1da3fbd401a801e717f429a16382f63cedf7cb3363cf38a9b000326a0c6dcb1f",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 96,
+      "file_name": "06418.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06418.jpg",
+      "sha256": "fa9c471564800df753ee5533983ff0a4f73aab1ac90ee945a4ce581aa54a02c3",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 97,
+      "file_name": "02591.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02591.jpg",
+      "sha256": "2a513d3f132f682dfb622d31395f7c7b7bc731ff6bea2a589dbc9aad5f76a5be",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 98,
+      "file_name": "03124.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03124.jpg",
+      "sha256": "dd88fb26a68bfeb5129bb1084f6aa15566d92832207e62b31a9d291dfeab4ef8",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 99,
+      "file_name": "05879.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05879.jpg",
+      "sha256": "40d43b37fab0a07c3d5705d2c19bf28b244f2867a863705b1334dcf77f550b2c",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 100,
+      "file_name": "04027.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04027.jpg",
+      "sha256": "5051ab6c9fe4d8faec4195d96aa85019c4ba78c762d6a3265523d595d1660c3a",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 101,
+      "file_name": "05495.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05495.jpg",
+      "sha256": "ce3b46b43580c9f76ec6c23eb8b4756132eaca61e29a83a14a8fc59af889b6e9",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 102,
+      "file_name": "00575.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00575.jpg",
+      "sha256": "98bd7c1d1ed2a152f1944859765c791cd4b1cd35566c134c436eec2e05f21b8e",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 103,
+      "file_name": "00207.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00207.jpg",
+      "sha256": "72d7452b0e932579d3726400e60ef83153fcd69f9814bfc49d426e1432d3e2bd",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 104,
+      "file_name": "01526.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01526.jpg",
+      "sha256": "729a13dabc6ef1cab04bd91ec295a96c24a0039a5b847c635514c987785ab2df",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 105,
+      "file_name": "05562.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05562.jpg",
+      "sha256": "3803e7e907bb1f33fc1474cf64924356c43188c59ba088cd22f281983eefd93e",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 106,
+      "file_name": "04518.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04518.jpg",
+      "sha256": "ed98fb18caaeaae8ea7df786c830084826d5ecba8c4b891aef7790adf01724b9",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 107,
+      "file_name": "05550.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05550.jpg",
+      "sha256": "2ce1c9f735828d14221e6e275fd11131381975d41e73380d554e1cb2db345321",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 108,
+      "file_name": "01514.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01514.jpg",
+      "sha256": "78bc211085011f3fc68b353f10e02e00c62127ba8738bebe06a397823a01e04d",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 109,
+      "file_name": "06796.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06796.jpg",
+      "sha256": "48722eb52896f357217e777c3b87b983529c6cff88be4a735e04268b55c1a652",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 110,
+      "file_name": "05435.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05435.jpg",
+      "sha256": "219ac905e5ffd19ae8aaa58b74f810f47bd27cf66bb53dce39cbcbcd1b94bab4",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 111,
+      "file_name": "03632.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03632.jpg",
+      "sha256": "95c9ee2f1ee5e88a5677fd56c9a0bceb998eaa1efdd6f10c095c45c62226a015",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 112,
+      "file_name": "05998.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05998.jpg",
+      "sha256": "64fb19babe12759abb7618052dbd3d671fc9ec5936b8f61361e3735dd457b030",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 113,
+      "file_name": "06214.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06214.jpg",
+      "sha256": "32d18124f688f1d5b209a162a67553fa6cd941d63551916121db6998192308d2",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 114,
+      "file_name": "00015.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00015.jpg",
+      "sha256": "d36ba1b4ea995b3e41c0542fba6fa39aa2951036b80c1a50ae7905ee0ca9b6dc",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 115,
+      "file_name": "03489.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03489.jpg",
+      "sha256": "5f23f9dda9787b22f1c41815c219f6bca1c8d5914813735fd9ca2c443742f65a",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 116,
+      "file_name": "00999.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00999.jpg",
+      "sha256": "3c722fe8c2f7a15816cffe758b89541a068bd32f3978ca2e317913a3ddb6e0b5",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 117,
+      "file_name": "06384.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/06384.jpg",
+      "sha256": "7909702b0c6c65d2ca05694afe37f57f2ed514b5ccb615cd25307105718efc12",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 118,
+      "file_name": "04855.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/04855.jpg",
+      "sha256": "7223ff62fa9752ab44826b50f805170364052eb0a1c17ac31c08901a95df5a4f",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 119,
+      "file_name": "00075.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00075.jpg",
+      "sha256": "c987a7046265bba14ae9fc386fae062c3c096d56265626aff9bffdba460c7988",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 120,
+      "file_name": "03372.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03372.jpg",
+      "sha256": "e28e93b8358580efbaa593803b6f85a9fc304ef8a8957c126e515123d40e7773",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 121,
+      "file_name": "03136.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03136.jpg",
+      "sha256": "b812c75283fda3b97e23f8f582aa0b7f69b883f3e1077abb83445e9de9015a5c",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 122,
+      "file_name": "05736.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/05736.jpg",
+      "sha256": "6a7f2f00f9a6c3d4ae02ebbb40616a6fa2f90667b2b3d00e0b76414f96ac389e",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 123,
+      "file_name": "03983.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03983.jpg",
+      "sha256": "f9905784f01bad204b0b968aaa54c9012d1944e9b5fe5ce02fdf1a6e710c7e02",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    },
+    {
+      "order": 124,
+      "file_name": "02529.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/02529.jpg",
+      "sha256": "b72c65334aba95cf89f54015e4dc2a1838a77113549e3c81c9a385c770eeb374",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 0
+    },
+    {
+      "order": 125,
+      "file_name": "00301.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/00301.jpg",
+      "sha256": "b99ccca7bcf01fa709a1644312adcbf47609eccd12d4b3957bdbf4606e7768b3",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 1
+    },
+    {
+      "order": 126,
+      "file_name": "03058.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/03058.jpg",
+      "sha256": "06266e9ec28b04f611ac269389a155014b6f1cc79b9ab9ce31ce01310693821b",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 2
+    },
+    {
+      "order": 127,
+      "file_name": "01226.jpg",
+      "image_alias": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/images/train/01226.jpg",
+      "sha256": "c57940c32a6f696a6d4694c34322d59ba2460624b3b4a9d4a6b85bf4d8a74c24",
+      "actual_split": "train",
+      "orientation_ccw_quarter_turns": 3
+    }
+  ],
+  "calibration_count": 128,
+  "calibration_selection": "PythonRandomseed710026samplewithoutreplacementfromsorted6809train;quarterturni%4,noimagefromvalidation/source/Toros.",
+  "quantization": {
+    "method": "MinMax",
+    "format": "QDQ",
+    "Conv_only_all": true,
+    "per_output_channel_weights": true,
+    "weight_type": "signedINT8",
+    "weight_symmetric": true,
+    "activation_type": "signedINT8",
+    "activation_symmetric": false,
+    "bias": "INT32",
+    "CalibMaxIntermediateOutputs": 15
+  },
+  "float_export": {
+    "opset": 17,
+    "batch": 1,
+    "dynamic": false,
+    "simplify": true,
+    "nms": false,
+    "device": "cpu"
+  },
+  "pc_integer_qualification_images": "First8calibrationtrainingimagesonly;FP32/referencefixedinteger/nativeC++allreported;notaccuracytest.",
+  "native_output_parity_gate": {
+    "score_max_absolute": 0.0001,
+    "box_max_absolute_pixels": 0.002,
+    "class_exact": true
+  },
+  "class_LUT_probe_all256_codes_for_1_and80_classes": true,
+  "native_compile_flags": [
+    "-O3",
+    "-std=c++17",
+    "-shared",
+    "-fPIC",
+    "-fopenmp",
+    "-ffp-contract=off",
+    "queue_runtime.cpp",
+    "-o",
+    "native_queue_linux.so",
+    "-ldl"
+  ],
+  "background_identity_added": false,
+  "board_inference_in_this_stage": false,
+  "source_Toros_or_final_image_pixels_used": false,
+  "whole_goal_complete": false,
+  "primary_model": "S192_rot90_seed26",
+  "compiler_source_phase": "pynq_cow_compile_20261029/compiler_workspace_v2",
+  "previous_successful_compile_review_sha256": "bbc8740e4e4a5c93394cedf34c06961917a40a77951854d13cd6dd73b923883c",
+  "selection_rule": "Keep192rot90seed26preselectedbeforecropresults;notchoosecount12seed.",
+  "primary_selection_protocol_sha256": "77652d7b0d238aff0f4022cc7ce03f25c44d41a6c9f812acb9f12759069b8d27",
+  "current_crop_phase_review_sha256": "cafb438d950a6582b453a9cf61f624fff7fcf4a504e5d1df3869a14a26914657",
+  "calibration_reuses_exact_128_train_images_and_orientations": true,
+  "training_or_calibration_on_source_Toros_or_validation": false,
+  "expected_O8_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "normalization_rule": "UnitTile->Expandandfixed300x1Gather->GatherElements,unchangedarithmetic;8trainoutputsbyteexactrequired.",
+  "compile_script_sha256": "8e138dc32a049678b2e9235494c5a8a77d987bcdc29c7e9a6b5fbc6ce5edf11a",
+  "normalization_script_sha256": "924b87aaa644358a075621d151d280ba517577dc0551bdbe2eadd98175f6862b"
+}

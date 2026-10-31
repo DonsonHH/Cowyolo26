@@ -1,0 +1,11 @@
+{"files_verified": 7, "replay_or_training_started": false}
+PARTITION|AVAIL|NODES|STATE|NODELIST|GRES
+cu*|up|5|mix|cu[16-20]|(null)
+cu*|up|15|idle|cu[01-15]|(null)
+8gpu|up|1|idle|gpu01|gpu:V100S:8
+4gpu|up|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+            129906|       cu|       renly-m8-rereview| RUNNING|      2:16|cu16
+129907
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+            129907|       cu|   idcoo-cows21-loader64| PENDING|      0:00|(None)

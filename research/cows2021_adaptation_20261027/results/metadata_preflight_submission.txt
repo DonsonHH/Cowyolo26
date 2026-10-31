@@ -1,0 +1,17 @@
+{"new_tools_and_protocol_verified": 10, "source_prepare_labels_preserved": true}
+PARTITION|AVAIL|NODES|STATE|NODELIST|GRES
+cu*|up|5|mix|cu[16-20]|(null)
+cu*|up|15|idle|cu[01-15]|(null)
+8gpu|up|1|idle|gpu01|gpu:V100S:8
+4gpu|up|2|mix|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+         129889_11|     4gpu|         renly-patrol-m8| RUNNING|     21:07|gpu02
+         129889_10|     4gpu|         renly-patrol-m8| RUNNING|     21:21|gpu02
+          129889_9|     4gpu|         renly-patrol-m8| RUNNING|     21:39|gpu02
+          129889_8|     4gpu|         renly-patrol-m8| RUNNING|     22:00|gpu03
+          129889_7|     4gpu|         renly-patrol-m8| RUNNING|     22:07|gpu03
+          129889_6|     4gpu|         renly-patrol-m8| RUNNING|     22:17|gpu02
+            129897|       cu|   renly-m8-audit-report| PENDING|      0:00|(Dependency)
+129903
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+            129903|       cu|   idcoo-cows21-metadata| PENDING|      0:00|(None)

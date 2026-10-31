@@ -1,0 +1,34 @@
+{
+  "status": "FROZEN_TRAINING_ONLY_COVERAGE_PROXIES_BEFORE_PIXEL_STATISTICS",
+  "created_host_UTC": "2026-10-29T19:19:26.964473+00:00",
+  "source_manifest_sha256": "f80176c35402c1dba4416249fb111aff35178352f2be7abe2807990aa4ea301c",
+  "train_images": 6809,
+  "body_rectangles": 8888,
+  "image_wh": [
+    1280,
+    720
+  ],
+  "brightness": "OpenCV_BGR_to_YCrCb_Y_uint8_in_rounded_visible_rotated_rectangle_mask",
+  "background": "33square_dilation_minus_union_of_all_body_rectangles;atleast64pixels",
+  "thresholds": {
+    "Y_median_le": 80,
+    "absolute_median_contrast_le": 15,
+    "short_side192_lt": 24,
+    "intersection_over_min_area_ge": 0.1,
+    "visible_fraction_lt": 0.99
+  },
+  "sizes": [
+    192,
+    256,
+    320
+  ],
+  "mask_rounding": "np.rint_visible_polygon_vertices_cv2.fillConvexPoly_line8",
+  "pair_intersection": "cv2.intersectConvexConvex_FP32;independent_double_clip_later",
+  "source_pixel_controls": "first32_training_manifest_images",
+  "example_rule": "3lowestmedian,3lowestcontrast,3largestoverlap,3smallest192shortside;annotation_key_ties;skip_duplicate_keys",
+  "no_independent_occlusion_or_coatcolor_GT": true,
+  "validation_or_holdout_or_video_pixels_allowed": false,
+  "model_forwards": 0,
+  "new_training_updates": 0,
+  "whole_goal_complete": false
+}

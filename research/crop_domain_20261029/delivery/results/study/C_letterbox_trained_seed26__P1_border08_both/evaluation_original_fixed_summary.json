@@ -1,0 +1,228 @@
+{
+  "condition": "C_letterbox_trained_seed26",
+  "rule": "P1_border08_both",
+  "threshold_method": "original_fixed",
+  "threshold": 0.8445389603236383,
+  "is_validation_selected_rule": false,
+  "curated_metrics": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 25,
+    "known_wrong_accepted_W": 1,
+    "known_rejected_U": 4,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 27,
+    "known_closed_top1_accuracy": 0.9,
+    "known_correct_accepted_rate": 0.8333333333333334,
+    "known_wrong_accepted_rate": 0.03333333333333333,
+    "unknown_false_accepts": 4,
+    "unknown_false_acceptance_rate": 0.13333333333333333,
+    "all_accepted_wrong_fraction": 0.16666666666666666,
+    "per_identity": [
+      {
+        "identity": "001",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "009",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 1.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "010",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "020",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 1.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "026",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.8,
+        "correct_accepted_rate": 0.6,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "028",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.8,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "031",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.6,
+        "correct_accepted_rate": 0.6,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "033",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.4
+      },
+      {
+        "identity": "035",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.4
+      },
+      {
+        "identity": "040",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "054",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 1.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "076",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      }
+    ],
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "real_event_queries": 12,
+  "real_event_passed_threshold": 2,
+  "real_event_accepted_candidates": [
+    {
+      "query_id": "E005_f9345_tid95",
+      "predicted_id": "020",
+      "similarity": 0.8547224384904086,
+      "source_sha256": "3ed47fed94823c16df681a4eb4d7325565b514934338e26d54651006cb65d93b",
+      "gallery_image_cosines": [
+        0.610199221782737,
+        0.6437562020946482,
+        0.6613718704051126,
+        0.6361055660412505,
+        0.6605467278320645,
+        0.8181713040329306,
+        0.8547224384904086,
+        0.8383710143442148,
+        0.8374612672067394,
+        0.8063785307904994,
+        0.6703152189043304,
+        0.7220909910558484,
+        0.6707008251429238,
+        0.6876398143988494,
+        0.6931859640969493,
+        0.7146612282648424,
+        0.6477709524251766,
+        0.7196268604770035,
+        0.5873744134463047,
+        0.5776143859019511,
+        0.7984986849126445,
+        0.8397673159041342,
+        0.8023008059696005,
+        0.7613115358840983,
+        0.6994558090819217,
+        0.6444211862386413,
+        0.61735120994659,
+        0.6543965389837821,
+        0.5969523981573149,
+        0.5847566741283556
+      ],
+      "identity_scores": {
+        "009": 0.6613718704051126,
+        "020": 0.8547224384904086,
+        "026": 0.7220909910558484,
+        "028": 0.7196268604770035,
+        "031": 0.8397673159041342,
+        "054": 0.6543965389837821
+      },
+      "identity_reference": null,
+      "verified_identity": false,
+      "source_frame0": 9335,
+      "threshold": 0.8445389603236383,
+      "accepted": true
+    },
+    {
+      "query_id": "E010_f9790_tid102",
+      "predicted_id": "009",
+      "similarity": 0.8816768260179099,
+      "source_sha256": "6742adcc02d92a8af8587292058de19fa5806db1306962bf3891b7c73e56a556",
+      "gallery_image_cosines": [
+        0.8227620317136844,
+        0.8816768260179099,
+        0.8000954256785033,
+        0.7988940540730589,
+        0.8042149072416053,
+        0.7203935989843984,
+        0.6987794813431023,
+        0.7031065290704562,
+        0.7566283727817648,
+        0.7455259304738516,
+        0.5872438877625819,
+        0.6365109244855107,
+        0.6229884064623474,
+        0.6619282505712791,
+        0.645624987100754,
+        0.5459606628829832,
+        0.5524377756371597,
+        0.5842701230919303,
+        0.5171820925803733,
+        0.5528717796700761,
+        0.5989917033318926,
+        0.6435560555416431,
+        0.6656521793100294,
+        0.6325593377997563,
+        0.5212222581570394,
+        0.667221226785343,
+        0.6362943743802116,
+        0.6573869550387195,
+        0.6388677840372579,
+        0.5817628205207546
+      ],
+      "identity_scores": {
+        "009": 0.8816768260179099,
+        "020": 0.7566283727817648,
+        "026": 0.6619282505712791,
+        "028": 0.5842701230919303,
+        "031": 0.6656521793100294,
+        "054": 0.667221226785343
+      },
+      "identity_reference": null,
+      "verified_identity": false,
+      "source_frame0": 9745,
+      "threshold": 0.8445389603236383,
+      "accepted": true
+    }
+  ],
+  "real_event_identity_accuracy_admitted": false
+}

@@ -1,0 +1,53 @@
+JobID|JobName|State|ExitCode|Elapsed|AllocCPUS|MaxRSS
+130876|cow-id-pair-track|COMPLETED|0:0|00:00:02|1|
+130876.batch|batch|COMPLETED|0:0|00:00:02|1|1172K
+130876.0|python|COMPLETED|0:0|00:00:02|1|800K
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+{
+  "status": "ALL4_FULL_TRACKER_ASSOCIATION_AND_EVENT_REPLAYS_MATCH_ACTUAL_ARM_WITH_FROZEN_TOLERANCES",
+  "Slurm_job_id": "130876",
+  "host": "cu03",
+  "new_model_forwards": 0,
+  "whole_goal_complete": false,
+  "created_UTC": "2026-10-30T10:56:49.514058+00:00",
+  "observation_ticks": 8696,
+  "post_tracker_rows": 2090,
+  "reports": [
+    {
+      "run": "r1_old",
+      "observation_ticks": 2175,
+      "post_tracker_rows": 524,
+      "IDs_and_events_exact": true,
+      "maximum_box_difference": 0.0,
+      "maximum_axis_difference": 0.0
+    },
+    {
+      "run": "r1_new",
+      "observation_ticks": 2173,
+      "post_tracker_rows": 522,
+      "IDs_and_events_exact": true,
+      "maximum_box_difference": 0.0,
+      "maximum_axis_difference": 0.0
+    },
+    {
+      "run": "r2_new",
+      "observation_ticks": 2173,
+      "post_tracker_rows": 520,
+      "IDs_and_events_exact": true,
+      "maximum_box_difference": 0.0,
+      "maximum_axis_difference": 0.0
+    },
+    {
+      "run": "r2_old",
+      "observation_ticks": 2175,
+      "post_tracker_rows": 524,
+      "IDs_and_events_exact": true,
+      "maximum_box_difference": 0.0,
+      "maximum_axis_difference": 0.0
+    }
+  ],
+  "counter_paths": 8,
+  "maximum_box_tolerance_pixels": 0.002,
+  "maximum_axis_tolerance": 2e-06,
+  "Torch_imported": false
+}

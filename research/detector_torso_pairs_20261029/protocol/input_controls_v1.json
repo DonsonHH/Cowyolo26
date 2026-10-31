@@ -1,0 +1,110 @@
+{
+  "status": "ADAPTIVE_INPUT_FACTORIAL_FROZEN_AFTER_UNEXPECTED_MAIN_MATCH_COUNTS",
+  "created_UTC": "2026-10-29T08:15:25.735620+00:00",
+  "reason": "Main640rectangularCW90:seed26matched592/1864,seed27505,seed28226;checkinversecoordinatesandinputsize/paddingbeforetraininglocalizer.",
+  "main_protocol_sha256": "3e26b4c19975e43dae1af1d17b54e93a02dd23c96b8d52ebbd8368958504287e",
+  "main_job_id": "130498",
+  "main_job_terminal": "COMPLETED0:0",
+  "main_case_selection_sha256": "92fe34d6e269035b70fd05f1e07dafb5a8f7509a2928a0ca9897ebd2ae69f925",
+  "models": [
+    {
+      "name": "official",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"
+    },
+    {
+      "name": "seed26",
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+    },
+    {
+      "name": "seed27",
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226"
+    },
+    {
+      "name": "seed28",
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+    }
+  ],
+  "sample_names": [
+    "07556.jpg",
+    "07785.jpg",
+    "08229.jpg",
+    "07333.jpg",
+    "07878.jpg",
+    "07427.jpg",
+    "07507.jpg",
+    "07437.jpg"
+  ],
+  "sample_selection": "Same8hashrankedbeforemainmodelpredictions;nofailurebasedreplacement.",
+  "configurations": [
+    {
+      "orientation": "clockwise90",
+      "imgsz": 640,
+      "rect": true,
+      "repeat": false
+    },
+    {
+      "orientation": "clockwise90",
+      "imgsz": 640,
+      "rect": false,
+      "repeat": false
+    },
+    {
+      "orientation": "clockwise90",
+      "imgsz": 320,
+      "rect": true,
+      "repeat": false
+    },
+    {
+      "orientation": "clockwise90",
+      "imgsz": 320,
+      "rect": false,
+      "repeat": false
+    },
+    {
+      "orientation": "original",
+      "imgsz": 640,
+      "rect": true,
+      "repeat": false
+    },
+    {
+      "orientation": "original",
+      "imgsz": 640,
+      "rect": false,
+      "repeat": false
+    },
+    {
+      "orientation": "original",
+      "imgsz": 320,
+      "rect": true,
+      "repeat": false
+    },
+    {
+      "orientation": "original",
+      "imgsz": 320,
+      "rect": false,
+      "repeat": false
+    },
+    {
+      "orientation": "clockwise90",
+      "imgsz": 640,
+      "rect": true,
+      "repeat": true
+    }
+  ],
+  "actual_image_forwards_expected": 288,
+  "new_training_updates": 0,
+  "coordinate_control": "Compareallreference-predictionAABB_IoUsinrotatedframeandrestorednativeframe;mustagree<=1e-10.",
+  "baseline_repeat": "FirstCW640rectTrueandlastrepeatmustreproducecachedmain8sampleboxes/confidenceswithin1e-4,samecount.",
+  "previous320comparison": "Compareoriginal/CW320rectFalseagainstoldfrozen320squarecachedpredictionsatconfidence>=.2;batch1vs16numericaldifferencesreported.",
+  "global_pipeline_changes_allowed": false,
+  "identity_labels_generated": false,
+  "whole_goal_complete": false
+}

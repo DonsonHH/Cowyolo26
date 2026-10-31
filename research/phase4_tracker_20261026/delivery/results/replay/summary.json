@@ -1,0 +1,1810 @@
+{
+  "job_id": "129695",
+  "ultralytics_version": "8.4.63",
+  "runs": [
+    {
+      "model": "generic",
+      "variant": "baseline",
+      "changes": {},
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 54,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 34,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        1,
+        14,
+        7,
+        16,
+        22,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "expected_reference_id": 1,
+          "mapped_reference_id_at_prediction": 1,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "expected_reference_id": 14,
+          "mapped_reference_id_at_prediction": 14,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 2,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 3,
+          "expected_reference_id": 16,
+          "mapped_reference_id_at_prediction": 16,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 4,
+          "prediction_index": 4,
+          "expected_reference_id": 22,
+          "mapped_reference_id_at_prediction": 22,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 5,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 4,
+      "baseline_equivalent": true,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "generic",
+      "variant": "match_090",
+      "changes": {
+        "match_thresh": 0.9
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.9,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 28,
+          "direction": "B->A",
+          "frame": 289
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 48,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        1,
+        14,
+        7,
+        16,
+        22,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "expected_reference_id": 1,
+          "mapped_reference_id_at_prediction": 1,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "expected_reference_id": 14,
+          "mapped_reference_id_at_prediction": 14,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 2,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 3,
+          "expected_reference_id": 16,
+          "mapped_reference_id_at_prediction": 16,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 4,
+          "prediction_index": 4,
+          "expected_reference_id": 22,
+          "mapped_reference_id_at_prediction": 22,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 5,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 5,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "generic",
+      "variant": "match_095",
+      "changes": {
+        "match_thresh": 0.95
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.95,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 289
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 39,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 5,
+        "temporally_matched": 5,
+        "correct_direction_matches": 5,
+        "wrong_direction_matches": 0,
+        "TP": 5,
+        "FP": 0,
+        "FN": 1,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 5
+          }
+        },
+        "mean_absolute_direction_count_error": 0.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 1,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 2,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 3,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 4,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        1,
+        7,
+        16,
+        22,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "expected_reference_id": 1,
+          "mapped_reference_id_at_prediction": 1,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 1,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 2,
+          "expected_reference_id": 16,
+          "mapped_reference_id_at_prediction": 16,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 4,
+          "prediction_index": 3,
+          "expected_reference_id": 22,
+          "mapped_reference_id_at_prediction": 22,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 4,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 7,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "generic",
+      "variant": "buffer_090",
+      "changes": {
+        "track_buffer": 90
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 90,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 54,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 34,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        1,
+        14,
+        7,
+        16,
+        22,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "expected_reference_id": 1,
+          "mapped_reference_id_at_prediction": 1,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "expected_reference_id": 14,
+          "mapped_reference_id_at_prediction": 14,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 2,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 3,
+          "expected_reference_id": 16,
+          "mapped_reference_id_at_prediction": 16,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 4,
+          "prediction_index": 4,
+          "expected_reference_id": 22,
+          "mapped_reference_id_at_prediction": 22,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 5,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 4,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "generic",
+      "variant": "without_score_fusion",
+      "changes": {
+        "fuse_score": false
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": false
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 15,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 19,
+          "direction": "B->A",
+          "frame": 289
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 21,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        1,
+        14,
+        7,
+        16,
+        22,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "expected_reference_id": 1,
+          "mapped_reference_id_at_prediction": 1,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "expected_reference_id": 14,
+          "mapped_reference_id_at_prediction": 14,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 2,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 3,
+          "expected_reference_id": 16,
+          "mapped_reference_id_at_prediction": 16,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 4,
+          "prediction_index": 4,
+          "expected_reference_id": 22,
+          "mapped_reference_id_at_prediction": 22,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 5,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 10,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "generic",
+      "variant": "high_threshold_020",
+      "changes": {
+        "track_high_thresh": 0.2
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.2,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 54,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 34,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        1,
+        14,
+        7,
+        16,
+        22,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "expected_reference_id": 1,
+          "mapped_reference_id_at_prediction": 1,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "expected_reference_id": 14,
+          "mapped_reference_id_at_prediction": 14,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 2,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 3,
+          "expected_reference_id": 16,
+          "mapped_reference_id_at_prediction": 16,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 4,
+          "prediction_index": 4,
+          "expected_reference_id": 22,
+          "mapped_reference_id_at_prediction": 22,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 5,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 4,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "pilot",
+      "variant": "baseline",
+      "changes": {},
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 8.2,
+          "track_id": 21,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 39,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        7,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 2,
+          "prediction_index": 0,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 1,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 16,
+      "baseline_equivalent": true,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "pilot",
+      "variant": "match_090",
+      "changes": {
+        "match_thresh": 0.9
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.9,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 4.4,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 132
+        },
+        {
+          "time_s": 8.2,
+          "track_id": 4,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 26,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.7333333333333338,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 1,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 2,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        1,
+        7,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "expected_reference_id": 1,
+          "mapped_reference_id_at_prediction": 1,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 1,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 2,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 18,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "pilot",
+      "variant": "match_095",
+      "changes": {
+        "match_thresh": 0.95
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.95,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 4.4,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 132
+        },
+        {
+          "time_s": 7.166666666666667,
+          "track_id": 4,
+          "direction": "B->A",
+          "frame": 215
+        },
+        {
+          "time_s": 8.2,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 23,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 4,
+        "temporally_matched": 4,
+        "correct_direction_matches": 4,
+        "wrong_direction_matches": 0,
+        "TP": 4,
+        "FP": 0,
+        "FN": 2,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 4
+          }
+        },
+        "mean_absolute_direction_count_error": 1.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.7333333333333338,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.7333333333333334,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 3,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        1,
+        14,
+        7,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "expected_reference_id": 1,
+          "mapped_reference_id_at_prediction": 1,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "expected_reference_id": 14,
+          "mapped_reference_id_at_prediction": 14,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 2,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 3,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 16,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "pilot",
+      "variant": "buffer_090",
+      "changes": {
+        "track_buffer": 90
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 90,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 8.2,
+          "track_id": 21,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 39,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        7,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 2,
+          "prediction_index": 0,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 1,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 16,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "pilot",
+      "variant": "without_score_fusion",
+      "changes": {
+        "fuse_score": false
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.25,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": false
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 4.466666666666667,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 134
+        },
+        {
+          "time_s": 7.166666666666667,
+          "track_id": 3,
+          "direction": "B->A",
+          "frame": 215
+        },
+        {
+          "time_s": 8.2,
+          "track_id": 13,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 19,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 4,
+        "temporally_matched": 4,
+        "correct_direction_matches": 4,
+        "wrong_direction_matches": 0,
+        "TP": 4,
+        "FP": 0,
+        "FN": 2,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 4
+          }
+        },
+        "mean_absolute_direction_count_error": 1.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.8000000000000003,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.7333333333333334,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 3,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        null,
+        14,
+        7,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "expected_reference_id": 1,
+          "mapped_reference_id_at_prediction": null,
+          "reference_id_supported": false
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "expected_reference_id": 14,
+          "mapped_reference_id_at_prediction": 14,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 2,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 3,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 22,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    },
+    {
+      "model": "pilot",
+      "variant": "high_threshold_020",
+      "changes": {
+        "track_high_thresh": 0.2
+      },
+      "effective_config": {
+        "tracker_type": "bytetrack",
+        "track_high_thresh": 0.2,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "track_buffer": 30,
+        "match_thresh": 0.8,
+        "fuse_score": true
+      },
+      "job_id": "129695",
+      "source_raw_boxes_sha256": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89",
+      "processed_frames": 479,
+      "events": [
+        {
+          "time_s": 8.2,
+          "track_id": 20,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 38,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "geometric_event_reference_ids": [
+        7,
+        17
+      ],
+      "matched_event_reference_support": [
+        {
+          "reference_index": 2,
+          "prediction_index": 0,
+          "expected_reference_id": 7,
+          "mapped_reference_id_at_prediction": 7,
+          "reference_id_supported": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 1,
+          "expected_reference_id": 17,
+          "mapped_reference_id_at_prediction": 17,
+          "reference_id_supported": true
+        }
+      ],
+      "diagnostic_matched_id_changes": 16,
+      "baseline_equivalent": false,
+      "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection"
+    }
+  ],
+  "elapsed_s": 4.287039635702968,
+  "protocol": {
+    "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection",
+    "inputs": "Frozen raw detector boxes from phase3 capture job 129692, both original checkpoints, all 479 original frames",
+    "unchanged": "Detector weights and outputs, native 30fps timeline, original 40/60 regions, stable 3 samples, gap reset 2 seconds, event matching 2 seconds",
+    "controls": [
+      {
+        "name": "baseline",
+        "changes": {}
+      },
+      {
+        "name": "match_090",
+        "changes": {
+          "match_thresh": 0.9
+        }
+      },
+      {
+        "name": "match_095",
+        "changes": {
+          "match_thresh": 0.95
+        }
+      },
+      {
+        "name": "buffer_090",
+        "changes": {
+          "track_buffer": 90
+        }
+      },
+      {
+        "name": "without_score_fusion",
+        "changes": {
+          "fuse_score": false
+        }
+      },
+      {
+        "name": "high_threshold_020",
+        "changes": {
+          "track_high_thresh": 0.2
+        }
+      }
+    ],
+    "baseline_gate": "Standalone tracker replay must reproduce the complete frozen event lists exactly for both models before interpreting variants",
+    "evaluation": "Temporal event TP/FP/FN as before; append publisher-reference ID support at each event using framewise IoU>=0.5 association, without feeding reference information to tracker or counter",
+    "generalisation_gate": "Do not choose the final config from this clip; evaluate candidates on separately annotated held-out sessions and include collisions, reversals and opposing traffic"
+  }
+}

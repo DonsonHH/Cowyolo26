@@ -1,0 +1,48 @@
+{
+  "status": "ONE_FRESH10_EPOCH_MOSAIC_ARM_SEED_COMPLETE",
+  "created_UTC": "2026-10-29T20:00:07.364646+00:00",
+  "job_id": "130622",
+  "array_task_id": "5",
+  "condition": {
+    "array_index": 5,
+    "arm": "mosaic050",
+    "mosaic": 0.5,
+    "seed": 28,
+    "imgsz": 192,
+    "name": "mosaic050_seed28"
+  },
+  "protocol_sha256": "df25eec74be0af4ffc102ed430845d88eeae0d727472842257f93ea3b7af1f35",
+  "preflight_sha256": "a072cc198d15f0b3a32d1e5ec6e12b479c8f3bcc41e185a8d73100cd54e8952c",
+  "initial_state_digest": "0e75cc4b8d39f3bbe615112892946a664e446a972fbe24511689c31dd93dfa6e",
+  "epochs": 10,
+  "training_batches": 2130,
+  "optimizer_updates": 1225,
+  "training_image_presentations": 68090,
+  "actual_persisted_batch_rows": 2130,
+  "actual_persisted_gradient_rows": 1225,
+  "actual_rotation_counts": {
+    "3": 16860,
+    "2": 16891,
+    "1": 17064,
+    "0": 17275
+  },
+  "actual_rotation_label_rows": 146787,
+  "optimizer_step_indices_sha256": "7ca0304a0a8352700d8c17e2bc32a70598a115803e389c3dba1af92840ff08d0",
+  "batch_audit_sha256": "697aa4bb68ae3290d5a71a8f77f61df1cdd74e1abda95aff3d8446b4fee52c36",
+  "gradient_audit_sha256": "0988f45ddc39124f7281350cc7c03885860ab432d787988cab1ef60f1d761fcc",
+  "last_checkpoint": "/share/home/renly/projects/idcoo_research_20261026/mosaic_pair_20261030/results/training/mosaic050_seed28/weights/last.pt",
+  "last_checkpoint_sha256": "8b9f50cea220c8dd8ac9f908d3de80c047a7ae0821775ee944a12e871613257b",
+  "archived_best_sha256": "ee2c567238093c03ee798319afd8dde5035f56096a2d3630d0bfa3ce7e3526bb",
+  "results_csv_sha256": "f4995ab4e3520f8d6a8b0c2d275cc0c72037df3300692d84cb7ba63b053b10ca",
+  "effective_args_sha256": "8b8edc19eb46d5e1edab419e669baa7e6e99ace7bfe9ff89ce7f62be963a727c",
+  "last_epoch_validation": {
+    "metrics/precision(B)": 0.9641,
+    "metrics/recall(B)": 0.96523,
+    "metrics/mAP50(B)": 0.98923,
+    "metrics/mAP50-95(B)": 0.77454
+  },
+  "source_or_Toros_inference_before_all_weights_frozen": false,
+  "new_independent_test": false,
+  "whole_goal_complete": false,
+  "elapsed_s": 387.761941469
+}

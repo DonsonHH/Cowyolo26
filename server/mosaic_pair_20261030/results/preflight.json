@@ -1,0 +1,242 @@
+{
+  "status": "BOTH_MOSAIC_ARMS_REAL_CUDA_LOSS_GRADIENT_AND_TWO_OPTIMIZER_UPDATES_PASS",
+  "created_UTC": "2026-10-29T19:44:06.658160+00:00",
+  "job_id": "130621",
+  "protocol_sha256": "df25eec74be0af4ffc102ed430845d88eeae0d727472842257f93ea3b7af1f35",
+  "records": [
+    {
+      "arm": "mosaic100",
+      "mosaic": 1.0,
+      "seed": 26,
+      "initial_state_digest": "98b0f08adb5a735a74cc03a2631f0098bf3a6968b93b978eb6775f5a775d9a0e",
+      "training_batches": 2,
+      "discarded_optimizer_updates": 2,
+      "loss_history": [
+        {
+          "batch": 1,
+          "optimizer_steps": 1,
+          "loss": 182.18093872070312
+        },
+        {
+          "batch": 2,
+          "optimizer_steps": 2,
+          "loss": 165.03675842285156
+        }
+      ],
+      "gradient_checks": [
+        {
+          "optimizer_update": 1,
+          "finite_tensors": 366,
+          "nonzero_tensors": 350
+        },
+        {
+          "optimizer_update": 2,
+          "finite_tensors": 366,
+          "nonzero_tensors": 350
+        }
+      ],
+      "actual_rotation_schedule": [
+        {
+          "training_batch": 1,
+          "turns": [
+            1,
+            0,
+            3,
+            2,
+            3,
+            3,
+            0,
+            3,
+            3,
+            3,
+            1,
+            0,
+            1,
+            3,
+            2,
+            3,
+            2,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "training_batch": 2,
+          "turns": [
+            3,
+            2,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            2,
+            3,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            2,
+            0,
+            1,
+            3,
+            0,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "actual_image_presentations": 64,
+      "actual_rotation_label_rows": 183,
+      "workers_smoke_override": 0,
+      "formal_workers": 2,
+      "weights_saved_for_reuse": false,
+      "full_source_video_or_Toros_forward": false
+    },
+    {
+      "arm": "mosaic050",
+      "mosaic": 0.5,
+      "seed": 26,
+      "initial_state_digest": "98b0f08adb5a735a74cc03a2631f0098bf3a6968b93b978eb6775f5a775d9a0e",
+      "training_batches": 2,
+      "discarded_optimizer_updates": 2,
+      "loss_history": [
+        {
+          "batch": 1,
+          "optimizer_steps": 1,
+          "loss": 174.30767822265625
+        },
+        {
+          "batch": 2,
+          "optimizer_steps": 2,
+          "loss": 167.709228515625
+        }
+      ],
+      "gradient_checks": [
+        {
+          "optimizer_update": 1,
+          "finite_tensors": 366,
+          "nonzero_tensors": 350
+        },
+        {
+          "optimizer_update": 2,
+          "finite_tensors": 366,
+          "nonzero_tensors": 350
+        }
+      ],
+      "actual_rotation_schedule": [
+        {
+          "training_batch": 1,
+          "turns": [
+            1,
+            0,
+            3,
+            2,
+            3,
+            3,
+            0,
+            3,
+            3,
+            3,
+            1,
+            0,
+            1,
+            3,
+            2,
+            3,
+            2,
+            0,
+            1,
+            2,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            3,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "training_batch": 2,
+          "turns": [
+            3,
+            2,
+            3,
+            3,
+            3,
+            2,
+            1,
+            1,
+            0,
+            2,
+            3,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            2,
+            0,
+            1,
+            3,
+            0,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            0,
+            1,
+            1
+          ]
+        }
+      ],
+      "actual_image_presentations": 64,
+      "actual_rotation_label_rows": 133,
+      "workers_smoke_override": 0,
+      "formal_workers": 2,
+      "weights_saved_for_reuse": false,
+      "full_source_video_or_Toros_forward": false
+    }
+  ],
+  "discarded_optimizer_updates": 4,
+  "formal_training_updates": 0,
+  "full_source_video_or_Toros_forward": false,
+  "new_independent_test": false,
+  "whole_goal_complete": false,
+  "network_scope": "four32-image training batches plus framework internal model-shape initialization probes;not final model evaluation"
+}

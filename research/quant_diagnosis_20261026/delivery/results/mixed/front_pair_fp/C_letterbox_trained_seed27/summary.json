@@ -1,0 +1,226 @@
+{
+  "candidate": "front_pair_fp",
+  "seed": 27,
+  "source_condition": "C_letterbox_trained_seed27",
+  "model_path": "/share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/results/mixed/front_pair_fp/C_letterbox_trained_seed27/embedding_mixed_qdq.onnx",
+  "model_sha256": "7695ae8fa7bf0b2b3e7b91bcdc6af34df6ec0e23c3a9531e6cf444307d0ac4ca",
+  "excluded_nodes": [
+    "/encoder/encoder.0/encoder.0.0/encoder.0.0.0/Conv",
+    "/encoder/encoder.0/encoder.0.1/block/block.0/block.0.0/Conv"
+  ],
+  "excluded_fp32_Conv_MACs": 5870592,
+  "all_Conv_MACs": 54896576,
+  "model_graph": {
+    "file": "/share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/results/mixed/front_pair_fp/C_letterbox_trained_seed27/embedding_mixed_qdq.onnx",
+    "file_bytes": 1252887,
+    "IR_version": 7,
+    "opset": {
+      "ai.onnx": 13
+    },
+    "checker_full_check": "PASS",
+    "nodes": 433,
+    "operator_counts": {
+      "Constant": 1,
+      "DequantizeLinear": 195,
+      "Conv": 52,
+      "HardSigmoid": 27,
+      "Mul": 27,
+      "Relu": 14,
+      "GlobalAveragePool": 10,
+      "QuantizeLinear": 95,
+      "Add": 6,
+      "Flatten": 1,
+      "ReduceL2": 1,
+      "Shape": 1,
+      "Clip": 1,
+      "Expand": 1,
+      "Div": 1
+    },
+    "initializers": 494,
+    "initializer_bytes": 1065843,
+    "initializer_bytes_by_dtype": {
+      "float32": 74108,
+      "uint8": 95,
+      "int8": 920344,
+      "int32": 71296
+    },
+    "largest_inferred_nonconstant_tensor_bytes": 903168,
+    "static_live_known_tensor_peak_bytes_sketch": 6089824,
+    "unknown_output_size_tensors": [],
+    "static_liveness_scope": "Sequential allocation sketch of known graph tensors; assumes no aliasing/reuse, excludes parameters, kernel workspaces, planner alignment, runtime/decoder/DMA buffers. Unknown shapes make the peak incomplete; it is not an upper bound or hardware BRAM utilisation.",
+    "Conv_MACs_direct_initializer_only": 5870592,
+    "Conv_details": [
+      {
+        "name": "/encoder/encoder.0/encoder.0.0/encoder.0.0.0/Conv",
+        "weight_shape": [
+          16,
+          3,
+          3,
+          3
+        ],
+        "output_shape": [
+          1,
+          16,
+          112,
+          112
+        ],
+        "MACs": 5419008,
+        "group": 1
+      },
+      {
+        "name": "/encoder/encoder.0/encoder.0.1/block/block.0/block.0.0/Conv",
+        "weight_shape": [
+          16,
+          1,
+          3,
+          3
+        ],
+        "output_shape": [
+          1,
+          16,
+          56,
+          56
+        ],
+        "MACs": 451584,
+        "group": 16
+      }
+    ],
+    "inputs": [
+      {
+        "name": "images",
+        "shape": [
+          1,
+          3,
+          224,
+          224
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "embedding",
+        "shape": [
+          1,
+          576
+        ]
+      }
+    ],
+    "integer_quantised_initializers": 195,
+    "is_fpga_compile_proof": false
+  },
+  "validation_threshold": {
+    "threshold": 0.9400314981932651,
+    "calibration_known_correct_accepted": 2,
+    "calibration_known_wrong_accepted": 0,
+    "calibration_unknown_false_accepts": 0,
+    "calibration_unknown_queries": 30,
+    "calibration_unknown_far": 0.0,
+    "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+  },
+  "validation": {
+    "known_queries": 25,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 2,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 23,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 25,
+    "known_closed_top1_accuracy": 1.0,
+    "known_correct_accepted_rate": 0.08,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 0,
+    "unknown_false_acceptance_rate": 0.0,
+    "all_accepted_wrong_fraction": 0.0,
+    "per_identity": [
+      {
+        "identity": "007",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "011",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "012",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "019",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "022",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "024",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "030",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "039",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "041",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "045",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.4,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "081",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      }
+    ],
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  }
+}

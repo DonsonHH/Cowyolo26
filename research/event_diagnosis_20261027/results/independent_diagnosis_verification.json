@@ -1,0 +1,201 @@
+{
+  "status": "PASS",
+  "implementation": "stdlib exhaustive per-frame IoU assignment and independent grouped-region visits",
+  "verified_capture_files": [
+    {
+      "path": "results\\capture\\epoch20_seed26\\raw_detector_boxes.csv",
+      "sha256": "42ed6da536ff32623eedf7f5a580fdc10882c2dda34270eaec993eb318a5f757"
+    },
+    {
+      "path": "results\\capture\\epoch20_seed26\\post_tracker_boxes.csv",
+      "sha256": "51d12d2fa36b042a1f15d57fa029ffc2bbbf98dbe82baa60163de9b68a506173"
+    },
+    {
+      "path": "results\\capture\\epoch20_seed27\\raw_detector_boxes.csv",
+      "sha256": "e2cb3bfaaaf29e02984ed76767127b340d0d277fc6abe500d01edc2448f6119e"
+    },
+    {
+      "path": "results\\capture\\epoch20_seed27\\post_tracker_boxes.csv",
+      "sha256": "016475bfc37125ba4e90ead6a4d0f6d03f0563bf005fe0cfd89d342145a940e1"
+    },
+    {
+      "path": "results\\capture\\epoch20_seed28\\raw_detector_boxes.csv",
+      "sha256": "53f82c7f4aa47cccecb555f7a3c441ac26b1b35a827f4cd738af3b96a6493ff9"
+    },
+    {
+      "path": "results\\capture\\epoch20_seed28\\post_tracker_boxes.csv",
+      "sha256": "d263a17e1275e63de0f6bf5a01172d068eee05a5da23bf25834a384512d66b90"
+    }
+  ],
+  "verified_conditions": [
+    {
+      "model": "epoch20_seed26",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": 1,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 1,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 1,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": 0,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 2,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 2,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed26",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": 1,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": 2,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 1,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 1,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": 1,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 3,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 2,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed27",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": 2,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": 1,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 2,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 2,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": 0,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 3,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 3,
+      "exact_event_equality": true
+    },
+    {
+      "model": "epoch20_seed28",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": 1,
+      "exact_event_equality": true
+    }
+  ],
+  "scope": "Reference-assisted diagnostic arithmetic, not new generalisation or board performance"
+}

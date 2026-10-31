@@ -1,0 +1,40 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+130531|cow-O8-compile-gate|FAILED|1:0|00:00:30|
+130531.batch|batch|FAILED|1:0|00:00:30|1164K
+    "MatMul": 4,
+    "Softmax": 2,
+    "Resize": 2,
+    "Slice": 2,
+    "Sub": 1,
+    "ReduceMax": 1,
+    "TopK": 2,
+    "Unsqueeze": 3,
+    "Flatten": 2,
+    "Tile": 2,
+    "GatherElements": 2,
+    "Mod": 1,
+    "Gather": 1,
+    "Cast": 1
+  }
+}
+ACTIVATION_TABLES_READY 44 fusable convolution blocks
+FIXED_PARAMETERS_READY 94
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_cow_compile_20261029/compiler_workspace/runtime_fast/head_lut.py", line 10, in optimize
+    assert spec['FPGA_supported'] and spec['Cout']==80
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_cow_compile_20261029/tools/compile_old_seed26.py", line 95, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_cow_compile_20261029/tools/compile_old_seed26.py", line 47, in main
+    compiled=out/'compiled';M=compile_onnx(source,compiled);ids=enable_integer_depthwise(M);export_program(M,size,compiled/'program')
+                                                                                            ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_cow_compile_20261029/compiler_workspace/tools/compiler.py", line 22, in export_program
+    cmd=[sys.executable,str(D/'tools/export_program.py'),'--size',str(size),'--model-dir',str(model),'--output',str(out)];subprocess.run(cmd,check=True)
+                                                                                                                          ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/share/home/renly/projects/idcoo_research_20261026/pynq_cow_compile_20261029/../env/bin/python', '/share/home/renly/projects/idcoo_research_20261026/pynq_cow_compile_20261029/compiler_workspace/tools/export_program.py', '--size', '192', '--model-dir', '/share/home/renly/projects/idcoo_research_20261026/pynq_cow_compile_20261029/results/qualification/compiled/model', '--output', '/share/home/renly/projects/idcoo_research_20261026/pynq_cow_compile_20261029/results/qualification/compiled/program']' returned non-zero exit status 1.

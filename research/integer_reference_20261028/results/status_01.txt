@@ -1,0 +1,10 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129975|idcoo-intref|FAILED|1:0|00:00:01|
+129975.batch|batch|FAILED|1:0|00:00:01|1176K
+129975.0|python|FAILED|1:0|00:00:01|800K
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/integer_reference_20261028/tools/run_reference.py", line 6, in <module>
+    import onnx
+ModuleNotFoundError: No module named 'onnx'
+srun: error: cu16: task 0: Exited with exit code 1

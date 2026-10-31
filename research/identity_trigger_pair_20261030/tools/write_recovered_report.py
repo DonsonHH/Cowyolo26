@@ -1,0 +1,89 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json
+ROOT=Path(__file__).resolve().parents[1];PROJECT=ROOT.parent
+load=lambda p:json.loads(p.read_text(encoding="utf-8-sig"))
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+v=load(ROOT/"results/independent_verification.json")
+ref=load(ROOT/"results/reference_independent_verification.json")
+producer=load(ROOT/"results/producer_independent_verification.json")
+pair=load(ROOT/"results/job_pairing.json")
+panels=load(ROOT/"results/photo_panel_manifest.json")
+assert v["actual_O8_timed_forwards"]==1464 and v["actual_background_identity_jobs"]==35
+assert ref["actual_Torch_image_forwards"]==89 and ref["tracker_replay_observation_ticks"]==8596
+visual={"status":"ALL26_UNIQUE_ACTUAL_TRIGGER_PHOTOS_ON5_PAGES_ACTUALLY_VIEWED_ALL35_JOBS_MAPPED",
+        "created_UTC":datetime.now(timezone.utc).isoformat(),"manifest_sha256":sha(ROOT/"results/photo_panel_manifest.json"),
+        "pages_actually_viewed":[r["file"]for r in panels["pages"]],"unique_photos_viewed":26,"actual_jobs_mapped":35,
+        "observations":["Overhead Holstein bodies visible across all groups","Bright white body regions and low-contrast dark body regions retained",
+                        "Partial head/tail/body and neighboring cow edges appear in some crops","Selection ages0–25source frames and alternate crops retained",
+                        "Old r1 frame9795 accepted candidate009 is provisional; no permanent cow-ID ground truth used"],
+        "true_identity_accuracy_adjudicated":False,"source_labels_changed":False,"new_model_forwards":0,"whole_goal_complete":False}
+for row in panels["pages"]:assert sha(Path(row["file"]))==row["sha256"]
+out=ROOT/"results/actual_photo_visual_review.json";assert not out.exists()
+out.write_text(json.dumps(visual,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8")
+text="""# 实际计数触发四轮：原结果取回，时序与计数仍未达目标
+
+2026-10-31。**原四轮已完整取回并独立复算，计数为10／10／8／7，处理率4.630–4.770帧／秒；当前不能承诺完整5FPS或可靠身份找回。** 这些是此前同一父任务在原boot完成的结果，本次没有重跑板端实验。人工总量12保持，原视频独立逐事件及永久牛号参考仍缺。
+
+## 1. 从失联接回原实验
+
+原父任务PID10099、boot ID9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f；源协议SHA为4217824d2964e56218c566a73096a2f282c94020f3176c74bf86cef9a270513c。此前本机只观察到前三轮摘要和第四轮350帧进度；这不是最终运行总数。[原部分观察保留](实际触发对照_部分观察与恢复.md)
+
+USB与网络恢复后，从当前新boot e7059099-ecb8-451e-a9aa-a66c8222196b只读检查，原目录、完整record及terminal均存在，父记录hash与终态对应。progress.json保留旧RUNNING快照，依据完整terminal判定原实验结束。没有重新加载O8来凑“未改变”的终态，不由新boot推断原overlay仍驻留。[访问恢复](../pynq_access_resume_20261031/USB与网络恢复记录.md)
+
+原归档12,260,384字节、163成员／162清单文件已取回，SHA256为dcce67e7b4fe2cb4492bd6d0a4d206f9384992fc9bd4882aa7601131739bc638。全部清单、原代码及协议hash、文件大小核验通过；23个绑定运行文件在恢复时仍匹配。[原包核验](results/recovery_archive_verification_v2.json)
+
+## 2. 冻结条件与实际工作量
+
+沿用192检测器、O8、同源回放与原跟踪计数。每轮78.4秒／392个200毫秒释放时隙，实际检测帧由运行时决定；全部运行使用异步高分JPEG生产者，读取每个释放源帧并在取回后验证。发生通行事件后，用同轨迹当前或过去一秒的几何规则选择已有照片，最多保留6帧；模拟所有RF输入均未读，触发后台身份任务。
+
+顺序为旧—新—新—旧，两模型配各自编码的同30张注册图，6个图库ID。主阈值共用0.8445389603236383，附加0.8707458695890389；没有根据本轮照片改门限。前台主线程及后台可用CPU0／1，后台nice+10、NCNN单线程。协议中旧描述列表不代表实际运行了idle_gate，四次均为low_priority_parallel。[执行前协议](protocol/run_v1.json) · [说明澄清](protocol/execution_clarification_v1.json)
+
+低分辨率输入仍为已就绪回放，实际读取的高分辨率来源为SD中的JPEG；不是相机曝光／传输或真实无线RFID试验。35个任务来自当次计数，没有强制每轮恰好10个；因漏计／不同轨迹导致的任务减少也属于完整系统结果。
+
+## 3. 前台时序和计数
+
+| 轮次／身份模型 | 处理／392 | 跳过 | 已处理帧>200ms | 处理率／帧·s⁻¹ | 释放至计数P95／ms | 计数／人工12 | 实际身份任务 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+"""
+for c in v["cases"]:
+    text+=f'| {c["run"]}／{c["identity_model"]} | {c["processed_frames"]} | {c["skipped_slots"]} | {c["deadline_misses"]} | {c["processed_per_second_over_offered_duration"]:.3f} | {c["P95_release_to_count_ms"]:.2f} | {c["source_down_count"]} | {c["actual_background_jobs"]} |'+chr(10)
+text+="""
+处理率定义为实际处理图数除以78.4秒，迟到为释放至计数完成超过200毫秒，跳过时隙单列。四轮绝对总量误差为2／2／4／5，不能据此拆成同样数量的漏计或计算逐事件F1。第二轮新模型计8及第二轮旧模型计7全部保留；不选择最好一轮作为结论。
+
+高分输入与模型实际重叠的处理帧为1160／1464。生产者全部1568次读取的时钟、源JPEG hash、前台1464次接收及无未来读取条件均复算；缓冲最多7份保留／8份瞬时压缩负载，不代表进程或系统总内存上界。[输入生产与接收核验](results/producer_independent_verification.json)
+
+## 4. 后台完成、接受与配对范围
+
+| 轮次 | 任务数 | 主阈值接受数 | 最长排队／ms | 最长入队至结果／ms | 纯身份网络均值／ms | 选了更早照片的任务 |
+|---|---:|---:|---:|---:|---:|---:|
+"""
+for b in v["backgrounds"]:
+    text+=f'| {b["run"]} | {b["actual_jobs"]} | {b["accepted_provisional_predictions"]} | {b["max_queue_wait_ms"]:.2f} | {b["max_enqueue_to_result_ms"]:.2f} | {b["mean_network_elapsed_ms"]:.2f} | {b["chosen_older_frame_jobs"]} |'+chr(10)
+text+="""
+原模型第一轮接受1个候选（源帧9795、ID009），其余三轮主阈值接受0；所有附加较高阈值接受数均为0。没有原事件永久牛号，不能把这个接受叫作正确恢复，也不能把拒绝叫作错误拒识。相同源片重复不增加独立牛只。
+
+35任务对应26份不同PNG，全部5页联系表实际看完；亮白／低对比躯干、部分出画及邻牛边缘保留。按模型与输入tensor去重得到29个参考输入，不把它们当29头真实牛。[全部照片和任务映射](results/photo_panel_manifest.json) · [视觉检查](results/actual_photo_visual_review.json)
+
+两个重复内按事件完整JSON的字面一致仅形成6个配对，23个未配对任务保留；其中3对照片及tensor完全相同。时间、临时轨迹号相同不是永久牛身份的证明，也不能忽略不匹配任务，把实际触发实验改成固定同照片对照。[字面事件配对](results/job_pairing.json)
+
+前台各轮检测区间均值164.74–188.97ms，几何选择均值约0.22–0.26ms；后台JPEG处理与PNG保存也有可观开销。各边界同时包含CPU调度、缓存及文件系统条件，不能单凭均值差归因编码器。父进程累计HWM约236,936kB，四轮采样VmSwap为23,168／74,880／66,304／86,144kB；不是完整系统峰值，也不把VmSwap数值直接当作发生卡顿的因果证明。[组件与内存采样](results/component_timings.json)
+
+## 5. 全链条核验与前向统计
+
+原1464份实际raw逐字节对应此前验证的同帧O8输出；8596个含历史观察时刻、8条计数路径、202个候选几何观察、35份实际照片／tensor／特征／分数全部复算，原/新各自图库匹配。生产者时间、CPU tick与线程亲和性边界均检查，CPU tick不是逐层调度轨迹。[本机复算](results/independent_verification.json) · [CPU边界](results/CPU_independent_verification.json)
+
+Renly作业130923完整重放四条实际处理帧序列：临时ID与全部事件精确相同，最大框差6.104×10⁻⁵像素、轴差2.120×10⁻⁸，均在预先固定0.002像素／2e−6范围内；未放宽容差。另以原权重做29个唯一查询和两套各30张图库，共89次Torch图前向，验证全部35原任务代表输入。116项两种图库／两个阈值比较与ARM一致，归一化特征最大差4.046×10⁻⁶。[完整参考复算](results/reference_independent_verification.json)
+
+原板端阶段1464定时检测＋8准入＋8检测预热＋35身份任务＋4身份预热，共1519模型图前向。恢复本身增加0板端前向，CPU参考另89；没有训练、再次转换或原实验重跑。第一次参考作业130922因缺失已冻结的提交脚本在模型前向前失败，补齐同文件后130923完成0:0，原失败日志保留。
+
+参考归档16,263,209字节、104成员／103清单已取回，SHA256为3fa6a935717701a6c63835cf1bc105766d3e8737ebe3a5b6902280adcdada88f。首次取包误在归档结束前开始，8,287,441字节半包已隔离；完整原包按完成后的大小／hash／清单核验，未重复推理。
+
+## 6. 结论与下一步
+
+该配置实现了同板检测、实际计数触发、因果抓拍和ARM检索，但真实读取JPEG与动态任务下没有保持5FPS，计数和身份覆盖也不足。原固定10照片负载接近5FPS的结果不能替代这项实际触发检验；当前不默认更换编码器或门限。
+
+下一步保留这四轮作为既有开发证据，先接收独立事件参考定位具体漏计／重计，再以相同输入取得方式和明确任务负载做有针对性的控制。真实相机输入、独立双向会话、原12事件永久身份和功耗仍需各自证据。板卡访问已恢复，后续实机试验按新协议单独记录，不改写本轮原始结果。[恢复与自审](Review与恢复后当前状态.md)
+"""
+out=ROOT/"实际计数触发四轮恢复结果与时序取舍.md";assert not out.exists();out.write_text(text,encoding="utf-8")
+print(json.dumps({"report":str(out.resolve()),"counts":[c["source_down_count"]for c in v["cases"]],"actual_tasks":35,"board_forwards_during_recovery":0,"CPU_reference_forwards":89},ensure_ascii=False))

@@ -1,0 +1,22 @@
+{
+  "same_training_image": "data/2023Aug15/049/00011_1.jpg",
+  "same_QDQ_graph": true,
+  "only_runtime_optimisation_changed": true,
+  "records": [
+    {
+      "condition": "float_default",
+      "cosine_to_fp32": 0.9999999999999998,
+      "maximum_feature_error": 0.0
+    },
+    {
+      "condition": "QDQ_default",
+      "cosine_to_fp32": 0.3267490013682078,
+      "maximum_feature_error": 0.1656238827854395
+    },
+    {
+      "condition": "QDQ_fusion_disabled",
+      "cosine_to_fp32": 0.32672114511283684,
+      "maximum_feature_error": 0.16562419012188911
+    }
+  ]
+}

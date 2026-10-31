@@ -1,0 +1,325 @@
+{
+  "name": "Singlefactor Lost low-score secondstage eligibility paired control",
+  "created_UTC": "2026-10-28T12:03:14.805826+00:00",
+  "source_scope_inclusive": [
+    8912,
+    10873
+  ],
+  "history_start": 0,
+  "source_fps": 25,
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "weights": [
+    {
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+    },
+    {
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226"
+    },
+    {
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+    }
+  ],
+  "sources": [
+    {
+      "name": "full640_5hz_seed26",
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/replay_v2/full640_5hz_seed26",
+      "seed": 26,
+      "stride": 5,
+      "stable_samples": 3,
+      "files": [
+        {
+          "name": "pretracker_boxes.csv",
+          "sha256": "3a6cf60bed2fbe67ff3109a9a1273ee96025ee71492e16308dd07518b36941dd",
+          "bytes": 395497
+        },
+        {
+          "name": "source_tracks.csv",
+          "sha256": "b3768ce7de9797fbbf41ffe870bce4bc865261c2494ffd74100cffbcfadf8779",
+          "bytes": 70527
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052",
+          "bytes": 67
+        },
+        {
+          "name": "source_events.json",
+          "sha256": "10ac3a009b58b64ab334384d90d37ae0889bd97cfd58e1ecae24ad8899ac25cf",
+          "bytes": 1107
+        },
+        {
+          "name": "summary.json",
+          "sha256": "a6931780ebad01563302afb1797f21c60875bb9178084d03ee0011f4af0f0db4",
+          "bytes": 833
+        }
+      ],
+      "prior_predicted_down": 11,
+      "prior_predicted_up": 0
+    },
+    {
+      "name": "full640_5hz_seed27",
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed27",
+      "seed": 27,
+      "stride": 5,
+      "stable_samples": 3,
+      "files": [
+        {
+          "name": "pretracker_boxes.csv",
+          "sha256": "3854154ed3bdee7ddf99a3ecf77ffa0925581575e07e1cd17dbc532a070a357a",
+          "bytes": 321471
+        },
+        {
+          "name": "source_tracks.csv",
+          "sha256": "af0753a7da79f528371e41736cbefbfadb07032be6c823e32ed14aaa3c756870",
+          "bytes": 68414
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052",
+          "bytes": 67
+        },
+        {
+          "name": "source_events.json",
+          "sha256": "cd34d90b4e5a562c304a70b70cf112acb270b42bd8e0d7c3a537b9597360b171",
+          "bytes": 1004
+        },
+        {
+          "name": "summary.json",
+          "sha256": "d1988cb679cbe70ed9797d536887e4bbf0e6076899bc41a10f159d115d876db2",
+          "bytes": 833
+        }
+      ],
+      "prior_predicted_down": 10,
+      "prior_predicted_up": 0
+    },
+    {
+      "name": "full640_5hz_seed28",
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed28",
+      "seed": 28,
+      "stride": 5,
+      "stable_samples": 3,
+      "files": [
+        {
+          "name": "pretracker_boxes.csv",
+          "sha256": "18fe408f594dc8856477cd55172f65b402f6123756ab4bbcb34e1a672f910562",
+          "bytes": 637550
+        },
+        {
+          "name": "source_tracks.csv",
+          "sha256": "3051bab94dbd07b95077389aa43b58333027323287e7ad94b22d406a3be8584c",
+          "bytes": 71511
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "7c2820b177cf3526722719f5a18f11162c53f01880e85a36f4b796e7bb06d8a6",
+          "bytes": 182
+        },
+        {
+          "name": "source_events.json",
+          "sha256": "9a55bb4b84ca96cb1f42117a98283e1ffbf1c66609803617f4c1b061fa05a306",
+          "bytes": 1114
+        },
+        {
+          "name": "summary.json",
+          "sha256": "f14b90084574da94c3f86fbd7a38ce990c8f4d042629d328b34492cf5a58fbaf",
+          "bytes": 832
+        }
+      ],
+      "prior_predicted_down": 11,
+      "prior_predicted_up": 0
+    }
+  ],
+  "installed_source": [
+    {
+      "file": "installed_track.py",
+      "sha256": "1bc8673215b05db0b94d1e0b8930c34f6256d796eb3f633206ab69d162f59383"
+    },
+    {
+      "file": "installed_byte_tracker.py",
+      "sha256": "00c7c1ff8b1076fc89347071519ae0b06a30bfce00dded94826620e068b1928f"
+    },
+    {
+      "file": "installed_bytetrack.yaml",
+      "sha256": "9672c78cc508b265230fdace4c1cfa2ab7eaf51983fece9942e7d0dfc67a5128"
+    }
+  ],
+  "matching_source_sha256": "a98d246497b23f7210af5b7775e02ae5a51319eddb33f6ab29d3c8bb3e951b98",
+  "prior_secondstage_protocol_sha256": "91170ac7894362a78f225f35397185cd75f600c92afdd97fdbc40db978883978",
+  "baseline_module_sha256": "6e4a33dbc3f1adb2551fff26dc3304722ccc4d73790dff7a1e9a4b5c2cc9abce",
+  "candidate_module_sha256": "3bb2b4f1804f6cacb4e672adfa3b8e7ac68ed57d2b5231929cf74e7fdaed328d",
+  "input_modules": {
+    "confirmation_counter.py": "43dc019982f23bd2cab92471d2bc4a5b1824258ec86edd2f17f4fd67f994976f",
+    "event_metrics.py": "049cb747a15ed180fa7f2679f2157c71def8182b69e801fdb433cad369f1e437",
+    "secondstage_tracker.py": "6e4a33dbc3f1adb2551fff26dc3304722ccc4d73790dff7a1e9a4b5c2cc9abce",
+    "zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+  },
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "ROI_x": [
+    0.34,
+    0.75
+  ],
+  "prior_baselines": [
+    {
+      "seed": 26,
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/secondstage_iou_20261028/results/secondstage_iou_seed26",
+      "files": [
+        {
+          "name": "source_tracks.csv",
+          "sha256": "60fda2f5c9354cacd3e0216bd4eb8222ad64c1e08725452a4d07cf49ea13dcae",
+          "bytes": 71606
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052",
+          "bytes": 67
+        },
+        {
+          "name": "all_posttracker_boxes.csv",
+          "sha256": "8372c85b63304ae988217164a3c2bc097d3527e0af94d68af6ffe5ca7f956c0e",
+          "bytes": 206513
+        },
+        {
+          "name": "confirmed_only_events.json",
+          "sha256": "a6d88878601a43de84ff2aff6565fa0e6377f1d5be5c75e4988bc975e8abf0da",
+          "bytes": 1105
+        },
+        {
+          "name": "handoff_events.json",
+          "sha256": "ec0268ebe9e70fe940eaee0de2c1d325ecb281c6faab19fb5e90720a2891f5e4",
+          "bytes": 1205
+        },
+        {
+          "name": "observations.json",
+          "sha256": "bc2ec8e377cd3b294751415165d9f6ab3a64552484a29c121fd221f2e38a954e",
+          "bytes": 371791
+        },
+        {
+          "name": "summary.json",
+          "sha256": "d4da5077fc8be95688364cb9f31b0804fba383302a441868a439b98e9cb98956",
+          "bytes": 992
+        }
+      ]
+    },
+    {
+      "seed": 27,
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/secondstage_iou_20261028/results/secondstage_iou_seed27",
+      "files": [
+        {
+          "name": "source_tracks.csv",
+          "sha256": "c209ab3855e3b49f30b374ff996c7b5ac449e6e00820c345ccbc848bf3719ca1",
+          "bytes": 68834
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "fc375f8511ffd9bad247dd63c17cc136f0288f20d888a5328965cc7f7155a052",
+          "bytes": 67
+        },
+        {
+          "name": "all_posttracker_boxes.csv",
+          "sha256": "2e679e24b350997c3e8d235482b533967066eb5f9db996b33d1595905c2d5195",
+          "bytes": 193599
+        },
+        {
+          "name": "confirmed_only_events.json",
+          "sha256": "66047e4e610dc0bfb6b61fc6bdd469cbad4a80a19b01283b6f332e887657dbc0",
+          "bytes": 1003
+        },
+        {
+          "name": "handoff_events.json",
+          "sha256": "f1293e9d9fb0700ddebd001c5d5970b7e48bed99e9e1408d682c3738f4775bff",
+          "bytes": 1103
+        },
+        {
+          "name": "observations.json",
+          "sha256": "31316b904972804712858b91cb5161b10dc664ecb9f44189a688cea79f48ecf5",
+          "bytes": 371905
+        },
+        {
+          "name": "summary.json",
+          "sha256": "909bccfeb34a1b3e49af492f2653755c4157ffc2936ac18023c4027b2ba47390",
+          "bytes": 992
+        }
+      ]
+    },
+    {
+      "seed": 28,
+      "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/secondstage_iou_20261028/results/secondstage_iou_seed28",
+      "files": [
+        {
+          "name": "source_tracks.csv",
+          "sha256": "15731652af0bac4caf9c855ff874fe1cd8b59d5863f568018f8c6f3b252f73dd",
+          "bytes": 71881
+        },
+        {
+          "name": "source_warmup_tracks.csv",
+          "sha256": "52907c7eb90348830f1aa4e198fcee5d45776ccf7144393875a605a6885782f1",
+          "bytes": 182
+        },
+        {
+          "name": "all_posttracker_boxes.csv",
+          "sha256": "990c1dfcc738d65d98d6dfae7a950ebd5c32d307eb6aad698622a2d244915972",
+          "bytes": 338687
+        },
+        {
+          "name": "confirmed_only_events.json",
+          "sha256": "be69b06512287855abf5388b57bc57a48c95beaa38a2b4e07afa72e5fd04fae8",
+          "bytes": 1114
+        },
+        {
+          "name": "handoff_events.json",
+          "sha256": "be69b06512287855abf5388b57bc57a48c95beaa38a2b4e07afa72e5fd04fae8",
+          "bytes": 1114
+        },
+        {
+          "name": "observations.json",
+          "sha256": "b11cd785bbb40e7daba69a2676379f79063a45bb8c2a3aa427ca3521bdf04869",
+          "bytes": 392832
+        },
+        {
+          "name": "summary.json",
+          "sha256": "5218df0c288085ae70268cab69ef4327274b18c764218ba91b6f4e8bba961e4b",
+          "bytes": 992
+        }
+      ]
+    }
+  ],
+  "variants": [
+    "active_only_iou",
+    "allow_lost_iou"
+  ],
+  "only_change": "Secondstage eligible pool Tracked -> (Tracked,Lost); same actual low detections, IoU>=0.5 gate, firststage, buffers and mainconfirmationcounter",
+  "no_explicit_new_age_limit": "Existing track_buffer30 expiry unchanged; candidate does not tune retention or add extra motion gating.",
+  "main_counter": "sameconfirmationhandoff",
+  "confirmed_only_diagnostic_counter_retained": true,
+  "red_record_sha256": "54e774e59b7a57f4c35280ad96c6fa3effb093b7b24aed1428dbf496f73f711e",
+  "required_gates": [
+    "actual lowrecovery red/green",
+    "single eligibility ASTchange",
+    "allthree activeonly baselines exact",
+    "actual Lostmatches detected andage logged",
+    "12independent counterpaths andcosts",
+    "allseed/adverse results and physical ambiguity retained"
+  ],
+  "hypotheses": [
+    "if Lost eligibility matters, low observations may reactivate sameID after gap",
+    "if detection gaps persist, complete events may remain absent",
+    "expanding eligible pool may steal ambiguous detection from other tracks"
+  ],
+  "no_target_count_or_threshold_search": true,
+  "new_detector_forwards": 0,
+  "training_updates": 0,
+  "independent_source_accuracy": null,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

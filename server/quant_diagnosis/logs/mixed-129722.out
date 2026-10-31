@@ -1,0 +1,13 @@
+{"candidate": "full_conv_qdq", "seed": 26, "validation_C": 6, "validation_W": 1, "validation_unknown_false_accepts": 1, "FP32_Conv_MACs": 0, "graph_bytes": 1256000}
+{"candidate": "front_pair_fp", "seed": 26, "validation_C": 6, "validation_W": 0, "validation_unknown_false_accepts": 0, "FP32_Conv_MACs": 5870592, "graph_bytes": 1252887}
+{"candidate": "depthwise_fp", "seed": 26, "validation_C": 6, "validation_W": 0, "validation_unknown_false_accepts": 1, "FP32_Conv_MACs": 7460544, "graph_bytes": 1370042}
+{"candidate": "front_and_depthwise_fp", "seed": 26, "validation_C": 10, "validation_W": 0, "validation_unknown_false_accepts": 1, "FP32_Conv_MACs": 12879552, "graph_bytes": 1369272}
+{"candidate": "full_conv_qdq", "seed": 27, "validation_C": 0, "validation_W": 0, "validation_unknown_false_accepts": 0, "FP32_Conv_MACs": 0, "graph_bytes": 1256000}
+{"candidate": "front_pair_fp", "seed": 27, "validation_C": 2, "validation_W": 0, "validation_unknown_false_accepts": 0, "FP32_Conv_MACs": 5870592, "graph_bytes": 1252887}
+{"candidate": "depthwise_fp", "seed": 27, "validation_C": 3, "validation_W": 2, "validation_unknown_false_accepts": 1, "FP32_Conv_MACs": 7460544, "graph_bytes": 1370041}
+{"candidate": "front_and_depthwise_fp", "seed": 27, "validation_C": 10, "validation_W": 0, "validation_unknown_false_accepts": 1, "FP32_Conv_MACs": 12879552, "graph_bytes": 1369271}
+{"candidate": "full_conv_qdq", "seed": 28, "validation_C": 7, "validation_W": 0, "validation_unknown_false_accepts": 1, "FP32_Conv_MACs": 0, "graph_bytes": 1255999}
+{"candidate": "front_pair_fp", "seed": 28, "validation_C": 3, "validation_W": 0, "validation_unknown_false_accepts": 1, "FP32_Conv_MACs": 5870592, "graph_bytes": 1252886}
+{"candidate": "depthwise_fp", "seed": 28, "validation_C": 1, "validation_W": 0, "validation_unknown_false_accepts": 1, "FP32_Conv_MACs": 7460544, "graph_bytes": 1370041}
+{"candidate": "front_and_depthwise_fp", "seed": 28, "validation_C": 4, "validation_W": 0, "validation_unknown_false_accepts": 0, "FP32_Conv_MACs": 12879552, "graph_bytes": 1369271}
+{"selected_recipe": "front_and_depthwise_fp", "rankings": [{"candidate": "full_conv_qdq", "selection_key": [0, 4.333333333333333, -1, 0, 0]}, {"candidate": "front_pair_fp", "selection_key": [2, 3.6666666666666665, 0, -5870592, -1]}, {"candidate": "depthwise_fp", "selection_key": [1, 3.3333333333333335, -2, -7460544, -2]}, {"candidate": "front_and_depthwise_fp", "selection_key": [4, 8.0, 0, -12879552, -3]}]}

@@ -1,0 +1,919 @@
+{
+  "status": "FROZEN_BEFORE_FUTURE_IMAGE_BYTES_OR_MODEL_FORWARDS",
+  "selected_recipe": "front_and_depthwise_fp",
+  "conditions": [
+    {
+      "name": "FP32_seed26",
+      "seed": 26,
+      "method": "FP32",
+      "model_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed26/embedding_fp32.onnx",
+      "model_sha256": "e8de096ebee60f50e72258cb6c71efe1328cfe065061511bb526dc2e101dc63d",
+      "threshold": 0.8445389603236383
+    },
+    {
+      "name": "full_conv_qdq_seed26",
+      "seed": 26,
+      "method": "full_conv_qdq",
+      "model_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed26/embedding_conv_qdq.onnx",
+      "model_sha256": "6cd86e07681be5c25308a7fed78853f5652a045f6d5a1ead0d7373a3225766e2",
+      "threshold": 0.9014222363598128
+    },
+    {
+      "name": "front_and_depthwise_fp_seed26",
+      "seed": 26,
+      "method": "front_and_depthwise_fp",
+      "model_path": "/share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/results/mixed/front_and_depthwise_fp/C_letterbox_trained_seed26/embedding_mixed_qdq.onnx",
+      "model_sha256": "aef845c525062443f55f68c4e3c7015a4eb3b713469d2f0847fc7342182dcb0f",
+      "threshold": 0.8637419601057514
+    },
+    {
+      "name": "FP32_seed27",
+      "seed": 27,
+      "method": "FP32",
+      "model_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed27/embedding_fp32.onnx",
+      "model_sha256": "aa7941708a5952e13c908fb8c204b0e52a1633b5c76be638f9673b745ff0d252",
+      "threshold": 0.8642478136864173
+    },
+    {
+      "name": "full_conv_qdq_seed27",
+      "seed": 27,
+      "method": "full_conv_qdq",
+      "model_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed27/embedding_conv_qdq.onnx",
+      "model_sha256": "74e80350f08b704ee459eda958804f6db04382ccb71f4b112a29e937a2e6b667",
+      "threshold": 0.9351450157334533
+    },
+    {
+      "name": "front_and_depthwise_fp_seed27",
+      "seed": 27,
+      "method": "front_and_depthwise_fp",
+      "model_path": "/share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/results/mixed/front_and_depthwise_fp/C_letterbox_trained_seed27/embedding_mixed_qdq.onnx",
+      "model_sha256": "c75c06ac88b69dc16d0b017a5d27e15ddc0168bc5781bf37be9051d89f628364",
+      "threshold": 0.8921097171342953
+    },
+    {
+      "name": "FP32_seed28",
+      "seed": 28,
+      "method": "FP32",
+      "model_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed28/embedding_fp32.onnx",
+      "model_sha256": "f50c43ca2cdd0c09bea421bd4d5b55330befdc275628017581570d72b4cbf2df",
+      "threshold": 0.8306161540247587
+    },
+    {
+      "name": "full_conv_qdq_seed28",
+      "seed": 28,
+      "method": "full_conv_qdq",
+      "model_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed28/embedding_conv_qdq.onnx",
+      "model_sha256": "3de0b2737b8298daf03f95184edc02dc4e3700ad3c82cee078bb7dcc8c0406b0",
+      "threshold": 0.9049211771370603
+    },
+    {
+      "name": "front_and_depthwise_fp_seed28",
+      "seed": 28,
+      "method": "front_and_depthwise_fp",
+      "model_path": "/share/home/renly/projects/idcoo_research_20261026/quant_diagnosis/results/mixed/front_and_depthwise_fp/C_letterbox_trained_seed28/embedding_mixed_qdq.onnx",
+      "model_sha256": "9e746e3028721de2c7194aea473d0bb5cd3f750794443b1aa0e4ea6f49397c8c",
+      "threshold": 0.9012302481312681
+    }
+  ],
+  "mixed_validation_freeze_sha256": "715decc398e93246a0109b09d573b6486abce351bb52bc12503cf7cd9dd95505",
+  "holdout_metadata_sha256": "441652b9410fb7a4f3d17bf1e01cc15eacb3d97aa20532a627c7f7ac7edca4e3",
+  "roles": {
+    "registered_ids": [
+      "070",
+      "068",
+      "066",
+      "037",
+      "065",
+      "025"
+    ],
+    "unknown_ids": [
+      "082",
+      "052",
+      "088",
+      "074",
+      "058",
+      "069"
+    ],
+    "unused_reserve": [
+      "075",
+      "057"
+    ]
+  },
+  "samples_per_identity": 5,
+  "gallery_day": "2023Aug14",
+  "query_day": "2023Aug20",
+  "source_entries": [
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/070/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 28
+    },
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/070/00007_1.jpg",
+      "sequence_index": 7,
+      "sequence_length": 28
+    },
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/070/00014_1.jpg",
+      "sequence_index": 14,
+      "sequence_length": 28
+    },
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/070/00020_1.jpg",
+      "sequence_index": 20,
+      "sequence_length": 28
+    },
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/070/00027_1.jpg",
+      "sequence_index": 27,
+      "sequence_length": 28
+    },
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/070/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 22
+    },
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/070/00005_1.jpg",
+      "sequence_index": 5,
+      "sequence_length": 22
+    },
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/070/00010_1.jpg",
+      "sequence_index": 10,
+      "sequence_length": 22
+    },
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/070/00016_1.jpg",
+      "sequence_index": 16,
+      "sequence_length": 22
+    },
+    {
+      "role": "registered_ids",
+      "identity": "070",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/070/00021_1.jpg",
+      "sequence_index": 21,
+      "sequence_length": 22
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/068/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/068/00004_1.jpg",
+      "sequence_index": 4,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/068/00009_1.jpg",
+      "sequence_index": 9,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/068/00014_1.jpg",
+      "sequence_index": 14,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/068/00018_1.jpg",
+      "sequence_index": 18,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/068/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 23
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/068/00006_1.jpg",
+      "sequence_index": 6,
+      "sequence_length": 23
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/068/00011_1.jpg",
+      "sequence_index": 11,
+      "sequence_length": 23
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/068/00016_1.jpg",
+      "sequence_index": 16,
+      "sequence_length": 23
+    },
+    {
+      "role": "registered_ids",
+      "identity": "068",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/068/00022_1.jpg",
+      "sequence_index": 22,
+      "sequence_length": 23
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/066/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/066/00004_1.jpg",
+      "sequence_index": 4,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/066/00009_1.jpg",
+      "sequence_index": 9,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/066/00014_1.jpg",
+      "sequence_index": 14,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/066/00018_1.jpg",
+      "sequence_index": 18,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/066/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 137
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/066/00034_1.jpg",
+      "sequence_index": 34,
+      "sequence_length": 137
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/066/00068_1.jpg",
+      "sequence_index": 68,
+      "sequence_length": 137
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/066/00102_1.jpg",
+      "sequence_index": 102,
+      "sequence_length": 137
+    },
+    {
+      "role": "registered_ids",
+      "identity": "066",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/066/00136_1.jpg",
+      "sequence_index": 136,
+      "sequence_length": 137
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/037/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 18
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/037/00004_1.jpg",
+      "sequence_index": 4,
+      "sequence_length": 18
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/037/00008_1.jpg",
+      "sequence_index": 8,
+      "sequence_length": 18
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/037/00013_1.jpg",
+      "sequence_index": 13,
+      "sequence_length": 18
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/037/00017_1.jpg",
+      "sequence_index": 17,
+      "sequence_length": 18
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/037/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 17
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/037/00004_1.jpg",
+      "sequence_index": 4,
+      "sequence_length": 17
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/037/00008_1.jpg",
+      "sequence_index": 8,
+      "sequence_length": 17
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/037/00012_1.jpg",
+      "sequence_index": 12,
+      "sequence_length": 17
+    },
+    {
+      "role": "registered_ids",
+      "identity": "037",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/037/00016_1.jpg",
+      "sequence_index": 16,
+      "sequence_length": 17
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/065/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 21
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/065/00005_1.jpg",
+      "sequence_index": 5,
+      "sequence_length": 21
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/065/00010_1.jpg",
+      "sequence_index": 10,
+      "sequence_length": 21
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/065/00015_1.jpg",
+      "sequence_index": 15,
+      "sequence_length": 21
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/065/00020_1.jpg",
+      "sequence_index": 20,
+      "sequence_length": 21
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/065/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 20
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/065/00005_1.jpg",
+      "sequence_index": 5,
+      "sequence_length": 20
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/065/00010_1.jpg",
+      "sequence_index": 10,
+      "sequence_length": 20
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/065/00014_1.jpg",
+      "sequence_index": 14,
+      "sequence_length": 20
+    },
+    {
+      "role": "registered_ids",
+      "identity": "065",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/065/00019_1.jpg",
+      "sequence_index": 19,
+      "sequence_length": 20
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/025/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 16
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/025/00004_1.jpg",
+      "sequence_index": 4,
+      "sequence_length": 16
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/025/00008_1.jpg",
+      "sequence_index": 8,
+      "sequence_length": 16
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/025/00011_1.jpg",
+      "sequence_index": 11,
+      "sequence_length": 16
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug14",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug14/025/00015_1.jpg",
+      "sequence_index": 15,
+      "sequence_length": 16
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/025/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/025/00004_1.jpg",
+      "sequence_index": 4,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/025/00009_1.jpg",
+      "sequence_index": 9,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/025/00014_1.jpg",
+      "sequence_index": 14,
+      "sequence_length": 19
+    },
+    {
+      "role": "registered_ids",
+      "identity": "025",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/025/00018_1.jpg",
+      "sequence_index": 18,
+      "sequence_length": 19
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "082",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/082/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 27
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "082",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/082/00006_1.jpg",
+      "sequence_index": 6,
+      "sequence_length": 27
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "082",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/082/00013_1.jpg",
+      "sequence_index": 13,
+      "sequence_length": 27
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "082",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/082/00020_1.jpg",
+      "sequence_index": 20,
+      "sequence_length": 27
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "082",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/082/00026_1.jpg",
+      "sequence_index": 26,
+      "sequence_length": 27
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "052",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/052/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 119
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "052",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/052/00030_1.jpg",
+      "sequence_index": 30,
+      "sequence_length": 119
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "052",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/052/00059_1.jpg",
+      "sequence_index": 59,
+      "sequence_length": 119
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "052",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/052/00088_1.jpg",
+      "sequence_index": 88,
+      "sequence_length": 119
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "052",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/052/00118_1.jpg",
+      "sequence_index": 118,
+      "sequence_length": 119
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "088",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/088/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 22
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "088",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/088/00005_1.jpg",
+      "sequence_index": 5,
+      "sequence_length": 22
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "088",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/088/00010_1.jpg",
+      "sequence_index": 10,
+      "sequence_length": 22
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "088",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/088/00016_1.jpg",
+      "sequence_index": 16,
+      "sequence_length": 22
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "088",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/088/00021_1.jpg",
+      "sequence_index": 21,
+      "sequence_length": 22
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "074",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/074/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 51
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "074",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/074/00012_1.jpg",
+      "sequence_index": 12,
+      "sequence_length": 51
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "074",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/074/00025_1.jpg",
+      "sequence_index": 25,
+      "sequence_length": 51
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "074",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/074/00038_1.jpg",
+      "sequence_index": 38,
+      "sequence_length": 51
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "074",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/074/00050_1.jpg",
+      "sequence_index": 50,
+      "sequence_length": 51
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "058",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/058/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 25
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "058",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/058/00006_1.jpg",
+      "sequence_index": 6,
+      "sequence_length": 25
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "058",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/058/00012_1.jpg",
+      "sequence_index": 12,
+      "sequence_length": 25
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "058",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/058/00018_1.jpg",
+      "sequence_index": 18,
+      "sequence_length": 25
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "058",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/058/00024_1.jpg",
+      "sequence_index": 24,
+      "sequence_length": 25
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "069",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/069/00000_1.jpg",
+      "sequence_index": 0,
+      "sequence_length": 22
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "069",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/069/00005_1.jpg",
+      "sequence_index": 5,
+      "sequence_length": 22
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "069",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/069/00010_1.jpg",
+      "sequence_index": 10,
+      "sequence_length": 22
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "069",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/069/00016_1.jpg",
+      "sequence_index": 16,
+      "sequence_length": 22
+    },
+    {
+      "role": "unknown_ids",
+      "identity": "069",
+      "day": "2023Aug20",
+      "camera": 1,
+      "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/2023Aug20/069/00021_1.jpg",
+      "sequence_index": 21,
+      "sequence_length": 22
+    }
+  ],
+  "selection": "One recipe across all3seeds chosen on prior validation, all declared seeds reported",
+  "scope": "Untouched identity holdout within same farm/camera, curated crop images; no field RFID/board accuracy claim"
+}

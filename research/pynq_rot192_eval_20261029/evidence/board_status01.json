@@ -1,0 +1,13 @@
+{
+  "created_UTC": "2026-10-29T15:29:57.778208+00:00",
+  "host": "192.168.2.99",
+  "user": "xilinx",
+  "host_fingerprint_SHA256": "SHA256:TB0FfGjfMzgZUv/reJgTpeq/AM68sMCpGC5xm6Pit7o",
+  "authentication_material_saved": false,
+  "stdout": "{\"launch\": {\"PID\": 25957, \"boot_id\": \"9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f\", \"actual_video_model_forwards_expected\": 2654, \"warmups\": 2, \"counter_paths_expected\": 6, \"scope\": \"Unpaced PNG replay, actual O8 model and actual ARM counters; not livecamera or simultaneous identity.\"}, \"ps\": \"  PID S ELAPSED   RSS COMMAND\\n\", \"progress\": null, \"terminal\": null, \"log_tail\": \"Traceback (most recent call last):\\n  File \\\"/home/xilinx/jupyter_notebooks/cow_research_rot192_video_20261029/board_video.py\\\", line 112, in <module>\\n    if __name__=='__main__':main()\\n  File \\\"/home/xilinx/jupyter_notebooks/cow_research_rot192_video_20261029/board_video.py\\\", line 106, in main\\n    if PL.bitfile_name:state['PL_after_sha256']=sha(PL.bitfile_name)\\n  File \\\"/home/xilinx/jupyter_notebooks/cow_research_rot192_video_20261029/board_video.py\\\", line 19, in sha\\n    def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()\\nAttributeError: 'str' object has no attribute 'read_bytes'\\n\"}\n",
+  "stderr": "",
+  "status": "SSH_COMMAND_FINISHED",
+  "exit_code": 0,
+  "sudo": false,
+  "command_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\tools\\board_status.sh"
+}

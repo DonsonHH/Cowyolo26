@@ -1,0 +1,7365 @@
+{
+  "status": "ALL15_NEW_MODELS_FIXED_CHANNEL_INPUT_AND90_COUNTER_PATHS_COMPLETE",
+  "created_UTC": "2026-10-29T14:08:47.945256+00:00",
+  "Slurm_JOB_ID": "130559",
+  "protocol_sha256": "77652d7b0d238aff0f4022cc7ce03f25c44d41a6c9f812acb9f12759069b8d27",
+  "condition_count": 15,
+  "actual_detector_source_image_forwards": 39810,
+  "active_predictor_inference_image_calls": 39810,
+  "predictor_tensor_shape_counts": {
+    "(16, 3, 192, 192)": 984,
+    "(16, 3, 256, 256)": 984,
+    "(16, 3, 320, 320)": 492,
+    "(15, 3, 192, 192)": 12,
+    "(15, 3, 256, 256)": 12,
+    "(15, 3, 320, 320)": 6
+  },
+  "baseline_full_cache_traces_exact": 45,
+  "baseline_full_cache_counter_paths_exact": 90,
+  "baseline_full_tracker_updates_replayed": 41010,
+  "new_crop_tracker_updates": 41010,
+  "new_crop_counter_paths": 90,
+  "NN_input_anchor_hash_rows": 120,
+  "unique_NN_input_arrays": 24,
+  "source_crop_anchor_images": 8,
+  "video_metrics": [
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed26",
+      "model": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 4,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 1,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 28,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 9905
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 8,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed26",
+      "model": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 5,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 1,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 28,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 9905
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 7,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed27",
+      "model": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 5,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 9,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 34,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 56,
+          "direction": "A->B",
+          "frame0": 9905
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 7,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed27",
+      "model": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 5,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 9,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 34,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 56,
+          "direction": "A->B",
+          "frame0": 9905
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 7,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed28",
+      "model": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 6,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 1,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 7,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 15,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.0,
+          "track_id": 33,
+          "direction": "A->B",
+          "frame0": 9900
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 6,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed28",
+      "model": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 6,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 1,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 7,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 15,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.0,
+          "track_id": 33,
+          "direction": "A->B",
+          "frame0": 9900
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 6,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed26",
+      "model": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 9,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 2,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 10,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 23,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 32,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 46,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 43,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 84,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 3,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed26",
+      "model": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 10,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 2,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 10,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 23,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 32,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 46,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 43,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 63,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 84,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 2,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed27",
+      "model": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 9,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 16,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 22,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 384.6,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 9615
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 36,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 37,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 70,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 3,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed27",
+      "model": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 10,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 16,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 22,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 35,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 384.6,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 9615
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 36,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 37,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 70,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 2,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed28",
+      "model": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 10,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 1,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 14,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 384.4,
+          "track_id": 28,
+          "direction": "A->B",
+          "frame0": 9610
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 23,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 27,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 43,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 46,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 2,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed28",
+      "model": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 10,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 1,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 14,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 384.4,
+          "track_id": 28,
+          "direction": "A->B",
+          "frame0": 9610
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 23,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 27,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 43,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 46,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 2,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed26",
+      "model": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 8,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 10,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 16,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 33,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 4,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed26",
+      "model": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 10,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 10,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 16,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 33,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 2,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed27",
+      "model": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 8,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 10,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 13,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 36,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 40,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 4,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed27",
+      "model": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 8,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 10,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 13,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 36,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 40,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 4,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed28",
+      "model": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 7,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 7,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 22,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 42,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 5,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed28",
+      "model": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 7,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 7,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 22,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 42,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 5,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed26",
+      "model": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 11,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 11,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 16,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 374.6,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9365
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 19,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 25,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 42,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 1,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed26",
+      "model": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 11,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 11,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 16,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 374.6,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9365
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 19,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 25,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 42,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 1,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed27",
+      "model": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 11,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 2,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 7,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 374.8,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9370
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 22,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 26,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 35,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 44,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 1,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed27",
+      "model": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 11,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 2,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 7,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 374.8,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9370
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 22,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 26,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 35,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 44,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 1,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed28",
+      "model": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 12,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 9,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 374.6,
+          "track_id": 14,
+          "direction": "A->B",
+          "frame0": 9365
+        },
+        {
+          "time_s": 378.4,
+          "track_id": 15,
+          "direction": "A->B",
+          "frame0": 9460
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 13,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 35,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 0,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed28",
+      "model": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 12,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 9,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 12,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 374.6,
+          "track_id": 14,
+          "direction": "A->B",
+          "frame0": 9365
+        },
+        {
+          "time_s": 378.4,
+          "track_id": 15,
+          "direction": "A->B",
+          "frame0": 9460
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 13,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 35,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 0,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed26",
+      "model": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 12,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.6,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9140
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 9,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 13,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 375.2,
+          "track_id": 19,
+          "direction": "A->B",
+          "frame0": 9380
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 25,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 24,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 30,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.0,
+          "track_id": 33,
+          "direction": "A->B",
+          "frame0": 9900
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 43,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 0,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed26",
+      "model": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 12,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.6,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9140
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 9,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 13,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 375.2,
+          "track_id": 19,
+          "direction": "A->B",
+          "frame0": 9380
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 25,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 24,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 30,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.0,
+          "track_id": 33,
+          "direction": "A->B",
+          "frame0": 9900
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 43,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 0,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed27",
+      "model": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 12,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 7,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 9,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 15,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 374.8,
+          "track_id": 19,
+          "direction": "A->B",
+          "frame0": 9370
+        },
+        {
+          "time_s": 378.4,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9460
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 25,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 23,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 29,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 33,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 0,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed27",
+      "model": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 12,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 7,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 9,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 15,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 18,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 374.8,
+          "track_id": 19,
+          "direction": "A->B",
+          "frame0": 9370
+        },
+        {
+          "time_s": 378.4,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9460
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 25,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 23,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 395.8,
+          "track_id": 29,
+          "direction": "A->B",
+          "frame0": 9895
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 33,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 0,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed28",
+      "model": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 11,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 13,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 15,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 28,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 26,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.0,
+          "track_id": 34,
+          "direction": "A->B",
+          "frame0": 9900
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 1,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed28",
+      "model": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 5,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 11,
+      "up": 0,
+      "events": [
+        {
+          "time_s": 359.8,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 8995
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 13,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 15,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9465
+        },
+        {
+          "time_s": 384.2,
+          "track_id": 28,
+          "direction": "A->B",
+          "frame0": 9605
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 26,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.0,
+          "track_id": 34,
+          "direction": "A->B",
+          "frame0": 9900
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 38,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "human_down_total": 12,
+      "absolute_down_total_error": 1,
+      "formal_event_metrics": null
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "model": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "model": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "model": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "model": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "model": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "model": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 5.0,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 150
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 1.3333333333333335,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "model": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.266666666666667,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 128
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.6000000000000001,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "model": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.266666666666667,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 128
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.6000000000000001,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "model": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "model": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "model": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "model": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "model": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 5.2,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 156
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 1,
+            "prediction_index": 0,
+            "time_error_s": 1.2333333333333334,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "model": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 5.2,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 156
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 1,
+            "prediction_index": 0,
+            "time_error_s": 1.2333333333333334,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "model": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.166666666666667,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame0": 125
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.5000000000000004,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "model": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.166666666666667,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame0": 125
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.5000000000000004,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "model": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 7.8,
+          "track_id": 3,
+          "direction": "B->A",
+          "frame0": 234
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.4666666666666677,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "model": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 7.8,
+          "track_id": 3,
+          "direction": "B->A",
+          "frame0": 234
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.4666666666666677,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "model": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 3,
+      "events": [
+        {
+          "time_s": 3.8,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 114
+        },
+        {
+          "time_s": 7.1,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame0": 213
+        },
+        {
+          "time_s": 9.6,
+          "track_id": 23,
+          "direction": "B->A",
+          "frame0": 288
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.1333333333333333,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.6666666666666661,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 2,
+            "time_error_s": 0.06666666666666643,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          2,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "model": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 3,
+      "events": [
+        {
+          "time_s": 3.8,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 114
+        },
+        {
+          "time_s": 7.1,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame0": 213
+        },
+        {
+          "time_s": 9.6,
+          "track_id": 23,
+          "direction": "B->A",
+          "frame0": 288
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.1333333333333333,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.6666666666666661,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 2,
+            "time_error_s": 0.06666666666666643,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          2,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "model": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "model": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "model": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "model": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 3.8,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 114
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.1333333333333333,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "model": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "model": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "model": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "model": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.6,
+          "track_id": 6,
+          "direction": "B->A",
+          "frame0": 138
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.9333333333333331,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "model": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "model": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "model": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "model": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "model": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "model": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "model": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "model": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "model": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "model": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "model": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 3,
+          "direction": "B->A",
+          "frame0": 115
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "model": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 3,
+          "direction": "B->A",
+          "frame0": 115
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "model": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "model": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.6,
+          "track_id": 3,
+          "direction": "B->A",
+          "frame0": 138
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.9333333333333331,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "model": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 4,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 115
+        },
+        {
+          "time_s": 7.2,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 216
+        },
+        {
+          "time_s": 8.766666666666667,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame0": 263
+        },
+        {
+          "time_s": 9.833333333333334,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame0": 295
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 4,
+        "temporally_matched": 4,
+        "correct_direction_matches": 4,
+        "wrong_direction_matches": 0,
+        "TP": 4,
+        "FP": 0,
+        "FN": 2,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 4
+          }
+        },
+        "mean_absolute_direction_count_error": 1.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.7666666666666666,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.5,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.3000000000000007,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "model": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 4,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 115
+        },
+        {
+          "time_s": 7.2,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 216
+        },
+        {
+          "time_s": 8.766666666666667,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame0": 263
+        },
+        {
+          "time_s": 9.833333333333334,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame0": 295
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 4,
+        "temporally_matched": 4,
+        "correct_direction_matches": 4,
+        "wrong_direction_matches": 0,
+        "TP": 4,
+        "FP": 0,
+        "FN": 2,
+        "precision": 1.0,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 4
+          }
+        },
+        "mean_absolute_direction_count_error": 1.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.7666666666666666,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.5,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.3000000000000007,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "model": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "model": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "model": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 2,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 115
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 66,
+          "direction": "B->A",
+          "frame0": 289
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 1,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "model": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 2,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 115
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 66,
+          "direction": "B->A",
+          "frame0": 289
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 1,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "model": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.2,
+          "track_id": 3,
+          "direction": "B->A",
+          "frame0": 126
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.5333333333333337,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "model": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.2,
+          "track_id": 3,
+          "direction": "B->A",
+          "frame0": 126
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.5333333333333337,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "model": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 3.8666666666666667,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 116
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "model": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 3.8666666666666667,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame0": 116
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "model": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "model": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 0,
+      "events": [],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "model": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 4,
+          "direction": "B->A",
+          "frame0": 115
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "model": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 4,
+          "direction": "B->A",
+          "frame0": 115
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "model": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.2,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame0": 126
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.5333333333333337,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "model": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 6,
+      "nominal_inference_Hz": 5.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 4.2,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame0": 126
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.5333333333333337,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "model": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 115
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "model": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 1,
+      "nominal_inference_Hz": 30.0,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 1,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame0": 115
+        }
+      ],
+      "human_down_total": null,
+      "absolute_down_total_error": null,
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 1,
+        "temporally_matched": 1,
+        "correct_direction_matches": 1,
+        "wrong_direction_matches": 0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 1
+          }
+        },
+        "mean_absolute_direction_count_error": 2.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    }
+  ],
+  "paired_full_vs_roi": [
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 3,
+      "crop_down": 4,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 6,
+      "crop_down": 5,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 3,
+      "crop_down": 5,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 4,
+      "crop_down": 5,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 2,
+      "crop_down": 6,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 5,
+      "crop_down": 6,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 3,
+      "crop_down": 9,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 6,
+      "crop_down": 10,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 4,
+      "crop_down": 9,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 5,
+      "crop_down": 10,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 2,
+      "crop_down": 10,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 5,
+      "crop_down": 10,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 7,
+      "crop_down": 8,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 8,
+      "crop_down": 10,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 9,
+      "crop_down": 8,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 9,
+      "crop_down": 8,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 6,
+      "crop_down": 7,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 8,
+      "crop_down": 7,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 6,
+      "crop_down": 11,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 7,
+      "crop_down": 11,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 7,
+      "crop_down": 11,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 8,
+      "crop_down": 11,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 7,
+      "crop_down": 12,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 8,
+      "crop_down": 12,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 6,
+      "crop_down": 12,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 7,
+      "crop_down": 12,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 8,
+      "crop_down": 12,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 8,
+      "crop_down": 12,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 5,
+      "counter": "confirmed_only_events",
+      "full_down": 7,
+      "crop_down": 11,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "original",
+      "condition": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 5,
+      "counter": "handoff_events",
+      "full_down": 7,
+      "crop_down": 11,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": null,
+      "crop_TP_FP_FN": null
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed26",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed27",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_plain_seed28",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed26",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 2,
+      "crop_up": 3,
+      "full_TP_FP_FN": [
+        2,
+        0,
+        4
+      ],
+      "crop_TP_FP_FN": [
+        3,
+        0,
+        3
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed27",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 2,
+      "crop_up": 3,
+      "full_TP_FP_FN": [
+        2,
+        0,
+        4
+      ],
+      "crop_TP_FP_FN": [
+        3,
+        0,
+        3
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S192_rot90_seed28",
+      "input_size": 192,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed26",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed27",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_plain_seed28",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed26",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 2,
+      "crop_up": 4,
+      "full_TP_FP_FN": [
+        2,
+        0,
+        4
+      ],
+      "crop_TP_FP_FN": [
+        4,
+        0,
+        2
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed27",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 2,
+      "crop_up": 4,
+      "full_TP_FP_FN": [
+        2,
+        0,
+        4
+      ],
+      "crop_TP_FP_FN": [
+        4,
+        0,
+        2
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 2,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        2,
+        0,
+        4
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S256_rot90_seed28",
+      "input_size": 256,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 2,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        2,
+        0,
+        4
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed26",
+      "input_size": 320,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 0,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed27",
+      "input_size": 320,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 0,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        0,
+        0,
+        6
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 6,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 6,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 1,
+      "counter": "confirmed_only_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "scene": "toros",
+      "condition": "S320_rot90_seed28",
+      "input_size": 320,
+      "sample_stride": 1,
+      "counter": "handoff_events",
+      "full_down": 0,
+      "crop_down": 0,
+      "full_up": 1,
+      "crop_up": 1,
+      "full_TP_FP_FN": [
+        1,
+        0,
+        5
+      ],
+      "crop_TP_FP_FN": [
+        1,
+        0,
+        5
+      ]
+    }
+  ],
+  "source_decode": [
+    {
+      "scene": "original",
+      "decoded_frames": 10874,
+      "sampled_frames": 2175,
+      "crop_box": [
+        870,
+        0,
+        1920,
+        1440
+      ]
+    },
+    {
+      "scene": "toros",
+      "decoded_frames": 479,
+      "sampled_frames": 479,
+      "crop_box": [
+        0,
+        108,
+        1920,
+        1026
+      ]
+    }
+  ],
+  "new_training_updates": 0,
+  "identity_encoder_forwards": 0,
+  "new_reference_labels": 0,
+  "new_independent_test": false,
+  "global_pipeline_changed": false,
+  "board_actions_in_this_experiment": 0,
+  "PYNQ5FPS_proven": false,
+  "whole_goal_complete": false,
+  "wall_s": 157.634119572,
+  "peak_process_RSS_kib": 2096908
+}

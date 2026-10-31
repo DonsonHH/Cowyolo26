@@ -1,0 +1,1944 @@
+{
+  "status": "CPU_GPU_FOLD_AND_QUANTIZER_INITIALIZATION_DIFFERENCES_MEASURED",
+  "job_id": "129994",
+  "seed": 26,
+  "source_checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+  "layers": [
+    {
+      "module": "0.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 102,
+      "CPU_GPU_weight_maximum_difference": 3.814697265625e-06,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 1,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 3,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.1920928955078125e-07
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.1.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 44,
+      "CPU_GPU_weight_maximum_difference": 3.814697265625e-06,
+      "CPU_GPU_bias_different_elements": 1,
+      "CPU_GPU_bias_maximum_difference": 1.4901161193847656e-08,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 8.940696716308594e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 5,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.1.block.1.fc1",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.1.block.1.fc2",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.1.block.2.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 125,
+      "CPU_GPU_weight_maximum_difference": 9.5367431640625e-07,
+      "CPU_GPU_bias_different_elements": 7,
+      "CPU_GPU_bias_maximum_difference": 9.5367431640625e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.862645149230957e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 8,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.2.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 355,
+      "CPU_GPU_weight_maximum_difference": 5.960464477539063e-08,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 19,
+          "maximum_absolute_difference": 4.656612873077393e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.2.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 196,
+      "CPU_GPU_weight_maximum_difference": 9.5367431640625e-07,
+      "CPU_GPU_bias_different_elements": 18,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 17,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.2.block.2.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 517,
+      "CPU_GPU_weight_maximum_difference": 2.384185791015625e-07,
+      "CPU_GPU_bias_different_elements": 8,
+      "CPU_GPU_bias_maximum_difference": 9.5367431640625e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 7,
+          "maximum_absolute_difference": 1.862645149230957e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.3.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 651,
+      "CPU_GPU_weight_maximum_difference": 5.960464477539063e-08,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 19,
+          "maximum_absolute_difference": 4.656612873077393e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.3.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 295,
+      "CPU_GPU_weight_maximum_difference": 9.5367431640625e-07,
+      "CPU_GPU_bias_different_elements": 13,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 25,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.4901161193847656e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.3.block.2.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 567,
+      "CPU_GPU_weight_maximum_difference": 2.384185791015625e-07,
+      "CPU_GPU_bias_different_elements": 4,
+      "CPU_GPU_bias_maximum_difference": 1.1920928955078125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.862645149230957e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 7,
+          "maximum_absolute_difference": 1.862645149230957e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.2351741790771484e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.4.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 603,
+      "CPU_GPU_weight_maximum_difference": 1.1920928955078125e-07,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 22,
+          "maximum_absolute_difference": 9.313225746154785e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.4.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 473,
+      "CPU_GPU_weight_maximum_difference": 1.9073486328125e-06,
+      "CPU_GPU_bias_different_elements": 9,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 20,
+          "maximum_absolute_difference": 1.4901161193847656e-08
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.4901161193847656e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.4.block.2.fc1",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.4.block.2.fc2",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.4.block.3.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 970,
+      "CPU_GPU_weight_maximum_difference": 1.7881393432617188e-07,
+      "CPU_GPU_bias_different_elements": 10,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 9,
+          "maximum_absolute_difference": 1.3969838619232178e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.4901161193847656e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.5.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 2721,
+      "CPU_GPU_weight_maximum_difference": 1.1920928955078125e-07,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 1,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.4901161193847656e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 70,
+          "maximum_absolute_difference": 9.313225746154785e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.5.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 1785,
+      "CPU_GPU_weight_maximum_difference": 3.814697265625e-06,
+      "CPU_GPU_bias_different_elements": 43,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 70,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.2351741790771484e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.5.block.2.fc1",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.60770320892334e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.7939677238464355e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.5.block.2.fc2",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.2351741790771484e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 3.725290298461914e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.5.block.3.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 2849,
+      "CPU_GPU_weight_maximum_difference": 4.76837158203125e-07,
+      "CPU_GPU_bias_different_elements": 12,
+      "CPU_GPU_bias_maximum_difference": 1.1920928955078125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 5.587935447692871e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 11,
+          "maximum_absolute_difference": 1.862645149230957e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.6.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 2668,
+      "CPU_GPU_weight_maximum_difference": 5.960464477539063e-08,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 1,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.2351741790771484e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 67,
+          "maximum_absolute_difference": 4.656612873077393e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.82310962677002e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.6.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 1543,
+      "CPU_GPU_weight_maximum_difference": 3.814697265625e-06,
+      "CPU_GPU_bias_different_elements": 36,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 3.166496753692627e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 64,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 5.960464477539063e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.6.block.2.fc1",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.3283064365386963e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 6.51925802230835e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.6.block.2.fc2",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 4.6566128730773926e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.6.block.3.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 2625,
+      "CPU_GPU_weight_maximum_difference": 4.76837158203125e-07,
+      "CPU_GPU_bias_different_elements": 11,
+      "CPU_GPU_bias_maximum_difference": 2.384185791015625e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 10,
+          "maximum_absolute_difference": 3.725290298461914e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.7.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 1151,
+      "CPU_GPU_weight_maximum_difference": 1.1920928955078125e-07,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 27,
+          "maximum_absolute_difference": 9.313225746154785e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 6.705522537231445e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.7.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 782,
+      "CPU_GPU_weight_maximum_difference": 1.9073486328125e-06,
+      "CPU_GPU_bias_different_elements": 23,
+      "CPU_GPU_bias_maximum_difference": 1.1920928955078125e-07,
+      "new_vs_old_weight_code_different_elements": 1,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 9.685754776000977e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 32,
+          "maximum_absolute_difference": 1.4901161193847656e-08
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.0116567611694336e-07
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.7.block.2.fc1",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.1420419216156006e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 4.842877388000488e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.7.block.2.fc2",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.4901161193847656e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 9.313225746154785e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.7.block.3.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 1773,
+      "CPU_GPU_weight_maximum_difference": 1.1920928955078125e-07,
+      "CPU_GPU_bias_different_elements": 12,
+      "CPU_GPU_bias_maximum_difference": 1.1920928955078125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.862645149230957e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 15,
+          "maximum_absolute_difference": 9.313225746154785e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.2351741790771484e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.8.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 1709,
+      "CPU_GPU_weight_maximum_difference": 5.960464477539063e-08,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.2351741790771484e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 37,
+          "maximum_absolute_difference": 4.656612873077393e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.8.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 1266,
+      "CPU_GPU_weight_maximum_difference": 3.814697265625e-06,
+      "CPU_GPU_bias_different_elements": 34,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 3.725290298461914e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 52,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.8.block.2.fc1",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 3.259629011154175e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.7939677238464355e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.8.block.2.fc2",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 3.725290298461914e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.862645149230957e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.8.block.3.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 999,
+      "CPU_GPU_weight_maximum_difference": 1.1920928955078125e-07,
+      "CPU_GPU_bias_different_elements": 6,
+      "CPU_GPU_bias_maximum_difference": 1.1920928955078125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 3.725290298461914e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 7,
+          "maximum_absolute_difference": 9.313225746154785e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 9.685754776000977e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.9.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 3636,
+      "CPU_GPU_weight_maximum_difference": 5.960464477539063e-08,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 1,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 4.842877388000488e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 77,
+          "maximum_absolute_difference": 4.656612873077393e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.043081283569336e-07
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.9.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 1945,
+      "CPU_GPU_weight_maximum_difference": 9.5367431640625e-07,
+      "CPU_GPU_bias_different_elements": 56,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 8.940696716308594e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 74,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.1920928955078125e-07
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.9.block.2.fc1",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 4.190951585769653e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.7939677238464355e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.9.block.2.fc2",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 5.960464477539063e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.9.block.3.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 8400,
+      "CPU_GPU_weight_maximum_difference": 1.1920928955078125e-07,
+      "CPU_GPU_bias_different_elements": 26,
+      "CPU_GPU_bias_maximum_difference": 1.7881393432617188e-07,
+      "new_vs_old_weight_code_different_elements": 1,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 5.587935447692871e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 30,
+          "maximum_absolute_difference": 9.313225746154785e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.10.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 14987,
+      "CPU_GPU_weight_maximum_difference": 5.960464477539063e-08,
+      "CPU_GPU_bias_different_elements": 1,
+      "CPU_GPU_bias_maximum_difference": 1.4901161193847656e-08,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 160,
+          "maximum_absolute_difference": 4.656612873077393e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 3.725290298461914e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.10.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 4004,
+      "CPU_GPU_weight_maximum_difference": 1.9073486328125e-06,
+      "CPU_GPU_bias_different_elements": 106,
+      "CPU_GPU_bias_maximum_difference": 2.384185791015625e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 5.587935447692871e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 157,
+          "maximum_absolute_difference": 1.4901161193847656e-08
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.10.block.2.fc1",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.0244548320770264e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.2351741790771484e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.10.block.2.fc2",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.60770320892334e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 9.313225746154785e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.10.block.3.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 16443,
+      "CPU_GPU_weight_maximum_difference": 2.384185791015625e-07,
+      "CPU_GPU_bias_different_elements": 29,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 5.587935447692871e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 29,
+          "maximum_absolute_difference": 1.862645149230957e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 3.725290298461914e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.11.block.0.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 14785,
+      "CPU_GPU_weight_maximum_difference": 8.940696716308594e-08,
+      "CPU_GPU_bias_different_elements": 1,
+      "CPU_GPU_bias_maximum_difference": 2.9802322387695312e-08,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 157,
+          "maximum_absolute_difference": 6.984919309616089e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 4.470348358154297e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.11.block.1.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 3986,
+      "CPU_GPU_weight_maximum_difference": 1.9073486328125e-06,
+      "CPU_GPU_bias_different_elements": 124,
+      "CPU_GPU_bias_maximum_difference": 4.76837158203125e-07,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 4.470348358154297e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 163,
+          "maximum_absolute_difference": 1.4901161193847656e-08
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 6.705522537231445e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.11.block.2.fc1",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.862645149230957e-09
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.60770320892334e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.11.block.2.fc2",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 0,
+      "CPU_GPU_weight_maximum_difference": 0.0,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.30385160446167e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-09
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.11.block.3.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 17651,
+      "CPU_GPU_weight_maximum_difference": 4.76837158203125e-07,
+      "CPU_GPU_bias_different_elements": 27,
+      "CPU_GPU_bias_maximum_difference": 5.960464477539063e-08,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.0244548320770264e-08
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 32,
+          "maximum_absolute_difference": 1.862645149230957e-09
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 2.9802322387695312e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    },
+    {
+      "module": "0.12.0",
+      "new_state_exact_CPU_fold_weights_bias": true,
+      "old_graph_exact_GPU_fold_weights": true,
+      "old_graph_exact_GPU_fold_bias": true,
+      "CPU_GPU_weight_different_elements": 16101,
+      "CPU_GPU_weight_maximum_difference": 1.1920928955078125e-07,
+      "CPU_GPU_bias_different_elements": 0,
+      "CPU_GPU_bias_maximum_difference": 0.0,
+      "new_vs_old_weight_code_different_elements": 0,
+      "qparam_differences": {
+        "sx": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 1.9371509552001953e-07
+        },
+        "zx": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sw": {
+          "different_elements": 166,
+          "maximum_absolute_difference": 9.313225746154785e-10
+        },
+        "zw": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        },
+        "sy": {
+          "different_elements": 1,
+          "maximum_absolute_difference": 7.450580596923828e-08
+        },
+        "zy": {
+          "different_elements": 0,
+          "maximum_absolute_difference": 0.0
+        }
+      }
+    }
+  ],
+  "new_all52_weights_bias_exact_CPU_fold": true,
+  "old_GPU_fold_weight_exact_layers": 52,
+  "old_GPU_fold_bias_exact_layers": 52,
+  "CPU_GPU_weight_different_elements": 128707,
+  "maximum_CPU_GPU_weight_difference": 3.814697265625e-06,
+  "maximum_CPU_GPU_bias_difference": 9.5367431640625e-07,
+  "changed_quantized_weight_elements": 6,
+  "layers_with_quantizer_parameter_differences": 49,
+  "seed26_new_old_feature_maximum_difference": 0.02865108847618103,
+  "source_checkpoint_and_input_tensors_unchanged": true,
+  "new_training_updates_or_images_read": 0,
+  "whole_goal_complete": false
+}

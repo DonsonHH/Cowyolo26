@@ -1,0 +1,3052 @@
+{
+  "condition": "C_letterbox_trained_seed26",
+  "seed": 26,
+  "graph_sha256": {
+    "FP32": "e8de096ebee60f50e72258cb6c71efe1328cfe065061511bb526dc2e101dc63d",
+    "QDQ": "6cd86e07681be5c25308a7fed78853f5652a045f6d5a1ead0d7373a3225766e2"
+  },
+  "first_conv_median_relative_RMSE_ge02": {
+    "conv_index": 1,
+    "node": "/encoder/encoder.0/encoder.0.1/block/block.0/block.0.0/Conv",
+    "median_relative_RMSE": 0.7172977309708037,
+    "median_cosine": 0.7963661266770115,
+    "median_float_outputs_outside_quant_interval": 0.0,
+    "weight_quantisation": {
+      "relative_RMSE": 0.004107942241508218,
+      "cosine": 0.9999915973265271,
+      "max_absolute_error": 0.0885617733001709
+    },
+    "sample_metrics": [
+      {
+        "relative_RMSE": 0.5798893835071608,
+        "cosine": 0.8505401204143487,
+        "max_absolute_error": 18.56896984577179
+      },
+      {
+        "relative_RMSE": 0.7392769721749367,
+        "cosine": 0.7891360571904819,
+        "max_absolute_error": 18.46565806865692
+      },
+      {
+        "relative_RMSE": 0.6916910242044209,
+        "cosine": 0.805639235978857,
+        "max_absolute_error": 18.20205581188202
+      },
+      {
+        "relative_RMSE": 0.7097751732029891,
+        "cosine": 0.7997006029319014,
+        "max_absolute_error": 19.287123799324036
+      },
+      {
+        "relative_RMSE": 0.7248202887386183,
+        "cosine": 0.7905861508514502,
+        "max_absolute_error": 18.394287943840027
+      },
+      {
+        "relative_RMSE": 0.6071049455668459,
+        "cosine": 0.835192529009652,
+        "max_absolute_error": 19.081725239753723
+      },
+      {
+        "relative_RMSE": 0.7343624488143284,
+        "cosine": 0.7930316504221215,
+        "max_absolute_error": 18.847331881523132
+      },
+      {
+        "relative_RMSE": 0.7594248387538467,
+        "cosine": 0.7790565514496929,
+        "max_absolute_error": 19.20948326587677
+      }
+    ]
+  },
+  "layers": [
+    {
+      "conv_index": 0,
+      "node": "/encoder/encoder.0/encoder.0.0/encoder.0.0.0/Conv",
+      "median_relative_RMSE": 0.016728524566625255,
+      "median_cosine": 0.999860290242902,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.0059981592499557465,
+        "cosine": 0.9999826338156398,
+        "max_absolute_error": 0.10116377472877502
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.01736143372046833,
+          "cosine": 0.9998497068067019,
+          "max_absolute_error": 1.397099494934082
+        },
+        {
+          "relative_RMSE": 0.01599148058620403,
+          "cosine": 0.9998724233546823,
+          "max_absolute_error": 1.0530157089233398
+        },
+        {
+          "relative_RMSE": 0.016084537913054312,
+          "cosine": 0.999870774438177,
+          "max_absolute_error": 1.2795476913452148
+        },
+        {
+          "relative_RMSE": 0.0166011662660833,
+          "cosine": 0.9998624140779451,
+          "max_absolute_error": 1.2881269454956055
+        },
+        {
+          "relative_RMSE": 0.017211445921769562,
+          "cosine": 0.9998524345061465,
+          "max_absolute_error": 1.2374119758605957
+        },
+        {
+          "relative_RMSE": 0.016855882867167216,
+          "cosine": 0.999858166407859,
+          "max_absolute_error": 1.158308744430542
+        },
+        {
+          "relative_RMSE": 0.016323645091657926,
+          "cosine": 0.9998673286620018,
+          "max_absolute_error": 1.1313095092773438
+        },
+        {
+          "relative_RMSE": 0.016907886658415947,
+          "cosine": 0.999857511381636,
+          "max_absolute_error": 1.1040043830871582
+        }
+      ]
+    },
+    {
+      "conv_index": 1,
+      "node": "/encoder/encoder.0/encoder.0.1/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 0.7172977309708037,
+      "median_cosine": 0.7963661266770115,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.004107942241508218,
+        "cosine": 0.9999915973265271,
+        "max_absolute_error": 0.0885617733001709
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.5798893835071608,
+          "cosine": 0.8505401204143487,
+          "max_absolute_error": 18.56896984577179
+        },
+        {
+          "relative_RMSE": 0.7392769721749367,
+          "cosine": 0.7891360571904819,
+          "max_absolute_error": 18.46565806865692
+        },
+        {
+          "relative_RMSE": 0.6916910242044209,
+          "cosine": 0.805639235978857,
+          "max_absolute_error": 18.20205581188202
+        },
+        {
+          "relative_RMSE": 0.7097751732029891,
+          "cosine": 0.7997006029319014,
+          "max_absolute_error": 19.287123799324036
+        },
+        {
+          "relative_RMSE": 0.7248202887386183,
+          "cosine": 0.7905861508514502,
+          "max_absolute_error": 18.394287943840027
+        },
+        {
+          "relative_RMSE": 0.6071049455668459,
+          "cosine": 0.835192529009652,
+          "max_absolute_error": 19.081725239753723
+        },
+        {
+          "relative_RMSE": 0.7343624488143284,
+          "cosine": 0.7930316504221215,
+          "max_absolute_error": 18.847331881523132
+        },
+        {
+          "relative_RMSE": 0.7594248387538467,
+          "cosine": 0.7790565514496929,
+          "max_absolute_error": 19.20948326587677
+        }
+      ]
+    },
+    {
+      "conv_index": 2,
+      "node": "/encoder/encoder.0/encoder.0.1/block/block.1/fc1/Conv",
+      "median_relative_RMSE": 0.010745484084576807,
+      "median_cosine": 0.9999999999999495,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.005491535380297278,
+        "cosine": 0.9999869699940686,
+        "max_absolute_error": 1.0604282579151914e-05
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.01169358885897013,
+          "cosine": 0.9999999999999698,
+          "max_absolute_error": 0.00020313262939453125
+        },
+        {
+          "relative_RMSE": 0.019292762732433376,
+          "cosine": 0.9999999999999404,
+          "max_absolute_error": 0.0003278907388448715
+        },
+        {
+          "relative_RMSE": 0.02332142073770543,
+          "cosine": 0.9999999999999521,
+          "max_absolute_error": 0.0003941766917705536
+        },
+        {
+          "relative_RMSE": 0.010691383145242652,
+          "cosine": 0.9999999999999468,
+          "max_absolute_error": 0.00018317066133022308
+        },
+        {
+          "relative_RMSE": 0.010799585023910964,
+          "cosine": 0.9999999999999536,
+          "max_absolute_error": 0.00018309615552425385
+        },
+        {
+          "relative_RMSE": 0.008075192570350196,
+          "cosine": 0.9999999999999651,
+          "max_absolute_error": 0.00013932585716247559
+        },
+        {
+          "relative_RMSE": 0.0008572381623627473,
+          "cosine": 0.9999999999999323,
+          "max_absolute_error": 1.4999881386756897e-05
+        },
+        {
+          "relative_RMSE": 0.0027872422363452885,
+          "cosine": 0.9999999999999251,
+          "max_absolute_error": 4.8922374844551086e-05
+        }
+      ]
+    },
+    {
+      "conv_index": 3,
+      "node": "/encoder/encoder.0/encoder.0.1/block/block.1/fc2/Conv",
+      "median_relative_RMSE": 5.935342550847647e-06,
+      "median_cosine": 0.9999999999824007,
+      "median_float_outputs_outside_quant_interval": 0.0625,
+      "weight_quantisation": {
+        "relative_RMSE": 6.991817768477328e-06,
+        "cosine": 0.9999999999755573,
+        "max_absolute_error": 1.616976597063058e-08
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 5.935342550847647e-06,
+          "cosine": 0.9999999999824007,
+          "max_absolute_error": 5.9604644775390625e-06
+        },
+        {
+          "relative_RMSE": 5.935342550847647e-06,
+          "cosine": 0.9999999999824007,
+          "max_absolute_error": 5.9604644775390625e-06
+        },
+        {
+          "relative_RMSE": 5.935342550847647e-06,
+          "cosine": 0.9999999999824007,
+          "max_absolute_error": 5.9604644775390625e-06
+        },
+        {
+          "relative_RMSE": 5.935342550847647e-06,
+          "cosine": 0.9999999999824007,
+          "max_absolute_error": 5.9604644775390625e-06
+        },
+        {
+          "relative_RMSE": 5.935342550847647e-06,
+          "cosine": 0.9999999999824007,
+          "max_absolute_error": 5.9604644775390625e-06
+        },
+        {
+          "relative_RMSE": 5.935342550847647e-06,
+          "cosine": 0.9999999999824007,
+          "max_absolute_error": 5.9604644775390625e-06
+        },
+        {
+          "relative_RMSE": 5.935342550847647e-06,
+          "cosine": 0.9999999999824007,
+          "max_absolute_error": 5.9604644775390625e-06
+        },
+        {
+          "relative_RMSE": 5.935342550847647e-06,
+          "cosine": 0.9999999999824007,
+          "max_absolute_error": 5.9604644775390625e-06
+        }
+      ]
+    },
+    {
+      "conv_index": 4,
+      "node": "/encoder/encoder.0/encoder.0.1/block/block.2/block.2.0/Conv",
+      "median_relative_RMSE": 1.535016512663537,
+      "median_cosine": 0.5819541495360153,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006726995272013316,
+        "cosine": 0.9999773783537337,
+        "max_absolute_error": 0.024984091520309448
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.4152120112585633,
+          "cosine": 0.544675884685029,
+          "max_absolute_error": 39.77328824996948
+        },
+        {
+          "relative_RMSE": 1.6912664646413764,
+          "cosine": 0.5670314003260577,
+          "max_absolute_error": 40.055952072143555
+        },
+        {
+          "relative_RMSE": 1.4528112415402747,
+          "cosine": 0.6368830567550322,
+          "max_absolute_error": 38.49974298477173
+        },
+        {
+          "relative_RMSE": 1.776938780881937,
+          "cosine": 0.5010624369511356,
+          "max_absolute_error": 40.5422739982605
+        },
+        {
+          "relative_RMSE": 1.5187261886048997,
+          "cosine": 0.6181135851308529,
+          "max_absolute_error": 36.05004405975342
+        },
+        {
+          "relative_RMSE": 1.6378961375779963,
+          "cosine": 0.5043095136062326,
+          "max_absolute_error": 40.92129921913147
+        },
+        {
+          "relative_RMSE": 1.3878504908315223,
+          "cosine": 0.6356212876187338,
+          "max_absolute_error": 39.83574199676514
+        },
+        {
+          "relative_RMSE": 1.551306836722174,
+          "cosine": 0.5968768987459729,
+          "max_absolute_error": 40.48056936264038
+        }
+      ]
+    },
+    {
+      "conv_index": 5,
+      "node": "/encoder/encoder.0/encoder.0.2/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 1.0351374403135485,
+      "median_cosine": 0.6963988397310936,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006261324176171095,
+        "cosine": 0.9999804060983827,
+        "max_absolute_error": 0.004282089881598949
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.9518980953011962,
+          "cosine": 0.687517131376058,
+          "max_absolute_error": 20.525521993637085
+        },
+        {
+          "relative_RMSE": 1.1425154195946607,
+          "cosine": 0.6782873947022454,
+          "max_absolute_error": 22.108283281326294
+        },
+        {
+          "relative_RMSE": 1.0081895024710814,
+          "cosine": 0.7327200704286401,
+          "max_absolute_error": 21.967890739440918
+        },
+        {
+          "relative_RMSE": 1.16155015329821,
+          "cosine": 0.6452050143213134,
+          "max_absolute_error": 22.702155590057373
+        },
+        {
+          "relative_RMSE": 1.0419472303186421,
+          "cosine": 0.7185750287625451,
+          "max_absolute_error": 22.854021787643433
+        },
+        {
+          "relative_RMSE": 1.0283276503084549,
+          "cosine": 0.6761982203372917,
+          "max_absolute_error": 21.175273418426514
+        },
+        {
+          "relative_RMSE": 0.9755372281439231,
+          "cosine": 0.7294137783442709,
+          "max_absolute_error": 23.102673888206482
+        },
+        {
+          "relative_RMSE": 1.0433815693303365,
+          "cosine": 0.7052805480861294,
+          "max_absolute_error": 21.63258346915245
+        }
+      ]
+    },
+    {
+      "conv_index": 6,
+      "node": "/encoder/encoder.0/encoder.0.2/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.9116206867461192,
+      "median_cosine": 0.71801426756833,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.004306485764798656,
+        "cosine": 0.99999076212308,
+        "max_absolute_error": 0.033013224601745605
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.847989000454023,
+          "cosine": 0.716334512637453,
+          "max_absolute_error": 21.183749675750732
+        },
+        {
+          "relative_RMSE": 0.9960639532331313,
+          "cosine": 0.6963261604155115,
+          "max_absolute_error": 17.72903835773468
+        },
+        {
+          "relative_RMSE": 0.9030423715110207,
+          "cosine": 0.7343912931792225,
+          "max_absolute_error": 20.89862632751465
+        },
+        {
+          "relative_RMSE": 1.014796466702057,
+          "cosine": 0.6700339961546722,
+          "max_absolute_error": 20.878236174583435
+        },
+        {
+          "relative_RMSE": 0.9201990019812175,
+          "cosine": 0.7329317793719091,
+          "max_absolute_error": 17.923700094223022
+        },
+        {
+          "relative_RMSE": 0.8664257893814357,
+          "cosine": 0.719694022499207,
+          "max_absolute_error": 21.865952014923096
+        },
+        {
+          "relative_RMSE": 0.883664798102073,
+          "cosine": 0.7340347260686956,
+          "max_absolute_error": 15.949316024780273
+        },
+        {
+          "relative_RMSE": 0.9515381299505646,
+          "cosine": 0.7020810286045752,
+          "max_absolute_error": 20.231139659881592
+        }
+      ]
+    },
+    {
+      "conv_index": 7,
+      "node": "/encoder/encoder.0/encoder.0.2/block/block.2/block.2.0/Conv",
+      "median_relative_RMSE": 1.0334540794281086,
+      "median_cosine": 0.6511581323570184,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.009194074369291278,
+        "cosine": 0.9999577763202322,
+        "max_absolute_error": 0.006555973552167416
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.9811665525612284,
+          "cosine": 0.6394934535134812,
+          "max_absolute_error": 10.289193630218506
+        },
+        {
+          "relative_RMSE": 1.1557312758023512,
+          "cosine": 0.6359137794935633,
+          "max_absolute_error": 15.334055185317993
+        },
+        {
+          "relative_RMSE": 1.0441580020205181,
+          "cosine": 0.6712876174907787,
+          "max_absolute_error": 12.658055782318115
+        },
+        {
+          "relative_RMSE": 1.1190498908093995,
+          "cosine": 0.6173806756248039,
+          "max_absolute_error": 21.31291389465332
+        },
+        {
+          "relative_RMSE": 1.0619475339698463,
+          "cosine": 0.6628228112005554,
+          "max_absolute_error": 11.04537034034729
+        },
+        {
+          "relative_RMSE": 1.0227501568356991,
+          "cosine": 0.6312558962863197,
+          "max_absolute_error": 10.573315620422363
+        },
+        {
+          "relative_RMSE": 0.8936849461673719,
+          "cosine": 0.7363629151407508,
+          "max_absolute_error": 12.229629039764404
+        },
+        {
+          "relative_RMSE": 0.9728502046867975,
+          "cosine": 0.7002094637089741,
+          "max_absolute_error": 14.662695407867432
+        }
+      ]
+    },
+    {
+      "conv_index": 8,
+      "node": "/encoder/encoder.0/encoder.0.3/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 0.6440962612285481,
+      "median_cosine": 0.8385281472452759,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.007472324568656313,
+        "cosine": 0.9999720835385414,
+        "max_absolute_error": 0.002392127178609371
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.6192154548616987,
+          "cosine": 0.8325313537505716,
+          "max_absolute_error": 8.373168468475342
+        },
+        {
+          "relative_RMSE": 0.7295643180805561,
+          "cosine": 0.8203223685952956,
+          "max_absolute_error": 11.43381643295288
+        },
+        {
+          "relative_RMSE": 0.6786265333099243,
+          "cosine": 0.8357920363450301,
+          "max_absolute_error": 9.98619818687439
+        },
+        {
+          "relative_RMSE": 0.7149267024143761,
+          "cosine": 0.8103124356472956,
+          "max_absolute_error": 10.909276962280273
+        },
+        {
+          "relative_RMSE": 0.6582867145539749,
+          "cosine": 0.8452029577553034,
+          "max_absolute_error": 9.481072902679443
+        },
+        {
+          "relative_RMSE": 0.6165992826407501,
+          "cosine": 0.8412642581455219,
+          "max_absolute_error": 9.958938658237457
+        },
+        {
+          "relative_RMSE": 0.5701529369789206,
+          "cosine": 0.8750482233401143,
+          "max_absolute_error": 9.083000659942627
+        },
+        {
+          "relative_RMSE": 0.6299058079031212,
+          "cosine": 0.8486971480224161,
+          "max_absolute_error": 10.557899594306946
+        }
+      ]
+    },
+    {
+      "conv_index": 9,
+      "node": "/encoder/encoder.0/encoder.0.3/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.5404203749577933,
+      "median_cosine": 0.874537773827049,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006025061125125471,
+        "cosine": 0.9999818505807473,
+        "max_absolute_error": 0.06583806872367859
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.5127881968625487,
+          "cosine": 0.8765197846419498,
+          "max_absolute_error": 8.374518632888794
+        },
+        {
+          "relative_RMSE": 0.5945787567004115,
+          "cosine": 0.8554953504997109,
+          "max_absolute_error": 11.749475955963135
+        },
+        {
+          "relative_RMSE": 0.5637407034534491,
+          "cosine": 0.8692890029122097,
+          "max_absolute_error": 9.876328945159912
+        },
+        {
+          "relative_RMSE": 0.5790257264560438,
+          "cosine": 0.8557787036189759,
+          "max_absolute_error": 11.085946083068848
+        },
+        {
+          "relative_RMSE": 0.541188837671015,
+          "cosine": 0.876615901889567,
+          "max_absolute_error": 9.280981063842773
+        },
+        {
+          "relative_RMSE": 0.4976853487914209,
+          "cosine": 0.8853319835573396,
+          "max_absolute_error": 8.19685435295105
+        },
+        {
+          "relative_RMSE": 0.5114542911752779,
+          "cosine": 0.885573388694257,
+          "max_absolute_error": 9.717213153839111
+        },
+        {
+          "relative_RMSE": 0.5396519122445715,
+          "cosine": 0.8725557630121482,
+          "max_absolute_error": 10.790921926498413
+        }
+      ]
+    },
+    {
+      "conv_index": 10,
+      "node": "/encoder/encoder.0/encoder.0.3/block/block.2/block.2.0/Conv",
+      "median_relative_RMSE": 0.814477057077696,
+      "median_cosine": 0.7155110583802582,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.007138811981203001,
+        "cosine": 0.9999745521903345,
+        "max_absolute_error": 0.010975530371069908
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.7959555741700909,
+          "cosine": 0.7113345931244798,
+          "max_absolute_error": 8.563194990158081
+        },
+        {
+          "relative_RMSE": 0.8934929804059644,
+          "cosine": 0.6912718114343349,
+          "max_absolute_error": 11.772583961486816
+        },
+        {
+          "relative_RMSE": 0.8775130797327003,
+          "cosine": 0.705002796748628,
+          "max_absolute_error": 10.649378776550293
+        },
+        {
+          "relative_RMSE": 0.8467926121632842,
+          "cosine": 0.6935790678822681,
+          "max_absolute_error": 9.169059753417969
+        },
+        {
+          "relative_RMSE": 0.8329985399853013,
+          "cosine": 0.7326461368654171,
+          "max_absolute_error": 8.346756935119629
+        },
+        {
+          "relative_RMSE": 0.7816496873678804,
+          "cosine": 0.7196875236360365,
+          "max_absolute_error": 8.813844680786133
+        },
+        {
+          "relative_RMSE": 0.7756779128233419,
+          "cosine": 0.7449817906440465,
+          "max_absolute_error": 10.621795892715454
+        },
+        {
+          "relative_RMSE": 0.7884082777450484,
+          "cosine": 0.7401110623574352,
+          "max_absolute_error": 9.620468378067017
+        }
+      ]
+    },
+    {
+      "conv_index": 11,
+      "node": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 0.8287420947109112,
+      "median_cosine": 0.7169195052790978,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.007325584211998217,
+        "cosine": 0.9999732052363807,
+        "max_absolute_error": 0.007050603628158569
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.8227709744696616,
+          "cosine": 0.7043698407226788,
+          "max_absolute_error": 12.562926471233368
+        },
+        {
+          "relative_RMSE": 0.8949969155916204,
+          "cosine": 0.6981971909005608,
+          "max_absolute_error": 13.36764395236969
+        },
+        {
+          "relative_RMSE": 0.8593389245947624,
+          "cosine": 0.7195669632397482,
+          "max_absolute_error": 13.745661616325378
+        },
+        {
+          "relative_RMSE": 0.8347132149521609,
+          "cosine": 0.7042620992913019,
+          "max_absolute_error": 14.647383451461792
+        },
+        {
+          "relative_RMSE": 0.835659337740581,
+          "cosine": 0.7374738222297994,
+          "max_absolute_error": 13.584960460662842
+        },
+        {
+          "relative_RMSE": 0.7956083368238593,
+          "cosine": 0.7142720473184473,
+          "max_absolute_error": 13.916137635707855
+        },
+        {
+          "relative_RMSE": 0.7797703740915136,
+          "cosine": 0.7373390697462718,
+          "max_absolute_error": 14.574456214904785
+        },
+        {
+          "relative_RMSE": 0.7988444777279916,
+          "cosine": 0.7259199009577004,
+          "max_absolute_error": 14.002050220966339
+        }
+      ]
+    },
+    {
+      "conv_index": 12,
+      "node": "/encoder/encoder.0/encoder.0.4/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.5296494734477679,
+      "median_cosine": 0.870136006632375,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006386227683766517,
+        "cosine": 0.9999796912654156,
+        "max_absolute_error": 0.07260596752166748
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.5451379348945542,
+          "cosine": 0.8594192654466427,
+          "max_absolute_error": 8.404842615127563
+        },
+        {
+          "relative_RMSE": 0.5405931525801797,
+          "cosine": 0.86823962992602,
+          "max_absolute_error": 9.440950155258179
+        },
+        {
+          "relative_RMSE": 0.5286873556262359,
+          "cosine": 0.8730128346948196,
+          "max_absolute_error": 7.250361442565918
+        },
+        {
+          "relative_RMSE": 0.5429012675599757,
+          "cosine": 0.8619091004759482,
+          "max_absolute_error": 9.85290265083313
+        },
+        {
+          "relative_RMSE": 0.520367734452006,
+          "cosine": 0.8784180732172544,
+          "max_absolute_error": 8.235023021697998
+        },
+        {
+          "relative_RMSE": 0.5176175545429601,
+          "cosine": 0.87203238333873,
+          "max_absolute_error": 6.437937259674072
+        },
+        {
+          "relative_RMSE": 0.5148479070507423,
+          "cosine": 0.8747780195301095,
+          "max_absolute_error": 7.766095876693726
+        },
+        {
+          "relative_RMSE": 0.5306115912693,
+          "cosine": 0.8673033547694718,
+          "max_absolute_error": 9.169118404388428
+        }
+      ]
+    },
+    {
+      "conv_index": 13,
+      "node": "/encoder/encoder.0/encoder.0.4/block/block.2/fc1/Conv",
+      "median_relative_RMSE": 0.6557171918744806,
+      "median_cosine": 0.9999999999998432,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.013535314273576746,
+        "cosine": 0.9999083966263984,
+        "max_absolute_error": 0.011589284986257553
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.6616914210729926,
+          "cosine": 0.9999999999996505,
+          "max_absolute_error": 1.877779483795166
+        },
+        {
+          "relative_RMSE": 0.6611429435845997,
+          "cosine": 0.9999999999998513,
+          "max_absolute_error": 2.73214054107666
+        },
+        {
+          "relative_RMSE": 0.7256605568997275,
+          "cosine": 0.9999999999998351,
+          "max_absolute_error": 3.002142906188965
+        },
+        {
+          "relative_RMSE": 0.7945711786448001,
+          "cosine": 0.9999999999997506,
+          "max_absolute_error": 2.9269158840179443
+        },
+        {
+          "relative_RMSE": 0.6502914401643616,
+          "cosine": 0.9999999999998653,
+          "max_absolute_error": 2.82637882232666
+        },
+        {
+          "relative_RMSE": 0.5872618459615694,
+          "cosine": 0.999999999999748,
+          "max_absolute_error": 1.8375110626220703
+        },
+        {
+          "relative_RMSE": 0.6361231132758728,
+          "cosine": 0.999999999999892,
+          "max_absolute_error": 3.170670986175537
+        },
+        {
+          "relative_RMSE": 0.5751055340613518,
+          "cosine": 0.9999999999999168,
+          "max_absolute_error": 3.054487705230713
+        }
+      ]
+    },
+    {
+      "conv_index": 14,
+      "node": "/encoder/encoder.0/encoder.0.4/block/block.2/fc2/Conv",
+      "median_relative_RMSE": 0.0015182602422595705,
+      "median_cosine": 0.9999989107122226,
+      "median_float_outputs_outside_quant_interval": 0.010416666666666666,
+      "weight_quantisation": {
+        "relative_RMSE": 1.0209006727225544e-07,
+        "cosine": 0.9999999999999947,
+        "max_absolute_error": 1.2795568693491077e-07
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.0015182602422595705,
+          "cosine": 0.9999989107122226,
+          "max_absolute_error": 0.0030118776485323906
+        },
+        {
+          "relative_RMSE": 0.0015182602422595705,
+          "cosine": 0.9999989107122226,
+          "max_absolute_error": 0.0030118776485323906
+        },
+        {
+          "relative_RMSE": 0.0015182602422595705,
+          "cosine": 0.9999989107122226,
+          "max_absolute_error": 0.0030118776485323906
+        },
+        {
+          "relative_RMSE": 0.0015182602422595705,
+          "cosine": 0.9999989107122226,
+          "max_absolute_error": 0.0030118776485323906
+        },
+        {
+          "relative_RMSE": 0.0015182602422595705,
+          "cosine": 0.9999989107122226,
+          "max_absolute_error": 0.0030118776485323906
+        },
+        {
+          "relative_RMSE": 0.0015182602422595705,
+          "cosine": 0.9999989107122226,
+          "max_absolute_error": 0.0030118776485323906
+        },
+        {
+          "relative_RMSE": 0.0015182602422595705,
+          "cosine": 0.9999989107122226,
+          "max_absolute_error": 0.0030118776485323906
+        },
+        {
+          "relative_RMSE": 0.0015182602422595705,
+          "cosine": 0.9999989107122226,
+          "max_absolute_error": 0.0030118776485323906
+        }
+      ]
+    },
+    {
+      "conv_index": 15,
+      "node": "/encoder/encoder.0/encoder.0.4/block/block.3/block.3.0/Conv",
+      "median_relative_RMSE": 1.2060104339815505,
+      "median_cosine": 0.4851433001947697,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.007706849491051986,
+        "cosine": 0.9999703052396284,
+        "max_absolute_error": 0.004876433871686459
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.263151772461061,
+          "cosine": 0.40322749675529174,
+          "max_absolute_error": 4.228429198265076
+        },
+        {
+          "relative_RMSE": 1.2019357699307966,
+          "cosine": 0.48725024056364497,
+          "max_absolute_error": 4.831732869148254
+        },
+        {
+          "relative_RMSE": 1.2100850980323044,
+          "cosine": 0.4854207355870087,
+          "max_absolute_error": 5.595729351043701
+        },
+        {
+          "relative_RMSE": 1.2267156467188534,
+          "cosine": 0.44803883718414156,
+          "max_absolute_error": 4.172547101974487
+        },
+        {
+          "relative_RMSE": 1.1744380227803388,
+          "cosine": 0.4961117404140166,
+          "max_absolute_error": 4.109868049621582
+        },
+        {
+          "relative_RMSE": 1.2325282288969166,
+          "cosine": 0.4059556618345127,
+          "max_absolute_error": 4.5530476570129395
+        },
+        {
+          "relative_RMSE": 1.084800954641577,
+          "cosine": 0.5291459328737699,
+          "max_absolute_error": 4.903682470321655
+        },
+        {
+          "relative_RMSE": 1.150700339914877,
+          "cosine": 0.48486586480253074,
+          "max_absolute_error": 3.8473446369171143
+        }
+      ]
+    },
+    {
+      "conv_index": 16,
+      "node": "/encoder/encoder.0/encoder.0.5/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 0.8737931147565301,
+      "median_cosine": 0.6859938046158955,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006825300154956469,
+        "cosine": 0.9999767076163733,
+        "max_absolute_error": 0.0050671398639678955
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.9188300087128319,
+          "cosine": 0.6483218373184944,
+          "max_absolute_error": 6.14409327507019
+        },
+        {
+          "relative_RMSE": 0.8820054729507143,
+          "cosine": 0.6962489273591472,
+          "max_absolute_error": 6.232341527938843
+        },
+        {
+          "relative_RMSE": 0.8581557195511044,
+          "cosine": 0.7030998517796475,
+          "max_absolute_error": 7.360748469829559
+        },
+        {
+          "relative_RMSE": 0.8895788197453858,
+          "cosine": 0.6803430412443686,
+          "max_absolute_error": 5.265020847320557
+        },
+        {
+          "relative_RMSE": 0.843635756772271,
+          "cosine": 0.7117784464726364,
+          "max_absolute_error": 4.529227614402771
+        },
+        {
+          "relative_RMSE": 0.8999675816144629,
+          "cosine": 0.658217811731159,
+          "max_absolute_error": 5.259785443544388
+        },
+        {
+          "relative_RMSE": 0.8528598498626012,
+          "cosine": 0.6882676065406247,
+          "max_absolute_error": 5.336795210838318
+        },
+        {
+          "relative_RMSE": 0.8655807565623458,
+          "cosine": 0.6837200026911663,
+          "max_absolute_error": 5.494119644165039
+        }
+      ]
+    },
+    {
+      "conv_index": 17,
+      "node": "/encoder/encoder.0/encoder.0.5/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.9574169825658223,
+      "median_cosine": 0.6147974060529691,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.010227785432921853,
+        "cosine": 0.9999476992083446,
+        "max_absolute_error": 0.1415441632270813
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.9562208890851588,
+          "cosine": 0.5996978479549767,
+          "max_absolute_error": 8.699538707733154
+        },
+        {
+          "relative_RMSE": 0.9864549657698206,
+          "cosine": 0.6099841824053261,
+          "max_absolute_error": 16.272411584854126
+        },
+        {
+          "relative_RMSE": 0.9700132824328395,
+          "cosine": 0.6276934347893403,
+          "max_absolute_error": 15.035507678985596
+        },
+        {
+          "relative_RMSE": 0.9649548669854553,
+          "cosine": 0.6073228191063089,
+          "max_absolute_error": 12.908111095428467
+        },
+        {
+          "relative_RMSE": 0.934442651280084,
+          "cosine": 0.6367756596480644,
+          "max_absolute_error": 14.57923436164856
+        },
+        {
+          "relative_RMSE": 0.9586130760464858,
+          "cosine": 0.5978581999979807,
+          "max_absolute_error": 9.827866196632385
+        },
+        {
+          "relative_RMSE": 0.9144415030003025,
+          "cosine": 0.6263341730884064,
+          "max_absolute_error": 25.803170919418335
+        },
+        {
+          "relative_RMSE": 0.930846917054403,
+          "cosine": 0.6196106297006119,
+          "max_absolute_error": 12.154268264770508
+        }
+      ]
+    },
+    {
+      "conv_index": 18,
+      "node": "/encoder/encoder.0/encoder.0.5/block/block.2/fc1/Conv",
+      "median_relative_RMSE": 1.0039013043610918,
+      "median_cosine": 0.5792429542546164,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.014181809284630838,
+        "cosine": 0.9998994344417158,
+        "max_absolute_error": 0.011507909744977951
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.0175733810961236,
+          "cosine": 0.4714968153818848,
+          "max_absolute_error": 3.2474206686019897
+        },
+        {
+          "relative_RMSE": 1.0028812926169772,
+          "cosine": 0.5967133600656715,
+          "max_absolute_error": 2.2838449478149414
+        },
+        {
+          "relative_RMSE": 1.013108621591408,
+          "cosine": 0.6755394977709911,
+          "max_absolute_error": 2.060038208961487
+        },
+        {
+          "relative_RMSE": 1.0049213161052064,
+          "cosine": 0.5461867334009496,
+          "max_absolute_error": 2.6607078313827515
+        },
+        {
+          "relative_RMSE": 0.9010114122155334,
+          "cosine": 0.6756081807463975,
+          "max_absolute_error": 1.990241289138794
+        },
+        {
+          "relative_RMSE": 1.068280525368813,
+          "cosine": 0.4466549130779684,
+          "max_absolute_error": 2.9469006061553955
+        },
+        {
+          "relative_RMSE": 0.9420228054009981,
+          "cosine": 0.5862028494880257,
+          "max_absolute_error": 2.1564663648605347
+        },
+        {
+          "relative_RMSE": 0.9102296249000128,
+          "cosine": 0.572283059021207,
+          "max_absolute_error": 2.541804075241089
+        }
+      ]
+    },
+    {
+      "conv_index": 19,
+      "node": "/encoder/encoder.0/encoder.0.5/block/block.2/fc2/Conv",
+      "median_relative_RMSE": 0.3749425299418759,
+      "median_cosine": 0.9337284430767734,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.009106900238697,
+        "cosine": 0.9999585314634187,
+        "max_absolute_error": 0.01200970821082592
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.3700885980390601,
+          "cosine": 0.93334589600676,
+          "max_absolute_error": 4.743257999420166
+        },
+        {
+          "relative_RMSE": 0.3819322715685173,
+          "cosine": 0.9332548979191874,
+          "max_absolute_error": 3.344480723142624
+        },
+        {
+          "relative_RMSE": 0.38158030004430316,
+          "cosine": 0.9341109901467867,
+          "max_absolute_error": 3.7208125293254852
+        },
+        {
+          "relative_RMSE": 0.40213307332252185,
+          "cosine": 0.9237211227655409,
+          "max_absolute_error": 5.631102800369263
+        },
+        {
+          "relative_RMSE": 0.34219981092971014,
+          "cosine": 0.9502879877855482,
+          "max_absolute_error": 2.709185004234314
+        },
+        {
+          "relative_RMSE": 0.3797964618446917,
+          "cosine": 0.9291164389747693,
+          "max_absolute_error": 4.5676445960998535
+        },
+        {
+          "relative_RMSE": 0.3353997538945843,
+          "cosine": 0.9492196127671166,
+          "max_absolute_error": 2.671175241470337
+        },
+        {
+          "relative_RMSE": 0.32811851074443693,
+          "cosine": 0.9456772400992417,
+          "max_absolute_error": 3.854707211256027
+        }
+      ]
+    },
+    {
+      "conv_index": 20,
+      "node": "/encoder/encoder.0/encoder.0.5/block/block.3/block.3.0/Conv",
+      "median_relative_RMSE": 1.6835436521118146,
+      "median_cosine": 0.2409494071420176,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.00953180604403355,
+        "cosine": 0.9999545801826014,
+        "max_absolute_error": 0.01802670583128929
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.7088167539598664,
+          "cosine": 0.18583273813952808,
+          "max_absolute_error": 5.700653433799744
+        },
+        {
+          "relative_RMSE": 1.7447041559039003,
+          "cosine": 0.23080199233786708,
+          "max_absolute_error": 4.2507001757621765
+        },
+        {
+          "relative_RMSE": 1.7556373062885176,
+          "cosine": 0.26459327533609045,
+          "max_absolute_error": 4.79949688911438
+        },
+        {
+          "relative_RMSE": 1.6582705502637625,
+          "cosine": 0.22494313482503078,
+          "max_absolute_error": 4.989501714706421
+        },
+        {
+          "relative_RMSE": 1.64179869012893,
+          "cosine": 0.269405922160065,
+          "max_absolute_error": 4.0646748542785645
+        },
+        {
+          "relative_RMSE": 1.7523016098229758,
+          "cosine": 0.1932712083078737,
+          "max_absolute_error": 5.220088601112366
+        },
+        {
+          "relative_RMSE": 1.4923460288802253,
+          "cosine": 0.30806317851362036,
+          "max_absolute_error": 4.982096195220947
+        },
+        {
+          "relative_RMSE": 1.5339586404152534,
+          "cosine": 0.2510968219461681,
+          "max_absolute_error": 4.965559959411621
+        }
+      ]
+    },
+    {
+      "conv_index": 21,
+      "node": "/encoder/encoder.0/encoder.0.6/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 0.9947735268418639,
+      "median_cosine": 0.7126861253907115,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006193720347980152,
+        "cosine": 0.9999808194349226,
+        "max_absolute_error": 0.0020070290192961693
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.0610978575261258,
+          "cosine": 0.685197740053231,
+          "max_absolute_error": 9.079473376274109
+        },
+        {
+          "relative_RMSE": 1.0031608963953542,
+          "cosine": 0.7129273819241638,
+          "max_absolute_error": 8.121772646903992
+        },
+        {
+          "relative_RMSE": 0.9863861572883736,
+          "cosine": 0.7241049257810264,
+          "max_absolute_error": 7.79070508480072
+        },
+        {
+          "relative_RMSE": 1.0133393081450877,
+          "cosine": 0.7032764317742463,
+          "max_absolute_error": 10.454927921295166
+        },
+        {
+          "relative_RMSE": 0.9756797167729842,
+          "cosine": 0.7215310957423919,
+          "max_absolute_error": 8.058320999145508
+        },
+        {
+          "relative_RMSE": 1.0612527191045396,
+          "cosine": 0.6934086198545283,
+          "max_absolute_error": 9.010364651679993
+        },
+        {
+          "relative_RMSE": 0.901327064499222,
+          "cosine": 0.7455337100831059,
+          "max_absolute_error": 9.419104099273682
+        },
+        {
+          "relative_RMSE": 0.9586331676463342,
+          "cosine": 0.7124448688572592,
+          "max_absolute_error": 9.497347712516785
+        }
+      ]
+    },
+    {
+      "conv_index": 22,
+      "node": "/encoder/encoder.0/encoder.0.6/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.9440436792893696,
+      "median_cosine": 0.617167623723148,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.008921150452413897,
+        "cosine": 0.9999602136891761,
+        "max_absolute_error": 0.10510904341936111
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.968470750540461,
+          "cosine": 0.5968997428839942,
+          "max_absolute_error": 10.360472440719604
+        },
+        {
+          "relative_RMSE": 0.9579456033314878,
+          "cosine": 0.6147484774589173,
+          "max_absolute_error": 10.442981004714966
+        },
+        {
+          "relative_RMSE": 0.9413237656208205,
+          "cosine": 0.6341523842254162,
+          "max_absolute_error": 10.728127181529999
+        },
+        {
+          "relative_RMSE": 0.9467113637622957,
+          "cosine": 0.6099083163703857,
+          "max_absolute_error": 10.09965306520462
+        },
+        {
+          "relative_RMSE": 0.9481468342789448,
+          "cosine": 0.6195867699873789,
+          "max_absolute_error": 10.886583089828491
+        },
+        {
+          "relative_RMSE": 0.9413759948164434,
+          "cosine": 0.6129177290546123,
+          "max_absolute_error": 7.570348024368286
+        },
+        {
+          "relative_RMSE": 0.869010958736248,
+          "cosine": 0.6566930121922319,
+          "max_absolute_error": 17.581361293792725
+        },
+        {
+          "relative_RMSE": 0.8865669754948801,
+          "cosine": 0.6455984804182826,
+          "max_absolute_error": 8.30068325996399
+        }
+      ]
+    },
+    {
+      "conv_index": 23,
+      "node": "/encoder/encoder.0/encoder.0.6/block/block.2/fc1/Conv",
+      "median_relative_RMSE": 0.8246718299877569,
+      "median_cosine": 0.7050749934851206,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.013652833776591945,
+        "cosine": 0.9999068374669169,
+        "max_absolute_error": 0.006644214503467083
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.8007391150613294,
+          "cosine": 0.7090598930292049,
+          "max_absolute_error": 1.4698920845985413
+        },
+        {
+          "relative_RMSE": 0.8357970457159059,
+          "cosine": 0.704985683903123,
+          "max_absolute_error": 1.5018466114997864
+        },
+        {
+          "relative_RMSE": 0.9325592020195808,
+          "cosine": 0.6507762119000159,
+          "max_absolute_error": 1.4999164938926697
+        },
+        {
+          "relative_RMSE": 0.8270189944877518,
+          "cosine": 0.7051643030671183,
+          "max_absolute_error": 1.395717978477478
+        },
+        {
+          "relative_RMSE": 0.9180444882672882,
+          "cosine": 0.7045722527146031,
+          "max_absolute_error": 1.3071485459804535
+        },
+        {
+          "relative_RMSE": 0.7705832387522762,
+          "cosine": 0.7312289315788638,
+          "max_absolute_error": 1.325104907155037
+        },
+        {
+          "relative_RMSE": 0.822324665487762,
+          "cosine": 0.7072950324862801,
+          "max_absolute_error": 1.2611607313156128
+        },
+        {
+          "relative_RMSE": 0.8083153104933191,
+          "cosine": 0.7021064132408422,
+          "max_absolute_error": 1.3711275458335876
+        }
+      ]
+    },
+    {
+      "conv_index": 24,
+      "node": "/encoder/encoder.0/encoder.0.6/block/block.2/fc2/Conv",
+      "median_relative_RMSE": 0.2710777409820514,
+      "median_cosine": 0.9652760160049463,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.008797743729618559,
+        "cosine": 0.9999612998821038,
+        "max_absolute_error": 0.010404195636510849
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.25946615273188367,
+          "cosine": 0.9675723755449079,
+          "max_absolute_error": 1.8557824492454529
+        },
+        {
+          "relative_RMSE": 0.2713596530137767,
+          "cosine": 0.9642678855661165,
+          "max_absolute_error": 2.219822585582733
+        },
+        {
+          "relative_RMSE": 0.31208940887081377,
+          "cosine": 0.9545058638585036,
+          "max_absolute_error": 2.6971241235733032
+        },
+        {
+          "relative_RMSE": 0.27189661039492774,
+          "cosine": 0.9662841464437759,
+          "max_absolute_error": 1.8841350674629211
+        },
+        {
+          "relative_RMSE": 0.3003406897644639,
+          "cosine": 0.9606814704145267,
+          "max_absolute_error": 2.219993233680725
+        },
+        {
+          "relative_RMSE": 0.2647985053989262,
+          "cosine": 0.967743438876907,
+          "max_absolute_error": 2.0605902895331383
+        },
+        {
+          "relative_RMSE": 0.2672255027340658,
+          "cosine": 0.9681538171990949,
+          "max_absolute_error": 1.9965873211622238
+        },
+        {
+          "relative_RMSE": 0.27079582895032606,
+          "cosine": 0.9640127506552539,
+          "max_absolute_error": 2.3971752524375916
+        }
+      ]
+    },
+    {
+      "conv_index": 25,
+      "node": "/encoder/encoder.0/encoder.0.6/block/block.3/block.3.0/Conv",
+      "median_relative_RMSE": 1.8970283172131288,
+      "median_cosine": 0.23022469289454683,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.008172392149515597,
+        "cosine": 0.9999666173357932,
+        "max_absolute_error": 0.01648905500769615
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.887306317289981,
+          "cosine": 0.23854992536495584,
+          "max_absolute_error": 9.085596561431885
+        },
+        {
+          "relative_RMSE": 2.0642969785298355,
+          "cosine": 0.17742999188137018,
+          "max_absolute_error": 11.24278450012207
+        },
+        {
+          "relative_RMSE": 1.9067503171362763,
+          "cosine": 0.23191192753802914,
+          "max_absolute_error": 10.128980159759521
+        },
+        {
+          "relative_RMSE": 1.8147021801421306,
+          "cosine": 0.22853745825106456,
+          "max_absolute_error": 9.820794582366943
+        },
+        {
+          "relative_RMSE": 2.005325162685165,
+          "cosine": 0.21988060184995128,
+          "max_absolute_error": 12.094046115875244
+        },
+        {
+          "relative_RMSE": 1.9194436324822266,
+          "cosine": 0.20852962042281534,
+          "max_absolute_error": 10.031656742095947
+        },
+        {
+          "relative_RMSE": 1.5815614048832929,
+          "cosine": 0.3535609285046963,
+          "max_absolute_error": 7.930718898773193
+        },
+        {
+          "relative_RMSE": 1.5516593517342447,
+          "cosine": 0.333962370980209,
+          "max_absolute_error": 8.804752349853516
+        }
+      ]
+    },
+    {
+      "conv_index": 26,
+      "node": "/encoder/encoder.0/encoder.0.7/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 1.2233582958621,
+      "median_cosine": 0.5481981662696089,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006720906112846395,
+        "cosine": 0.999977425688692,
+        "max_absolute_error": 0.0036995382979512215
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.2762945408693622,
+          "cosine": 0.5275119600959439,
+          "max_absolute_error": 9.16985535621643
+        },
+        {
+          "relative_RMSE": 1.2674672646120841,
+          "cosine": 0.5290138484373108,
+          "max_absolute_error": 6.990825176239014
+        },
+        {
+          "relative_RMSE": 1.2265741585645962,
+          "cosine": 0.5528144433464979,
+          "max_absolute_error": 7.33386093378067
+        },
+        {
+          "relative_RMSE": 1.2178881513657445,
+          "cosine": 0.54358188919272,
+          "max_absolute_error": 8.121268510818481
+        },
+        {
+          "relative_RMSE": 1.220142433159604,
+          "cosine": 0.5590432721433369,
+          "max_absolute_error": 6.974467158317566
+        },
+        {
+          "relative_RMSE": 1.3107790630922544,
+          "cosine": 0.52697246887602,
+          "max_absolute_error": 8.822935700416565
+        },
+        {
+          "relative_RMSE": 1.0620957461269274,
+          "cosine": 0.6248982569889936,
+          "max_absolute_error": 8.046292304992676
+        },
+        {
+          "relative_RMSE": 1.1304414849818443,
+          "cosine": 0.5693940197771102,
+          "max_absolute_error": 8.12892460823059
+        }
+      ]
+    },
+    {
+      "conv_index": 27,
+      "node": "/encoder/encoder.0/encoder.0.7/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.9469428600721013,
+      "median_cosine": 0.5729712922977841,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.010286416797473155,
+        "cosine": 0.9999470934198575,
+        "max_absolute_error": 0.11663010716438293
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.9835936616934357,
+          "cosine": 0.557108419252156,
+          "max_absolute_error": 16.841031670570374
+        },
+        {
+          "relative_RMSE": 0.9498159479617561,
+          "cosine": 0.5594170443968449,
+          "max_absolute_error": 15.426780700683594
+        },
+        {
+          "relative_RMSE": 0.9552594619245319,
+          "cosine": 0.5732863058581473,
+          "max_absolute_error": 15.424038529396057
+        },
+        {
+          "relative_RMSE": 0.9440697721824465,
+          "cosine": 0.5726562787374208,
+          "max_absolute_error": 15.140169620513916
+        },
+        {
+          "relative_RMSE": 0.9257585678562106,
+          "cosine": 0.5915089402306511,
+          "max_absolute_error": 17.15723729133606
+        },
+        {
+          "relative_RMSE": 0.9863032839325245,
+          "cosine": 0.5461710211614356,
+          "max_absolute_error": 16.335497617721558
+        },
+        {
+          "relative_RMSE": 0.8869611488818666,
+          "cosine": 0.6227844596827201,
+          "max_absolute_error": 13.247306823730469
+        },
+        {
+          "relative_RMSE": 0.9079352608945632,
+          "cosine": 0.5992330053897107,
+          "max_absolute_error": 15.084328413009644
+        }
+      ]
+    },
+    {
+      "conv_index": 28,
+      "node": "/encoder/encoder.0/encoder.0.7/block/block.2/fc1/Conv",
+      "median_relative_RMSE": 0.9734727103945642,
+      "median_cosine": 0.6730073043510675,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.01458691361675813,
+        "cosine": 0.9998936803943457,
+        "max_absolute_error": 0.010669548064470291
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.3737152735797802,
+          "cosine": 0.3988052708845467,
+          "max_absolute_error": 7.796669840812683
+        },
+        {
+          "relative_RMSE": 0.5673514979941292,
+          "cosine": 0.8691504324465839,
+          "max_absolute_error": 1.9542485028505325
+        },
+        {
+          "relative_RMSE": 0.7169138614200654,
+          "cosine": 0.8269151352526423,
+          "max_absolute_error": 2.9198824167251587
+        },
+        {
+          "relative_RMSE": 0.9496825259838363,
+          "cosine": 0.691330076241041,
+          "max_absolute_error": 4.662861168384552
+        },
+        {
+          "relative_RMSE": 0.6722357888887932,
+          "cosine": 0.848206107361159,
+          "max_absolute_error": 3.204788565635681
+        },
+        {
+          "relative_RMSE": 0.9972628948052922,
+          "cosine": 0.6546845324610939,
+          "max_absolute_error": 5.166075065732002
+        },
+        {
+          "relative_RMSE": 1.218976460495379,
+          "cosine": 0.4677797554838937,
+          "max_absolute_error": 7.022300601005554
+        },
+        {
+          "relative_RMSE": 1.055797339963907,
+          "cosine": 0.5415935155092608,
+          "max_absolute_error": 6.006576895713806
+        }
+      ]
+    },
+    {
+      "conv_index": 29,
+      "node": "/encoder/encoder.0/encoder.0.7/block/block.2/fc2/Conv",
+      "median_relative_RMSE": 0.17899429688915292,
+      "median_cosine": 0.9841749367738235,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.004467695863571837,
+        "cosine": 0.9999900273088738,
+        "max_absolute_error": 0.005230274051427841
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.3341745185843728,
+          "cosine": 0.9427003332154613,
+          "max_absolute_error": 3.813176244497299
+        },
+        {
+          "relative_RMSE": 0.143884281121716,
+          "cosine": 0.9896583331560954,
+          "max_absolute_error": 2.8495521247386932
+        },
+        {
+          "relative_RMSE": 0.16194722477282025,
+          "cosine": 0.9868627202335655,
+          "max_absolute_error": 3.2732191383838654
+        },
+        {
+          "relative_RMSE": 0.180104076623365,
+          "cosine": 0.9838705047869053,
+          "max_absolute_error": 2.9290570616722107
+        },
+        {
+          "relative_RMSE": 0.09537135987715567,
+          "cosine": 0.9957651699066705,
+          "max_absolute_error": 1.9589905738830566
+        },
+        {
+          "relative_RMSE": 0.17788451715494083,
+          "cosine": 0.9844793687607418,
+          "max_absolute_error": 3.632300019264221
+        },
+        {
+          "relative_RMSE": 0.3054584438908243,
+          "cosine": 0.9526128416859696,
+          "max_absolute_error": 3.110985040664673
+        },
+        {
+          "relative_RMSE": 0.32286663632738566,
+          "cosine": 0.9477197120693457,
+          "max_absolute_error": 3.2812734842300415
+        }
+      ]
+    },
+    {
+      "conv_index": 30,
+      "node": "/encoder/encoder.0/encoder.0.7/block/block.3/block.3.0/Conv",
+      "median_relative_RMSE": 1.2073881475084602,
+      "median_cosine": 0.399746374321592,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.007931275760931163,
+        "cosine": 0.9999685499277072,
+        "max_absolute_error": 0.004111055284738541
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.263194248210139,
+          "cosine": 0.3695249025522005,
+          "max_absolute_error": 6.179383993148804
+        },
+        {
+          "relative_RMSE": 1.2228817879146505,
+          "cosine": 0.3875125472982711,
+          "max_absolute_error": 6.902376711368561
+        },
+        {
+          "relative_RMSE": 1.200950209777625,
+          "cosine": 0.40065606472919624,
+          "max_absolute_error": 6.117997169494629
+        },
+        {
+          "relative_RMSE": 1.2138260852392955,
+          "cosine": 0.3988366839139878,
+          "max_absolute_error": 5.442831516265869
+        },
+        {
+          "relative_RMSE": 1.1687247609999374,
+          "cosine": 0.41992587305750884,
+          "max_absolute_error": 5.571584224700928
+        },
+        {
+          "relative_RMSE": 1.2223854119399982,
+          "cosine": 0.3829805796448446,
+          "max_absolute_error": 6.939905166625977
+        },
+        {
+          "relative_RMSE": 1.0917643114790574,
+          "cosine": 0.5013070648852161,
+          "max_absolute_error": 4.934457540512085
+        },
+        {
+          "relative_RMSE": 1.0977807704927531,
+          "cosine": 0.4654160319708613,
+          "max_absolute_error": 5.275375604629517
+        }
+      ]
+    },
+    {
+      "conv_index": 31,
+      "node": "/encoder/encoder.0/encoder.0.8/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 0.8130108556800256,
+      "median_cosine": 0.6819023195655883,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.0061520930047744985,
+        "cosine": 0.9999810859029816,
+        "max_absolute_error": 0.0023476509377360344
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.8563280900295009,
+          "cosine": 0.656803815183458,
+          "max_absolute_error": 6.90037328004837
+        },
+        {
+          "relative_RMSE": 0.8274380496199298,
+          "cosine": 0.6657342954856295,
+          "max_absolute_error": 6.507264614105225
+        },
+        {
+          "relative_RMSE": 0.8069395453887647,
+          "cosine": 0.681923526217694,
+          "max_absolute_error": 4.635911703109741
+        },
+        {
+          "relative_RMSE": 0.8190821659712866,
+          "cosine": 0.6818811129134826,
+          "max_absolute_error": 6.5443108677864075
+        },
+        {
+          "relative_RMSE": 0.8042328868819998,
+          "cosine": 0.6866332213720857,
+          "max_absolute_error": 7.4827117919921875
+        },
+        {
+          "relative_RMSE": 0.8256922869671511,
+          "cosine": 0.6664761290131416,
+          "max_absolute_error": 6.3659138679504395
+        },
+        {
+          "relative_RMSE": 0.7220697213473766,
+          "cosine": 0.746269290913081,
+          "max_absolute_error": 5.0397151708602905
+        },
+        {
+          "relative_RMSE": 0.7601985486153322,
+          "cosine": 0.7195981548433535,
+          "max_absolute_error": 5.214789144694805
+        }
+      ]
+    },
+    {
+      "conv_index": 32,
+      "node": "/encoder/encoder.0/encoder.0.8/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.8542638918208716,
+      "median_cosine": 0.6381524871950983,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.009251555661740721,
+        "cosine": 0.9999572167572037,
+        "max_absolute_error": 0.08910667896270752
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.8976880334095555,
+          "cosine": 0.6128040253657244,
+          "max_absolute_error": 8.526856660842896
+        },
+        {
+          "relative_RMSE": 0.8695395259519801,
+          "cosine": 0.6201875862469287,
+          "max_absolute_error": 8.691355466842651
+        },
+        {
+          "relative_RMSE": 0.8519728005476375,
+          "cosine": 0.6369532477137549,
+          "max_absolute_error": 8.862832367420197
+        },
+        {
+          "relative_RMSE": 0.8565549830941057,
+          "cosine": 0.6393517266764417,
+          "max_absolute_error": 9.154300391674042
+        },
+        {
+          "relative_RMSE": 0.8443175796022235,
+          "cosine": 0.6487380554494214,
+          "max_absolute_error": 8.380926370620728
+        },
+        {
+          "relative_RMSE": 0.8783542122483187,
+          "cosine": 0.6208008575145336,
+          "max_absolute_error": 12.52328908443451
+        },
+        {
+          "relative_RMSE": 0.7617500845950781,
+          "cosine": 0.7150064381379954,
+          "max_absolute_error": 9.977266192436218
+        },
+        {
+          "relative_RMSE": 0.8132226472436564,
+          "cosine": 0.6665978576360425,
+          "max_absolute_error": 8.672443509101868
+        }
+      ]
+    },
+    {
+      "conv_index": 33,
+      "node": "/encoder/encoder.0/encoder.0.8/block/block.2/fc1/Conv",
+      "median_relative_RMSE": 0.5414643969531568,
+      "median_cosine": 0.8645474733052141,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.010436938145591886,
+        "cosine": 0.9999455337306569,
+        "max_absolute_error": 0.006249983794987202
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.5280297983607795,
+          "cosine": 0.8803840790250342,
+          "max_absolute_error": 1.0179443657398224
+        },
+        {
+          "relative_RMSE": 0.6280174713620585,
+          "cosine": 0.8105452356477638,
+          "max_absolute_error": 0.9907717406749725
+        },
+        {
+          "relative_RMSE": 0.5495819964162892,
+          "cosine": 0.8609214076624032,
+          "max_absolute_error": 1.0162806510925293
+        },
+        {
+          "relative_RMSE": 0.5728745999839306,
+          "cosine": 0.8491028362156938,
+          "max_absolute_error": 1.0067296624183655
+        },
+        {
+          "relative_RMSE": 0.5333467974900244,
+          "cosine": 0.8710386453244013,
+          "max_absolute_error": 0.9710343778133392
+        },
+        {
+          "relative_RMSE": 0.6377319634624933,
+          "cosine": 0.820098542071724,
+          "max_absolute_error": 1.0413819253444672
+        },
+        {
+          "relative_RMSE": 0.454216250970147,
+          "cosine": 0.9040779966431384,
+          "max_absolute_error": 0.8151048719882965
+        },
+        {
+          "relative_RMSE": 0.5318628074786655,
+          "cosine": 0.8681735389480251,
+          "max_absolute_error": 0.9921369850635529
+        }
+      ]
+    },
+    {
+      "conv_index": 34,
+      "node": "/encoder/encoder.0/encoder.0.8/block/block.2/fc2/Conv",
+      "median_relative_RMSE": 0.1701329928147109,
+      "median_cosine": 0.9886084623599379,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.0061366082042166184,
+        "cosine": 0.9999811770365787,
+        "max_absolute_error": 0.005226673558354378
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.17126702959151002,
+          "cosine": 0.9897525776226788,
+          "max_absolute_error": 0.8883821964263916
+        },
+        {
+          "relative_RMSE": 0.18072860544692482,
+          "cosine": 0.985585542185216,
+          "max_absolute_error": 1.2950091660022736
+        },
+        {
+          "relative_RMSE": 0.14870087489168687,
+          "cosine": 0.9906505881722744,
+          "max_absolute_error": 0.9618963003158569
+        },
+        {
+          "relative_RMSE": 0.17481979502099376,
+          "cosine": 0.9877607680213722,
+          "max_absolute_error": 0.9600937366485596
+        },
+        {
+          "relative_RMSE": 0.16160274561152013,
+          "cosine": 0.98918952391046,
+          "max_absolute_error": 1.4400460124015808
+        },
+        {
+          "relative_RMSE": 0.21863341130429104,
+          "cosine": 0.9813656563775011,
+          "max_absolute_error": 1.6936123669147491
+        },
+        {
+          "relative_RMSE": 0.13582068709378342,
+          "cosine": 0.9921877550212893,
+          "max_absolute_error": 0.7461325228214264
+        },
+        {
+          "relative_RMSE": 0.16899895603791174,
+          "cosine": 0.9880274008094159,
+          "max_absolute_error": 0.9575192928314209
+        }
+      ]
+    },
+    {
+      "conv_index": 35,
+      "node": "/encoder/encoder.0/encoder.0.8/block/block.3/block.3.0/Conv",
+      "median_relative_RMSE": 1.0434203919706824,
+      "median_cosine": 0.4152174696111737,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.00739121868537237,
+        "cosine": 0.9999726864542289,
+        "max_absolute_error": 0.014172330498695374
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.086033921361521,
+          "cosine": 0.3838476539630302,
+          "max_absolute_error": 4.878911137580872
+        },
+        {
+          "relative_RMSE": 1.0654032261903854,
+          "cosine": 0.3880444422816255,
+          "max_absolute_error": 3.3203383684158325
+        },
+        {
+          "relative_RMSE": 1.0330372336609395,
+          "cosine": 0.41979806746577975,
+          "max_absolute_error": 3.629542350769043
+        },
+        {
+          "relative_RMSE": 1.050206703071818,
+          "cosine": 0.41063687175656755,
+          "max_absolute_error": 3.327162504196167
+        },
+        {
+          "relative_RMSE": 1.026593712897134,
+          "cosine": 0.4625026273831231,
+          "max_absolute_error": 3.683213949203491
+        },
+        {
+          "relative_RMSE": 1.058561678571713,
+          "cosine": 0.4076824577227957,
+          "max_absolute_error": 3.445706605911255
+        },
+        {
+          "relative_RMSE": 0.9601753946627526,
+          "cosine": 0.5326137078500984,
+          "max_absolute_error": 3.8970690965652466
+        },
+        {
+          "relative_RMSE": 1.036634080869547,
+          "cosine": 0.44982205740537423,
+          "max_absolute_error": 4.254789590835571
+        }
+      ]
+    },
+    {
+      "conv_index": 36,
+      "node": "/encoder/encoder.0/encoder.0.9/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 0.6816849449757797,
+      "median_cosine": 0.7812834859140831,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006453400963244878,
+        "cosine": 0.9999791778670284,
+        "max_absolute_error": 0.0042671868577599525
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.7201162130501797,
+          "cosine": 0.7674651869503061,
+          "max_absolute_error": 8.197945594787598
+        },
+        {
+          "relative_RMSE": 0.6905097412200258,
+          "cosine": 0.7713861227140879,
+          "max_absolute_error": 9.247163534164429
+        },
+        {
+          "relative_RMSE": 0.6683560288510693,
+          "cosine": 0.7886102853275637,
+          "max_absolute_error": 6.495429992675781
+        },
+        {
+          "relative_RMSE": 0.69610865662964,
+          "cosine": 0.775244171408247,
+          "max_absolute_error": 7.435562372207642
+        },
+        {
+          "relative_RMSE": 0.6728601487315335,
+          "cosine": 0.7873228004199194,
+          "max_absolute_error": 6.158746659755707
+        },
+        {
+          "relative_RMSE": 0.699694780191487,
+          "cosine": 0.7674472210204369,
+          "max_absolute_error": 6.2905731201171875
+        },
+        {
+          "relative_RMSE": 0.6320233145938446,
+          "cosine": 0.8141260221723368,
+          "max_absolute_error": 5.430375099182129
+        },
+        {
+          "relative_RMSE": 0.6619884808927604,
+          "cosine": 0.7931059456693769,
+          "max_absolute_error": 8.178794145584106
+        }
+      ]
+    },
+    {
+      "conv_index": 37,
+      "node": "/encoder/encoder.0/encoder.0.9/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.8047466611190648,
+      "median_cosine": 0.6685058459004216,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.005025075857354564,
+        "cosine": 0.9999874531177402,
+        "max_absolute_error": 0.04092198610305786
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.882258955935397,
+          "cosine": 0.6080604230904101,
+          "max_absolute_error": 6.897425651550293
+        },
+        {
+          "relative_RMSE": 0.8071263398315616,
+          "cosine": 0.6622304642654238,
+          "max_absolute_error": 5.652312278747559
+        },
+        {
+          "relative_RMSE": 0.802366982406568,
+          "cosine": 0.6747812275354194,
+          "max_absolute_error": 5.5706751346588135
+        },
+        {
+          "relative_RMSE": 0.8334540717447059,
+          "cosine": 0.6460811859006517,
+          "max_absolute_error": 6.15134596824646
+        },
+        {
+          "relative_RMSE": 0.7751016537370722,
+          "cosine": 0.6927410248615633,
+          "max_absolute_error": 4.843378782272339
+        },
+        {
+          "relative_RMSE": 0.8377093436456973,
+          "cosine": 0.6270571663557746,
+          "max_absolute_error": 6.276044130325317
+        },
+        {
+          "relative_RMSE": 0.7165640714283887,
+          "cosine": 0.7422504379444885,
+          "max_absolute_error": 4.898451328277588
+        },
+        {
+          "relative_RMSE": 0.7765633433316655,
+          "cosine": 0.6894126087847312,
+          "max_absolute_error": 4.807581305503845
+        }
+      ]
+    },
+    {
+      "conv_index": 38,
+      "node": "/encoder/encoder.0/encoder.0.9/block/block.2/fc1/Conv",
+      "median_relative_RMSE": 0.6809368829064184,
+      "median_cosine": 0.7732445690774084,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.011156582348713591,
+        "cosine": 0.9999377966507744,
+        "max_absolute_error": 0.0050611598417162895
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.6731869292297733,
+          "cosine": 0.7758402393171451,
+          "max_absolute_error": 1.3751589357852936
+        },
+        {
+          "relative_RMSE": 0.6934740972788082,
+          "cosine": 0.7649688166180942,
+          "max_absolute_error": 1.3644909858703613
+        },
+        {
+          "relative_RMSE": 0.7087377463399012,
+          "cosine": 0.7635260036605331,
+          "max_absolute_error": 1.4783248901367188
+        },
+        {
+          "relative_RMSE": 0.7361194706935223,
+          "cosine": 0.7280835749359734,
+          "max_absolute_error": 1.6864084005355835
+        },
+        {
+          "relative_RMSE": 0.6886868365830635,
+          "cosine": 0.8030257201878827,
+          "max_absolute_error": 1.4471118450164795
+        },
+        {
+          "relative_RMSE": 0.6546882454554386,
+          "cosine": 0.7706488988376717,
+          "max_absolute_error": 1.7714940011501312
+        },
+        {
+          "relative_RMSE": 0.532384120452662,
+          "cosine": 0.8539111729887945,
+          "max_absolute_error": 1.1000770926475525
+        },
+        {
+          "relative_RMSE": 0.5974151923520481,
+          "cosine": 0.8170268803306375,
+          "max_absolute_error": 1.128854513168335
+        }
+      ]
+    },
+    {
+      "conv_index": 39,
+      "node": "/encoder/encoder.0/encoder.0.9/block/block.2/fc2/Conv",
+      "median_relative_RMSE": 0.2498711809953237,
+      "median_cosine": 0.9726608737683375,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.007591924188955622,
+        "cosine": 0.9999711811661818,
+        "max_absolute_error": 0.004899899009615183
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.24751410472177082,
+          "cosine": 0.9709729772082003,
+          "max_absolute_error": 1.1310160756111145
+        },
+        {
+          "relative_RMSE": 0.26932612452564964,
+          "cosine": 0.9701520939610195,
+          "max_absolute_error": 1.1780633181333542
+        },
+        {
+          "relative_RMSE": 0.28298777804549063,
+          "cosine": 0.96805243990098,
+          "max_absolute_error": 1.0785348415374756
+        },
+        {
+          "relative_RMSE": 0.2522282572688766,
+          "cosine": 0.972307509399945,
+          "max_absolute_error": 0.9760241657495499
+        },
+        {
+          "relative_RMSE": 0.26087105283504514,
+          "cosine": 0.97301423813673,
+          "max_absolute_error": 1.3198111057281494
+        },
+        {
+          "relative_RMSE": 0.23039647036700292,
+          "cosine": 0.9732911154378336,
+          "max_absolute_error": 1.0213990285992622
+        },
+        {
+          "relative_RMSE": 0.1816610248551778,
+          "cosine": 0.9846019131762421,
+          "max_absolute_error": 0.8009754419326782
+        },
+        {
+          "relative_RMSE": 0.21660733922481085,
+          "cosine": 0.9779378085276782,
+          "max_absolute_error": 0.9246948957443237
+        }
+      ]
+    },
+    {
+      "conv_index": 40,
+      "node": "/encoder/encoder.0/encoder.0.9/block/block.3/block.3.0/Conv",
+      "median_relative_RMSE": 1.0615682988508164,
+      "median_cosine": 0.3709995706841177,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.007765132127074595,
+        "cosine": 0.9999698558703769,
+        "max_absolute_error": 0.005108587443828583
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.1267532965885825,
+          "cosine": 0.28725388024951853,
+          "max_absolute_error": 4.92114794254303
+        },
+        {
+          "relative_RMSE": 1.0558544312530946,
+          "cosine": 0.37329707694370734,
+          "max_absolute_error": 4.025789260864258
+        },
+        {
+          "relative_RMSE": 1.067282166448538,
+          "cosine": 0.368702064424528,
+          "max_absolute_error": 2.97418212890625
+        },
+        {
+          "relative_RMSE": 1.0959194862031554,
+          "cosine": 0.3236725167650138,
+          "max_absolute_error": 3.5901100635528564
+        },
+        {
+          "relative_RMSE": 1.052620275447368,
+          "cosine": 0.38504387775364174,
+          "max_absolute_error": 3.5136889219284058
+        },
+        {
+          "relative_RMSE": 1.0983090137608817,
+          "cosine": 0.3557456976296265,
+          "max_absolute_error": 2.784541606903076
+        },
+        {
+          "relative_RMSE": 0.9456211153393914,
+          "cosine": 0.5099802962077257,
+          "max_absolute_error": 2.462532639503479
+        },
+        {
+          "relative_RMSE": 0.9989674949085545,
+          "cosine": 0.44673113990987584,
+          "max_absolute_error": 3.3057479858398438
+        }
+      ]
+    },
+    {
+      "conv_index": 41,
+      "node": "/encoder/encoder.0/encoder.0.10/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 0.7516981496679545,
+      "median_cosine": 0.7080450356182091,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006641035065319199,
+        "cosine": 0.9999779487270476,
+        "max_absolute_error": 0.004042487591505051
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.8223871410918429,
+          "cosine": 0.6482614740609745,
+          "max_absolute_error": 6.304574966430664
+        },
+        {
+          "relative_RMSE": 0.760531211647024,
+          "cosine": 0.7028062151777075,
+          "max_absolute_error": 6.465709686279297
+        },
+        {
+          "relative_RMSE": 0.7566833910138775,
+          "cosine": 0.7053235808960586,
+          "max_absolute_error": 4.627774119377136
+        },
+        {
+          "relative_RMSE": 0.7783584635751534,
+          "cosine": 0.6795784682158224,
+          "max_absolute_error": 4.55916166305542
+        },
+        {
+          "relative_RMSE": 0.7385574809671189,
+          "cosine": 0.7237403456289077,
+          "max_absolute_error": 4.313288927078247
+        },
+        {
+          "relative_RMSE": 0.7467129083220314,
+          "cosine": 0.7107664903403597,
+          "max_absolute_error": 5.23776239156723
+        },
+        {
+          "relative_RMSE": 0.660710386840136,
+          "cosine": 0.7729597341816007,
+          "max_absolute_error": 5.287126541137695
+        },
+        {
+          "relative_RMSE": 0.7158122751207678,
+          "cosine": 0.7315811706156423,
+          "max_absolute_error": 5.732165157794952
+        }
+      ]
+    },
+    {
+      "conv_index": 42,
+      "node": "/encoder/encoder.0/encoder.0.10/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.8801088914638775,
+      "median_cosine": 0.5838756472119978,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.009113326107544572,
+        "cosine": 0.9999584971212974,
+        "max_absolute_error": 0.06899303197860718
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.9464216136089314,
+          "cosine": 0.5133188254094535,
+          "max_absolute_error": 7.715132266283035
+        },
+        {
+          "relative_RMSE": 0.8774782825938761,
+          "cosine": 0.5864607022825875,
+          "max_absolute_error": 6.4286710023880005
+        },
+        {
+          "relative_RMSE": 0.882739500333879,
+          "cosine": 0.5812905921414081,
+          "max_absolute_error": 9.456119298934937
+        },
+        {
+          "relative_RMSE": 0.9081978652044094,
+          "cosine": 0.5489442785265122,
+          "max_absolute_error": 10.898593425750732
+        },
+        {
+          "relative_RMSE": 0.8660998175742628,
+          "cosine": 0.595427973986951,
+          "max_absolute_error": 11.13536274433136
+        },
+        {
+          "relative_RMSE": 0.8982745157644554,
+          "cosine": 0.5737247776316238,
+          "max_absolute_error": 7.573141098022461
+        },
+        {
+          "relative_RMSE": 0.7632843513235024,
+          "cosine": 0.6855336870542438,
+          "max_absolute_error": 5.4679481983184814
+        },
+        {
+          "relative_RMSE": 0.8407991807692652,
+          "cosine": 0.6117359822707933,
+          "max_absolute_error": 7.636317729949951
+        }
+      ]
+    },
+    {
+      "conv_index": 43,
+      "node": "/encoder/encoder.0/encoder.0.10/block/block.2/fc1/Conv",
+      "median_relative_RMSE": 0.8137527403006071,
+      "median_cosine": 0.6623235266936777,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.012709957083850098,
+        "cosine": 0.9999192282087811,
+        "max_absolute_error": 0.006109779234975576
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.8107782016058376,
+          "cosine": 0.6656137896521529,
+          "max_absolute_error": 1.8452397584915161
+        },
+        {
+          "relative_RMSE": 0.8692619895495428,
+          "cosine": 0.6335742516216857,
+          "max_absolute_error": 2.1397631764411926
+        },
+        {
+          "relative_RMSE": 0.9411558801912552,
+          "cosine": 0.5739670648546751,
+          "max_absolute_error": 2.146328568458557
+        },
+        {
+          "relative_RMSE": 0.8947210962207015,
+          "cosine": 0.6103645460635789,
+          "max_absolute_error": 1.9105027914047241
+        },
+        {
+          "relative_RMSE": 0.8167272789953766,
+          "cosine": 0.6758035668756991,
+          "max_absolute_error": 1.7851704061031342
+        },
+        {
+          "relative_RMSE": 0.804301238310699,
+          "cosine": 0.6590332637352024,
+          "max_absolute_error": 1.8313684463500977
+        },
+        {
+          "relative_RMSE": 0.6663222200463994,
+          "cosine": 0.773112431199268,
+          "max_absolute_error": 1.481236308813095
+        },
+        {
+          "relative_RMSE": 0.724954252414569,
+          "cosine": 0.7165388962876602,
+          "max_absolute_error": 1.6736276149749756
+        }
+      ]
+    },
+    {
+      "conv_index": 44,
+      "node": "/encoder/encoder.0/encoder.0.10/block/block.2/fc2/Conv",
+      "median_relative_RMSE": 0.1825981414562624,
+      "median_cosine": 0.9833364344726478,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.00898680945546757,
+        "cosine": 0.9999596178354017,
+        "max_absolute_error": 0.00920979306101799
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.16494064279555468,
+          "cosine": 0.986449499837175,
+          "max_absolute_error": 1.9822819828987122
+        },
+        {
+          "relative_RMSE": 0.18610403300823966,
+          "cosine": 0.9826893470606056,
+          "max_absolute_error": 2.7073234766721725
+        },
+        {
+          "relative_RMSE": 0.20895096042465963,
+          "cosine": 0.9782958335094832,
+          "max_absolute_error": 2.8729471415281296
+        },
+        {
+          "relative_RMSE": 0.19693343755252574,
+          "cosine": 0.9804396284131436,
+          "max_absolute_error": 3.008579730987549
+        },
+        {
+          "relative_RMSE": 0.18207827208654417,
+          "cosine": 0.9832863309274009,
+          "max_absolute_error": 2.976653516292572
+        },
+        {
+          "relative_RMSE": 0.18311801082598064,
+          "cosine": 0.9833865380178947,
+          "max_absolute_error": 3.449381113052368
+        },
+        {
+          "relative_RMSE": 0.1411998223975488,
+          "cosine": 0.9901462523575536,
+          "max_absolute_error": 2.098965108394623
+        },
+        {
+          "relative_RMSE": 0.1552816104096455,
+          "cosine": 0.9884037423860481,
+          "max_absolute_error": 1.8468229174613953
+        }
+      ]
+    },
+    {
+      "conv_index": 45,
+      "node": "/encoder/encoder.0/encoder.0.10/block/block.3/block.3.0/Conv",
+      "median_relative_RMSE": 1.086152835270724,
+      "median_cosine": 0.3398290572469015,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.008220033452823504,
+        "cosine": 0.9999662169930124,
+        "max_absolute_error": 0.009554492309689522
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.138908814271128,
+          "cosine": 0.2701959576157518,
+          "max_absolute_error": 2.80913046002388
+        },
+        {
+          "relative_RMSE": 1.1322639505501302,
+          "cosine": 0.34851782394290154,
+          "max_absolute_error": 3.2090020179748535
+        },
+        {
+          "relative_RMSE": 1.1429448481674895,
+          "cosine": 0.3138774937171709,
+          "max_absolute_error": 2.968284010887146
+        },
+        {
+          "relative_RMSE": 1.0768630296822503,
+          "cosine": 0.32509735355254077,
+          "max_absolute_error": 3.512587785720825
+        },
+        {
+          "relative_RMSE": 1.0954426408591973,
+          "cosine": 0.3311402905509014,
+          "max_absolute_error": 2.5984464809298515
+        },
+        {
+          "relative_RMSE": 1.073007824703036,
+          "cosine": 0.3831205269288572,
+          "max_absolute_error": 2.5406455993652344
+        },
+        {
+          "relative_RMSE": 0.9703076350627383,
+          "cosine": 0.48261431406749933,
+          "max_absolute_error": 2.057466506958008
+        },
+        {
+          "relative_RMSE": 1.059630720489704,
+          "cosine": 0.4060580386000351,
+          "max_absolute_error": 2.267181396484375
+        }
+      ]
+    },
+    {
+      "conv_index": 46,
+      "node": "/encoder/encoder.0/encoder.0.11/block/block.0/block.0.0/Conv",
+      "median_relative_RMSE": 0.7012864922521191,
+      "median_cosine": 0.7397979567610193,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006614136774882427,
+        "cosine": 0.9999781264191048,
+        "max_absolute_error": 0.0021201837807893753
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.7420387950395957,
+          "cosine": 0.69458697138473,
+          "max_absolute_error": 5.150044918060303
+        },
+        {
+          "relative_RMSE": 0.7264150032461422,
+          "cosine": 0.7342575451731665,
+          "max_absolute_error": 5.496740877628326
+        },
+        {
+          "relative_RMSE": 0.7180953083284429,
+          "cosine": 0.7249243753520689,
+          "max_absolute_error": 4.504234671592712
+        },
+        {
+          "relative_RMSE": 0.7300040039915946,
+          "cosine": 0.712505353051472,
+          "max_absolute_error": 4.6790090799331665
+        },
+        {
+          "relative_RMSE": 0.683142730107152,
+          "cosine": 0.745338368348872,
+          "max_absolute_error": 4.898753762245178
+        },
+        {
+          "relative_RMSE": 0.6844776761757955,
+          "cosine": 0.7514498646099588,
+          "max_absolute_error": 4.484499931335449
+        },
+        {
+          "relative_RMSE": 0.6143789769878893,
+          "cosine": 0.7960369987802008,
+          "max_absolute_error": 3.970355749130249
+        },
+        {
+          "relative_RMSE": 0.6691021417695848,
+          "cosine": 0.7640317085693367,
+          "max_absolute_error": 4.581957936286926
+        }
+      ]
+    },
+    {
+      "conv_index": 47,
+      "node": "/encoder/encoder.0/encoder.0.11/block/block.1/block.1.0/Conv",
+      "median_relative_RMSE": 0.9102720243171103,
+      "median_cosine": 0.5183648246052501,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.009046270214753844,
+        "cosine": 0.9999590855729907,
+        "max_absolute_error": 0.07026040554046631
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.9695156499932234,
+          "cosine": 0.44090482703990774,
+          "max_absolute_error": 12.178380727767944
+        },
+        {
+          "relative_RMSE": 0.9374755667732206,
+          "cosine": 0.49385017922402097,
+          "max_absolute_error": 7.836971640586853
+        },
+        {
+          "relative_RMSE": 0.9829828245876772,
+          "cosine": 0.4793977751975921,
+          "max_absolute_error": 8.430884003639221
+        },
+        {
+          "relative_RMSE": 0.950650134632095,
+          "cosine": 0.46120739443105413,
+          "max_absolute_error": 8.917197108268738
+        },
+        {
+          "relative_RMSE": 0.8825065636042034,
+          "cosine": 0.5654467271284943,
+          "max_absolute_error": 9.31938248872757
+        },
+        {
+          "relative_RMSE": 0.8830684818610001,
+          "cosine": 0.5428794699864792,
+          "max_absolute_error": 8.601048946380615
+        },
+        {
+          "relative_RMSE": 0.7657296488082641,
+          "cosine": 0.6684049878541136,
+          "max_absolute_error": 6.776439070701599
+        },
+        {
+          "relative_RMSE": 0.8657262903468458,
+          "cosine": 0.5497903184943339,
+          "max_absolute_error": 8.191529989242554
+        }
+      ]
+    },
+    {
+      "conv_index": 48,
+      "node": "/encoder/encoder.0/encoder.0.11/block/block.2/fc1/Conv",
+      "median_relative_RMSE": 0.8341415213486616,
+      "median_cosine": 0.6305592481497279,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.010795647830125462,
+        "cosine": 0.9999417338728972,
+        "max_absolute_error": 0.004802990704774857
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.8214395146879958,
+          "cosine": 0.6406558847767212,
+          "max_absolute_error": 2.0100523829460144
+        },
+        {
+          "relative_RMSE": 0.8799866711394321,
+          "cosine": 0.5911859738687647,
+          "max_absolute_error": 2.3399126827716827
+        },
+        {
+          "relative_RMSE": 0.8636074998789663,
+          "cosine": 0.6204626115227345,
+          "max_absolute_error": 2.554543375968933
+        },
+        {
+          "relative_RMSE": 0.9238073279480888,
+          "cosine": 0.570339758576807,
+          "max_absolute_error": 2.1478826999664307
+        },
+        {
+          "relative_RMSE": 0.8253124576985059,
+          "cosine": 0.6632689979072053,
+          "max_absolute_error": 2.125297784805298
+        },
+        {
+          "relative_RMSE": 0.8429705849988172,
+          "cosine": 0.5850571131246352,
+          "max_absolute_error": 2.8207637071609497
+        },
+        {
+          "relative_RMSE": 0.5828170127783628,
+          "cosine": 0.8219774119308864,
+          "max_absolute_error": 1.4147467911243439
+        },
+        {
+          "relative_RMSE": 0.7139753474457844,
+          "cosine": 0.7054611456217824,
+          "max_absolute_error": 2.0540111660957336
+        }
+      ]
+    },
+    {
+      "conv_index": 49,
+      "node": "/encoder/encoder.0/encoder.0.11/block/block.2/fc2/Conv",
+      "median_relative_RMSE": 0.25401848948566785,
+      "median_cosine": 0.9725378272312922,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.00847747097436127,
+        "cosine": 0.9999640697776261,
+        "max_absolute_error": 0.005584821105003357
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.2673267753509176,
+          "cosine": 0.972517929830346,
+          "max_absolute_error": 2.8454611599445343
+        },
+        {
+          "relative_RMSE": 0.26819240010183565,
+          "cosine": 0.9670133268631537,
+          "max_absolute_error": 2.3354442790150642
+        },
+        {
+          "relative_RMSE": 0.2606745235549149,
+          "cosine": 0.9725577246322384,
+          "max_absolute_error": 2.2023940980434418
+        },
+        {
+          "relative_RMSE": 0.31692117635270545,
+          "cosine": 0.9625454654291569,
+          "max_absolute_error": 2.852257788181305
+        },
+        {
+          "relative_RMSE": 0.2473624554164208,
+          "cosine": 0.9736138315707724,
+          "max_absolute_error": 1.9870452657341957
+        },
+        {
+          "relative_RMSE": 0.24375183696414449,
+          "cosine": 0.9698467500584405,
+          "max_absolute_error": 2.3948116302490234
+        },
+        {
+          "relative_RMSE": 0.17610263911484286,
+          "cosine": 0.9849786014233224,
+          "max_absolute_error": 1.6874111890792847
+        },
+        {
+          "relative_RMSE": 0.1940790279001128,
+          "cosine": 0.9810705545208964,
+          "max_absolute_error": 1.5599672198295593
+        }
+      ]
+    },
+    {
+      "conv_index": 50,
+      "node": "/encoder/encoder.0/encoder.0.11/block/block.3/block.3.0/Conv",
+      "median_relative_RMSE": 1.0513688461763446,
+      "median_cosine": 0.22436832220013844,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.008450347538107842,
+        "cosine": 0.9999643014560471,
+        "max_absolute_error": 0.011134771630167961
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 1.0745566997546603,
+          "cosine": 0.10707487852564083,
+          "max_absolute_error": 7.804644703865051
+        },
+        {
+          "relative_RMSE": 1.0551588537398788,
+          "cosine": 0.20632446005460564,
+          "max_absolute_error": 6.853308200836182
+        },
+        {
+          "relative_RMSE": 1.0869268045427538,
+          "cosine": 0.15790063874818214,
+          "max_absolute_error": 5.263054132461548
+        },
+        {
+          "relative_RMSE": 1.041462817827443,
+          "cosine": 0.14832581534974,
+          "max_absolute_error": 7.405783534049988
+        },
+        {
+          "relative_RMSE": 1.0477733717258058,
+          "cosine": 0.26309480650561073,
+          "max_absolute_error": 7.578166246414185
+        },
+        {
+          "relative_RMSE": 1.0549643206268833,
+          "cosine": 0.24241218434567124,
+          "max_absolute_error": 5.9694783091545105
+        },
+        {
+          "relative_RMSE": 0.8829070534166326,
+          "cosine": 0.5180063011066871,
+          "max_absolute_error": 4.324429869651794
+        },
+        {
+          "relative_RMSE": 1.0120065080896845,
+          "cosine": 0.3179509892792611,
+          "max_absolute_error": 6.00734668970108
+        }
+      ]
+    },
+    {
+      "conv_index": 51,
+      "node": "/encoder/encoder.0/encoder.0.12/encoder.0.12.0/Conv",
+      "median_relative_RMSE": 0.9358454256279907,
+      "median_cosine": 0.4567711140444036,
+      "median_float_outputs_outside_quant_interval": 0.0,
+      "weight_quantisation": {
+        "relative_RMSE": 0.006978706623095347,
+        "cosine": 0.999975650153536,
+        "max_absolute_error": 0.004721460863947868
+      },
+      "sample_metrics": [
+        {
+          "relative_RMSE": 0.9993225666357857,
+          "cosine": 0.3612101082247635,
+          "max_absolute_error": 24.480711936950684
+        },
+        {
+          "relative_RMSE": 0.9743494382236262,
+          "cosine": 0.43119805689682444,
+          "max_absolute_error": 24.93809700012207
+        },
+        {
+          "relative_RMSE": 0.9466470161906388,
+          "cosine": 0.44953472950260787,
+          "max_absolute_error": 16.76672649383545
+        },
+        {
+          "relative_RMSE": 0.9341186844153435,
+          "cosine": 0.4250705294956606,
+          "max_absolute_error": 24.505582332611084
+        },
+        {
+          "relative_RMSE": 0.9283436726862982,
+          "cosine": 0.46400749858619944,
+          "max_absolute_error": 22.016960620880127
+        },
+        {
+          "relative_RMSE": 0.9375721668406379,
+          "cosine": 0.47488853067533565,
+          "max_absolute_error": 16.569382667541504
+        },
+        {
+          "relative_RMSE": 0.7847496146636957,
+          "cosine": 0.6430917966388014,
+          "max_absolute_error": 14.5504150390625
+        },
+        {
+          "relative_RMSE": 0.865557032401776,
+          "cosine": 0.5643805128062621,
+          "max_absolute_error": 13.225502014160156
+        }
+      ]
+    }
+  ],
+  "same_graph_runtime_controls": [
+    {
+      "sample": 0,
+      "default_qdq_vs_float": {
+        "relative_RMSE": 1.1603885665970837,
+        "cosine": 0.3267490013682078,
+        "max_absolute_error": 0.1656238827854395
+      },
+      "fusion_disabled_qdq_vs_float": {
+        "relative_RMSE": 1.1604124931210633,
+        "cosine": 0.32672114511283684,
+        "max_absolute_error": 0.16562419012188911
+      },
+      "default_vs_disabled": {
+        "relative_RMSE": 0.0012362591832618087,
+        "cosine": 0.999999235831521,
+        "max_absolute_error": 0.0005993880331516266
+      }
+    },
+    {
+      "sample": 1,
+      "default_qdq_vs_float": {
+        "relative_RMSE": 1.1596824016204956,
+        "cosine": 0.32756855371892407,
+        "max_absolute_error": 0.18262584652984515
+      },
+      "fusion_disabled_qdq_vs_float": {
+        "relative_RMSE": 1.1596831057383323,
+        "cosine": 0.3275677598141613,
+        "max_absolute_error": 0.18263651576125994
+      },
+      "default_vs_disabled": {
+        "relative_RMSE": 0.001373225516215277,
+        "cosine": 0.999999057125873,
+        "max_absolute_error": 0.0006987899541854858
+      }
+    },
+    {
+      "sample": 2,
+      "default_qdq_vs_float": {
+        "relative_RMSE": 1.253051463557656,
+        "cosine": 0.21493095824144723,
+        "max_absolute_error": 0.23108277656137943
+      },
+      "fusion_disabled_qdq_vs_float": {
+        "relative_RMSE": 1.2540746311387392,
+        "cosine": 0.2136483779201251,
+        "max_absolute_error": 0.23743491806089878
+      },
+      "default_vs_disabled": {
+        "relative_RMSE": 0.10604297800839438,
+        "cosine": 0.9943774435851811,
+        "max_absolute_error": 0.01863832399249077
+      }
+    },
+    {
+      "sample": 3,
+      "default_qdq_vs_float": {
+        "relative_RMSE": 1.2292604346621072,
+        "cosine": 0.24445955439056063,
+        "max_absolute_error": 0.20052351150661707
+      },
+      "fusion_disabled_qdq_vs_float": {
+        "relative_RMSE": 1.2301031526500246,
+        "cosine": 0.24342332678070214,
+        "max_absolute_error": 0.20043371710926294
+      },
+      "default_vs_disabled": {
+        "relative_RMSE": 0.044634103422345806,
+        "cosine": 0.9990038984679003,
+        "max_absolute_error": 0.00789526104927063
+      }
+    },
+    {
+      "sample": 4,
+      "default_qdq_vs_float": {
+        "relative_RMSE": 0.9999607311769139,
+        "cosine": 0.5000391911711587,
+        "max_absolute_error": 0.15979917161166668
+      },
+      "fusion_disabled_qdq_vs_float": {
+        "relative_RMSE": 1.0063586355149767,
+        "cosine": 0.49362104017280894,
+        "max_absolute_error": 0.16776544507592916
+      },
+      "default_vs_disabled": {
+        "relative_RMSE": 0.08381861454156221,
+        "cosine": 0.9964872197178257,
+        "max_absolute_error": 0.014883749186992645
+      }
+    },
+    {
+      "sample": 5,
+      "default_qdq_vs_float": {
+        "relative_RMSE": 0.9758431052998844,
+        "cosine": 0.5238651560629264,
+        "max_absolute_error": 0.16880481224507093
+      },
+      "fusion_disabled_qdq_vs_float": {
+        "relative_RMSE": 0.9796255333461509,
+        "cosine": 0.5201669540647368,
+        "max_absolute_error": 0.16283570509403944
+      },
+      "default_vs_disabled": {
+        "relative_RMSE": 0.09345181272186115,
+        "cosine": 0.9956333794169232,
+        "max_absolute_error": 0.016166266053915024
+      }
+    },
+    {
+      "sample": 6,
+      "default_qdq_vs_float": {
+        "relative_RMSE": 0.8018924673681013,
+        "cosine": 0.6784841564030666,
+        "max_absolute_error": 0.12246865639463067
+      },
+      "fusion_disabled_qdq_vs_float": {
+        "relative_RMSE": 0.8171038891133388,
+        "cosine": 0.6661706880248307,
+        "max_absolute_error": 0.12267387611791492
+      },
+      "default_vs_disabled": {
+        "relative_RMSE": 0.08835003607923107,
+        "cosine": 0.9960971373493632,
+        "max_absolute_error": 0.016120344400405884
+      }
+    },
+    {
+      "sample": 7,
+      "default_qdq_vs_float": {
+        "relative_RMSE": 1.0151848167030482,
+        "cosine": 0.4847002033102709,
+        "max_absolute_error": 0.19168348982930183
+      },
+      "fusion_disabled_qdq_vs_float": {
+        "relative_RMSE": 1.0152297670256758,
+        "cosine": 0.48465462833838063,
+        "max_absolute_error": 0.19168389774858952
+      },
+      "default_vs_disabled": {
+        "relative_RMSE": 0.0015902688751828552,
+        "cosine": 0.9999987355226032,
+        "max_absolute_error": 0.0006041005253791809
+      }
+    }
+  ],
+  "optimised_operator_counts": {
+    "default": {
+      "QuantizeLinear": 41,
+      "Transpose": 20,
+      "QLinearConv": 52,
+      "DequantizeLinear": 59,
+      "HardSigmoid": 27,
+      "Mul": 27,
+      "Relu": 1,
+      "GlobalAveragePool": 10,
+      "QLinearAdd": 6,
+      "Flatten": 1,
+      "ReduceL2": 1,
+      "Clip": 1,
+      "Expand": 1,
+      "Div": 1
+    },
+    "disabled": {
+      "QuantizeLinear": 99,
+      "DequantizeLinear": 227,
+      "Conv": 52,
+      "HardSigmoid": 27,
+      "Mul": 27,
+      "Relu": 14,
+      "GlobalAveragePool": 10,
+      "Add": 6,
+      "Flatten": 1,
+      "ReduceL2": 1,
+      "Clip": 1,
+      "Shape": 1,
+      "Expand": 1,
+      "Div": 1
+    }
+  }
+}

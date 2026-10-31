@@ -1,0 +1,50 @@
+{
+  "status": "RESERVED_BEFORE_QUANT_DIAGNOSIS",
+  "data_source": "MultiCamCows2024 camera1",
+  "selection": "Previously unused identity IDs common to Aug14/Aug20 ranked by SHA256(cow-future-holdout-v1:+ID). Eligibility inspected via metadata only; reserve6registered,6unknown in rank order once camera1>=5 in both dates. No score-based replacements.",
+  "ranked_candidates": [
+    "070",
+    "068",
+    "066",
+    "037",
+    "065",
+    "025",
+    "082",
+    "052",
+    "088",
+    "074",
+    "058",
+    "069",
+    "075",
+    "057"
+  ],
+  "registered_ids_if_eligible": [
+    "070",
+    "068",
+    "066",
+    "037",
+    "065",
+    "025"
+  ],
+  "unknown_ids_if_eligible": [
+    "082",
+    "052",
+    "088",
+    "074",
+    "058",
+    "069"
+  ],
+  "remaining_reserve": [
+    "075",
+    "057"
+  ],
+  "gallery_day": "2023Aug14",
+  "query_day": "2023Aug20",
+  "five_fixed_images_per_id_role": true,
+  "model_training_allowed": false,
+  "calibration_or_threshold_selection_allowed": false,
+  "image_inference_allowed_now": false,
+  "image_visual_review_allowed_now": false,
+  "freeze_gate": "Select quantisation method/checkpoints/thresholds using training/validation roles; lock all before evaluation images enter inference.",
+  "scope": "Small untouched identity holdout within same public farm/camera; not field or cross-farm validation"
+}

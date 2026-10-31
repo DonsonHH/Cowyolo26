@@ -1,0 +1,210 @@
+[
+  {
+    "vector": 0,
+    "same_source_and_ALL_upstream_integer_inputs": true,
+    "isolated_fused_exact_full_ALL_node": true,
+    "isolated_unfused_exact_full_OFF_node": true,
+    "isolated_output_different_elements": 0,
+    "differences": [],
+    "patched_one_node": {
+      "maximum_absolute_error": 2.9802322387695312e-08,
+      "cosine": 0.9999999999999953,
+      "passed_original_embedding_tolerance": true
+    },
+    "patched_exact_OFF_embedding": true,
+    "disable_quant_qdq": {
+      "maximum_absolute_error": 2.9802322387695312e-08,
+      "cosine": 0.9999999999999953,
+      "passed_original_embedding_tolerance": true
+    },
+    "disable_quant_qdq_exact_OFF_embedding": true
+  },
+  {
+    "vector": 1,
+    "same_source_and_ALL_upstream_integer_inputs": true,
+    "isolated_fused_exact_full_ALL_node": true,
+    "isolated_unfused_exact_full_OFF_node": true,
+    "isolated_output_different_elements": 0,
+    "differences": [],
+    "patched_one_node": {
+      "maximum_absolute_error": 2.9802322387695312e-08,
+      "cosine": 0.9999999999999962,
+      "passed_original_embedding_tolerance": true
+    },
+    "patched_exact_OFF_embedding": true,
+    "disable_quant_qdq": {
+      "maximum_absolute_error": 2.9802322387695312e-08,
+      "cosine": 0.9999999999999962,
+      "passed_original_embedding_tolerance": true
+    },
+    "disable_quant_qdq_exact_OFF_embedding": true
+  },
+  {
+    "vector": 2,
+    "same_source_and_ALL_upstream_integer_inputs": true,
+    "isolated_fused_exact_full_ALL_node": true,
+    "isolated_unfused_exact_full_OFF_node": true,
+    "isolated_output_different_elements": 1,
+    "differences": [
+      {
+        "index": [
+          0,
+          17,
+          11,
+          20
+        ],
+        "A": 152,
+        "B": 180,
+        "unfused_U8": 171,
+        "fused_U8": 172,
+        "unfused_FP32_units": 33.4999885559082,
+        "scaled_ratio_FP32_control_units": 33.49999237060547,
+        "ideal_FP64_units": 33.49999021289544
+      }
+    ],
+    "patched_one_node": {
+      "maximum_absolute_error": 4.470348358154297e-08,
+      "cosine": 0.9999999999999962,
+      "passed_original_embedding_tolerance": true
+    },
+    "patched_exact_OFF_embedding": true,
+    "disable_quant_qdq": {
+      "maximum_absolute_error": 4.470348358154297e-08,
+      "cosine": 0.9999999999999962,
+      "passed_original_embedding_tolerance": true
+    },
+    "disable_quant_qdq_exact_OFF_embedding": true
+  },
+  {
+    "vector": 3,
+    "same_source_and_ALL_upstream_integer_inputs": true,
+    "isolated_fused_exact_full_ALL_node": true,
+    "isolated_unfused_exact_full_OFF_node": true,
+    "isolated_output_different_elements": 0,
+    "differences": [],
+    "patched_one_node": {
+      "maximum_absolute_error": 4.470348358154297e-08,
+      "cosine": 0.9999999999999962,
+      "passed_original_embedding_tolerance": true
+    },
+    "patched_exact_OFF_embedding": true,
+    "disable_quant_qdq": {
+      "maximum_absolute_error": 4.470348358154297e-08,
+      "cosine": 0.9999999999999962,
+      "passed_original_embedding_tolerance": true
+    },
+    "disable_quant_qdq_exact_OFF_embedding": true
+  },
+  {
+    "vector": 4,
+    "same_source_and_ALL_upstream_integer_inputs": true,
+    "isolated_fused_exact_full_ALL_node": true,
+    "isolated_unfused_exact_full_OFF_node": true,
+    "isolated_output_different_elements": 0,
+    "differences": [],
+    "patched_one_node": {
+      "maximum_absolute_error": 2.9802322387695312e-08,
+      "cosine": 0.999999999999996,
+      "passed_original_embedding_tolerance": true
+    },
+    "patched_exact_OFF_embedding": true,
+    "disable_quant_qdq": {
+      "maximum_absolute_error": 2.9802322387695312e-08,
+      "cosine": 0.999999999999996,
+      "passed_original_embedding_tolerance": true
+    },
+    "disable_quant_qdq_exact_OFF_embedding": true
+  },
+  {
+    "vector": 5,
+    "same_source_and_ALL_upstream_integer_inputs": true,
+    "isolated_fused_exact_full_ALL_node": true,
+    "isolated_unfused_exact_full_OFF_node": true,
+    "isolated_output_different_elements": 1,
+    "differences": [
+      {
+        "index": [
+          0,
+          14,
+          12,
+          1
+        ],
+        "A": 152,
+        "B": 180,
+        "unfused_U8": 171,
+        "fused_U8": 172,
+        "unfused_FP32_units": 33.4999885559082,
+        "scaled_ratio_FP32_control_units": 33.49999237060547,
+        "ideal_FP64_units": 33.49999021289544
+      }
+    ],
+    "patched_one_node": {
+      "maximum_absolute_error": 8.940696716308594e-08,
+      "cosine": 0.9999999999999947,
+      "passed_original_embedding_tolerance": true
+    },
+    "patched_exact_OFF_embedding": true,
+    "disable_quant_qdq": {
+      "maximum_absolute_error": 8.940696716308594e-08,
+      "cosine": 0.9999999999999947,
+      "passed_original_embedding_tolerance": true
+    },
+    "disable_quant_qdq_exact_OFF_embedding": true
+  },
+  {
+    "vector": 6,
+    "same_source_and_ALL_upstream_integer_inputs": true,
+    "isolated_fused_exact_full_ALL_node": true,
+    "isolated_unfused_exact_full_OFF_node": true,
+    "isolated_output_different_elements": 0,
+    "differences": [],
+    "patched_one_node": {
+      "maximum_absolute_error": 2.9802322387695312e-08,
+      "cosine": 0.9999999999999958,
+      "passed_original_embedding_tolerance": true
+    },
+    "patched_exact_OFF_embedding": true,
+    "disable_quant_qdq": {
+      "maximum_absolute_error": 2.9802322387695312e-08,
+      "cosine": 0.9999999999999958,
+      "passed_original_embedding_tolerance": true
+    },
+    "disable_quant_qdq_exact_OFF_embedding": true
+  },
+  {
+    "vector": 7,
+    "same_source_and_ALL_upstream_integer_inputs": true,
+    "isolated_fused_exact_full_ALL_node": true,
+    "isolated_unfused_exact_full_OFF_node": true,
+    "isolated_output_different_elements": 1,
+    "differences": [
+      {
+        "index": [
+          0,
+          13,
+          21,
+          15
+        ],
+        "A": 152,
+        "B": 180,
+        "unfused_U8": 171,
+        "fused_U8": 172,
+        "unfused_FP32_units": 33.4999885559082,
+        "scaled_ratio_FP32_control_units": 33.49999237060547,
+        "ideal_FP64_units": 33.49999021289544
+      }
+    ],
+    "patched_one_node": {
+      "maximum_absolute_error": 4.470348358154297e-08,
+      "cosine": 0.9999999999999956,
+      "passed_original_embedding_tolerance": true
+    },
+    "patched_exact_OFF_embedding": true,
+    "disable_quant_qdq": {
+      "maximum_absolute_error": 4.470348358154297e-08,
+      "cosine": 0.9999999999999956,
+      "passed_original_embedding_tolerance": true
+    },
+    "disable_quant_qdq_exact_OFF_embedding": true
+  }
+]

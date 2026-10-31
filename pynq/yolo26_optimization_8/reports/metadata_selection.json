@@ -1,0 +1,9 @@
+{
+  "is_xsa": true,
+  "hwh_available": true,
+  "code": {
+    "is_xsa": "    def is_xsa(self):\n        \"\"\"Returns true if this is an XSA file, false otherwise\"\"\"\n        xsa_file = self._filepath.with_suffix(\".xsa\")\n        if xsa_file.exists():\n            return True\n        return False\n",
+    "get_hwh_data": "    def get_hwh_data(self):\n        \"\"\"Return the hardware handoff file for the bitstream\n\n        Should be None if no HWH data is available\n\n        \"\"\"\n        hwh_file = self._filepath.with_suffix(\".hwh\")\n        if hwh_file.exists():\n            return hwh_file.read_text(encoding='utf-8')\n        return None\n",
+    "get_xclbin_data": "    def get_xclbin_data(self):\n        \"\"\"Return the xclbin data for the bitstream\n\n        Should be None if no data exists\n\n        \"\"\"\n        xclbin_file = self._filepath.with_suffix(\".xclbin\")\n        if xclbin_file.exists():\n            return xclbin_file.read_bytes()\n        return None\n"
+  }
+}

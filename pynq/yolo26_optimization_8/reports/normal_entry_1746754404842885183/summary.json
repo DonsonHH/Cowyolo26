@@ -1,0 +1,423 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "profile": "fast192",
+      "camera": false,
+      "output": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/runs/demo_1746754414734500054",
+      "result": {
+        "profile": "fast192",
+        "input_size": 192,
+        "initialization_ms": 12538.049894999858,
+        "device_initialization": {
+          "primed": false,
+          "core": "0x80001",
+          "FCLK0_MHz": 100.0
+        },
+        "selected": {
+          "selection": "all",
+          "options": 4,
+          "pairs": 25,
+          "DMA_transactions": 69,
+          "plan": "plans/r192_all/resident_plan.bin",
+          "screen_D_mean_ms": 159.73470560011265,
+          "screen_C_mean_ms": 165.66673330007688,
+          "screen_only": true,
+          "screen_summary_sha256": "b387b7efcbd340b6d72b331be2c1273eb04d9d84ef592acc2f13a2ef8abd279f",
+          "reason": "all25 lower complete E2E than adjacent17 and same-firmware DDR in screening; full formal validation follows"
+        },
+        "cold_first_frame_ms": 293.9778580002894,
+        "records": [
+          {
+            "index": 0,
+            "E2E_ms": 293.9778580002894,
+            "capture_or_read_ms": 114.05694700079039,
+            "annotate_save_ms": 251.3942700006737,
+            "detections": [
+              {
+                "box": [
+                  27.757043838500977,
+                  222.47300720214844,
+                  807.8495483398438,
+                  718.15673828125
+                ],
+                "score": 0.7344024181365967,
+                "class_id": 5,
+                "class_name": "bus"
+              },
+              {
+                "box": [
+                  214.75975036621094,
+                  398.9276123046875,
+                  348.499267578125,
+                  872.8306884765625
+                ],
+                "score": 0.7281045317649841,
+                "class_id": 0,
+                "class_name": "person"
+              },
+              {
+                "box": [
+                  658.9450073242188,
+                  334.8363952636719,
+                  810.0,
+                  872.7018432617188
+                ],
+                "score": 0.6206983327865601,
+                "class_id": 0,
+                "class_name": "person"
+              },
+              {
+                "box": [
+                  43.48189926147461,
+                  396.02020263671875,
+                  206.2952423095703,
+                  893.182373046875
+                ],
+                "score": 0.5,
+                "class_id": 0,
+                "class_name": "person"
+              },
+              {
+                "box": [
+                  27.757043838500977,
+                  222.47300720214844,
+                  807.8495483398438,
+                  718.15673828125
+                ],
+                "score": 0.31803736090660095,
+                "class_id": 7,
+                "class_name": "truck"
+              }
+            ],
+            "status": {
+              "MM2S": "0x1002",
+              "S2MM": "0x1002",
+              "core": "0x2",
+              "error": "0x0",
+              "version": "0x80001"
+            }
+          }
+        ],
+        "summary": {
+          "mean": 293.9778580002894,
+          "median": 293.9778580002894,
+          "min": 293.9778580002894,
+          "max": 293.9778580002894,
+          "p95": 293.9778580002894
+        },
+        "scope": "Complete board preprocess/native inference/detection decode. Cold demo is not warmed100 benchmark. Camera frame age unmeasured."
+      }
+    },
+    {
+      "profile": "flagship224",
+      "camera": false,
+      "output": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/runs/demo_1746754438086129890",
+      "result": {
+        "profile": "flagship224",
+        "input_size": 224,
+        "initialization_ms": 12271.224719999736,
+        "device_initialization": {
+          "primed": false,
+          "core": "0x80001",
+          "FCLK0_MHz": 100.0
+        },
+        "selected": {
+          "selection": "all",
+          "options": 4,
+          "pairs": 25,
+          "DMA_transactions": 69,
+          "plan": "plans/r224_all/resident_plan.bin",
+          "screen_D_mean_ms": 208.19715790003102,
+          "screen_C_mean_ms": 215.81133869995028,
+          "screen_only": true,
+          "screen_summary_sha256": "b387b7efcbd340b6d72b331be2c1273eb04d9d84ef592acc2f13a2ef8abd279f",
+          "reason": "all25 lower complete E2E than adjacent17 and same-firmware DDR in screening; full formal validation follows"
+        },
+        "cold_first_frame_ms": 395.78962400082673,
+        "records": [
+          {
+            "index": 0,
+            "E2E_ms": 395.78962400082673,
+            "capture_or_read_ms": 775.6470879994595,
+            "annotate_save_ms": 224.1772609995678,
+            "detections": [
+              {
+                "box": [
+                  17.837247848510742,
+                  228.42942810058594,
+                  792.1627197265625,
+                  740.6134643554688
+                ],
+                "score": 0.8135078549385071,
+                "class_id": 5,
+                "class_name": "bus"
+              },
+              {
+                "box": [
+                  45.3698844909668,
+                  402.82928466796875,
+                  231.0323028564453,
+                  892.5939331054688
+                ],
+                "score": 0.7847009301185608,
+                "class_id": 0,
+                "class_name": "person"
+              },
+              {
+                "box": [
+                  202.85667419433594,
+                  405.7133483886719,
+                  356.5083312988281,
+                  853.864013671875
+                ],
+                "score": 0.5,
+                "class_id": 0,
+                "class_name": "person"
+              },
+              {
+                "box": [
+                  675.3170166015625,
+                  364.4163818359375,
+                  810.0,
+                  870.1864013671875
+                ],
+                "score": 0.34374770522117615,
+                "class_id": 0,
+                "class_name": "person"
+              }
+            ],
+            "status": {
+              "MM2S": "0x1002",
+              "S2MM": "0x1002",
+              "core": "0x2",
+              "error": "0x0",
+              "version": "0x80001"
+            }
+          }
+        ],
+        "summary": {
+          "mean": 395.78962400082673,
+          "median": 395.78962400082673,
+          "min": 395.78962400082673,
+          "max": 395.78962400082673,
+          "p95": 395.78962400082673
+        },
+        "scope": "Complete board preprocess/native inference/detection decode. Cold demo is not warmed100 benchmark. Camera frame age unmeasured."
+      }
+    },
+    {
+      "profile": "quality256",
+      "camera": false,
+      "output": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/runs/demo_1746754461828924932",
+      "result": {
+        "profile": "quality256",
+        "input_size": 256,
+        "initialization_ms": 13790.384293999523,
+        "device_initialization": {
+          "primed": false,
+          "core": "0x80001",
+          "FCLK0_MHz": 100.0
+        },
+        "selected": {
+          "selection": "all",
+          "options": 4,
+          "pairs": 25,
+          "DMA_transactions": 69,
+          "plan": "plans/r256_all/resident_plan.bin",
+          "screen_D_mean_ms": 264.7456857997895,
+          "screen_C_mean_ms": 273.94310979989314,
+          "screen_only": true,
+          "screen_summary_sha256": "b387b7efcbd340b6d72b331be2c1273eb04d9d84ef592acc2f13a2ef8abd279f",
+          "reason": "all25 lower complete E2E than adjacent17 and same-firmware DDR in screening; full formal validation follows"
+        },
+        "cold_first_frame_ms": 494.875210999453,
+        "records": [
+          {
+            "index": 0,
+            "E2E_ms": 494.875210999453,
+            "capture_or_read_ms": 238.55534100039222,
+            "annotate_save_ms": 221.60014800101635,
+            "detections": [
+              {
+                "box": [
+                  45.90478515625,
+                  401.1434631347656,
+                  224.58872985839844,
+                  903.6920166015625
+                ],
+                "score": 0.794132649898529,
+                "class_id": 0,
+                "class_name": "person"
+              },
+              {
+                "box": [
+                  20.15519142150879,
+                  227.98928833007812,
+                  806.6646728515625,
+                  749.6121826171875
+                ],
+                "score": 0.723936915397644,
+                "class_id": 5,
+                "class_name": "bus"
+              },
+              {
+                "box": [
+                  219.9918975830078,
+                  398.35150146484375,
+                  354.0048522949219,
+                  861.8130493164062
+                ],
+                "score": 0.6626238822937012,
+                "class_id": 0,
+                "class_name": "person"
+              },
+              {
+                "box": [
+                  667.3644409179688,
+                  421.1805114746094,
+                  810.0,
+                  873.4742431640625
+                ],
+                "score": 0.6626238822937012,
+                "class_id": 0,
+                "class_name": "person"
+              }
+            ],
+            "status": {
+              "MM2S": "0x1002",
+              "S2MM": "0x1002",
+              "core": "0x2",
+              "error": "0x0",
+              "version": "0x80001"
+            }
+          }
+        ],
+        "summary": {
+          "mean": 494.875210999453,
+          "median": 494.875210999453,
+          "min": 494.875210999453,
+          "max": 494.875210999453,
+          "p95": 494.875210999453
+        },
+        "scope": "Complete board preprocess/native inference/detection decode. Cold demo is not warmed100 benchmark. Camera frame age unmeasured."
+      }
+    },
+    {
+      "profile": "flagship224",
+      "camera": true,
+      "output": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/runs/demo_1746754487189754328",
+      "result": {
+        "profile": "flagship224",
+        "input_size": 224,
+        "initialization_ms": 12412.283231000401,
+        "device_initialization": {
+          "primed": false,
+          "core": "0x80001",
+          "FCLK0_MHz": 100.0
+        },
+        "selected": {
+          "selection": "all",
+          "options": 4,
+          "pairs": 25,
+          "DMA_transactions": 69,
+          "plan": "plans/r224_all/resident_plan.bin",
+          "screen_D_mean_ms": 208.19715790003102,
+          "screen_C_mean_ms": 215.81133869995028,
+          "screen_only": true,
+          "screen_summary_sha256": "b387b7efcbd340b6d72b331be2c1273eb04d9d84ef592acc2f13a2ef8abd279f",
+          "reason": "all25 lower complete E2E than adjacent17 and same-firmware DDR in screening; full formal validation follows"
+        },
+        "cold_first_frame_ms": 423.25749500014354,
+        "records": [
+          {
+            "index": 0,
+            "E2E_ms": 423.25749500014354,
+            "capture_or_read_ms": 345.7452300008299,
+            "annotate_save_ms": 83.09735399961937,
+            "detections": [
+              {
+                "box": [
+                  0.4696764349937439,
+                  130.25961303710938,
+                  288.80364990234375,
+                  458.4292297363281
+                ],
+                "score": 0.34374770522117615,
+                "class_id": 0,
+                "class_name": "person"
+              }
+            ],
+            "status": {
+              "MM2S": "0x1002",
+              "S2MM": "0x1002",
+              "core": "0x2",
+              "error": "0x0",
+              "version": "0x80001"
+            }
+          },
+          {
+            "index": 1,
+            "E2E_ms": 228.06979000051797,
+            "capture_or_read_ms": 29.82932300074026,
+            "annotate_save_ms": 82.45674499994493,
+            "detections": [
+              {
+                "box": [
+                  0.4696764349937439,
+                  134.05349731445312,
+                  292.5975341796875,
+                  460.3261413574219
+                ],
+                "score": 0.5,
+                "class_id": 0,
+                "class_name": "person"
+              }
+            ],
+            "status": {
+              "MM2S": "0x1002",
+              "S2MM": "0x1002",
+              "core": "0x2",
+              "error": "0x0",
+              "version": "0x80001"
+            }
+          },
+          {
+            "index": 2,
+            "E2E_ms": 229.97991400006867,
+            "capture_or_read_ms": 29.85916299985547,
+            "annotate_save_ms": 82.30342199931329,
+            "detections": [
+              {
+                "box": [
+                  0.4696764349937439,
+                  128.36268615722656,
+                  292.5975341796875,
+                  460.3261413574219
+                ],
+                "score": 0.5,
+                "class_id": 0,
+                "class_name": "person"
+              }
+            ],
+            "status": {
+              "MM2S": "0x1002",
+              "S2MM": "0x1002",
+              "core": "0x2",
+              "error": "0x0",
+              "version": "0x80001"
+            }
+          }
+        ],
+        "summary": {
+          "mean": 293.76906633357675,
+          "median": 229.97991400006867,
+          "min": 228.06979000051797,
+          "max": 423.25749500014354,
+          "p95": 403.92973690013605
+        },
+        "scope": "Complete board preprocess/native inference/detection decode. Cold demo is not warmed100 benchmark. Camera frame age unmeasured."
+      }
+    }
+  ]
+}

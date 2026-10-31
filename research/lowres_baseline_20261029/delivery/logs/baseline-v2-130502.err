@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/lowres_baseline_20261029/tools/run_baseline_v2.py", line 179, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/lowres_baseline_20261029/tools/run_baseline_v2.py", line 133, in main
+    assert sha(Path(spec['path']))==spec['sha256'];cap=cv2.VideoCapture(spec['path']);assert cap.isOpened()
+           ~~~^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/lowres_baseline_20261029/tools/run_baseline_v2.py", line 19, in sha
+    with Path(p).open('rb') as f:
+         ~~~~~~~~~~~~^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/share/home/renly/projects/idcoo_research_20261026/phase3_diagnosis/data/mendeley_counting/extracted/Ground Truth/Toros.mp4'

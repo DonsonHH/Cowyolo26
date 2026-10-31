@@ -1,0 +1,28 @@
+{
+  "command": [
+    "g++",
+    "-O3",
+    "-std=c++17",
+    "-shared",
+    "-fPIC",
+    "-mcpu=cortex-a9",
+    "-mfpu=neon",
+    "-mfloat-abi=hard",
+    "-fopenmp",
+    "-ffp-contract=off",
+    "queue_runtime.cpp",
+    "-o",
+    "native_queue.so",
+    "-ldl"
+  ],
+  "exit": 0,
+  "log": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/compile_1746748344647651260.log",
+  "source_sha256": {
+    "queue_runtime.cpp": "f6e059b7bbcab05403e679ee2c1882b7f447b2b0f63bcbe2726143592b99557c",
+    "native_runtime.cpp": "b66a7a8af5764b6c2e04171cae3dc6d563adb39f6bfcd8bd5f78c2546c36e3b9",
+    "graph_executor.cpp": "f4dccb446aaca293a4bb0c049d348c48d38242e39101770968ec2152a9facdc3",
+    "resident_methods.inc": "60ea2c12dac852b681ccb811a2eb7f6940e00c1b3abb4ccf6f57c4e7b54afe39"
+  },
+  "snapshot": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/revisions/compile_1746748344647651260",
+  "sha256": "81003c67a9079565bd091eb1acb10e2ddc881625dd14e5a5e4e882336de2ba6f"
+}

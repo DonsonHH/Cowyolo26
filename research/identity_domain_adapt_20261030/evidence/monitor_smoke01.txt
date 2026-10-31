@@ -1,0 +1,8 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|AllocCPUS|MaxRSS
+130772|cow-id-domain-smoke|COMPLETED|0:0|00:00:05|4|
+130772.batch|batch|COMPLETED|0:0|00:00:05|4|1172K
+130772.0|python|COMPLETED|0:0|00:00:05|4|800K
+{"condition": "M_continue_seed26", "updates": 1, "loss": 1.9430522918701172, "image_forwards": 32}
+{"condition": "C_domain_seed26", "updates": 1, "loss": 3.8150415420532227, "image_forwards": 32}
+{"status": "BOTH_ARMS_ONE_REAL_CUDA_UPDATE_PASS_FORMAL_WEIGHTS_UNTOUCHED", "created_UTC": "2026-10-30T08:49:54.090637+00:00", "Slurm_job_id": "130772", "discarded_optimizer_updates": 2, "source_image_forwards": 64, "formal_updates": 0, "protocol_sha256": "3ce8b2aa7f876ef55ba625049bebb4443486a73be5410d4600676dbafd83520e", "whole_goal_complete": false}

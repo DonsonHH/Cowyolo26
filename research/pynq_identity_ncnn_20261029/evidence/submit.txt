@@ -1,0 +1,9 @@
+glibc 2.28
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|6|alloc|cu[01-02,17-20]|(null)
+cu*|up|infinite|14|idle|cu[03-16]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+PINNED_ENCODER132_INPUTS_AND_OFFLINE_NCNN_PNNX_DEPS_STAGED
+130569

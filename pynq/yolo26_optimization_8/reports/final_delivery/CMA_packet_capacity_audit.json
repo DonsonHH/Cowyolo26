@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "size": 192,
+      "baseline": {
+        "transactions": 94,
+        "BO_count": 188,
+        "TX_bytes": 7988360,
+        "RX_bytes": 1441296,
+        "page_rounded_BO_bytes": 9809920,
+        "largest_TX_BO_bytes": 473696,
+        "largest_RX_BO_bytes": 147456,
+        "largest_single_BO_request_bytes": 473696,
+        "tiles": 442
+      },
+      "resident": {
+        "transactions": 69,
+        "BO_count": 138,
+        "TX_bytes": 7297344,
+        "RX_bytes": 1131408,
+        "page_rounded_BO_bytes": 8720384,
+        "largest_TX_BO_bytes": 543488,
+        "largest_RX_BO_bytes": 147456,
+        "largest_single_BO_request_bytes": 543488,
+        "tiles": 442
+      }
+    },
+    {
+      "size": 224,
+      "baseline": {
+        "transactions": 94,
+        "BO_count": 188,
+        "TX_bytes": 9916596,
+        "RX_bytes": 1961764,
+        "page_rounded_BO_bytes": 12296192,
+        "largest_TX_BO_bytes": 580912,
+        "largest_RX_BO_bytes": 200704,
+        "largest_single_BO_request_bytes": 580912,
+        "tiles": 497
+      },
+      "resident": {
+        "transactions": 69,
+        "BO_count": 138,
+        "TX_bytes": 8981692,
+        "RX_bytes": 1539972,
+        "page_rounded_BO_bytes": 10821632,
+        "largest_TX_BO_bytes": 600832,
+        "largest_RX_BO_bytes": 200704,
+        "largest_single_BO_request_bytes": 600832,
+        "tiles": 497
+      }
+    },
+    {
+      "size": 256,
+      "baseline": {
+        "transactions": 94,
+        "BO_count": 188,
+        "TX_bytes": 12099488,
+        "RX_bytes": 2562304,
+        "page_rounded_BO_bytes": 14843904,
+        "largest_TX_BO_bytes": 707888,
+        "largest_RX_BO_bytes": 262144,
+        "largest_single_BO_request_bytes": 707888,
+        "tiles": 512
+      },
+      "resident": {
+        "transactions": 69,
+        "BO_count": 138,
+        "TX_bytes": 10885096,
+        "RX_bytes": 2011392,
+        "page_rounded_BO_bytes": 13049856,
+        "largest_TX_BO_bytes": 726400,
+        "largest_RX_BO_bytes": 262144,
+        "largest_single_BO_request_bytes": 726400,
+        "tiles": 512
+      }
+    }
+  ],
+  "scope": "Independent integer packet sizing, per-BO4096 rounding checked against actual live BO accounting, no per-frame allocation"
+}

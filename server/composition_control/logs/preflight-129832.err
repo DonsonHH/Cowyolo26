@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/preflight.py", line 64, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/preflight.py", line 29, in main
+    assert validation.im_files==[r['alias'] for r in val_slots]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: gpu03: task 0: Exited with exit code 1

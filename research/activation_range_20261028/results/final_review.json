@@ -1,0 +1,103 @@
+{
+  "status": "TRAIN_ONLY_RANGE_AND_FIXED_WEIGHT_CLIPPING_PHASE_FULL_REVIEW_COMPLETE",
+  "created_UTC": "2026-10-27T18:28:21.510096+00:00",
+  "previous_goal_turn_classification": "progress",
+  "current_goal_turn_classification": "progress",
+  "phase_experiment_delivery_and_manual_report_review_complete": true,
+  "actual_results": {
+    "source_training_images": 64,
+    "views": 2,
+    "condition_view_metrics": 36,
+    "model_condition_image_forwards": 2304,
+    "layer_statistics_rows": 1872,
+    "representative_integer_fixtures": 72,
+    "independent_fixture_accumulator_elements": 5682432,
+    "all12_fixed_weight_unclipping_controls_lower_mean_teacher_cosine": true,
+    "controls_not_valid_U8S8_deployment_candidates": true,
+    "teacher_agreement_not_identity_accuracy": true,
+    "model_weights_qparams_and_thresholds_unchanged": true,
+    "new_training_updates": 0,
+    "validation_or_test_reads": 0,
+    "files_verified": 27,
+    "FPGA_execution_verified": false
+  },
+  "synthesis_review_sha256": "81462009d78168a293f532d3d9c1547cdb5e9b7968e096e0b3cecca7e7626bba",
+  "evidence_files": [
+    {
+      "path": "量化范围与截断对照.md",
+      "sha256": "af34bd9f1662a1703028fec89b2d477f91b65fb8937e353129bd1572fb4323bb"
+    },
+    {
+      "path": "Review与当前状态.md",
+      "sha256": "363450d64e812b6ef0fd7a471cec9505b2ae9a98efaa12f38d3e9c6f9cf67fff"
+    },
+    {
+      "path": "protocol/activation_range_v1.json",
+      "sha256": "991d29b99977339ce122d0164674aa93cb658302d9b94424ff2376f51c90e6f9"
+    },
+    {
+      "path": "results/local_verification.json",
+      "sha256": "7394d6566208c73a22556dd9b7a80046d64a38146a37d0d96ab61d7682a3b8ee"
+    },
+    {
+      "path": "results/conditions36.csv",
+      "sha256": "e1c1f017ead86ea8c0def2d79315eb7b4a1fb17af9dcf2fd70ec7ae24cad4208"
+    },
+    {
+      "path": "results/local_metric_rounding_probe.json",
+      "sha256": "deef381d4d924305ded384b3f0aebf9e76102132038326180a5a859930e55f6c"
+    },
+    {
+      "path": "results/delivery_status_01.txt",
+      "sha256": "e5ac88d0ddbc6936a7b73e47f86a5ebdf88f27ab26460d87a4a45a006414686e"
+    },
+    {
+      "path": "delivery/results/probe/summary.json",
+      "sha256": "a42d2efd47ef5a9a02e123c6f6dc152efb913c2eb3a6f57303f54241a2bd986f"
+    },
+    {
+      "path": "delivery/results/independent_verification.json",
+      "sha256": "ade11056a701b92b080fc840bc17050019ea528901c3f865fb29d21d6bebaea9"
+    },
+    {
+      "path": "tools/probe.py",
+      "sha256": "64d9f30f0067636333eabd536edf2c897484d1deabf6884adfaf7378ef34c3d5"
+    },
+    {
+      "path": "tools/independent_verify.py",
+      "sha256": "7e22f505dce69e314955556fb0563fcb860d8cfff3857b14c051be558ed4d280"
+    },
+    {
+      "path": "tools/verify_local_before_metric_tolerance.py",
+      "sha256": "c5b1114c4d253713fa354ee84141812e05bbfc9651a911482b76f038f2603455"
+    },
+    {
+      "path": "tools/verify_local.py",
+      "sha256": "0d35cb558f0989a243da9eaad51cb8902ff34702cf13aa1a9f5ef4a5e4acf7e3"
+    }
+  ],
+  "decision": "Retain originalmodelandthresholds; do notadopt directunclipping. Thisdoesnotevaluate recalibrationthenretraining.",
+  "remaining_original_goal_requirements": [
+    {
+      "requirement": "Independent_real_bidirectional_event_accuracy",
+      "status": "incomplete",
+      "needed": "Independent reviewerJSON and freshdirection-labeled complete sessions"
+    },
+    {
+      "requirement": "Independent_identity_and_realRFID_recovery",
+      "status": "partial",
+      "needed": "Independentidentity/RFmapping andvalidatedrisk/coverage"
+    },
+    {
+      "requirement": "PYNQ_Z2_detector_and_background_identity_joint_inference",
+      "status": "unverified",
+      "needed": "User SSH/image/toolversions, finalarithmeticmapping andactualjointboard measurements"
+    },
+    {
+      "requirement": "Principal_publication_contribution",
+      "status": "not_yet_proven"
+    }
+  ],
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

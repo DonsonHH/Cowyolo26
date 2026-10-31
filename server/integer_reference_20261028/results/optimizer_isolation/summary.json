@@ -1,0 +1,41 @@
+{
+  "status": "SAME_INPUT_ISOLATED_ADD_AND_SINGLE_NODE_FULL_GRAPH_CONTROLS_COMPLETE",
+  "job_id": "129982",
+  "protocol_sha256": "2293762a54e94957c395644c559068d380f0ba75666d3262818f0f6bec86093e",
+  "source_serialized_ALL_sha256": "2f212f100f08bb6360a37ef12a31efc16e4d6bb4a2b29b8de8b00163e6fee329",
+  "target_node": {
+    "name": "/encoder/encoder.0/encoder.0.3/Add",
+    "domain": "com.microsoft",
+    "op_type": "QLinearAdd",
+    "inputs": [
+      "/encoder/encoder.0/encoder.0.3/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+      "encoder.0.3.block.2.0.output_quant.scale",
+      "onnx::QuantizeLinear_1827",
+      "/encoder/encoder.0/encoder.0.2/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+      "encoder.0.2.block.2.0.output_quant.scale",
+      "onnx::QuantizeLinear_1833",
+      "encoder.0.4.block.0.0.input_quant.scale",
+      "onnx::QuantizeLinear_1843"
+    ],
+    "outputs": [
+      "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+    ]
+  },
+  "replaced_nodes": 1,
+  "other_existing_nodes_unchanged": true,
+  "isolated_mismatch_vectors": [
+    2,
+    5,
+    7
+  ],
+  "patched_passed_vectors": 8,
+  "patched_exact_OFF_vectors": 8,
+  "disable_quant_qdq_passed_vectors": 8,
+  "disable_quant_qdq_exact_OFF_vectors": 8,
+  "new_training_updates": 0,
+  "new_image_reads": 0,
+  "all_training_seeds_verified": false,
+  "FPGA_execution_verified": false,
+  "elapsed_s": 0.8103881273418665,
+  "whole_goal_complete": false
+}

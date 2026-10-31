@@ -1,0 +1,11 @@
+Unrecognized option 'preset'.
+Error splitting the argument list: Option not found
+srun: error: cu16: task 0: Exited with exit code 1
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/phase2/tools/package_phase2.py", line 29, in <module>
+    subprocess.run(command,check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/share/home/renly/miniconda3/envs/sd/bin/ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', '/share/home/renly/projects/idcoo_research_20261026/phase2/results/external_counting/generic/Toros/annotated.mp4', '-vf', 'scale=960:-2', '-an', '-c:v', 'libx264', '-threads', '2', '-preset', 'fast', '-crf', '24', '-pix_fmt', 'yuv420p', '-movflags', '+faststart', '-n', '/share/home/renly/projects/idcoo_research_20261026/phase2/results/delivery/media/reverse_generic.mp4']' returned non-zero exit status 1.

@@ -1,0 +1,13 @@
+JobID                             JobName      State ExitCode    Elapsed 
+------------ ---------------------------- ---------- -------- ---------- 
+129831             idcoo-composition-data  COMPLETED      0:0   00:00:14 
+{"status": "DATA_PREPARED", "arms": [{"yaml": "/share/home/renly/projects/idcoo_research_20261026/composition_control/data/mixed/data.yaml", "yaml_sha256": "b0befa69ea869b1b79c6d589c923886de10fd474f19c73a4efdd0620ab66ed04", "slot_manifest_sha256": "f7b4bab8ce6721966a61bb4f77282e5a5e4a473b3a5466e6d8c9fe296d7c2fea", "train_slots": 5913, "val_slots": 370, "source_file_names": 5913, "repetition_count_distribution": {"1": 5913}, "train_synthetic_slots": 3317, "train_annotation_instances": 10992}, {"yaml": "/share/home/renly/projects/idcoo_research_20261026/composition_control/data/real_repeated/data.yaml", "yaml_sha256": "c27ff38d2c8896d31bb0f171056758c63e1801751f76ec08929ce0a91ae4d283", "slot_manifest_sha256": "0212a83a9b944723d2b67d5ceadb77592e5fe399bf4705f79cb740a34ba59a4e", "train_slots": 5913, "val_slots": 370, "source_file_names": 2596, "repetition_count_distribution": {"3": 721, "2": 1875}, "train_synthetic_slots": 0, "train_annotation_instances": 11230}]}
+JobID                             JobName      State ExitCode    Elapsed 
+------------ ---------------------------- ---------- -------- ---------- 
+129832        idcoo-composition-preflight     FAILED      1:0   00:00:08 
+[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/composition_control/data/mixed/labels/val... 370 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 370/370 2.1Kit/s 0.2s
+[34m[1mval: [0mNew cache created: /share/home/renly/projects/idcoo_research_20261026/composition_control/data/mixed/labels/val.cache
+    assert validation.im_files==[r['alias'] for r in val_slots]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: gpu03: task 0: Exited with exit code 1

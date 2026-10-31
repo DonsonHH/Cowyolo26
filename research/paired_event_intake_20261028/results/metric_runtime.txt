@@ -1,0 +1,17 @@
+Wed Oct 28 10:16:21 UTC 2026
+renly
+mu01
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|2|alloc|cu[01-02]|(null)
+cu*|up|infinite|18|idle|cu[03-20]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|1|mix|gpu02|gpu:V100S:4
+4gpu|up|infinite|1|idle|gpu03|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+          130248_0|     4gpu|     renly-m12b-improver| RUNNING|     13:20|gpu02
+          130248_1|     4gpu|     renly-m12b-improver| RUNNING|     13:20|gpu02
+          130248_2|     4gpu|     renly-m12b-improver| RUNNING|     13:20|gpu02
+    130251_[0-2%3]|       cu|         m12b-full-audit| PENDING|      0:00|(Dependency)
+            130252|       cu|             m12b-report| PENDING|      0:00|(Dependency)
+            130253|       cu|            m12b-package| PENDING|      0:00|(Dependency)
+{"scipy": "1.16.1", "numpy": "2.2.6", "inspection_only": true}

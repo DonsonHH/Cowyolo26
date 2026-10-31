@@ -1,0 +1,84 @@
+{
+  "status": "ALL82_FILES_SIX_MODELS_AND192_FORWARD_METRICS_LOCALLY_VERIFIED",
+  "files": 82,
+  "archive_sha256": "6eb73f945710e67b1cf0421a6f1dd35d497e49d6848fb37f9ce94ab64faf951e",
+  "bytes": 57733931,
+  "models": [
+    {
+      "seed": 26,
+      "phase": "initial",
+      "maximum_errors": {
+        "GPU": 4.470348358154297e-08,
+        "OFF": 1.1920928955078125e-07,
+        "ALL_disable_quant_qdq": 1.1920928955078125e-07,
+        "ALL_default_diagnostic": 1.1920928955078125e-07
+      },
+      "packed_bytes": 1233355
+    },
+    {
+      "seed": 26,
+      "phase": "post2updates",
+      "maximum_errors": {
+        "GPU": 2.9802322387695312e-08,
+        "OFF": 7.450580596923828e-08,
+        "ALL_disable_quant_qdq": 7.450580596923828e-08,
+        "ALL_default_diagnostic": 7.450580596923828e-08
+      },
+      "packed_bytes": 1233355
+    },
+    {
+      "seed": 27,
+      "phase": "initial",
+      "maximum_errors": {
+        "GPU": 4.470348358154297e-08,
+        "OFF": 1.043081283569336e-07,
+        "ALL_disable_quant_qdq": 1.043081283569336e-07,
+        "ALL_default_diagnostic": 1.043081283569336e-07
+      },
+      "packed_bytes": 1233226
+    },
+    {
+      "seed": 27,
+      "phase": "post2updates",
+      "maximum_errors": {
+        "GPU": 5.960464477539063e-08,
+        "OFF": 7.450580596923828e-08,
+        "ALL_disable_quant_qdq": 7.450580596923828e-08,
+        "ALL_default_diagnostic": 7.450580596923828e-08
+      },
+      "packed_bytes": 1233226
+    },
+    {
+      "seed": 28,
+      "phase": "initial",
+      "maximum_errors": {
+        "GPU": 5.960464477539063e-08,
+        "OFF": 1.4901161193847656e-07,
+        "ALL_disable_quant_qdq": 1.4901161193847656e-07,
+        "ALL_default_diagnostic": 1.4901161193847656e-07
+      },
+      "packed_bytes": 1233306
+    },
+    {
+      "seed": 28,
+      "phase": "post2updates",
+      "maximum_errors": {
+        "GPU": 4.470348358154297e-08,
+        "OFF": 5.960464477539063e-08,
+        "ALL_disable_quant_qdq": 5.960464477539063e-08,
+        "ALL_default_diagnostic": 5.960464477539063e-08
+      },
+      "packed_bytes": 1233306
+    }
+  ],
+  "local_forward_metric_conditions": 192,
+  "packing_checks": 48,
+  "independent_integer_layer_cases": 2496,
+  "independent_accumulator_elements": 67951488,
+  "actual_discarded_smoke_updates": 6,
+  "formal_QAT_updates": 0,
+  "source_reference_feature_difference_retained": 0.02865108847618103,
+  "new_local_model_forward": false,
+  "identity_accuracy_or_FPGA_verified": false,
+  "whole_goal_complete": false
+}

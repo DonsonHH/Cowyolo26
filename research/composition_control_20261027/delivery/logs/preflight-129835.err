@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/preflight.py", line 67, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/preflight.py", line 32, in main
+    assert sum(len(r['cls']) for r in dataset.labels)==prepared['arms'][arm]['train_annotation_instances']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: gpu03: task 0: Exited with exit code 1

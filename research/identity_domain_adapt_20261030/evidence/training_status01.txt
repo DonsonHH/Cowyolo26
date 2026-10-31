@@ -1,0 +1,14 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+    130777_[2-5%2]|     4gpu|      cow-id-domain-pair| PENDING|      0:00|     30:00|     1|(JobArrayTaskLimit)
+          130777_1|     4gpu|      cow-id-domain-pair| RUNNING|      0:58|     30:00|     1|gpu02
+          130777_0|     4gpu|      cow-id-domain-pair| RUNNING|      0:58|     30:00|     1|gpu02
+JobID|JobName|State|ExitCode|Elapsed|AllocCPUS|MaxRSS
+130777_0|cow-id-domain-pair|RUNNING|0:0|00:00:58|4|
+130777_0.batch|batch|RUNNING|0:0|00:00:58|4|
+130777_0.0|python|RUNNING|0:0|00:00:58|4|
+130777_1|cow-id-domain-pair|RUNNING|0:0|00:00:58|4|
+130777_1.batch|batch|RUNNING|0:0|00:00:58|4|
+130777_1.0|python|RUNNING|0:0|00:00:58|4|
+130777_[2-5%2]|cow-id-domain-pair|PENDING|0:0|00:00:00|4|
+{"index": 0, "stdout_tail": "{\"condition\": \"M_continue_seed26\", \"updates\": 20, \"loss\": 1.2026399374008179, \"image_forwards\": 640}\n{\"condition\": \"M_continue_seed26\", \"updates\": 40, \"loss\": 1.060113787651062, \"image_forwards\": 1280}\n{\"condition\": \"M_continue_seed26\", \"updates\": 60, \"loss\": 0.3972010612487793, \"image_forwards\": 1920}\n{\"condition\": \"M_continue_seed26\", \"updates\": 80, \"loss\": 0.7514744997024536, \"image_forwards\": 2560}\n{\"condition\": \"M_continue_seed26\", \"updates\": 100, \"loss\": 0.40518325567245483, \"image_forwards\": 3200}\n", "stderr_tail": ""}
+{"index": 1, "stdout_tail": "{\"condition\": \"C_domain_seed26\", \"updates\": 20, \"loss\": 3.091792106628418, \"image_forwards\": 640}\n{\"condition\": \"C_domain_seed26\", \"updates\": 40, \"loss\": 2.0007596015930176, \"image_forwards\": 1280}\n{\"condition\": \"C_domain_seed26\", \"updates\": 60, \"loss\": 1.349819302558899, \"image_forwards\": 1920}\n{\"condition\": \"C_domain_seed26\", \"updates\": 80, \"loss\": 1.084571361541748, \"image_forwards\": 2560}\n{\"condition\": \"C_domain_seed26\", \"updates\": 100, \"loss\": 0.7072822451591492, \"image_forwards\": 3200}\n", "stderr_tail": ""}

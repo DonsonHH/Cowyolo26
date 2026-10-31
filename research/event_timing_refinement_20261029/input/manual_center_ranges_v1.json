@@ -1,0 +1,32 @@
+{
+  "status": "ASSISTANT_WORKING_TORSO_CENTRE_RANGES_FROM_NATIVE_RULER_IMAGES",
+  "annotation_authority": "assistant_provisional_native_visual_review",
+  "source_sha256": "8210a5bf206dd7f2356bc3d4653b439ab6de12ccfdc8209fe301ac7f02807058",
+  "original_draft_sha256": "35a6e0d5b4454cc2a6e6057c750f84cd6cf5d02f5d3fc73c4c1683c80b149bb7",
+  "coordinate_units": "Native full-image y pixels, same origin as the1050x1440 source ROI crop; not resized display pixels",
+  "gate_y": 864,
+  "interpretation": "Conservative working intervals read visually from the torso outline and pixel ruler. These are neither calibrated measurement-error bounds nor statistical confidence intervals; another reviewer may widen or move them.",
+  "selection": "Consecutive5-source-frame samples straddling the apparent destination boundary, within all172 inspected original-pixel ruler panels. Uncertain centres are retained rather than replaced by later model boxes.",
+  "interval_format": "[source_frame0, estimated_centre_y_lower, estimated_centre_y_upper]",
+  "rows": [
+    {"reference_ID": "R01", "samples": [[2650,740,840],[2655,810,920],[2660,850,1000],[2665,1010,1150],[2670,1100,1330],[2675,1190,1440]], "note": "Leading cow in a dense group; adjacent animals and partial torso near exit increase centre uncertainty."},
+    {"reference_ID": "R02", "samples": [[2675,740,820],[2680,810,890],[2685,880,980],[2690,970,1080],[2695,1060,1190]], "note": "Left patched cow in first group; use its torso rather than the following white speckled cow."},
+    {"reference_ID": "R03", "samples": [[2700,740,830],[2705,810,920],[2710,860,1000],[2715,980,1110],[2720,1090,1220],[2725,1190,1350]], "note": "Right dark cow with transverse white marks; first previous B-witness was close to the gate and remains ambiguous here."},
+    {"reference_ID": "R04", "samples": [[2705,760,840],[2710,850,950],[2715,980,1090],[2720,1090,1220],[2725,1210,1390]], "note": "White speckled rear-left cow; neck/head outline separated from torso. Keep centre overlap with gate uncertain."},
+    {"reference_ID": "R05", "samples": [[2910,690,780],[2915,780,870],[2920,850,970],[2925,950,1060],[2930,1030,1160],[2935,1110,1260]], "note": "Isolated patched cow; broad shoulder/neck transition makes two near-gate estimates uncertain."},
+    {"reference_ID": "R06", "samples": [[3365,710,800],[3370,810,890],[3375,890,1000],[3380,950,1080],[3385,1030,1160]], "note": "Mostly dark cow; broad hump and narrower neck are distinguished by outline rather than white rump patch alone."},
+    {"reference_ID": "R07", "samples": [[3590,730,820],[3595,800,890],[3600,860,980],[3605,930,1060],[3610,1000,1140],[3615,1090,1240]], "note": "Tiny dorsal white spot is a visual association aid, not the torso-centre definition; following cow is excluded."},
+    {"reference_ID": "R08", "samples": [[3680,720,820],[3685,810,900],[3690,890,1000],[3695,970,1100],[3700,1040,1190]], "note": "Following dark cow; torso outline rather than the small dorsal white marks determines the working interval."},
+    {"reference_ID": "R09", "samples": [[3830,720,820],[3835,800,900],[3840,850,970],[3845,930,1060],[3850,1010,1150],[3855,1090,1220]], "note": "Right member of parallel pair, dirty pale rump; its body centre is separate from the left animal."},
+    {"reference_ID": "R10", "samples": [[3805,690,790],[3810,780,880],[3815,840,940],[3820,920,1040],[3825,1010,1140],[3830,1100,1250]], "note": "Left member of parallel pair, white neck band; centre is estimated from dorsal torso, not the neck band."},
+    {"reference_ID": "R11", "samples": [[3990,710,810],[3995,780,880],[4000,840,950],[4005,910,1020],[4010,970,1090],[4015,1030,1160]], "note": "Final group cow, large white back; full torso/head boundary remains interpretive."},
+    {"reference_ID": "R12", "samples": [[5300,710,810],[5305,790,880],[5310,840,940],[5315,900,1000],[5320,950,1050],[5325,990,1090]], "note": "Later white cow; distinguish narrow neck from the broad torso. The first two near-gate intervals remain unresolved."}
+  ],
+  "all_native_ruler_pages_visually_reviewed": 23,
+  "all_native_ruler_panels_visually_reviewed": 172,
+  "source_full_video_frame_by_frame_review": false,
+  "human_or_publisher_validation_received": false,
+  "new_model_predictions": 0,
+  "eligible_for_final_scoring": false,
+  "whole_goal_complete": false
+}

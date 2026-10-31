@@ -1,0 +1,151 @@
+{
+  "name": "full_conv_qdq_seed28",
+  "seed": 28,
+  "method": "full_conv_qdq",
+  "model_path": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/C_letterbox_trained_seed28/embedding_conv_qdq.onnx",
+  "model_sha256": "3de0b2737b8298daf03f95184edc02dc4e3700ad3c82cee078bb7dcc8c0406b0",
+  "threshold": 0.9049211771370603,
+  "metrics": {
+    "known_queries": 30,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 8,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 22,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 18,
+    "known_closed_top1_accuracy": 0.6,
+    "known_correct_accepted_rate": 0.26666666666666666,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 7,
+    "unknown_false_acceptance_rate": 0.23333333333333334,
+    "all_accepted_wrong_fraction": 0.4666666666666667,
+    "per_identity": [
+      {
+        "identity": "025",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.2,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "037",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.4,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "052",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.2
+      },
+      {
+        "identity": "058",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "065",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.4,
+        "correct_accepted_rate": 0.4,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "066",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "068",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.8,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "069",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.6
+      },
+      {
+        "identity": "070",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 0.6,
+        "correct_accepted_rate": 0.4,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "074",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "082",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "088",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.6
+      }
+    ],
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  },
+  "identity_cluster_intervals": {
+    "closed_top1_accuracy": {
+      "macro_mean": 0.6,
+      "identity_clusters": 6,
+      "percentile_95_interval": [
+        0.36666666666666664,
+        0.8333333333333334
+      ],
+      "bootstrap_draws": 2000
+    },
+    "correct_accepted_rate": {
+      "macro_mean": 0.26666666666666666,
+      "identity_clusters": 6,
+      "percentile_95_interval": [
+        0.06666666666666667,
+        0.5333333333333333
+      ],
+      "bootstrap_draws": 2000
+    },
+    "false_accept_rate": {
+      "macro_mean": 0.2333333333333333,
+      "identity_clusters": 6,
+      "percentile_95_interval": [
+        0.03333333333333333,
+        0.43333333333333335
+      ],
+      "bootstrap_draws": 2000
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED_DIAGNOSTIC_EVIDENCE_WITH_PORTABILITY_FAILURE_RETAINED",
+  "documents_reviewed": 4,
+  "local_file_links_checked": 21,
+  "train_Conv_cases": 156,
+  "validation_conditions": 12,
+  "future_identity_conditions": 9,
+  "untouched_until_freeze_registered_IDs": 6,
+  "untouched_until_freeze_unknown_IDs": 6,
+  "new_images": 90,
+  "verified_manifest_files": 260,
+  "local_default_runtime_tolerance_failures_retained": 1,
+  "exact_input_control": "Windows disabled optimisation matches Linux on the one observed failure",
+  "original_full_PTQ_drift_fixed": false,
+  "mixed_precision_selected_for_deployment": false,
+  "whole_goal_complete": false,
+  "pending_external_inputs": [
+    "independent counting-review JSON",
+    "PYNQ SSH/image/tool versions",
+    "raw-video identity mapping"
+  ],
+  "remaining_work": [
+    "QAT/activation-precision improvement using training and validation",
+    "expanded unknown calibration and fresh validation design",
+    "actual Arm/PL mapping and joint board measurements",
+    "final paper evidence/novelty consolidation"
+  ]
+}

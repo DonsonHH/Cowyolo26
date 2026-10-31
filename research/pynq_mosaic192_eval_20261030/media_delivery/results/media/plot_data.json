@@ -1,0 +1,156 @@
+{
+  "bars": [
+    {
+      "panel": 0,
+      "value": 10.0,
+      "bar_x": -0.275,
+      "width": 0.55,
+      "label": "FP32"
+    },
+    {
+      "panel": 0,
+      "value": 10.0,
+      "bar_x": 0.725,
+      "width": 0.55,
+      "label": "QDQ"
+    },
+    {
+      "panel": 0,
+      "value": 10.0,
+      "bar_x": 1.725,
+      "width": 0.55,
+      "label": "O8 actual"
+    },
+    {
+      "panel": 1,
+      "value": 3.0,
+      "bar_x": -0.335,
+      "width": 0.21,
+      "label": "FP325Hz"
+    },
+    {
+      "panel": 1,
+      "value": 4.0,
+      "bar_x": 0.665,
+      "width": 0.21,
+      "label": "FP3230Hz"
+    },
+    {
+      "panel": 1,
+      "value": 3.0,
+      "bar_x": -0.105,
+      "width": 0.21,
+      "label": "QDQ5Hz"
+    },
+    {
+      "panel": 1,
+      "value": 4.0,
+      "bar_x": 0.895,
+      "width": 0.21,
+      "label": "QDQ30Hz"
+    },
+    {
+      "panel": 1,
+      "value": 3.0,
+      "bar_x": 0.125,
+      "width": 0.21,
+      "label": "O8 actual5Hz"
+    },
+    {
+      "panel": 1,
+      "value": 4.0,
+      "bar_x": 1.125,
+      "width": 0.21,
+      "label": "O8 actual30Hz"
+    },
+    {
+      "panel": 2,
+      "value": 179.79121297626224,
+      "bar_x": -0.275,
+      "width": 0.55,
+      "label": "Mean"
+    },
+    {
+      "panel": 2,
+      "value": 220.96877844999997,
+      "bar_x": 0.725,
+      "width": 0.55,
+      "label": "P95"
+    },
+    {
+      "panel": 2,
+      "value": 423.932602,
+      "bar_x": 1.725,
+      "width": 0.55,
+      "label": "Maximum"
+    },
+    {
+      "panel": 3,
+      "horizontal": true,
+      "value": 9.874133551620197,
+      "bar_y": -0.4,
+      "height": 0.8,
+      "label": "PNG_read_ms"
+    },
+    {
+      "panel": 3,
+      "horizontal": true,
+      "value": 4.855963707611153,
+      "bar_y": 0.6,
+      "height": 0.8,
+      "label": "preprocess_ms"
+    },
+    {
+      "panel": 3,
+      "horizontal": true,
+      "value": 12.941717722305953,
+      "bar_y": 1.6,
+      "height": 0.8,
+      "label": "input_hash_check_ms"
+    },
+    {
+      "panel": 3,
+      "horizontal": true,
+      "value": 144.24460934438582,
+      "bar_y": 2.6,
+      "height": 0.8,
+      "label": "tensor_to_raw_ms"
+    },
+    {
+      "panel": 3,
+      "horizontal": true,
+      "value": 2.2226560109269027,
+      "bar_y": 3.6,
+      "height": 0.8,
+      "label": "decode_restore_ms"
+    },
+    {
+      "panel": 3,
+      "horizontal": true,
+      "value": 5.242381689902035,
+      "bar_y": 4.6,
+      "height": 0.8,
+      "label": "tracker_counter_ms"
+    },
+    {
+      "panel": 3,
+      "horizontal": true,
+      "value": 0.4097509495101733,
+      "bar_y": 5.6,
+      "height": 0.8,
+      "label": "raw_memorymap_and_row_save_ms"
+    }
+  ],
+  "panels": 4,
+  "source_down_counts": [
+    10,
+    10,
+    10
+  ],
+  "timing_ymax": 500.0,
+  "timing_total_ms": {
+    "mean": 179.79121297626224,
+    "p95": 220.96877844999997,
+    "max": 423.932602
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status": "NEW_DOMAIN_ENCODER_FP32_NCNN630_IMAGE_PARITY_AND1260_DEVELOPMENT_DECISIONS_PASS",
+  "created_UTC": "2026-10-30T09:46:15.947322+00:00",
+  "Slurm_job_id": "130863",
+  "host": "cu03",
+  "actual_trace_Python_forward_calls": 1,
+  "measured_Torch_image_forwards": 630,
+  "measured_NCNN_image_forwards": 630,
+  "converter_internal_TorchScript_probe_count": "not_instrumented_unknown_additional",
+  "new_training_updates": 0,
+  "new_board_forwards": 0,
+  "whole_goal_complete": false,
+  "maximum_normalized_NCNN_vs_Torch_error": 2.4512410163879395e-06,
+  "maximum_Torch_vs_prior_error": 4.172325134277344e-07,
+  "development_decisions_checked": 1260,
+  "development_decision_differences": 0,
+  "calibration_endpoint_decision_differences": 1,
+  "NCNN_operators": [
+    "BinaryOp",
+    "Convolution",
+    "ConvolutionDepthWise",
+    "HardSigmoid",
+    "HardSwish",
+    "InnerProduct",
+    "Input",
+    "Pooling",
+    "Split"
+  ],
+  "NCNN_param_sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7",
+  "NCNN_bin_sha256": "2a587d0fe293d244eb5632feb0e3665cf6091243198612b59363a6a7bb173252"
+}

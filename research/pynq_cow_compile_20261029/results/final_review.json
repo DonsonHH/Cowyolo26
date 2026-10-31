@@ -1,0 +1,99 @@
+{
+  "status": "COW1_CLASS192_O8_NATIVE_COMPILE_AND8_REAL_BOARD_VECTORS_REVIEWED",
+  "created_host_UTC": "2026-10-29T13:05:14.721869+00:00",
+  "implementation_qualification_phase_complete": true,
+  "whole_goal_complete": false,
+  "user_confirmed_O8_engine": true,
+  "model_checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+  "class_count": 1,
+  "input_size": 192,
+  "train_only_PTQ_calibration_images": 128,
+  "static_graph_nodes": 383,
+  "static_tensors": 2132,
+  "graph_bytes": 14605169,
+  "PL_integer_convolutions": 94,
+  "ARM_integer_depthwise": 8,
+  "resident_pairs": 25,
+  "exact_structure_rewrite_count": 3,
+  "original_and_normalized_ONNX_training_vectors_exact": 8,
+  "CPU_reference_and_native_training_vectors_exact": 8,
+  "actual_PYNQ_FPGA_ARM_training_vectors_exact": 8,
+  "actual_board_model_forwards_with2warmups": 10,
+  "strict_raw_byte_arrays_exact": 8,
+  "class_LUT_scalar_code_checks": 768,
+  "maximum_scalar_sigmoid_delta": 5.4198537657867973e-08,
+  "board_maximum_box_error": 0,
+  "board_maximum_score_error": 0,
+  "training_vector_tensor_to_raw_mean_ms": 140.3010835,
+  "new_firmware_programmed": false,
+  "original_O8_runtime_and_firmware_hashes_preserved": true,
+  "board_process_terminal_and_absent": true,
+  "old_seed26_qualifier_not_new15_models": true,
+  "new15_lowres_models_deployed": false,
+  "real_source_video_count_accuracy_admitted": false,
+  "camera_active": false,
+  "background_identity_active": false,
+  "foreground_background_joint5FPS_proven": false,
+  "new_training_updates_in_this_compile_phase": 0,
+  "new_independent_test": false,
+  "original_human12_milestone_preserved": true,
+  "retained_artifact_hashes": {
+    "human_count_confirmation_20261028/results/frozen_development_candidate.json": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+    "human_count_confirmation_20261028/evidence/user_confirmation.json": "fe8a895cd6ac71815ff8e2f6ad8d932a6453c41971b6b7a18ea9c2f743dd0f9f",
+    "cows2021_adaptation_20261027/delivery/results/training/seed26/weights/last.pt": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+    "confirmation_handoff_20261028/delivery/results/replay_v2/seed26/handoff_events.json": "6975f4d6ceafc2bbef1a00081bf0499ca1bbbaa47ecdb420b943a49203fd4ad0"
+  },
+  "evidence_hashes": {
+    "protocol/compile_v1.json": "eb6a23b91a6d83cf20aa776320925d4c76fd857e17b2066d5fb871bc0a310a22",
+    "protocol/compile_resume_v2.json": "76ca52ce6c88483ad2660789ec345ccaf604841b1cbe2d920b86f57a4386cceb",
+    "protocol/board_vectors_v1.json": "119a011de7db27d83c9d80365917ed45c1912d1c8e543bef651ac4f3ede439a2",
+    "evidence/archive_source_inspection.json": "806e1d5fa8d362f20a910bed068d36ea7f781d9e43f508754b1c129e8f5d33e6",
+    "evidence/compiler_modifications_v1.json": "88b50783ca46126a68db4839af446ce41f6439401e3a78a48094447cbf9f1190",
+    "results/independent_implementation_verification.json": "247887a56fd3ca23f7c6e0fd29f50b6b66f3ac10ecabe8a277404c64543f046d",
+    "results/strict_raw_bytes_verification.json": "7e1e173c9eef8549296d637b4bedb6cee8abff5a912db565bf5804fb3df4ee6e",
+    "results/qualification_transfer_verification.json": "259fe562e3fe16ecd32002f50d904eff9fd2745ef2289fa2695518e49bb07057",
+    "evidence/compile_status01.txt": "5f00750a1a789feed473afae331192c00130d03c273601f6acc08417412aa1dd",
+    "evidence/resume_v2_status01.txt": "827eb9d2dfe9cc14de9b1897dd6eb955e90d234911f1c3087a44b7726beea31d",
+    "evidence/board_vectors_launch.json": "78854f761f705bb6e03d8277a867477609a71654d30a9c8b044ab53a0faf16a2",
+    "evidence/final_O8_runtime_read.json": "d7498bbd12e6ff979c1ee12e96fa86f354af8189fb75c82b4fd31b6053f2e1f3",
+    "delivery/results/qualification_v2/summary.json": "993964e87e5b5390759feb420c5a3eb6254c5205c47d919dbe8e44200c7e8e97",
+    "delivery/results/qualification_v2/normalization_parity.json": "f6aac75fd0feec989007a42de728f98d5f01a16ca4d40fb1b2f11b941823317d",
+    "delivery/results/qualification_v2/reuse_gate.json": "e8e577a244e802574d9ffc45bf17cb73b50eaec7ae3b34d265335a917885308b",
+    "delivery/results/qualification_v2/structural_normalization.json": "a51b51f04b1e1cd5b9deaac305595a328a08b54b788574b04020d939210ce767",
+    "delivery/results/qualification_v2/compiled/program/program.json": "27728960a9134d87ac1f765de26a69ec5993cd5b6b25bb556a9c37b59c5233dd",
+    "delivery/results/qualification_v2/compiled/program/graph.bin": "5ea3f33d36f8d7ace36dfece8eadec4fe19939f1c5ba90c52dc23fca67f08591",
+    "delivery/results/qualification_v2/resident_plan_all/resident_plan.bin": "72e5065496e7afd3c3f0597f33ad6faef0721a4ad26c4ae27c702de861d4a1d3",
+    "board_delivery/results/record.json": "6d8f4884c2010eea3fa107b6ccd101082c1e8e77d320a9bf3558d60858d9b3f9",
+    "board_delivery/results/terminal.json": "769e603227fb1d552a204ebbbe0c5fbaf3a47405db09c6054813d394dde6b3fb",
+    "board_delivery/final_state.json": "e28b8d5d29ab71eb337e7910d180bb54c7ae2a7356a0c181eb6f93c5869bf800"
+  },
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_cow_compile_20261029\\\u8ba1\u5212\u4e0e\u9a8c\u6536.md",
+      "sha256": "f1a0cba425c7fcc131d6457efda37710cd8373990bc30f6870aad0d347e3d173"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_cow_compile_20261029\\\u5976\u725b\u5355\u7c7b\u6743\u91cdO8\u5b9e\u673a\u51c6\u5165.md",
+      "sha256": "3f4f5ccc14962e69a732b38463f53f4a298c44cd72d1e05ebf5503e81fd56b80"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_cow_compile_20261029\\Review\u4e0e\u5f53\u524d\u72b6\u6001.md",
+      "sha256": "e52233f4c73848023a06ce21555b5e536fae4aabc10576da25c6b532af64098a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\\u7814\u7a76\u603b\u89c8_\u4ece\u60f3\u6cd5\u5230\u8bba\u6587.md",
+      "sha256": "52f0b1a424ea30ef43d5e1c9e00156ff40c4c7951f0bb21e07d2cd0f46897f96"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\\u7814\u7a76\u8fdb\u5ea6.md",
+      "sha256": "d3a3081af17768f2ba73601bb4984de003ca3db87dfc3a2698b8289d325873de"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\phase3_diagnosis_20261026\\\u65b9\u6848\u4e0e\u6267\u884c\u72b6\u6001.md",
+      "sha256": "73fb7cd1741187dc1f38605ed163902a7769ac8c524c39177aa725610327d5c9"
+    }
+  ],
+  "local_links_checked": 196,
+  "manual_numeric_scope_and_implementation_review_completed": true,
+  "new_figures_or_videos_generated": 0
+}

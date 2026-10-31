@@ -1,0 +1,17 @@
+renly
+mu01
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|1|mix|cu03|(null)
+cu*|up|infinite|2|alloc|cu[01-02]|(null)
+cu*|up|infinite|17|idle|cu[04-20]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+            130722|       cu|       rsi-b4b1a-package| PENDING|      0:00|     15:00|     1|(Dependency)
+            130676|       cu|         rsi-b4b1a-audit| RUNNING|     23:34|   1:00:00|     1|cu03
+PartitionName=cu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=YES QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=cu[01-20] PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=1120 TotalNodes=20 SelectTypeParameters=NONE JobDefaults=(null) DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=1120,mem=3820000M,node=20,billing=1120
+PartitionName=8gpu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=NO QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=gpu01 PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=32 TotalNodes=1 SelectTypeParameters=NONE JobDefaults=DefCpuPerGPU=4 DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=32,mem=385000M,node=1,billing=32,gres/gpu=8
+PartitionName=4gpu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=NO QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=gpu[02-03] PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=64 TotalNodes=2 SelectTypeParameters=NONE JobDefaults=DefCpuPerGPU=8 DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=64,mem=770000M,node=2,billing=64,gres/gpu=8
+Filesystem     Type  Size  Used Avail Use% Mounted on
+ibio01:/public nfs    44T   42T  2.1T  96% /share
+{"models": [{"relative_file": "models/yolo26n.pt", "bytes": 5544453, "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef"}, {"relative_file": "detector_factorial_20261029/results/training/S192_rot90_seed26/weights/last.pt", "bytes": 5330757, "sha256": "7b01cead4841f17d561f2a6bd768f9b229f1b3bd142818d8302135d3c69ffd45"}, {"relative_file": "mosaic_pair_20261030/results/training/mosaic050_seed26/weights/last.pt", "bytes": 5330757, "sha256": "628db893fa8be090df206b32c35d8b81839eab2f497925ccbd0c6d855ad9d3eb"}], "pycocotools_available": false}

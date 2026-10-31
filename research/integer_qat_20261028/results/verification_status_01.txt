@@ -1,0 +1,196 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129998|idcoo-int-QAT-paired|COMPLETED|0:0|00:05:34|
+129998.batch|batch|COMPLETED|0:0|00:05:34|13796K
+129998.0|python|COMPLETED|0:0|00:05:34|2410432K
+129999|idcoo-int-QAT-check|COMPLETED|0:0|00:00:05|
+129999.batch|batch|COMPLETED|0:0|00:00:05|1176K
+129999.0|python|COMPLETED|0:0|00:00:05|804K
+{
+  "status": "PAIRED_UPDATES_INITIALIZATION_12_RETRIEVAL_CONDITIONS_AND_EXPORTS_INDEPENDENTLY_VERIFIED",
+  "job_id": "129999",
+  "protocol_sha256": "b2b750e89dfc20b1a545644a12a60f202310415753c4e7b7ef71e8ed0c70a052",
+  "source_summary_sha256": "31aff5af101e40f76b5952b26c5b8d266da790d34a8fd9cbf251d55e09e037e9",
+  "paired_controls": [
+    {
+      "seed": 26,
+      "paired_steps": 120,
+      "augmented_input_hashes_identical": true,
+      "master_weight_initialization_equal": true,
+      "admitted_initial_state_exact": true,
+      "QAT_qparams_unchanged": true
+    },
+    {
+      "seed": 27,
+      "paired_steps": 120,
+      "augmented_input_hashes_identical": true,
+      "master_weight_initialization_equal": true,
+      "admitted_initial_state_exact": true,
+      "QAT_qparams_unchanged": true
+    },
+    {
+      "seed": 28,
+      "paired_steps": 120,
+      "augmented_input_hashes_identical": true,
+      "master_weight_initialization_equal": true,
+      "admitted_initial_state_exact": true,
+      "QAT_qparams_unchanged": true
+    }
+  ],
+  "conditions": [
+    {
+      "seed": 26,
+      "condition": "source_folded_fp32",
+      "threshold": 0.8445392605552502,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 18,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 7,
+      "known_closed_top1_correct": 25,
+      "unknown_false_accepts": 0
+    },
+    {
+      "seed": 26,
+      "condition": "initial_integer",
+      "threshold": 0.9183051897063301,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 2,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 23,
+      "known_closed_top1_correct": 18,
+      "unknown_false_accepts": 1
+    },
+    {
+      "seed": 26,
+      "condition": "paired_float_continuation",
+      "threshold": 0.856968366705154,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 18,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 7,
+      "known_closed_top1_correct": 25,
+      "unknown_false_accepts": 1
+    },
+    {
+      "seed": 26,
+      "condition": "integer_forward_qat",
+      "threshold": 0.9538350432274523,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 10,
+      "known_wrong_accepted_W": 1,
+      "known_rejected_U": 14,
+      "known_closed_top1_correct": 24,
+      "unknown_false_accepts": 1
+    },
+    {
+      "seed": 27,
+      "condition": "source_folded_fp32",
+      "threshold": 0.8642474938085962,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 14,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 11,
+      "known_closed_top1_correct": 25,
+      "unknown_false_accepts": 1
+    },
+    {
+      "seed": 27,
+      "condition": "initial_integer",
+      "threshold": 0.9427465088566868,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 1,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 24,
+      "known_closed_top1_correct": 18,
+      "unknown_false_accepts": 0
+    },
+    {
+      "seed": 27,
+      "condition": "paired_float_continuation",
+      "threshold": 0.8783358336871954,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 16,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 9,
+      "known_closed_top1_correct": 25,
+      "unknown_false_accepts": 1
+    },
+    {
+      "seed": 27,
+      "condition": "integer_forward_qat",
+      "threshold": 0.949526677532107,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 9,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 16,
+      "known_closed_top1_correct": 25,
+      "unknown_false_accepts": 1
+    },
+    {
+      "seed": 28,
+      "condition": "source_folded_fp32",
+      "threshold": 0.830615758749053,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 15,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 10,
+      "known_closed_top1_correct": 25,
+      "unknown_false_accepts": 1
+    },
+    {
+      "seed": 28,
+      "condition": "initial_integer",
+      "threshold": 0.9339130564752891,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 3,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 22,
+      "known_closed_top1_correct": 17,
+      "unknown_false_accepts": 0
+    },
+    {
+      "seed": 28,
+      "condition": "paired_float_continuation",
+      "threshold": 0.8294581700918319,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 15,
+      "known_wrong_accepted_W": 0,
+      "known_rejected_U": 10,
+      "known_closed_top1_correct": 25,
+      "unknown_false_accepts": 1
+    },
+    {
+      "seed": 28,
+      "condition": "integer_forward_qat",
+      "threshold": 0.9274652482423682,
+      "known_queries": 25,
+      "unknown_queries": 30,
+      "known_correct_accepted_C": 7,
+      "known_wrong_accepted_W": 1,
+      "known_rejected_U": 17,
+      "known_closed_top1_correct": 16,
+      "unknown_false_accepts": 1
+    }
+  ],
+  "training_image_access_count": 580,
+  "validation_image_access_count": 80,
+  "forbidden_old_evaluation_or_holdout_image_reads": 0,
+  "numeric_metric_conditions": 192,
+  "actual_runtime_regression_forwards": 96,
+  "formal_QAT_updates": 360,
+  "paired_float_updates": 360,
+  "validation_calibration_and_scores_same_reused_queries": true,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

@@ -1,0 +1,63 @@
+{
+  "status": "EXACT_STATIC_SINGLE_CLASS_STRUCTURE_NORMALIZATION",
+  "source_sha256": "fc1cc5ae071080e615aad4b2346e14183bb5fa9cc9103f89cb712a39d94056df",
+  "normalized_sha256": "a24d8fa30b913f7a00489b83c7f6a6ef9ce8eafc9fc62f8bda963ff390865685",
+  "changes": [
+    {
+      "original_name": "/model.23/Tile",
+      "operation": "Tile_to_Expand",
+      "input_shape": [
+        1,
+        300,
+        1
+      ],
+      "repeats": [
+        1,
+        1,
+        1
+      ],
+      "proof": "Everyrepeatedaxiswaslength1;broadcastvalue/orderexact",
+      "output_shape": [
+        1,
+        300,
+        1
+      ]
+    },
+    {
+      "original_name": "/model.23/Gather_3",
+      "operation": "Gather_axis0_to_GatherElements_axis1",
+      "data_shape": [
+        300,
+        1
+      ],
+      "index_shape": [
+        1,
+        300
+      ],
+      "proof": "Batch1andonecolumn;reshapeisaliasandunsqueezepreservesindexorder;outputs1xKx1unchanged."
+    },
+    {
+      "original_name": "/model.23/Tile_1",
+      "operation": "Tile_to_Expand",
+      "input_shape": [
+        1,
+        300,
+        1
+      ],
+      "repeats": [
+        1,
+        1,
+        4
+      ],
+      "proof": "Everyrepeatedaxiswaslength1;broadcastvalue/orderexact",
+      "output_shape": [
+        1,
+        300,
+        4
+      ]
+    }
+  ],
+  "weight_and_quantization_initializer_bytes_modified": false,
+  "new_constants_only_shapes_and_axes": 4,
+  "runtime_parity_still_required": true
+}

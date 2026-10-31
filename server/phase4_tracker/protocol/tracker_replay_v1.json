@@ -1,0 +1,16 @@
+{
+  "scope": "Development sensitivity study on the already-used Toros diagnostic clip; no final-test claim and no production parameter selection",
+  "inputs": "Frozen raw detector boxes from phase3 capture job 129692, both original checkpoints, all 479 original frames",
+  "unchanged": "Detector weights and outputs, native 30fps timeline, original 40/60 regions, stable 3 samples, gap reset 2 seconds, event matching 2 seconds",
+  "controls": [
+    {"name":"baseline","changes":{}},
+    {"name":"match_090","changes":{"match_thresh":0.90}},
+    {"name":"match_095","changes":{"match_thresh":0.95}},
+    {"name":"buffer_090","changes":{"track_buffer":90}},
+    {"name":"without_score_fusion","changes":{"fuse_score":false}},
+    {"name":"high_threshold_020","changes":{"track_high_thresh":0.20}}
+  ],
+  "baseline_gate": "Standalone tracker replay must reproduce the complete frozen event lists exactly for both models before interpreting variants",
+  "evaluation": "Temporal event TP/FP/FN as before; append publisher-reference ID support at each event using framewise IoU>=0.5 association, without feeding reference information to tracker or counter",
+  "generalisation_gate": "Do not choose the final config from this clip; evaluate candidates on separately annotated held-out sessions and include collisions, reversals and opposing traffic"
+}

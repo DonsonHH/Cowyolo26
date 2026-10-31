@@ -1,0 +1,88 @@
+{
+  "name": "Read-only first/second association probe for existing seed28 ID117 case",
+  "created_UTC": "2026-10-28T11:06:41.909670+00:00",
+  "clock_protocol_sha256": "ae76ef9852a214ef2ada19e3f9abe1ae6053bb5470600a8c267bb6d2ded68d75",
+  "source": {
+    "name": "full640_5hz_seed28",
+    "remote_folder": "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/results/full640_confirmation/full640_5hz_seed28",
+    "seed": 28,
+    "stride": 5,
+    "stable_samples": 3,
+    "files": [
+      {
+        "name": "pretracker_boxes.csv",
+        "sha256": "18fe408f594dc8856477cd55172f65b402f6123756ab4bbcb34e1a672f910562",
+        "bytes": 637550
+      },
+      {
+        "name": "source_tracks.csv",
+        "sha256": "3051bab94dbd07b95077389aa43b58333027323287e7ad94b22d406a3be8584c",
+        "bytes": 71511
+      },
+      {
+        "name": "source_warmup_tracks.csv",
+        "sha256": "7c2820b177cf3526722719f5a18f11162c53f01880e85a36f4b796e7bb06d8a6",
+        "bytes": 182
+      },
+      {
+        "name": "source_events.json",
+        "sha256": "9a55bb4b84ca96cb1f42117a98283e1ffbf1c66609803617f4c1b061fa05a306",
+        "bytes": 1114
+      },
+      {
+        "name": "summary.json",
+        "sha256": "f14b90084574da94c3f86fbd7a38ce990c8f4d042629d328b34492cf5a58fbaf",
+        "bytes": 832
+      }
+    ],
+    "prior_predicted_down": 11,
+    "prior_predicted_up": 0
+  },
+  "weights": {
+    "seed": 28,
+    "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+    "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+  },
+  "installed_source": [
+    {
+      "file": "installed_track.py",
+      "sha256": "1bc8673215b05db0b94d1e0b8930c34f6256d796eb3f633206ab69d162f59383"
+    },
+    {
+      "file": "installed_byte_tracker.py",
+      "sha256": "00c7c1ff8b1076fc89347071519ae0b06a30bfce00dded94826620e068b1928f"
+    },
+    {
+      "file": "installed_bytetrack.yaml",
+      "sha256": "9672c78cc508b265230fdace4c1cfa2ab7eaf51983fece9942e7d0dfc67a5128"
+    }
+  ],
+  "matching_source_sha256": "a98d246497b23f7210af5b7775e02ae5a51319eddb33f6ab29d3c8bb3e951b98",
+  "target_ID": 117,
+  "probe_frames": [
+    9340,
+    9345,
+    9350,
+    9355,
+    9360,
+    9365,
+    9370,
+    9375,
+    9380,
+    9385,
+    9390
+  ],
+  "required_full_original_track_history_event_regression": true,
+  "hypotheses_ranked": [
+    "raw output unavailable or below highconfidence in B region",
+    "eligible rawboxes fail first/secondstage association",
+    "tracked box center outside ROI"
+  ],
+  "scope": "Explains saved algorithm outputs; predicted IoU candidates are not human identity correspondences",
+  "counter_parameters_changed": false,
+  "new_detector_forwards": 0,
+  "training_updates": 0,
+  "independent_source_accuracy": null,
+  "board_execution": false,
+  "whole_goal_complete": false
+}

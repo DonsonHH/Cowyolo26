@@ -1,0 +1,142 @@
+{
+  "status": "DATA_EXPOSURE_PAIR_GATES_AND_TWELVE_EVENT_REPLAYS_PASS",
+  "manifest_files": 229,
+  "arms": [
+    {
+      "train_source_files": 5913,
+      "training_slots": 5913
+    },
+    {
+      "train_source_files": 2596,
+      "training_slots": 5913
+    }
+  ],
+  "paired_controls": [
+    {
+      "seed": 26,
+      "actual_batches_each": 1850,
+      "optimizer_steps_each": 1064,
+      "step_schedule_and_initialisation_equal": true
+    },
+    {
+      "seed": 27,
+      "actual_batches_each": 1850,
+      "optimizer_steps_each": 1064,
+      "step_schedule_and_initialisation_equal": true
+    },
+    {
+      "seed": 28,
+      "actual_batches_each": 1850,
+      "optimizer_steps_each": 1064,
+      "step_schedule_and_initialisation_equal": true
+    }
+  ],
+  "event_checks": [
+    {
+      "condition": "mixed_seed26",
+      "scene": "source",
+      "events": 7,
+      "independent_event_replay": "PASS"
+    },
+    {
+      "condition": "mixed_seed26",
+      "scene": "Toros",
+      "events": 1,
+      "independent_event_replay": "PASS",
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "temporally_matched": 1,
+      "wrong_direction_matches": 0
+    },
+    {
+      "condition": "real_repeated_seed26",
+      "scene": "source",
+      "events": 1,
+      "independent_event_replay": "PASS"
+    },
+    {
+      "condition": "real_repeated_seed26",
+      "scene": "Toros",
+      "events": 0,
+      "independent_event_replay": "PASS",
+      "TP": 0,
+      "FP": 0,
+      "FN": 6,
+      "temporally_matched": 0,
+      "wrong_direction_matches": 0
+    },
+    {
+      "condition": "mixed_seed27",
+      "scene": "source",
+      "events": 7,
+      "independent_event_replay": "PASS"
+    },
+    {
+      "condition": "mixed_seed27",
+      "scene": "Toros",
+      "events": 1,
+      "independent_event_replay": "PASS",
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "temporally_matched": 1,
+      "wrong_direction_matches": 0
+    },
+    {
+      "condition": "real_repeated_seed27",
+      "scene": "source",
+      "events": 0,
+      "independent_event_replay": "PASS"
+    },
+    {
+      "condition": "real_repeated_seed27",
+      "scene": "Toros",
+      "events": 1,
+      "independent_event_replay": "PASS",
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "temporally_matched": 1,
+      "wrong_direction_matches": 0
+    },
+    {
+      "condition": "mixed_seed28",
+      "scene": "source",
+      "events": 6,
+      "independent_event_replay": "PASS"
+    },
+    {
+      "condition": "mixed_seed28",
+      "scene": "Toros",
+      "events": 2,
+      "independent_event_replay": "PASS",
+      "TP": 2,
+      "FP": 0,
+      "FN": 4,
+      "temporally_matched": 2,
+      "wrong_direction_matches": 0
+    },
+    {
+      "condition": "real_repeated_seed28",
+      "scene": "source",
+      "events": 0,
+      "independent_event_replay": "PASS"
+    },
+    {
+      "condition": "real_repeated_seed28",
+      "scene": "Toros",
+      "events": 1,
+      "independent_event_replay": "PASS",
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "temporally_matched": 1,
+      "wrong_direction_matches": 0
+    }
+  ],
+  "source_true_passage_accuracy_verified": false,
+  "independent_final_generalisation_verified": false,
+  "board_verified": false,
+  "whole_goal_complete": false
+}

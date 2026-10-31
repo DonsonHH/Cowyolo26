@@ -1,0 +1,53 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129981|idcoo-intref-opt|COMPLETED|0:0|00:00:02|
+129981.batch|batch|COMPLETED|0:0|00:00:02|1176K
+129981.0|python|COMPLETED|0:0|00:00:02|800K
+129982|idcoo-intref-opt-add|COMPLETED|0:0|00:00:01|
+129982.batch|batch|COMPLETED|0:0|00:00:01|1172K
+129982.0|python|COMPLETED|0:0|00:00:01|804K
+[0;93m2026-10-28 00:59:38.630439182 [W:onnxruntime:, inference_session.cc:2473 Initialize] Serializing optimized model with Graph Optimization level greater than ORT_ENABLE_EXTENDED and the NchwcTransformer enabled. The generated model may contain hardware specific optimizations, and should only be used in the same environment the model was optimized in.[m
+{
+  "status": "SAME_INPUT_ISOLATED_ADD_AND_SINGLE_NODE_FULL_GRAPH_CONTROLS_COMPLETE",
+  "job_id": "129982",
+  "protocol_sha256": "2293762a54e94957c395644c559068d380f0ba75666d3262818f0f6bec86093e",
+  "source_serialized_ALL_sha256": "2f212f100f08bb6360a37ef12a31efc16e4d6bb4a2b29b8de8b00163e6fee329",
+  "target_node": {
+    "name": "/encoder/encoder.0/encoder.0.3/Add",
+    "domain": "com.microsoft",
+    "op_type": "QLinearAdd",
+    "inputs": [
+      "/encoder/encoder.0/encoder.0.3/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+      "encoder.0.3.block.2.0.output_quant.scale",
+      "onnx::QuantizeLinear_1827",
+      "/encoder/encoder.0/encoder.0.2/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+      "encoder.0.2.block.2.0.output_quant.scale",
+      "onnx::QuantizeLinear_1833",
+      "encoder.0.4.block.0.0.input_quant.scale",
+      "onnx::QuantizeLinear_1843"
+    ],
+    "outputs": [
+      "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+    ]
+  },
+  "replaced_nodes": 1,
+  "other_existing_nodes_unchanged": true,
+  "isolated_mismatch_vectors": [
+    2,
+    5,
+    7
+  ],
+  "patched_passed_vectors": 8,
+  "patched_exact_OFF_vectors": 8,
+  "disable_quant_qdq_passed_vectors": 8,
+  "disable_quant_qdq_exact_OFF_vectors": 8,
+  "new_training_updates": 0,
+  "new_image_reads": 0,
+  "all_training_seeds_verified": false,
+  "FPGA_execution_verified": false,
+  "elapsed_s": 0.8103881273418665,
+  "whole_goal_complete": false
+}
+{"vector": 2, "same_source_and_ALL_upstream_integer_inputs": true, "isolated_fused_exact_full_ALL_node": true, "isolated_unfused_exact_full_OFF_node": true, "isolated_output_different_elements": 1, "differences": [{"index": [0, 17, 11, 20], "A": 152, "B": 180, "unfused_U8": 171, "fused_U8": 172, "unfused_FP32_units": 33.4999885559082, "scaled_ratio_FP32_control_units": 33.49999237060547, "ideal_FP64_units": 33.49999021289544}], "patched_one_node": {"maximum_absolute_error": 4.470348358154297e-08, "cosine": 0.9999999999999962, "passed_original_embedding_tolerance": true}, "patched_exact_OFF_embedding": true, "disable_quant_qdq": {"maximum_absolute_error": 4.470348358154297e-08, "cosine": 0.9999999999999962, "passed_original_embedding_tolerance": true}, "disable_quant_qdq_exact_OFF_embedding": true}
+{"vector": 5, "same_source_and_ALL_upstream_integer_inputs": true, "isolated_fused_exact_full_ALL_node": true, "isolated_unfused_exact_full_OFF_node": true, "isolated_output_different_elements": 1, "differences": [{"index": [0, 14, 12, 1], "A": 152, "B": 180, "unfused_U8": 171, "fused_U8": 172, "unfused_FP32_units": 33.4999885559082, "scaled_ratio_FP32_control_units": 33.49999237060547, "ideal_FP64_units": 33.49999021289544}], "patched_one_node": {"maximum_absolute_error": 8.940696716308594e-08, "cosine": 0.9999999999999947, "passed_original_embedding_tolerance": true}, "patched_exact_OFF_embedding": true, "disable_quant_qdq": {"maximum_absolute_error": 8.940696716308594e-08, "cosine": 0.9999999999999947, "passed_original_embedding_tolerance": true}, "disable_quant_qdq_exact_OFF_embedding": true}
+{"vector": 7, "same_source_and_ALL_upstream_integer_inputs": true, "isolated_fused_exact_full_ALL_node": true, "isolated_unfused_exact_full_OFF_node": true, "isolated_output_different_elements": 1, "differences": [{"index": [0, 13, 21, 15], "A": 152, "B": 180, "unfused_U8": 171, "fused_U8": 172, "unfused_FP32_units": 33.4999885559082, "scaled_ratio_FP32_control_units": 33.49999237060547, "ideal_FP64_units": 33.49999021289544}], "patched_one_node": {"maximum_absolute_error": 4.470348358154297e-08, "cosine": 0.9999999999999956, "passed_original_embedding_tolerance": true}, "patched_exact_OFF_embedding": true, "disable_quant_qdq": {"maximum_absolute_error": 4.470348358154297e-08, "cosine": 0.9999999999999956, "passed_original_embedding_tolerance": true}, "disable_quant_qdq_exact_OFF_embedding": true}

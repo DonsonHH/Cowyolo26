@@ -1,0 +1,14 @@
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|16|alloc|cu[01-10,15-20]|(null)
+cu*|up|infinite|4|idle|cu[11-14]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|1|mix|gpu02|gpu:V100S:4
+4gpu|up|infinite|1|idle|gpu03|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+    130553_[0-3%2]|     4gpu|               b32-audit| PENDING|      0:00|     30:00|(Dependency)
+            130556|     4gpu|              b32-report| PENDING|      0:00|      5:00|(Dependency)
+            130557|     4gpu|             b32-package| PENDING|      0:00|      5:00|(Dependency)
+          130552_3|     4gpu|              b32-formal| RUNNING|      2:15|     30:00|gpu02
+          130552_2|     4gpu|              b32-formal| RUNNING|      2:18|     30:00|gpu02
+ALL15_FROZEN_CHECKPOINT_CROP_INPUTS_STAGED_HASH_EXACT;NO_NEW_TRAINING
+130559

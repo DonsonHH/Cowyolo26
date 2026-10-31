@@ -1,0 +1,19 @@
+renly
+mu01
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|1|mix|cu03|(null)
+cu*|up|infinite|2|alloc|cu[01-02]|(null)
+cu*|up|infinite|17|idle|cu[04-20]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+    130764_[3-6%2]|       cu|             rsi-b1b-fit| PENDING|      0:00|   1:00:00|     1|(JobArrayTaskLimit)
+            130767|       cu|          rsi-b1b-select| PENDING|      0:00|   1:00:00|     1|(Dependency)
+          130764_1|       cu|             rsi-b1b-fit| RUNNING|      7:58|   1:00:00|     1|cu03
+          130764_2|       cu|             rsi-b1b-fit| RUNNING|      7:58|   1:00:00|     1|cu03
+PartitionName=cu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=YES QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=cu[01-20] PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=1120 TotalNodes=20 SelectTypeParameters=NONE JobDefaults=(null) DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=1120,mem=3820000M,node=20,billing=1120
+PartitionName=8gpu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=NO QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=gpu01 PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=32 TotalNodes=1 SelectTypeParameters=NONE JobDefaults=DefCpuPerGPU=4 DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=32,mem=385000M,node=1,billing=32,gres/gpu=8
+PartitionName=4gpu AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL AllocNodes=ALL Default=NO QoS=N/A DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO MaxNodes=UNLIMITED MaxTime=UNLIMITED MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED Nodes=gpu[02-03] PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO OverTimeLimit=NONE PreemptMode=OFF State=UP TotalCPUs=64 TotalNodes=2 SelectTypeParameters=NONE JobDefaults=DefCpuPerGPU=8 DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED TRES=cpu=64,mem=770000M,node=2,billing=64,gres/gpu=8
+Filesystem     Type  Size  Used Avail Use% Mounted on
+ibio01:/public nfs    44T   42T  2.0T  96% /share
+{"frozen_sources": [{"path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt", "sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b"}, {"path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_identity_eval_20261030/protocol/run_v1.json", "sha256": "19bf1a1d208aadc2357615c98605a68bf621824a4cf8ac768119b4a81d266df7"}]}

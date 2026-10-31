@@ -1,0 +1,77 @@
+{
+  "status": "TRAIN_VAL_SOURCE_LABEL_ORIENTATION_AND_ACTUAL_AUGMENTATION_AUDITED",
+  "catalog_sha256": "ab19bcbf2c40419d38a4f933923ab79aa706ed42b8aec68de8454830d6ab2f5e",
+  "roles": {
+    "train": {
+      "cow_labels": 8888,
+      "long_axis_degrees_from_horizontal_bins": {
+        "0-15": 5175,
+        "30-45": 781,
+        "15-30": 2441,
+        "60-75": 130,
+        "45-60": 309,
+        "75-90": 52
+      },
+      "within_15_degrees_horizontal": 5175,
+      "within_15_degrees_vertical": 52,
+      "minimum": 0.0,
+      "maximum": 89.98833038494766
+    },
+    "validation": {
+      "cow_labels": 1864,
+      "long_axis_degrees_from_horizontal_bins": {
+        "0-15": 1196,
+        "15-30": 487,
+        "30-45": 136,
+        "45-60": 24,
+        "75-90": 16,
+        "60-75": 5
+      },
+      "within_15_degrees_horizontal": 1196,
+      "within_15_degrees_vertical": 16,
+      "minimum": 0.0,
+      "maximum": 88.29279622965986
+    }
+  },
+  "effective_args": [
+    {
+      "seed": 26,
+      "args_sha256": "1481c29369ab7da4238941f2c48b684466ee5237e23ef3fe94bed004f993ebd7",
+      "effective_augmentation_settings": {
+        "degrees": "0.0",
+        "flipud": "0.0",
+        "fliplr": "0.5",
+        "scale": "0.5",
+        "mosaic": "1.0"
+      }
+    },
+    {
+      "seed": 27,
+      "args_sha256": "f87cd9844ffc72698d3a46cb3b07a50f7f435dfa0aca42965b34c28d84c64981",
+      "effective_augmentation_settings": {
+        "degrees": "0.0",
+        "flipud": "0.0",
+        "fliplr": "0.5",
+        "scale": "0.5",
+        "mosaic": "1.0"
+      }
+    },
+    {
+      "seed": 28,
+      "args_sha256": "92f4fc2e19e2549a720c131c165eff27ad271362286b410ce8c13ebf3aa49ccc",
+      "effective_augmentation_settings": {
+        "degrees": "0.0",
+        "flipud": "0.0",
+        "fliplr": "0.5",
+        "scale": "0.5",
+        "mosaic": "1.0"
+      }
+    }
+  ],
+  "axis_definition": "longer-side axis of original published rotated cow rectangle, modulo180 degrees; not head direction or tracking motion",
+  "only_development_label_metadata_used": true,
+  "candidate_final_pixels_or_new_source_annotations_used": false,
+  "source_video_orientation_ground_truth_measured": false,
+  "orientation_is_proven_cause_of_count_failure": false,
+  "new_model_forward_or_training": false
+}

@@ -1,0 +1,553 @@
+{
+  "status": "LOWRES12_CONDITIONS_50700_FORWARDS_72_COUNTER_PATHS_REVIEWED_WITH_UNRESOLVED_BOARD_BENCHMARK",
+  "created_UTC": "2026-10-29T10:08:55.634417+00:00",
+  "offline_phase_complete": true,
+  "board_benchmark_complete": false,
+  "whole_goal_complete": false,
+  "protocol_v1_sha256": "1e6d84b7a3bbb5c83eade00f3b2fd00073edb417d28b94442d9758f2e6d85054",
+  "protocol_v2_sha256": "3a3087dc67b706f316be4851950b38023140df180986bf7246567af9ff848251",
+  "input_sizes": [
+    192,
+    256,
+    320
+  ],
+  "target_frontend_Hz": 5,
+  "target_frame_period_ms": 200,
+  "model_resolution_conditions": 12,
+  "actual_source_detector_image_forwards": 50700,
+  "completed_source_records_reused": 44952,
+  "resume_source_forwards_directly_hooked": 5748,
+  "prior_failed_job_in_memory_hook_counter_not_invented": true,
+  "all_counter_updates": 32808,
+  "independent_counter_paths": 72,
+  "validation_matching_cases": 18852,
+  "validation_candidate_IoUs": 20801,
+  "native_inverse_boxes": 43119,
+  "maximum_native_inverse_error": 0,
+  "publisher6_metric_conditions": 48,
+  "event_matching_tied_optima_retained": 2,
+  "validation_matches_4models_by3sizes": [
+    [
+      66,
+      392,
+      670
+    ],
+    [
+      626,
+      1532,
+      1690
+    ],
+    [
+      1621,
+      1759,
+      1770
+    ],
+    [
+      655,
+      1383,
+      1602
+    ]
+  ],
+  "original_down_counts_4models_by3sizes": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      7,
+      10
+    ],
+    [
+      1,
+      7,
+      8
+    ],
+    [
+      2,
+      7,
+      10
+    ]
+  ],
+  "Toros_official_TP_FP_FN_3sizes_by5Hz30Hz": [
+    [
+      [
+        1,
+        0,
+        5
+      ],
+      [
+        4,
+        0,
+        2
+      ]
+    ],
+    [
+      [
+        4,
+        0,
+        2
+      ],
+      [
+        6,
+        0,
+        0
+      ]
+    ],
+    [
+      [
+        4,
+        0,
+        2
+      ],
+      [
+        6,
+        0,
+        0
+      ]
+    ]
+  ],
+  "all_models_sizes_counters_sampling_and_negative_results_retained": true,
+  "new_training_updates": 0,
+  "identity_encoder_forwards": 0,
+  "new_lowres_training_conditions_planned": 15,
+  "new_lowres_training_conditions_submitted": 0,
+  "new_final_test": false,
+  "human_confirmed12_version_preserved": true,
+  "global_lowres_model_adoption": false,
+  "board_inventory_live_confirmed": true,
+  "PYNQ_version": "3.1.1",
+  "own_board_benchmark_PID": 8082,
+  "own_board_benchmark_terminal_state": "NOT_OBSERVED",
+  "own_board_benchmark_restart_count": 0,
+  "current_PL_after_benchmark": "UNKNOWN_NOT_READ_BACK",
+  "board_process_results_retrieved": false,
+  "current_live_PYNQ_5FPS_proven": false,
+  "foreground_background_joint_PYNQ_5FPS_proven": false,
+  "user_board_state_question_pending": true,
+  "board_source_file_records_verified": 33,
+  "board_source_file_records": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\run_detector.py",
+      "sha256": "71103887326c3eecbb9bb070f0cfe597963dce011341c645ad76f81568328d81"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\run_board_r192_fast_acceptance100.py",
+      "sha256": "103432eb4e613fe460a3dece18c057f16255dc616daecdf1034b0a3f6026e063"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\release_manifest.json",
+      "sha256": "f6469dff85a8e8467c4722c078d5b7974694bf24ddec5041362d16bf41486e1a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime\\board_runtime.py",
+      "sha256": "4a4a9aa4a517705099ca3a7e03c8fa4379c819ec0bd0d1d9ecb3fedf8f008c8f"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime\\hybrid_executor.py",
+      "sha256": "842adebc9d1f31c9dabe9df1002d22785fb4c3f3a2d0ca295c69617ea8c9d0ad"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime\\queue_device.py",
+      "sha256": "d76246e67a3cedb2808c6e38d2eb2042d81a219ae0f74617e63682e63899876b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime_fast\\hybrid_executor.py",
+      "sha256": "959a025435cf2ca54cf7ddff7ebbe890c7f4c09369e2bf608047c44163d815f2"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime_fast\\fast_topk.py",
+      "sha256": "07e5008ed58a9764c9549e71f6dbde7451b2de4397c4bab6ee7dcbcf967faf9c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_7\\run_detector.py",
+      "sha256": "472c9c9cb233c3c9c164523e1692f7f24e0892f61fb61c5ea0df3a86a32cd64e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_7\\release_manifest.json",
+      "sha256": "cda3308bf20d2505a7b184fc7e67e1c7f880c27c6a6f042baaffcb3bd6c82762"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\run_detector.py",
+      "sha256": "742e4587ec197068dd87ba2ec78b8e82dbbf02a7f5e8023802a88baf6a8625b4"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\release_manifest.json",
+      "sha256": "5014c6dad9074ef144deedf350c71c87239a499ccb7da04c4280ca850e9906b6"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\device_initialize.py",
+      "sha256": "c87f8671cb6d27af790928618a1d8cb7e20127cb09e9f7378a417a54fa85ac98"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\native_graph.py",
+      "sha256": "84bd2d829f4b70408585eaabcb742176b04703ac1777f1e8a8d7f65801b9b01e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\verify_release.py",
+      "sha256": "d7533c0f3849fecebadfc12340df532b3a375a473ce149b88cb8c18a032c3908"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\selected_candidates.json",
+      "sha256": "5f5c0270bd0177c1b6938793a507a7afe6a7d42017778a139f3ef6dfaf71c458"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\README_reproduce.md",
+      "sha256": "bb5ba4e320a776c0bb19f0b27f61b50634d4e2c99165d2ced7f25a324e02b219"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\hardware\\accepted\\firmware_manifest.json",
+      "sha256": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\reports\\closure_status.json",
+      "sha256": "74a05f2435c3eda7ebccc3169b375d0384b512f7fe639b8209cfd743d102f59c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\reports\\final_board_environment.json",
+      "sha256": "c5f304f165693519b9902be6a18cea6589ae5cb1687ec31d59fe310635dac88e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime_fast\\queue_device.py",
+      "sha256": "d76246e67a3cedb2808c6e38d2eb2042d81a219ae0f74617e63682e63899876b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runs\\r192_fast_acceptance100\\result.json",
+      "sha256": "1797c78268cbe0fdd4ebea992eff473d6318d6f9fda33b08e2c9dd08e8e098d7"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runs\\r256_fixed100\\result.json",
+      "sha256": "482c3737ec311397554f78c844789d74ea155d91c9d67462a61fe82d806ad3d8"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runs\\r320_fixed100\\result.json",
+      "sha256": "f0a976ed5334891456b469491127b1f9b631c757ec45066a647610c5266aec8d"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime\\queue_conv.py",
+      "sha256": "a0da029072e6bf2b4f2c7a0e5be756fb42f6147b0fa31b81c2144bc2535362f4"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime\\hybrid_executor.py",
+      "sha256": "842adebc9d1f31c9dabe9df1002d22785fb4c3f3a2d0ca295c69617ea8c9d0ad"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime\\native_ops.py",
+      "sha256": "4dae81828b188a07c6bad26082061cba0cc7d7387f47c85bdf39ccc8502695ed"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_6\\runtime\\queue_device.py",
+      "sha256": "d76246e67a3cedb2808c6e38d2eb2042d81a219ae0f74617e63682e63899876b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\reports\\final_delivery\\candidate_pareto.csv",
+      "sha256": "4a02e1a7ff4c4c7562793977fb788caf8c8f3826a1f233dbc2679544c80a5380"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\reports\\final_delivery\\README_reproduce.md",
+      "sha256": "bb5ba4e320a776c0bb19f0b27f61b50634d4e2c99165d2ced7f25a324e02b219"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\reports\\final_delivery\\math_and_source_integrity.json",
+      "sha256": "a308169417a7ad640772e201a44184231ab2f73de1a44cabd47ee3231ad11edc"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\reports\\long_camera_summary_1746753240416977189.json",
+      "sha256": "193e93b1f0f54b1b7fc82fb0e0db00a334e0d6bb71da5184f7d87d9243676e96"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\board_source_snapshot\\yolo26_optimization_8\\reports\\final_delivery\\completion_final_audit.json",
+      "sha256": "06422f0212b678f090c8130be36f9f17f6a41201c6eeb256a96e0b3b55854347"
+    }
+  ],
+  "all_current13_figures_actually_viewed": true,
+  "current_image_panels_actually_viewed": 52,
+  "all_local_rasters_fully_decoded": 26,
+  "three_movies_strict_decoded_frames": 5886,
+  "actual_video_frame_alignment_checks": 12,
+  "current_SVG_bar_segments_verified": 48,
+  "local_document_links_checked": 190,
+  "evidence_hashes": {
+    "protocol/baseline_v1.json": "1e6d84b7a3bbb5c83eade00f3b2fd00073edb417d28b94442d9758f2e6d85054",
+    "protocol/baseline_v2_path_fix.json": "3a3087dc67b706f316be4851950b38023140df180986bf7246567af9ff848251",
+    "results/independent_verification.json": "cf94c21007afae81c22a4bc93eae9dc483fc5df243ee7918bf14c7fe98c52ba3",
+    "results/media_verification.json": "ed7a1dda8bc54dd6c1f46386f5b89208ea0a974a7b66a702e511b04a1828b4f3",
+    "results/plot_v2_verification.json": "52d7e956bdd76b708da5ee7b5f9383fe5d548ab3df780aee8baf833a634be66e",
+    "results/transfer_verification.json": "695a742646021d2cd181d4f5f667d06e1aae16afd13a1ddc688ad3bc42e92742",
+    "evidence/final_jobs.txt": "fb406363b361085dd9096ef83137ad8282bd168aeb569eb4577bab008f9826e4",
+    "evidence/visual_review.json": "c2c357becadf7558a2847b215d33477904ea8f0bdac8747081e9522dcd8ac6ab",
+    "delivery/results/baseline/summary.json": "e1aefa681c8e8799c86b141e1f3f6be04ff05ec747590b4f550ad05b514dfc31",
+    "delivery/results/baseline/resume_gate.json": "da473c1058475e0c4637c25b17cf98ef74d11b4d7e711f20ec4c0996beb7e9c7",
+    "delivery/results/baseline/baseline_counter_regression.json": "e02b98633b25dfc2fe8f8414d36542b2edf74f0ac1788454f2c46eeecb0796d9",
+    "results/independent_video_table.json": "2296eb8113b31ae1c81c3a493fab0ae0b362371333124834640895ce9d239688",
+    "results/independent_validation_table.json": "f7a2fd5b26fa2484ada260711b03f34804eee41f299ff86d6568b00c5b76a088",
+    "media_delivery/results/media/media_metadata.json": "f075f5aa49c77674a74f1e9ae68b326543efd5dee5090e0eac0aa93defe63450",
+    "plot_v2_delivery/results/plots_v2/plot_data.json": "81d85c808926bc812861aa0374b258ce898a58cdf64dbf021ef9a6b406feb57f",
+    "plot_v2_delivery/results/plots_v2/lowres_baseline_counts.svg": "fa77dd8cdecc2630630bd53e858c1218eab6303e26f1ac759ca30de4e5e36a87"
+  },
+  "board_evidence_hashes": {
+    "results/board_environment.json": "16658468a26c8ffac9a070705e16c77b0fab934b2a9464252779cbfc63802a08",
+    "results/board_state_review.json": "29734d858de12f5642f6f99582b4463c38734931cee1c50f8b8a48cc6336be2a",
+    "evidence/board_inventory.json": "b9f12e24277243cfcbdae046fa0b5ab000e82716f98f752a2f36b041bc3da7f6",
+    "evidence/benchmark_launch02.json": "cc03c37ebb68d28ab61f1f662018ad3832f00039cbd904f48aac8a2f22f4c52f",
+    "evidence/board_upload.json": "7092bbd515a86774ab88c14951d922aa4901cdff3f44c765037c2425fa52a705",
+    "evidence/serial_prompt01.json": "59c057053d35467b9a8d7d8e4907da96f759a210789386487cf5fe5b4a018269",
+    "evidence/ssh_probe01.json": "d279230c386203fabde565a2e5d5e6988313751a0d54aa2145f7c596ca8a25c5",
+    "evidence/connectivity_revalidation02.json": "ad0c79947d12fe1fc2f7616186dfbaea7fa68c0f31920812de9107b6295d59ee"
+  },
+  "retained_artifact_hashes": {
+    "human_count_confirmation_20261028/results/frozen_development_candidate.json": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+    "human_count_confirmation_20261028/evidence/user_confirmation.json": "fe8a895cd6ac71815ff8e2f6ad8d932a6453c41971b6b7a18ea9c2f743dd0f9f",
+    "cows2021_adaptation_20261027/delivery/results/training/seed26/weights/last.pt": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+    "confirmation_handoff_20261028/delivery/results/replay_v2/seed26/handoff_events.json": "6975f4d6ceafc2bbef1a00081bf0499ca1bbbaa47ecdb420b943a49203fd4ad0"
+  },
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\\u8ba1\u5212\u4e0e\u9a8c\u6536.md",
+      "sha256": "9d0bf02d53c0506edeb313168fa5ae5cc92d47a8bdade6430f4b0dd8021bac51"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\\u4f4e\u5206\u8fa8\u7387\u57fa\u7ebf\u4e0e5Hz\u8ba1\u6570\u7ed3\u679c.md",
+      "sha256": "be98b3ad7abe670e1312478c1241013a895de1eb239736846453461e07cffa77"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\Review\u4e0e\u5f53\u524d\u72b6\u6001.md",
+      "sha256": "eb43214793ab575f5193caa85e0d29faea524ef589a525b3489e14dd35c9ee44"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\\u8ba1\u5212\u4e0e\u5f53\u524d\u72b6\u6001.md",
+      "sha256": "ec2987169147d6128733cee890cfdd22f2633db5625237958b12432b836ea38c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_lowres_20261029\\PYNQ\u4f4e\u5206\u8fa8\u7387\u90e8\u7f72\u4e0e\u8fde\u63a5\u6838\u67e5.md",
+      "sha256": "f2a51b1d5ea02b985780a23609aa7392c7d2c94f5b8a9910703cc032a22f0ab3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\detector_factorial_20261029\\\u8ba1\u5212\u4e0e\u9a8c\u6536.md",
+      "sha256": "d0829edfc7f79eb68a1c5560a33be28cba407a500dad0037b9f52b1ea06219ab"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\\u7814\u7a76\u603b\u89c8_\u4ece\u60f3\u6cd5\u5230\u8bba\u6587.md",
+      "sha256": "f9530c2fa122c01783376151a216b8bfae4c7404b0d26d695bf4cf374a543115"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\\u7814\u7a76\u8fdb\u5ea6.md",
+      "sha256": "299946f5c299684c4045fe541e57324e25153e7a6d8eccd9d0dc1aa6b6c15db4"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\phase3_diagnosis_20261026\\\u65b9\u6848\u4e0e\u6267\u884c\u72b6\u6001.md",
+      "sha256": "db1032050bc5613931ca0e2c79231bdc39c239b926317f071468d498fb431bc2"
+    }
+  ],
+  "rasters": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\lowres_baseline_counts.png",
+      "sha256": "c7129fec667a6c451aba31123451f78ee1a74449a128469fccec01acab3abdff",
+      "dimensions": [
+        2160,
+        1440
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s192_f10830.jpg",
+      "sha256": "f8469329c7521bf851c9049ff0ebf1df8a69cc0413e96a18b26e2deed779e3d0",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s192_f8995.jpg",
+      "sha256": "8ca9c04bd9901a89262c3f704819a313561e8bdcce8783d9f932d6b9f1945b5e",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s192_f9345.jpg",
+      "sha256": "40c5e61b261006bf6699b7828e668ae3a4f9c8b3e87e44bbe7d55f80eab9977f",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s192_f9790.jpg",
+      "sha256": "a7b5aeb56ebb23fcbe7493c802b06276f34b0ec4c7e893e3adf9a636a864b838",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s256_f10830.jpg",
+      "sha256": "798d9012bf3d9000470dbc6d2aa239e22517ab2dee5363b579d18dff7d0f5f37",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s256_f8995.jpg",
+      "sha256": "2bf19b69cbdbe5c7903c6402565a043a6999a204a4ffa821a0975c1c9575371c",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s256_f9345.jpg",
+      "sha256": "9f1d441532ee22a4bf3b5b7297044fb64bfc3ffa088c27425fe55daa4c6d2275",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s256_f9790.jpg",
+      "sha256": "75b4232de813163a15342ce43580740ba07054ec04b50e0b3e8a8c8fa7fa6faf",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s320_f10830.jpg",
+      "sha256": "4e6122c621ea827bd4c63950bed78dfc5cefb34fa6cc7773f3a567eba8512f78",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s320_f8995.jpg",
+      "sha256": "8240c9381e2a27f3872cba167d1f86a7e6d2ad7d330e6cc53c97cf18a4545c32",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s320_f9345.jpg",
+      "sha256": "09c30cb10bf08aa4c24b3bd2fd7512c92504aaf1d8cad3b698740a94ef44665e",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\media_delivery\\results\\media\\s320_f9790.jpg",
+      "sha256": "572049f7b47cfdd390368b123631770034315125dd38aab60a37b450b0bf715a",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\plot_v2_delivery\\results\\plots_v2\\lowres_baseline_counts.png",
+      "sha256": "baf73cc5ad488f68c698687aa85d25458587ee6f0f02b931ed6874acb4299e8e",
+      "dimensions": [
+        2160,
+        1440
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s192_f10830.png",
+      "sha256": "eeb09bd93dc088cad2aebfcb19dde95c01abd818481dab36bd13f16d50f3025a",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s192_f8995.png",
+      "sha256": "5873df32b1be0285be1607a6fa077ef072e829dab21d0b2f8e6eb1cf51a1abec",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s192_f9345.png",
+      "sha256": "6641a526c623ff8800d796354e9ed6f96e09ae0dabafd217cad27fc63b2d5494",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s192_f9790.png",
+      "sha256": "1b56806c82110f2e1f78866e8fb8e29f76be8fb80af5fc20978c45d1bf5b26a9",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s256_f10830.png",
+      "sha256": "d2591ab0af979779c39bdcc68dcaa49b5170ee8691bf3a1c44cff7da1f654bb0",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s256_f8995.png",
+      "sha256": "f7fb1889d17501053f02bfcd4702686eb5126150a0cc709e2f68931170ec568e",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s256_f9345.png",
+      "sha256": "0e885dcf69277caf0a0984a8c95353d272669002972ae0338453e11de78f4d10",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s256_f9790.png",
+      "sha256": "7b4dd5ebda2d62f0c42c5cff242ab3df3bab085bedc61cd658ee750a916ae60c",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s320_f10830.png",
+      "sha256": "c382229f9c1ab99c164075739b09ca8850396a52f8367579968dd4b3f5d18f11",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s320_f8995.png",
+      "sha256": "30f70fcad0577152a1036dfb754de6fbeac04b577bfd39648566a4c75d7a3017",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s320_f9345.png",
+      "sha256": "2b51ced5281699eb75c3381f40cb788b3c5186cb4b55047c38b0c49481c0ab08",
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\lowres_baseline_20261029\\results\\video_frame_verification\\s320_f9790.png",
+      "sha256": "46a627619169a8726e1e5d371ad74401ccd2595e0a6b07ec040481b34b0b41f0",
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ]
+}

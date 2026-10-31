@@ -1,0 +1,354 @@
+{
+  "status": "FULL_PUBLISHED_JSON_AND_12_TRAIN_XML_IMAGE_AUDIT_COMPLETE",
+  "geometry_controls": "AXIS_ROTATION_CLIPPING_AND_INDEPENDENT_ENVELOPE_PASS",
+  "roles": [
+    {
+      "role": "train",
+      "images": 7248,
+      "annotations": 9395,
+      "annotation_sha256": "18b6494e585c68839115e8cf5b60bc392493b96be1eebd1d0fdb3ba4d959dc6e",
+      "dimensions": {
+        "1280x720": 7248
+      },
+      "bbox_length": 5,
+      "angles_min_max_radians": [
+        -3.112,
+        3.142
+      ],
+      "rotated_polygons_outside_image": 4756,
+      "zero_visible_polygons": 0,
+      "images_without_published_objects": 0,
+      "category_mapping": "category1(supercategory cow,name xin) -> derived torso class0; no cow identity assigned"
+    },
+    {
+      "role": "validation",
+      "images": 1023,
+      "annotations": 1238,
+      "annotation_sha256": "c7ba9d77bba123035e6139a3ae08fd776d0929beb95634269a73ad2a88182714",
+      "dimensions": {
+        "1280x720": 1023
+      },
+      "bbox_length": 5,
+      "angles_min_max_radians": [
+        -3.052,
+        3.102
+      ],
+      "rotated_polygons_outside_image": 588,
+      "zero_visible_polygons": 0,
+      "images_without_published_objects": 0,
+      "category_mapping": "category1(supercategory cow,name xin) -> derived torso class0; no cow identity assigned"
+    },
+    {
+      "role": "reserved_test",
+      "images": 2131,
+      "annotations": 2532,
+      "annotation_sha256": "85ecd0b1aeb6d5f21a9f4c4ef090ff706a09fbc2773d3418a6bfcb10d0bbed9e",
+      "dimensions": {
+        "1280x720": 2131
+      },
+      "bbox_length": 5,
+      "angles_min_max_radians": [
+        -2.642,
+        2.851
+      ],
+      "rotated_polygons_outside_image": 1284,
+      "zero_visible_polygons": 0,
+      "images_without_published_objects": 0,
+      "category_mapping": "category1(supercategory cow,name xin) -> derived torso class0; no cow identity assigned"
+    }
+  ],
+  "total_published_images": 10402,
+  "total_published_annotations": 13165,
+  "train_samples": [
+    {
+      "file_name": "06703.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "6b51c6e96a9cceec5370607beb7e1f7b04d5b4e65d78394e08e43782644c5eed",
+      "source_XML_sha256": "39ff76290ca40c8880d01383bdfe8ffb1c8fcb8cdaad2d3c6a4aa5391b84f532",
+      "original_filename": "image_0014870_2020-02-27_13-6-45",
+      "source_block": "block_149",
+      "capture_timestamp": "2020-02-27_13-6-45",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 8778,
+          "centre_and_size_L1_difference": 0.7180000000000746,
+          "angle_mod_pi_difference_radians": 3.464102071859543e-07,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 0,
+      "overlay": "results\\label_audit\\sample_overlays\\06703.jpg",
+      "derived_classic_YOLO_rows": 1
+    },
+    {
+      "file_name": "04877.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "fc09748475b2d4b7b72b965dc9fb6dd375e8d3a64abc16bbf84864039d3cf964",
+      "source_XML_sha256": "6bc81c2a2a0831937802369cb784d9f9410a93778bbe532bcd283be45add0414",
+      "original_filename": "image_0010570_2020-02-22_14-1-4",
+      "source_block": "block_106",
+      "capture_timestamp": "2020-02-22_14-1-4",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 6579,
+          "centre_and_size_L1_difference": 0.7036000000000229,
+          "angle_mod_pi_difference_radians": 3.464102071859543e-07,
+          "XML_name": "cow"
+        },
+        {
+          "annotation_id": 6580,
+          "centre_and_size_L1_difference": 0.9299000000000888,
+          "angle_mod_pi_difference_radians": 0.0,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 0,
+      "overlay": "results\\label_audit\\sample_overlays\\04877.jpg",
+      "derived_classic_YOLO_rows": 2
+    },
+    {
+      "file_name": "02303.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "3b6a6e088d67d880bbac906e471915a12aabf463c239b045bd7ca78163e1945e",
+      "source_XML_sha256": "52f430762560cca9546b6062d7df1e2a4673f7f3a22b5f712a50504f3f57fb18",
+      "original_filename": "image_0004856_2020-02-15_12-18-37",
+      "source_block": "block_049",
+      "capture_timestamp": "2020-02-15_12-18-37",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 3100,
+          "centre_and_size_L1_difference": 0.7799000000000547,
+          "angle_mod_pi_difference_radians": 0.0,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 1,
+      "overlay": "results\\label_audit\\sample_overlays\\02303.jpg",
+      "derived_classic_YOLO_rows": 1
+    },
+    {
+      "file_name": "00481.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "df84eec31fb678bcfa4a28ca1b50210204e53f768b631e5ebdf4906b99f5015d",
+      "source_XML_sha256": "b35a67452e68e1ce39e15a6cdeafae05f569e68217d3cd25922c25a3ea4f3065",
+      "original_filename": "image_0001131_2020-02-11_12-30-41",
+      "source_block": "block_012",
+      "capture_timestamp": "2020-02-11_12-30-41",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 641,
+          "centre_and_size_L1_difference": 0.7538000000000409,
+          "angle_mod_pi_difference_radians": 0.0004070000000000462,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 0,
+      "overlay": "results\\label_audit\\sample_overlays\\00481.jpg",
+      "derived_classic_YOLO_rows": 1
+    },
+    {
+      "file_name": "04337.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "0d95354c1d901f9d825222b23f493308677ca5cf5c81f063268d63e235732584",
+      "source_XML_sha256": "512873a1350cd9e3b586019f2cdc1f30fc11d6afbfd041d6e24ecd01eabdcb87",
+      "original_filename": "image_0009412_2020-02-21_12-35-27",
+      "source_block": "block_095",
+      "capture_timestamp": "2020-02-21_12-35-27",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 5847,
+          "centre_and_size_L1_difference": 1.1498999999999455,
+          "angle_mod_pi_difference_radians": 0.0,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 1,
+      "overlay": "results\\label_audit\\sample_overlays\\04337.jpg",
+      "derived_classic_YOLO_rows": 1
+    },
+    {
+      "file_name": "01010.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "41f9356021ea81c7428ea73b1a85cb68e3464bc221a47f587ff53d49e259f753",
+      "source_XML_sha256": "2b84b9d0ab402f1198510dfa60f2115592b9a9a6d279fcc55dafaa8842728516",
+      "original_filename": "image_0002119_2020-02-12_12-40-31",
+      "source_block": "block_022",
+      "capture_timestamp": "2020-02-12_12-40-31",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 1475,
+          "centre_and_size_L1_difference": 1.019099999999952,
+          "angle_mod_pi_difference_radians": 3.4641020674186507e-07,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 0,
+      "overlay": "results\\label_audit\\sample_overlays\\01010.jpg",
+      "derived_classic_YOLO_rows": 1
+    },
+    {
+      "file_name": "01450.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "1a9ebbe37d127e631a7ab548b544d2fe917665126e7690ffb4f5f8490d6b3b5b",
+      "source_XML_sha256": "bac9546099471d63424f9f4e857c1b67bbe0913dd96ea3831ec68ebe9723d3d9",
+      "original_filename": "image_0003016_2020-02-13_12-50-17",
+      "source_block": "block_031",
+      "capture_timestamp": "2020-02-13_12-50-17",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 2019,
+          "centre_and_size_L1_difference": 0.8620999999999412,
+          "angle_mod_pi_difference_radians": 3.4641020674186507e-07,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 0,
+      "overlay": "results\\label_audit\\sample_overlays\\01450.jpg",
+      "derived_classic_YOLO_rows": 1
+    },
+    {
+      "file_name": "03485.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "3698ff2c8582da2646e0f6bfee44b23d728298d59d2cb2028f9881aed600340c",
+      "source_XML_sha256": "8121b61882abe6a1e6d4dbaef6f78b20e0b357b41f3e89c4f572400713121753",
+      "original_filename": "image_0007289_2020-02-18_14-10-27",
+      "source_block": "block_073",
+      "capture_timestamp": "2020-02-18_14-10-27",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 4638,
+          "centre_and_size_L1_difference": 0.8322000000000287,
+          "angle_mod_pi_difference_radians": 3.4641020674186507e-07,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 0,
+      "overlay": "results\\label_audit\\sample_overlays\\03485.jpg",
+      "derived_classic_YOLO_rows": 1
+    },
+    {
+      "file_name": "07062.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "22e3b24e9c1c45d1150adbce5ca9d2ba81cbe4fe3d6512001b3b479e4c2765df",
+      "source_XML_sha256": "cf9297fc4a1e5d11cdf318af8b87741bfd156db54c1cb32513c578b4df73719d",
+      "original_filename": "image_0015940_2020-02-28_13-8-2",
+      "source_block": "block_160",
+      "capture_timestamp": "2020-02-28_13-8-2",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 9183,
+          "centre_and_size_L1_difference": 1.1078000000000543,
+          "angle_mod_pi_difference_radians": 0.0,
+          "XML_name": "cow"
+        },
+        {
+          "annotation_id": 9184,
+          "centre_and_size_L1_difference": 0.9659999999999798,
+          "angle_mod_pi_difference_radians": 0.0,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 2,
+      "overlay": "results\\label_audit\\sample_overlays\\07062.jpg",
+      "derived_classic_YOLO_rows": 2
+    },
+    {
+      "file_name": "00159.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "d6d0fb8fd6b301e2c99156aaeee919059ca9328e3b3c92e2726144c642ac2da5",
+      "source_XML_sha256": "8fcf7d3e498ada3fccad89c2a34b7220ff3fa9f966f16cdba786813d9bc5273a",
+      "original_filename": "image_0000223_2020-02-05_13-54-27",
+      "source_block": "block_003",
+      "capture_timestamp": "2020-02-05_13-54-27",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 250,
+          "centre_and_size_L1_difference": 0.9660000000000082,
+          "angle_mod_pi_difference_radians": 3.4641020674186507e-07,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [],
+      "XML_zero_area_rotated_objects": 0,
+      "overlay": "results\\label_audit\\sample_overlays\\00159.jpg",
+      "derived_classic_YOLO_rows": 1
+    },
+    {
+      "file_name": "06714.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "66e0afb6078ddbc24ca3104cd7d8cf31c6c425584f1d227624a290d54b04bac1",
+      "source_XML_sha256": "51b6ef10de043677e89d6f7ab776e68c180d0dc4f41282da7a7cf5c8902ac731",
+      "original_filename": "image_0014902_2020-02-27_14-1-13",
+      "source_block": "block_150",
+      "capture_timestamp": "2020-02-27_14-1-13",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 8789,
+          "centre_and_size_L1_difference": 552.4551,
+          "angle_mod_pi_difference_radians": 1.570593,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [
+        {
+          "annotation_id": 8789,
+          "centre_and_size_L1_difference": 552.4551,
+          "angle_mod_pi_difference_radians": 1.570593,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_zero_area_rotated_objects": 1,
+      "overlay": "results\\label_audit\\sample_overlays\\06714.jpg",
+      "derived_classic_YOLO_rows": 1
+    },
+    {
+      "file_name": "02543.jpg",
+      "sampled_role": "train",
+      "source_jpeg_sha256": "ad3644c1ecbd571edc46e4032b7b7c1fb76b579606e5eb913ab10e252865bf3e",
+      "source_XML_sha256": "84e7f059f5878d4f48b99fa0ffd921af90556bb4b0949975da41c1a607c44f19",
+      "original_filename": "image_0005227_2020-02-15_12-57-20",
+      "source_block": "block_053",
+      "capture_timestamp": "2020-02-15_12-57-20",
+      "XML_JSON_geometric_matches": [
+        {
+          "annotation_id": 3431,
+          "centre_and_size_L1_difference": 0.865099999999984,
+          "angle_mod_pi_difference_radians": 3.4641020674186507e-07,
+          "XML_name": "cow"
+        },
+        {
+          "annotation_id": 3432,
+          "centre_and_size_L1_difference": 579.2327,
+          "angle_mod_pi_difference_radians": 1.5705930000000001,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_JSON_mismatches_above_declared_rounding_tolerance": [
+        {
+          "annotation_id": 3432,
+          "centre_and_size_L1_difference": 579.2327,
+          "angle_mod_pi_difference_radians": 1.5705930000000001,
+          "XML_name": "cow"
+        }
+      ],
+      "XML_zero_area_rotated_objects": 0,
+      "overlay": "results\\label_audit\\sample_overlays\\02543.jpg",
+      "derived_classic_YOLO_rows": 2
+    }
+  ],
+  "new_model_forward_or_training": false,
+  "validation_or_test_pixels_opened": false,
+  "derived_label_definition": "axis-aligned envelope of image-clipped published rotated cow-body polygon; source JSON retained",
+  "rotated_detector_oriented_AP_not_equivalent": true,
+  "source_session_split_verified": false,
+  "full_source_metadata_recovery": "Separate XML-stage audit needed;12train samples expose original timestamps and block fields"
+}

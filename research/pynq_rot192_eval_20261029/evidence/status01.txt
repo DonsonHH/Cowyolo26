@@ -1,0 +1,20 @@
+JobID|State|ExitCode|Elapsed|MaxRSS
+130567|FAILED|1:0|00:02:02|
+130567.batch|FAILED|1:0|00:02:02|862768K
+{"validation_done": 1, "ORT_forwards": {"FP32": 1, "QDQ": 1}}
+{"validation_done": 321, "ORT_forwards": {"FP32": 321, "QDQ": 321}}
+{"validation_done": 641, "ORT_forwards": {"FP32": 641, "QDQ": 641}}
+{"validation_done": 961, "ORT_forwards": {"FP32": 961, "QDQ": 961}}
+{"validation_done": 1281, "ORT_forwards": {"FP32": 1281, "QDQ": 1281}}
+{"scene": "original", "frame0": 0, "ORT_forwards": {"FP32": 1572, "QDQ": 1572}}
+{"scene": "original", "frame0": 2500, "ORT_forwards": {"FP32": 2072, "QDQ": 2072}}
+{"scene": "original", "frame0": 5000, "ORT_forwards": {"FP32": 2572, "QDQ": 2572}}
+{"scene": "original", "frame0": 7500, "ORT_forwards": {"FP32": 3072, "QDQ": 3072}}
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/tools/evaluate_quality.py", line 153, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/tools/evaluate_quality.py", line 88, in main
+    if anchor:assert inputsha==p['expected_NN_input_hashes'][spec['name']+'_f'+str(frame)+'_s192']
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

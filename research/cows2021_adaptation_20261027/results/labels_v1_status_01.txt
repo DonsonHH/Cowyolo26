@@ -1,0 +1,40 @@
+             JOBID|PARTITION|                     NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS
+129916|idcoo-cows21-label-loader|cu|COMPLETED|0:0|00:00:23|4|12G|
+129916.batch|batch||COMPLETED|0:0|00:00:23|4||1180K
+129916.0|python||COMPLETED|0:0|00:00:23|4||800K
+[34m[1mtrain: [0mNew cache created: /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/train.cache
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2491.1±508.6 MB/s, size: 281.8 KB)
+[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val... 254 images, 0 backgrounds, 0 corrupt: 16% ━╸────────── 254/1571 755.4it/s 0.1s<1.7s[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val... 515 images, 0 backgrounds, 0 corrupt: 33% ━━━╸──────── 515/1571 1.3Kit/s 0.2s<0.8s[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val... 785 images, 0 backgrounds, 0 corrupt: 50% ━━━━━╸────── 785/1571 1.7Kit/s 0.3s<0.5s[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val... 1044 images, 0 backgrounds, 0 corrupt: 66% ━━━━━━━╸──── 1044/1571 2.0Kit/s 0.4s<0.3s[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val... 1304 images, 0 backgrounds, 0 corrupt: 83% ━━━━━━━━━╸── 1304/1571 2.2Kit/s 0.5s<0.1s[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val... 1571 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1571/1571 2.6Kit/s 0.6s
+[34m[1mval: [0mNew cache created: /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val.cache
+{"status": "DERIVED_LABELS_AND_REAL_ULTRALYTICS_LOADER_PASS", "job_id": "129916", "created_UTC": "2026-10-27T13:30:41.849967+00:00", "Ultralytics": "8.4.63", "data_yaml": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/data.yaml", "data_yaml_sha256": "04e2a3d3dfd625116c4237896e5f07e15eff4356d92ba2916fdf1bc3c7c4b215", "prepared_manifest_sha256": "fd664b040229d249fc0fd4135466696141f95e3449fad5bb98aeb2f3062f5423", "source_image_audit_path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/image_audit_01", "source_image_audit_sha256": "904b73ee2d79346485570c7dbc11ee91df5b53826509225f59aa571595bfa832", "loader_results": [{"split": "train", "images": 6809, "actual_loaded_annotation_rows": 8888}, {"split": "val", "images": 1571, "actual_loaded_annotation_rows": 1864}], "quarantined_images": 0, "all_13165_metadata_geometries_recomputed_max_difference_pixels": 2.2737367544323206e-13, "dHash_candidate_review_still_pending": false, "candidate_final_image_pixels_accessed": false, "final_independent_test_certified": false, "new_model_training_or_forward": false, "whole_goal_complete": false}
+{
+  "status": "DERIVED_LABELS_AND_REAL_ULTRALYTICS_LOADER_PASS",
+  "job_id": "129916",
+  "created_UTC": "2026-10-27T13:30:41.849967+00:00",
+  "Ultralytics": "8.4.63",
+  "data_yaml": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/data.yaml",
+  "data_yaml_sha256": "04e2a3d3dfd625116c4237896e5f07e15eff4356d92ba2916fdf1bc3c7c4b215",
+  "prepared_manifest_sha256": "fd664b040229d249fc0fd4135466696141f95e3449fad5bb98aeb2f3062f5423",
+  "source_image_audit_path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/image_audit_01",
+  "source_image_audit_sha256": "904b73ee2d79346485570c7dbc11ee91df5b53826509225f59aa571595bfa832",
+  "loader_results": [
+    {
+      "split": "train",
+      "images": 6809,
+      "actual_loaded_annotation_rows": 8888
+    },
+    {
+      "split": "val",
+      "images": 1571,
+      "actual_loaded_annotation_rows": 1864
+    }
+  ],
+  "quarantined_images": 0,
+  "all_13165_metadata_geometries_recomputed_max_difference_pixels": 2.2737367544323206e-13,
+  "dHash_candidate_review_still_pending": false,
+  "candidate_final_image_pixels_accessed": false,
+  "final_independent_test_certified": false,
+  "new_model_training_or_forward": false,
+  "whole_goal_complete": false
+}

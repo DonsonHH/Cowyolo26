@@ -1,0 +1,32 @@
+test_01_ideal_low_detection_preserves_active_ID (__main__.ActualTrackerTests.test_01_ideal_low_detection_preserves_active_ID) ... FAIL
+test_02_lost_track_cannot_use_low_reactivation (__main__.ActualTrackerTests.test_02_lost_track_cannot_use_low_reactivation) ... ok
+test_03_low_detection_does_not_create_new_identity (__main__.ActualTrackerTests.test_03_low_detection_does_not_create_new_identity) ... ok
+test_04_disjoint_low_detection_does_not_match (__main__.ActualTrackerTests.test_04_disjoint_low_detection_does_not_match) ... ok
+test_05_first_stage_score_fusion_remains_enabled (__main__.ActualTrackerTests.test_05_first_stage_score_fusion_remains_enabled) ... ok
+test_06_normal_high_detection_keeps_identity (__main__.ActualTrackerTests.test_06_normal_high_detection_keeps_identity) ... ok
+test_07_two_low_detections_keep_two_distinct_active_IDs (__main__.ActualTrackerTests.test_07_two_low_detections_keep_two_distinct_active_IDs) ... FAIL
+test_08_IoU_below_half_is_still_rejected (__main__.ActualTrackerTests.test_08_IoU_below_half_is_still_rejected) ... ok
+test_09_only_secondstage_fusion_block_is_removed (__main__.ActualTrackerTests.test_09_only_secondstage_fusion_block_is_removed) ... skipped 'candidate scope check'
+
+======================================================================
+FAIL: test_01_ideal_low_detection_preserves_active_ID (__main__.ActualTrackerTests.test_01_ideal_low_detection_preserves_active_ID)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/secondstage_iou_20261028/tools/test_real_gate.py", line 22, in test_01_ideal_low_detection_preserves_active_ID
+    self.assertEqual(len(second),1);self.assertEqual(second[0,4],first[0,4])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_07_two_low_detections_keep_two_distinct_active_IDs (__main__.ActualTrackerTests.test_07_two_low_detections_keep_two_distinct_active_IDs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/secondstage_iou_20261028/tools/test_real_gate.py", line 43, in test_07_two_low_detections_keep_two_distinct_active_IDs
+    self.assertEqual(len(b),2);self.assertEqual(set(a[:,4]),set(b[:,4]))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.005s
+
+FAILED (failures=2, skipped=1)

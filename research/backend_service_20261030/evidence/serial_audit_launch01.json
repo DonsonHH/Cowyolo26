@@ -1,0 +1,13 @@
+{
+  "created_UTC": "2026-10-30T03:59:01.345711+00:00",
+  "port": "COM6",
+  "baud": 115200,
+  "format": "8N1",
+  "command_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\backend_service_20261030\\tools\\serial_launch_audit.txt",
+  "no_reset_command": true,
+  "status": "SERIAL_COMMAND_COMPLETE",
+  "exit_code": 0,
+  "output": "python3 -c 'from pathlib import Path; import subprocess,os,json; r=Path(\"/home/xilinx/jupyter_notebooks/cow_research_backend_serial_recovery_20261030\"); assert not (r/\"numeric_audit_launch.json\").exists(); log=(r/\"numeric_audit.log\").open(\"xb\"); p=subprocess.Popen([\"/usr/local/share/pynq-venv/bin/python3\",\"-u\",\"-B\",str(r/\"audit_board_files_recovery.py\")],stdout=log,stderr=subprocess.STDOUT,cwd=r,start_new_session=True); d={\"PID\":p.pid,\"scope\":\"read_only_no_forwards\"}; (r/\"numeric_audit_launch.json\").write_text(json.dumps(d)+\"\\n\"); print(json.dumps(d))'; printf '\\nCOW_SERIAL_DONE_42580bff6730 rc=%s\\n' \"$?\"\r\n\u001b[?2004l\r{\"PID\": 31444, \"scope\": \"read_only_no_forwards\"}\r\n\r\nCOW_SERIAL_DONE_42580bff6730 rc=0\r\n\u001b[?2004hxilinx@pynq:~$ ",
+  "prefix": "",
+  "elapsed_s": 0.9380000000091968
+}

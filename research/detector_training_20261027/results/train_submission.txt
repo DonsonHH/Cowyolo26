@@ -1,0 +1,15 @@
+PARTITION|AVAIL|STATE|NODELIST|GRES
+cu*|up|mix|cu[16-20]|(null)
+cu*|up|idle|cu[01-15]|(null)
+8gpu|up|alloc|gpu01|gpu:V100S:8
+4gpu|up|mix|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+         129749_11|     4gpu|         renly-patrol-m5| RUNNING|      5:38|   1:30:00|     1|gpu02
+         129749_10|     4gpu|         renly-patrol-m5| RUNNING|      5:55|   1:30:00|     1|gpu02
+          129749_9|     4gpu|         renly-patrol-m5| RUNNING|      6:40|   1:30:00|     1|gpu02
+          129749_8|     4gpu|         renly-patrol-m5| RUNNING|     20:26|   1:30:00|     1|gpu03
+          129749_7|     4gpu|         renly-patrol-m5| RUNNING|     21:28|   1:30:00|     1|gpu02
+          129749_6|     4gpu|         renly-patrol-m5| RUNNING|     21:37|   1:30:00|     1|gpu03
+            129760|       cu|   renly-m5-audit-report| PENDING|      0:00|     20:00|     1|(Dependency)
+            129783|       cu|    renly-m5-final-audit| PENDING|      0:00|     20:00|     1|(Dependency)
+129785

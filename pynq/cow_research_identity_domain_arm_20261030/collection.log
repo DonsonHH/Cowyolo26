@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/collect_results.py", line 13, in <module>
+    assert state['model_forwards']==97 and len(state['warmups'])==2 and sha(PL.bitfile_name)==plan['O8_bit_sha256']
+  File "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/collect_results.py", line 7, in sha
+    def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+AttributeError: 'str' object has no attribute 'read_bytes'

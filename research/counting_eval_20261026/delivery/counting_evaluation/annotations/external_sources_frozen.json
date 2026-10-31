@@ -1,0 +1,13 @@
+{
+  "scope": "External domain test and real original-time motion coverage; model weights remain frozen",
+  "frozen_before_external_inference": true,
+  "gate": {"axis": "x", "roi_y_fraction": [0.1, 0.95], "boundaries": [0.4, 0.6], "A": "left", "B": "right", "stable_samples": 3, "max_gap_s": 2},
+  "publisher_annotation_convention": {"file": "Ground Truth/gt.txt", "frame_base": 0, "video_frames_observed": 479, "annotation_rows_observed": 1775, "track_id_values_observed": 9, "notes": "Actual counts differ from publisher prose of 478 frames, 1774 rows and 8 animals. Do not equate track ID count with unique animal count; inspect temporal spans and frame alignment."},
+  "real_motion_source_observations": [
+    {"source": "Ground Truth/Toros.mp4", "observed_direction": "right-to-left", "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c", "evidence": "Original source contact sheet, animals advance from right boundary toward left rocks without reverse playback"},
+    {"source": "Videos/Toros2.mp4", "observed_direction": "right-to-left", "source_sha256": "c216d4f3ae6ad6a9bd9e11ec83a0c7b84ee3e71d876af23d01e353e3c33ce9f0"},
+    {"source": "Videos/Toros4.mp4", "observed_direction": "left-to-right", "source_sha256": "71a6eb694a3df3fcbdc4f58ac95275fe11a55c7eef2f9fe1fd03c9b608147f87", "limitation": "Camera movement and different scene; this establishes original-time opposite image direction, not simultaneous two-way traffic at one fixed camera"}
+  ],
+  "ground_truth_tiers": {"Toros": "Publisher manually corrected trajectories; structural and visual alignment checks required", "other_videos": "Source motion coverage and developer predictions only; new agent labels require human validation"},
+  "no_claim": ["No simultaneous bidirectional milking-passage validation from these different-camera videos", "No individual Holstein identity evaluation from Brangus clips", "No PYNQ speed/energy result"]
+}

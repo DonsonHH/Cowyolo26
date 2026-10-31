@@ -1,0 +1,94 @@
+{
+  "status": "ALL77_FILES_TWELVE_COUNTER_PATHS_LOST_AGES_AND_IOU_COSTS_VERIFIED",
+  "protocol_sha256": "a921b8bde430c4b58481002b9de261d3f5080d33870d7be9d898419df4fd5643",
+  "summary_sha256": "833945bf66933ea2d4d99063decd32e3d784529839a4c13da88a290d335d7a22",
+  "candidate_module_sha256": "3bb2b4f1804f6cacb4e672adfa3b8e7ac68ed57d2b5231929cf74e7fdaed328d",
+  "files": 77,
+  "conditions": [
+    {
+      "condition": "active_only_iou_seed26",
+      "independent_event_paths": 2,
+      "handoff_events": 12,
+      "low_matches": 338,
+      "lost_recoveries": 0
+    },
+    {
+      "condition": "allow_lost_iou_seed26",
+      "independent_event_paths": 2,
+      "handoff_events": 12,
+      "low_matches": 546,
+      "lost_recoveries": 83
+    },
+    {
+      "condition": "active_only_iou_seed27",
+      "independent_event_paths": 2,
+      "handoff_events": 11,
+      "low_matches": 189,
+      "lost_recoveries": 0
+    },
+    {
+      "condition": "allow_lost_iou_seed27",
+      "independent_event_paths": 2,
+      "handoff_events": 11,
+      "low_matches": 395,
+      "lost_recoveries": 55
+    },
+    {
+      "condition": "active_only_iou_seed28",
+      "independent_event_paths": 2,
+      "handoff_events": 11,
+      "low_matches": 259,
+      "lost_recoveries": 0
+    },
+    {
+      "condition": "allow_lost_iou_seed28",
+      "independent_event_paths": 2,
+      "handoff_events": 11,
+      "low_matches": 436,
+      "lost_recoveries": 121
+    }
+  ],
+  "counter_paths": 12,
+  "baseline_full_regressions": 3,
+  "trace_updates": 13050,
+  "cost_entries": 3411,
+  "nonempty_decisions": 2416,
+  "all_low_matches": 2163,
+  "all_lost_recoveries": 259,
+  "lost_recoveries_in_scope": 33,
+  "ROI_track_rows_including_history": 3434,
+  "maximum_cost_difference": 2.922240818215016e-07,
+  "comparisons": [
+    {
+      "seed": 26,
+      "baseline_events": 12,
+      "candidate_events": 12,
+      "times_and_directions_exact": true,
+      "full_event_records_exact": false
+    },
+    {
+      "seed": 27,
+      "baseline_events": 11,
+      "candidate_events": 11,
+      "times_and_directions_exact": true,
+      "full_event_records_exact": false
+    },
+    {
+      "seed": 28,
+      "baseline_events": 11,
+      "candidate_events": 11,
+      "times_and_directions_exact": true,
+      "full_event_records_exact": false
+    }
+  ],
+  "single_eligibility_expression_AST_change": true,
+  "current_scope_actual_low_detection_in_ROI": 4,
+  "current_scope_recovery_ID_actually_output_in_ROI": 4,
+  "maximum_recovery_gap_frames": 155,
+  "removal_check_occurs_after_association_155frame_gap_possible": true,
+  "independent_source_accuracy": null,
+  "new_detector_forwards": 0,
+  "training_updates": 0,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

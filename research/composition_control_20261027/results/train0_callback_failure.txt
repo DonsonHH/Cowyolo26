@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/train_one.py", line 65, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/train_one.py", line 49, in main
+    assert trainer.observed_batches==1850 and len(history)==10 and trainer.observed_optimizer_steps>0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: gpu02: task 0: Exited with exit code 1
+Optimizer stripped from /share/home/renly/projects/idcoo_research_20261026/composition_control/results/training/mixed_seed26/weights/best.pt, 5.3MB
+
+Validating /share/home/renly/projects/idcoo_research_20261026/composition_control/results/training/mixed_seed26/weights/best.pt...
+Ultralytics 8.4.63 🚀 Python-3.13.9 torch-2.8.0+cu128 CUDA:0 (Tesla V100S-PCIE-32GB, 32494MiB)
+YOLO26n summary (fused): 122 layers, 2,375,031 parameters, 0 gradients, 5.2 GFLOPs
+
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 2/6 3.3it/s 0.2s<1.2s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 3/6 5.3it/s 0.3s<0.6s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 4/6 6.2it/s 0.4s<0.3s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 6/6 10.4it/s 0.6s
+                   all        370        683      0.919      0.959      0.983      0.771
+Speed: 0.0ms preprocess, 0.3ms inference, 0.0ms loss, 0.1ms postprocess per image
+11 /share/home/renly/projects/idcoo_research_20261026/composition_control/results/training/mixed_seed26/results.csv
+args.yaml 1872
+initial_state.json 228
+results.csv 1372
+observed_history.json 3785
+progress.json 110

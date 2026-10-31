@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "status": "FROZEN_BEFORE_NEW_GALLERY_DOWNLOAD_AND_ANY_NEW_FEATURES",
+  "created_UTC": "2026-10-29T07:23:24.644145+00:00",
+  "prior_gallery_final_sha256": "4dea2618414a5017e182ec12350ec6271ab628095f7705711364bc23c6c3625f",
+  "source_final_sha256": "940b6ce5656dd8e72ba508320b79c8ca20f8bcdc21e845a2c474b4416492d785",
+  "author_paper_URL": "https://arxiv.org/html/2410.12695v2#S3.SS2",
+  "official_index_sha256": "bb2c6b8c47ff9c712953f001392aa360f389a9cd2c726c7978da1b0d6e281576",
+  "official_info_sha256": "70f465c5e5209fd5bbe8c8740d95539e66ee06a8d4da5b9790195c5d3a5b8b87",
+  "validation_registered_IDs": [
+    "007",
+    "011",
+    "019",
+    "041",
+    "045"
+  ],
+  "validation_unknown_IDs": [
+    "012",
+    "022",
+    "024",
+    "030",
+    "039",
+    "081"
+  ],
+  "evaluation_registered_IDs": [
+    "009",
+    "020",
+    "026",
+    "028",
+    "031",
+    "054"
+  ],
+  "evaluation_unknown_IDs": [
+    "001",
+    "010",
+    "033",
+    "035",
+    "040",
+    "076"
+  ],
+  "gradient_training_IDs": [
+    "003",
+    "004",
+    "005",
+    "013",
+    "016",
+    "021",
+    "027",
+    "036",
+    "038",
+    "043",
+    "046",
+    "047",
+    "048",
+    "049",
+    "053",
+    "055",
+    "059",
+    "062",
+    "072",
+    "085"
+  ],
+  "validation_gallery_day": "2023Aug17",
+  "validation_query_day": "2023Aug18",
+  "evaluation_gallery_day": "2023Aug19",
+  "evaluation_query_day": "2023Aug20",
+  "new_validation_camera1_directory_counts": {
+    "007": 19,
+    "011": 21,
+    "019": 17,
+    "041": 20,
+    "045": 22
+  },
+  "conditions": [
+    {
+      "name": "A_official_frozen",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/models/mobilenet_v3_small-047dcff4.pth",
+      "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+      "threshold": 0.873113640861386,
+      "preprocess": "official"
+    },
+    {
+      "name": "B_letterbox_frozen",
+      "seed": null,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/models/mobilenet_v3_small-047dcff4.pth",
+      "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+      "threshold": 0.8952453223004778,
+      "preprocess": "letterbox"
+    },
+    {
+      "name": "C_letterbox_trained_seed26",
+      "seed": 26,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+      "checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "threshold": 0.8445389603236383,
+      "preprocess": "letterbox"
+    },
+    {
+      "name": "C_letterbox_trained_seed27",
+      "seed": 27,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/best_encoder.pt",
+      "checkpoint_sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+      "threshold": 0.8642478136864173,
+      "preprocess": "letterbox"
+    },
+    {
+      "name": "C_letterbox_trained_seed28",
+      "seed": 28,
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/best_encoder.pt",
+      "checkpoint_sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+      "threshold": 0.8306161540247587,
+      "preprocess": "letterbox"
+    }
+  ],
+  "crop_rules": [
+    {
+      "name": "P0_original",
+      "apply_to": "none",
+      "center_width": 1.0,
+      "center_height": 1.0,
+      "rotation_CCW": 0,
+      "selection_eligible": true
+    },
+    {
+      "name": "P1_border08_both",
+      "apply_to": "gallery_and_query",
+      "center_width": 0.84,
+      "center_height": 0.84,
+      "rotation_CCW": 0,
+      "selection_eligible": true
+    },
+    {
+      "name": "P2_query_center70x80",
+      "apply_to": "query_only",
+      "center_width": 0.7,
+      "center_height": 0.8,
+      "rotation_CCW": 0,
+      "selection_eligible": true
+    },
+    {
+      "name": "P3_query_rot180_control",
+      "apply_to": "query_only",
+      "center_width": 1.0,
+      "center_height": 1.0,
+      "rotation_CCW": 180,
+      "selection_eligible": false
+    }
+  ],
+  "crop_rounding": "left/top=floor((1-fraction)*native_size/2);right/bottom=ceil((1+fraction)*native_size/2);thenoriginalencodertransform.",
+  "threshold_methods": [
+    "original_fixed",
+    "validation_calibrated"
+  ],
+  "validation_calibration": "Originalcalibrationfunction:empiricalunknownFAR<=0.05,maxCthenminWthenhigherthreshold;30unknownallowsatmost1.",
+  "rule_selection": "Perencoder:calibratedvalidation(C,-W,closed_top1,-ruleindex)amongP0/P1/P2;neverP3;freezeallconditionsandthresholdsbeforeloadinganycurrentevaluationimages.",
+  "all_model_rules_reported": true,
+  "all_seeds_reported": true,
+  "retraining_updates": 0,
+  "training_augmentation_or_model_weight_changes": false,
+  "evaluation_data_previously_development_used": true,
+  "real_event_reference_available": false,
+  "real_event_gallery_is_retrospective": true,
+  "baseline_regression": "P0evaluationoriginalthresholdmustmatchall60oldcuratedand12realeventcandidate/acceptancedecisions;featuresandcosine<=1e-5.",
+  "input_metadata_sha256": {
+    "evaluation_gallery.json": "6169aa5e166d472b8d4882da1a4952b3fe5d79d16fa7a090234f57300b8adc52",
+    "evaluation_query.json": "8f73a18e2c6ab25b75e2730273555859a9040a34cf762a0c919c6d8288f2e3f4",
+    "identity_metrics.py": "2d3a3ceb4ca0599e2d96d782aee57e767e1459dd9a900676d14a31ca3bb1ed60",
+    "new_validation_gallery_selection.json": "9eb3bb0593ac971585edff3946331aab86456fc8dd9ec8a6b37710ed93f700be",
+    "real_event_query.json": "ef2be04de9cfd59df40873ac2279eb61539d3aa85a12a97e5627d2d70dc3e8ba",
+    "training_primitives.py": "b47ca84f25810f875ff3eb95f430ffbcec3d180ae9b6d0ac8aa0823ada8d67d3",
+    "validation_query.json": "544045d9278483a01fdc10566fc360aa3ccf1e50c1116f5801440ff0fc97ec30"
+  },
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

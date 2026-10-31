@@ -1,0 +1,13 @@
+{
+  "status": "REPRODUCED_VECTOR_DRIFT",
+  "training_image": "data/2023Aug15/049/00011_1.jpg",
+  "training_image_sha256": "729758f5925c6f23523470f3a680bd26fb48318f740ed94a993bdf659ecf0516",
+  "FP32_vs_QDQ_cosine": 0.3267490013682078,
+  "maximum_feature_error": 0.16562388837337494,
+  "engineering_numerical_signal": "Cosine<0.99 on the same crop is a diagnostic drift trigger, not a recognition accuracy threshold",
+  "graph_sha256": {
+    "embedding_fp32.onnx": "e8de096ebee60f50e72258cb6c71efe1328cfe065061511bb526dc2e101dc63d",
+    "embedding_conv_qdq.onnx": "6cd86e07681be5c25308a7fed78853f5652a045f6d5a1ead0d7373a3225766e2"
+  },
+  "no_validation_or_evaluation_image_used": true
+}

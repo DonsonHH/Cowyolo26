@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="/MultiCamCows2024.github.io/assets/css/style.css?v=c330af00b0e0dc8fefb7220c74c6d612fb82b264" media="screen">
+    <link rel="stylesheet" href="/MultiCamCows2024.github.io/assets/css/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="/MultiCamCows2024.github.io/assets/css/non-screen.css" media="handheld, only screen and (max-device-width:640px)">
+
+    <script src="/MultiCamCows2024.github.io/assets/js/modernizr.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/MultiCamCows2024.github.io/assets/js/headsmart.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>MultiCamCows2024 - A multi-view image dataset for indoor Holstein-Friesian cow (re-)identification | MultiCamCows2024</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="MultiCamCows2024 - A multi-view image dataset for indoor Holstein-Friesian cow (re-)identification" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="MultiCamCows2024 is a web user interface for linking the paper, the model and the datasets" />
+<meta property="og:description" content="MultiCamCows2024 is a web user interface for linking the paper, the model and the datasets" />
+<link rel="canonical" href="https://phoenix4582.github.io/MultiCamCows2024.github.io/" />
+<meta property="og:url" content="https://phoenix4582.github.io/MultiCamCows2024.github.io/" />
+<meta property="og:site_name" content="MultiCamCows2024" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="MultiCamCows2024 - A multi-view image dataset for indoor Holstein-Friesian cow (re-)identification" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"MultiCamCows2024 is a web user interface for linking the paper, the model and the datasets","headline":"MultiCamCows2024 - A multi-view image dataset for indoor Holstein-Friesian cow (re-)identification","name":"MultiCamCows2024","url":"https://phoenix4582.github.io/MultiCamCows2024.github.io/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/MultiCamCows2024.github.io/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/Phoenix4582/MultiCamCows2024.github.io">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>MultiCamCows2024</h1>
+            <h2>MultiCamCows2024 is a web user interface for linking the paper, the model and the datasets</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      
+        <div id="no-downloads">
+          <span class="inner">
+          </span>
+        </div>
+      
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1 id="multicamcows2024---a-multi-view-image-dataset-for-indoor-holstein-friesian-cow-re-identification">MultiCamCows2024 - A multi-view image dataset for indoor Holstein-Friesian cow (re-)identification</h1>
+
+<h2 id="authors">Authors</h2>
+<p>Phoenix Yu (Junjie Yu); Tilo Burghardt; Andrew Dowsey, Neill Campbell</p>
+
+<h2 id="overview">Overview</h2>
+<p>MultiCamCows2024 is a multi-view image set for individual identification of Holstein-Friesian cows first available. Captured by three different cameras over seven days on a working farm, the dataset comprises 101,329 images from 90 unique cows. Pre-trained a species identifier based on RetinaNet, raw tracklets of cow individuals were extracted from monitored videos. After noises filtering and tracklet merging across each camera, both supervised and self-supervised learning frameworks were employed for individual cow identification. Utilising the dataset, it can be concluded that perfect tracklets with extra supervision signals can be used to build an automatic cow identifier with no human input. Furthermore, the self-supervised framework not only improves identification accuracy but also lays the groundwork for addressing open-set challenges in future research endeavours and opportunities for accurate individual cow identification, with implications for livestock management, behaviour analysis, and agricultural monitoring. The GitHub repository for our individual cow identifiers is also available at <a href="https://github.com/Phoenix4582/CowIDentifier">https://github.com/Phoenix4582/CowIDentifier</a>.</p>
+
+<p>Dataset is available for download from <a href="https://data.bris.ac.uk/data/dataset/2inu67jru7a6821kkgehxg3cv2">here</a>.</p>
+
+<h2 id="citations">Citations</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@misc{yu2024multicamcows2024multiviewimage,
+      title={MultiCamCows2024 -- A Multi-view Image Dataset for AI-driven Holstein-Friesian Cattle Re-Identification on a Working Farm}, 
+      author={Phoenix Yu and Tilo Burghardt and Andrew W Dowsey and Neill W Campbell},
+      year={2024},
+      eprint={2410.12695},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.12695}, 
+}
+</code></pre></div></div>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>We thank Dr Neill Campbell and Dr Tilo Burghardt for their tireless efforts of educating the art of starting and maintaining a PhD research project from scratch. We thank Andrew Drowsey for his continuous support for hardware management and occasional checkups for the progress of PhD students. We thank the members of John Oldacre Center AI meeting for their lasting passion of innovations and interdiscipinary communication. We thank the University of Bristol for the many aspects of opportunity, the School of Computer Science for professional knowledge and the Veterinary School for providing a healthy testing farm. We thank all the loved ones who provided us with support from many aspects within our group.</p>
+
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            
+              <p>this project by <a href="https://github.com/Phoenix4582">Phoenix4582</a> can be found on <a href="https://github.com/Phoenix4582/MultiCamCows2024.github.io">GitHub</a></p>
+            
+            
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+  </body>
+</html>

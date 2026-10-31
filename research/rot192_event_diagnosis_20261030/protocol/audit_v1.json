@@ -1,0 +1,103 @@
+{
+  "status": "FROZEN_BEFORE_FIXED_ROT192_IMPLEMENTATION_EVENT_DIAGNOSIS",
+  "created_host_UTC": "2026-10-29T13:24:44.504493+00:00",
+  "source_frame0_scope_inclusive": [
+    8912,
+    10873
+  ],
+  "width": 2560,
+  "height": 1440,
+  "source_fps": 25,
+  "inference_stride": 5,
+  "caches": [
+    {
+      "condition": "FP32",
+      "group": "fixed192rot90seed26_three_numeric_implementations",
+      "size": 192,
+      "seed": 26,
+      "raw_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\delivery\\results\\quality_v2\\original\\FP32\\raw_predictions.json.gz",
+      "trace_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\delivery\\results\\quality_v2\\original\\FP32\\stride5_counter_trace.json.gz",
+      "summary_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\rot192_event_diagnosis_20261030\\input\\FP32_summary.json",
+      "raw_sha256": "b5510270d4e906c029af1eb0d0742315e638471207047a7764cc2fc03997b252",
+      "trace_sha256": "08f88a11d575efdb6c55cfb2b0bc61002b45d15274fdc4a246a9c91c6ce9882f",
+      "summary_sha256": "885726fd98b141d0c69ed439b5054e93dc811abab465ed8e6087fc9ad85dc047"
+    },
+    {
+      "condition": "QDQ",
+      "group": "fixed192rot90seed26_three_numeric_implementations",
+      "size": 192,
+      "seed": 26,
+      "raw_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\delivery\\results\\quality_v2\\original\\QDQ\\raw_predictions.json.gz",
+      "trace_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\delivery\\results\\quality_v2\\original\\QDQ\\stride5_counter_trace.json.gz",
+      "summary_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\rot192_event_diagnosis_20261030\\input\\QDQ_summary.json",
+      "raw_sha256": "774d5c5dd6b3b7803cc0cd1c625f837e7e783c05593cdcf16a88f332cf341c42",
+      "trace_sha256": "8acfc29c887dc056178e610505960a5ede648c18cccd0eaa21b1d6c3aad65dc6",
+      "summary_sha256": "36ff4b3b0684029123cb63f22d9060e7c9adc39a1a84066e3965882b3cdaa327"
+    },
+    {
+      "condition": "actual_O8",
+      "group": "fixed192rot90seed26_three_numeric_implementations",
+      "size": 192,
+      "seed": 26,
+      "raw_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\board_delivery\\results_v2\\original\\raw_predictions.json.gz",
+      "trace_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_rot192_eval_20261029\\board_delivery\\results_v2\\original\\stride5_counter_trace.json.gz",
+      "summary_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\rot192_event_diagnosis_20261030\\input\\actual_O8_summary.json",
+      "raw_sha256": "b28f42fc71fb50ab83f208fca07356f0e27b9eadfc5d11c9e603cda3d39c5226",
+      "trace_sha256": "d4825539b7a84e06be71d00d4c8e9146bd0fe4cd7f09867a27afe3045737ca26",
+      "summary_sha256": "d79e31449fb81ef559bebe9e877c4d654d8e8f0f22514f5629d8ed03ffd43988"
+    }
+  ],
+  "IoU_thresholds": [
+    0.5,
+    0.3
+  ],
+  "primary_IoU": 0.5,
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "perpendicular_ROI": [
+    0.34,
+    0.75
+  ],
+  "reference_tracks": 12,
+  "reference_box_samples": 581,
+  "reference_raw_prior_admissions": 12,
+  "reference_is_independent_ground_truth": false,
+  "actual_animal_identity_claimed": false,
+  "oracles": [
+    "presence_using_reference_center",
+    "raw_box_center_assisted_identity",
+    "post_confirmed_plus_valid_admitted_center_assisted_identity"
+  ],
+  "correspondence": "Perframeone-to-one,maxcardinalitythenmaximumtotalIoU;fixedthreshold;tiesflagged.",
+  "new_post_admission": "Onlyactualcounteradmissions;currentconfirmedIDmustmatchreference;previousrawmatchsame_referenceandaxiswithin1e-4;unresolvedkept.",
+  "primary_case": "S192_rot90_seed26",
+  "no_new_hyperparameters_or_crop_search": true,
+  "input_sha256": {
+    "actual_O8_summary.json": "d79e31449fb81ef559bebe9e877c4d654d8e8f0f22514f5629d8ed03ffd43988",
+    "FP32_summary.json": "885726fd98b141d0c69ed439b5054e93dc811abab465ed8e6087fc9ad85dc047",
+    "QDQ_summary.json": "36ff4b3b0684029123cb63f22d9060e7c9adc39a1a84066e3965882b3cdaa327",
+    "reference_admissions.json": "b47fac2a8370c1b1d8fc54dd0349d194a6c63fd13c053e50c72ce5995c5e341d",
+    "reference_boxes.json": "0ab13bb366a6ac805cbdd98d6adb04a220fec05e7e58f71b6e77efce8b9e5c03",
+    "reference_events.json": "e37f06c252257259bf4872926f2e542229d60b184a91617ad9edf1c28a37eb5c",
+    "zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+  },
+  "baseline_candidate_sha256": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+  "prior15_training_review_sha256": "8cabef8614e7b89fa6f24c86a1b9acd3b3b8bd8225175f099632d209423f729b",
+  "model_forwards": 0,
+  "training_updates": 0,
+  "board_actions": 0,
+  "whole_goal_complete": false,
+  "created_UTC": "2026-10-29T17:22:22.341016+00:00",
+  "reference_boxes_are_development640_model_outputs_not_GT": true,
+  "actual_model_count_regression": [
+    10,
+    11,
+    11
+  ],
+  "no_new_network_forwards": true,
+  "source_used_for_development": true
+}

@@ -1,0 +1,59 @@
+pnnxparam = encoder.pnnx.param
+pnnxbin = encoder.pnnx.bin
+pnnxpy = encoder_pnnx.py
+pnnxonnx = encoder.pnnx.onnx
+ncnnparam = encoder.ncnn.param
+ncnnbin = encoder.ncnn.bin
+ncnnpy = encoder_ncnn.py
+fp16 = 0
+optlevel = 2
+device = cpu
+inputshape = [1,3,224,224]f32
+inputshape2 = 
+input = 
+input2 = 
+customop = 
+moduleop = 
+get inputshape from traced inputs
+inputshape = [1,3,224,224]f32
+############# pass_level0
+inline module = torch.nn.modules.flatten.Flatten
+inline module = torchvision.models.mobilenetv3.InvertedResidual
+inline module = torchvision.ops.misc.Conv2dNormActivation
+inline module = torchvision.ops.misc.SqueezeExcitation
+inline module = torch.nn.modules.flatten.Flatten
+inline module = torchvision.models.mobilenetv3.InvertedResidual
+inline module = torchvision.ops.misc.Conv2dNormActivation
+inline module = torchvision.ops.misc.SqueezeExcitation
+
+----------------
+
+############# pass_level1
+############# pass_level2
+############# pass_level3
+############# pass_level4
+############# pass_level5
+############# pass_ncnn
+model inputshape = [1,3,224,224]f32
+FLOPS = 115.531M
+memory OPS = 7.467M
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_identity_ncnn_20261029/tools/export_encoder.py", line 84, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_identity_ncnn_20261029/tools/export_encoder.py", line 27, in main
+    try:pnnx.export(encoder,'encoder.pt',(probe,),device='cpu',check_trace=True,fp16=False)
+        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_identity_ncnn_20261029/dependencies/pnnx/utils/export.py", line 22, in export
+    return convert(ptpath, inputs, inputs2, input_shapes, input_types, input_shapes2, input_types2, device, customop, moduleop, optlevel, pnnxparam, pnnxbin, pnnxpy, pnnxonnx, ncnnparam, ncnnbin, ncnnpy, fp16)
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_identity_ncnn_20261029/dependencies/pnnx/utils/convert.py", line 160, in convert
+    spec.loader.exec_module(foo)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1161, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1091, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_identity_ncnn_20261029/results/export/encoder_pnnx.py", line 25
+    self.0_1_block_0_2 = nn.ReLU()
+            ^
+SyntaxError: invalid decimal literal

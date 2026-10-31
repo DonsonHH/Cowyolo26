@@ -1,0 +1,17 @@
+JobID                         JobName      State ExitCode    Elapsed     MaxRSS        NodeList 
+------------ ------------------------ ---------- -------- ---------- ---------- --------------- 
+129738                idcoo-qat-smoke     FAILED      1:0   00:00:08                      gpu02 
+129738.batch                    batch     FAILED      1:0   00:00:08      1176K           gpu02 
+129738.0                       python     FAILED      1:0   00:00:08       796K           gpu02 
+                                                                              ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/qat_study/tools/qat_components.py", line 123, in ort_session
+    return ort.InferenceSession(str(path), sess_options=options, providers=['CPUExecutionProvider'])
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/dependencies_offline/onnxruntime/capi/onnxruntime_inference_collection.py", line 485, in __init__
+    self._create_inference_session(providers, provider_options, disabled_optimizers)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/dependencies_offline/onnxruntime/capi/onnxruntime_inference_collection.py", line 584, in _create_inference_session
+    sess.initialize_session(providers, provider_options, disabled_optimizers)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+onnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Node (/encoder/encoder.0/encoder.0.3/Add) Op (QLinearAdd) [TypeInferenceError] Scale and Zero-point must be a scalar
+srun: error: gpu02: task 0: Exited with exit code 1

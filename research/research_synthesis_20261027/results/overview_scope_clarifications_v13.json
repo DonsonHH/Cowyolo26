@@ -1,0 +1,30 @@
+{
+  "created_UTC": "2026-10-30T08:30:12.366710+00:00",
+  "before_snapshot": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\research_synthesis_20261027\\results\\snapshots_Cows2021_identity_20261030\\overview_before_final_scope_clarifications.md",
+  "before_sha256": "1bcf51a7920411ac40e0d19bacbf08f78637167782cc3d77059da7e6e9abece9",
+  "after_sha256": "0f275dbbb721aa4c75959f94e8ffcc9814f1afa656f87eef8e3008412e30cad1",
+  "document": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究阶段总结_20261030.md",
+  "reason": "Count limit scoped to current192 real board rather than every model; distinguish existing public author identity evaluation from missing current-event mapping/final evaluation.",
+  "changes": [
+    "--- \n",
+    "+++ \n",
+    "@@ -2,7 +2,7 @@\n",
+    " ",
+    " 更新：2026年10月30日。本文按问题、已有证据、评价和下一步组织；逐次历史实验见[研究进度](<C:/Users/Donson/Documents/ChatGPT/奶牛/研究进度.md>)，原报告及失败记录均保留。",
+    " ",
+    "-**当前结论：检测、计数和身体检索已在同一PYNQ-Z2运行，固定负载可接近5FPS，但原片计数仍未恢复人工确认12。新公开跨日期身份评价已完成：当前编码器Top-1为54.17%，新域阈值下已登记错误接受21／120、未知误接受20／120，尚不能可靠自动找回牛号。当前优先改进身份特征与按图库规模验证的拒识，再补独立通行和真实输入；论文贡献仍待验证。**",
+    "+**当前结论：检测、计数和身体检索已在同一PYNQ-Z2运行，固定负载可接近5FPS，但当前192实机原片计数仍未恢复人工确认12。新公开跨日期身份评价已完成：当前编码器Top-1为54.17%，新域阈值下已登记错误接受21／120、未知误接受20／120，尚不能可靠自动找回牛号。当前优先改进身份特征与按图库规模验证的拒识，再补独立通行和真实输入；论文贡献仍待验证。**",
+    " ",
+    " | 目前已验证 | 结果与实际范围 | 仍需解决 |",
+    " | --- | --- | --- |",
+    "@@ -283,6 +283,6 @@\n",
+    " ",
+    " 本轮新增身份Slurm作业130743完成0:0，原始结果6.0MB／35清单文件已完整取回；1080次CPU前向、540输入、24000分数／960决定及按牛区间复算通过，12源图与11解释面板已查看。图库规模控制新增前向0、2880决定／86400分数另行核查。没有新训练、板端运行或阈值替换，旧八次O8／ARM实机、完整归档和板卡终态按其阶段保留；网口载波本轮未重新排查。03-05至03-11保留像素未打开。",
+    " ",
+    "-总体研究目标继续：尚缺独立逐事件／永久身份参考、同通道真实双向评价、跨来源稳定计数，以及对应论文主张的现场或明确限定的回放证据。",
+    "+总体研究目标继续：尚缺原片独立逐事件与永久身份对应、新的最终身份评价、同通道真实双向和跨来源稳定计数，以及论文主张所需的现场或明确限定的回放证据。",
+    " ",
+    " 本机原标注页文件仍在[这里](<C:/Users/Donson/Documents/ChatGPT/奶牛/phase3_diagnosis_20261026/annotation_workbench/index.html>)。此前恢复8779本地服务的命令被自动审批策略拦截（未给出更具体原因），没有改动标注文件；该问题不影响上述模型、板端与报告结果。"
+  ],
+  "scientific_results_changed": false
+}

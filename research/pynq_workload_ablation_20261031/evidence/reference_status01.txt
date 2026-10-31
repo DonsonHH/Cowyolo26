@@ -1,0 +1,85 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|AllocCPUS|MaxRSS
+130931|cow-workload-track|COMPLETED|0:0|00:00:04|1|
+130931.batch|batch|COMPLETED|0:0|00:00:04|1|1176K
+130931.0|python|COMPLETED|0:0|00:00:02|1|800K
+130931.1|python|COMPLETED|0:0|00:00:02|1|800K
+{
+  "status": "ALL5_FULL_TRACKER_ASSOCIATION_AND_EVENT_REPLAYS_MATCH_ACTUAL_ARM_WITH_FROZEN_TOLERANCES",
+  "Slurm_job_id": "130931",
+  "host": "cu03",
+  "new_model_forwards": 0,
+  "whole_goal_complete": false,
+  "created_UTC": "2026-10-31T08:41:53.745747+00:00",
+  "observation_ticks": 10663,
+  "post_tracker_rows": 2338,
+  "reports": [
+    {
+      "run": "r1_A",
+      "observation_ticks": 2151,
+      "post_tracker_rows": 478,
+      "IDs_and_events_exact": true,
+      "maximum_box_difference": 0.0,
+      "maximum_axis_difference": 0.0
+    },
+    {
+      "run": "r2_B",
+      "observation_ticks": 2151,
+      "post_tracker_rows": 503,
+      "IDs_and_events_exact": true,
+      "maximum_box_difference": 0.0,
+      "maximum_axis_difference": 0.0
+    },
+    {
+      "run": "r3_C",
+      "observation_ticks": 2166,
+      "post_tracker_rows": 511,
+      "IDs_and_events_exact": true,
+      "maximum_box_difference": 0.0,
+      "maximum_axis_difference": 0.0
+    },
+    {
+      "run": "r4_D",
+      "observation_ticks": 2126,
+      "post_tracker_rows": 476,
+      "IDs_and_events_exact": true,
+      "maximum_box_difference": 0.0,
+      "maximum_axis_difference": 0.0
+    },
+    {
+      "run": "r5_D",
+      "observation_ticks": 2069,
+      "post_tracker_rows": 370,
+      "IDs_and_events_exact": true,
+      "maximum_box_difference": 0.0,
+      "maximum_axis_difference": 0.0
+    }
+  ],
+  "counter_paths": 10,
+  "maximum_box_tolerance_pixels": 0.002,
+  "maximum_axis_tolerance": 2e-06,
+  "Torch_imported": false
+}
+
+{
+  "status": "VERIFIED_FIVE_TIMED_PERIODS_FROM_FAILED_EIGHT_RUN_PLAN_RENDERED",
+  "created_UTC": "2026-10-31T08:41:55.115777+00:00",
+  "Slurm_job_id": "130931",
+  "matplotlib_version": "3.11.2",
+  "source_sha256": "d2fb9472309aba8e311a1f8dc6d95768efb8d8b4ade7cb8569d6f20e6dae9fd7",
+  "files": [
+    {
+      "file": "results/figures/chronological_workload.png",
+      "bytes": 220896,
+      "sha256": "1361fc6da38c9652db4546b3433e4d4c4e4eef282577f190871832f0d8beeb00"
+    },
+    {
+      "file": "results/figures/chronological_workload.svg",
+      "bytes": 32601,
+      "sha256": "c01e7c04cb78e20fb8cc681b47d35e1d99758942714625a30328739f91c13761"
+    }
+  ],
+  "new_model_forwards": 0,
+  "rendering_visually_reviewed": false
+}
+

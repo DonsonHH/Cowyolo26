@@ -1,0 +1,74 @@
+[
+  {
+    "name": "r224_8_9",
+    "input_words": 11552,
+    "output_words": 6272,
+    "descriptors": 8,
+    "cache_bytes": 12544,
+    "local_consumer_descriptors": 4,
+    "producer_sid": 8,
+    "consumer_sid": 9,
+    "mirror": false
+  },
+  {
+    "name": "r224_68_70",
+    "input_words": 53600,
+    "output_words": 15680,
+    "descriptors": 24,
+    "cache_bytes": 62720,
+    "local_consumer_descriptors": 12,
+    "producer_sid": 68,
+    "consumer_sid": 70,
+    "mirror": false
+  },
+  {
+    "name": "synthetic_stride2_halo",
+    "input_words": 11180,
+    "output_words": 1568,
+    "descriptors": 5,
+    "cache_bytes": 12544,
+    "local_consumer_descriptors": 1,
+    "producer_sid": 8,
+    "consumer_sid": 9,
+    "mirror": false
+  },
+  {
+    "name": "synthetic_mode1_all_input_zero_point",
+    "input_words": 19008,
+    "output_words": 12544,
+    "descriptors": 32,
+    "cache_bytes": 25088,
+    "local_consumer_descriptors": 16,
+    "producer_sid": 3,
+    "consumer_sid": 4,
+    "mirror": false
+  },
+  {
+    "name": "over_capacity",
+    "input_words": 11552,
+    "output_words": 1,
+    "descriptors": 0,
+    "error": true
+  },
+  {
+    "name": "wrong_tensor_bytes",
+    "input_words": 11552,
+    "output_words": 1,
+    "descriptors": 0,
+    "error": true
+  },
+  {
+    "name": "invalid_flags",
+    "input_words": 11552,
+    "output_words": 1,
+    "descriptors": 0,
+    "error": true
+  },
+  {
+    "name": "consumer_without_commit",
+    "input_words": 11552,
+    "output_words": 1,
+    "descriptors": 0,
+    "error": true
+  }
+]

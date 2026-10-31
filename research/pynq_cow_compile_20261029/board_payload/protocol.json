@@ -1,0 +1,92 @@
+{
+  "status": "FROZEN_BEFORE_ACTUAL_BOARD_COW_VECTOR_QUALIFICATION",
+  "created_host_UTC": "2026-10-29T12:50:41.414697+00:00",
+  "size": 192,
+  "class_count": 1,
+  "model_checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+  "qualification_summary_sha256": "993964e87e5b5390759feb420c5a3eb6254c5205c47d919dbe8e44200c7e8e97",
+  "expected_O8_bit_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "parity_gate": {
+    "box_max_absolute_pixels": 0.002,
+    "score_max_absolute": 0.0001,
+    "classes_exact": true
+  },
+  "vectors": 8,
+  "warmups": 2,
+  "all_input_images_from_train_calibration": true,
+  "source_video_Toros_or_development_validation_images_used": false,
+  "real_video_count_accuracy_claimed": false,
+  "background_identity_active": false,
+  "expected_model_forwards": 10,
+  "existing_O8_hardware_must_already_be_loaded": true,
+  "new_bitstream_programming": false,
+  "original_O8_directory_modified": false,
+  "payload_files": [
+    {
+      "file": "program/graph.bin",
+      "bytes": 14605169,
+      "sha256": "5ea3f33d36f8d7ace36dfece8eadec4fe19939f1c5ba90c52dc23fca67f08591"
+    },
+    {
+      "file": "program/program.json",
+      "bytes": 463040,
+      "sha256": "27728960a9134d87ac1f765de26a69ec5993cd5b6b25bb556a9c37b59c5233dd"
+    },
+    {
+      "file": "resident_plan/resident_plan.bin",
+      "bytes": 2396,
+      "sha256": "72e5065496e7afd3c3f0597f33ad6faef0721a4ad26c4ae27c702de861d4a1d3"
+    },
+    {
+      "file": "resident_plan/resident_plan.json",
+      "bytes": 13112,
+      "sha256": "3765b7ca5967d19a6c12a02428ff163ae13076973a5adc6b6bb152d236340cfc"
+    },
+    {
+      "file": "vectors/parity_train_0.npz",
+      "bytes": 94220,
+      "sha256": "7a7ee17f0bf7a5f8f548f7cce70736247f4316fb658117dfbae8f7f8dadebf0a"
+    },
+    {
+      "file": "vectors/parity_train_1.npz",
+      "bytes": 99320,
+      "sha256": "32928ce51ef15c7a48876da99ac85d448e64d65cab7a028309597471799f59ec"
+    },
+    {
+      "file": "vectors/parity_train_2.npz",
+      "bytes": 93610,
+      "sha256": "a481adf540fd580ea49bc1f9ec6c216bdef557ec20e3179e80b4906205dbb7d1"
+    },
+    {
+      "file": "vectors/parity_train_3.npz",
+      "bytes": 95428,
+      "sha256": "74e7304fe08c0d26742446923a19cc69d4df2bae7945195d711c7361fb1004ae"
+    },
+    {
+      "file": "vectors/parity_train_4.npz",
+      "bytes": 93453,
+      "sha256": "505fce446899db1ffd4ef50f2e0ac27375e1d0fcd2578793124bd47bca075bb5"
+    },
+    {
+      "file": "vectors/parity_train_5.npz",
+      "bytes": 103300,
+      "sha256": "4cd2be1da761520888927f4ff65860bf769b9a728e9d4b9c42e6059394ddaf8a"
+    },
+    {
+      "file": "vectors/parity_train_6.npz",
+      "bytes": 91128,
+      "sha256": "d860b362fd0570233468fff2d25d6935aa0810ba941ce3764bb000e0d48b10de"
+    },
+    {
+      "file": "vectors/parity_train_7.npz",
+      "bytes": 104044,
+      "sha256": "a69145c2ebe2bb4bdcb3ddcda417d7b07ed4b6af2fceb369e16f85c76a8a3b7d"
+    },
+    {
+      "file": "board_cow_vectors.py",
+      "bytes": 6394,
+      "sha256": "ebad2e4f51ccee8d0d9eb9baa9c6b3c9a6f38c2f6b686ed99ba0f46f083830c2"
+    }
+  ],
+  "whole_goal_complete": false
+}

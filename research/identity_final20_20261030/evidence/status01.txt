@@ -1,0 +1,172 @@
+JobID|JobName|State|ExitCode|Elapsed|AllocCPUS|MaxRSS
+130877|cow-final20-id|COMPLETED|0:0|00:00:07|4|
+130877.batch|batch|COMPLETED|0:0|00:00:07|4|1176K
+130877.0|python|COMPLETED|0:0|00:00:07|4|800K
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+{
+  "status": "BOTH_FROZEN_ENCODERS90_FINAL_ID_IMAGES180_FORWARDS8_FIXED_POLICIES_AND20_PAIRED_ID_CONTRASTS_COMPLETE",
+  "created_UTC": "2026-10-30T11:11:41.342472+00:00",
+  "Slurm_job_id": "130877",
+  "host": "cu03",
+  "protocol_sha256": "8d16342abc1c36fd13a85c7b42a758521158d6908b196d477b07ba34ab6a593a",
+  "execution_sha256": "1016d9cd9279fb0d87f5b7a9bfb2a243f99183e86b551ce4cbf2976d059db0a1",
+  "actual_model_image_forwards": 180,
+  "actual_network_calls": 16,
+  "new_training_updates": 0,
+  "new_board_forwards": 0,
+  "warmups": 0,
+  "whole_goal_complete": false,
+  "versions": {
+    "Torch": "2.8.0+cu128",
+    "Pillow": "11.3.0",
+    "NumPy": "2.2.6",
+    "Torchvision": "0.23.0+cu128"
+  },
+  "model_image_counts": {
+    "old_C": 90,
+    "new_C_domain_seed26": 90
+  },
+  "timeline": [
+    {
+      "model": "old_C",
+      "images": 90,
+      "cumulative_images": 90,
+      "completed_UTC": "2026-10-30T11:11:42.499994+00:00",
+      "features_sha256": "1f43f0d5a73660bb33825daf48085ada1b2209860e8df88ff2099518d804ee72"
+    },
+    {
+      "model": "new_C_domain_seed26",
+      "images": 90,
+      "cumulative_images": 180,
+      "completed_UTC": "2026-10-30T11:11:42.981539+00:00",
+      "features_sha256": "1042a79eb122b2c316bccea1b9addacab7f2521c34d78c1d1bacf69165da88ac"
+    }
+  ],
+  "outcomes": [
+    {
+      "model": "old_C",
+      "policy": "primary_cal10_fold0",
+      "threshold": 0.8348239883357427,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 10,
+      "W": 2,
+      "U": 18,
+      "M": 0,
+      "unknown_FA": 3,
+      "known_Top1": 22,
+      "known_Top5": 28,
+      "accepted_wrong_fraction": 0.3333333333333333
+    },
+    {
+      "model": "old_C",
+      "policy": "stability_cal10_fold1",
+      "threshold": 0.8451253538651191,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 8,
+      "W": 2,
+      "U": 20,
+      "M": 0,
+      "unknown_FA": 3,
+      "known_Top1": 22,
+      "known_Top5": 28,
+      "accepted_wrong_fraction": 0.38461538461538464
+    },
+    {
+      "model": "old_C",
+      "policy": "legacy_MultiCam",
+      "threshold": 0.8445389603236383,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 9,
+      "W": 2,
+      "U": 19,
+      "M": 0,
+      "unknown_FA": 3,
+      "known_Top1": 22,
+      "known_Top5": 28,
+      "accepted_wrong_fraction": 0.35714285714285715
+    },
+    {
+      "model": "old_C",
+      "policy": "prior_cal20",
+      "threshold": 0.845125353865119,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 8,
+      "W": 2,
+      "U": 20,
+      "M": 0,
+      "unknown_FA": 3,
+      "known_Top1": 22,
+      "known_Top5": 28,
+      "accepted_wrong_fraction": 0.38461538461538464
+    },
+    {
+      "model": "new_C_domain_seed26",
+      "policy": "primary_cal10_fold0",
+      "threshold": 0.8304473380979187,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 3,
+      "W": 0,
+      "U": 27,
+      "M": 0,
+      "unknown_FA": 0,
+      "known_Top1": 30,
+      "known_Top5": 30,
+      "accepted_wrong_fraction": 0.0
+    },
+    {
+      "model": "new_C_domain_seed26",
+      "policy": "stability_cal10_fold1",
+      "threshold": 0.870745869589039,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 2,
+      "W": 0,
+      "U": 28,
+      "M": 0,
+      "unknown_FA": 0,
+      "known_Top1": 30,
+      "known_Top5": 30,
+      "accepted_wrong_fraction": 0.0
+    },
+    {
+      "model": "new_C_domain_seed26",
+      "policy": "legacy_MultiCam",
+      "threshold": 0.8445389603236383,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 2,
+      "W": 0,
+      "U": 28,
+      "M": 0,
+      "unknown_FA": 0,
+      "known_Top1": 30,
+      "known_Top5": 30,
+      "accepted_wrong_fraction": 0.0
+    },
+    {
+      "model": "new_C_domain_seed26",
+      "policy": "prior_cal20",
+      "threshold": 0.8707458695890389,
+      "known_queries": 30,
+      "unknown_queries": 30,
+      "C": 2,
+      "W": 0,
+      "U": 28,
+      "M": 0,
+      "unknown_FA": 0,
+      "known_Top1": 30,
+      "known_Top5": 30,
+      "accepted_wrong_fraction": 0.0
+    }
+  ],
+  "per_identity_interval_sets": 8,
+  "paired_ID_contrasts": 20,
+  "final20_ID_pixels_opened": true,
+  "reservedMar05toMar11_pixels_opened": false,
+  "new_default_model_or_threshold_adopted": false
+}

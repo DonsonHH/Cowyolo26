@@ -1,0 +1,40 @@
+{
+  "name": "One-factor firststage IoU-only association control after gap cost verification",
+  "prior_association_protocol_sha256": "5e0b7c016e72465fa691065bda349da1e0411f81ad8da2c26ced65e9a6f90fd3",
+  "independent_diagnostic_sha256": "d163a63a754696b0b574efc4037473f3bb086f25beb9f7b0720e58facd972f8c",
+  "implementation_sha256": "b46f692ad016bcbd1ec91e9ead0315b891a439861b0fbf1d981a757db16a099d",
+  "single_changed_operation": "first association cost becomes1-IoU instead of1-IoU*score",
+  "retained_contract": [
+    "same raw detector boxes and thresholds",
+    "first assignment threshold0.8",
+    "same original secondstage and unconfirmed costs",
+    "same duplicate cleanup",
+    "same counter including3stable and2seconds",
+    "no predicted-only observations",
+    "same nominal native source clock"
+  ],
+  "conditions": [
+    "original_fused",
+    "firststage_pure_IoU"
+  ],
+  "snapshot_update_frames": [
+    2650,
+    2655,
+    2660,
+    2665,
+    2670,
+    2675
+  ],
+  "whole_video_update_frames": {
+    "start0": 0,
+    "end0_exclusive": 10125,
+    "stride": 5
+  },
+  "hypothesis": "At the same frozen pre-gap state, removing firststage score fusion may admit the reappearing raw-supported cow candidate to originalID19 early enough to retain a full passage.",
+  "all_results_retained_regardless_of_counts": true,
+  "new_reference_scores_allowed": false,
+  "candidate_adoption_allowed": false,
+  "new_detector_forwards": 0,
+  "new_training_updates": 0,
+  "whole_goal_complete": false
+}

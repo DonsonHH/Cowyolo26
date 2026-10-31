@@ -1,0 +1,31 @@
+JobID|JobName|State|ExitCode|Elapsed
+129717|idcoo-real-video-chain|COMPLETED|0:0|00:01:39
+129717.batch|batch|COMPLETED|0:0|00:01:39
+129717.0|python|COMPLETED|0:0|00:00:00
+129717.1|python|COMPLETED|0:0|00:01:39
+129718|idcoo-video-evidence|COMPLETED|0:0|00:00:12
+129718.batch|batch|COMPLETED|0:0|00:00:12
+129718.0|python|COMPLETED|0:0|00:00:12
+129719|idcoo-export-ptq-audit|COMPLETED|0:0|00:00:21
+129719.batch|batch|COMPLETED|0:0|00:00:21
+129719.0|python|COMPLETED|0:0|00:00:00
+129719.1|python|COMPLETED|0:0|00:00:21
+129720|idcoo-export-ptq-audit|COMPLETED|0:0|00:00:16
+129720.batch|batch|COMPLETED|0:0|00:00:16
+129720.0|python|COMPLETED|0:0|00:00:00
+129720.1|python|COMPLETED|0:0|00:00:16
+test_standard_conv_macs_have_known_analytic_value (__main__.GraphAccountingContract.test_standard_conv_macs_have_known_analytic_value) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.015s
+
+OK
+/share/home/renly/miniconda3/lib/python3.13/site-packages/torch/onnx/symbolic_opset9.py:5350: UserWarning: Exporting aten::index operator of advanced indexing in opset 13 is achieved by combination of multiple ONNX operators, including Reshape, Transpose, Concat, and Gather. If indices include negative values, the exported graph will produce incorrect results.
+  warnings.warn(
+/share/home/renly/projects/idcoo_research_20261026/deployment_audit/tools/export_and_quantise.py:106: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter will be the default. To switch now, set dynamo=True in torch.onnx.export. This new exporter supports features like exporting LLMs with DynamicCache. We encourage you to try it and share feedback to help improve the experience. Learn more about the new export logic: https://pytorch.org/docs/stable/onnx_dynamo.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html.
+  torch.onnx.export(model,torch.from_numpy(validation_g[0][None]),str(float_path),opset_version=13,dynamo=False,
+8ef6b4547f776ac15d477b3631f4a970cdf84f361b3a9424d6696068b9568e30  /share/home/renly/projects/idcoo_research_20261026/deployment_audit/tools/export_and_quantise.py
+c9c3a43a1d02097536477700956afcf9281f7c28d9b871d55e01a4890435903d  /share/home/renly/projects/idcoo_research_20261026/deployment_audit/tools/bounded_quantisation.py
+bed3fea7f1c339457db4540f1955fe52a173b8b0123d2a0db7fe7a1f4c1c51f0  /share/home/renly/projects/idcoo_research_20261026/deployment_audit/tools/graph_audit.py
+d58ed38f4842b0cc9032777e107aaf11d5dc790b5660097aedaad95014d8f381  /share/home/renly/projects/idcoo_research_20261026/deployment_audit/protocol/export_ptq_v1.json
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)

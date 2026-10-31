@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "job_id": "129715",
+  "device": "CPU",
+  "checks": [
+    {
+      "condition": "A_official_frozen",
+      "split": "validation_gallery",
+      "images": 25,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 2.4512410163879395e-06,
+      "allclose_passed": true
+    },
+    {
+      "condition": "A_official_frozen",
+      "split": "validation_query",
+      "images": 55,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 3.419816493988037e-06,
+      "allclose_passed": true
+    },
+    {
+      "condition": "B_letterbox_frozen",
+      "split": "validation_gallery",
+      "images": 25,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 1.773238182067871e-06,
+      "allclose_passed": true
+    },
+    {
+      "condition": "B_letterbox_frozen",
+      "split": "validation_query",
+      "images": 55,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 2.2314488887786865e-06,
+      "allclose_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "split": "validation_gallery",
+      "images": 25,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 9.015202522277832e-07,
+      "allclose_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "split": "validation_query",
+      "images": 55,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 1.773238182067871e-06,
+      "allclose_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "split": "validation_gallery",
+      "images": 25,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 8.717179298400879e-07,
+      "allclose_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "split": "validation_query",
+      "images": 55,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 1.087784767150879e-06,
+      "allclose_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "split": "validation_gallery",
+      "images": 25,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 1.8030405044555664e-06,
+      "allclose_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "split": "validation_query",
+      "images": 55,
+      "max_absolute_cpu_vs_saved_gpu_embedding_error": 8.310656994581223e-06,
+      "allclose_passed": true
+    }
+  ],
+  "scope": "Checkpoint reload and CPU-vs-GPU validation numerical agreement only; no board mapping or independent reference-label confirmation"
+}

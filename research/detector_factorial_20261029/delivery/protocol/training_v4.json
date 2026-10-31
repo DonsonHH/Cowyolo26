@@ -1,0 +1,472 @@
+{
+  "status": "FROZEN_BEFORE_NEW_PREFLIGHT_OR_15_FORMAL_TRAINING_RUNS",
+  "version": 4,
+  "created_UTC": "2026-10-29T12:20:25.479426+00:00",
+  "source_weights": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+  "source_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "source_data_yaml": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/data.yaml",
+  "historical_original_group": "Prior320plain3seedsretained;15newcellsplannedin3sizesx2augmentationsx3seeds;noautomaticlaunchbeforelowresbaselineandhardwarepathchecks.",
+  "baseline_checkpoint_conditions": [
+    {
+      "seed": 26,
+      "epochs": 10,
+      "checkpoint_rule": "Use final epoch10 last.pt for all3 seeds; archive best.pt separately. Freeze all3 checkpoint hashes before new source/Toros inference. Report every seed without selecting one on video counts.",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "archived_best_sha256": "705bfab4a2d85b54ef082c402c3d4ccd99360c6c2910b6110912e8ebd416213c",
+      "initial_state_digest": "98b0f08adb5a735a74cc03a2631f0098bf3a6968b93b978eb6775f5a775d9a0e",
+      "actual_training_batches": 2130,
+      "actual_optimizer_steps": 1225,
+      "optimizer_step_schedule_sha256": "fac0ad61970ad1331d1af0d8fc9de2d2b76d053e0fbaa41cf37231a3604feacd",
+      "last_epoch_validation": {
+        "metrics/precision(B)": 0.9773,
+        "metrics/recall(B)": 0.9721,
+        "metrics/mAP50(B)": 0.99246,
+        "metrics/mAP50-95(B)": 0.82143
+      },
+      "trainer_returned_archived_best_metrics": {
+        "metrics/precision(B)": 0.9722249038586828,
+        "metrics/recall(B)": 0.9726394849785408,
+        "metrics/mAP50(B)": 0.992176326773546,
+        "metrics/mAP50-95(B)": 0.8282150123476232,
+        "fitness": 0.8282150123476232
+      },
+      "training_csv_sha256": "241177bc9cb76050e04c4b0b5af563fbe5be21e378e82d2ee9dc5e688e7a9bd9",
+      "effective_args_sha256": "1481c29369ab7da4238941f2c48b684466ee5237e23ef3fe94bed004f993ebd7",
+      "elapsed_s": 332.95153347123414
+    },
+    {
+      "seed": 27,
+      "epochs": 10,
+      "checkpoint_rule": "Use final epoch10 last.pt for all3 seeds; archive best.pt separately. Freeze all3 checkpoint hashes before new source/Toros inference. Report every seed without selecting one on video counts.",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "checkpoint_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "archived_best_sha256": "1d86487dfad0ec935eed9098049f47d3204df30b6478f220642bea39f07c3cf1",
+      "initial_state_digest": "11296502b0bc72fe633c8b7a2f592fae8e269fac9d5c0d87471dbb2ec3a9c5eb",
+      "actual_training_batches": 2130,
+      "actual_optimizer_steps": 1225,
+      "optimizer_step_schedule_sha256": "fac0ad61970ad1331d1af0d8fc9de2d2b76d053e0fbaa41cf37231a3604feacd",
+      "last_epoch_validation": {
+        "metrics/precision(B)": 0.98254,
+        "metrics/recall(B)": 0.9661,
+        "metrics/mAP50(B)": 0.99284,
+        "metrics/mAP50-95(B)": 0.82256
+      },
+      "trainer_returned_archived_best_metrics": {
+        "metrics/precision(B)": 0.9742212446597474,
+        "metrics/recall(B)": 0.9731750828477395,
+        "metrics/mAP50(B)": 0.9928308183033828,
+        "metrics/mAP50-95(B)": 0.8370773584516723,
+        "fitness": 0.8370773584516723
+      },
+      "training_csv_sha256": "8e1ebb8763c1cd669369bfcf5f9a3763a504fd4bc23568114cb1303145118c76",
+      "effective_args_sha256": "f87cd9844ffc72698d3a46cb3b07a50f7f435dfa0aca42965b34c28d84c64981",
+      "elapsed_s": 333.5168391177431
+    },
+    {
+      "seed": 28,
+      "epochs": 10,
+      "checkpoint_rule": "Use final epoch10 last.pt for all3 seeds; archive best.pt separately. Freeze all3 checkpoint hashes before new source/Toros inference. Report every seed without selecting one on video counts.",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "checkpoint_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "archived_best_sha256": "99fc5ed20f5362cf8d27f8339deeea3a0b2108401269ba2d6c28791c9827235f",
+      "initial_state_digest": "0e75cc4b8d39f3bbe615112892946a664e446a972fbe24511689c31dd93dfa6e",
+      "actual_training_batches": 2130,
+      "actual_optimizer_steps": 1225,
+      "optimizer_step_schedule_sha256": "fac0ad61970ad1331d1af0d8fc9de2d2b76d053e0fbaa41cf37231a3604feacd",
+      "last_epoch_validation": {
+        "metrics/precision(B)": 0.97885,
+        "metrics/recall(B)": 0.96832,
+        "metrics/mAP50(B)": 0.99273,
+        "metrics/mAP50-95(B)": 0.81879
+      },
+      "trainer_returned_archived_best_metrics": {
+        "metrics/precision(B)": 0.9725479869382442,
+        "metrics/recall(B)": 0.969306515830867,
+        "metrics/mAP50(B)": 0.9921211357831718,
+        "metrics/mAP50-95(B)": 0.8339203601747599,
+        "fitness": 0.8339203601747599
+      },
+      "training_csv_sha256": "edbeb43d901158a7e2277ebe62065ada3d9ff234123837733b0e3e910b77da81",
+      "effective_args_sha256": "92f4fc2e19e2549a720c131c165eff27ad271362286b410ce8c13ebf3aa49ccc",
+      "elapsed_s": 336.4269943162799
+    }
+  ],
+  "conditions": [
+    {
+      "condition_id": "S192_plain_seed26",
+      "imgsz": 192,
+      "right_angle": false,
+      "seed": 26,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S192_plain_seed27",
+      "imgsz": 192,
+      "right_angle": false,
+      "seed": 27,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S192_plain_seed28",
+      "imgsz": 192,
+      "right_angle": false,
+      "seed": 28,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S192_rot90_seed26",
+      "imgsz": 192,
+      "right_angle": true,
+      "seed": 26,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S192_rot90_seed27",
+      "imgsz": 192,
+      "right_angle": true,
+      "seed": 27,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S192_rot90_seed28",
+      "imgsz": 192,
+      "right_angle": true,
+      "seed": 28,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S256_plain_seed26",
+      "imgsz": 256,
+      "right_angle": false,
+      "seed": 26,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S256_plain_seed27",
+      "imgsz": 256,
+      "right_angle": false,
+      "seed": 27,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S256_plain_seed28",
+      "imgsz": 256,
+      "right_angle": false,
+      "seed": 28,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S256_rot90_seed26",
+      "imgsz": 256,
+      "right_angle": true,
+      "seed": 26,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S256_rot90_seed27",
+      "imgsz": 256,
+      "right_angle": true,
+      "seed": 27,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S256_rot90_seed28",
+      "imgsz": 256,
+      "right_angle": true,
+      "seed": 28,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S320_plain_seed26",
+      "imgsz": 320,
+      "right_angle": false,
+      "seed": 26,
+      "execution": "historical_control_retained"
+    },
+    {
+      "condition_id": "S320_plain_seed27",
+      "imgsz": 320,
+      "right_angle": false,
+      "seed": 27,
+      "execution": "historical_control_retained"
+    },
+    {
+      "condition_id": "S320_plain_seed28",
+      "imgsz": 320,
+      "right_angle": false,
+      "seed": 28,
+      "execution": "historical_control_retained"
+    },
+    {
+      "condition_id": "S320_rot90_seed26",
+      "imgsz": 320,
+      "right_angle": true,
+      "seed": 26,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S320_rot90_seed27",
+      "imgsz": 320,
+      "right_angle": true,
+      "seed": 27,
+      "execution": "planned_not_submitted"
+    },
+    {
+      "condition_id": "S320_rot90_seed28",
+      "imgsz": 320,
+      "right_angle": true,
+      "seed": 28,
+      "execution": "planned_not_submitted"
+    }
+  ],
+  "epochs": 10,
+  "train_kwargs_common": {
+    "batch": 32,
+    "workers": 2,
+    "deterministic": true,
+    "pretrained": true,
+    "amp": false,
+    "plots": false,
+    "save": true,
+    "cache": false,
+    "close_mosaic": 0,
+    "patience": 0,
+    "verbose": false,
+    "optimizer": "AdamW",
+    "lr0": 0.002,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "lrf": 0.01,
+    "rect": false,
+    "multi_scale": 0.0,
+    "degrees": 0.0,
+    "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8,
+    "warmup_bias_lr": 0.1,
+    "nbs": 64,
+    "hsv_h": 0.015,
+    "hsv_s": 0.7,
+    "hsv_v": 0.4,
+    "translate": 0.1,
+    "scale": 0.5,
+    "shear": 0.0,
+    "perspective": 0.0,
+    "flipud": 0.0,
+    "fliplr": 0.5,
+    "bgr": 0.0,
+    "mosaic": 1.0,
+    "mixup": 0.0,
+    "cutmix": 0.0,
+    "copy_paste": 0.0
+  },
+  "train_images": 6809,
+  "validation_images": 1571,
+  "train_annotation_rows": 8888,
+  "validation_annotation_rows": 1864,
+  "expected_batches_per_epoch": 213,
+  "expected_batches_per_run": 2130,
+  "expected_training_images_per_run": 68090,
+  "rotation": "Afterstandardtrainpreprocess,squareNCHWfloat image90degCCWintegerpermutations;xywhnormalizedsync;Uniformk0..3perimage;nointerpolation.",
+  "rotation_rng": "SeparateCPUTorchGeneratorseed710026+trainseed;unaugmentedbranchdrawsnorandomvalues;noconsumptionofbaselineglobalstream.",
+  "no_extra_rotation_does_not_change_standard_preprocess": true,
+  "validation_rotation_augmented": false,
+  "preflight": "ExactCPU/CUDAimage-and-maskboxoracle,all4turns,arbitrarybatch_idx,emptylabels,area/4turninverse;3realtrainersx2optimizerstepsdiscarded.",
+  "checkpoint_rule": "Ifexecuted,fixedepoch10last.ptall15newruns;archivebest;freezeallbeforeposttrainingcomparison.Noresultclaimsfromthisplan.",
+  "all_seed_and_group_results_retained": true,
+  "source_Toros_pseudolabels_used": false,
+  "count_based_model_selection_allowed": false,
+  "input_sha256": {
+    "baseline_checkpoint_freeze.json": "44272a1dcdc1c94691f75cda5543dd6ac1752b4dfc5c3ed9e7a046761c216585",
+    "baseline_detector_v1.json": "894848001296be9e017ac1fc1920dad67d2c9510dd1535933b44436611dd7b4b",
+    "baseline_effective_args.yaml": "1481c29369ab7da4238941f2c48b684466ee5237e23ef3fe94bed004f993ebd7",
+    "loader_summary.json": "32a9a06f771d584f5c7ccf06517844126ac1964c5c7e64c5fa57e73011b9f258",
+    "prepared_manifest.json": "fd664b040229d249fc0fd4135466696141f95e3449fad5bb98aeb2f3062f5423"
+  },
+  "implementation_sha256": {
+    "common.py": "53e464bea2971e76260e858d7ddc65f5cf22db3ad53e48b15e8b89fb153b0bae",
+    "observed_trainer.py": "e12ec8a2750f6c58a7ce7b8638a5a1c6718bb8cb50d1f9d2206b6aba567463be",
+    "rotation_training.py": "06db4a3003cfb4d46318cd63320c5a596cee02f3a4569869a4af9f989f25687b",
+    "preflight_v2.py": "2719b7af0d9569e6207d164b3003a4995ea682d2b4c15e07ed3738cd92f200d3"
+  },
+  "previous_pair_final_sha256": "634d7267a5c8b93b4b135051d6099a2f6cfd556b8d4c08466bcb61bf8e0f5c9d",
+  "data_geometry_definition": "Class0 cow body: axis-aligned envelope of the image-clipped published rotated cow polygon. Not a whole-animal or oriented-AP definition.",
+  "library": {
+    "ultralytics": "8.4.63",
+    "torch": "2.8.0+cu128"
+  },
+  "maximum_concurrent_GPU_jobs": 3,
+  "evaluation_plan": {
+    "development_images": "Same1571developmentimages;target192/256/320squareinput;allmodels/seeds.",
+    "video": "Original5Hzsourcehuman12;Toros5Hzplus30Hzdiagnosticcontrol;samefrozencounters.",
+    "new_candidate_final_images_allowed": false,
+    "server_speed_is_board_speed": false
+  },
+  "runtime_pipeline_changed": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false,
+  "supersedes_unexecuted_v1_sha256": "461d57a915be263aa753b6da4005a96c90e90c6676f7a12eddc2b32cb200bd8a",
+  "deploy_input_sizes": [
+    192,
+    256,
+    320
+  ],
+  "target_board_frontend_fps": 5,
+  "target_frame_budget_ms": 200,
+  "new_training_runs_planned": 15,
+  "hardware_status": "RecoveredactualPYNQ3.1.1;424realnetworkforwardsreviewed;O8confirmedbyuser;192prioritizedbutall3sizesretained.",
+  "planned_v2_sha256": "a1c4951c585a9ef30f44609474bc3ae8713368833d9a01a6a98294befa9cd015",
+  "fixed_lane_crop_review_sha256": "42e90d8192264dac9f8c973e7bb90c3943df7ee947fb476dfadda2a405f820f8",
+  "real_board_review_sha256": "fae67f3bd051dfd5a6b1bb40a0b5ac31d6e336386f26ff5920d8334dfc5f8669",
+  "new_training_runs_submitted_at_freeze": 0,
+  "expected_initial_state_digests": {
+    "26": "98b0f08adb5a735a74cc03a2631f0098bf3a6968b93b978eb6775f5a775d9a0e",
+    "27": "11296502b0bc72fe633c8b7a2f592fae8e269fac9d5c0d87471dbb2ec3a9c5eb",
+    "28": "0e75cc4b8d39f3bbe615112892946a664e446a972fbe24511689c31dd93dfa6e"
+  },
+  "preflight_groups": [
+    {
+      "name": "plain192",
+      "imgsz": 192,
+      "right_angle": false
+    },
+    {
+      "name": "rot192",
+      "imgsz": 192,
+      "right_angle": true
+    },
+    {
+      "name": "rot256",
+      "imgsz": 256,
+      "right_angle": true
+    }
+  ],
+  "preflight_limit": "FullrealtrainerrunabortedbyexplicitSmokeStopafter2actualoptimizerupdates;workers0onlyforsmoke;noreusedweights.",
+  "validation_definition": "PublishedclippedrotatedtorsopolygonAABB;unrotatedvalidationpertrainer,pairedCW90squarevalidationaftermultiplecheckpointfreeze.",
+  "board_engine_baseline": "Userconfirmedexistingyolo26_optimization_8;192/256supportednow,320sameenginegraphsupportremainsrequired.",
+  "deployment_model_selection": "Allseedsevaluated;fixedprimaryseed26inheritspriorhumanaccepteddevelopmentroute;nochoiceoncount12orToros.",
+  "new_conditions": [
+    {
+      "condition_id": "S192_plain_seed26",
+      "imgsz": 192,
+      "right_angle": false,
+      "seed": 26,
+      "execution": "frozen_not_submitted",
+      "array_index": 0
+    },
+    {
+      "condition_id": "S192_plain_seed27",
+      "imgsz": 192,
+      "right_angle": false,
+      "seed": 27,
+      "execution": "frozen_not_submitted",
+      "array_index": 1
+    },
+    {
+      "condition_id": "S192_plain_seed28",
+      "imgsz": 192,
+      "right_angle": false,
+      "seed": 28,
+      "execution": "frozen_not_submitted",
+      "array_index": 2
+    },
+    {
+      "condition_id": "S192_rot90_seed26",
+      "imgsz": 192,
+      "right_angle": true,
+      "seed": 26,
+      "execution": "frozen_not_submitted",
+      "array_index": 3
+    },
+    {
+      "condition_id": "S192_rot90_seed27",
+      "imgsz": 192,
+      "right_angle": true,
+      "seed": 27,
+      "execution": "frozen_not_submitted",
+      "array_index": 4
+    },
+    {
+      "condition_id": "S192_rot90_seed28",
+      "imgsz": 192,
+      "right_angle": true,
+      "seed": 28,
+      "execution": "frozen_not_submitted",
+      "array_index": 5
+    },
+    {
+      "condition_id": "S256_plain_seed26",
+      "imgsz": 256,
+      "right_angle": false,
+      "seed": 26,
+      "execution": "frozen_not_submitted",
+      "array_index": 6
+    },
+    {
+      "condition_id": "S256_plain_seed27",
+      "imgsz": 256,
+      "right_angle": false,
+      "seed": 27,
+      "execution": "frozen_not_submitted",
+      "array_index": 7
+    },
+    {
+      "condition_id": "S256_plain_seed28",
+      "imgsz": 256,
+      "right_angle": false,
+      "seed": 28,
+      "execution": "frozen_not_submitted",
+      "array_index": 8
+    },
+    {
+      "condition_id": "S256_rot90_seed26",
+      "imgsz": 256,
+      "right_angle": true,
+      "seed": 26,
+      "execution": "frozen_not_submitted",
+      "array_index": 9
+    },
+    {
+      "condition_id": "S256_rot90_seed27",
+      "imgsz": 256,
+      "right_angle": true,
+      "seed": 27,
+      "execution": "frozen_not_submitted",
+      "array_index": 10
+    },
+    {
+      "condition_id": "S256_rot90_seed28",
+      "imgsz": 256,
+      "right_angle": true,
+      "seed": 28,
+      "execution": "frozen_not_submitted",
+      "array_index": 11
+    },
+    {
+      "condition_id": "S320_rot90_seed26",
+      "imgsz": 320,
+      "right_angle": true,
+      "seed": 26,
+      "execution": "frozen_not_submitted",
+      "array_index": 12
+    },
+    {
+      "condition_id": "S320_rot90_seed27",
+      "imgsz": 320,
+      "right_angle": true,
+      "seed": 27,
+      "execution": "frozen_not_submitted",
+      "array_index": 13
+    },
+    {
+      "condition_id": "S320_rot90_seed28",
+      "imgsz": 320,
+      "right_angle": true,
+      "seed": 28,
+      "execution": "frozen_not_submitted",
+      "array_index": 14
+    }
+  ],
+  "supersedes_unexecuted_v3_sha256": "479fe49ebcb75ce74328319b86cfdb8bfb936f543a7b7f42b813f12e0af94e19",
+  "prefight_correction_before_remote_staging": "Fourpower-of-twosides16/32/64/128xCPU/CUDAx6schedules=48;v3codehad24casesbutexpected48;noexecutionyet."
+}

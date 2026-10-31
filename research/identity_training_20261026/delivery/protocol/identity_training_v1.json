@@ -1,0 +1,146 @@
+{
+  "version": "identity-trained-v1",
+  "status": "FROZEN_BEFORE_NEW_IMAGE_SELECTION_OR_TRAINING",
+  "dataset": "MultiCamCows2024",
+  "camera": 1,
+  "training_ids": [
+    "059",
+    "004",
+    "046",
+    "038",
+    "016",
+    "053",
+    "072",
+    "043",
+    "085",
+    "055",
+    "036",
+    "003",
+    "021",
+    "047",
+    "062",
+    "049",
+    "027",
+    "005",
+    "013",
+    "048"
+  ],
+  "validation_registered_ids": [
+    "011",
+    "007",
+    "045",
+    "019",
+    "041"
+  ],
+  "validation_unknown_ids": [
+    "081",
+    "012",
+    "030",
+    "024",
+    "039",
+    "022"
+  ],
+  "evaluation_registered_ids": [
+    "026",
+    "028",
+    "020",
+    "054",
+    "031",
+    "009"
+  ],
+  "evaluation_unknown_ids": [
+    "033",
+    "035",
+    "010",
+    "076",
+    "040",
+    "001"
+  ],
+  "identity_selection": "Unused IDs in previous Aug14/Aug19/Aug20 intersection, ranked by SHA256(cow-id-training-v1-26:+ID); all four held-out roles mutually disjoint and outside all40 IDs of the prior feature pilot",
+  "data_roles": {
+    "train": {
+      "days": [
+        "2023Aug14",
+        "2023Aug15",
+        "2023Aug16"
+      ],
+      "maximum_per_id_day": 10,
+      "minimum_images_per_identity": 10,
+      "minimum_dates_per_identity": 2
+    },
+    "validation_gallery": {
+      "day": "2023Aug14",
+      "role": "validation_registered_ids",
+      "images_per_id": 5
+    },
+    "validation_query": {
+      "day": "2023Aug18",
+      "roles": [
+        "validation_registered_ids",
+        "validation_unknown_ids"
+      ],
+      "images_per_id": 5
+    },
+    "evaluation_gallery": {
+      "day": "2023Aug14",
+      "role": "evaluation_registered_ids",
+      "images_per_id": 5
+    },
+    "evaluation_query": {
+      "day": "2023Aug20",
+      "roles": [
+        "evaluation_registered_ids",
+        "evaluation_unknown_ids"
+      ],
+      "images_per_id": 5
+    }
+  },
+  "sampling": "Uniform indices over sorted camera1 filenames including endpoints; retain all if training directory has fewer than10; whole identity excluded for insufficient required sources; no post-score replacement",
+  "eligibility_minimums": {
+    "training_identities": 10,
+    "each_heldout_role": 3
+  },
+  "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+  "conditions": [
+    {
+      "name": "A_official_frozen",
+      "encoder": "Frozen ImageNet MobileNetV3-small features+avgpool,576dims",
+      "preprocess": "Official resize256 centre crop224 ImageNet normalisation"
+    },
+    {
+      "name": "B_letterbox_frozen",
+      "encoder": "Same frozen ImageNet encoder",
+      "preprocess": "Keep aspect, contain within224 square, centre pad RGB127, ImageNet normalisation"
+    },
+    {
+      "name": "C_letterbox_trained",
+      "encoder": "Fine-tune same576dim encoder on training IDs only; classifier used only for training",
+      "preprocess": "Same deterministic evaluation preprocessing asB"
+    }
+  ],
+  "optimisation": {
+    "seeds": [
+      26,
+      27,
+      28
+    ],
+    "epochs": 15,
+    "batches_per_epoch": 20,
+    "identities_per_batch": 8,
+    "images_per_identity": 4,
+    "sampling": "Seeded uniform8 training IDs per batch; four distinct images per ID covering at least2dates",
+    "optimiser": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "loss": "Cross entropy of16x cosine-normalised class logits + batch-hard Euclidean triplet, margin0.3, unit embeddings",
+    "training_augmentation": "Random mirror p0.5, rotation uniform[-8,8] expand with RGB127, ColorJitter brightness0.2 contrast0.2 saturation0.1, then letterbox224",
+    "checkpoint_selection": "Per seed select epoch with highest validation correctly-accepted registered queries at empirical unknown FAR<=0.05; ties minimise registered wrong accepts, then higher closed Top1, then earliest epoch",
+    "all_seeds_reported": true
+  },
+  "retrieval": "Max cosine per registered identity across5 references, then best identity; gallery identities differ between validation and evaluation",
+  "calibration": "Each model/seed threshold from validation registered and unknown queries only, same selection rule as previous pilot. Freeze threshold and checkpoints for all three seeds before any evaluation-feature forward pass",
+  "evaluation": "All A/B/threeC conditions share the same previously unused evaluation identities/images; report individual seeds and paired per-identity differences B-to-C, not a selected best seed",
+  "statistics": "Identity-cluster bootstrap seed26 draws2000; boundary all-zero error reported with counts and small-cohort limitation, not a zero population bound",
+  "integrity": "Full decode, byte/pixel hashes, forbid exact duplicate pixels across roles; record within-train duplicates; compare per-ID model outcomes, preserve all negative results",
+  "scope": "Small identity-disjoint, cross-day, curated-crop development study on one camera and farm. Final evaluation IDs never enter gradient updates, checkpoint/threshold choice or quantisation calibration; not whole-passage/RF/PYNQ measurement"
+}

@@ -1,0 +1,133 @@
+Ultralytics 8.4.63 🚀 Python-3.13.9 torch-2.8.0+cu128 CUDA:0 (Tesla V100S-PCIE-32GB, 32494MiB)
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=False, angle=1.0, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=0, cls=0.5, cls_pw=0.0, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, end2end=None, epochs=10, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=192, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt, momentum=0.9, mosaic=1.0, multi_scale=0.0, name=plain192, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded, rect=False, resume=False, retina_masks=False, rle=1.0, save=False, save_conf=False, save_crop=False, save_dir=/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded/plain192, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=26, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=False, verbose=False, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=0, workspace=None
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]      
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5, 3, True]        
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  1    119808  ultralytics.nn.modules.block.C3k2            [384, 128, 1, True]           
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 16                  -1  1     34304  ultralytics.nn.modules.block.C3k2            [256, 64, 1, True]            
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 19                  -1  1     95232  ultralytics.nn.modules.block.C3k2            [192, 128, 1, True]           
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 22                  -1  1    463104  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True, 0.5, True]
+ 23        [16, 19, 22]  1    241566  ultralytics.nn.modules.head.Detect           [1, 1, True, [64, 128, 256]]  
+YOLO26n summary: 260 layers, 2,504,190 parameters, 2,504,190 gradients, 5.8 GFLOPs
+
+Transferred 606/708 items from pretrained weights
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2563.0±515.8 MB/s, size: 318.5 KB)
+[K[34m[1mtrain: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/train.cache... 6809 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 6809/6809 1.2Git/s 0.0s
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2390.7±527.7 MB/s, size: 324.6 KB)
+[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val.cache... 1571 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1571/1571 329.5Mit/s 0.0s
+[34m[1moptimizer:[0m AdamW(lr=0.002, momentum=0.9) with parameter groups 114 weight(decay=0.0), 126 weight(decay=0.0005), 126 bias(decay=0.0)
+Image sizes 192 train, 192 val
+Using 0 dataloader workers
+Logging results to [1m/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded/plain192[0m
+Starting training for 10 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       1/10     0.812G      2.145      3.842    0.03232         83        192: 0% ──────────── 0/213  1.0s[K       1/10     0.852G      2.102      3.684    0.03049        100        192: 0% ──────────── 1/213 1.2s/it 1.3s<4:05[K       1/10     0.852G      2.102      3.684    0.03049        100        192: 0% ──────────── 1/213 1.2s/it 1.3s<4:05
+Ultralytics 8.4.63 🚀 Python-3.13.9 torch-2.8.0+cu128 CUDA:0 (Tesla V100S-PCIE-32GB, 32494MiB)
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=False, angle=1.0, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=0, cls=0.5, cls_pw=0.0, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, end2end=None, epochs=10, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=192, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt, momentum=0.9, mosaic=1.0, multi_scale=0.0, name=rot192, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded, rect=False, resume=False, retina_masks=False, rle=1.0, save=False, save_conf=False, save_crop=False, save_dir=/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded/rot192, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=26, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=False, verbose=False, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=0, workspace=None
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]      
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5, 3, True]        
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  1    119808  ultralytics.nn.modules.block.C3k2            [384, 128, 1, True]           
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 16                  -1  1     34304  ultralytics.nn.modules.block.C3k2            [256, 64, 1, True]            
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 19                  -1  1     95232  ultralytics.nn.modules.block.C3k2            [192, 128, 1, True]           
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 22                  -1  1    463104  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True, 0.5, True]
+ 23        [16, 19, 22]  1    241566  ultralytics.nn.modules.head.Detect           [1, 1, True, [64, 128, 256]]  
+YOLO26n summary: 260 layers, 2,504,190 parameters, 2,504,190 gradients, 5.8 GFLOPs
+
+Transferred 606/708 items from pretrained weights
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2484.6±367.0 MB/s, size: 318.3 KB)
+[K[34m[1mtrain: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/train.cache... 6809 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 6809/6809 2.2Git/s 0.0s
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1774.6±630.2 MB/s, size: 333.7 KB)
+[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val.cache... 1571 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1571/1571 549.1Mit/s 0.0s
+[34m[1moptimizer:[0m AdamW(lr=0.002, momentum=0.9) with parameter groups 114 weight(decay=0.0), 126 weight(decay=0.0005), 126 bias(decay=0.0)
+Image sizes 192 train, 192 val
+Using 0 dataloader workers
+Logging results to [1m/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded/rot192[0m
+Starting training for 10 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       1/10     0.814G      1.942      3.683    0.02759        100        192: 0% ──────────── 0/213  0.4s[K       1/10     0.832G      1.859      3.621    0.02754         85        192: 0% ──────────── 1/213 1.2s/it 0.7s<4:09[K       1/10     0.832G      1.859      3.621    0.02754         85        192: 0% ──────────── 1/213 1.2s/it 0.7s<4:09
+Ultralytics 8.4.63 🚀 Python-3.13.9 torch-2.8.0+cu128 CUDA:0 (Tesla V100S-PCIE-32GB, 32494MiB)
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=False, angle=1.0, augment=False, auto_augment=randaugment, batch=32, bgr=0.0, box=7.5, cache=False, cfg=None, classes=None, close_mosaic=0, cls=0.5, cls_pw=0.0, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/data.yaml, degrees=0.0, deterministic=True, device=0, dfl=1.5, dnn=False, dropout=0.0, dynamic=False, embed=None, end2end=None, epochs=10, erasing=0.4, exist_ok=False, fliplr=0.5, flipud=0.0, format=torchscript, fraction=1.0, freeze=None, half=False, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=256, int8=False, iou=0.7, keras=False, kobj=1.0, line_width=None, lr0=0.002, lrf=0.01, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt, momentum=0.9, mosaic=1.0, multi_scale=0.0, name=rot256, nbs=64, nms=False, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded, rect=False, resume=False, retina_masks=False, rle=1.0, save=False, save_conf=False, save_crop=False, save_dir=/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded/rot256, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0.5, seed=26, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, time=None, tracker=botsort.yaml, translate=0.1, val=False, verbose=False, vid_stride=1, visualize=False, warmup_bias_lr=0.1, warmup_epochs=3.0, warmup_momentum=0.8, weight_decay=0.0005, workers=0, workspace=None
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]      
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5, 3, True]        
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  1    119808  ultralytics.nn.modules.block.C3k2            [384, 128, 1, True]           
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 16                  -1  1     34304  ultralytics.nn.modules.block.C3k2            [256, 64, 1, True]            
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 19                  -1  1     95232  ultralytics.nn.modules.block.C3k2            [192, 128, 1, True]           
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 22                  -1  1    463104  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True, 0.5, True]
+ 23        [16, 19, 22]  1    241566  ultralytics.nn.modules.head.Detect           [1, 1, True, [64, 128, 256]]  
+YOLO26n summary: 260 layers, 2,504,190 parameters, 2,504,190 gradients, 5.8 GFLOPs
+
+Transferred 606/708 items from pretrained weights
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2492.3±409.4 MB/s, size: 318.3 KB)
+[K[34m[1mtrain: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/train.cache... 6809 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 6809/6809 1.9Git/s 0.0s
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2271.9±500.6 MB/s, size: 333.7 KB)
+[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val.cache... 1571 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1571/1571 366.1Mit/s 0.0s
+[34m[1moptimizer:[0m AdamW(lr=0.002, momentum=0.9) with parameter groups 114 weight(decay=0.0), 126 weight(decay=0.0005), 126 bias(decay=0.0)
+Image sizes 256 train, 256 val
+Using 0 dataloader workers
+Logging results to [1m/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded/rot256[0m
+Starting training for 10 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       1/10      1.36G      1.738      3.628    0.02552        100        256: 0% ──────────── 0/213  0.5s[K       1/10      1.38G       1.73      3.638      0.026         85        256: 0% ──────────── 1/213 1.2s/it 0.8s<4:09[K       1/10      1.38G       1.73      3.638      0.026         85        256: 0% ──────────── 1/213 1.2s/it 0.8s<4:09
+{"status": "48_CPU_CUDA_ROTATION_ORACLES_AND3_REAL_TRAINER_TWO_UPDATE_SMOKES_PASS", "created_UTC": "2026-10-29T12:20:52.715200+00:00", "job_id": "130516", "protocol_sha256": "43ad5590cbb6ee6be15356af4c0499b947e627aaf72bb1858ccb800add0f69b1", "discarded_optimizer_steps": 6, "formal_training_updates": 0, "all_source_image_and_label_hashes_verified": 8380, "source_video_Toros_or_final_candidates_forward": false, "torch": "2.8.0+cu128", "ultralytics": "8.4.63", "device": "Tesla V100S-PCIE-32GB", "no_formal_checkpoint_reuse": true, "whole_goal_complete": false}

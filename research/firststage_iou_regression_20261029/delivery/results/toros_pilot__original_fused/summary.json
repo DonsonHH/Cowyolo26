@@ -1,0 +1,168 @@
+{
+  "name": "toros_pilot__original_fused",
+  "source": "toros_pilot",
+  "scene": "toros_used_reverse",
+  "model": "pilot",
+  "variant": "original_fused",
+  "checkpoint_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+  "observation_ticks": 479,
+  "post_tracker_rows": 905,
+  "ROI_rows": 891,
+  "all_history_down": 0,
+  "all_history_up": 2,
+  "baseline_checks": {
+    "all_observations_tentative_and_acceptance_history_exact": true,
+    "all_full_image_and_ROI_boxes_exact": true,
+    "both_counter_event_paths_exact": true
+  },
+  "window_counters": [
+    {
+      "window": "publisher6_scope",
+      "counter": "confirmed_only",
+      "down": 0,
+      "up": 2,
+      "events": [
+        {
+          "time_s": 8.2,
+          "track_id": 21,
+          "direction": "B->A",
+          "frame0": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 39,
+          "direction": "B->A",
+          "frame0": 395
+        }
+      ],
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "window": "publisher6_scope",
+      "counter": "confirmation_handoff",
+      "down": 0,
+      "up": 2,
+      "events": [
+        {
+          "time_s": 8.2,
+          "track_id": 21,
+          "direction": "B->A",
+          "frame0": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 39,
+          "direction": "B->A",
+          "frame0": 395
+        }
+      ],
+      "formal_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      }
+    }
+  ],
+  "ROI_overlap_pairs_by_tick": 22,
+  "ROI_ticks_with_overlap_candidate": 22,
+  "effective_tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "reference_authority": "already_used_publisher_trajectory_derived_six_events",
+  "new_detector_forwards": 0,
+  "new_training_updates": 0
+}

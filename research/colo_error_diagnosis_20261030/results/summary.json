@@ -1,0 +1,795 @@
+{
+  "status": "ALL9_CONDITIONS4050_GT_ROWS5400_ORACLE_GRAPHS_AND_FIXED_ERROR_PARTITIONS_COMPLETE",
+  "created_UTC": "2026-10-30T05:55:46.496887+00:00",
+  "conditions": [
+    {
+      "condition": "official_s192",
+      "fixed_TP": 7,
+      "fixed_FP": 2,
+      "fixed_FN": 443,
+      "GT_partition": {
+        "only_other_class_geometry": 199,
+        "cow_score_0_001_to_0_20": 136,
+        "no_geometry_in_retained300": 40,
+        "cow_score_below_0_001": 68,
+        "matched_TP": 7
+      },
+      "GT_geometry_groups": {
+        "all": {
+          "only_other_class_geometry": 199,
+          "cow_score_0_001_to_0_20": 136,
+          "no_geometry_in_retained300": 40,
+          "cow_score_below_0_001": 68,
+          "matched_TP": 7
+        },
+        "border": {
+          "only_other_class_geometry": 101,
+          "cow_score_0_001_to_0_20": 91,
+          "no_geometry_in_retained300": 31,
+          "cow_score_below_0_001": 36,
+          "matched_TP": 5
+        },
+        "short_ge24": {
+          "only_other_class_geometry": 130,
+          "cow_score_0_001_to_0_20": 120,
+          "cow_score_below_0_001": 49,
+          "no_geometry_in_retained300": 9,
+          "matched_TP": 7
+        },
+        "light_indoorlight": {
+          "only_other_class_geometry": 38,
+          "cow_score_0_001_to_0_20": 31,
+          "no_geometry_in_retained300": 5,
+          "cow_score_below_0_001": 21,
+          "matched_TP": 2
+        },
+        "interior": {
+          "only_other_class_geometry": 98,
+          "cow_score_below_0_001": 32,
+          "cow_score_0_001_to_0_20": 45,
+          "no_geometry_in_retained300": 9,
+          "matched_TP": 2
+        },
+        "short_lt16": {
+          "no_geometry_in_retained300": 26,
+          "only_other_class_geometry": 25,
+          "cow_score_below_0_001": 5,
+          "cow_score_0_001_to_0_20": 4
+        },
+        "short_16to24": {
+          "cow_score_below_0_001": 14,
+          "only_other_class_geometry": 44,
+          "cow_score_0_001_to_0_20": 12,
+          "no_geometry_in_retained300": 5
+        },
+        "light_daylight": {
+          "cow_score_0_001_to_0_20": 90,
+          "only_other_class_geometry": 121,
+          "cow_score_below_0_001": 38,
+          "no_geometry_in_retained300": 16,
+          "matched_TP": 5
+        },
+        "light_infrared": {
+          "cow_score_0_001_to_0_20": 15,
+          "cow_score_below_0_001": 9,
+          "only_other_class_geometry": 40,
+          "no_geometry_in_retained300": 19
+        }
+      },
+      "maximum_one_to_one_geometry_oracles_not_deployable": {
+        "cow_score0.2_IoU0.3": 8,
+        "cow_score0.001_IoU0.3": 162,
+        "cow_scoreNone_IoU0.3": 237,
+        "anyclass_IoU0.3": 422,
+        "cow_score0.2_IoU0.5": 7,
+        "cow_score0.001_IoU0.5": 142,
+        "cow_scoreNone_IoU0.5": 209,
+        "anyclass_IoU0.5": 410,
+        "cow_score0.2_IoU0.75": 5,
+        "cow_score0.001_IoU0.75": 100,
+        "cow_scoreNone_IoU0.75": 146,
+        "anyclass_IoU0.75": 325
+      },
+      "FP_partition": {
+        "no_GT_IoU0_50": 2
+      }
+    },
+    {
+      "condition": "official_s256",
+      "fixed_TP": 31,
+      "fixed_FP": 9,
+      "fixed_FN": 419,
+      "GT_partition": {
+        "cow_score_0_001_to_0_20": 239,
+        "only_other_class_geometry": 107,
+        "no_geometry_in_retained300": 45,
+        "cow_score_below_0_001": 28,
+        "matched_TP": 31
+      },
+      "GT_geometry_groups": {
+        "all": {
+          "cow_score_0_001_to_0_20": 239,
+          "only_other_class_geometry": 107,
+          "no_geometry_in_retained300": 45,
+          "cow_score_below_0_001": 28,
+          "matched_TP": 31
+        },
+        "border": {
+          "cow_score_0_001_to_0_20": 136,
+          "only_other_class_geometry": 55,
+          "no_geometry_in_retained300": 39,
+          "cow_score_below_0_001": 15,
+          "matched_TP": 19
+        },
+        "short_ge24": {
+          "cow_score_0_001_to_0_20": 225,
+          "only_other_class_geometry": 88,
+          "cow_score_below_0_001": 25,
+          "matched_TP": 30,
+          "no_geometry_in_retained300": 11
+        },
+        "light_indoorlight": {
+          "cow_score_0_001_to_0_20": 60,
+          "only_other_class_geometry": 12,
+          "no_geometry_in_retained300": 6,
+          "cow_score_below_0_001": 12,
+          "matched_TP": 7
+        },
+        "interior": {
+          "cow_score_0_001_to_0_20": 103,
+          "only_other_class_geometry": 52,
+          "cow_score_below_0_001": 13,
+          "matched_TP": 12,
+          "no_geometry_in_retained300": 6
+        },
+        "short_lt16": {
+          "no_geometry_in_retained300": 27,
+          "cow_score_below_0_001": 1,
+          "cow_score_0_001_to_0_20": 3,
+          "only_other_class_geometry": 5
+        },
+        "short_16to24": {
+          "cow_score_below_0_001": 2,
+          "cow_score_0_001_to_0_20": 11,
+          "only_other_class_geometry": 14,
+          "no_geometry_in_retained300": 7,
+          "matched_TP": 1
+        },
+        "light_daylight": {
+          "cow_score_0_001_to_0_20": 151,
+          "only_other_class_geometry": 61,
+          "cow_score_below_0_001": 11,
+          "no_geometry_in_retained300": 23,
+          "matched_TP": 24
+        },
+        "light_infrared": {
+          "cow_score_0_001_to_0_20": 28,
+          "only_other_class_geometry": 34,
+          "no_geometry_in_retained300": 16,
+          "cow_score_below_0_001": 5
+        }
+      },
+      "maximum_one_to_one_geometry_oracles_not_deployable": {
+        "cow_score0.2_IoU0.3": 40,
+        "cow_score0.001_IoU0.3": 304,
+        "cow_scoreNone_IoU0.3": 327,
+        "anyclass_IoU0.3": 423,
+        "cow_score0.2_IoU0.5": 31,
+        "cow_score0.001_IoU0.5": 270,
+        "cow_scoreNone_IoU0.5": 298,
+        "anyclass_IoU0.5": 405,
+        "cow_score0.2_IoU0.75": 26,
+        "cow_score0.001_IoU0.75": 212,
+        "cow_scoreNone_IoU0.75": 239,
+        "anyclass_IoU0.75": 338
+      },
+      "FP_partition": {
+        "no_GT_IoU0_50": 9
+      }
+    },
+    {
+      "condition": "official_s320",
+      "fixed_TP": 63,
+      "fixed_FP": 10,
+      "fixed_FN": 387,
+      "GT_partition": {
+        "cow_score_0_001_to_0_20": 246,
+        "no_geometry_in_retained300": 56,
+        "only_other_class_geometry": 54,
+        "cow_score_below_0_001": 31,
+        "matched_TP": 63
+      },
+      "GT_geometry_groups": {
+        "all": {
+          "cow_score_0_001_to_0_20": 246,
+          "no_geometry_in_retained300": 56,
+          "only_other_class_geometry": 54,
+          "cow_score_below_0_001": 31,
+          "matched_TP": 63
+        },
+        "border": {
+          "cow_score_0_001_to_0_20": 141,
+          "no_geometry_in_retained300": 42,
+          "only_other_class_geometry": 29,
+          "cow_score_below_0_001": 20,
+          "matched_TP": 32
+        },
+        "short_ge24": {
+          "cow_score_0_001_to_0_20": 236,
+          "only_other_class_geometry": 50,
+          "cow_score_below_0_001": 27,
+          "matched_TP": 63,
+          "no_geometry_in_retained300": 23
+        },
+        "light_indoorlight": {
+          "cow_score_0_001_to_0_20": 61,
+          "no_geometry_in_retained300": 7,
+          "only_other_class_geometry": 13,
+          "cow_score_below_0_001": 2,
+          "matched_TP": 14
+        },
+        "interior": {
+          "cow_score_0_001_to_0_20": 105,
+          "matched_TP": 31,
+          "cow_score_below_0_001": 11,
+          "only_other_class_geometry": 25,
+          "no_geometry_in_retained300": 14
+        },
+        "short_lt16": {
+          "no_geometry_in_retained300": 20,
+          "cow_score_below_0_001": 2,
+          "cow_score_0_001_to_0_20": 2
+        },
+        "light_daylight": {
+          "cow_score_0_001_to_0_20": 160,
+          "cow_score_below_0_001": 22,
+          "no_geometry_in_retained300": 20,
+          "matched_TP": 46,
+          "only_other_class_geometry": 22
+        },
+        "short_16to24": {
+          "cow_score_below_0_001": 2,
+          "cow_score_0_001_to_0_20": 8,
+          "no_geometry_in_retained300": 13,
+          "only_other_class_geometry": 4
+        },
+        "light_infrared": {
+          "cow_score_0_001_to_0_20": 25,
+          "only_other_class_geometry": 19,
+          "no_geometry_in_retained300": 29,
+          "cow_score_below_0_001": 7,
+          "matched_TP": 3
+        }
+      },
+      "maximum_one_to_one_geometry_oracles_not_deployable": {
+        "cow_score0.2_IoU0.3": 71,
+        "cow_score0.001_IoU0.3": 334,
+        "cow_scoreNone_IoU0.3": 364,
+        "anyclass_IoU0.3": 416,
+        "cow_score0.2_IoU0.5": 63,
+        "cow_score0.001_IoU0.5": 309,
+        "cow_scoreNone_IoU0.5": 340,
+        "anyclass_IoU0.5": 394,
+        "cow_score0.2_IoU0.75": 46,
+        "cow_score0.001_IoU0.75": 252,
+        "cow_scoreNone_IoU0.75": 278,
+        "anyclass_IoU0.75": 330
+      },
+      "FP_partition": {
+        "no_GT_IoU0_50": 8,
+        "has_GT_IoU0_50_duplicate_or_competition": 2
+      }
+    },
+    {
+      "condition": "old_rot192_s192",
+      "fixed_TP": 92,
+      "fixed_FP": 21,
+      "fixed_FN": 358,
+      "GT_partition": {
+        "matched_TP": 92,
+        "cow_score_0_001_to_0_20": 98,
+        "cow_score_below_0_001": 213,
+        "no_geometry_in_retained300": 47
+      },
+      "GT_geometry_groups": {
+        "all": {
+          "matched_TP": 92,
+          "cow_score_0_001_to_0_20": 98,
+          "cow_score_below_0_001": 213,
+          "no_geometry_in_retained300": 47
+        },
+        "border": {
+          "matched_TP": 60,
+          "cow_score_0_001_to_0_20": 61,
+          "cow_score_below_0_001": 118,
+          "no_geometry_in_retained300": 25
+        },
+        "short_ge24": {
+          "matched_TP": 91,
+          "cow_score_0_001_to_0_20": 72,
+          "cow_score_below_0_001": 142,
+          "no_geometry_in_retained300": 10
+        },
+        "light_indoorlight": {
+          "matched_TP": 29,
+          "cow_score_0_001_to_0_20": 20,
+          "cow_score_below_0_001": 40,
+          "no_geometry_in_retained300": 8
+        },
+        "interior": {
+          "matched_TP": 32,
+          "cow_score_below_0_001": 95,
+          "cow_score_0_001_to_0_20": 37,
+          "no_geometry_in_retained300": 22
+        },
+        "short_lt16": {
+          "no_geometry_in_retained300": 22,
+          "cow_score_below_0_001": 27,
+          "cow_score_0_001_to_0_20": 11
+        },
+        "short_16to24": {
+          "cow_score_below_0_001": 44,
+          "matched_TP": 1,
+          "no_geometry_in_retained300": 15,
+          "cow_score_0_001_to_0_20": 15
+        },
+        "light_daylight": {
+          "no_geometry_in_retained300": 28,
+          "cow_score_below_0_001": 130,
+          "matched_TP": 55,
+          "cow_score_0_001_to_0_20": 57
+        },
+        "light_infrared": {
+          "cow_score_below_0_001": 43,
+          "cow_score_0_001_to_0_20": 21,
+          "no_geometry_in_retained300": 11,
+          "matched_TP": 8
+        }
+      },
+      "maximum_one_to_one_geometry_oracles_not_deployable": {
+        "cow_score0.2_IoU0.3": 97,
+        "cow_score0.001_IoU0.3": 231,
+        "cow_scoreNone_IoU0.3": 438,
+        "anyclass_IoU0.3": 438,
+        "cow_score0.2_IoU0.5": 92,
+        "cow_score0.001_IoU0.5": 190,
+        "cow_scoreNone_IoU0.5": 403,
+        "anyclass_IoU0.5": 403,
+        "cow_score0.2_IoU0.75": 39,
+        "cow_score0.001_IoU0.75": 81,
+        "cow_scoreNone_IoU0.75": 185,
+        "anyclass_IoU0.75": 185
+      },
+      "FP_partition": {
+        "no_GT_IoU0_50": 11,
+        "has_GT_IoU0_50_duplicate_or_competition": 10
+      }
+    },
+    {
+      "condition": "old_rot192_s256",
+      "fixed_TP": 116,
+      "fixed_FP": 38,
+      "fixed_FN": 334,
+      "GT_partition": {
+        "matched_TP": 116,
+        "cow_score_0_001_to_0_20": 139,
+        "cow_score_below_0_001": 142,
+        "no_geometry_in_retained300": 53
+      },
+      "GT_geometry_groups": {
+        "all": {
+          "matched_TP": 116,
+          "cow_score_0_001_to_0_20": 139,
+          "cow_score_below_0_001": 142,
+          "no_geometry_in_retained300": 53
+        },
+        "border": {
+          "matched_TP": 69,
+          "cow_score_0_001_to_0_20": 84,
+          "cow_score_below_0_001": 83,
+          "no_geometry_in_retained300": 28
+        },
+        "short_ge24": {
+          "matched_TP": 116,
+          "cow_score_0_001_to_0_20": 116,
+          "cow_score_below_0_001": 114,
+          "no_geometry_in_retained300": 33
+        },
+        "light_indoorlight": {
+          "matched_TP": 36,
+          "cow_score_0_001_to_0_20": 30,
+          "cow_score_below_0_001": 24,
+          "no_geometry_in_retained300": 7
+        },
+        "interior": {
+          "matched_TP": 47,
+          "cow_score_0_001_to_0_20": 55,
+          "cow_score_below_0_001": 59,
+          "no_geometry_in_retained300": 25
+        },
+        "short_lt16": {
+          "no_geometry_in_retained300": 16,
+          "cow_score_0_001_to_0_20": 8,
+          "cow_score_below_0_001": 12
+        },
+        "short_16to24": {
+          "cow_score_0_001_to_0_20": 15,
+          "cow_score_below_0_001": 16,
+          "no_geometry_in_retained300": 4
+        },
+        "light_daylight": {
+          "no_geometry_in_retained300": 35,
+          "cow_score_below_0_001": 87,
+          "cow_score_0_001_to_0_20": 79,
+          "matched_TP": 69
+        },
+        "light_infrared": {
+          "cow_score_0_001_to_0_20": 30,
+          "cow_score_below_0_001": 31,
+          "no_geometry_in_retained300": 11,
+          "matched_TP": 11
+        }
+      },
+      "maximum_one_to_one_geometry_oracles_not_deployable": {
+        "cow_score0.2_IoU0.3": 129,
+        "cow_score0.001_IoU0.3": 301,
+        "cow_scoreNone_IoU0.3": 431,
+        "anyclass_IoU0.3": 431,
+        "cow_score0.2_IoU0.5": 116,
+        "cow_score0.001_IoU0.5": 254,
+        "cow_scoreNone_IoU0.5": 397,
+        "anyclass_IoU0.5": 397,
+        "cow_score0.2_IoU0.75": 55,
+        "cow_score0.001_IoU0.75": 95,
+        "cow_scoreNone_IoU0.75": 204,
+        "anyclass_IoU0.75": 204
+      },
+      "FP_partition": {
+        "no_GT_IoU0_50": 30,
+        "has_GT_IoU0_50_duplicate_or_competition": 8
+      }
+    },
+    {
+      "condition": "old_rot192_s320",
+      "fixed_TP": 136,
+      "fixed_FP": 45,
+      "fixed_FN": 314,
+      "GT_partition": {
+        "matched_TP": 136,
+        "cow_score_0_001_to_0_20": 142,
+        "no_geometry_in_retained300": 64,
+        "cow_score_below_0_001": 108
+      },
+      "GT_geometry_groups": {
+        "all": {
+          "matched_TP": 136,
+          "cow_score_0_001_to_0_20": 142,
+          "no_geometry_in_retained300": 64,
+          "cow_score_below_0_001": 108
+        },
+        "border": {
+          "matched_TP": 83,
+          "cow_score_0_001_to_0_20": 84,
+          "no_geometry_in_retained300": 33,
+          "cow_score_below_0_001": 64
+        },
+        "short_ge24": {
+          "matched_TP": 136,
+          "cow_score_0_001_to_0_20": 124,
+          "no_geometry_in_retained300": 44,
+          "cow_score_below_0_001": 95
+        },
+        "light_indoorlight": {
+          "matched_TP": 36,
+          "cow_score_0_001_to_0_20": 35,
+          "no_geometry_in_retained300": 9,
+          "cow_score_below_0_001": 17
+        },
+        "interior": {
+          "matched_TP": 53,
+          "cow_score_below_0_001": 44,
+          "no_geometry_in_retained300": 31,
+          "cow_score_0_001_to_0_20": 58
+        },
+        "short_lt16": {
+          "no_geometry_in_retained300": 16,
+          "cow_score_below_0_001": 5,
+          "cow_score_0_001_to_0_20": 3
+        },
+        "light_daylight": {
+          "no_geometry_in_retained300": 41,
+          "matched_TP": 83,
+          "cow_score_0_001_to_0_20": 79,
+          "cow_score_below_0_001": 67
+        },
+        "short_16to24": {
+          "cow_score_0_001_to_0_20": 15,
+          "cow_score_below_0_001": 8,
+          "no_geometry_in_retained300": 4
+        },
+        "light_infrared": {
+          "cow_score_below_0_001": 24,
+          "cow_score_0_001_to_0_20": 28,
+          "no_geometry_in_retained300": 14,
+          "matched_TP": 17
+        }
+      },
+      "maximum_one_to_one_geometry_oracles_not_deployable": {
+        "cow_score0.2_IoU0.3": 151,
+        "cow_score0.001_IoU0.3": 331,
+        "cow_scoreNone_IoU0.3": 429,
+        "anyclass_IoU0.3": 429,
+        "cow_score0.2_IoU0.5": 136,
+        "cow_score0.001_IoU0.5": 278,
+        "cow_scoreNone_IoU0.5": 386,
+        "anyclass_IoU0.5": 386,
+        "cow_score0.2_IoU0.75": 61,
+        "cow_score0.001_IoU0.75": 116,
+        "cow_scoreNone_IoU0.75": 182,
+        "anyclass_IoU0.75": 182
+      },
+      "FP_partition": {
+        "no_GT_IoU0_50": 32,
+        "has_GT_IoU0_50_duplicate_or_competition": 13
+      }
+    },
+    {
+      "condition": "new_mosaic050_s192",
+      "fixed_TP": 86,
+      "fixed_FP": 5,
+      "fixed_FN": 364,
+      "GT_partition": {
+        "cow_score_0_001_to_0_20": 104,
+        "cow_score_below_0_001": 196,
+        "matched_TP": 86,
+        "no_geometry_in_retained300": 64
+      },
+      "GT_geometry_groups": {
+        "all": {
+          "cow_score_0_001_to_0_20": 104,
+          "cow_score_below_0_001": 196,
+          "matched_TP": 86,
+          "no_geometry_in_retained300": 64
+        },
+        "border": {
+          "cow_score_0_001_to_0_20": 70,
+          "cow_score_below_0_001": 104,
+          "no_geometry_in_retained300": 32,
+          "matched_TP": 58
+        },
+        "short_ge24": {
+          "cow_score_0_001_to_0_20": 74,
+          "cow_score_below_0_001": 135,
+          "matched_TP": 86,
+          "no_geometry_in_retained300": 20
+        },
+        "light_indoorlight": {
+          "cow_score_0_001_to_0_20": 30,
+          "cow_score_below_0_001": 39,
+          "matched_TP": 19,
+          "no_geometry_in_retained300": 9
+        },
+        "interior": {
+          "matched_TP": 28,
+          "cow_score_0_001_to_0_20": 34,
+          "cow_score_below_0_001": 92,
+          "no_geometry_in_retained300": 32
+        },
+        "short_lt16": {
+          "no_geometry_in_retained300": 25,
+          "cow_score_below_0_001": 19,
+          "cow_score_0_001_to_0_20": 16
+        },
+        "short_16to24": {
+          "cow_score_below_0_001": 42,
+          "cow_score_0_001_to_0_20": 14,
+          "no_geometry_in_retained300": 19
+        },
+        "light_daylight": {
+          "cow_score_below_0_001": 119,
+          "no_geometry_in_retained300": 40,
+          "cow_score_0_001_to_0_20": 54,
+          "matched_TP": 57
+        },
+        "light_infrared": {
+          "cow_score_below_0_001": 38,
+          "cow_score_0_001_to_0_20": 20,
+          "no_geometry_in_retained300": 15,
+          "matched_TP": 10
+        }
+      },
+      "maximum_one_to_one_geometry_oracles_not_deployable": {
+        "cow_score0.2_IoU0.3": 90,
+        "cow_score0.001_IoU0.3": 214,
+        "cow_scoreNone_IoU0.3": 435,
+        "anyclass_IoU0.3": 435,
+        "cow_score0.2_IoU0.5": 86,
+        "cow_score0.001_IoU0.5": 190,
+        "cow_scoreNone_IoU0.5": 386,
+        "anyclass_IoU0.5": 386,
+        "cow_score0.2_IoU0.75": 34,
+        "cow_score0.001_IoU0.75": 81,
+        "cow_scoreNone_IoU0.75": 179,
+        "anyclass_IoU0.75": 179
+      },
+      "FP_partition": {
+        "no_GT_IoU0_50": 5
+      }
+    },
+    {
+      "condition": "new_mosaic050_s256",
+      "fixed_TP": 102,
+      "fixed_FP": 12,
+      "fixed_FN": 348,
+      "GT_partition": {
+        "matched_TP": 102,
+        "cow_score_below_0_001": 165,
+        "no_geometry_in_retained300": 45,
+        "cow_score_0_001_to_0_20": 138
+      },
+      "GT_geometry_groups": {
+        "all": {
+          "matched_TP": 102,
+          "cow_score_below_0_001": 165,
+          "no_geometry_in_retained300": 45,
+          "cow_score_0_001_to_0_20": 138
+        },
+        "border": {
+          "matched_TP": 66,
+          "cow_score_below_0_001": 91,
+          "no_geometry_in_retained300": 26,
+          "cow_score_0_001_to_0_20": 81
+        },
+        "short_ge24": {
+          "matched_TP": 102,
+          "cow_score_below_0_001": 136,
+          "cow_score_0_001_to_0_20": 116,
+          "no_geometry_in_retained300": 25
+        },
+        "light_indoorlight": {
+          "matched_TP": 30,
+          "cow_score_below_0_001": 24,
+          "no_geometry_in_retained300": 7,
+          "cow_score_0_001_to_0_20": 36
+        },
+        "interior": {
+          "matched_TP": 36,
+          "cow_score_0_001_to_0_20": 57,
+          "cow_score_below_0_001": 74,
+          "no_geometry_in_retained300": 19
+        },
+        "short_lt16": {
+          "no_geometry_in_retained300": 15,
+          "cow_score_below_0_001": 16,
+          "cow_score_0_001_to_0_20": 5
+        },
+        "short_16to24": {
+          "cow_score_0_001_to_0_20": 17,
+          "cow_score_below_0_001": 13,
+          "no_geometry_in_retained300": 5
+        },
+        "light_daylight": {
+          "no_geometry_in_retained300": 28,
+          "cow_score_below_0_001": 108,
+          "cow_score_0_001_to_0_20": 74,
+          "matched_TP": 60
+        },
+        "light_infrared": {
+          "matched_TP": 12,
+          "cow_score_below_0_001": 33,
+          "cow_score_0_001_to_0_20": 28,
+          "no_geometry_in_retained300": 10
+        }
+      },
+      "maximum_one_to_one_geometry_oracles_not_deployable": {
+        "cow_score0.2_IoU0.3": 110,
+        "cow_score0.001_IoU0.3": 281,
+        "cow_scoreNone_IoU0.3": 433,
+        "anyclass_IoU0.3": 433,
+        "cow_score0.2_IoU0.5": 102,
+        "cow_score0.001_IoU0.5": 240,
+        "cow_scoreNone_IoU0.5": 405,
+        "anyclass_IoU0.5": 405,
+        "cow_score0.2_IoU0.75": 47,
+        "cow_score0.001_IoU0.75": 97,
+        "cow_scoreNone_IoU0.75": 216,
+        "anyclass_IoU0.75": 216
+      },
+      "FP_partition": {
+        "no_GT_IoU0_50": 11,
+        "has_GT_IoU0_50_duplicate_or_competition": 1
+      }
+    },
+    {
+      "condition": "new_mosaic050_s320",
+      "fixed_TP": 137,
+      "fixed_FP": 31,
+      "fixed_FN": 313,
+      "GT_partition": {
+        "matched_TP": 137,
+        "cow_score_below_0_001": 118,
+        "no_geometry_in_retained300": 54,
+        "cow_score_0_001_to_0_20": 141
+      },
+      "GT_geometry_groups": {
+        "all": {
+          "matched_TP": 137,
+          "cow_score_below_0_001": 118,
+          "no_geometry_in_retained300": 54,
+          "cow_score_0_001_to_0_20": 141
+        },
+        "border": {
+          "matched_TP": 79,
+          "cow_score_below_0_001": 70,
+          "no_geometry_in_retained300": 28,
+          "cow_score_0_001_to_0_20": 87
+        },
+        "short_ge24": {
+          "matched_TP": 137,
+          "cow_score_below_0_001": 99,
+          "no_geometry_in_retained300": 37,
+          "cow_score_0_001_to_0_20": 126
+        },
+        "light_indoorlight": {
+          "matched_TP": 38,
+          "cow_score_below_0_001": 16,
+          "no_geometry_in_retained300": 10,
+          "cow_score_0_001_to_0_20": 33
+        },
+        "interior": {
+          "matched_TP": 58,
+          "cow_score_0_001_to_0_20": 54,
+          "cow_score_below_0_001": 48,
+          "no_geometry_in_retained300": 26
+        },
+        "short_lt16": {
+          "no_geometry_in_retained300": 13,
+          "cow_score_0_001_to_0_20": 4,
+          "cow_score_below_0_001": 7
+        },
+        "light_daylight": {
+          "no_geometry_in_retained300": 33,
+          "cow_score_below_0_001": 77,
+          "cow_score_0_001_to_0_20": 82,
+          "matched_TP": 78
+        },
+        "short_16to24": {
+          "cow_score_0_001_to_0_20": 11,
+          "cow_score_below_0_001": 12,
+          "no_geometry_in_retained300": 4
+        },
+        "light_infrared": {
+          "cow_score_below_0_001": 25,
+          "cow_score_0_001_to_0_20": 26,
+          "no_geometry_in_retained300": 11,
+          "matched_TP": 21
+        }
+      },
+      "maximum_one_to_one_geometry_oracles_not_deployable": {
+        "cow_score0.2_IoU0.3": 150,
+        "cow_score0.001_IoU0.3": 335,
+        "cow_scoreNone_IoU0.3": 434,
+        "anyclass_IoU0.3": 434,
+        "cow_score0.2_IoU0.5": 137,
+        "cow_score0.001_IoU0.5": 278,
+        "cow_scoreNone_IoU0.5": 396,
+        "anyclass_IoU0.5": 396,
+        "cow_score0.2_IoU0.75": 56,
+        "cow_score0.001_IoU0.75": 110,
+        "cow_scoreNone_IoU0.75": 206,
+        "anyclass_IoU0.75": 206
+      },
+      "FP_partition": {
+        "no_GT_IoU0_50": 19,
+        "has_GT_IoU0_50_duplicate_or_competition": 12
+      }
+    }
+  ],
+  "selected_192_cases": 13,
+  "new_model_forwards": 0,
+  "new_training_updates": 0,
+  "new_board_forwards": 0,
+  "diagnostic_oracles_are_deployable": false,
+  "new_independent_test": false,
+  "whole_goal_complete": false
+}

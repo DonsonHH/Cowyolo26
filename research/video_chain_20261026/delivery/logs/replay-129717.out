@@ -1,0 +1,50 @@
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/share/home/renly/projects/idcoo_research_20261026/video_chain/cache/ultralytics/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+{"sampled": 400, "source_time_s": 79.8, "observed_events": 0, "snapshot_bytes": 0}
+{"sampled": 800, "source_time_s": 159.8, "observed_events": 0, "snapshot_bytes": 0}
+{"sampled": 1200, "source_time_s": 239.8, "observed_events": 0, "snapshot_bytes": 0}
+{"sampled": 1600, "source_time_s": 319.8, "observed_events": 0, "snapshot_bytes": 0}
+{"sampled": 2000, "source_time_s": 399.8, "observed_events": 6, "snapshot_bytes": 0}
+{"sampled": 2400, "source_time_s": 479.8, "observed_events": 7, "snapshot_bytes": 0}
+{"sampled": 2800, "source_time_s": 559.8, "observed_events": 7, "snapshot_bytes": 0}
+{
+  "job_id": "129717",
+  "status": "FUNCTIONAL_VIDEO_REPLAY_COMPLETE",
+  "protocol_sha256": "72bfc4a4dd062c55941cfa894150bd15b625bcadcf921443f1b15168870b9dae",
+  "parent_pid": 3580475,
+  "worker_pid": 3580489,
+  "worker_exitcode": 0,
+  "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "source_frames_decoded": 14008,
+  "sampled_detection_frames": 2802,
+  "excluded_terminal_frame": 14008,
+  "source_size": [
+    2560,
+    1440
+  ],
+  "source_fps": 25.0,
+  "detection_sampling_fps": 5,
+  "observed_predicted_events": 7,
+  "A_to_B": 7,
+  "B_to_A": 0,
+  "event_terminal_status_counts": {
+    "ALL_CONDITIONS_REJECTED": 7
+  },
+  "actual_completed_identity_jobs": 7,
+  "true_model_query_forwards": 35,
+  "jobs_completed_after_frontend_eof": 0,
+  "jobs_overlapping_foreground_host_intervals": 7,
+  "retained_snapshot_peak_bytes": 11222577,
+  "retained_snapshot_byte_limit": 33554432,
+  "snapshot_evictions": 0,
+  "frontend_start_wall_ns": 5915818368966681,
+  "frontend_eof_wall_ns": 5915908300183994,
+  "run_finished_wall_ns": 5915908952719230,
+  "parent_maximum_rss_kib": 1704480,
+  "foreground_device": "Tesla V100S-PCIE-32GB",
+  "scope": "Actual full-resolution video capture plus GPU detector and separate CPU identity worker on Slurm. Mock missing-RF branch only; no board deployment or ground-truth recovery accuracy.",
+  "latency_clock": "Host monotonic ns, source-frame decode availability; no camera exposure clock or board measurement",
+  "recognition_accuracy": null,
+  "reference_labels": "No independent raw-video cow IDs or complete passage truth"
+}

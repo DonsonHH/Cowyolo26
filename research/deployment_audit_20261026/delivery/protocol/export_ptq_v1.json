@@ -1,0 +1,89 @@
+{
+  "scope": "Portable graph export, host CPU numerical parity, training-only static PTQ and existing evaluation sensitivity. No Vivado build, FPGA mapping, PYNQ runtime or fresh unseen-test claim.",
+  "export": {
+    "onnx": "1.19.0",
+    "onnxruntime": "1.23.2",
+    "torch": "use recorded2.8.0 runtime",
+    "opset": 13,
+    "dynamic_axes": false,
+    "batch": 1,
+    "onnx_simplification": false,
+    "precision": "FP32 before identity QDQ",
+    "output": "Identity L2-normalised576vector; YOLO end-to-end NMS-free original trained detection head with postprocess retained"
+  },
+  "detector": {
+    "weights_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+    "input_size": [
+      1,
+      3,
+      192,
+      320
+    ],
+    "preprocess": "Ultralytics LetterBox(new_shape320x320,auto=True,stride32) on native2560x1440 photos, BGRtoRGB, NCHW,float/255. Output shape verified192x320. Resize/letterbox and confidence filtering are host steps outside exported core.",
+    "test_inputs": "7native photos saved in video_chain, plus seeded non-tied synthetic input only if needed for sanity",
+    "parity": "Coordinate and score numerical differences plus confidence>=0.2 boxes, use same locked checkpoint; topK row order ties are not identity correspondence"
+  },
+  "identity": {
+    "conditions": [
+      {
+        "name": "C_letterbox_trained_seed26",
+        "seed": 26,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+        "sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+        "preprocess": "letterbox",
+        "original_threshold": 0.8445389603236383
+      },
+      {
+        "name": "C_letterbox_trained_seed27",
+        "seed": 27,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/best_encoder.pt",
+        "sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+        "preprocess": "letterbox",
+        "original_threshold": 0.8642478136864173
+      },
+      {
+        "name": "C_letterbox_trained_seed28",
+        "seed": 28,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/best_encoder.pt",
+        "sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+        "preprocess": "letterbox",
+        "original_threshold": 0.8306161540247587
+      }
+    ],
+    "input_size": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "gallery": "Existing identity-disjoint study gallery roles",
+    "calibration_for_quantiser": "First64 paths by SHA256(ptq-calibration-v1:+relative_path) among training-split images only; no gallery/query validation/evaluation",
+    "quantisation": "ORT static QuantFormat.QDQ, activations QUInt8, weights QInt8 symmetric per-channel, Conv ops only, minmax calibration; other ops remain FP32 and graph I/O remain float. No all-int8 claim.",
+    "quantiser_selection": "Predeclared single recipe, not tuned to evaluation",
+    "thresholds": "Separate QDQ threshold on validation_gallery/query only; write all3seed threshold files before any quantised evaluation input forward. Frozen FP32 parity compared to previous thresholds/results.",
+    "metrics": "All3seeds FP32 vs QDQ, closedTop1 and correct/wrong/rejected/unknown counts; do not pick a best seed"
+  },
+  "graph_audit": [
+    "checker(full_check), static shape inference",
+    "node/operator and initializer dtype counts",
+    "stored parameter/constant bytes, Conv multiply-accumulate count at stated shape",
+    "largest inferred tensor, conservative static liveness sketch with assumptions (not BRAM/DSP synthesis report)",
+    "QDQ integer initializer bytes and remaining float operators"
+  ],
+  "board_reference": {
+    "board": "PYNQ-Z2, XC7Z020",
+    "DDR_bytes": 536870912,
+    "BRAM_bytes": 645120,
+    "DSP_slices": 220,
+    "source": "https://www.tul.com.tw/images/PYNQ-Z2_PA_v2_pp_20201209_STD.pdf",
+    "comparison": "Compare graph and observed host footprint to reference sizes only. Runtime, line buffers, DMA and concurrency require board data; weights may stream from DDR."
+  },
+  "acceptance": [
+    "Original source checkpoint hashes unchanged",
+    "Graph checker and actual ORT CPU forward pass",
+    "Frozen identity FP32 vectors and gallery decisions agree within declared tolerance",
+    "No PTQ calibration identity overlaps validation/evaluation",
+    "All calibration recipes and output hashes logged; original checkpoints preserved",
+    "Do not generate hardware construction scripts before board image and tool versions arrive"
+  ]
+}

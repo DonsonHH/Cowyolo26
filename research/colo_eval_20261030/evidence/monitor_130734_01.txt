@@ -1,0 +1,15 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|AllocCPUS|MaxRSS
+130734|cow-colo-fixed9|COMPLETED|0:0|00:00:18|4|
+130734.batch|batch|COMPLETED|0:0|00:00:18|4|1176K
+130734.0|python|COMPLETED|0:0|00:00:18|4|796K
+{"condition_done": "official_s192", "source_image_forwards": 50, "network_calls": 5}
+{"condition_done": "official_s256", "source_image_forwards": 100, "network_calls": 10}
+{"condition_done": "official_s320", "source_image_forwards": 150, "network_calls": 15}
+{"condition_done": "old_rot192_s192", "source_image_forwards": 200, "network_calls": 20}
+{"condition_done": "old_rot192_s256", "source_image_forwards": 250, "network_calls": 25}
+{"condition_done": "old_rot192_s320", "source_image_forwards": 300, "network_calls": 30}
+{"condition_done": "new_mosaic050_s192", "source_image_forwards": 350, "network_calls": 35}
+{"condition_done": "new_mosaic050_s256", "source_image_forwards": 400, "network_calls": 40}
+{"condition_done": "new_mosaic050_s320", "source_image_forwards": 450, "network_calls": 45}
+{"status": "NINE_FROZEN_MODEL_SIZE_CONDITIONS450_CPU_FORWARDS_AND72_COCO_METRIC_GROUPS_COMPLETE", "created_UTC": "2026-10-30T05:33:42.563131+00:00", "Slurm_job_id": "130734", "host": "cu03", "elapsed_s_not_board_benchmark": 14.252936112694442, "protocol_sha256": "f3cfd4820d93ffbfd606a2eeec87863febc9859dfe62736927da166f0a7f71e3", "actual_source_image_forwards": 450, "actual_network_forward_calls": 45, "warmup_forwards": 0, "environment": {"torch": "2.8.0+cu128", "ultralytics": "8.4.63", "numpy": "2.2.6", "PIL": "11.3.0", "cv2": "4.12.0", "COCOeval_file_sha256": "988485f79624cd42ceed9335d284df4cdcdf7b3d583e052fcbed2dd6bccf0267"}, "new_training_updates": 0, "new_board_forwards": 0, "permanent_identity_or_passage_accuracy_proven": false, "global_default_changed": false, "whole_goal_complete": false}

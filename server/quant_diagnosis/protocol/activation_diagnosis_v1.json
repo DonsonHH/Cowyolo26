@@ -1,0 +1,14 @@
+{
+  "scope": "Diagnose existing failed PTQ on training data only. Not a fresh evaluation or a hardware kernel benchmark.",
+  "source": "All3 fixed trained seed FP32/QDQ artifacts from deployment_audit final job129720",
+  "samples": "First8 of the fixed64 training-only PTQ calibration paths; same exact image/preprocessing for float and quant graph",
+  "probes": [
+    "Same QDQ graph default vs disabled graph optimisation; no model/calibration change",
+    "Float graph vs QDQ graph with all Conv outputs visible and optimisation disabled, calculate each layer relative RMSE and cosine",
+    "FP32 vs dequantised int8 weight arrays, per Conv node",
+    "Activation representable interval and fraction of float Conv outputs outside its frozen QDQ range"
+  ],
+  "ranking": "Find first Conv with median per-image relative RMSE>=0.2; retain all layers and seeds. Ranking and any subsequent exclusion recipe use these training observations only.",
+  "no_changes": "Do not adjust source64 calibration, validation thresholds, trained checkpoints or previous evaluation outcomes. Keep reserved future identities outside inference.",
+  "acceptance": "Record causal boundaries and evidence; no automatic rule declares the whole INT8 approach unsuitable. If kernel-only explanation fails the identical graph control, report that and continue activation/weight investigation."
+}

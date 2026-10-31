@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-26",
+  "publisher_gt": {
+    "alignment_checked": "Agent visually inspected nine source frames with publisher boxes and IDs overlaid; first frame uses frame index0 and boxes visually align",
+    "structural_counts": {"video_frames": 479, "gt_rows": 1775, "unique_track_id_values": 9},
+    "publisher_prose_counts": {"frames": 478, "gt_rows": 1774, "animals": 8},
+    "findings": [
+      "Track ID8 is a short edge-only fragment (frames13-50) and never completes the declared gate; nine ID values must not be read as nine animals",
+      "Tracks25 and34 are right-censored at clip end and do not complete B->A gate traversal",
+      "202 boxes extend beyond image boundaries; scoring clips boxes to the image for per-frame diagnostics, retains original reference tracks for counting",
+      "Published box/ID annotation is not error-free; this is a small reference-backed external check, not a generalization certificate"
+    ]
+  },
+  "raw_video_provenance": [
+    {"video": "Vacas1", "finding": "Visible Getty Images watermark in original frames", "decision": "Keep downloaded original unchanged; quarantine from primary benchmark/training and verify third-party rights before reuse. Diagnostic run retained but excluded from main evidence."},
+    {"video": "Toros4", "finding": "Camera pans while cows move left-to-right", "decision": "Opposite original-time motion evidence only; no claim of calibrated stationary farm-gate accuracy without further annotation/calibration"}
+  ],
+  "new_thresholds_selected_after_results": false,
+  "models_retrained_on_external_data": false,
+  "agent_draft_labels_status": "produced_not_user_validated; not fully blinded to preceding run summaries",
+  "simultaneous_two_way_same_camera_coverage": "pending_verification"
+}

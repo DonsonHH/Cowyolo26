@@ -1,0 +1,1831 @@
+{
+  "file": "/share/home/renly/projects/idcoo_research_20261026/deployment_audit/results/export_audit/detector/yolo26n_pilot.onnx",
+  "file_bytes": 9614815,
+  "IR_version": 7,
+  "opset": {
+    "ai.onnx": 13
+  },
+  "checker_full_check": "PASS",
+  "nodes": 452,
+  "operator_counts": {
+    "Conv": 102,
+    "Sigmoid": 88,
+    "Mul": 93,
+    "Constant": 46,
+    "Split": 12,
+    "Add": 23,
+    "Concat": 26,
+    "MaxPool": 3,
+    "Reshape": 14,
+    "Transpose": 5,
+    "MatMul": 4,
+    "Softmax": 2,
+    "Resize": 2,
+    "Shape": 3,
+    "Gather": 4,
+    "Div": 2,
+    "Slice": 2,
+    "Sub": 1,
+    "ReduceMax": 1,
+    "TopK": 2,
+    "Unsqueeze": 3,
+    "ConstantOfShape": 2,
+    "Expand": 2,
+    "Tile": 2,
+    "GatherElements": 2,
+    "Flatten": 2,
+    "Cast": 3,
+    "Mod": 1
+  },
+  "initializers": 204,
+  "initializer_bytes": 9500124,
+  "initializer_bytes_by_dtype": {
+    "float32": 9500124
+  },
+  "largest_inferred_nonconstant_tensor_bytes": 983040,
+  "static_live_known_tensor_peak_bytes_sketch": 2949120,
+  "unknown_output_size_tensors": [
+    "/model.23/Add_1_output_0",
+    "/model.23/Add_2_output_0",
+    "/model.23/Cast_1_output_0",
+    "/model.23/Cast_2_output_0",
+    "/model.23/Cast_output_0",
+    "/model.23/Concat_2_output_0",
+    "/model.23/Div_1_output_0",
+    "/model.23/Expand_output_0",
+    "/model.23/Flatten_output_0",
+    "/model.23/GatherElements_output_0",
+    "/model.23/Gather_3_output_0",
+    "/model.23/Mod_output_0",
+    "/model.23/Mul_2_output_0",
+    "/model.23/Slice_1_output_0",
+    "/model.23/Slice_output_0",
+    "/model.23/Sub_output_0",
+    "/model.23/Tile_output_0",
+    "/model.23/TopK_1_output_0",
+    "/model.23/TopK_1_output_1",
+    "/model.23/Unsqueeze_1_output_0",
+    "/model.23/Unsqueeze_2_output_0"
+  ],
+  "static_liveness_scope": "Sequential allocation sketch of known graph tensors; assumes no aliasing/reuse, excludes parameters, kernel workspaces, planner alignment, runtime/decoder/DMA buffers. Unknown shapes make the peak incomplete; it is not an upper bound or hardware BRAM utilisation.",
+  "Conv_MACs_direct_initializer_only": 389018880,
+  "Conv_details": [
+    {
+      "name": "/model.0/conv/Conv",
+      "weight_shape": [
+        16,
+        3,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        96,
+        160
+      ],
+      "MACs": 6635520,
+      "group": 1
+    },
+    {
+      "name": "/model.1/conv/Conv",
+      "weight_shape": [
+        32,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        48,
+        80
+      ],
+      "MACs": 17694720,
+      "group": 1
+    },
+    {
+      "name": "/model.2/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        32,
+        48,
+        80
+      ],
+      "MACs": 3932160,
+      "group": 1
+    },
+    {
+      "name": "/model.2/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        8,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        8,
+        48,
+        80
+      ],
+      "MACs": 4423680,
+      "group": 1
+    },
+    {
+      "name": "/model.2/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        16,
+        8,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        48,
+        80
+      ],
+      "MACs": 4423680,
+      "group": 1
+    },
+    {
+      "name": "/model.2/cv2/conv/Conv",
+      "weight_shape": [
+        64,
+        48,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        48,
+        80
+      ],
+      "MACs": 11796480,
+      "group": 1
+    },
+    {
+      "name": "/model.3/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        24,
+        40
+      ],
+      "MACs": 35389440,
+      "group": 1
+    },
+    {
+      "name": "/model.4/cv1/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        24,
+        40
+      ],
+      "MACs": 3932160,
+      "group": 1
+    },
+    {
+      "name": "/model.4/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        16,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        24,
+        40
+      ],
+      "MACs": 4423680,
+      "group": 1
+    },
+    {
+      "name": "/model.4/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        24,
+        40
+      ],
+      "MACs": 4423680,
+      "group": 1
+    },
+    {
+      "name": "/model.4/cv2/conv/Conv",
+      "weight_shape": [
+        128,
+        96,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        24,
+        40
+      ],
+      "MACs": 11796480,
+      "group": 1
+    },
+    {
+      "name": "/model.5/conv/Conv",
+      "weight_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        128,
+        12,
+        20
+      ],
+      "MACs": 35389440,
+      "group": 1
+    },
+    {
+      "name": "/model.6/cv1/conv/Conv",
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        12,
+        20
+      ],
+      "MACs": 3932160,
+      "group": 1
+    },
+    {
+      "name": "/model.6/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.6/m.0/m/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.6/m.0/m/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.6/m.0/m/m.1/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.6/m.0/m/m.1/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.6/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.6/m.0/cv3/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        12,
+        20
+      ],
+      "MACs": 983040,
+      "group": 1
+    },
+    {
+      "name": "/model.6/cv2/conv/Conv",
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        12,
+        20
+      ],
+      "MACs": 5898240,
+      "group": 1
+    },
+    {
+      "name": "/model.7/conv/Conv",
+      "weight_shape": [
+        256,
+        128,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 17694720,
+      "group": 1
+    },
+    {
+      "name": "/model.8/cv1/conv/Conv",
+      "weight_shape": [
+        256,
+        256,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 3932160,
+      "group": 1
+    },
+    {
+      "name": "/model.8/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.8/m.0/m/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.8/m.0/m/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.8/m.0/m/m.1/cv1/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.8/m.0/m/m.1/cv2/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.8/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.8/m.0/cv3/conv/Conv",
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 983040,
+      "group": 1
+    },
+    {
+      "name": "/model.8/cv2/conv/Conv",
+      "weight_shape": [
+        256,
+        384,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 5898240,
+      "group": 1
+    },
+    {
+      "name": "/model.9/cv1/conv/Conv",
+      "weight_shape": [
+        128,
+        256,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 1966080,
+      "group": 1
+    },
+    {
+      "name": "/model.9/cv2/conv/Conv",
+      "weight_shape": [
+        256,
+        512,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 7864320,
+      "group": 1
+    },
+    {
+      "name": "/model.10/cv1/conv/Conv",
+      "weight_shape": [
+        256,
+        256,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 3932160,
+      "group": 1
+    },
+    {
+      "name": "/model.10/m/m.0/attn/qkv/conv/Conv",
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 1966080,
+      "group": 1
+    },
+    {
+      "name": "/model.10/m/m.0/attn/pe/conv/Conv",
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 69120,
+      "group": 128
+    },
+    {
+      "name": "/model.10/m/m.0/attn/proj/conv/Conv",
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 983040,
+      "group": 1
+    },
+    {
+      "name": "/model.10/m/m.0/ffn/ffn.0/conv/Conv",
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 1966080,
+      "group": 1
+    },
+    {
+      "name": "/model.10/m/m.0/ffn/ffn.1/conv/Conv",
+      "weight_shape": [
+        128,
+        256,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 1966080,
+      "group": 1
+    },
+    {
+      "name": "/model.10/cv2/conv/Conv",
+      "weight_shape": [
+        256,
+        256,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 3932160,
+      "group": 1
+    },
+    {
+      "name": "/model.13/cv1/conv/Conv",
+      "weight_shape": [
+        128,
+        384,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        12,
+        20
+      ],
+      "MACs": 11796480,
+      "group": 1
+    },
+    {
+      "name": "/model.13/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.13/m.0/m/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.13/m.0/m/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.13/m.0/m/m.1/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.13/m.0/m/m.1/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.13/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.13/m.0/cv3/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        12,
+        20
+      ],
+      "MACs": 983040,
+      "group": 1
+    },
+    {
+      "name": "/model.13/cv2/conv/Conv",
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        12,
+        20
+      ],
+      "MACs": 5898240,
+      "group": 1
+    },
+    {
+      "name": "/model.16/cv1/conv/Conv",
+      "weight_shape": [
+        64,
+        256,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        24,
+        40
+      ],
+      "MACs": 15728640,
+      "group": 1
+    },
+    {
+      "name": "/model.16/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        16,
+        32,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        16,
+        24,
+        40
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.16/m.0/m/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        24,
+        40
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.16/m.0/m/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        24,
+        40
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.16/m.0/m/m.1/cv1/conv/Conv",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        24,
+        40
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.16/m.0/m/m.1/cv2/conv/Conv",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        24,
+        40
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.16/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        16,
+        32,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        16,
+        24,
+        40
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.16/m.0/cv3/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        32,
+        24,
+        40
+      ],
+      "MACs": 983040,
+      "group": 1
+    },
+    {
+      "name": "/model.16/cv2/conv/Conv",
+      "weight_shape": [
+        64,
+        96,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        24,
+        40
+      ],
+      "MACs": 5898240,
+      "group": 1
+    },
+    {
+      "name": "/model.17/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        12,
+        20
+      ],
+      "MACs": 8847360,
+      "group": 1
+    },
+    {
+      "name": "/model.19/cv1/conv/Conv",
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        12,
+        20
+      ],
+      "MACs": 5898240,
+      "group": 1
+    },
+    {
+      "name": "/model.19/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.19/m.0/m/m.0/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.19/m.0/m/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.19/m.0/m/m.1/cv1/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.19/m.0/m/m.1/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        32,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.19/m.0/cv2/conv/Conv",
+      "weight_shape": [
+        32,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        32,
+        12,
+        20
+      ],
+      "MACs": 491520,
+      "group": 1
+    },
+    {
+      "name": "/model.19/m.0/cv3/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        12,
+        20
+      ],
+      "MACs": 983040,
+      "group": 1
+    },
+    {
+      "name": "/model.19/cv2/conv/Conv",
+      "weight_shape": [
+        128,
+        192,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        12,
+        20
+      ],
+      "MACs": 5898240,
+      "group": 1
+    },
+    {
+      "name": "/model.20/conv/Conv",
+      "weight_shape": [
+        128,
+        128,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 8847360,
+      "group": 1
+    },
+    {
+      "name": "/model.22/cv1/conv/Conv",
+      "weight_shape": [
+        256,
+        384,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 5898240,
+      "group": 1
+    },
+    {
+      "name": "/model.22/m.0/m.0.0/cv1/conv/Conv",
+      "weight_shape": [
+        64,
+        128,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 4423680,
+      "group": 1
+    },
+    {
+      "name": "/model.22/m.0/m.0.0/cv2/conv/Conv",
+      "weight_shape": [
+        128,
+        64,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 4423680,
+      "group": 1
+    },
+    {
+      "name": "/model.22/m.0/m.0.1/attn/qkv/conv/Conv",
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 1966080,
+      "group": 1
+    },
+    {
+      "name": "/model.22/m.0/m.0.1/attn/pe/conv/Conv",
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 69120,
+      "group": 128
+    },
+    {
+      "name": "/model.22/m.0/m.0.1/attn/proj/conv/Conv",
+      "weight_shape": [
+        128,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 983040,
+      "group": 1
+    },
+    {
+      "name": "/model.22/m.0/m.0.1/ffn/ffn.0/conv/Conv",
+      "weight_shape": [
+        256,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 1966080,
+      "group": 1
+    },
+    {
+      "name": "/model.22/m.0/m.0.1/ffn/ffn.1/conv/Conv",
+      "weight_shape": [
+        128,
+        256,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        128,
+        6,
+        10
+      ],
+      "MACs": 1966080,
+      "group": 1
+    },
+    {
+      "name": "/model.22/cv2/conv/Conv",
+      "weight_shape": [
+        256,
+        384,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 5898240,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv2.0/one2one_cv2.0.0/conv/Conv",
+      "weight_shape": [
+        16,
+        64,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        24,
+        40
+      ],
+      "MACs": 8847360,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv2.0/one2one_cv2.0.1/conv/Conv",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        24,
+        40
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv2.0/one2one_cv2.0.2/Conv",
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        4,
+        24,
+        40
+      ],
+      "MACs": 61440,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv2.1/one2one_cv2.1.0/conv/Conv",
+      "weight_shape": [
+        16,
+        128,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        12,
+        20
+      ],
+      "MACs": 4423680,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv2.1/one2one_cv2.1.1/conv/Conv",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        12,
+        20
+      ],
+      "MACs": 552960,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv2.1/one2one_cv2.1.2/Conv",
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        4,
+        12,
+        20
+      ],
+      "MACs": 15360,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv2.2/one2one_cv2.2.0/conv/Conv",
+      "weight_shape": [
+        16,
+        256,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        6,
+        10
+      ],
+      "MACs": 2211840,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv2.2/one2one_cv2.2.1/conv/Conv",
+      "weight_shape": [
+        16,
+        16,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        16,
+        6,
+        10
+      ],
+      "MACs": 138240,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv2.2/one2one_cv2.2.2/Conv",
+      "weight_shape": [
+        4,
+        16,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        4,
+        6,
+        10
+      ],
+      "MACs": 3840,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv3.0/one2one_cv3.0.0/one2one_cv3.0.0.0/conv/Conv",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        24,
+        40
+      ],
+      "MACs": 552960,
+      "group": 64
+    },
+    {
+      "name": "/model.23/one2one_cv3.0/one2one_cv3.0.0/one2one_cv3.0.0.1/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        24,
+        40
+      ],
+      "MACs": 3932160,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv3.0/one2one_cv3.0.1/one2one_cv3.0.1.0/conv/Conv",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        24,
+        40
+      ],
+      "MACs": 552960,
+      "group": 64
+    },
+    {
+      "name": "/model.23/one2one_cv3.0/one2one_cv3.0.1/one2one_cv3.0.1.1/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        24,
+        40
+      ],
+      "MACs": 3932160,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv3.0/one2one_cv3.0.2/Conv",
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        1,
+        24,
+        40
+      ],
+      "MACs": 61440,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv3.1/one2one_cv3.1.0/one2one_cv3.1.0.0/conv/Conv",
+      "weight_shape": [
+        128,
+        1,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        128,
+        12,
+        20
+      ],
+      "MACs": 276480,
+      "group": 128
+    },
+    {
+      "name": "/model.23/one2one_cv3.1/one2one_cv3.1.0/one2one_cv3.1.0.1/conv/Conv",
+      "weight_shape": [
+        64,
+        128,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        12,
+        20
+      ],
+      "MACs": 1966080,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv3.1/one2one_cv3.1.1/one2one_cv3.1.1.0/conv/Conv",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        12,
+        20
+      ],
+      "MACs": 138240,
+      "group": 64
+    },
+    {
+      "name": "/model.23/one2one_cv3.1/one2one_cv3.1.1/one2one_cv3.1.1.1/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        12,
+        20
+      ],
+      "MACs": 983040,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv3.1/one2one_cv3.1.2/Conv",
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        1,
+        12,
+        20
+      ],
+      "MACs": 15360,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv3.2/one2one_cv3.2.0/one2one_cv3.2.0.0/conv/Conv",
+      "weight_shape": [
+        256,
+        1,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        256,
+        6,
+        10
+      ],
+      "MACs": 138240,
+      "group": 256
+    },
+    {
+      "name": "/model.23/one2one_cv3.2/one2one_cv3.2.0/one2one_cv3.2.0.1/conv/Conv",
+      "weight_shape": [
+        64,
+        256,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 983040,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv3.2/one2one_cv3.2.1/one2one_cv3.2.1.0/conv/Conv",
+      "weight_shape": [
+        64,
+        1,
+        3,
+        3
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 34560,
+      "group": 64
+    },
+    {
+      "name": "/model.23/one2one_cv3.2/one2one_cv3.2.1/one2one_cv3.2.1.1/conv/Conv",
+      "weight_shape": [
+        64,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        64,
+        6,
+        10
+      ],
+      "MACs": 245760,
+      "group": 1
+    },
+    {
+      "name": "/model.23/one2one_cv3.2/one2one_cv3.2.2/Conv",
+      "weight_shape": [
+        1,
+        64,
+        1,
+        1
+      ],
+      "output_shape": [
+        1,
+        1,
+        6,
+        10
+      ],
+      "MACs": 3840,
+      "group": 1
+    }
+  ],
+  "inputs": [
+    {
+      "name": "images",
+      "shape": [
+        1,
+        3,
+        192,
+        320
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output0",
+      "shape": [
+        1,
+        300,
+        6
+      ]
+    }
+  ],
+  "integer_quantised_initializers": 0,
+  "is_fpga_compile_proof": false
+}

@@ -1,0 +1,13 @@
+{
+  "created_UTC": "2026-10-30T03:53:18.582849+00:00",
+  "port": "COM6",
+  "baud": 115200,
+  "format": "8N1",
+  "command_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\backend_service_20261030\\tools\\serial_prepare_metadata.txt",
+  "no_reset_command": true,
+  "status": "SERIAL_COMMAND_COMPLETE",
+  "exit_code": 0,
+  "output": "python3 -c 'from pathlib import Path; import json,tarfile,hashlib; r=Path(\"/home/xilinx/jupyter_notebooks/cow_research_backend_service_20261030\"); out=Path(\"/home/xilinx/jupyter_notebooks/cow_research_backend_serial_recovery_20261030\"); out.mkdir(exist_ok=False); files=[p for p in sorted((r/\"results\").rglob(\"*\")) if p.is_file() and (p.name.endswith(\".json\") or p.name.endswith(\".json.gz\"))]+[r/n for n in [\"run_protocol.json\",\"launch.json\",\"final_state.json\",\"transfer.json\",\"collection_terminal.json\",\"result_manifest.json\",\"board_backend_repeats.py\",\"background_selected_worker.py\",\"jpeg_producer.py\",\"causal_selector.py\",\"process_cpu.py\",\"board_producer_behavior_tests.json\",\"board_CPU_parser_test.json\"]]; a=out/\"metadata_only.tar.gz\"; tar=tarfile.open(a,\"w:gz\"); [tar.add(p,arcname=p.relative_to(r).as_posix(),recursive=False) for p in files]; tar.close(); m={\"status\":\"METADATA_ONLY_SERIAL_RECOVERY_ARCHIVE\",\"path\":str(a),\"bytes\":a.stat().st_size,\"sha256\":hashlib.sha256(a.read_bytes()).hexdigest(),\"members\":len(files),\"photos_or_vector_or_raw_arrays_included\":False}; (out/\"metadata_transfer.json\").write_text(json.dumps(m,indent=2)+\"\\n\"); print(json.dumps(m))'; printf '\\nCOW_SERIAL_DONE_52bf32fef966 rc=%s\\n' \"$?\"\r\n\u001b[?2004l\r{\"status\": \"METADATA_ONLY_SERIAL_RECOVERY_ARCHIVE\", \"path\": \"/home/xilinx/jupyter_notebooks/cow_research_backend_serial_recovery_20261030/metadata_only.tar.gz\", \"bytes\": 847137, \"sha256\": \"f3c44a9d843702d1d0e4ef08957f63174be0dc5baadc75ffc050d180e7ad36b8\", \"members\": 95, \"photos_or_vector_or_raw_arrays_included\": false}\r\n\r\nCOW_SERIAL_DONE_52bf32fef966 rc=0\r\n\u001b[?2004hxilinx@pynq:~$ ",
+  "prefix": "",
+  "elapsed_s": 7.593000000008033
+}

@@ -1,0 +1,48 @@
+JobID                             JobName      State ExitCode    Elapsed     MaxRSS        NodeList 
+------------ ---------------------------- ---------- -------- ---------- ---------- --------------- 
+129785                idcoo-detector-20x3  COMPLETED      0:0   00:21:30                      gpu03 
+129785.batch                        batch  COMPLETED      0:0   00:21:30     13868K           gpu03 
+129785.0                           python  COMPLETED      0:0   00:21:29  47554320K           gpu03 
+129792       idcoo-detector-source-compa+  COMPLETED      0:0   00:07:28                      gpu02 
+129792.batch                        batch  COMPLETED      0:0   00:07:28     13968K           gpu02 
+129792.0                           python  COMPLETED      0:0   00:07:28   1763128K           gpu02 
+129802             idcoo-detector-collect  COMPLETED      0:0   00:00:10                       cu16 
+129802.batch                        batch  COMPLETED      0:0   00:00:10      1180K            cu16 
+129802.0                           python  COMPLETED      0:0   00:00:10       796K            cu16 
+{
+  "status": "COMPLETED_PUBLIC_LABEL_TRAINING_3SEEDS_20EPOCHS",
+  "job_id": "129785",
+  "protocol_sha256": "c3a1cf3cb8f34c27a2a6945ac705f2beb45abdb851c6bd70cccc92f1fc2e6eff",
+  "torch": "2.8.0+cu128",
+  "ultralytics": "8.4.63",
+  "gpu": "Tesla V100S-PCIE-32GB",
+  "input_audit_sha256": "621d43a3e3d7d447048fc64219154a981a752f24cadad65ad60bf882d2fe3b41",
+  "conditions": [
+    {
+      "seed": 26,
+      "epochs_completed": 20,
+      "selected_checkpoint_rule": "Fixed final epoch last.pt for every seed; not selected on video or external counts",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed26/weights/last.pt",
+      "checkpoint_sha256": "35879f94b91e4f477693cf730c880b5f5174674578f0457ee2dbde9809d15c98",
+{
+  "status": "FIVE_MODELS_SOURCE_SCOPE_AND_KNOWN_DIAGNOSTIC_COMPLETE",
+  "job_id": "129792",
+  "conditions": [
+    {
+      "name": "generic",
+      "title": "Official YOLO26n",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt",
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "seed": null,
+      "scenes": [
+        {
+{
+  "job_id": "129802",
+  "files": 125,
+  "archive_bytes": 248859402,
+  "archive_sha256": "d219ed68e2ecd73cf0bab29ef5107f2985073b344e1b06456c335135ebdfb142",
+  "manifest_sha256": "1dc702dd1abd418cb0e89965fc3ceb54d8d7bf4ba4b22231dab6b4d44414277d",
+  "baseline_rerender_videos_left_on_server": true,
+  "all_3_final_checkpoints_included": true,
+  "all_5_models_traces_included": true
+}

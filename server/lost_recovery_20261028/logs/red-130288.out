@@ -1,0 +1,37 @@
+test_01_lost_identity_recovers_on_overlapping_low (__main__.ActualTrackerTests.test_01_lost_identity_recovers_on_overlapping_low) ... FAIL
+test_02_two_lost_identities_recover_without_new_ID (__main__.ActualTrackerTests.test_02_two_lost_identities_recover_without_new_ID) ... FAIL
+test_03_active_low_continuity_still_works (__main__.ActualTrackerTests.test_03_active_low_continuity_still_works) ... ok
+test_04_low_without_confirmed_origin_cannot_create_identity (__main__.ActualTrackerTests.test_04_low_without_confirmed_origin_cannot_create_identity) ... ok
+test_05_disjoint_low_cannot_recover_lost (__main__.ActualTrackerTests.test_05_disjoint_low_cannot_recover_lost) ... ok
+test_06_low_IoU_below_half_cannot_recover_lost (__main__.ActualTrackerTests.test_06_low_IoU_below_half_cannot_recover_lost) ... ok
+test_07_expired_ID_cannot_be_revived_by_low (__main__.ActualTrackerTests.test_07_expired_ID_cannot_be_revived_by_low) ... ok
+test_08_firststage_score_fusion_still_enabled (__main__.ActualTrackerTests.test_08_firststage_score_fusion_still_enabled) ... ok
+test_09_high_firststage_precedes_samebox_low (__main__.ActualTrackerTests.test_09_high_firststage_precedes_samebox_low) ... ok
+test_10_one_low_observation_cannot_recover_two_lost_IDs (__main__.ActualTrackerTests.test_10_one_low_observation_cannot_recover_two_lost_IDs) ... ok
+test_11_removed_tentative_ID_cannot_use_low (__main__.ActualTrackerTests.test_11_removed_tentative_ID_cannot_use_low) ... ok
+test_12_only_lost_eligibility_expression_changes (__main__.ActualTrackerTests.test_12_only_lost_eligibility_expression_changes) ... skipped 'candidate scope assertion'
+
+======================================================================
+FAIL: test_01_lost_identity_recovers_on_overlapping_low (__main__.ActualTrackerTests.test_01_lost_identity_recovers_on_overlapping_low)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/lost_recovery_20261028/tools/test_real_gate.py", line 23, in test_01_lost_identity_recovers_on_overlapping_low
+    self.assertEqual(len(recovered),1);self.assertEqual(recovered[0,4],initial[0,4])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_02_two_lost_identities_recover_without_new_ID (__main__.ActualTrackerTests.test_02_two_lost_identities_recover_without_new_ID)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/lost_recovery_20261028/tools/test_real_gate.py", line 27, in test_02_two_lost_identities_recover_without_new_ID
+    self.assertEqual(len(recovered),2);self.assertEqual(set(recovered[:,4]),set(initial[:,4]))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.010s
+
+FAILED (failures=2, skipped=1)
+
+{"mode": "baseline_red", "tests": 12, "failures": 2, "errors": 0, "skipped": 1, "expected_two_failures_reproduced": true, "gate_passed": true, "synthetic_tracker_sequences_not_cattle_accuracy": true}

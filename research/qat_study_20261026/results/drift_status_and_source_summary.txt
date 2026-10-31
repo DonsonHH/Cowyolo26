@@ -1,0 +1,61 @@
+JobID             State ExitCode    Elapsed 
+------------ ---------- -------- ---------- 
+129744        COMPLETED      0:0   00:00:04 
+129744.batch  COMPLETED      0:0   00:00:04 
+129744.0      COMPLETED      0:0   00:00:04 
+[{"torch_mkldnn": true, "first_quantised_output_difference": {"module": "0.2.block.2.0.output_quant", "before_different_elements": 16771, "before_max_absolute_error": 4.291534423828125e-06, "after_different_elements": 1, "after_max_absolute_error": 0.12045812606811523}, "embedding_max_absolute_error": 0.02425447851419449}, {"torch_mkldnn": false, "first_quantised_output_difference": {"module": "0.9.block.3.0.output_quant", "before_different_elements": 3279, "before_max_absolute_error": 9.5367431640625e-07, "after_different_elements": 1, "after_max_absolute_error": 0.03488647937774658}, "embedding_max_absolute_error": 0.005267677828669548}]
+{
+  "source": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+  "job_id": "129661",
+  "gpu": "Tesla V100S-PCIE-32GB",
+  "processed_source_frames": 14009,
+  "sampled_frames": 2802,
+  "source_fps": 25.0,
+  "effective_detection_fps": 5.0,
+  "source_duration_s": 560.36,
+  "input_size": 320,
+  "cow_class": 19,
+  "roi_x_fraction": [
+    0.34,
+    0.75
+  ],
+  "gate_axis": "y",
+  "gate_fraction": [
+    0.4,
+    0.6
+  ],
+  "stability_samples": 3,
+  "A_to_B": 0,
+  "B_to_A": 0,
+  "cow_in_roi_frames": 5,
+  "elapsed_s": 117.70092955511063,
+  "scope": "development-only COCO pretrained prediction, geometry from raw view; ground-truth review required; no bidirectional/accuracy claim from predicted events"
+}{
+  "source": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+  "job_id": "129664",
+  "gpu": "Tesla V100S-PCIE-32GB",
+  "processed_source_frames": 14009,
+  "sampled_frames": 2802,
+  "source_fps": 25.0,
+  "effective_detection_fps": 5.0,
+  "source_duration_s": 560.36,
+  "input_size": 320,
+  "cow_class": 0,
+  "roi_x_fraction": [
+    0.34,
+    0.75
+  ],
+  "gate_axis": "y",
+  "gate_fraction": [
+    0.4,
+    0.6
+  ],
+  "stability_samples": 3,
+  "A_to_B": 7,
+  "B_to_A": 0,
+  "cow_tracked_in_roi_frames": 314,
+  "elapsed_s": 117.50887998286635,
+  "model_path": "/share/home/renly/projects/idcoo_research_20261026/results/detection_pilot/five_epoch_dev/weights/best.pt",
+  "model_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+  "scope": "development-only prediction, geometry from raw view; ground-truth review required; no bidirectional/accuracy claim from predicted events"
+}

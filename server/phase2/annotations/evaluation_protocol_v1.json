@@ -1,0 +1,14 @@
+{
+  "purpose": "Frozen counting evaluation protocol before external-video model inference",
+  "weights": {
+    "generic": {"sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef", "description": "Official COCO YOLO26n"},
+    "pilot": {"sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b", "description": "OpenCows2020 5-epoch development fine-tune"}
+  },
+  "inference": {"input_size": 320, "confidence": 0.2, "iou": 0.5, "tracker": "ByteTrack", "no_external_test_training_or_threshold_tuning": true},
+  "counter": {"two_regions": [0.4, 0.6], "stable_samples": 3, "initial_middle_does_not_count": true, "complete_return_counts_opposite_event": true, "gap_policy": "Reset origin after more than 2 seconds without a valid observation", "roi_and_axis": "Set from source view geometry before predictions, fixed for both models"},
+  "event_matching": {"maximum_temporal_error_s": 2, "assignment": "one-to-one minimum temporal error, direction not used during assignment", "direction_scored_after_matching": true, "unmatched_reference": "FN", "unmatched_prediction": "FP", "zero_denominator": "NA"},
+  "author_gt": "Only publisher-provided manually corrected trajectories may be reported as external benchmark ground truth; frame convention and visible-box alignment must be inspected before evaluation",
+  "agent_labels": "Source-based drafts remain produced_not_user_validated; conditional checks do not establish publication-level accuracy",
+  "real_reverse_requirement": "Observed reverse motion in original-time footage; no reversed playback, horizontal flip or relabeling used as real reverse evidence",
+  "hardware_scope": "Server algorithm evaluation, not PYNQ-Z2 performance"
+}

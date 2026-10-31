@@ -1,0 +1,24 @@
+129649               idcoo-data-audit         cu  COMPLETED      0:0   00:00:40            
+129649.batch                    batch             COMPLETED      0:0   00:00:40     13904K 
+129649.0                       python             COMPLETED      0:0   00:00:40     98012K 
+129650             idcoo-yolo26-probe       4gpu     FAILED      1:0   00:00:25            
+129650.batch                    batch                FAILED      1:0   00:00:25      1172K 
+129650.0                       python                FAILED      1:0   00:00:25       800K 
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+{"job": "129650", "hostname": "gpu02", "torch": "2.8.0+cu128", "cuda_available": true, "cuda_device": "Tesla V100S-PCIE-32GB"}
+WARNING ⚠️ user config directory '/share/home/renly/projects/idcoo_research_20261026/yolo_settings/Ultralytics' is not writable, using '/tmp/Ultralytics'. Set YOLO_CONFIG_DIR to override.
+Creating new Ultralytics Settings v0.0.6 file ✅ 
+View Ultralytics Settings with 'yolo settings' or at '/tmp/Ultralytics/settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/models/fastsam/model.py", line 10, in <module>
+    from .predict import FastSAMPredictor
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/models/fastsam/predict.py", line 8, in <module>
+    from ultralytics.models.yolo.segment import SegmentationPredictor
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/models/yolo/__init__.py", line 3, in <module>
+    from ultralytics.models.yolo import classify, detect, obb, pose, segment, semantic, world, yoloe
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/models/yolo/semantic/__init__.py", line 4, in <module>
+    from .train import SemanticSegmentationTrainer
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/models/yolo/semantic/train.py", line 8, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+srun: error: gpu02: task 0: Exited with exit code 1

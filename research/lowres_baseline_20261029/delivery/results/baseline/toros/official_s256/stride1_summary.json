@@ -1,0 +1,236 @@
+[
+  {
+    "scene": "toros",
+    "condition": "official_s256",
+    "model": "official",
+    "input_size": 256,
+    "sample_stride": 1,
+    "nominal_inference_Hz": 30.0,
+    "counter": "confirmed_only_events",
+    "down": 0,
+    "up": 6,
+    "events": [
+      {
+        "time_s": 3.6666666666666665,
+        "track_id": 1,
+        "direction": "B->A",
+        "frame0": 110
+      },
+      {
+        "time_s": 6.466666666666667,
+        "track_id": 7,
+        "direction": "B->A",
+        "frame0": 194
+      },
+      {
+        "time_s": 8.166666666666666,
+        "track_id": 22,
+        "direction": "B->A",
+        "frame0": 245
+      },
+      {
+        "time_s": 9.833333333333334,
+        "track_id": 30,
+        "direction": "B->A",
+        "frame0": 295
+      },
+      {
+        "time_s": 10.733333333333333,
+        "track_id": 45,
+        "direction": "B->A",
+        "frame0": 322
+      },
+      {
+        "time_s": 13.2,
+        "track_id": 32,
+        "direction": "B->A",
+        "frame0": 396
+      }
+    ],
+    "human_down_total": null,
+    "absolute_down_total_error": null,
+    "formal_event_metrics": {
+      "reference_events": 6,
+      "predicted_events": 6,
+      "temporally_matched": 6,
+      "correct_direction_matches": 6,
+      "wrong_direction_matches": 0,
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "direction_accuracy_given_temporal_match": 1.0,
+      "counts": {
+        "A->B": {
+          "reference": 0,
+          "prediction": 0
+        },
+        "B->A": {
+          "reference": 6,
+          "prediction": 6
+        }
+      },
+      "mean_absolute_direction_count_error": 0.0,
+      "matching_tolerance_s": 2.0,
+      "pairs": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "time_error_s": 0.0,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "time_error_s": 0.033333333333333215,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 2,
+          "time_error_s": 0.10000000000000142,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 3,
+          "time_error_s": 0.3000000000000007,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 4,
+          "prediction_index": 4,
+          "time_error_s": 0.0,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 5,
+          "time_error_s": 0.0,
+          "direction_correct": true
+        }
+      ],
+      "unmatched_reference_indices": [],
+      "unmatched_prediction_indices": []
+    }
+  },
+  {
+    "scene": "toros",
+    "condition": "official_s256",
+    "model": "official",
+    "input_size": 256,
+    "sample_stride": 1,
+    "nominal_inference_Hz": 30.0,
+    "counter": "handoff_events",
+    "down": 0,
+    "up": 6,
+    "events": [
+      {
+        "time_s": 3.6666666666666665,
+        "track_id": 1,
+        "direction": "B->A",
+        "frame0": 110
+      },
+      {
+        "time_s": 6.466666666666667,
+        "track_id": 7,
+        "direction": "B->A",
+        "frame0": 194
+      },
+      {
+        "time_s": 8.166666666666666,
+        "track_id": 22,
+        "direction": "B->A",
+        "frame0": 245
+      },
+      {
+        "time_s": 9.833333333333334,
+        "track_id": 30,
+        "direction": "B->A",
+        "frame0": 295
+      },
+      {
+        "time_s": 10.733333333333333,
+        "track_id": 45,
+        "direction": "B->A",
+        "frame0": 322
+      },
+      {
+        "time_s": 13.2,
+        "track_id": 32,
+        "direction": "B->A",
+        "frame0": 396
+      }
+    ],
+    "human_down_total": null,
+    "absolute_down_total_error": null,
+    "formal_event_metrics": {
+      "reference_events": 6,
+      "predicted_events": 6,
+      "temporally_matched": 6,
+      "correct_direction_matches": 6,
+      "wrong_direction_matches": 0,
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "direction_accuracy_given_temporal_match": 1.0,
+      "counts": {
+        "A->B": {
+          "reference": 0,
+          "prediction": 0
+        },
+        "B->A": {
+          "reference": 6,
+          "prediction": 6
+        }
+      },
+      "mean_absolute_direction_count_error": 0.0,
+      "matching_tolerance_s": 2.0,
+      "pairs": [
+        {
+          "reference_index": 0,
+          "prediction_index": 0,
+          "time_error_s": 0.0,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 1,
+          "prediction_index": 1,
+          "time_error_s": 0.033333333333333215,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 2,
+          "prediction_index": 2,
+          "time_error_s": 0.10000000000000142,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 3,
+          "prediction_index": 3,
+          "time_error_s": 0.3000000000000007,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 4,
+          "prediction_index": 4,
+          "time_error_s": 0.0,
+          "direction_correct": true
+        },
+        {
+          "reference_index": 5,
+          "prediction_index": 5,
+          "time_error_s": 0.0,
+          "direction_correct": true
+        }
+      ],
+      "unmatched_reference_indices": [],
+      "unmatched_prediction_indices": []
+    }
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "status": "ALL6_COWS_THRESHOLDS_FROZEN_BEFORE_ANY_DEVELOPMENT_OR_RETENTION_FEATURE",
+  "created_UTC": "2026-10-30T09:00:55.317521+00:00",
+  "weight_freeze_SHA256": "501d1e84e0295b47d3b7d8720ac5104c7f4c87db1e59709c43e5f5be1a67a958",
+  "calibration": [
+    {
+      "condition": "M_continue_seed26",
+      "threshold": {
+        "threshold": 0.8863789959223097,
+        "calibration_known_correct_accepted": 1,
+        "calibration_known_wrong_accepted": 0,
+        "calibration_unknown_false_accepts": 1,
+        "calibration_unknown_queries": 60,
+        "calibration_unknown_far": 0.016666666666666666,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+      },
+      "feature_SHA256": "cf2d7767492fbe9c82796ec4164d86c78e20d4918874c74b3657ca52e1ad6f31"
+    },
+    {
+      "condition": "C_domain_seed26",
+      "threshold": {
+        "threshold": 0.8707458695890389,
+        "calibration_known_correct_accepted": 10,
+        "calibration_known_wrong_accepted": 0,
+        "calibration_unknown_false_accepts": 3,
+        "calibration_unknown_queries": 60,
+        "calibration_unknown_far": 0.05,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+      },
+      "feature_SHA256": "82081a4a40e4be880480705a314ec5ad039106511355541aa60bbfff531954ec"
+    },
+    {
+      "condition": "M_continue_seed27",
+      "threshold": {
+        "threshold": 0.8873334005640992,
+        "calibration_known_correct_accepted": 1,
+        "calibration_known_wrong_accepted": 0,
+        "calibration_unknown_false_accepts": 2,
+        "calibration_unknown_queries": 60,
+        "calibration_unknown_far": 0.03333333333333333,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+      },
+      "feature_SHA256": "705888fc9e196c53745f6c82655343112b43e08e0501d83e6d859ea909bc9292"
+    },
+    {
+      "condition": "C_domain_seed27",
+      "threshold": {
+        "threshold": 0.8626608958869808,
+        "calibration_known_correct_accepted": 13,
+        "calibration_known_wrong_accepted": 0,
+        "calibration_unknown_false_accepts": 3,
+        "calibration_unknown_queries": 60,
+        "calibration_unknown_far": 0.05,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+      },
+      "feature_SHA256": "7b18d00472199dc1dc8e2033e564f6b5c2c34e099e10612fef9dbb6b6d11a00e"
+    },
+    {
+      "condition": "M_continue_seed28",
+      "threshold": {
+        "threshold": 0.8959020405430412,
+        "calibration_known_correct_accepted": 1,
+        "calibration_known_wrong_accepted": 0,
+        "calibration_unknown_false_accepts": 1,
+        "calibration_unknown_queries": 60,
+        "calibration_unknown_far": 0.016666666666666666,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+      },
+      "feature_SHA256": "84beaefc37e650ede92796b28facbf5da3bf36a6bf8b4e30563a01e6bb939e6e"
+    },
+    {
+      "condition": "C_domain_seed28",
+      "threshold": {
+        "threshold": 0.8627802579925663,
+        "calibration_known_correct_accepted": 13,
+        "calibration_known_wrong_accepted": 0,
+        "calibration_unknown_false_accepts": 3,
+        "calibration_unknown_queries": 60,
+        "calibration_unknown_far": 0.05,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+      },
+      "feature_SHA256": "9708f34527b64d1d9ac8c07fd282a591c5a84cc912b8c0d4f3cd9afe78fedbca"
+    }
+  ],
+  "calibration_image_forwards": 1080,
+  "development_feature_forwards": 0
+}

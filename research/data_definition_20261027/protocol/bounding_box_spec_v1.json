@@ -1,0 +1,16 @@
+{
+  "name": "Current primary experimental object definition v1",
+  "logical_detection_object": "cow_torso",
+  "existing_checkpoint_class_name": "cow, unchanged",
+  "trained_torso_checkpoint_numeric_class": 0,
+  "official_COCO_comparison_cow_class": 19,
+  "scope": "Overhead dairy-cattle corridor with torso labels consistent with OpenCows2020 definition",
+  "box_extent": "Torso; source paper excludes head, neck, legs and tail. Preserve source-provided labels and document inconsistencies rather than inventing a whole-cow target.",
+  "passage_point": "Centre of the tracked torso box for model output; independent event review must apply the declared body-reference definition, not copy model events",
+  "identity_crop": "Native-resolution torso-region evidence; temporary track ID distinct from enrolled cattle identity",
+  "external_Toros": "Frozen counting diagnostic retained. Publisher boxes seen include head/legs; box-IoU comparison has extent mismatch and is not same-target AP validation.",
+  "data_split_gate": "Byte-duplicate groups isolated in current development split; augmented parent/capture-session relationship remains incomplete. Future final validation must bind independent sessions or another suitable dataset.",
+  "future_real_vs_mixed_control": "Match optimiser updates, augmentation policy, initialisation, batch size and seeds; record sampling exposure. Use only training body-box labels, not source-video pseudo-labels.",
+  "existing_models_labels_metrics_modified": false,
+  "new_reference_annotations_created": false
+}

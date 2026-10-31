@@ -1,0 +1,36 @@
+{
+  "name": "Cows2021 date-grouped development-image admission v1",
+  "created_UTC": "2026-10-27T08:01:46.615603+00:00",
+  "source_date_manifest_sha256": "73a29d1ba42409d0a7bef68a7600c0aed8d6b8199d1396ffa3cc4ccb753b0f39",
+  "source_date_verification_sha256": "f87050c1e503dcaa5342c1b8cb7d3aaba0f3428ac64408a80d4b95bec4e0a9b6",
+  "source_metadata_sha256": "23dccb0af4944235464d10b551967231a43339eb7605f7a8189f2256d421997e",
+  "class": "cow body; image-clipped rotated polygon envelope, mapped to class0",
+  "source_pixels": "Official native JPEG; no model-generated labels or source-video pseudo-labels",
+  "selected_counts": {
+    "train": 6809,
+    "validation": 1571
+  },
+  "unaccessed_development_reserve_images": 1400,
+  "unaccessed_candidate_final_date_images": 622,
+  "candidate_final_dates": [
+    "2020-03-10",
+    "2020-03-11"
+  ],
+  "download": {
+    "workers": 6,
+    "attempts_per_missing_file": 3,
+    "maximum_image_bytes": 8388608,
+    "TLS_certificate_and_hostname_verification": true
+  },
+  "admission_rules": [
+    "All selected bytes and source URLs recorded, dimensions and complete decode checked in Slurm",
+    "Cross-role exact byte or RGB duplicates quarantine every member, without moving roles",
+    "Within-role duplicate groups retained explicitly and counted as groups, not independent sources",
+    "Prior OpenCows exact/RGB matches recorded as reused development material",
+    "dHash distance is a review cue only; no automatic claim of a common event or identity",
+    "Actual labels reloaded with the locked Ultralytics environment before training",
+    "No candidate-final image access, model scoring, or final independence certification in this stage"
+  ],
+  "model_training_or_inference_started": false,
+  "final_independent_test_certified": false
+}

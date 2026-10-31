@@ -1,0 +1,33 @@
+{
+  "model": "epoch20_seed28",
+  "job_id": "129805",
+  "checkpoint_sha256": "a6eb9677a036550fedcfd8ee36601f389c13f6b586b9094be2668b8ac613d27f",
+  "frames": 479,
+  "raw_boxes": 659,
+  "post_tracker_boxes": 586,
+  "events": [
+    {
+      "time_s": 3.933333333333333,
+      "track_id": 1,
+      "direction": "B->A",
+      "frame": 118
+    }
+  ],
+  "callback_order": [
+    {
+      "name": "on_predict_postprocess_end",
+      "module": "ultralytics.utils.callbacks.base"
+    },
+    {
+      "name": "before_tracker",
+      "module": "__main__"
+    },
+    {
+      "name": "on_predict_postprocess_end",
+      "module": "ultralytics.trackers.track"
+    }
+  ],
+  "frozen_baseline_event_equality": true,
+  "elapsed_s": 9.219964293763041,
+  "cuda_device": "Tesla V100S-PCIE-32GB"
+}

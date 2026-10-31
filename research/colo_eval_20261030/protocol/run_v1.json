@@ -1,0 +1,1099 @@
+{
+  "status": "FROZEN_BEFORE_FIRST_COLO_TEST50_IMAGE_REQUEST_OR_MODEL_FORWARD",
+  "created_UTC": "2026-10-30T05:26:02.122074+00:00",
+  "models": [
+    {
+      "name": "official",
+      "relative_checkpoint": "models/yolo26n.pt",
+      "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "cow_class": 19
+    },
+    {
+      "name": "old_rot192",
+      "relative_checkpoint": "detector_factorial_20261029/results/training/S192_rot90_seed26/weights/last.pt",
+      "sha256": "7b01cead4841f17d561f2a6bd768f9b229f1b3bd142818d8302135d3c69ffd45",
+      "cow_class": 0
+    },
+    {
+      "name": "new_mosaic050",
+      "relative_checkpoint": "mosaic_pair_20261030/results/training/mosaic050_seed26/weights/last.pt",
+      "sha256": "628db893fa8be090df206b32c35d8b81839eab2f497925ccbd0c6d855ad9d3eb",
+      "cow_class": 0
+    }
+  ],
+  "sizes": [
+    192,
+    256,
+    320
+  ],
+  "source_release_asset": {
+    "URL": "https://github.com/Niche-Lab/COLO/releases/download/v1.0.0/COLO_COCO.zip",
+    "bytes": 420543072,
+    "asset_id": 169548194
+  },
+  "source_intake_review_sha256": "fdda078c8d9799b2ac0ec529674fd87afab0cae0a86957018808125531b8e51a",
+  "source_GT_sha256": "a19e76759598c851c6a119df22aeaa0765caf13fc963160a661b0eca8985774b",
+  "images": [
+    {
+      "image": {
+        "id": 20078,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_100_4_jpg.rf.21cc67e4bc44f1859ffcf2a0e676ad54.jpg"
+      },
+      "file_name": "top_100_4_jpg.rf.21cc67e4bc44f1859ffcf2a0e676ad54.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_100_4_jpg.rf.21cc67e4bc44f1859ffcf2a0e676ad54.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_100_4_jpg.rf.21cc67e4bc44f1859ffcf2a0e676ad54.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 2916322061,
+        "compressed_bytes": 90328,
+        "uncompressed_bytes": 90450,
+        "local_header_offset": 198983200
+      }
+    },
+    {
+      "image": {
+        "id": 20213,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_125_0_jpg.rf.6686196b51457bccf1e74af2a4e0ba1e.jpg"
+      },
+      "file_name": "top_125_0_jpg.rf.6686196b51457bccf1e74af2a4e0ba1e.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_125_0_jpg.rf.6686196b51457bccf1e74af2a4e0ba1e.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_125_0_jpg.rf.6686196b51457bccf1e74af2a4e0ba1e.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1398480469,
+        "compressed_bytes": 91929,
+        "uncompressed_bytes": 92039,
+        "local_header_offset": 198891119
+      }
+    },
+    {
+      "image": {
+        "id": 20342,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_131_1_jpg.rf.ac0bd7c9b9c50d9220850eb2219ca67a.jpg"
+      },
+      "file_name": "top_131_1_jpg.rf.ac0bd7c9b9c50d9220850eb2219ca67a.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_131_1_jpg.rf.ac0bd7c9b9c50d9220850eb2219ca67a.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_131_1_jpg.rf.ac0bd7c9b9c50d9220850eb2219ca67a.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3925655859,
+        "compressed_bytes": 87514,
+        "uncompressed_bytes": 87632,
+        "local_header_offset": 197362513
+      }
+    },
+    {
+      "image": {
+        "id": 20346,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_142_2_jpg.rf.ab229d4273f8e7e4f280fa3cad8f9f9d.jpg"
+      },
+      "file_name": "top_142_2_jpg.rf.ab229d4273f8e7e4f280fa3cad8f9f9d.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_142_2_jpg.rf.ab229d4273f8e7e4f280fa3cad8f9f9d.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_142_2_jpg.rf.ab229d4273f8e7e4f280fa3cad8f9f9d.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 2010335478,
+        "compressed_bytes": 84157,
+        "uncompressed_bytes": 84268,
+        "local_header_offset": 197602547
+      }
+    },
+    {
+      "image": {
+        "id": 20073,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_153_0_jpg.rf.1d5f71342f58c851d12439ceefb26e7e.jpg"
+      },
+      "file_name": "top_153_0_jpg.rf.1d5f71342f58c851d12439ceefb26e7e.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_153_0_jpg.rf.1d5f71342f58c851d12439ceefb26e7e.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_153_0_jpg.rf.1d5f71342f58c851d12439ceefb26e7e.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 2918946675,
+        "compressed_bytes": 85430,
+        "uncompressed_bytes": 85551,
+        "local_header_offset": 197048358
+      }
+    },
+    {
+      "image": {
+        "id": 20488,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_189_0_jpg.rf.f2f07837c69ad469ed84a0888111ca74.jpg"
+      },
+      "file_name": "top_189_0_jpg.rf.f2f07837c69ad469ed84a0888111ca74.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_189_0_jpg.rf.f2f07837c69ad469ed84a0888111ca74.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_189_0_jpg.rf.f2f07837c69ad469ed84a0888111ca74.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 4067278090,
+        "compressed_bytes": 76648,
+        "uncompressed_bytes": 76765,
+        "local_header_offset": 197525747
+      }
+    },
+    {
+      "image": {
+        "id": 20147,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_18_3_jpg.rf.42f6328186e6e3adb8cdf983409797e8.jpg"
+      },
+      "file_name": "top_18_3_jpg.rf.42f6328186e6e3adb8cdf983409797e8.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_18_3_jpg.rf.42f6328186e6e3adb8cdf983409797e8.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_18_3_jpg.rf.42f6328186e6e3adb8cdf983409797e8.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 2679175867,
+        "compressed_bytes": 88680,
+        "uncompressed_bytes": 88816,
+        "local_header_offset": 197133940
+      }
+    },
+    {
+      "image": {
+        "id": 20055,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_204_0_jpg.rf.15cb41723aab75620dcfd345f64b735a.jpg"
+      },
+      "file_name": "top_204_0_jpg.rf.15cb41723aab75620dcfd345f64b735a.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_204_0_jpg.rf.15cb41723aab75620dcfd345f64b735a.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_204_0_jpg.rf.15cb41723aab75620dcfd345f64b735a.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 783560320,
+        "compressed_bytes": 76571,
+        "uncompressed_bytes": 76690,
+        "local_header_offset": 199698773
+      }
+    },
+    {
+      "image": {
+        "id": 20048,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_211_0_jpg.rf.138ec9c5b8320ce0a895b1f8c92d29c2.jpg"
+      },
+      "file_name": "top_211_0_jpg.rf.138ec9c5b8320ce0a895b1f8c92d29c2.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_211_0_jpg.rf.138ec9c5b8320ce0a895b1f8c92d29c2.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_211_0_jpg.rf.138ec9c5b8320ce0a895b1f8c92d29c2.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 2910169103,
+        "compressed_bytes": 75416,
+        "uncompressed_bytes": 75529,
+        "local_header_offset": 197450179
+      }
+    },
+    {
+      "image": {
+        "id": 20412,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_218_3_jpg.rf.cc1e3289848fb56cebd5e37392f4740e.jpg"
+      },
+      "file_name": "top_218_3_jpg.rf.cc1e3289848fb56cebd5e37392f4740e.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_218_3_jpg.rf.cc1e3289848fb56cebd5e37392f4740e.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_218_3_jpg.rf.cc1e3289848fb56cebd5e37392f4740e.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3569394311,
+        "compressed_bytes": 78642,
+        "uncompressed_bytes": 78759,
+        "local_header_offset": 196757235
+      }
+    },
+    {
+      "image": {
+        "id": 20476,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_232_1_jpg.rf.ec739ab35749df775827be29a7c8812b.jpg"
+      },
+      "file_name": "top_232_1_jpg.rf.ec739ab35749df775827be29a7c8812b.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_232_1_jpg.rf.ec739ab35749df775827be29a7c8812b.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_232_1_jpg.rf.ec739ab35749df775827be29a7c8812b.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3190710083,
+        "compressed_bytes": 78768,
+        "uncompressed_bytes": 78884,
+        "local_header_offset": 199854845
+      }
+    },
+    {
+      "image": {
+        "id": 20497,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_250_0_jpg.rf.f8e290facf887e2b3aeb17ef0d22bcf3.jpg"
+      },
+      "file_name": "top_250_0_jpg.rf.f8e290facf887e2b3aeb17ef0d22bcf3.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_250_0_jpg.rf.f8e290facf887e2b3aeb17ef0d22bcf3.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_250_0_jpg.rf.f8e290facf887e2b3aeb17ef0d22bcf3.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3763041441,
+        "compressed_bytes": 66755,
+        "uncompressed_bytes": 67255,
+        "local_header_offset": 199295852
+      }
+    },
+    {
+      "image": {
+        "id": 20430,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_252_3_jpg.rf.d325c1f7dc8700f97bf7c0e943a4540e.jpg"
+      },
+      "file_name": "top_252_3_jpg.rf.d325c1f7dc8700f97bf7c0e943a4540e.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_252_3_jpg.rf.d325c1f7dc8700f97bf7c0e943a4540e.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_252_3_jpg.rf.d325c1f7dc8700f97bf7c0e943a4540e.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 2100083158,
+        "compressed_bytes": 47316,
+        "uncompressed_bytes": 47737,
+        "local_header_offset": 197901236
+      }
+    },
+    {
+      "image": {
+        "id": 20154,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_259_4_jpg.rf.4ac9fcd68ad7da6dbd57150e57c15c6e.jpg"
+      },
+      "file_name": "top_259_4_jpg.rf.4ac9fcd68ad7da6dbd57150e57c15c6e.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_259_4_jpg.rf.4ac9fcd68ad7da6dbd57150e57c15c6e.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_259_4_jpg.rf.4ac9fcd68ad7da6dbd57150e57c15c6e.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 2594274864,
+        "compressed_bytes": 76065,
+        "uncompressed_bytes": 76190,
+        "local_header_offset": 198031285
+      }
+    },
+    {
+      "image": {
+        "id": 20458,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_260_1_jpg.rf.dd432b1d06cf2394d395a41d6e67fb43.jpg"
+      },
+      "file_name": "top_260_1_jpg.rf.dd432b1d06cf2394d395a41d6e67fb43.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_260_1_jpg.rf.dd432b1d06cf2394d395a41d6e67fb43.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_260_1_jpg.rf.dd432b1d06cf2394d395a41d6e67fb43.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 4036530680,
+        "compressed_bytes": 85160,
+        "uncompressed_bytes": 85282,
+        "local_header_offset": 199453404
+      }
+    },
+    {
+      "image": {
+        "id": 20201,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_273_0_jpg.rf.615c9f6fd61f39715e6da3f32f605302.jpg"
+      },
+      "file_name": "top_273_0_jpg.rf.615c9f6fd61f39715e6da3f32f605302.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_273_0_jpg.rf.615c9f6fd61f39715e6da3f32f605302.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_273_0_jpg.rf.615c9f6fd61f39715e6da3f32f605302.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3671619463,
+        "compressed_bytes": 66107,
+        "uncompressed_bytes": 66224,
+        "local_header_offset": 199073680
+      }
+    },
+    {
+      "image": {
+        "id": 20297,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_274_0_jpg.rf.9a8812f19c5e2efd6d450874f1251d47.jpg"
+      },
+      "file_name": "top_274_0_jpg.rf.9a8812f19c5e2efd6d450874f1251d47.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_274_0_jpg.rf.9a8812f19c5e2efd6d450874f1251d47.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_274_0_jpg.rf.9a8812f19c5e2efd6d450874f1251d47.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 4136216972,
+        "compressed_bytes": 75241,
+        "uncompressed_bytes": 75360,
+        "local_header_offset": 196557931
+      }
+    },
+    {
+      "image": {
+        "id": 20091,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_288_1_jpg.rf.282af54da9e1982fea2949e3fed2cb06.jpg"
+      },
+      "file_name": "top_288_1_jpg.rf.282af54da9e1982fea2949e3fed2cb06.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_288_1_jpg.rf.282af54da9e1982fea2949e3fed2cb06.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_288_1_jpg.rf.282af54da9e1982fea2949e3fed2cb06.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1794771643,
+        "compressed_bytes": 76351,
+        "uncompressed_bytes": 76536,
+        "local_header_offset": 196680732
+      }
+    },
+    {
+      "image": {
+        "id": 20420,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_300_2_jpg.rf.cefeb2f00278add51be66db24999e73e.jpg"
+      },
+      "file_name": "top_300_2_jpg.rf.cefeb2f00278add51be66db24999e73e.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_300_2_jpg.rf.cefeb2f00278add51be66db24999e73e.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_300_2_jpg.rf.cefeb2f00278add51be66db24999e73e.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 4131231776,
+        "compressed_bytes": 77809,
+        "uncompressed_bytes": 77965,
+        "local_header_offset": 198441330
+      }
+    },
+    {
+      "image": {
+        "id": 20276,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_301_0_jpg.rf.862ade5a9ab0a99338bc79b2426cba7a.jpg"
+      },
+      "file_name": "top_301_0_jpg.rf.862ade5a9ab0a99338bc79b2426cba7a.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_301_0_jpg.rf.862ade5a9ab0a99338bc79b2426cba7a.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_301_0_jpg.rf.862ade5a9ab0a99338bc79b2426cba7a.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1648722797,
+        "compressed_bytes": 50344,
+        "uncompressed_bytes": 50847,
+        "local_header_offset": 197850740
+      }
+    },
+    {
+      "image": {
+        "id": 20397,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_323_1_jpg.rf.c279383679fab92da0c245dffa654988.jpg"
+      },
+      "file_name": "top_323_1_jpg.rf.c279383679fab92da0c245dffa654988.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_323_1_jpg.rf.c279383679fab92da0c245dffa654988.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_323_1_jpg.rf.c279383679fab92da0c245dffa654988.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 4283426735,
+        "compressed_bytes": 72490,
+        "uncompressed_bytes": 72625,
+        "local_header_offset": 199626131
+      }
+    },
+    {
+      "image": {
+        "id": 20336,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_335_4_jpg.rf.aa74bc09d1b19a1c64f0b23ba5c5a474.jpg"
+      },
+      "file_name": "top_335_4_jpg.rf.aa74bc09d1b19a1c64f0b23ba5c5a474.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_335_4_jpg.rf.aa74bc09d1b19a1c64f0b23ba5c5a474.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_335_4_jpg.rf.aa74bc09d1b19a1c64f0b23ba5c5a474.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 678432595,
+        "compressed_bytes": 49080,
+        "uncompressed_bytes": 49489,
+        "local_header_offset": 200192046
+      }
+    },
+    {
+      "image": {
+        "id": 20238,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_347_2_jpg.rf.78a895ba918eb4712d368b398af025d7.jpg"
+      },
+      "file_name": "top_347_2_jpg.rf.78a895ba918eb4712d368b398af025d7.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_347_2_jpg.rf.78a895ba918eb4712d368b398af025d7.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_347_2_jpg.rf.78a895ba918eb4712d368b398af025d7.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 875139962,
+        "compressed_bytes": 83399,
+        "uncompressed_bytes": 83528,
+        "local_header_offset": 197767189
+      }
+    },
+    {
+      "image": {
+        "id": 20428,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_34_2_jpg.rf.d21bb0cc52864ab1d471ac22ef96117b.jpg"
+      },
+      "file_name": "top_34_2_jpg.rf.d21bb0cc52864ab1d471ac22ef96117b.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_34_2_jpg.rf.d21bb0cc52864ab1d471ac22ef96117b.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_34_2_jpg.rf.d21bb0cc52864ab1d471ac22ef96117b.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 634337982,
+        "compressed_bytes": 78429,
+        "uncompressed_bytes": 78564,
+        "local_header_offset": 199139939
+      }
+    },
+    {
+      "image": {
+        "id": 20468,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_352_0_jpg.rf.e553408e6597fdcba6660669045a2679.jpg"
+      },
+      "file_name": "top_352_0_jpg.rf.e553408e6597fdcba6660669045a2679.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_352_0_jpg.rf.e553408e6597fdcba6660669045a2679.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_352_0_jpg.rf.e553408e6597fdcba6660669045a2679.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 282165810,
+        "compressed_bytes": 49338,
+        "uncompressed_bytes": 49823,
+        "local_header_offset": 199983855
+      }
+    },
+    {
+      "image": {
+        "id": 20487,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_360_0_jpg.rf.f364b21a2fe16d0f1454b7e71ef7dca4.jpg"
+      },
+      "file_name": "top_360_0_jpg.rf.f364b21a2fe16d0f1454b7e71ef7dca4.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_360_0_jpg.rf.f364b21a2fe16d0f1454b7e71ef7dca4.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_360_0_jpg.rf.f364b21a2fe16d0f1454b7e71ef7dca4.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1336623515,
+        "compressed_bytes": 49938,
+        "uncompressed_bytes": 50483,
+        "local_header_offset": 199933765
+      }
+    },
+    {
+      "image": {
+        "id": 20127,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_364_0_jpg.rf.3adaaa0276153dd5f73cdb10ffc05adb.jpg"
+      },
+      "file_name": "top_364_0_jpg.rf.3adaaa0276153dd5f73cdb10ffc05adb.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_364_0_jpg.rf.3adaaa0276153dd5f73cdb10ffc05adb.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_364_0_jpg.rf.3adaaa0276153dd5f73cdb10ffc05adb.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 823324570,
+        "compressed_bytes": 82206,
+        "uncompressed_bytes": 82324,
+        "local_header_offset": 197222771
+      }
+    },
+    {
+      "image": {
+        "id": 20294,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_367_2_jpg.rf.9a2ec0d039c4427bfcf27bc18522f1bb.jpg"
+      },
+      "file_name": "top_367_2_jpg.rf.9a2ec0d039c4427bfcf27bc18522f1bb.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_367_2_jpg.rf.9a2ec0d039c4427bfcf27bc18522f1bb.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_367_2_jpg.rf.9a2ec0d039c4427bfcf27bc18522f1bb.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 576590866,
+        "compressed_bytes": 90493,
+        "uncompressed_bytes": 90603,
+        "local_header_offset": 199362759
+      }
+    },
+    {
+      "image": {
+        "id": 20474,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_375_0_jpg.rf.ea6f737ca137c73132898a2063a1abdc.jpg"
+      },
+      "file_name": "top_375_0_jpg.rf.ea6f737ca137c73132898a2063a1abdc.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_375_0_jpg.rf.ea6f737ca137c73132898a2063a1abdc.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_375_0_jpg.rf.ea6f737ca137c73132898a2063a1abdc.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1324664940,
+        "compressed_bytes": 83837,
+        "uncompressed_bytes": 83959,
+        "local_header_offset": 198519291
+      }
+    },
+    {
+      "image": {
+        "id": 20079,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_383_0_jpg.rf.1fdf4bddc97e6b9b0f99e0f78133c94e.jpg"
+      },
+      "file_name": "top_383_0_jpg.rf.1fdf4bddc97e6b9b0f99e0f78133c94e.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_383_0_jpg.rf.1fdf4bddc97e6b9b0f99e0f78133c94e.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_383_0_jpg.rf.1fdf4bddc97e6b9b0f99e0f78133c94e.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3426783753,
+        "compressed_bytes": 77439,
+        "uncompressed_bytes": 77600,
+        "local_header_offset": 198813528
+      }
+    },
+    {
+      "image": {
+        "id": 20398,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_396_0_jpg.rf.c2a5dd495d12fd23582fb876201257bf.jpg"
+      },
+      "file_name": "top_396_0_jpg.rf.c2a5dd495d12fd23582fb876201257bf.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_396_0_jpg.rf.c2a5dd495d12fd23582fb876201257bf.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_396_0_jpg.rf.c2a5dd495d12fd23582fb876201257bf.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1208806360,
+        "compressed_bytes": 80181,
+        "uncompressed_bytes": 80339,
+        "local_header_offset": 197686856
+      }
+    },
+    {
+      "image": {
+        "id": 20389,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_402_0_jpg.rf.bbd6609dfd892fcf3269825bf656e3b3.jpg"
+      },
+      "file_name": "top_402_0_jpg.rf.bbd6609dfd892fcf3269825bf656e3b3.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_402_0_jpg.rf.bbd6609dfd892fcf3269825bf656e3b3.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_402_0_jpg.rf.bbd6609dfd892fcf3269825bf656e3b3.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 356933974,
+        "compressed_bytes": 50536,
+        "uncompressed_bytes": 51028,
+        "local_header_offset": 196912151
+      }
+    },
+    {
+      "image": {
+        "id": 20258,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_404_4_jpg.rf.851a1dc1a8bb3d433bdf884e71bfa68a.jpg"
+      },
+      "file_name": "top_404_4_jpg.rf.851a1dc1a8bb3d433bdf884e71bfa68a.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_404_4_jpg.rf.851a1dc1a8bb3d433bdf884e71bfa68a.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_404_4_jpg.rf.851a1dc1a8bb3d433bdf884e71bfa68a.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1815022201,
+        "compressed_bytes": 48204,
+        "uncompressed_bytes": 48626,
+        "local_header_offset": 198603280
+      }
+    },
+    {
+      "image": {
+        "id": 20031,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_409_2_jpg.rf.09f7216c7652a80381f566c617e23068.jpg"
+      },
+      "file_name": "top_409_2_jpg.rf.09f7216c7652a80381f566c617e23068.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_409_2_jpg.rf.09f7216c7652a80381f566c617e23068.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_409_2_jpg.rf.09f7216c7652a80381f566c617e23068.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 2643437975,
+        "compressed_bytes": 79915,
+        "uncompressed_bytes": 80042,
+        "local_header_offset": 200033345
+      }
+    },
+    {
+      "image": {
+        "id": 20092,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_427_2_jpg.rf.294f9e7e5faceec802bb9032ff1a08b3.jpg"
+      },
+      "file_name": "top_427_2_jpg.rf.294f9e7e5faceec802bb9032ff1a08b3.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_427_2_jpg.rf.294f9e7e5faceec802bb9032ff1a08b3.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_427_2_jpg.rf.294f9e7e5faceec802bb9032ff1a08b3.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1232452184,
+        "compressed_bytes": 52712,
+        "uncompressed_bytes": 53096,
+        "local_header_offset": 198388466
+      }
+    },
+    {
+      "image": {
+        "id": 20176,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_436_2_jpg.rf.57346fc479ccd2ca5acc2635fa4f09c5.jpg"
+      },
+      "file_name": "top_436_2_jpg.rf.57346fc479ccd2ca5acc2635fa4f09c5.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_436_2_jpg.rf.57346fc479ccd2ca5acc2635fa4f09c5.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_436_2_jpg.rf.57346fc479ccd2ca5acc2635fa4f09c5.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1839561439,
+        "compressed_bytes": 77181,
+        "uncompressed_bytes": 77321,
+        "local_header_offset": 199218519
+      }
+    },
+    {
+      "image": {
+        "id": 20026,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_440_0_jpg.rf.0716dd581df47d7f96af8ceec367b8e8.jpg"
+      },
+      "file_name": "top_440_0_jpg.rf.0716dd581df47d7f96af8ceec367b8e8.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_440_0_jpg.rf.0716dd581df47d7f96af8ceec367b8e8.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_440_0_jpg.rf.0716dd581df47d7f96af8ceec367b8e8.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3292031885,
+        "compressed_bytes": 87263,
+        "uncompressed_bytes": 87374,
+        "local_header_offset": 199538716
+      }
+    },
+    {
+      "image": {
+        "id": 20219,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_441_4_jpg.rf.6b74057f789cb4378301c86c37e8587e.jpg"
+      },
+      "file_name": "top_441_4_jpg.rf.6b74057f789cb4378301c86c37e8587e.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_441_4_jpg.rf.6b74057f789cb4378301c86c37e8587e.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_441_4_jpg.rf.6b74057f789cb4378301c86c37e8587e.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3247036056,
+        "compressed_bytes": 82429,
+        "uncompressed_bytes": 82542,
+        "local_header_offset": 197948704
+      }
+    },
+    {
+      "image": {
+        "id": 20001,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_445_4_jpg.rf.fed55fa093147f601bf8541b84f887cb.jpg"
+      },
+      "file_name": "top_445_4_jpg.rf.fed55fa093147f601bf8541b84f887cb.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_445_4_jpg.rf.fed55fa093147f601bf8541b84f887cb.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_445_4_jpg.rf.fed55fa093147f601bf8541b84f887cb.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1547297864,
+        "compressed_bytes": 47256,
+        "uncompressed_bytes": 47700,
+        "local_header_offset": 196633324
+      }
+    },
+    {
+      "image": {
+        "id": 20427,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_449_0_jpg.rf.d16b770c384db77729d6d1a92e51e705.jpg"
+      },
+      "file_name": "top_449_0_jpg.rf.d16b770c384db77729d6d1a92e51e705.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_449_0_jpg.rf.d16b770c384db77729d6d1a92e51e705.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_449_0_jpg.rf.d16b770c384db77729d6d1a92e51e705.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1040721579,
+        "compressed_bytes": 79197,
+        "uncompressed_bytes": 79322,
+        "local_header_offset": 199775496
+      }
+    },
+    {
+      "image": {
+        "id": 20405,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_45_3_jpg.rf.c84e5cf5549bab64098a52dc1cb39d29.jpg"
+      },
+      "file_name": "top_45_3_jpg.rf.c84e5cf5549bab64098a52dc1cb39d29.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_45_3_jpg.rf.c84e5cf5549bab64098a52dc1cb39d29.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_45_3_jpg.rf.c84e5cf5549bab64098a52dc1cb39d29.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3385500459,
+        "compressed_bytes": 78483,
+        "uncompressed_bytes": 78603,
+        "local_header_offset": 200113412
+      }
+    },
+    {
+      "image": {
+        "id": 20174,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_484_0_jpg.rf.50b1fcc9f0b1e2768d0c88f64c49325f.jpg"
+      },
+      "file_name": "top_484_0_jpg.rf.50b1fcc9f0b1e2768d0c88f64c49325f.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_484_0_jpg.rf.50b1fcc9f0b1e2768d0c88f64c49325f.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_484_0_jpg.rf.50b1fcc9f0b1e2768d0c88f64c49325f.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 1773103874,
+        "compressed_bytes": 77999,
+        "uncompressed_bytes": 78131,
+        "local_header_offset": 198107502
+      }
+    },
+    {
+      "image": {
+        "id": 20178,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_487_0_jpg.rf.57a9f0b817f28eb25e17e2d8c83707f0.jpg"
+      },
+      "file_name": "top_487_0_jpg.rf.57a9f0b817f28eb25e17e2d8c83707f0.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_487_0_jpg.rf.57a9f0b817f28eb25e17e2d8c83707f0.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_487_0_jpg.rf.57a9f0b817f28eb25e17e2d8c83707f0.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 646031991,
+        "compressed_bytes": 52361,
+        "uncompressed_bytes": 52808,
+        "local_header_offset": 198335953
+      }
+    },
+    {
+      "image": {
+        "id": 20131,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_493_0_jpg.rf.3c7fafa132d3224a03ae7dd9765e918f.jpg"
+      },
+      "file_name": "top_493_0_jpg.rf.3c7fafa132d3224a03ae7dd9765e918f.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_493_0_jpg.rf.3c7fafa132d3224a03ae7dd9765e918f.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_493_0_jpg.rf.3c7fafa132d3224a03ae7dd9765e918f.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3766082057,
+        "compressed_bytes": 79527,
+        "uncompressed_bytes": 79645,
+        "local_header_offset": 198651636
+      }
+    },
+    {
+      "image": {
+        "id": 20426,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_52_1_jpg.rf.d225029c8f46ce3f8d1c75f3a2c3f41b.jpg"
+      },
+      "file_name": "top_52_1_jpg.rf.d225029c8f46ce3f8d1c75f3a2c3f41b.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_52_1_jpg.rf.d225029c8f46ce3f8d1c75f3a2c3f41b.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_52_1_jpg.rf.d225029c8f46ce3f8d1c75f3a2c3f41b.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3784551332,
+        "compressed_bytes": 82062,
+        "uncompressed_bytes": 82180,
+        "local_header_offset": 198731315
+      }
+    },
+    {
+      "image": {
+        "id": 20495,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_53_3_jpg.rf.f3e99c6022b344513fbb204fd1ba5b21.jpg"
+      },
+      "file_name": "top_53_3_jpg.rf.f3e99c6022b344513fbb204fd1ba5b21.jpg",
+      "lighting": "indoorlight",
+      "archive_member": "COLO_COCO/1_top/test/top_53_3_jpg.rf.f3e99c6022b344513fbb204fd1ba5b21.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_53_3_jpg.rf.f3e99c6022b344513fbb204fd1ba5b21.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 708512283,
+        "compressed_bytes": 85368,
+        "uncompressed_bytes": 85482,
+        "local_header_offset": 196962839
+      }
+    },
+    {
+      "image": {
+        "id": 20051,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_63_0_jpg.rf.15403e4b5ff75cc33b01e0ff7f8147ed.jpg"
+      },
+      "file_name": "top_63_0_jpg.rf.15403e4b5ff75cc33b01e0ff7f8147ed.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_63_0_jpg.rf.15403e4b5ff75cc33b01e0ff7f8147ed.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_63_0_jpg.rf.15403e4b5ff75cc33b01e0ff7f8147ed.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3371529537,
+        "compressed_bytes": 75971,
+        "uncompressed_bytes": 76093,
+        "local_header_offset": 196836029
+      }
+    },
+    {
+      "image": {
+        "id": 20418,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_70_3_jpg.rf.ccd0aceecf992c0b20540e32b0006516.jpg"
+      },
+      "file_name": "top_70_3_jpg.rf.ccd0aceecf992c0b20540e32b0006516.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_70_3_jpg.rf.ccd0aceecf992c0b20540e32b0006516.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_70_3_jpg.rf.ccd0aceecf992c0b20540e32b0006516.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3818724116,
+        "compressed_bytes": 83037,
+        "uncompressed_bytes": 83215,
+        "local_header_offset": 198185653
+      }
+    },
+    {
+      "image": {
+        "id": 20243,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_78_1_jpg.rf.7b7109b1dc1594ab9610a92f8ae898c0.jpg"
+      },
+      "file_name": "top_78_1_jpg.rf.7b7109b1dc1594ab9610a92f8ae898c0.jpg",
+      "lighting": "daylight",
+      "archive_member": "COLO_COCO/1_top/test/top_78_1_jpg.rf.7b7109b1dc1594ab9610a92f8ae898c0.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_78_1_jpg.rf.7b7109b1dc1594ab9610a92f8ae898c0.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 3223725866,
+        "compressed_bytes": 57233,
+        "uncompressed_bytes": 57429,
+        "local_header_offset": 197305129
+      }
+    },
+    {
+      "image": {
+        "id": 20139,
+        "width": 640,
+        "height": 640,
+        "file_name": "top_8_4_jpg.rf.409bd14a4b4879414a48568f774ef63f.jpg"
+      },
+      "file_name": "top_8_4_jpg.rf.409bd14a4b4879414a48568f774ef63f.jpg",
+      "lighting": "infrared",
+      "archive_member": "COLO_COCO/1_top/test/top_8_4_jpg.rf.409bd14a4b4879414a48568f774ef63f.jpg",
+      "zip_entry": {
+        "name": "COLO_COCO/1_top/test/top_8_4_jpg.rf.409bd14a4b4879414a48568f774ef63f.jpg",
+        "flags": 8,
+        "method": 8,
+        "CRC32": 249235580,
+        "compressed_bytes": 48960,
+        "uncompressed_bytes": 49330,
+        "local_header_offset": 198268841
+      }
+    }
+  ],
+  "test_images": 50,
+  "original_annotations": 451,
+  "valid_annotations": 450,
+  "quarantined_annotation_ids": [
+    127
+  ],
+  "GT_policy": "positive450 clipped to640 with recomputed area; keep original451 and unmodified-positive450 sensitivity",
+  "preprocessing": "PIL RGB decode, cv2.INTER_LINEAR resize square, CHW float32 divided by255; no crop rotate enhancement or TTA",
+  "inference": "Torch CPU eval direct network end-to-end300x6 raw, no fuse call, no NMS, no warmup; batch10",
+  "expected_source_image_forwards": 450,
+  "expected_network_forward_calls": 45,
+  "warmup_forwards": 0,
+  "COCO_score_threshold": 0.001,
+  "COCO_iou_thresholds": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "COCO_maxDets": [
+    1,
+    10,
+    100
+  ],
+  "COCO_recall_points": 101,
+  "fixed_score_threshold": 0.2,
+  "fixed_IoU_threshold": 0.5,
+  "fixed_matching": "per image confidence-descending stable raw order; highest IoU unmatched GT, tie lower annotationID; all up to300 cow predictions",
+  "qualitative_image_indices_preselected": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    49
+  ],
+  "evaluation_library": {
+    "name": "pycocotools",
+    "version": "2.0.11",
+    "wheel": "pycocotools-2.0.11-cp312-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+    "sha256": "a82d1c9ed83f75da0b3f244f2a3cf559351a283307bd9b79a4ee2b93ab3231dd",
+    "ABI": "cp312-abi3 valid for conventional CPython3.13; not cp313t"
+  },
+  "input_file_hashes": {
+    "GT_original451.json": "af1b5c7c9a9dd29b0601d7e774573e67533d31dab2f898bb52ff2e85964abfae",
+    "GT_quarantine_and_transform.json": "7d9a9e2c4edad6776ab4abeac0f9ac26be377abcb1c7d8cb728c8be7818cafa7",
+    "GT_valid450_clipped.json": "e32523ab826039cb6b87219f227fc3ed6ea18ce731518b1a63f6cc905c4d7bd1",
+    "GT_valid450_unclipped.json": "2c9c018916471345112ceeb309a3b2fccb9e3692b205b120f5f3cca53c11ab5e",
+    "pycocotools-2.0.11-cp312-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl": "a82d1c9ed83f75da0b3f244f2a3cf559351a283307bd9b79a4ee2b93ab3231dd"
+  },
+  "plan_sha256": "a73bb9ef2bada8403ff9d6cd838c4570fe91ad47e56bced7e68e222987a22ec7",
+  "training_or_threshold_search_allowed": false,
+  "existing_final_holdout_opened": false,
+  "new_board_forwards": 0,
+  "whole_goal_complete": false
+}

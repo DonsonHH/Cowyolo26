@@ -1,0 +1,10 @@
+{"formal_training_gates_pass": true, "protocol_sha256": "894848001296be9e017ac1fc1920dad67d2c9510dd1535933b44436611dd7b4b", "data_images": 8380, "seeds": [26, 27, 28], "epochs_each": 10, "smoke_weights_used": false}
+PARTITION|AVAIL|NODES|STATE|NODELIST|GRES
+cu*|up|5|mix|cu[16-20]|(null)
+cu*|up|15|idle|cu[01-15]|(null)
+8gpu|up|1|idle|gpu01|gpu:V100S:8
+4gpu|up|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+129918
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+            129918|     4gpu|      idcoo-cows21-train| PENDING|      0:00|(None)

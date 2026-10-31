@@ -1,0 +1,7 @@
+JobID|State|ExitCode|Elapsed
+130638|FAILED|1:0|00:00:02
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/unconfirmed_iou_20261030/tools/diagnose_board_baseline.py", line 26, in <module>
+    'first_event_difference':next(({k:v for k,v in r['baseline_event_paths'].items() if not v['exact']}),{})} for r in rows]}),flush=True)
+                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'dict' object is not an iterator

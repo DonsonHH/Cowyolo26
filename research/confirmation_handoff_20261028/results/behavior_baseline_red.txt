@@ -1,0 +1,49 @@
+test_01_observed_two_A_after_confirmation_retains_initial_A (__main__.HandoffBehavior.test_01_observed_two_A_after_confirmation_retains_initial_A) ... FAIL
+test_02_confirmed_only_normal_pass_counts_once (__main__.HandoffBehavior.test_02_confirmed_only_normal_pass_counts_once) ... ok
+test_03_unconfirmed_never_publishes (__main__.HandoffBehavior.test_03_unconfirmed_never_publishes) ... ok
+test_04_failed_confirmation_drops_prefix (__main__.HandoffBehavior.test_04_failed_confirmation_drops_prefix) ... ok
+test_05_reverse_direction_is_symmetric (__main__.HandoffBehavior.test_05_reverse_direction_is_symmetric) ... FAIL
+test_06_first_seen_in_B_is_censored (__main__.HandoffBehavior.test_06_first_seen_in_B_is_censored) ... ok
+test_07_long_gap_clears_previous_origin (__main__.HandoffBehavior.test_07_long_gap_clears_previous_origin) ... ok
+test_08_missing_tick_breaks_stability (__main__.HandoffBehavior.test_08_missing_tick_breaks_stability) ... ok
+test_09_two_A_without_prefix_stays_insufficient (__main__.HandoffBehavior.test_09_two_A_without_prefix_stays_insufficient) ... ok
+test_10_multiple_unconfirmed_samples_do_not_accumulate (__main__.HandoffBehavior.test_10_multiple_unconfirmed_samples_do_not_accumulate) ... ok
+test_11_outside_ROI_confirmation_breaks_run (__main__.HandoffBehavior.test_11_outside_ROI_confirmation_breaks_run) ... ok
+test_12_same_tick_event_order_and_no_repeat (__main__.HandoffBehavior.test_12_same_tick_event_order_and_no_repeat) ... ok
+test_13_duplicate_time_is_rejected (__main__.HandoffBehavior.test_13_duplicate_time_is_rejected) ... skipped 'new adapter API validation'
+test_14_overlapping_confirmation_states_are_rejected (__main__.HandoffBehavior.test_14_overlapping_confirmation_states_are_rejected) ... skipped 'new adapter API validation'
+
+======================================================================
+FAIL: test_01_observed_two_A_after_confirmation_retains_initial_A (__main__.HandoffBehavior.test_01_observed_two_A_after_confirmation_retains_initial_A)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\ChatGPT\奶牛\confirmation_handoff_20261028\tools\test_handoff.py", line 27, in test_01_observed_two_A_after_confirmation_retains_initial_A
+    self.assertEqual([(x['track_id'],x['direction']) for x in e],[(9,'A->B')])
+AssertionError: Lists differ: [] != [(9, 'A->B')]
+
+Second list contains 1 additional elements.
+First extra element 0:
+(9, 'A->B')
+
+- []
++ [(9, 'A->B')]
+
+======================================================================
+FAIL: test_05_reverse_direction_is_symmetric (__main__.HandoffBehavior.test_05_reverse_direction_is_symmetric)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\ChatGPT\奶牛\confirmation_handoff_20261028\tools\test_handoff.py", line 42, in test_05_reverse_direction_is_symmetric
+    self.assertEqual([x['direction'] for x in e],['B->A'])
+AssertionError: Lists differ: [] != ['B->A']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'B->A'
+
+- []
++ ['B->A']
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.001s
+
+FAILED (failures=2, skipped=2)

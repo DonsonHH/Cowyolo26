@@ -1,0 +1,298 @@
+{
+  "status": "LOCAL_MEAN_REDUCTION_ROUNDING_MEASURED",
+  "conditions": 36,
+  "different_lastbit_conditions": 10,
+  "maximum_absolute_MSE_reduction_difference": 4.336808689942018e-19,
+  "model_arrays_changed": false,
+  "model_embedding_gate_changed": false,
+  "rows": [
+    {
+      "seed": 26,
+      "condition": "source_folded_fp32",
+      "view": "deterministic",
+      "saved_MSE": 5.183206674104622e-14,
+      "local_MSE": 5.183206674104622e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 26,
+      "condition": "source_folded_fp32",
+      "view": "augmented",
+      "saved_MSE": 6.838592752965957e-14,
+      "local_MSE": 6.838592752965957e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 26,
+      "condition": "paired_float_continuation",
+      "view": "deterministic",
+      "saved_MSE": 2.5738611799646012e-05,
+      "local_MSE": 2.573861179964601e-05,
+      "absolute_difference": 3.3881317890172014e-21
+    },
+    {
+      "seed": 26,
+      "condition": "paired_float_continuation",
+      "view": "augmented",
+      "saved_MSE": 2.6837494287252852e-05,
+      "local_MSE": 2.6837494287252852e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 26,
+      "condition": "initial_integer",
+      "view": "deterministic",
+      "saved_MSE": 0.001964198493369683,
+      "local_MSE": 0.001964198493369683,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 26,
+      "condition": "initial_integer",
+      "view": "augmented",
+      "saved_MSE": 0.002031235630401226,
+      "local_MSE": 0.0020312356304012266,
+      "absolute_difference": 4.336808689942018e-19
+    },
+    {
+      "seed": 26,
+      "condition": "integer_forward_qat",
+      "view": "deterministic",
+      "saved_MSE": 0.0005918511291738279,
+      "local_MSE": 0.0005918511291738279,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 26,
+      "condition": "integer_forward_qat",
+      "view": "augmented",
+      "saved_MSE": 0.000585907811882014,
+      "local_MSE": 0.0005859078118820141,
+      "absolute_difference": 1.0842021724855044e-19
+    },
+    {
+      "seed": 26,
+      "condition": "QAT_no_activation_clipping",
+      "view": "deterministic",
+      "saved_MSE": 0.000653719246080733,
+      "local_MSE": 0.0006537192460807329,
+      "absolute_difference": 1.0842021724855044e-19
+    },
+    {
+      "seed": 26,
+      "condition": "QAT_no_activation_clipping",
+      "view": "augmented",
+      "saved_MSE": 0.0006647798522692867,
+      "local_MSE": 0.0006647798522692868,
+      "absolute_difference": 1.0842021724855044e-19
+    },
+    {
+      "seed": 26,
+      "condition": "QAT_no_weight_clipping",
+      "view": "deterministic",
+      "saved_MSE": 0.0006494110900269431,
+      "local_MSE": 0.0006494110900269431,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 26,
+      "condition": "QAT_no_weight_clipping",
+      "view": "augmented",
+      "saved_MSE": 0.0006423824288439585,
+      "local_MSE": 0.0006423824288439583,
+      "absolute_difference": 2.168404344971009e-19
+    },
+    {
+      "seed": 27,
+      "condition": "source_folded_fp32",
+      "view": "deterministic",
+      "saved_MSE": 2.6538545092544715e-14,
+      "local_MSE": 2.6538545092544715e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 27,
+      "condition": "source_folded_fp32",
+      "view": "augmented",
+      "saved_MSE": 6.297805895855748e-14,
+      "local_MSE": 6.297805895855748e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 27,
+      "condition": "paired_float_continuation",
+      "view": "deterministic",
+      "saved_MSE": 2.841805795613692e-05,
+      "local_MSE": 2.841805795613692e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 27,
+      "condition": "paired_float_continuation",
+      "view": "augmented",
+      "saved_MSE": 2.8984785402762215e-05,
+      "local_MSE": 2.8984785402762215e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 27,
+      "condition": "initial_integer",
+      "view": "deterministic",
+      "saved_MSE": 0.0017574523417555703,
+      "local_MSE": 0.0017574523417555703,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 27,
+      "condition": "initial_integer",
+      "view": "augmented",
+      "saved_MSE": 0.0018571419240615778,
+      "local_MSE": 0.0018571419240615778,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 27,
+      "condition": "integer_forward_qat",
+      "view": "deterministic",
+      "saved_MSE": 0.0005577611262716518,
+      "local_MSE": 0.0005577611262716517,
+      "absolute_difference": 1.0842021724855044e-19
+    },
+    {
+      "seed": 27,
+      "condition": "integer_forward_qat",
+      "view": "augmented",
+      "saved_MSE": 0.0005490639902528474,
+      "local_MSE": 0.0005490639902528474,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 27,
+      "condition": "QAT_no_activation_clipping",
+      "view": "deterministic",
+      "saved_MSE": 0.0006047881886351112,
+      "local_MSE": 0.0006047881886351112,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 27,
+      "condition": "QAT_no_activation_clipping",
+      "view": "augmented",
+      "saved_MSE": 0.0005884601888022996,
+      "local_MSE": 0.0005884601888022996,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 27,
+      "condition": "QAT_no_weight_clipping",
+      "view": "deterministic",
+      "saved_MSE": 0.0006226062073998241,
+      "local_MSE": 0.000622606207399824,
+      "absolute_difference": 1.0842021724855044e-19
+    },
+    {
+      "seed": 27,
+      "condition": "QAT_no_weight_clipping",
+      "view": "augmented",
+      "saved_MSE": 0.0006347051460061895,
+      "local_MSE": 0.0006347051460061895,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "source_folded_fp32",
+      "view": "deterministic",
+      "saved_MSE": 5.0132363361626663e-14,
+      "local_MSE": 5.0132363361626663e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "source_folded_fp32",
+      "view": "augmented",
+      "saved_MSE": 9.441178310780844e-14,
+      "local_MSE": 9.441178310780844e-14,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "paired_float_continuation",
+      "view": "deterministic",
+      "saved_MSE": 1.56774387024716e-05,
+      "local_MSE": 1.56774387024716e-05,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "paired_float_continuation",
+      "view": "augmented",
+      "saved_MSE": 1.7210218900320728e-05,
+      "local_MSE": 1.7210218900320724e-05,
+      "absolute_difference": 3.3881317890172014e-21
+    },
+    {
+      "seed": 28,
+      "condition": "initial_integer",
+      "view": "deterministic",
+      "saved_MSE": 0.002424984513697758,
+      "local_MSE": 0.002424984513697758,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "initial_integer",
+      "view": "augmented",
+      "saved_MSE": 0.0023539755639929373,
+      "local_MSE": 0.0023539755639929373,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "integer_forward_qat",
+      "view": "deterministic",
+      "saved_MSE": 0.000843854177467568,
+      "local_MSE": 0.000843854177467568,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "integer_forward_qat",
+      "view": "augmented",
+      "saved_MSE": 0.0008595648754230911,
+      "local_MSE": 0.0008595648754230911,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "QAT_no_activation_clipping",
+      "view": "deterministic",
+      "saved_MSE": 0.0008769276023954612,
+      "local_MSE": 0.0008769276023954612,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "QAT_no_activation_clipping",
+      "view": "augmented",
+      "saved_MSE": 0.0009021794446864924,
+      "local_MSE": 0.0009021794446864924,
+      "absolute_difference": 0.0
+    },
+    {
+      "seed": 28,
+      "condition": "QAT_no_weight_clipping",
+      "view": "deterministic",
+      "saved_MSE": 0.0008527726821394229,
+      "local_MSE": 0.0008527726821394228,
+      "absolute_difference": 1.0842021724855044e-19
+    },
+    {
+      "seed": 28,
+      "condition": "QAT_no_weight_clipping",
+      "view": "augmented",
+      "saved_MSE": 0.0009023328567134442,
+      "local_MSE": 0.0009023328567134442,
+      "absolute_difference": 0.0
+    }
+  ]
+}

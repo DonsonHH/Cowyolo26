@@ -1,0 +1,146 @@
+{
+  "status": "ALL_THREE_SEEDS_PLAYBACK_MODEL_SWITCH_SEEK_BOUNDARIES_AND_DEFAULT_VIEW_VERIFIED",
+  "created_UTC": "2026-10-27T14:22:20.698Z",
+  "url": "http://127.0.0.1:8779/annotation_workbench/cows2021_preview.html",
+  "tests": [
+    {
+      "test": "seed26_play",
+      "videos": [
+        {
+          "error": null,
+          "paused": false,
+          "ready": 4,
+          "src": "http://127.0.0.1:8779/inputs/pilot_f8912-10873.webm",
+          "time": 20.6266
+        },
+        {
+          "error": null,
+          "paused": false,
+          "ready": 4,
+          "src": "http://127.0.0.1:8779/inputs/cows2021_seed26_f8912-10873.webm",
+          "time": 20.6265
+        }
+      ]
+    },
+    {
+      "test": "seed27_play_seek9420",
+      "videos": [
+        {
+          "error": null,
+          "paused": false,
+          "ready": 4,
+          "src": "http://127.0.0.1:8779/inputs/pilot_f8912-10873.webm",
+          "time": 20.6184
+        },
+        {
+          "error": null,
+          "paused": false,
+          "ready": 4,
+          "src": "http://127.0.0.1:8779/inputs/cows2021_seed27_f8912-10873.webm",
+          "time": 20.6183
+        }
+      ]
+    },
+    {
+      "test": "seed28_play_seek9420",
+      "videos": [
+        {
+          "error": null,
+          "paused": false,
+          "ready": 4,
+          "src": "http://127.0.0.1:8779/inputs/pilot_f8912-10873.webm",
+          "time": 20.6114
+        },
+        {
+          "error": null,
+          "paused": false,
+          "ready": 4,
+          "src": "http://127.0.0.1:8779/inputs/cows2021_seed28_f8912-10873.webm",
+          "time": 20.6113
+        }
+      ]
+    },
+    {
+      "test": "last_frame10873_and_speed2",
+      "page": {
+        "clock": "源帧10873 · 434.92秒",
+        "jump": "10873",
+        "videos": [
+          {
+            "duration": 78.48,
+            "error": null,
+            "paused": true,
+            "rate": 2,
+            "src": "http://127.0.0.1:8779/inputs/generic_f8912-10873.webm",
+            "time": 78.4412
+          },
+          {
+            "duration": 78.48,
+            "error": null,
+            "paused": true,
+            "rate": 2,
+            "src": "http://127.0.0.1:8779/inputs/cows2021_seed28_f8912-10873.webm",
+            "time": 78.4412
+          }
+        ]
+      }
+    },
+    {
+      "test": "restore_default_and_first_frame8912",
+      "page": {
+        "baseline": "pilot",
+        "clock": "源帧8912 · 356.48秒",
+        "seed": "26",
+        "videos": [
+          {
+            "error": null,
+            "paused": true,
+            "rate": 1,
+            "ready": 4,
+            "time": 0.0012
+          },
+          {
+            "error": null,
+            "paused": true,
+            "rate": 1,
+            "ready": 4,
+            "time": 0.0012
+          }
+        ]
+      }
+    }
+  ],
+  "final_view": {
+    "baseline": "pilot",
+    "clock": "源帧9420 · 376.80秒",
+    "seed": "26",
+    "status": "已暂停，可切换模型或跳转源帧。",
+    "table": "Official YOLO26n\t0\t0\t6 / 0 / 0\nOpenCows five-epoch pilot\t7\t0\t2 / 0 / 4\nCows2021 dates10 seed26\t0\t0\t0 / 0 / 6\nCows2021 dates10 seed27\t1\t0\t0 / 0 / 6\nCows2021 dates10 seed28\t0\t0\t0 / 0 / 6",
+    "videos": [
+      {
+        "duration": 78.48,
+        "error": null,
+        "height": 720,
+        "paused": true,
+        "ready": 4,
+        "src": "http://127.0.0.1:8779/inputs/pilot_f8912-10873.webm",
+        "time": 20.321199,
+        "width": 1280
+      },
+      {
+        "duration": 78.48,
+        "error": null,
+        "height": 720,
+        "paused": true,
+        "ready": 4,
+        "src": "http://127.0.0.1:8779/inputs/cows2021_seed26_f8912-10873.webm",
+        "time": 20.321199,
+        "width": 1280
+      }
+    ]
+  },
+  "screenshot": "browser_preview_source9420.png",
+  "source_annotation_draft_written": false,
+  "independent_source_accuracy_verified": false,
+  "whole_goal_complete": false
+}

@@ -1,0 +1,397 @@
+{
+  "status": "FOUR_FROZEN_MODELS_NATIVE_LONG_VIDEO_REPLAY_AND_CASE_DIAGNOSIS_REVIEWED",
+  "created_UTC": "2026-10-28T17:40:16.081745+00:00",
+  "job_id": "130345",
+  "job_state": "COMPLETED",
+  "job_exit_code": "0:0",
+  "manifest_files": 89,
+  "archive_members": 90,
+  "new_model_forwards": 8100,
+  "independent_counter_paths": 8,
+  "counter_update_ticks": 16200,
+  "raw_boxes_inverse_checked": 4808,
+  "native_ROI_centers_checked": 731,
+  "handoff_down_predictions": {
+    "official": 0,
+    "seed26": 11,
+    "seed27": 12,
+    "seed28": 12
+  },
+  "confirmed_only_down_predictions": {
+    "official": 0,
+    "seed26": 11,
+    "seed27": 11,
+    "seed28": 12
+  },
+  "all_scopes": [
+    {
+      "model": "official",
+      "window": "group_passage",
+      "confirmed_only_down": 0,
+      "handoff_down": 0,
+      "up": 0
+    },
+    {
+      "model": "official",
+      "window": "late_single",
+      "confirmed_only_down": 0,
+      "handoff_down": 0,
+      "up": 0
+    },
+    {
+      "model": "official",
+      "window": "person_control",
+      "confirmed_only_down": 0,
+      "handoff_down": 0,
+      "up": 0
+    },
+    {
+      "model": "seed26",
+      "window": "group_passage",
+      "confirmed_only_down": 10,
+      "handoff_down": 10,
+      "up": 0
+    },
+    {
+      "model": "seed26",
+      "window": "late_single",
+      "confirmed_only_down": 1,
+      "handoff_down": 1,
+      "up": 0
+    },
+    {
+      "model": "seed26",
+      "window": "person_control",
+      "confirmed_only_down": 0,
+      "handoff_down": 0,
+      "up": 0
+    },
+    {
+      "model": "seed27",
+      "window": "group_passage",
+      "confirmed_only_down": 10,
+      "handoff_down": 11,
+      "up": 0
+    },
+    {
+      "model": "seed27",
+      "window": "late_single",
+      "confirmed_only_down": 1,
+      "handoff_down": 1,
+      "up": 0
+    },
+    {
+      "model": "seed27",
+      "window": "person_control",
+      "confirmed_only_down": 0,
+      "handoff_down": 0,
+      "up": 0
+    },
+    {
+      "model": "seed28",
+      "window": "group_passage",
+      "confirmed_only_down": 11,
+      "handoff_down": 11,
+      "up": 0
+    },
+    {
+      "model": "seed28",
+      "window": "late_single",
+      "confirmed_only_down": 1,
+      "handoff_down": 1,
+      "up": 0
+    },
+    {
+      "model": "seed28",
+      "window": "person_control",
+      "confirmed_only_down": 0,
+      "handoff_down": 0,
+      "up": 0
+    }
+  ],
+  "movies_fully_decoded": 12,
+  "movie_frames_fully_decoded": 12500,
+  "raster_files_verified": 55,
+  "actual_sheets_viewed": 11,
+  "actual_panels_viewed": 44,
+  "local_links_checked": 170,
+  "new_training_updates": 0,
+  "new_Slurm_jobs": 1,
+  "new_different_clip_user_confirmed12_preserved": true,
+  "current_29_condition_catalog_unchanged": true,
+  "new_clip_references_unchanged": true,
+  "new_reference_authority": "assistant_provisional_native_visual_review",
+  "new_reference_final_scoring_eligible": false,
+  "formal_accuracy_or_F1_computed": false,
+  "human_full_movie_playback_claimed": false,
+  "source_and_retained_artifact_hashes": {
+    "human_count_confirmation_20261028/evidence/user_confirmation.json": "fe8a895cd6ac71815ff8e2f6ad8d932a6453c41971b6b7a18ea9c2f743dd0f9f",
+    "human_count_confirmation_20261028/results/frozen_development_candidate.json": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+    "lost_recovery_20261028/results/frozen_prediction_catalog_v4.json": "26bd4c43a1345e12d0806409229976fa158efab11cc31529ea1f4255a53df8ac",
+    "overhead_positive_reference_20261028/reference/assistant_event_draft_v1.json": "35a6e0d5b4454cc2a6e6057c750f84cd6cf5d02f5d3fc73c4c1683c80b149bb7",
+    "event_timing_refinement_20261029/reference/assistant_event_timing_v2.json": "188079a8754c495485c284b8e0a29519181100033166fe953e9f7547c600dc6a",
+    "overhead_long_session_20261028/input/2023-08-17T13-25-38.mp4": "8210a5bf206dd7f2356bc3d4653b439ab6de12ccfdc8209fe301ac7f02807058"
+  },
+  "evidence_hashes": {
+    "protocol/replay_v1.json": "90bac31ca2224544a1ca62c3a7046842c1c744b584e976d1a4b745d1c9b4bd0a",
+    "results/independent_verification.json": "9c1999be215520faa77b5b1d3a950f8a086a3b29fd716d4a1843020da8aac3d1",
+    "results/media_verification.json": "1e409ab89938027ec633e0b57e145a9485b95d1097878cd7ba55ac85f73ae061",
+    "results/case_diagnosis.json": "ceb07b59d5800f7ed9879548d24775016280cd7f7da1a584a3b8fe426999435d",
+    "evidence/visual_review.json": "d97ec32dc8bf2fdbf064ed65352b53cddd5014190ede2cdddc5b876498eb8e79",
+    "evidence/delivery_record.json": "3b6f067d357bb34c816ff5da25b45f9ec2ffc69ecec8b677ce6df6fee5b2a869",
+    "evidence/status_04.txt": "27f066f1bf6bc4e90dce87a89048f5f4b9659519f0fc63682bfee0efaf62023f",
+    "evidence/replay_130345.out": "d06a5b7f2d986c465be0deb90c14db4478c37522f99abf1d1236957ce022b03a",
+    "evidence/replay_130345.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/actual_remote_replay.py": "2d3781280056a0c47cb85938e2d90357ff23d49de9914946778714aad87b680f"
+  },
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\计划与验收.md",
+      "sha256": "175d38c0c84e50e61135d1b337f88d429e7527032f68ce746404235e5fbe5278"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\普通俯视长片四模型回放与研究决策.md",
+      "sha256": "390829da81b0dec4894df207b09e916e41b49feb11bccbac13a81d9c57a62a06"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\Review与当前状态.md",
+      "sha256": "b2a8717822d9a69e122cc1cf4aa7e9c32cb6e4fa8e71710ead4c91ffbebc3f5a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究总览_从想法到论文.md",
+      "sha256": "596b55e40b7ca1fef1db3af9b185dd5e244b6357594479bf98cade97b133f637"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究进度.md",
+      "sha256": "15925eaa15c6164185df10f942b82d21f319c78387bff67484c4a652b2d2390a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\phase3_diagnosis_20261026\\方案与执行状态.md",
+      "sha256": "2973f1911fa63b3caacfce788817fe9bf66c17acdd87e8591eb9333c7cc8c867"
+    }
+  ],
+  "rasters": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02640_official.png",
+      "sha256": "acc9c6297d629b3f99e3228e9dfca14f85b496e0563db9e512b59f487e0ef769"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02640_seed26.png",
+      "sha256": "6639151cf963bddb74b746ce7c40bb887b72b11f28813b666fc547be38354214"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02640_seed27.png",
+      "sha256": "12482d81c5c5761cf2f99df31e1cd317133fe757fb3bc4fbf7d0320b9fd79911"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02640_seed28.png",
+      "sha256": "c5c2a6e4b89296491778b5cdec7c2c0040c6e4b3dada4c4d730cbbf21d6322e2"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02720_official.png",
+      "sha256": "0f02d778bb7e1776251aabb8fed2f9cfde02d54538416dcab8690163ed67fc91"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02720_seed26.png",
+      "sha256": "69266f1f1d1c64b5781ab32ea21a1d8743416db4b7016b3381fdb6dec070e7d9"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02720_seed27.png",
+      "sha256": "0c9fec3b938e0738b062928e86b457b421ef0728a73a5b5ff2cd588ca8bd7cb7"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02720_seed28.png",
+      "sha256": "c17eb880ba90757d61f333b6a973a558bb8e32fe16f473ade0a11e08eadd5492"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02920_official.png",
+      "sha256": "292cfbaf0a4e23b1dec894ef0038239408eb83488a5b9695c064440dca0a4627"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02920_seed26.png",
+      "sha256": "ee241732645584c507d42bc941d401ee469424df5bd6f329cb09a5c6e1d2b64c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02920_seed27.png",
+      "sha256": "ca332460b0d6aa39e0d01478e256fe64055071d2d593297ec1b7ad6cf7dec6f6"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\02920_seed28.png",
+      "sha256": "4bd9210fb4e0aaef49e2fee60cf128c7b034e85a138cf8082fe963962839e330"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03380_official.png",
+      "sha256": "78372be00bf67c0903352591695f38135648ff088487008378e26d136e74bfc3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03380_seed26.png",
+      "sha256": "397bc2a7de0cde7a1465505186a46b62c26af0c5208690b4222293a6615aac79"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03380_seed27.png",
+      "sha256": "cf91e1c35f143984b9c373ce3a826ca5677264fb0a1729fc3b35274d10ea0789"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03380_seed28.png",
+      "sha256": "b344005519afaa9b6f2a89566ac0c69cbcf462bd020d2ea2adc4cefe7178fcb9"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03605_official.png",
+      "sha256": "b13883e0992dcb939b8d0acf25586dd8e3eacd74823612631674dcae71d64b6e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03605_seed26.png",
+      "sha256": "30a75f4ac484811e84a09cce1d358416f19924f6d5ec41e2e3c2cd45d2bd8348"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03605_seed27.png",
+      "sha256": "b65ddcee0662b7bf2b05c8c6bd9908a48a449704c6e6b4c98884a16d0e8b6a34"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03605_seed28.png",
+      "sha256": "d0e9080f9eb5823a3ef8b1e989c5214711a11c2e21bf265cb0e71adc60894bc7"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03825_official.png",
+      "sha256": "bab4e6f925f89570c79e34505a9a0d4d744d8fa02162d606d3ad7b47c748883d"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03825_seed26.png",
+      "sha256": "0aaee5600647e4f1e9213419b9703b0b2a080dcb10671c10b67017816b370d4f"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03825_seed27.png",
+      "sha256": "93cf398a3f314113d47d45e8a2c29fab7605056413e6c31e9ac03101b1533be5"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\03825_seed28.png",
+      "sha256": "c389e5c31ea50d34f38463098da8cadbea4c22acf165de4440ffaac0659ed527"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\04005_official.png",
+      "sha256": "7c387fd9fd7a054ce3c750aa0e503dc5737e6e11f4c2160a5dcd0540951ef71a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\04005_seed26.png",
+      "sha256": "6eaafbe0e7c1d51e7f60a229579329c3eb8ce23c5e846ac888523c809bccf5c9"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\04005_seed27.png",
+      "sha256": "c4c87c7ac96eecb7c1ffd5bd93fb149d3e3f946b851df01d215ba446ce863c58"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\04005_seed28.png",
+      "sha256": "98c9404c97806a74b569623f7334f9cee59342dba1bc2766d54b79d6f296ce8d"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\05320_official.png",
+      "sha256": "5c3261475b2360e2b4fcc577952c45de93c7f50cadf3102e12a981da5a3ebb93"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\05320_seed26.png",
+      "sha256": "fa3d039e6bb40124458d79a3cd83118261157ec91203c2adc1a7864c3d4f7890"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\05320_seed27.png",
+      "sha256": "8e5e9908aab463746132522c1b6df7e1cca503f9214cf4c6200cfbbebe1f6749"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\05320_seed28.png",
+      "sha256": "513d46bac80ea50eb7a145d5133b422ad5133508f293e4c74e86c0a082478af3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\09900_official.png",
+      "sha256": "08cbb75335815155e2cadbe95b0fc4776a85452e99a61aeed497a370c249ec6e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\09900_seed26.png",
+      "sha256": "f49a47eca92762afeb1f3d3b8b4d690d09752f182ecdf6c56d704946b55511dc"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\09900_seed27.png",
+      "sha256": "ee20297c4e41d54a5807e5e05a78b4f18a3185a026bc92a6c040e6096cd30bc7"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\09900_seed28.png",
+      "sha256": "ee4bba6711b87081d0a67434c252664a0f2036d50c87c26cffb448c3bd478756"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\comparison_02640.jpg",
+      "sha256": "a898e2ae09730425d87d08ebc2e5bf6a3efc91a37bfb01903355e519a619f775"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\comparison_02720.jpg",
+      "sha256": "1029d18db66aaa4e4c6ba5589533198e3bd9beaf34a560c248a89987138e73d1"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\comparison_02920.jpg",
+      "sha256": "3cb41db6e4ad04895faa6dec043684e26f7a7b72f6cb9fdba2723ee6de262f92"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\comparison_03380.jpg",
+      "sha256": "bdcbc2026c7699a56c11a2292de5e3d009d33633b0f7dc58d18dd0816f351839"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\comparison_03605.jpg",
+      "sha256": "824265611975100c7bc9933110276f0a1d79a1c935a02ccdbe8e0374100af80e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\comparison_03825.jpg",
+      "sha256": "5db6ecf16d79c325cd726c57f65967829f8e3070e9664d5bc1382dc694409b8d"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\comparison_04005.jpg",
+      "sha256": "f2b31d40aeb63edc31fb79b00d372da068c6987baf0fdd77f3f93481958f7ea3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\comparison_05320.jpg",
+      "sha256": "df09fb22a7dc5c9198188a94e252584fea87fd0fd999ae25853904745e6e4d63"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\aligned_cases\\comparison_09900.jpg",
+      "sha256": "2c63fbacaa871ad8b55b855bdf9f5f7cfdf39a79b1e73c29c47b73dd082e9e9c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_gap_sheet_1.jpg",
+      "sha256": "81439601d77ab3b319d9887d110b63857b40707fd092a6268bbfbf99f55e84e3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_gap_sheet_2.jpg",
+      "sha256": "b904fe6e3c906703f75d9be01ca661e2d61f7d494c3c5ef004904bc68706c6eb"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_native_02640.png",
+      "sha256": "d1949616a4b369c6299a8ffbfeeed083abe7db647a0cad3be9ca5e5cdb79e1bf"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_native_02645.png",
+      "sha256": "c127d33d80cf0bb13e314b413559cc40cc80cd08ef4b751f3db24e98e95e389b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_native_02650.png",
+      "sha256": "64f7e3e9939a0425124ae04dd29b105329b47234403a2c52592b79875960bf6c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_native_02655.png",
+      "sha256": "daa45e50d9976e1059cc3a5fa839ecdc9bc82ea7c5148be0b27b5fd167658df8"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_native_02660.png",
+      "sha256": "b58ac5d5609c023684ec42b6453f3fad30877a8d1efbb92d5fd87536392280c2"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_native_02665.png",
+      "sha256": "9227b919f77209b44875afbf526d5b20c6875fc43bbb2fe2f1c99435158f08ec"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_native_02670.png",
+      "sha256": "c2851c7d09af281523104e6dce8174941ea03efbf4f9dea181eb5ee3fc0e6d20"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\long_video_fixed_replay_20261029\\results\\case_diagnosis\\seed26_native_02675.png",
+      "sha256": "234cf6394b0ab35d4b523d1f72b41676b9ae8a9a7884237761897caa896f89bc"
+    }
+  ],
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

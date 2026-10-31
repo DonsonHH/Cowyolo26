@@ -1,0 +1,106 @@
+{
+  "status": "TRAIN_INPUTS_SIX_MODEL_EXPORTS_AND_INTEGER_FORWARD_INDEPENDENTLY_VERIFIED",
+  "job_id": "129992",
+  "protocol_sha256": "56031ab9241b59b8a8b1680c8829aaa6b3372215f7d95de2184ee85e0cffee80",
+  "source_summary_sha256": "f065d15543d3e42aad6e63d3c2fbcc38df8390c91cc7a1de250a396b6a5ff5fb",
+  "model_conditions": [
+    {
+      "seed": 26,
+      "phase": "initial",
+      "exact_integer_accumulator_layers": 416,
+      "required_all_vectors_pass": true,
+      "runtime_passes": {
+        "OFF": 8,
+        "ALL_disable_quant_qdq": 8,
+        "ALL_default_diagnostic": 8
+      }
+    },
+    {
+      "seed": 26,
+      "phase": "post2updates",
+      "exact_integer_accumulator_layers": 416,
+      "required_all_vectors_pass": true,
+      "runtime_passes": {
+        "OFF": 8,
+        "ALL_disable_quant_qdq": 8,
+        "ALL_default_diagnostic": 8
+      }
+    },
+    {
+      "seed": 27,
+      "phase": "initial",
+      "exact_integer_accumulator_layers": 416,
+      "required_all_vectors_pass": true,
+      "runtime_passes": {
+        "OFF": 8,
+        "ALL_disable_quant_qdq": 8,
+        "ALL_default_diagnostic": 8
+      }
+    },
+    {
+      "seed": 27,
+      "phase": "post2updates",
+      "exact_integer_accumulator_layers": 416,
+      "required_all_vectors_pass": true,
+      "runtime_passes": {
+        "OFF": 8,
+        "ALL_disable_quant_qdq": 8,
+        "ALL_default_diagnostic": 8
+      }
+    },
+    {
+      "seed": 28,
+      "phase": "initial",
+      "exact_integer_accumulator_layers": 416,
+      "required_all_vectors_pass": true,
+      "runtime_passes": {
+        "OFF": 8,
+        "ALL_disable_quant_qdq": 8,
+        "ALL_default_diagnostic": 8
+      }
+    },
+    {
+      "seed": 28,
+      "phase": "post2updates",
+      "exact_integer_accumulator_layers": 416,
+      "required_all_vectors_pass": true,
+      "runtime_passes": {
+        "OFF": 8,
+        "ALL_disable_quant_qdq": 8,
+        "ALL_default_diagnostic": 8
+      }
+    }
+  ],
+  "integer_accumulator_layer_cases": 2496,
+  "accumulator_elements_recomputed": 67951488,
+  "feature_vector_conditions": 48,
+  "runtime_metric_conditions": 144,
+  "training_image_access_count": 216,
+  "training_image_roles_and_hashes_verified": true,
+  "initial_outputs_unchanged_by_trainability_fix": true,
+  "frozen_bias_failure_verified": true,
+  "independent_CPU_STE_controls": [
+    {
+      "device": "cpu",
+      "groups": 1,
+      "maximum_STE_surrogate_gradient_difference": 9.5367431640625e-07,
+      "clipped_input_elements": 40,
+      "clipped_weight_elements": 16,
+      "clipped_output_elements": 69,
+      "finite_gradients": true
+    },
+    {
+      "device": "cpu",
+      "groups": 3,
+      "maximum_STE_surrogate_gradient_difference": 1.9073486328125e-06,
+      "clipped_input_elements": 63,
+      "clipped_weight_elements": 8,
+      "clipped_output_elements": 34,
+      "finite_gradients": true
+    }
+  ],
+  "actual_discarded_smoke_updates": 6,
+  "formal_QAT_updates": 0,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

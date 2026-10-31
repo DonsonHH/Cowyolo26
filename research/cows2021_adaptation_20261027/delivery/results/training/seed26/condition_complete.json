@@ -1,0 +1,28 @@
+{
+  "seed": 26,
+  "epochs": 10,
+  "checkpoint_rule": "Use final epoch10 last.pt for all3 seeds; archive best.pt separately. Freeze all3 checkpoint hashes before new source/Toros inference. Report every seed without selecting one on video counts.",
+  "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+  "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+  "archived_best_sha256": "705bfab4a2d85b54ef082c402c3d4ccd99360c6c2910b6110912e8ebd416213c",
+  "initial_state_digest": "98b0f08adb5a735a74cc03a2631f0098bf3a6968b93b978eb6775f5a775d9a0e",
+  "actual_training_batches": 2130,
+  "actual_optimizer_steps": 1225,
+  "optimizer_step_schedule_sha256": "fac0ad61970ad1331d1af0d8fc9de2d2b76d053e0fbaa41cf37231a3604feacd",
+  "last_epoch_validation": {
+    "metrics/precision(B)": 0.9773,
+    "metrics/recall(B)": 0.9721,
+    "metrics/mAP50(B)": 0.99246,
+    "metrics/mAP50-95(B)": 0.82143
+  },
+  "trainer_returned_archived_best_metrics": {
+    "metrics/precision(B)": 0.9722249038586828,
+    "metrics/recall(B)": 0.9726394849785408,
+    "metrics/mAP50(B)": 0.992176326773546,
+    "metrics/mAP50-95(B)": 0.8282150123476232,
+    "fitness": 0.8282150123476232
+  },
+  "training_csv_sha256": "241177bc9cb76050e04c4b0b5af563fbe5be21e378e82d2ee9dc5e688e7a9bd9",
+  "effective_args_sha256": "1481c29369ab7da4238941f2c48b684466ee5237e23ef3fe94bed004f993ebd7",
+  "elapsed_s": 332.95153347123414
+}

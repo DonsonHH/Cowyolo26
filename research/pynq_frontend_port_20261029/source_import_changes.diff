@@ -1,0 +1,54 @@
+--- ultralytics.trackers.byte_tracker
++++ byte_tracker.py
+@@ -6,12 +6,12 @@
+ 
+ import numpy as np
+ 
+-from ..utils import LOGGER
+-from ..utils.ops import xywh2ltwh
++from .support import LOGGER
++from .support import xywh2ltwh
+ from .basetrack import BaseTrack, TrackState
+-from .utils import matching
+-from .utils.kalman_filter import KalmanFilterXYAH
+-from .utils.stracks import joint_stracks, merge_track_pools, multi_gmc, parse_bboxes
++from . import matching
++from .kalman_filter import KalmanFilterXYAH
++from .stracks import joint_stracks, merge_track_pools, multi_gmc, parse_bboxes
+ 
+ 
+ class STrack(BaseTrack):
+--- ultralytics.trackers.utils.matching
++++ matching.py
+@@ -2,17 +2,10 @@
+ 
+ import numpy as np
+ 
+-from ultralytics.utils.metrics import batch_probiou, bbox_ioa
++from .support import batch_probiou, bbox_ioa
+ 
+-try:
+-    import lap  # for linear_assignment
+-
+-    assert lap.__version__  # verify package is not directory
+-except (ImportError, AssertionError, AttributeError):
+-    from ultralytics.utils.checks import check_requirements
+-
+-    check_requirements("lap>=0.5.12")  # https://github.com/gatagat/lap
+-    import lap
++import lap
++assert lap.__version__ == '0.5.13', 'Frozen LAP solver version required'
+ 
+ 
+ def linear_assignment(cost_matrix: np.ndarray, thresh: float, use_lap: bool = True):
+--- ultralytics.trackers.utils.stracks
++++ stracks.py
+@@ -11,7 +11,7 @@
+ 
+ import numpy as np
+ 
+-from ..basetrack import TrackState
++from .basetrack import TrackState
+ from . import matching
+ 
+ 

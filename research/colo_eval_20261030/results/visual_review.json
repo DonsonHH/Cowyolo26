@@ -1,0 +1,82 @@
+{
+  "status": "ELEVEN_FIXED_SHEETS66_PANELS_PIXEL_BOUND_AND_ACTUALLY_VIEWED",
+  "created_UTC": "2026-10-30T05:42:36.980160+00:00",
+  "sheets": 11,
+  "panels": 66,
+  "actually_viewed": true,
+  "selected_indices_frozen_before_test_pixels": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    49
+  ],
+  "files": [
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\raw.png",
+      "sha256": "f2523d6da768f655ebecac27159aaeb6bedbadd194bfa33493d959008a46fb2f",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\publisher_GT.png",
+      "sha256": "618cdcc16686bf0759b7c8065fb2b788898e89f55dcd3df2c1615c039f840065",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\official_s192.png",
+      "sha256": "7b46fdddb6d96184bb94d6b90bffd745763b5a3cf02065878b4287bdb9920757",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\official_s256.png",
+      "sha256": "317dd8be2829bf8bc8d922a93cf608abed694427dd1925356dae3379d94e645e",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\official_s320.png",
+      "sha256": "3841623014e5806cfd91b7905750a3fbadb4c54432808c8c79fe329cbcd33ce1",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\old_rot192_s192.png",
+      "sha256": "9b71996aded58597303d30d1a4f4b8ef7560c40f207ef063b4060e3f30369ae5",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\old_rot192_s256.png",
+      "sha256": "829ad11a288588143acf11992a9ebee232acb465aae59451218fc0bbd1501739",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\old_rot192_s320.png",
+      "sha256": "3855333e96821e91a6f6b8b16a028e2b0e132934a5566289edf1f836d13d44eb",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\new_mosaic050_s192.png",
+      "sha256": "cff8699be58145d530dba25376dc3a18dc465b60cf2704e82f053bcc33aa16e1",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\new_mosaic050_s256.png",
+      "sha256": "52d6f9d7bf89a80c1d6ef62066858e0a2e077926bc2c1d2c779aada288a08bb5",
+      "actually_viewed": true
+    },
+    {
+      "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\colo_eval_20261030\\results\\fixed_panels\\new_mosaic050_s320.png",
+      "sha256": "dea164ba3708293cb5232610becd84ef0e82643b09272f3d82a822a41b0b10e4",
+      "actually_viewed": true
+    }
+  ],
+  "viewing_evidence": "Eleven separate local view_image calls: raw, publisher_GT, official192/256/320, old192/256/320, new192/256/320; assistant viewing, not independent relabeling.",
+  "visual_findings": [
+    "Many partial feeding cows at the upper border and rail occlusion are present; GT covers author-defined detection objects, not completed passages.",
+    "Fixed0.20 examples show extensive omissions in all models; larger inputs do not recover every feeding cow.",
+    "Old320 also predicts some rails/background; new192/256 often has fewer displayed false candidates, with omissions retained.",
+    "Body-trained boxes can be smaller than author reference boxes; this is a visible possible domain mismatch, not a proven sole cause of low AP."
+  ],
+  "new_model_forwards": 0,
+  "independent_human_review": false,
+  "whole_goal_complete": false
+}

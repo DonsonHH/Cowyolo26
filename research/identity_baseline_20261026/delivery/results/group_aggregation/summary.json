@@ -1,0 +1,1146 @@
+{
+  "job_id": "129698",
+  "protocol": {
+    "purpose": "Predeclared companion analysis of five image queries from one cow/date/camera, fixed before baseline inference",
+    "input": "Same frozen MobileNetV3-small embeddings and date/identity sample as identity_pilot_v1",
+    "methods": [
+      {
+        "name": "single_first",
+        "query_vectors": "First of five selected files by original filename"
+      },
+      {
+        "name": "mean_five",
+        "query_vectors": "Arithmetic mean of five L2-normalised embeddings, then L2 normalise"
+      }
+    ],
+    "gallery": "Same 20 known identities, five Aug14 images each; max cosine per identity",
+    "thresholds": "For each method independently use Aug19 groups only and the original calibration selection rule; freeze before scoring Aug20 groups",
+    "group": "Anonymous cow ID + day + camera1; these are public curated daily-tracklet proxies, not a newly verified visual passage or a real RF incident",
+    "statistics": "Report each group once; unknown calibration10/evaluation10 are different IDs; empirical FAR<=0.05 permits zero false accepts out of10 calibration groups and has coarse resolution",
+    "scope": "A fixed comparison, not a search for best K, cropping policy or quality threshold; no new training"
+  },
+  "conditions": [
+    {
+      "method": "single_first",
+      "threshold": {
+        "threshold": 0.814351955843797,
+        "calibration_known_correct_accepted": 6,
+        "calibration_known_wrong_accepted": 4,
+        "calibration_unknown_false_accepts": 0,
+        "calibration_unknown_queries": 10,
+        "calibration_unknown_far": 0.0,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold",
+        "frozen_before_group_evaluation_scoring": true,
+        "frozen_at_utc": "2026-10-26T12:23:18.336392+00:00"
+      },
+      "calibration": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_correct_accepted_C": 6,
+        "known_wrong_accepted_W": 4,
+        "known_rejected_U": 10,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 9,
+        "known_closed_top1_accuracy": 0.45,
+        "known_correct_accepted_rate": 0.3,
+        "known_wrong_accepted_rate": 0.2,
+        "unknown_false_accepts": 0,
+        "unknown_false_acceptance_rate": 0.0,
+        "all_accepted_wrong_fraction": 0.4,
+        "per_identity": [
+          {
+            "identity": "002",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "003",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "004",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "005",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "013",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "016",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "018",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "021",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "023",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "027",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "029",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "032",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "036",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "038",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "042",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "043",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "046",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "047",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "048",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "049",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "050",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "053",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "055",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "056",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "059",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "061",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "062",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "063",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "072",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "085",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      },
+      "evaluation": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_correct_accepted_C": 8,
+        "known_wrong_accepted_W": 4,
+        "known_rejected_U": 8,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 9,
+        "known_closed_top1_accuracy": 0.45,
+        "known_correct_accepted_rate": 0.4,
+        "known_wrong_accepted_rate": 0.2,
+        "unknown_false_accepts": 7,
+        "unknown_false_acceptance_rate": 0.7,
+        "all_accepted_wrong_fraction": 0.5789473684210527,
+        "per_identity": [
+          {
+            "identity": "003",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "004",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "005",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "006",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "008",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "013",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "014",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "015",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "016",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "017",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "021",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "027",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "034",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "036",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "038",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "043",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "046",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "047",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "048",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "049",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "051",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "053",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "055",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "059",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "060",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "062",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "067",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "072",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "078",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 1.0
+          },
+          {
+            "identity": "085",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      },
+      "evaluation_identity_cluster_intervals": {
+        "closed_top1_accuracy": {
+          "macro_mean": 0.45,
+          "identity_clusters": 20,
+          "percentile_95_interval": [
+            0.2,
+            0.65
+          ],
+          "bootstrap_draws": 2000
+        },
+        "correct_accepted_rate": {
+          "macro_mean": 0.4,
+          "identity_clusters": 20,
+          "percentile_95_interval": [
+            0.2,
+            0.6
+          ],
+          "bootstrap_draws": 2000
+        },
+        "false_accept_rate": {
+          "macro_mean": 0.7,
+          "identity_clusters": 10,
+          "percentile_95_interval": [
+            0.4,
+            1.0
+          ],
+          "bootstrap_draws": 2000
+        }
+      },
+      "unit": "One anonymous cow/date/camera group from five fixed curated crops; complete source passage not independently established"
+    },
+    {
+      "method": "mean_five",
+      "threshold": {
+        "threshold": 0.9237236162406803,
+        "calibration_known_correct_accepted": 4,
+        "calibration_known_wrong_accepted": 0,
+        "calibration_unknown_false_accepts": 0,
+        "calibration_unknown_queries": 10,
+        "calibration_unknown_far": 0.0,
+        "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold",
+        "frozen_before_group_evaluation_scoring": true,
+        "frozen_at_utc": "2026-10-26T12:23:18.567005+00:00"
+      },
+      "calibration": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_correct_accepted_C": 4,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 16,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 9,
+        "known_closed_top1_accuracy": 0.45,
+        "known_correct_accepted_rate": 0.2,
+        "known_wrong_accepted_rate": 0.0,
+        "unknown_false_accepts": 0,
+        "unknown_false_acceptance_rate": 0.0,
+        "all_accepted_wrong_fraction": 0.0,
+        "per_identity": [
+          {
+            "identity": "002",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "003",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "004",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "005",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "013",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "016",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "018",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "021",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "023",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "027",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "029",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "032",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "036",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "038",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "042",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "043",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "046",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "047",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "048",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "049",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "050",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "053",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "055",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "056",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "059",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "061",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "062",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "063",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "072",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "085",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      },
+      "evaluation": {
+        "known_queries": 20,
+        "unknown_queries": 10,
+        "known_correct_accepted_C": 2,
+        "known_wrong_accepted_W": 1,
+        "known_rejected_U": 17,
+        "query_missing_M": 0,
+        "known_closed_top1_correct": 10,
+        "known_closed_top1_accuracy": 0.5,
+        "known_correct_accepted_rate": 0.1,
+        "known_wrong_accepted_rate": 0.05,
+        "unknown_false_accepts": 0,
+        "unknown_false_acceptance_rate": 0.0,
+        "all_accepted_wrong_fraction": 0.3333333333333333,
+        "per_identity": [
+          {
+            "identity": "003",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "004",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "005",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "006",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "008",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "013",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "014",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "015",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "016",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 1.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "017",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "021",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "027",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "034",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "036",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "038",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "043",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "046",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "047",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "048",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "049",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "051",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "053",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "055",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "059",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "060",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "062",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "067",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "072",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 0.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          },
+          {
+            "identity": "078",
+            "is_known": false,
+            "queries": 1,
+            "closed_top1_accuracy": null,
+            "correct_accepted_rate": null,
+            "false_accept_rate": 0.0
+          },
+          {
+            "identity": "085",
+            "is_known": true,
+            "queries": 1,
+            "closed_top1_accuracy": 1.0,
+            "correct_accepted_rate": 0.0,
+            "false_accept_rate": null
+          }
+        ],
+        "unit": "Curated image query, not complete passage or field ear-tag event"
+      },
+      "evaluation_identity_cluster_intervals": {
+        "closed_top1_accuracy": {
+          "macro_mean": 0.5,
+          "identity_clusters": 20,
+          "percentile_95_interval": [
+            0.3,
+            0.7
+          ],
+          "bootstrap_draws": 2000
+        },
+        "correct_accepted_rate": {
+          "macro_mean": 0.1,
+          "identity_clusters": 20,
+          "percentile_95_interval": [
+            0.0,
+            0.25
+          ],
+          "bootstrap_draws": 2000
+        },
+        "false_accept_rate": {
+          "macro_mean": 0.0,
+          "identity_clusters": 10,
+          "percentile_95_interval": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_draws": 2000
+        }
+      },
+      "unit": "One anonymous cow/date/camera group from five fixed curated crops; complete source passage not independently established"
+    }
+  ],
+  "board_measurements": null,
+  "scope": "A fixed comparison, not a search for best K, cropping policy or quality threshold; no new training"
+}

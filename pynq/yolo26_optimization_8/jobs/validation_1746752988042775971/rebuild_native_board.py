@@ -1,0 +1,6 @@
+import pathlib,time,shutil,subprocess,json,hashlib
+D=pathlib.Path('/home/xilinx/jupyter_notebooks/yolo26_optimization_8');O=D/'revisions'/('independent_native_rebuild_'+str(time.time_ns()));O.mkdir();names=['queue_runtime.cpp','native_runtime.cpp','graph_executor.cpp','resident_methods.inc','software_fusion.inc']
+for name in names:shutil.copy2(D/'native_sources'/name,O/name)
+cmd=['g++','-O3','-std=c++17','-shared','-fPIC','-mcpu=cortex-a9','-mfpu=neon','-mfloat-abi=hard','-fopenmp','-ffp-contract=off','queue_runtime.cpp','-o','native_queue.so','-ldl']
+with (O/'build.log').open('w') as f:p=subprocess.run(cmd,cwd=O,stdout=f,stderr=subprocess.STDOUT)
+assert p.returncode==0;(O/'build.log').read_text();sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();record=dict(status='PASS',command=cmd,source_SHA256={n:sha(O/n) for n in names},library_SHA256=sha(O/'native_queue.so'),deployed_library_SHA256=sha(D/'native_sources/native_queue.so'),active_library_untouched=True);assert record['library_SHA256']==record['deployed_library_SHA256'];(D/'reports'/('native_rebuild_'+O.name+'.json')).write_text(json.dumps(record,indent=2));print('O8_NATIVE_ARM_REBUILD_IDENTICAL',json.dumps(record),flush=True)

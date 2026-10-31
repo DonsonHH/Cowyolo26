@@ -1,0 +1,18 @@
+             JOBID|PARTITION|                        NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed|MaxRSS
+130619|FAILED|1:0|00:00:29|
+130619.batch|FAILED|1:0|00:00:29|1180K
+[K[34m[1mtrain: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/train.cache... 6809 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 6809/6809 1.4Git/s 0.0s
+{"delivered_batches": 1, "delivered_images": 32, "augmented_label_rows": 89, "network_forwards": 0}
+{"delivered_batches": 51, "delivered_images": 1632, "augmented_label_rows": 4734, "network_forwards": 0}
+{"delivered_batches": 101, "delivered_images": 3232, "augmented_label_rows": 9551, "network_forwards": 0}
+{"delivered_batches": 151, "delivered_images": 4832, "augmented_label_rows": 14536, "network_forwards": 0}
+{"delivered_batches": 201, "delivered_images": 6432, "augmented_label_rows": 19220, "network_forwards": 0}
+  File "/share/home/renly/miniconda3/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/share/home/renly/miniconda3/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/share/home/renly/miniconda3/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type int64 is not JSON serializable

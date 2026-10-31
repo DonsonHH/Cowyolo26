@@ -1,0 +1,640 @@
+{
+  "status": "FIXED5_ENCODERS_TWO_DATE_GALLERIES_720_DECISIONS_AND_ALL_FALSE_ACCEPT_CASES_REVIEWED",
+  "created_UTC": "2026-10-29T05:22:02.429752+00:00",
+  "phase_complete": true,
+  "whole_goal_complete": false,
+  "protocol_v1_sha256": "26111ab11ef29ea67092ff07834ff38c03255c91a82fb9d395e7b344ff79da6b",
+  "protocol_v2_sha256": "f85ca48d7886507d6ba453f24426f3e4d8daed4afc3bd96e65be67273b1f7ccf",
+  "new_gallery_images": 30,
+  "decoded_distinct_input_positions": 132,
+  "paired_model_gallery_conditions": 10,
+  "labelled_queries": 60,
+  "registered_queries": 30,
+  "gallery_excluded_queries": 30,
+  "actual_event_query_images": 12,
+  "actual_successful_run_image_forwards": 660,
+  "failed_run_image_forwards_inferred_from_logged_stop_and_source": 618,
+  "combined_model_attempt_image_forwards": 1278,
+  "retrieval_decisions": 720,
+  "scalar_dot_products_verified": 21600,
+  "identity_scores_verified": 4320,
+  "old_CPU_gallery_and60_actual_query_feature_maxdelta": 0,
+  "old_GPU_all300_predictions_acceptances_exact": true,
+  "prior_CPU_actual_query_tensor_hashes_exact": true,
+  "model_thresholds_and_queries_unchanged": true,
+  "numerical_gate_failure_and_revision_preserved": true,
+  "all_five_models_reported": true,
+  "new_gallery_C26_C_W_U_unknownFAR": [
+    27,
+    0,
+    3,
+    5
+  ],
+  "new_unknown_false_accept_case_model_query_pairs": 8,
+  "new_unknown_false_accept_distinct_query_images": 6,
+  "new_unknown_false_accept_distinct_IDs": 3,
+  "new_real_accepted_candidates": [
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "gallery_condition": "new_Aug19",
+      "query_id": "E010_f9790_tid102",
+      "source_frame0": 9745,
+      "predicted_id": "009",
+      "similarity": 0.8454984553804493,
+      "threshold": 0.8306161540247587,
+      "accepted": true,
+      "margin": 0.014882301355690575,
+      "verified_identity": false
+    }
+  ],
+  "event_identity_accuracy_admitted": false,
+  "new_gallery_later_than_original_source_disclosed": true,
+  "new_independent_test": false,
+  "real_RF_or_eartag_mapping_proven": false,
+  "new_training_updates": 0,
+  "new_detector_forwards": 0,
+  "current_confirmed12_count_milestone_preserved": true,
+  "FPGA_execution_verified": false,
+  "local_rasters_fully_decoded": 64,
+  "actually_viewed_figures": 4,
+  "actually_viewed_image_panels": 54,
+  "SVG_bar_segments_verified": 40,
+  "Slurm_jobs": {
+    "130422": "FAILED1:0 numericgatepreserved",
+    "130423": "COMPLETED0:0CPUstudy",
+    "130424": "COMPLETED0:0scientificplot"
+  },
+  "local_document_links_checked": 174,
+  "evidence_hashes": {
+    "protocol/study_v1.json": "26111ab11ef29ea67092ff07834ff38c03255c91a82fb9d395e7b344ff79da6b",
+    "protocol/study_v2.json": "f85ca48d7886507d6ba453f24426f3e4d8daed4afc3bd96e65be67273b1f7ccf",
+    "results/input_audit.json": "cf2ea17bf835d73cfa9967e0bb985c6619988f7c6b8fecba5dbabf28e0eb447c",
+    "results/independent_verification.json": "fa672c7c26fa31150eea72a19a62fe23cd147841ce6021825c086f7da3b5d3e7",
+    "results/transfer_verification.json": "be01a7f32ecefd7045eb5150817f7c7a493c0f79f8083d877dd4438a879fcfe1",
+    "results/plot_verification.json": "5ad14233d2c940cc94457c959222d54603ab1bbbfc37e9cbbb8b6041df622dd8",
+    "results/source_review_record.json": "d38914852136454a4bf9d0212baf8f6e09fb43c84835a0eeef9abc77b56b824b",
+    "evidence/visual_review.json": "3715d31e98c5a4db9b5f5116ac927cd852e1da0ca648054cafc8a8142128edc0",
+    "results/all_false_accept_cases.json": "48ed9bda1c866c084f303878ace3955c76611a948d78910a47ffba0b6559f722",
+    "results/all_real_event_outcomes.json": "366608d4cdaa0f80d8d8d7537bea01ddb7aedcb0e75abd3cb4a0d577ecbaf95a",
+    "results/paired_identity_outcomes.json": "f40c9d51b1aed4eb369c20fd4f05843791bc0a20cb0b1e8bdf5f0e286db74285",
+    "evidence/status01.txt": "33c4e90201f2bbbe5a104241334e9fc3686963196fc70bec069b25462790ed2a",
+    "evidence/status02.txt": "8ba754020bd914617edcff5042be53f45e00411a82455588d30e0c67191d500a",
+    "evidence/plot_status_and_collection.txt": "e1996b3c9ca2211edfbc31e9e2217bc30afd800829165a1b7d49dd0f3717d05f",
+    "delivery/results/study_v2/summary.json": "1c487e390fd5e5132710facc2fe0e141f9f22a64df74d004545fe1f233ee26df",
+    "delivery/tools/run_study.py": "01d18daca0b8b1df9af1072c5e039ec43be58906583e509fdcfaa91c495a9617",
+    "delivery/tools/run_study_v2.py": "7534ec3d8843401217dc1f106b026898285a6802de742cfe80bab523037f396f",
+    "delivery/logs/study-130422.out": "30d9a9274df2e1a130ccbeaa367ffe09e2eaf6d7e35eac147678cf2d872d1778",
+    "delivery/logs/study-130422.err": "57827ca41b55e0176c4046ca7ba340ba19aa2059dd376964aaff7e3eb360dcce",
+    "delivery/logs/study-v2-130423.out": "4e2bb8b67a162be6fcf7302636614a62da965dfa45da3adef21f4602732d3b26",
+    "delivery/logs/study-v2-130423.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "plot_delivery/results/plots/plot_data.json": "f87d97ed5eec519b3c27467bf0293941acc337ade286fc4b19381726709be8b2",
+    "plot_delivery/results/plots/gallery_date_risk.svg": "5758cd36fcdadf69e26eefb4a230734f8acb794d222c120e2aba8d04e8829925"
+  },
+  "retained_artifact_hashes": {
+    "human_count_confirmation_20261028/results/frozen_development_candidate.json": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+    "human_count_confirmation_20261028/evidence/user_confirmation.json": "fe8a895cd6ac71815ff8e2f6ad8d932a6453c41971b6b7a18ea9c2f743dd0f9f",
+    "cows2021_adaptation_20261027/delivery/results/training/seed26/weights/last.pt": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+    "confirmation_handoff_20261028/delivery/results/replay_v2/seed26/handoff_events.json": "6975f4d6ceafc2bbef1a00081bf0499ca1bbbaa47ecdb420b943a49203fd4ad0",
+    "identity_source_provenance_20261029/results/evaluation_admission.json": "c6bf9ef82509f68c6655559dc8143a9be770defea294de84e83b2383112aa023"
+  },
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\\u8ba1\u5212\u4e0e\u9a8c\u6536.md",
+      "sha256": "74e72d997452527d02b03e6c28b2d1ea54f80d011e7383fa0013fcb1dd1b94a6"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\\u8de8\u65e5\u671f\u56fe\u5e93\u4e0e\u771f\u5b9e\u6293\u62cd\u8eab\u4efd\u7ed3\u679c.md",
+      "sha256": "29c2d9d03e81d928cc76d5dd188337030a8100051d08f765fb571f50d1b93b0b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\Review\u4e0e\u5f53\u524d\u72b6\u6001.md",
+      "sha256": "d52e375aaed4cd19c1c33ea5c0299b57d192a52fe7e8b26c0d2a84cbf88cc08e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\\u7814\u7a76\u603b\u89c8_\u4ece\u60f3\u6cd5\u5230\u8bba\u6587.md",
+      "sha256": "5eacb5db7277e29386c72ccae6382649c727fa8b93ad0134deb70302480fc654"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\\u7814\u7a76\u8fdb\u5ea6.md",
+      "sha256": "3366fcc9ac88dd223e427077eae6423025046c26507251ce504bf09955c5622f"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\phase3_diagnosis_20261026\\\u65b9\u6848\u4e0e\u6267\u884c\u72b6\u6001.md",
+      "sha256": "f2b457944267e9b282dde47474287154c2ebd0a1361d01a304fb12aefce6d8db"
+    }
+  ],
+  "rasters": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\009\\00000_1.jpg",
+      "sha256": "462e96a7de46d06d69ecab0e2f4d6a85d3f5f18f4f4827eb04e345289101e822",
+      "dimensions": [
+        375,
+        180
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\009\\00005_1.jpg",
+      "sha256": "07d4e451f90855d202afcb44386fcfd057e82ea0114987d1ea1444327446be5d",
+      "dimensions": [
+        472,
+        222
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\009\\00010_1.jpg",
+      "sha256": "9a03a86ec5c7911db91875be873092fe2ddf413339b0fb4c02651d8533c90d8a",
+      "dimensions": [
+        539,
+        243
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\009\\00015_1.jpg",
+      "sha256": "f531c4b9d0ea165f270514f4d7ccd2348d2b6d979e4627f9301fdb214c1e4aa1",
+      "dimensions": [
+        588,
+        261
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\009\\00020_1.jpg",
+      "sha256": "0abd13714d1be15ab1ca52a89a95b2ccb63159a585d2eb548c01c1030bbf1497",
+      "dimensions": [
+        530,
+        255
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\020\\00001_1.jpg",
+      "sha256": "d9eba45383d1b1d31d2e20dd01cbe681654e4c8ee90d0931c9c5575fa4fe736e",
+      "dimensions": [
+        375,
+        205
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\020\\00006_1.jpg",
+      "sha256": "f1d2f4f1618d79caa1c715f2d71ff6aeddd3623cf1c683aa839547cbab5cc7c9",
+      "dimensions": [
+        451,
+        236
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\020\\00011_1.jpg",
+      "sha256": "c4e74dfc39bf3ac6b56964319ae7e8083702b615f4410335355c6641b4279ca2",
+      "dimensions": [
+        516,
+        254
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\020\\00016_1.jpg",
+      "sha256": "d25e6a2b0d2d63563ff1b166a266c7ab604fae17a9687346c591eec697507e6b",
+      "dimensions": [
+        586,
+        269
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\020\\00021_1.jpg",
+      "sha256": "fec14950a55e7bc3d66c7786fdc911dfa7c32a296948ea51c55ac4026ddd7ae1",
+      "dimensions": [
+        546,
+        272
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\026\\00000_1.jpg",
+      "sha256": "7d57afb63a709d8fdb2f01f9be61a84d010bf5b53efaa96380f94151c7a41c5a",
+      "dimensions": [
+        368,
+        165
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\026\\00006_1.jpg",
+      "sha256": "78cc4c4f2f66401e8ffbf47af18edf52df2531c19ae6bf047d5dc2001f2bea90",
+      "dimensions": [
+        488,
+        220
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\026\\00011_1.jpg",
+      "sha256": "3adbfa3b4e265324ed764ca792aa3c0e80e9013ab49f86597649f67619cdd123",
+      "dimensions": [
+        542,
+        244
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\026\\00016_1.jpg",
+      "sha256": "3a1d033b37414305bd85b1e58f5ffa51323979f5933072ac1270679caa892505",
+      "dimensions": [
+        624,
+        262
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\026\\00022_1.jpg",
+      "sha256": "ab45cbd60f737694851267af6cbc497d5656c306fe80ad839ad93317cac5e9cf",
+      "dimensions": [
+        524,
+        268
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\028\\00001_1.jpg",
+      "sha256": "1ca4bf2713c355d5ad9fe9c7bf76494c452f164cad876f377ded9b9a48cb8dcc",
+      "dimensions": [
+        416,
+        217
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\028\\00005_1.jpg",
+      "sha256": "0fd66104df746606f97a13fbf2aa2e07a14111e7a811889e27da07c5b6e3acd9",
+      "dimensions": [
+        513,
+        197
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\028\\00009_1.jpg",
+      "sha256": "771ef0886bfddbe4a87e60fb7e2cdd86fbb9480158ee3d57ed3a045ba384496a",
+      "dimensions": [
+        562,
+        234
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\028\\00013_1.jpg",
+      "sha256": "a857c557b8827dd13c6212b415469d2a5b8c49c4cb0becea0b26eff6e8c4cbac",
+      "dimensions": [
+        602,
+        228
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\028\\00017_1.jpg",
+      "sha256": "ed4368e50f2ad19f5ccb86405de28c7d35a54dc93e3912f1af38867991a6413c",
+      "dimensions": [
+        536,
+        231
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\031\\00001_1.jpg",
+      "sha256": "9ebaef8fc6202d1a97b8010839fb40e704088f13115cfe5341f90c6eb92e79b7",
+      "dimensions": [
+        391,
+        165
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\031\\00007_1.jpg",
+      "sha256": "d2fc8d4c1da0b52f92763e6e7324fd6bce7eee15e489eaccd594a1b155ced123",
+      "dimensions": [
+        450,
+        213
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\031\\00013_1.jpg",
+      "sha256": "434bdd385b14c95312b05c2bf4b9b2310e8de79bf8fcefaf10cb4e8030a13228",
+      "dimensions": [
+        531,
+        223
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\031\\00019_1.jpg",
+      "sha256": "d063fe4ebf05b847867be3a7073b4e2832cd5184b5569434b5a4904c304b478a",
+      "dimensions": [
+        545,
+        262
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\031\\00025_1.jpg",
+      "sha256": "ec45e1c6e644be69e1836c4c55dd0f87a2e44eb4c0c0f45d2b2c556f866795f3",
+      "dimensions": [
+        523,
+        240
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\054\\00000_1.jpg",
+      "sha256": "da515a9faac0f5554d7519c36bf44ef67d6a07ca81a2535a929c0c07d76decc0",
+      "dimensions": [
+        400,
+        195
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\054\\00004_1.jpg",
+      "sha256": "53e91d6cf956cbea1263299263f2691b27e0e5af3eeb7d2fc4124ea4ae8e4a1a",
+      "dimensions": [
+        449,
+        201
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\054\\00008_1.jpg",
+      "sha256": "13d5f1628dbb56480c30a8a5c2a64b6c967f4addad7b048798e27c3ed8735a25",
+      "dimensions": [
+        504,
+        223
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\054\\00013_1.jpg",
+      "sha256": "78ae1a552c0b5d2fe95b1c811a38c1c0800c50a086d31dded9b29d793ee52acf",
+      "dimensions": [
+        562,
+        241
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\data\\2023Aug19\\054\\00017_1.jpg",
+      "sha256": "6f6c9f6a575406dbeb0921723343e457a544b1404e6e2f34afff1da16ed8ad87",
+      "dimensions": [
+        560,
+        240
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\009\\00000_1.jpg",
+      "sha256": "462e96a7de46d06d69ecab0e2f4d6a85d3f5f18f4f4827eb04e345289101e822",
+      "dimensions": [
+        375,
+        180
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\009\\00005_1.jpg",
+      "sha256": "07d4e451f90855d202afcb44386fcfd057e82ea0114987d1ea1444327446be5d",
+      "dimensions": [
+        472,
+        222
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\009\\00010_1.jpg",
+      "sha256": "9a03a86ec5c7911db91875be873092fe2ddf413339b0fb4c02651d8533c90d8a",
+      "dimensions": [
+        539,
+        243
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\009\\00015_1.jpg",
+      "sha256": "f531c4b9d0ea165f270514f4d7ccd2348d2b6d979e4627f9301fdb214c1e4aa1",
+      "dimensions": [
+        588,
+        261
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\009\\00020_1.jpg",
+      "sha256": "0abd13714d1be15ab1ca52a89a95b2ccb63159a585d2eb548c01c1030bbf1497",
+      "dimensions": [
+        530,
+        255
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\020\\00001_1.jpg",
+      "sha256": "d9eba45383d1b1d31d2e20dd01cbe681654e4c8ee90d0931c9c5575fa4fe736e",
+      "dimensions": [
+        375,
+        205
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\020\\00006_1.jpg",
+      "sha256": "f1d2f4f1618d79caa1c715f2d71ff6aeddd3623cf1c683aa839547cbab5cc7c9",
+      "dimensions": [
+        451,
+        236
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\020\\00011_1.jpg",
+      "sha256": "c4e74dfc39bf3ac6b56964319ae7e8083702b615f4410335355c6641b4279ca2",
+      "dimensions": [
+        516,
+        254
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\020\\00016_1.jpg",
+      "sha256": "d25e6a2b0d2d63563ff1b166a266c7ab604fae17a9687346c591eec697507e6b",
+      "dimensions": [
+        586,
+        269
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\020\\00021_1.jpg",
+      "sha256": "fec14950a55e7bc3d66c7786fdc911dfa7c32a296948ea51c55ac4026ddd7ae1",
+      "dimensions": [
+        546,
+        272
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\026\\00000_1.jpg",
+      "sha256": "7d57afb63a709d8fdb2f01f9be61a84d010bf5b53efaa96380f94151c7a41c5a",
+      "dimensions": [
+        368,
+        165
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\026\\00006_1.jpg",
+      "sha256": "78cc4c4f2f66401e8ffbf47af18edf52df2531c19ae6bf047d5dc2001f2bea90",
+      "dimensions": [
+        488,
+        220
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\026\\00011_1.jpg",
+      "sha256": "3adbfa3b4e265324ed764ca792aa3c0e80e9013ab49f86597649f67619cdd123",
+      "dimensions": [
+        542,
+        244
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\026\\00016_1.jpg",
+      "sha256": "3a1d033b37414305bd85b1e58f5ffa51323979f5933072ac1270679caa892505",
+      "dimensions": [
+        624,
+        262
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\026\\00022_1.jpg",
+      "sha256": "ab45cbd60f737694851267af6cbc497d5656c306fe80ad839ad93317cac5e9cf",
+      "dimensions": [
+        524,
+        268
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\028\\00001_1.jpg",
+      "sha256": "1ca4bf2713c355d5ad9fe9c7bf76494c452f164cad876f377ded9b9a48cb8dcc",
+      "dimensions": [
+        416,
+        217
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\028\\00005_1.jpg",
+      "sha256": "0fd66104df746606f97a13fbf2aa2e07a14111e7a811889e27da07c5b6e3acd9",
+      "dimensions": [
+        513,
+        197
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\028\\00009_1.jpg",
+      "sha256": "771ef0886bfddbe4a87e60fb7e2cdd86fbb9480158ee3d57ed3a045ba384496a",
+      "dimensions": [
+        562,
+        234
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\028\\00013_1.jpg",
+      "sha256": "a857c557b8827dd13c6212b415469d2a5b8c49c4cb0becea0b26eff6e8c4cbac",
+      "dimensions": [
+        602,
+        228
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\028\\00017_1.jpg",
+      "sha256": "ed4368e50f2ad19f5ccb86405de28c7d35a54dc93e3912f1af38867991a6413c",
+      "dimensions": [
+        536,
+        231
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\031\\00001_1.jpg",
+      "sha256": "9ebaef8fc6202d1a97b8010839fb40e704088f13115cfe5341f90c6eb92e79b7",
+      "dimensions": [
+        391,
+        165
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\031\\00007_1.jpg",
+      "sha256": "d2fc8d4c1da0b52f92763e6e7324fd6bce7eee15e489eaccd594a1b155ced123",
+      "dimensions": [
+        450,
+        213
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\031\\00013_1.jpg",
+      "sha256": "434bdd385b14c95312b05c2bf4b9b2310e8de79bf8fcefaf10cb4e8030a13228",
+      "dimensions": [
+        531,
+        223
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\031\\00019_1.jpg",
+      "sha256": "d063fe4ebf05b847867be3a7073b4e2832cd5184b5569434b5a4904c304b478a",
+      "dimensions": [
+        545,
+        262
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\031\\00025_1.jpg",
+      "sha256": "ec45e1c6e644be69e1836c4c55dd0f87a2e44eb4c0c0f45d2b2c556f866795f3",
+      "dimensions": [
+        523,
+        240
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\054\\00000_1.jpg",
+      "sha256": "da515a9faac0f5554d7519c36bf44ef67d6a07ca81a2535a929c0c07d76decc0",
+      "dimensions": [
+        400,
+        195
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\054\\00004_1.jpg",
+      "sha256": "53e91d6cf956cbea1263299263f2691b27e0e5af3eeb7d2fc4124ea4ae8e4a1a",
+      "dimensions": [
+        449,
+        201
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\054\\00008_1.jpg",
+      "sha256": "13d5f1628dbb56480c30a8a5c2a64b6c967f4addad7b048798e27c3ed8735a25",
+      "dimensions": [
+        504,
+        223
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\054\\00013_1.jpg",
+      "sha256": "78ae1a552c0b5d2fe95b1c811a38c1c0800c50a086d31dded9b29d793ee52acf",
+      "dimensions": [
+        562,
+        241
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\delivery\\data\\2023Aug19\\054\\00017_1.jpg",
+      "sha256": "6f6c9f6a575406dbeb0921723343e457a544b1404e6e2f34afff1da16ed8ad87",
+      "dimensions": [
+        560,
+        240
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\plot_delivery\\results\\plots\\gallery_date_risk.png",
+      "sha256": "22f50414455cd6c7889adbf11c19d338616caecce04de42761975a3c0293a4dc",
+      "dimensions": [
+        2160,
+        1206
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\results\\source_review\\all30_Aug19_gallery.jpg",
+      "sha256": "5e30f17948dc381f409dd69e1abca410ff2287bd938ba5221e79ba4dcefa1825",
+      "dimensions": [
+        1520,
+        1250
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\results\\source_review\\all8_new_gallery_false_accepts.jpg",
+      "sha256": "8a707caddec754943fdec8996eeb589e49171b5fc7de3331824216518502a053",
+      "dimensions": [
+        1370,
+        1645
+      ]
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\crossdate_gallery_20261029\\results\\source_review\\E010_crossdate_ID009_all5.jpg",
+      "sha256": "87fea7927b84e79dd7ddf94e7b4ce5d541bbf1da39a0fc254b2ebb9296f64486",
+      "dimensions": [
+        1440,
+        720
+      ]
+    }
+  ]
+}

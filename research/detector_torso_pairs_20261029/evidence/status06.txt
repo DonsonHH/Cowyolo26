@@ -1,0 +1,14 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS
+130498|cow-torso-pairs|4gpu|COMPLETED|0:0|00:09:17|8|12G|
+130498.batch|batch||COMPLETED|0:0|00:09:17|8||1825144K
+130499|cow-torso-input|4gpu|COMPLETED|0:0|00:00:13|8|8G|
+130499.batch|batch||COMPLETED|0:0|00:00:13|8||1168K
+130500|cow-torso-plot|4gpu|COMPLETED|0:0|00:00:01|1|2G|
+130500.batch|batch||COMPLETED|0:0|00:00:01|1||1168K
+{"condition": "seed28", "config": {"orientation": "original", "imgsz": 640, "rect": false, "repeat": false}, "GT": 12, "TP": 6, "unmatched_predictions": 4}
+{"condition": "seed28", "config": {"orientation": "original", "imgsz": 320, "rect": true, "repeat": false}, "GT": 12, "TP": 12, "unmatched_predictions": 1}
+{"condition": "seed28", "config": {"orientation": "original", "imgsz": 320, "rect": false, "repeat": false}, "GT": 12, "TP": 12, "unmatched_predictions": 1}
+{"condition": "seed28", "config": {"orientation": "clockwise90", "imgsz": 640, "rect": true, "repeat": true}, "GT": 12, "TP": 2, "unmatched_predictions": 9}
+{"status": "EIGHT_FIXED_SOURCE_IMAGES_ALL4_MODELS_INPUT_FACTORIAL288_FORWARDS_AND64_BASELINE_REPEATS_COMPLETE", "created_UTC": "2026-10-29T08:16:47.327977+00:00", "Slurm_JOB_ID": "130499", "protocol_sha256": "c2fc69095010eed55af39932dd1bdc706cbd39231378b1fac9ad8639e82d4f42", "actual_source_image_forwards": 288, "coordinate_IoU_invariance_maxdelta": 4.440892098500626e-16, "main_first_last_repeat_cases": 64, "tensor_shape_counts": {"(1, 3, 640, 384)": 64, "(1, 3, 640, 640)": 64, "(1, 3, 320, 192)": 32, "(1, 3, 320, 320)": 64, "(1, 3, 384, 640)": 32, "(1, 3, 192, 320)": 32}, "new_training_updates": 0, "whole_goal_complete": false}
+{"figures": 2, "image_panels": 5, "bar_segments": 12, "CDF_curves": 11, "CDF_input_points": 4973}

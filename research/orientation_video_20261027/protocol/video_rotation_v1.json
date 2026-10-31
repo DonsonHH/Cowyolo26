@@ -1,0 +1,62 @@
+{
+  "name": "Frozen detector0/90 input video replay in native tracker coordinates v1",
+  "created_UTC": "2026-10-27T15:21:43.983339+00:00",
+  "scope": "Diagnostic on previously used development videos and6event Toros reference; no new independent accuracy claim or model selection",
+  "seeds": [
+    26,
+    27,
+    28
+  ],
+  "epochs": 10,
+  "library": {
+    "ultralytics": "8.4.63",
+    "torch": "2.8.0+cu128"
+  },
+  "source_replay": {
+    "first_frame_inclusive": 8912,
+    "last_frame_inclusive": 10873,
+    "source_fps": 25,
+    "detection_stride": 5,
+    "history_start_frame": 0,
+    "history_rule": "Decode sequentially from source0 and infer at original frame indices divisible by5; save only8912..10873, preserve original frame coordinates and existing counting rules.",
+    "imgsz": 320,
+    "confidence": 0.2,
+    "iou": 0.5,
+    "tracker": "bytetrack.yaml",
+    "roi_x": [
+      0.34,
+      0.75
+    ],
+    "gate_y": [
+      0.4,
+      0.6
+    ],
+    "stable_samples": 3,
+    "maximum_gap_s": 2
+  },
+  "source_weights_freeze_sha256": "44272a1dcdc1c94691f75cda5543dd6ac1752b4dfc5c3ed9e7a046761c216585",
+  "prior_Cows_training_protocol_sha256": "894848001296be9e017ac1fc1920dad67d2c9510dd1535933b44436611dd7b4b",
+  "prior_inference_summary_sha256": "6149cc70ca378cb49355f117d1372028938ec987ec9a1b5c7f26607ab8208b13",
+  "orientations": [
+    "original",
+    "clockwise90"
+  ],
+  "image_change": "exact90degree pixel permutation; original source frame remains rendering/counter coordinate system",
+  "restore_seam": "on_predict_postprocess_end custom callback before native ByteTrack callback; inverse boxes and Results.orig_img/orig_shape before association",
+  "forward_box_transform": "[x1,y1,x2,y2] -> [H-y2,x1,H-y1,x2]",
+  "inverse_box_transform": "[u1,v1,u2,v2] -> [v1,H-u2,v2,H-u1]",
+  "tracker": "same bytetrack.yaml in original camera coordinates and original native image",
+  "required_gates": [
+    "explicit coordinate/pixel inverse controls",
+    "actual callback ordering and native Results dimensions verified",
+    "all six conditions report source and Toros",
+    "original orientation reproduces all prior event and track traces",
+    "weights unchanged before/after run",
+    "independent event and inverse-coordinate reconciliation",
+    "media full decode and self review"
+  ],
+  "new_training_updates": 0,
+  "candidate_final_or_new_annotated_videos_allowed": false,
+  "source_identity_or_independent_count_accuracy": null,
+  "whole_goal_complete": false
+}

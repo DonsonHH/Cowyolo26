@@ -1,0 +1,931 @@
+The system is: Linux - 6.6.10-xilinx-v2024.1-g3c0eca68c652 - armv7l
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: -mcpu=cortex-a9;-mfpu=neon;-mfloat-abi=hard
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/3.22.1/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/bin/c++ 
+Build flags: -mcpu=cortex-a9;-mfpu=neon;-mfloat-abi=hard
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/3.22.1/CompilerIdCXX/a.out"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8325c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8325c.dir/build.make CMakeFiles/cmTC_8325c.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -fPIE   -v -o CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) 
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_8325c.dir/'
+ /usr/lib/gcc/arm-linux-gnueabihf/11/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_8325c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+mp+sec+simd -march=armv7-a+mp+sec+simd -version -fPIE -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccZOXFIm.s
+GNU C17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933
+ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
+ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/arm-linux-gnueabihf/11/include
+ /usr/local/include
+ /usr/include/arm-linux-gnueabihf
+ /usr/include
+End of search list.
+GNU C17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933
+Compiler executable checksum: 7bd1478a71e10eaaf22b384623accacc
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_8325c.dir/'
+ as -v -march=armv7-a+mp+sec -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o /tmp/ccZOXFIm.s
+GNU assembler version 2.38 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.38
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_8325c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8325c.dir/link.txt --verbose=1
+/usr/bin/cc -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard   -v CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o -o cmTC_8325c 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) 
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-v' '-o' 'cmTC_8325c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'cmTC_8325c.'
+ /usr/lib/gcc/arm-linux-gnueabihf/11/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccmtTYGz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_8325c /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/11 -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-v' '-o' 'cmTC_8325c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'cmTC_8325c.'
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/lib/gcc/arm-linux-gnueabihf/11/include]
+    add: [/usr/local/include]
+    add: [/usr/include/arm-linux-gnueabihf]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/11/include] ==> [/usr/lib/gcc/arm-linux-gnueabihf/11/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/arm-linux-gnueabihf] ==> [/usr/include/arm-linux-gnueabihf]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/lib/gcc/arm-linux-gnueabihf/11/include;/usr/local/include;/usr/include/arm-linux-gnueabihf;/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8325c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8325c.dir/build.make CMakeFiles/cmTC_8325c.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -fPIE   -v -o CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_8325c.dir/']
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf /usr/share/cmake-3.22/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_8325c.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+mp+sec+simd -march=armv7-a+mp+sec+simd -version -fPIE -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccZOXFIm.s]
+  ignore line: [GNU C17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/arm-linux-gnueabihf]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933]
+  ignore line: [Compiler executable checksum: 7bd1478a71e10eaaf22b384623accacc]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_8325c.dir/']
+  ignore line: [ as -v -march=armv7-a+mp+sec -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o /tmp/ccZOXFIm.s]
+  ignore line: [GNU assembler version 2.38 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.38]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_8325c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8325c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard   -v CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o -o cmTC_8325c ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-v' '-o' 'cmTC_8325c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'cmTC_8325c.']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccmtTYGz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_8325c /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/11 -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccmtTYGz.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_8325c] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../..]
+    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
+    arg [CMakeFiles/cmTC_8325c.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o]
+  collapse obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o] ==> [/usr/lib/arm-linux-gnueabihf/Scrt1.o]
+  collapse obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o] ==> [/usr/lib/arm-linux-gnueabihf/crti.o]
+  collapse obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o] ==> [/usr/lib/arm-linux-gnueabihf/crtn.o]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11] ==> [/usr/lib/gcc/arm-linux-gnueabihf/11]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../..] ==> [/usr/lib]
+  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit objs: [/usr/lib/arm-linux-gnueabihf/Scrt1.o;/usr/lib/arm-linux-gnueabihf/crti.o;/usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o;/usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o;/usr/lib/arm-linux-gnueabihf/crtn.o]
+  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/11;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ad277/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ad277.dir/build.make CMakeFiles/cmTC_ad277.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++   -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -fPIE   -v -o CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) 
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_ad277.dir/'
+ /usr/lib/gcc/arm-linux-gnueabihf/11/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ad277.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+mp+sec+simd -march=armv7-a+mp+sec+simd -version -fPIE -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccBBdJbL.s
+GNU C++17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933
+ignoring duplicate directory "/usr/include/arm-linux-gnueabihf/c++/11"
+ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
+ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/include/c++/11
+ /usr/include/arm-linux-gnueabihf/c++/11
+ /usr/include/c++/11/backward
+ /usr/lib/gcc/arm-linux-gnueabihf/11/include
+ /usr/local/include
+ /usr/include/arm-linux-gnueabihf
+ /usr/include
+End of search list.
+GNU C++17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933
+Compiler executable checksum: d8cfb7d22b89a03fedd4c6c6205390d6
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_ad277.dir/'
+ as -v -march=armv7-a+mp+sec -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccBBdJbL.s
+GNU assembler version 2.38 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.38
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.'
+Linking CXX executable cmTC_ad277
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad277.dir/link.txt --verbose=1
+/usr/bin/c++ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard   -v CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ad277 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) 
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-v' '-o' 'cmTC_ad277' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'cmTC_ad277.'
+ /usr/lib/gcc/arm-linux-gnueabihf/11/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRlhRq3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_ad277 /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/11 -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-v' '-o' 'cmTC_ad277' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'cmTC_ad277.'
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/usr/include/c++/11]
+    add: [/usr/include/arm-linux-gnueabihf/c++/11]
+    add: [/usr/include/c++/11/backward]
+    add: [/usr/lib/gcc/arm-linux-gnueabihf/11/include]
+    add: [/usr/local/include]
+    add: [/usr/include/arm-linux-gnueabihf]
+    add: [/usr/include]
+  end of search list found
+  collapse include dir [/usr/include/c++/11] ==> [/usr/include/c++/11]
+  collapse include dir [/usr/include/arm-linux-gnueabihf/c++/11] ==> [/usr/include/arm-linux-gnueabihf/c++/11]
+  collapse include dir [/usr/include/c++/11/backward] ==> [/usr/include/c++/11/backward]
+  collapse include dir [/usr/lib/gcc/arm-linux-gnueabihf/11/include] ==> [/usr/lib/gcc/arm-linux-gnueabihf/11/include]
+  collapse include dir [/usr/local/include] ==> [/usr/local/include]
+  collapse include dir [/usr/include/arm-linux-gnueabihf] ==> [/usr/include/arm-linux-gnueabihf]
+  collapse include dir [/usr/include] ==> [/usr/include]
+  implicit include dirs: [/usr/include/c++/11;/usr/include/arm-linux-gnueabihf/c++/11;/usr/include/c++/11/backward;/usr/lib/gcc/arm-linux-gnueabihf/11/include;/usr/local/include;/usr/include/arm-linux-gnueabihf;/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_ad277/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ad277.dir/build.make CMakeFiles/cmTC_ad277.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++   -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -fPIE   -v -o CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_ad277.dir/']
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_GNU_SOURCE /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_ad277.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+mp+sec+simd -march=armv7-a+mp+sec+simd -version -fPIE -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccBBdJbL.s]
+  ignore line: [GNU C++17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933]
+  ignore line: [ignoring duplicate directory "/usr/include/arm-linux-gnueabihf/c++/11"]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/include/c++/11]
+  ignore line: [ /usr/include/arm-linux-gnueabihf/c++/11]
+  ignore line: [ /usr/include/c++/11/backward]
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/arm-linux-gnueabihf]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933]
+  ignore line: [Compiler executable checksum: d8cfb7d22b89a03fedd4c6c6205390d6]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_ad277.dir/']
+  ignore line: [ as -v -march=armv7-a+mp+sec -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccBBdJbL.s]
+  ignore line: [GNU assembler version 2.38 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.38]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.']
+  ignore line: [Linking CXX executable cmTC_ad277]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad277.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard   -v CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ad277 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-v' '-o' 'cmTC_ad277' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-dumpdir' 'cmTC_ad277.']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRlhRq3.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_ad277 /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/11 -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccRlhRq3.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_ad277] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../..]
+    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
+    arg [CMakeFiles/cmTC_ad277.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o] ==> obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o]
+  collapse obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o] ==> [/usr/lib/arm-linux-gnueabihf/Scrt1.o]
+  collapse obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o] ==> [/usr/lib/arm-linux-gnueabihf/crti.o]
+  collapse obj [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o] ==> [/usr/lib/arm-linux-gnueabihf/crtn.o]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11] ==> [/usr/lib/gcc/arm-linux-gnueabihf/11]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../..] ==> [/usr/lib]
+  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/usr/lib/arm-linux-gnueabihf/Scrt1.o;/usr/lib/arm-linux-gnueabihf/crti.o;/usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o;/usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o;/usr/lib/arm-linux-gnueabihf/crtn.o]
+  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/11;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+  implicit fwks: []
+
+
+Performing C++ SOURCE FILE Test NCNN_COMPILER_SUPPORT_GNU_INLINE_ASM succeeded with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5ed09/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5ed09.dir/build.make CMakeFiles/cmTC_5ed09.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5ed09.dir/src.cxx.o
+/usr/bin/c++ -DNCNN_COMPILER_SUPPORT_GNU_INLINE_ASM  -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -O3 -DNDEBUG -fPIC -o CMakeFiles/cmTC_5ed09.dir/src.cxx.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX static library libcmTC_5ed09.a
+/usr/bin/cmake -P CMakeFiles/cmTC_5ed09.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ed09.dir/link.txt --verbose=1
+/usr/bin/ar qc libcmTC_5ed09.a CMakeFiles/cmTC_5ed09.dir/src.cxx.o
+/usr/bin/ranlib libcmTC_5ed09.a
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int test(int a) { asm volatile("" : "=r"(a) : "0"(a) : "memory"); return a; }
+Performing C++ SOURCE FILE Test NCNN_COMPILER_SUPPORT_ARM_NEON succeeded with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_61f9c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_61f9c.dir/build.make CMakeFiles/cmTC_61f9c.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_61f9c.dir/src.cxx.o
+/usr/bin/c++ -DNCNN_COMPILER_SUPPORT_ARM_NEON  -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -O3 -DNDEBUG -fPIC -o CMakeFiles/cmTC_61f9c.dir/src.cxx.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX static library libcmTC_61f9c.a
+/usr/bin/cmake -P CMakeFiles/cmTC_61f9c.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61f9c.dir/link.txt --verbose=1
+/usr/bin/ar qc libcmTC_61f9c.a CMakeFiles/cmTC_61f9c.dir/src.cxx.o
+/usr/bin/ranlib libcmTC_61f9c.a
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <arm_neon.h>
+float32x4_t test(float32x4_t s, float32x4_t a, float32x4_t b) { return vmlaq_f32(s, a, b); }
+Performing C++ SOURCE FILE Test NCNN_COMPILER_SUPPORT_ARM_VFPV4_FP16 succeeded with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fd6e4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fd6e4.dir/build.make CMakeFiles/cmTC_fd6e4.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fd6e4.dir/src.cxx.o
+/usr/bin/c++ -DNCNN_COMPILER_SUPPORT_ARM_VFPV4_FP16  -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mfpu=neon-vfpv4 -mfp16-format=ieee -O3 -DNDEBUG -fPIC -o CMakeFiles/cmTC_fd6e4.dir/src.cxx.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX static library libcmTC_fd6e4.a
+/usr/bin/cmake -P CMakeFiles/cmTC_fd6e4.dir/cmake_clean_target.cmake
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd6e4.dir/link.txt --verbose=1
+/usr/bin/ar qc libcmTC_fd6e4.a CMakeFiles/cmTC_fd6e4.dir/src.cxx.o
+/usr/bin/ranlib libcmTC_fd6e4.a
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <arm_neon.h>
+float16x4_t test(float32x4_t a) { return vcvt_f16_f32(a); }
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_VISIBILITY succeeded with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_fc5c2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fc5c2.dir/build.make CMakeFiles/cmTC_fc5c2.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fc5c2.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_HIDDEN_VISIBILITY  -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -fPIE   -fvisibility=hidden -o CMakeFiles/cmTC_fc5c2.dir/src.cxx.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_fc5c2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc5c2.dir/link.txt --verbose=1
+/usr/bin/c++ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  CMakeFiles/cmTC_fc5c2.dir/src.cxx.o -o cmTC_fc5c2 
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY succeeded with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a3497/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a3497.dir/build.make CMakeFiles/cmTC_a3497.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a3497.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY  -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -fPIE   -fvisibility-inlines-hidden -o CMakeFiles/cmTC_a3497.dir/src.cxx.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_a3497
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3497.dir/link.txt --verbose=1
+/usr/bin/c++ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  CMakeFiles/cmTC_a3497.dir/src.cxx.o -o cmTC_a3497 
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR succeeded with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_56cc1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_56cc1.dir/build.make CMakeFiles/cmTC_56cc1.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_56cc1.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_HAS_DEPRECATED_ATTR  -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -fPIE -o CMakeFiles/cmTC_56cc1.dir/src.cxx.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.cxx
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.cxx:2:33: warning: ‘int somefunc()’ is deprecated [-Wdeprecated-declarations]
+    2 |     int main() { return somefunc();}
+      |                         ~~~~~~~~^~
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.cxx:1:37: note: declared here
+    1 | __attribute__((__deprecated__)) int somefunc() { return 0; }
+      |                                     ^~~~~~~~
+Linking CXX executable cmTC_56cc1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56cc1.dir/link.txt --verbose=1
+/usr/bin/c++ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  CMakeFiles/cmTC_56cc1.dir/src.cxx.o -o cmTC_56cc1 
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}
+Detecting C OpenMP compiler ABI info compiled with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a3029/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a3029.dir/build.make CMakeFiles/cmTC_a3029.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o
+/usr/bin/cc   -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -fopenmp -v -fPIE -o CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) 
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_a3029.dir/'
+ /usr/lib/gcc/arm-linux-gnueabihf/11/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_REENTRANT /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -quiet -dumpdir CMakeFiles/cmTC_a3029.dir/ -dumpbase OpenMPTryFlag.c.c -dumpbase-ext .c -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+mp+sec+simd -march=armv7-a+mp+sec+simd -version -fopenmp -fPIE -fstack-protector-strong -Wformat -Wformat-security -o /tmp/cc6PtntZ.s
+GNU C17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933
+ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
+ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/lib/gcc/arm-linux-gnueabihf/11/include
+ /usr/local/include
+ /usr/include/arm-linux-gnueabihf
+ /usr/include
+End of search list.
+GNU C17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933
+Compiler executable checksum: 7bd1478a71e10eaaf22b384623accacc
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_a3029.dir/'
+ as -v -march=armv7-a+mp+sec -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o /tmp/cc6PtntZ.s
+GNU assembler version 2.38 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.38
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.'
+Linking C executable cmTC_a3029
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3029.dir/link.txt --verbose=1
+/usr/bin/cc -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -fopenmp -v CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o -o cmTC_a3029  -v 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) 
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+Reading specs from /usr/lib/gcc/arm-linux-gnueabihf/11/libgomp.spec
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-o' 'cmTC_a3029' '-v' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'cmTC_a3029.'
+ /usr/lib/gcc/arm-linux-gnueabihf/11/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrn2OCC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_a3029 /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/11 -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o -lgomp -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-o' 'cmTC_a3029' '-v' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'cmTC_a3029.'
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+
+Parsed C OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a3029/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a3029.dir/build.make CMakeFiles/cmTC_a3029.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o]
+  ignore line: [/usr/bin/cc   -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -fopenmp -v -fPIE -o CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/FindOpenMP/OpenMPTryFlag.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_a3029.dir/']
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/cc1 -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_REENTRANT /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -quiet -dumpdir CMakeFiles/cmTC_a3029.dir/ -dumpbase OpenMPTryFlag.c.c -dumpbase-ext .c -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+mp+sec+simd -march=armv7-a+mp+sec+simd -version -fopenmp -fPIE -fstack-protector-strong -Wformat -Wformat-security -o /tmp/cc6PtntZ.s]
+  ignore line: [GNU C17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/arm-linux-gnueabihf]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933]
+  ignore line: [Compiler executable checksum: 7bd1478a71e10eaaf22b384623accacc]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_a3029.dir/']
+  ignore line: [ as -v -march=armv7-a+mp+sec -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o /tmp/cc6PtntZ.s]
+  ignore line: [GNU assembler version 2.38 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.38]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o' '-c' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.']
+  ignore line: [Linking C executable cmTC_a3029]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3029.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -fopenmp -v CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o -o cmTC_a3029  -v ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [Reading specs from /usr/lib/gcc/arm-linux-gnueabihf/11/libgomp.spec]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-o' 'cmTC_a3029' '-v' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'cmTC_a3029.']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrn2OCC.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_a3029 /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/11 -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o -lgomp -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccrn2OCC.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_a3029] ==> ignore
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../..]
+    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
+    arg [CMakeFiles/cmTC_a3029.dir/OpenMPTryFlag.c.o] ==> ignore
+    arg [-lgomp] ==> lib [gomp]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11] ==> [/usr/lib/gcc/arm-linux-gnueabihf/11]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../..] ==> [/usr/lib]
+  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  implicit libs: [gomp;gcc;gcc_s;pthread;c;gcc;gcc_s]
+  implicit objs: []
+  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/11;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+  implicit fwks: []
+
+
+Detecting CXX OpenMP compiler ABI info compiled with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4f0eb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4f0eb.dir/build.make CMakeFiles/cmTC_4f0eb.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o
+/usr/bin/c++   -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -fopenmp -v -fPIE -o CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) 
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_4f0eb.dir/'
+ /usr/lib/gcc/arm-linux-gnueabihf/11/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_GNU_SOURCE -D_REENTRANT /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpdir CMakeFiles/cmTC_4f0eb.dir/ -dumpbase OpenMPTryFlag.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+mp+sec+simd -march=armv7-a+mp+sec+simd -version -fopenmp -fPIE -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccKNuu0S.s
+GNU C++17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933
+ignoring duplicate directory "/usr/include/arm-linux-gnueabihf/c++/11"
+ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"
+ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/include-fixed"
+ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/include/c++/11
+ /usr/include/arm-linux-gnueabihf/c++/11
+ /usr/include/c++/11/backward
+ /usr/lib/gcc/arm-linux-gnueabihf/11/include
+ /usr/local/include
+ /usr/include/arm-linux-gnueabihf
+ /usr/include
+End of search list.
+GNU C++17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)
+	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933
+Compiler executable checksum: d8cfb7d22b89a03fedd4c6c6205390d6
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_4f0eb.dir/'
+ as -v -march=armv7-a+mp+sec -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o /tmp/ccKNuu0S.s
+GNU assembler version 2.38 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.38
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.'
+Linking CXX executable cmTC_4f0eb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f0eb.dir/link.txt --verbose=1
+/usr/bin/c++ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -fopenmp -v CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o -o cmTC_4f0eb  -v 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/c++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf
+Thread model: posix
+Supported LTO compression algorithms: zlib zstd
+gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) 
+COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/
+LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/
+Reading specs from /usr/lib/gcc/arm-linux-gnueabihf/11/libgomp.spec
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-o' 'cmTC_4f0eb' '-v' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'cmTC_4f0eb.'
+ /usr/lib/gcc/arm-linux-gnueabihf/11/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUR5pwX.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_4f0eb /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/11 -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o
+COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-o' 'cmTC_4f0eb' '-v' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'cmTC_4f0eb.'
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4f0eb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4f0eb.dir/build.make CMakeFiles/cmTC_4f0eb.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o]
+  ignore line: [/usr/bin/c++   -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -fopenmp -v -fPIE -o CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_4f0eb.dir/']
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/cc1plus -quiet -v -imultilib . -imultiarch arm-linux-gnueabihf -D_GNU_SOURCE -D_REENTRANT /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpdir CMakeFiles/cmTC_4f0eb.dir/ -dumpbase OpenMPTryFlag.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mtls-dialect=gnu -mthumb -mlibarch=armv7-a+mp+sec+simd -march=armv7-a+mp+sec+simd -version -fopenmp -fPIE -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccKNuu0S.s]
+  ignore line: [GNU C++17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933]
+  ignore line: [ignoring duplicate directory "/usr/include/arm-linux-gnueabihf/c++/11"]
+  ignore line: [ignoring nonexistent directory "/usr/local/include/arm-linux-gnueabihf"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/include-fixed"]
+  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-linux-gnueabihf/11/../../../../arm-linux-gnueabihf/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/include/c++/11]
+  ignore line: [ /usr/include/arm-linux-gnueabihf/c++/11]
+  ignore line: [ /usr/include/c++/11/backward]
+  ignore line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/include/arm-linux-gnueabihf]
+  ignore line: [ /usr/include]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++17 (Ubuntu 11.2.0-19ubuntu1) version 11.2.0 (arm-linux-gnueabihf)]
+  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=63 --param ggc-min-heapsize=62933]
+  ignore line: [Compiler executable checksum: d8cfb7d22b89a03fedd4c6c6205390d6]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_4f0eb.dir/']
+  ignore line: [ as -v -march=armv7-a+mp+sec -mfloat-abi=hard -mfpu=neon -meabi=5 -o CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o /tmp/ccKNuu0S.s]
+  ignore line: [GNU assembler version 2.38 (arm-linux-gnueabihf) using BFD version (GNU Binutils for Ubuntu) 2.38]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-fPIE' '-o' 'CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.']
+  ignore line: [Linking CXX executable cmTC_4f0eb]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4f0eb.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++ -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -fopenmp -v CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o -o cmTC_4f0eb  -v ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.2.0-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=arm-linux-gnueabihf- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-libitm --disable-libquadmath --disable-libquadmath-support --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-sjlj-exceptions --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb --disable-werror --enable-checking=release --build=arm-linux-gnueabihf --host=arm-linux-gnueabihf --target=arm-linux-gnueabihf]
+  ignore line: [Thread model: posix]
+  ignore line: [Supported LTO compression algorithms: zlib zstd]
+  ignore line: [gcc version 11.2.0 (Ubuntu 11.2.0-19ubuntu1) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-linux-gnueabihf/11/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/:/usr/lib/gcc/arm-linux-gnueabihf/11/../../../:/lib/arm-linux-gnueabihf/:/lib/:/usr/lib/arm-linux-gnueabihf/:/usr/lib/]
+  ignore line: [Reading specs from /usr/lib/gcc/arm-linux-gnueabihf/11/libgomp.spec]
+  ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-a9' '-mfpu=neon' '-mfloat-abi=hard' '-fopenmp' '-v' '-o' 'cmTC_4f0eb' '-v' '-shared-libgcc' '-mtls-dialect=gnu' '-mthumb' '-mlibarch=armv7-a+mp+sec+simd' '-march=armv7-a+mp+sec+simd' '-pthread' '-dumpdir' 'cmTC_4f0eb.']
+  link line: [ /usr/lib/gcc/arm-linux-gnueabihf/11/collect2 -plugin /usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUR5pwX.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -dynamic-linker /lib/ld-linux-armhf.so.3 -X --hash-style=gnu --as-needed -m armelf_linux_eabi -pie -z now -z relro -o cmTC_4f0eb /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/Scrt1.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crti.o /usr/lib/gcc/arm-linux-gnueabihf/11/crtbeginS.o -L/usr/lib/gcc/arm-linux-gnueabihf/11 -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf -L/usr/lib/gcc/arm-linux-gnueabihf/11/../../.. -L/lib/arm-linux-gnueabihf -L/usr/lib/arm-linux-gnueabihf CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/lib/gcc/arm-linux-gnueabihf/11/crtendS.o /usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf/crtn.o]
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/arm-linux-gnueabihf/11/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/arm-linux-gnueabihf/11/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccUR5pwX.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_4f0eb] ==> ignore
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf]
+    arg [-L/usr/lib/gcc/arm-linux-gnueabihf/11/../../..] ==> dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../..]
+    arg [-L/lib/arm-linux-gnueabihf] ==> dir [/lib/arm-linux-gnueabihf]
+    arg [-L/usr/lib/arm-linux-gnueabihf] ==> dir [/usr/lib/arm-linux-gnueabihf]
+    arg [CMakeFiles/cmTC_4f0eb.dir/OpenMPTryFlag.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgomp] ==> lib [gomp]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lpthread] ==> lib [pthread]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11] ==> [/usr/lib/gcc/arm-linux-gnueabihf/11]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../../arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/gcc/arm-linux-gnueabihf/11/../../..] ==> [/usr/lib]
+  collapse library dir [/lib/arm-linux-gnueabihf] ==> [/lib/arm-linux-gnueabihf]
+  collapse library dir [/usr/lib/arm-linux-gnueabihf] ==> [/usr/lib/arm-linux-gnueabihf]
+  implicit libs: [stdc++;m;gomp;gcc_s;gcc;pthread;c;gcc_s;gcc]
+  implicit objs: []
+  implicit dirs: [/usr/lib/gcc/arm-linux-gnueabihf/11;/usr/lib/arm-linux-gnueabihf;/usr/lib;/lib/arm-linux-gnueabihf]
+  implicit fwks: []
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a677f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a677f.dir/build.make CMakeFiles/cmTC_a677f.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a677f.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -fPIE -o CMakeFiles/cmTC_a677f.dir/CheckIncludeFile.c.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a677f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a677f.dir/link.txt --verbose=1
+/usr/bin/cc -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  CMakeFiles/cmTC_a677f.dir/CheckIncludeFile.c.o -o cmTC_a677f 
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_155e5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_155e5.dir/build.make CMakeFiles/cmTC_155e5.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_155e5.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  -fPIE -o CMakeFiles/cmTC_155e5.dir/src.c.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_155e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_155e5.dir/link.txt --verbose=1
+/usr/bin/cc -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard  CMakeFiles/cmTC_155e5.dir/src.c.o -o cmTC_155e5 
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build_v2/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

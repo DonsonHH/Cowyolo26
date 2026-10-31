@@ -1,0 +1,426 @@
+{
+  "status": "FIRSTSTAGE_IOU_NINE_SOURCE_REGRESSION_AND_GLOBAL_NONADOPTION_REVIEWED",
+  "created_UTC": "2026-10-28T18:39:00.125080+00:00",
+  "jobs_completed": [
+    "130351",
+    "130352"
+  ],
+  "job_exit_codes": [
+    "0:0",
+    "0:0"
+  ],
+  "fixed_sources": 9,
+  "full_tracker_runs": 18,
+  "exact_baseline_gate_conditions": 9,
+  "counter_paths": 36,
+  "tracker_update_ticks": 31166,
+  "counter_interface_update_ticks": 62332,
+  "native_ROI_centers_verified": 9027,
+  "ROI_pair_IoUs_verified": 6367,
+  "high_overlap_candidate_pair_ticks": 69,
+  "reference_scored_paths": 8,
+  "reference_rows_independently_derived": 1775,
+  "publisher_reference_events": 6,
+  "exploratory_reference_case_IoUs": 175,
+  "main_result_rows": [
+    {
+      "source": "long_official",
+      "scene": "new_long",
+      "before_A_to_B_B_to_A": [
+        0,
+        0
+      ],
+      "after_A_to_B_B_to_A": [
+        0,
+        0
+      ]
+    },
+    {
+      "source": "long_seed26",
+      "scene": "new_long",
+      "before_A_to_B_B_to_A": [
+        11,
+        0
+      ],
+      "after_A_to_B_B_to_A": [
+        12,
+        0
+      ]
+    },
+    {
+      "source": "long_seed27",
+      "scene": "new_long",
+      "before_A_to_B_B_to_A": [
+        12,
+        0
+      ],
+      "after_A_to_B_B_to_A": [
+        12,
+        0
+      ]
+    },
+    {
+      "source": "long_seed28",
+      "scene": "new_long",
+      "before_A_to_B_B_to_A": [
+        12,
+        0
+      ],
+      "after_A_to_B_B_to_A": [
+        12,
+        0
+      ]
+    },
+    {
+      "source": "original_seed26",
+      "scene": "original_clip",
+      "before_A_to_B_B_to_A": [
+        12,
+        0
+      ],
+      "after_A_to_B_B_to_A": [
+        12,
+        0
+      ]
+    },
+    {
+      "source": "original_seed27",
+      "scene": "original_clip",
+      "before_A_to_B_B_to_A": [
+        11,
+        0
+      ],
+      "after_A_to_B_B_to_A": [
+        11,
+        0
+      ]
+    },
+    {
+      "source": "original_seed28",
+      "scene": "original_clip",
+      "before_A_to_B_B_to_A": [
+        11,
+        0
+      ],
+      "after_A_to_B_B_to_A": [
+        11,
+        0
+      ]
+    },
+    {
+      "source": "toros_generic",
+      "scene": "toros_used_reverse",
+      "before_A_to_B_B_to_A": [
+        0,
+        6
+      ],
+      "after_A_to_B_B_to_A": [
+        0,
+        5
+      ]
+    },
+    {
+      "source": "toros_pilot",
+      "scene": "toros_used_reverse",
+      "before_A_to_B_B_to_A": [
+        0,
+        2
+      ],
+      "after_A_to_B_B_to_A": [
+        0,
+        4
+      ]
+    }
+  ],
+  "toros_official_TP_FP_FN_before_after": [
+    [
+      6,
+      0,
+      0
+    ],
+    [
+      5,
+      0,
+      1
+    ]
+  ],
+  "toros_pilot_TP_FP_FN_before_after": [
+    [
+      2,
+      0,
+      4
+    ],
+    [
+      4,
+      0,
+      2
+    ]
+  ],
+  "movies_fully_decoded": 9,
+  "movie_frames_fully_decoded": 8444,
+  "native_source_images": 16,
+  "raster_files_checked": 48,
+  "case_sheets_actually_viewed": 32,
+  "case_panels_actually_viewed": 66,
+  "predefined_paired_case_sheets": 22,
+  "exploratory_paired_case_sheets": 9,
+  "focused_reference_figure_panels": 4,
+  "local_links_checked": 173,
+  "regression_archive_members": 141,
+  "media_archive_members": 69,
+  "candidate_global_replacement_adopted": false,
+  "current_confirmed12_candidate_preserved": true,
+  "prior_results_and_new_long_drafts_preserved": true,
+  "new_long_reference_final_scoring_eligible": false,
+  "posthoc_scene_or_seed_specific_switching_added": false,
+  "new_independent_test": false,
+  "new_detector_forwards": 0,
+  "new_training_updates": 0,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false,
+  "evidence_hashes": {
+    "protocol/regression_v1.json": "648d3f7d226fff6885245bdcd137c5bfcab9f0ecf263650f02965bcc2a985450",
+    "protocol/media_v1.json": "6e0e2d01de3446d620c9c0accf4e6c2c0e8cae153862780ae49497a48e045f34",
+    "results/independent_verification.json": "ff535c950d23e7ddd3ceaf86a2d06ee56af76fd22f4615969792cac0f664e352",
+    "results/reference_case.json": "cd46151e50d3edba80cc088f6431aa399ac99f8f2c870ebfc0486de8ada9fa42",
+    "results/reference_case_verification.json": "6a66907f87f79625cbd8c24e03c427d6e347e0956fbbf6e7ea46fe136b1cfc79",
+    "results/media_verification.json": "97cc0097935dcc30a9207175a753d66a648a5bfa936fcdae6db7486dd3c33a5c",
+    "results/failure_focus_record.json": "f2264980edd3227a5beafbbf2551a6cb01a67c1e945b9b43a4fbe96d4c36e70d",
+    "results/adoption_decision.json": "30ef70b13df58e0a87b8e0968f8b38fc1621bbb8fb1279ffef5708614ebc7da3",
+    "evidence/visual_review.json": "ca7aa88f6850bca61510e2ea9c1a8324b3a07d608b1b9cfbc83fb889c6b90daa",
+    "evidence/status_01.txt": "68a59a94ade3794419e882c747e2a950214f18ebf0a59a8434bfded541b389b1",
+    "evidence/render_status_03.txt": "f91974c4cd9fd6714220bed20fa7b8f3cd714a66d4c2605da465995f82886a9f",
+    "evidence/delivery_record.json": "3a6179fcbfd89ba5502e798931a5707ecabb3612f9b4777635149e11cf20606a",
+    "evidence/media_delivery_record.json": "bd663baadb35b2ed62553d597f0d648da620d520c384d70a6b70ed00670adf1a"
+  },
+  "retained_artifact_hashes": {
+    "human_count_confirmation_20261028/evidence/user_confirmation.json": "fe8a895cd6ac71815ff8e2f6ad8d932a6453c41971b6b7a18ea9c2f743dd0f9f",
+    "human_count_confirmation_20261028/results/frozen_development_candidate.json": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+    "lost_recovery_20261028/results/frozen_prediction_catalog_v4.json": "26bd4c43a1345e12d0806409229976fa158efab11cc31529ea1f4255a53df8ac",
+    "overhead_positive_reference_20261028/reference/assistant_event_draft_v1.json": "35a6e0d5b4454cc2a6e6057c750f84cd6cf5d02f5d3fc73c4c1683c80b149bb7",
+    "event_timing_refinement_20261029/reference/assistant_event_timing_v2.json": "188079a8754c495485c284b8e0a29519181100033166fe953e9f7547c600dc6a",
+    "long_video_track_gap_20261029/results/final_review.json": "8cd23eeacfe8c2b30a180419fccfcb41cd07d49b7f276150d14708eafd436968",
+    "overhead_long_session_20261028/input/2023-08-17T13-25-38.mp4": "8210a5bf206dd7f2356bc3d4653b439ab6de12ccfdc8209fe301ac7f02807058",
+    "phase3_diagnosis_20261026/inputs/multicam_original.mp4": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1"
+  },
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\计划与验收.md",
+      "sha256": "9c6e90d3da508234bc9e29d9da435eda8e0cc2aa832c9f587dc93a85ef67dd9b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\多seed与反向回归结果及采用决策.md",
+      "sha256": "31d666063f52b6715af7709ef6f6492c75ad6c7171db67db8772fc0c3db9a00d"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\Review与当前状态.md",
+      "sha256": "8d8230d3dda52bf50f4ae8a45bf2abff53724c2fdd773cfec0f2bb1832b9ec75"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究进度.md",
+      "sha256": "44a5a6c6e15cbc18009926e7c0a69c790f725b35c9839a68716b98a1e82f84b3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\研究总览_从想法到论文.md",
+      "sha256": "e0b50f79c57e1102499a591bdd4f0207e47c3ab38351fd564ebc0877003ce0e8"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\phase3_diagnosis_20261026\\方案与执行状态.md",
+      "sha256": "f7ac16c679f22a92848fc0166b563d484829957a2d71076ea16ef0f8fb4fb6fe"
+    }
+  ],
+  "rasters": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\new_long_02675.jpg",
+      "sha256": "d2719ad02fe16aa4dc6464514dbf75978bf8f87474a54025fdb9e9cb88ceb727"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\new_long_02720.jpg",
+      "sha256": "25303bdf0d59be42112f3d5f8636ab73df1c1eb74b67c0ae60be8d1901c9e7ab"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\new_long_03825.jpg",
+      "sha256": "d3cc5d88a563d0950b2194ba3fa7bb7528941a0bc2133ad2ef2a7b91848ddc96"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\original_clip_09345.jpg",
+      "sha256": "4a93ab0b77daecbdb244875a1d65218989d923cfe29df262eef11f317d0848fe"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\original_clip_09380.jpg",
+      "sha256": "33b12f9924f9335a33218d5ae812ee1408dc06d3e3dff3519caf4b9f1db4b58f"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\original_clip_10415.jpg",
+      "sha256": "10c5523df4a9b3d0687f66cdfaaab61932b98c57d5b3ca88bbf673016cb257da"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00130.jpg",
+      "sha256": "fe72d77565baff139227d9da6fc336f7a02cad1b71c16a2e9798ee1644cbbf64"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00150.jpg",
+      "sha256": "8dc16132bdc2a6e7898b1636a74cb671d0781a09a0872b13a5dab0ae0c0d1f46"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00153.jpg",
+      "sha256": "843b29d6101a5fb87aa96a0bf4d9f18bfb0572bf63a74c217418e6a8dc1dbb1b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00162.jpg",
+      "sha256": "198c639fd98fadf915c526cbce8c7c470db9892843d3605ac7f11fda51d7596f"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00167.jpg",
+      "sha256": "28117bed9044bc0a5a1f941b62b2620e849e0ac911c9fa0c0718cdd15ccb2c52"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00193.jpg",
+      "sha256": "346b7ea931dcbb5a2ae413890871973ad4996667269831d15c09474d79861026"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00199.jpg",
+      "sha256": "022d54a610b64beebc2ae0f367cf791ca81b4ccf79492416da27d51a1ee4a6e3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00245.jpg",
+      "sha256": "1b1133d04989ab9c237dd5953a4d5a2cc293a8b7ffba51dcf5962cd91376ce31"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00314.jpg",
+      "sha256": "63355b7aa664563f3dfbc538957250437c5cda9739b62b09cbe7c059fe6cf7ef"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\native\\toros_used_reverse_00397.jpg",
+      "sha256": "4824b5c1b99ab60f939f3167d3951b7665b8aa055a4f9a1b327a59c57c02ae98"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_official_f02675.jpg",
+      "sha256": "91af339d8f434b4a2dc1ad1e6072cf9de513f18f4bc4ae694f995507a8fb820b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_seed26_f02675.jpg",
+      "sha256": "53bc11eefcca106f24626583372912f8b66a75752ccf69d487fa8bdc2f58b72e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_seed27_f02675.jpg",
+      "sha256": "06c9df6d73f12c267e0dec0a79cb969db32da1c8c075eca9a68a954ea3822f17"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_seed28_f02675.jpg",
+      "sha256": "6d14685d31b6c44fcc3f2cdbdb254ad5643e7bd0836f009229a5e6fe059ea4a2"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_official_f02720.jpg",
+      "sha256": "72384135c06c3a9f107a63031849225b98524d0830279b667c62195bf3642d46"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_seed26_f02720.jpg",
+      "sha256": "0f9eb4d23b6b8a660f743b5d94ea6f9ddaf0dd2cef424253f39e601d7fa4dbb6"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_seed27_f02720.jpg",
+      "sha256": "8fc767e2476a7710cc77ce61213d42f6cbd3d6717a68a440e071a39e0b6f8e01"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_seed28_f02720.jpg",
+      "sha256": "c2276553c2340acc8b30d6814477f658e16d9c6ed363f329c79d86282dbf951d"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_official_f03825.jpg",
+      "sha256": "c038e1bc328265a4f54cde1f8f392ccfbe6df493d5a0be34c4deafff1fcd4def"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_seed26_f03825.jpg",
+      "sha256": "7df7bd81177ac0105d63093634110e857b30ba024eb97596997deb85666a8b6e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_seed27_f03825.jpg",
+      "sha256": "94c03a54fe4e8eeea556afdaf8125343a8e27ff697a927ca67471d547c49a1ba"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\long_seed28_f03825.jpg",
+      "sha256": "5827b9fd08f0b5aa611a415b651580e1820c8413812629425514171d86b5c355"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\original_seed26_f09345.jpg",
+      "sha256": "e29dbfb6a8708f13ff0b43cc92bfec3536fc0e8c9569d7187cb9960573aebc43"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\original_seed27_f09345.jpg",
+      "sha256": "4c5016d171ae328529c537d4c426a5bb80da0d4811d1d462fc7aab57cbf964db"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\original_seed28_f09345.jpg",
+      "sha256": "9013bc56da04a6d9f1a9b3cba32a4b96463745012e992a06006c7266d29a6170"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\original_seed26_f09380.jpg",
+      "sha256": "8d9ae8523054b840bdd1cac48b7268feb011a6df74b048c3c7d5f6f7c82d6d8a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\original_seed27_f09380.jpg",
+      "sha256": "c7041c470b4ae04b16d218609d5a1743e82e16c77f45e25b2d491de590b1c0ec"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\original_seed28_f09380.jpg",
+      "sha256": "c7ed5014ad7f5fbf02d448ff57d18fb560a60536376b1e87ee1dca63887de32b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\original_seed26_f10415.jpg",
+      "sha256": "5b83f8d61015bc52471c7063db6b46d289fcad05752f6c4877ce81d5198396f4"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_pilot_f00130.jpg",
+      "sha256": "b939474bdb440277905914585dfa501e1802fb189da3f99b6f4f18a7abea39cc"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_generic_f00150.jpg",
+      "sha256": "bc11a503544edf6da03a996cd7978e0877c7c78d12e9beae39c7af8e4893385f"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_generic_f00153.jpg",
+      "sha256": "12396a3bd410090de68d41fb9bb1976885d635903ec65fcab32a995967464aa1"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_generic_f00162.jpg",
+      "sha256": "ef41c1eac12e12b4e2bda01cbce794c00b7795646d403340cfec8535e10c8bfa"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_generic_f00167.jpg",
+      "sha256": "23f8ae9bb828e561eafaf5a4e4f3c4219f837f90c36e81380b8ea6dbe318574d"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_generic_f00193.jpg",
+      "sha256": "d69552733e2491349f0ea57df33778d731726cbfae23f88435cc54fd2470e01a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_generic_f00199.jpg",
+      "sha256": "9edf05cb2c5df804ff706f13b3dd05c10633ddef3b549145d6627e5e06782d67"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_generic_f00245.jpg",
+      "sha256": "b999e83d0ad3fd62aabac681aedde613489d7bcdef85cb3e2518a0d1cf74f00b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_pilot_f00245.jpg",
+      "sha256": "d5cbe290e54d7d531b790ccc41140df3915c7e5120b95f2449f46e97486c7bff"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_generic_f00314.jpg",
+      "sha256": "ae45a5ff9c0a36df54a220e888d1541f30df68c75028c184495541cdb8e5e5c4"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_generic_f00397.jpg",
+      "sha256": "f680a1efe5da17187c352c83e75f1e993378f2c3738a6b7dc86f22122bc8bb0b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\media_delivery\\results\\media\\cases\\toros_pilot_f00397.jpg",
+      "sha256": "67f0f2ddbb8209625e5de7621298cc5364f771a40418852c2907b6d54d1c60bd"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\firststage_iou_regression_20261029\\results\\failure_focus\\official_ID5_before_after.png",
+      "sha256": "b5addcae30b1f758cb8bfa2988f255023ea76890929cb24d8746fa89e256fcfe"
+    }
+  ]
+}

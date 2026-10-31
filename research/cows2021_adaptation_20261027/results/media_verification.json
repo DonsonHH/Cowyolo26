@@ -1,0 +1,151 @@
+{
+  "status": "SIX_MEDIA_STRICT_FULL_DECODE_AND_BROWSER_CONTROLS_VERIFIED",
+  "media": [
+    {
+      "seed": 26,
+      "format": "mp4",
+      "file": "cows2021_seed26_f8912-10873.mp4",
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cows2021_adaptation_20261027\\previews\\cows2021_seed26_f8912-10873.mp4",
+      "bytes": 11503603,
+      "sha256": "ebffbe8e85206a024ea1c0bd18e08062b5731e3c8351b886e653aadf045aa032",
+      "strict_full_decode": "PASS",
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48
+    },
+    {
+      "seed": 26,
+      "format": "webm",
+      "file": "cows2021_seed26_f8912-10873.webm",
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cows2021_adaptation_20261027\\previews\\cows2021_seed26_f8912-10873.webm",
+      "bytes": 17295551,
+      "sha256": "a22653bdf54497499fb089d22c128fc8afacd3456cef2f5e964921bec8e4a282",
+      "strict_full_decode": "PASS",
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48
+    },
+    {
+      "seed": 27,
+      "format": "mp4",
+      "file": "cows2021_seed27_f8912-10873.mp4",
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cows2021_adaptation_20261027\\previews\\cows2021_seed27_f8912-10873.mp4",
+      "bytes": 11606271,
+      "sha256": "28866c215485b241e58c19a2b48efe7f730b8d19064a815db01b0181695945b2",
+      "strict_full_decode": "PASS",
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48
+    },
+    {
+      "seed": 27,
+      "format": "webm",
+      "file": "cows2021_seed27_f8912-10873.webm",
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cows2021_adaptation_20261027\\previews\\cows2021_seed27_f8912-10873.webm",
+      "bytes": 17512366,
+      "sha256": "a492d87d92168aca9b8ed9b6f9560af5b084ef88ac81918d8563e0f6a5f49132",
+      "strict_full_decode": "PASS",
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48
+    },
+    {
+      "seed": 28,
+      "format": "mp4",
+      "file": "cows2021_seed28_f8912-10873.mp4",
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cows2021_adaptation_20261027\\previews\\cows2021_seed28_f8912-10873.mp4",
+      "bytes": 11524916,
+      "sha256": "93a0bc1649b00d3e36dc222cc030d46aa313955c275c5aa4229d4c7687f92ebd",
+      "strict_full_decode": "PASS",
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48
+    },
+    {
+      "seed": 28,
+      "format": "webm",
+      "file": "cows2021_seed28_f8912-10873.webm",
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cows2021_adaptation_20261027\\previews\\cows2021_seed28_f8912-10873.webm",
+      "bytes": 17361315,
+      "sha256": "bfdb7d58a7bd86941b54523996ea0f9723514e040e6848f3f02eb542d0cd3102",
+      "strict_full_decode": "PASS",
+      "frames": 1962,
+      "fps": 25,
+      "duration_s": 78.48
+    }
+  ],
+  "models": [
+    {
+      "name": "generic",
+      "title": "Official YOLO26n",
+      "seed": null,
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "predicted_down": 0,
+      "predicted_up": 0,
+      "Toros_TP": 6,
+      "Toros_FP": 0,
+      "Toros_FN": 0,
+      "stem": "generic_f8912-10873"
+    },
+    {
+      "name": "pilot",
+      "title": "OpenCows five-epoch pilot",
+      "seed": 26,
+      "checkpoint_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+      "predicted_down": 7,
+      "predicted_up": 0,
+      "Toros_TP": 2,
+      "Toros_FP": 0,
+      "Toros_FN": 4,
+      "stem": "pilot_f8912-10873"
+    },
+    {
+      "name": "seed26",
+      "title": "Cows2021 dates10 seed26",
+      "seed": 26,
+      "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "predicted_down": 0,
+      "predicted_up": 0,
+      "Toros_TP": 0,
+      "Toros_FP": 0,
+      "Toros_FN": 6,
+      "stem": "cows2021_seed26_f8912-10873",
+      "development_AP50_95": 0.82143,
+      "validation_scope": "Cows2021 date-grouped development, not same validation as earlier OpenCows models"
+    },
+    {
+      "name": "seed27",
+      "title": "Cows2021 dates10 seed27",
+      "seed": 27,
+      "checkpoint_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "predicted_down": 1,
+      "predicted_up": 0,
+      "Toros_TP": 0,
+      "Toros_FP": 0,
+      "Toros_FN": 6,
+      "stem": "cows2021_seed27_f8912-10873",
+      "development_AP50_95": 0.82256,
+      "validation_scope": "Cows2021 date-grouped development, not same validation as earlier OpenCows models"
+    },
+    {
+      "name": "seed28",
+      "title": "Cows2021 dates10 seed28",
+      "seed": 28,
+      "checkpoint_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "predicted_down": 0,
+      "predicted_up": 0,
+      "Toros_TP": 0,
+      "Toros_FP": 0,
+      "Toros_FN": 6,
+      "stem": "cows2021_seed28_f8912-10873",
+      "development_AP50_95": 0.81879,
+      "validation_scope": "Cows2021 date-grouped development, not same validation as earlier OpenCows models"
+    }
+  ],
+  "page_sha256": "efdc11484f3b0a7af5df87e8d7bcec9f2b5cc8e24e5d4c8f37fbf88052f15f87",
+  "data_sha256": "6e90319531c673be918b684e04467af328a9327cbdf92d680a02d153651767b2",
+  "browser_verified": true,
+  "whole_goal_complete": false,
+  "browser_evidence_sha256": "620dffe47667f0a2e4b8e7b502d927c114c4301d077a741931e567ae2c6196cb",
+  "browser_screenshot_sha256": "213dbd928a89353693f3787ab501af0ea1194ac5f75f7a5251fecd85d6b154d7"
+}

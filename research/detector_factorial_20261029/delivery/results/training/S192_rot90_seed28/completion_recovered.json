@@ -1,0 +1,50 @@
+{
+  "status": "FIXED10_EPOCH_WEIGHTS_RECOVERED_AFTER_NEWLINE_ONLY_POSTTRAIN_ASSERTION",
+  "condition": {
+    "condition_id": "S192_rot90_seed28",
+    "imgsz": 192,
+    "right_angle": true,
+    "seed": 28,
+    "execution": "frozen_not_submitted",
+    "array_index": 5
+  },
+  "original_slurm_task": "130518_5",
+  "original_task_state": "FAILED|1:0",
+  "original_error_file_sha256": "396f3e4a88252b498fd24b1d53c1c122268435bee94c9d45d76dfd23dddabeba",
+  "protocol_sha256": "43ad5590cbb6ee6be15356af4c0499b947e627aaf72bb1858ccb800add0f69b1",
+  "initial_state_digest": "0e75cc4b8d39f3bbe615112892946a664e446a972fbe24511689c31dd93dfa6e",
+  "epochs_from_training_CSV_and_observed_history": 10,
+  "training_batches_from_observed_history": 2130,
+  "optimizer_steps_from_saved_schedule": 1225,
+  "optimizer_schedule_parsed_exact_to_historical": true,
+  "only_raw_byte_difference_from_historical_schedule": "one_trailing_LF",
+  "finite_gradient_guard_in_executed_code": true,
+  "per_update_gradient_audit_array_recovered": false,
+  "rotation_schedule_status": "RECONSTRUCTED_FROM_FROZEN_SEPARATE_CPU_GENERATOR_AND_OBSERVED_BATCH_COUNTS_NOT_OBSERVED_FILE",
+  "reconstructed_rotation_counts": {
+    "3": 16860,
+    "2": 16891,
+    "1": 17064,
+    "0": 17275
+  },
+  "reconstructed_rotation_schedule_sha256": "f20064d24a343f5de3cb8b30d6cabb447c5e614f695f7ed1b617ca941dadf528",
+  "actual_rotation_label_row_count_recovered": false,
+  "preprocessed_image_presentations_from_loader_and_batches": 68090,
+  "last_checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/training/S192_rot90_seed28/weights/last.pt",
+  "last_checkpoint_sha256": "8a1d389b0e0095f2f536d139a8c392603ba196dd52422e0ca3e2f5b4bd2c33ed",
+  "archived_best_sha256": "990fc78583e406756810f3563ff9abe815be54a76d2a8b5bf5bc08e4c9cb5707",
+  "all_checkpoint_tensors_finite": true,
+  "last_epoch_validation": {
+    "metrics/precision(B)": 0.96218,
+    "metrics/recall(B)": 0.96899,
+    "metrics/mAP50(B)": 0.99056,
+    "metrics/mAP50-95(B)": 0.77104
+  },
+  "effective_args_sha256": "9ca4345aac397e71fff7ed9aca80ea26594e14e82621b1fe8cbdab0edc8de2a1",
+  "training_csv_sha256": "3b69bbe877eca57725693ac53149a12f744916a2b1fb540668b4cc01029de971",
+  "observed_history_sha256": "77967e97799d7297695b476589ec56a3dbbd0641585a7597267b695862c40eac",
+  "optimizer_schedule_file_sha256": "7ca0304a0a8352700d8c17e2bc32a70598a115803e389c3dba1af92840ff08d0",
+  "new_training_updates_in_recovery": 0,
+  "source_Toros_or_final_pixels_used_in_recovery": false,
+  "whole_goal_complete": false
+}

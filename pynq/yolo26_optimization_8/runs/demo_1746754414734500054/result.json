@@ -1,0 +1,103 @@
+{
+  "profile": "fast192",
+  "input_size": 192,
+  "initialization_ms": 12538.049894999858,
+  "device_initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "selected": {
+    "selection": "all",
+    "options": 4,
+    "pairs": 25,
+    "DMA_transactions": 69,
+    "plan": "plans/r192_all/resident_plan.bin",
+    "screen_D_mean_ms": 159.73470560011265,
+    "screen_C_mean_ms": 165.66673330007688,
+    "screen_only": true,
+    "screen_summary_sha256": "b387b7efcbd340b6d72b331be2c1273eb04d9d84ef592acc2f13a2ef8abd279f",
+    "reason": "all25 lower complete E2E than adjacent17 and same-firmware DDR in screening; full formal validation follows"
+  },
+  "cold_first_frame_ms": 293.9778580002894,
+  "records": [
+    {
+      "index": 0,
+      "E2E_ms": 293.9778580002894,
+      "capture_or_read_ms": 114.05694700079039,
+      "annotate_save_ms": 251.3942700006737,
+      "detections": [
+        {
+          "box": [
+            27.757043838500977,
+            222.47300720214844,
+            807.8495483398438,
+            718.15673828125
+          ],
+          "score": 0.7344024181365967,
+          "class_id": 5,
+          "class_name": "bus"
+        },
+        {
+          "box": [
+            214.75975036621094,
+            398.9276123046875,
+            348.499267578125,
+            872.8306884765625
+          ],
+          "score": 0.7281045317649841,
+          "class_id": 0,
+          "class_name": "person"
+        },
+        {
+          "box": [
+            658.9450073242188,
+            334.8363952636719,
+            810.0,
+            872.7018432617188
+          ],
+          "score": 0.6206983327865601,
+          "class_id": 0,
+          "class_name": "person"
+        },
+        {
+          "box": [
+            43.48189926147461,
+            396.02020263671875,
+            206.2952423095703,
+            893.182373046875
+          ],
+          "score": 0.5,
+          "class_id": 0,
+          "class_name": "person"
+        },
+        {
+          "box": [
+            27.757043838500977,
+            222.47300720214844,
+            807.8495483398438,
+            718.15673828125
+          ],
+          "score": 0.31803736090660095,
+          "class_id": 7,
+          "class_name": "truck"
+        }
+      ],
+      "status": {
+        "MM2S": "0x1002",
+        "S2MM": "0x1002",
+        "core": "0x2",
+        "error": "0x0",
+        "version": "0x80001"
+      }
+    }
+  ],
+  "summary": {
+    "mean": 293.9778580002894,
+    "median": 293.9778580002894,
+    "min": 293.9778580002894,
+    "max": 293.9778580002894,
+    "p95": 293.9778580002894
+  },
+  "scope": "Complete board preprocess/native inference/detection decode. Cold demo is not warmed100 benchmark. Camera frame age unmeasured."
+}

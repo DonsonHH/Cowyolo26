@@ -1,0 +1,25 @@
+{
+  "status": "FROZEN_EXPLICIT_NONCONV_FLOAT_REFERENCE_CONTRACT_BEFORE24_VECTOR_RECHECK",
+  "created_UTC": "2026-10-29T17:55:55.663614+00:00",
+  "reason": "Failed320vectorFP32attentionBLASsumorderstraddlesoneINT8halfboundary;oneboundaryinterventionrestoresallraw. Oldreferencefailureunchanged.",
+  "integer_conv_contract_unchanged": true,
+  "weights_calibration_runtime_firmware_and_quantization_unchanged": true,
+  "MatMul": "FP32products,FP32serialaccumulationalongK;noFMA;finalFP32",
+  "Softmax": "FP32subtractmax,C99expfperlogit,FP32left-to-rightsum,FP32division;axislast",
+  "reference_code_calls_native_executor": false,
+  "expf_scalar_math_primitive_shared_with_host_C99_libm": true,
+  "reference_implementation_is_operationally_independent_vectorized_MatMul_and_Python_serial_Softmax": true,
+  "scope": "Referencecontractclarification,noinferencefix. OriginalNumPyreferencefullrawparityfailurepreserved.",
+  "original_hybrid_executor_sha256": "49d549fbc5a645f65bf84016cb8ecd70f924365b1f96bd4d440f424c19c8774f",
+  "new_ordered_reference_sha256": "e171f4d744276f59a8d2ca993c8de9d08eed4ba3ce4698b4bc99e753ff15f708",
+  "ordered_hybrid_executor_sha256": "03c80cdb6bcd28f6eb7720265a9ee68e6978bca96f03515bffc4ebf61c75c1bf",
+  "frozen_test_sizes": [
+    192,
+    256,
+    320
+  ],
+  "fixed_train_vectors_each": 8,
+  "complete_raw_gate": "Originalscore<=1e-4,box<=.002,classsame;also report exactbytes against orderedreference and originalreference.",
+  "no_new_training_or_model_selection": true,
+  "whole_goal_complete": false
+}

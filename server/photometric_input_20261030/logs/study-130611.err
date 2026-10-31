@@ -1,0 +1,10 @@
+[0;93m2026-10-30 02:49:14.522846289 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer 'onnx::Tile_789'. It is not used by any node and should be removed from the model.[m
+[0;93m2026-10-30 02:49:14.522876035 [W:onnxruntime:, graph.cc:4885 CleanUnusedInitializersAndNodeArgs] Removing initializer '/model.23/Constant_17_output_0'. It is not used by any node and should be removed from the model.[m
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/photometric_input_20261030/tools/run_study.py", line 201, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/photometric_input_20261030/tools/run_study.py", line 170, in main
+    if condition=='none':assert trace==gz(prior/video['name']/mode/('stride'+str(stride)+'_counter_trace.json.gz'))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

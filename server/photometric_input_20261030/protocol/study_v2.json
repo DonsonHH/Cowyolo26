@@ -1,0 +1,306 @@
+{
+  "status": "FROZEN_JSON_KEY_COMPARISON_REPAIR_BEFORE_V2_FORWARDS",
+  "created_host_UTC": "2026-10-29T18:53:28.200372+00:00",
+  "model": "S192_rot90_seed26",
+  "checkpoint_sha256": "7b01cead4841f17d561f2a6bd768f9b229f1b3bd142818d8302135d3c69ffd45",
+  "size": 192,
+  "conditions": [
+    "none",
+    "gamma07",
+    "clahe_y2"
+  ],
+  "transform_scope": "after_linear_resize_at_content192_before_114_padding_no_geometry_change",
+  "fixed_gamma": 0.7,
+  "gamma_quantization": "float64_formula_numpy_rint_to_uint8_LUT256_all_BGR_channels",
+  "CLAHE": {
+    "color": "YCrCb_Y_only",
+    "clipLimit": 2.0,
+    "tileGridSize": [
+      8,
+      8
+    ]
+  },
+  "conditions_selected_using_development_missing_case_not_independent_preregistration": true,
+  "parameter_grid_search": false,
+  "parameter_changes_after_outcomes": false,
+  "prior_quality_remote": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2",
+  "videos": [
+    {
+      "name": "original",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+      "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+      "width": 2560,
+      "height": 1440,
+      "fps": 25,
+      "decode_end_exclusive": 10874,
+      "inference_stride": 5,
+      "orientation": "clockwise90",
+      "axis": "y",
+      "perpendicular_ROI": [
+        0.34,
+        0.75
+      ],
+      "scope_start_frame0": 8912,
+      "scope_end_exclusive": 10874,
+      "counter_replay_strides": [
+        5
+      ],
+      "human_down_total": 12,
+      "formal_event_scoring": false,
+      "detection_crop_xyxy": [
+        870,
+        0,
+        1920,
+        1440
+      ],
+      "crop_size_WH": [
+        1050,
+        1440
+      ],
+      "pixel_control_frames": [
+        8995,
+        9345,
+        9790,
+        10830
+      ],
+      "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+    },
+    {
+      "name": "toros",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/phase2/data/mendeley_counting/extracted/Ground Truth/Toros.mp4",
+      "sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "decode_end_exclusive": 479,
+      "inference_stride": 1,
+      "orientation": "original",
+      "axis": "x",
+      "perpendicular_ROI": [
+        0.1,
+        0.95
+      ],
+      "scope_start_frame0": 0,
+      "scope_end_exclusive": 479,
+      "counter_replay_strides": [
+        6,
+        1
+      ],
+      "reference_events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "formal_event_scoring": true,
+      "event_tolerance_s": 2.0,
+      "detection_crop_xyxy": [
+        0,
+        108,
+        1920,
+        1026
+      ],
+      "crop_size_WH": [
+        1920,
+        918
+      ],
+      "pixel_control_frames": [
+        110,
+        193,
+        248,
+        396
+      ],
+      "source_long_dimension_ratio_full_to_crop": 1.0
+    }
+  ],
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "prediction_confidence": 0.2,
+  "IoU_matching": 0.5,
+  "original_human_total": 12,
+  "original_human_event_GT": false,
+  "original_display_frames_inclusive": [
+    8912,
+    10873
+  ],
+  "validation_images": 1571,
+  "validation_references": 1864,
+  "expected_total_ORT_forwards": 25350,
+  "expected_counter_paths": 36,
+  "expected_tracker_observation_ticks": 16404,
+  "baseline_expected_exact_raw_arrays": 8450,
+  "baseline_expected_exact_video_inputs": 2654,
+  "frozen_external_files": [
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_compile_20261029/results/qualification/frozen_S192_rot90_seed26.onnx",
+      "sha256": "c21cae6a542b533d28e0de9469ac3f022322406c8e7ba2e5acfa4edeee9a2382"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_compile_20261029/results/qualification/cow_allconv_int8_normalized.onnx",
+      "sha256": "a24d8fa30b913f7a00489b83c7f6a6ef9ce8eafc9fc62f8bda963ff390865685"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_frontend_port_20261029/tracker_config.json",
+      "sha256": "9b8eda6cc19be8ff933f21de64f18dbade41d8630340d826823d6b9c18666231"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/summary.json",
+      "sha256": "56ecc576faad1b20805572830f6bcca42b42476ce85d7ea12712ba778a1dd80f"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/validation_all_raw.npz",
+      "sha256": "7d68bdcaefa3f46cc54cf611dc4ded70bab22410ba3f03ba346dc92e7cccbb30"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/original_all_raw.npz",
+      "sha256": "be64683ee2533a7619ab0b7662c83cd4591e452b93506cbee624cdd2320ed152"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/toros_all_raw.npz",
+      "sha256": "2271a2200352673256f075cfb26bd8a1e0677bb6c901f501c7a639441f1a94e4"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/board_input_manifest.json",
+      "sha256": "7f316114c1eb654cbaf34c5e401119c87a1ce125899930ca3439ddc8fbc5380c"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/original/FP32/raw_predictions.json.gz",
+      "sha256": "b5510270d4e906c029af1eb0d0742315e638471207047a7764cc2fc03997b252"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/original/FP32/stride5_counter_trace.json.gz",
+      "sha256": "08f88a11d575efdb6c55cfb2b0bc61002b45d15274fdc4a246a9c91c6ce9882f"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/original/QDQ/raw_predictions.json.gz",
+      "sha256": "774d5c5dd6b3b7803cc0cd1c625f837e7e783c05593cdcf16a88f332cf341c42"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/original/QDQ/stride5_counter_trace.json.gz",
+      "sha256": "8acfc29c887dc056178e610505960a5ede648c18cccd0eaa21b1d6c3aad65dc6"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/toros/FP32/raw_predictions.json.gz",
+      "sha256": "2466a1606d06dbf8c77c72eaee42afcc53fbb1d878fb6db66a915229fd0e635e"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/toros/FP32/stride6_counter_trace.json.gz",
+      "sha256": "ed4d1da4544180b4ae0a810e8b73ae69d34efb664fbd590caba00570f513cd36"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/toros/FP32/stride1_counter_trace.json.gz",
+      "sha256": "2572d41bffd9dc1bfb8e381cb54b45280e5cd51ee4f032901a01ce41c6e2ccec"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/toros/QDQ/raw_predictions.json.gz",
+      "sha256": "83d0e636a90de796e2fd3e33729d8607613d0bffada50c8a50ef6763e6f34080"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/toros/QDQ/stride6_counter_trace.json.gz",
+      "sha256": "02d9280062d515faebaaba944c7e3f51bfb7acff8d1b7f228c83b937356549fb"
+    },
+    {
+      "path": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_eval_20261029/results/quality_v2/toros/QDQ/stride1_counter_trace.json.gz",
+      "sha256": "4a4ec2843d4787bc0b46352707816922457f69393d68b77e4a8b240cb95697c1"
+    }
+  ],
+  "new_training_updates": 0,
+  "actual_board_actions": 0,
+  "new_independent_test": false,
+  "final_holdout_read": false,
+  "whole_goal_complete": false,
+  "FP32_onnx": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_compile_20261029/results/qualification/frozen_S192_rot90_seed26.onnx",
+  "QDQ_onnx": "/share/home/renly/projects/idcoo_research_20261026/pynq_rot192_compile_20261029/results/qualification/cow_allconv_int8_normalized.onnx",
+  "original_failed_job": "130611",
+  "no_network_probe_job": "130612",
+  "repair": "JSON_roundtrip_trace_before_full_comparison_int_keys_to_strings_only",
+  "failed_outputs_retained_remote": "results/study",
+  "new_outputs": "results/study_v2",
+  "expected_prior_failed_forwards": 7492,
+  "all_conditions_and_numeric_thresholds_unchanged": true
+}

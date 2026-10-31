@@ -1,0 +1,502 @@
+{
+  "status": "ALL4_RUN_COMPONENTS_PAIRED_ORDER_COMPARISONS_AND_MEMORY_SCOPE_RECOMPUTED",
+  "created_UTC": "2026-10-30T00:13:19.175433+00:00",
+  "runs": [
+    {
+      "run": "r1_serial_input",
+      "policy": "serial_input",
+      "repeat": 1,
+      "processed": 354,
+      "skipped": 38,
+      "late": 353,
+      "FPS": 4.51530612244898,
+      "source_down_count": 10,
+      "metrics": {
+        "model_ms": {
+          "mean": 142.78915516666666,
+          "P50": 137.4152705,
+          "P95": 159.42039894999988,
+          "P99": 214.81561416999995,
+          "max": 311.001464
+        },
+        "after_model_to_count_ms": {
+          "mean": 77.32295864124293,
+          "P50": 71.1905295,
+          "P95": 104.65197969999997,
+          "P99": 170.3636252099993,
+          "max": 251.365225
+        },
+        "processing_ms": {
+          "mean": 220.11211380790962,
+          "P50": 209.36708549999997,
+          "P95": 276.91969269999976,
+          "P99": 345.8723355299996,
+          "max": 399.809058
+        },
+        "release_to_count_ms": {
+          "mean": 325.20229406214685,
+          "P50": 327.36149,
+          "P95": 415.5189809999999,
+          "P99": 480.9481791799999,
+          "max": 617.040132
+        },
+        "JPEG_frontend_read_ms": {
+          "mean": 63.21667820338983,
+          "P50": 58.531108,
+          "P95": 83.84003199999988,
+          "P99": 157.81888816999924,
+          "max": 232.640049
+        },
+        "selector_ms": {
+          "mean": 0.24366727683615821,
+          "P50": 0.16737849999999999,
+          "P95": 0.6166739499999997,
+          "P99": 0.8864163399999971,
+          "max": 1.021342
+        },
+        "packet_read_ms": {
+          "mean": 46.32176380790959,
+          "P50": 41.1385905,
+          "P95": 67.29250969999998,
+          "P99": 140.2085339199993,
+          "max": 216.045901
+        },
+        "packet_verify_ms": {
+          "mean": 16.850687903954803,
+          "P50": 17.2147785,
+          "P95": 18.3196168,
+          "P99": 19.988122599999944,
+          "max": 25.798301
+        },
+        "packet_foreground_wait_ms": {
+          "mean": 63.21667820338983,
+          "P50": 58.531108,
+          "P95": 83.84003199999988,
+          "P99": 157.81888816999924,
+          "max": 232.640049
+        },
+        "packet_model_IO_overlap_ms": {
+          "mean": 0.0,
+          "P50": 0.0,
+          "P95": 0.0,
+          "P99": 0.0,
+          "max": 0.0
+        },
+        "packet_release_to_received_ms": {
+          "mean": 324.05173429943505,
+          "P50": 326.3196755,
+          "P95": 414.6575833499999,
+          "P99": 480.5127140699999,
+          "max": 616.323462
+        },
+        "worker_pause_ack_ms": {
+          "mean": 1.0738599689265538,
+          "P95": 0.4545038999999979,
+          "max": 206.957606
+        }
+      },
+      "background": {
+        "run": "r1_serial_input",
+        "policy": "serial_input",
+        "repeat": 1,
+        "actual_jobs": 10,
+        "accepted_provisional_predictions": 0,
+        "max_queue_wait_ms": 70675.810313,
+        "max_enqueue_to_result_ms": 76251.450133,
+        "mean_network_elapsed_ms": 151.8694686,
+        "saved_photo_bytes": 8697774,
+        "chosen_older_frame_jobs": 7
+      },
+      "producer_peak": {
+        "peak_retained_frames": 0,
+        "peak_retained_payload_bytes": 0,
+        "peak_transient_payload_bytes": 0
+      },
+      "cumulative_parent_memory_kB": {
+        "VmHWM": 238536,
+        "VmRSS": 168492,
+        "VmSwap": 26112
+      },
+      "received_packets_with_positive_model_IO_overlap": 0
+    },
+    {
+      "run": "r1_async_input",
+      "policy": "async_input",
+      "repeat": 1,
+      "processed": 378,
+      "skipped": 14,
+      "late": 170,
+      "FPS": 4.821428571428571,
+      "source_down_count": 10,
+      "metrics": {
+        "model_ms": {
+          "mean": 166.37716811904764,
+          "P50": 147.78709500000002,
+          "P95": 239.699843,
+          "P99": 307.4865890400001,
+          "max": 740.023624
+        },
+        "after_model_to_count_ms": {
+          "mean": 18.28232670899471,
+          "P50": 13.495926,
+          "P95": 33.73795179999999,
+          "P99": 109.26459272000004,
+          "max": 224.327895
+        },
+        "processing_ms": {
+          "mean": 184.65949482804237,
+          "P50": 164.161612,
+          "P95": 261.4349382,
+          "P99": 336.66534404000015,
+          "max": 766.255815
+        },
+        "release_to_count_ms": {
+          "mean": 218.52258139947088,
+          "P50": 189.354649,
+          "P95": 362.6483395499999,
+          "P99": 455.68088432000013,
+          "max": 774.572097
+        },
+        "JPEG_frontend_read_ms": {
+          "mean": 1.6025734259259259,
+          "P50": 0.178585,
+          "P95": 0.26009549999999987,
+          "P99": 43.359427500000386,
+          "max": 178.923914
+        },
+        "selector_ms": {
+          "mean": 0.2496121111111111,
+          "P50": 0.1705265,
+          "P95": 0.613294,
+          "P99": 0.9002955400000003,
+          "max": 1.272812
+        },
+        "packet_read_ms": {
+          "mean": 62.88809145238096,
+          "P50": 53.636643,
+          "P95": 119.36756209999994,
+          "P99": 231.48975304000012,
+          "max": 352.827298
+        },
+        "packet_verify_ms": {
+          "mean": 19.929536386243388,
+          "P50": 18.303234000000003,
+          "P95": 28.412382949999994,
+          "P99": 43.50205264000001,
+          "max": 50.121926
+        },
+        "packet_foreground_wait_ms": {
+          "mean": 1.6025734259259259,
+          "P50": 0.178585,
+          "P95": 0.26009549999999987,
+          "P99": 43.359427500000386,
+          "max": 178.923914
+        },
+        "packet_model_IO_overlap_ms": {
+          "mean": 39.50822617460317,
+          "P50": 43.5120985,
+          "P95": 84.20771039999998,
+          "P99": 149.16024129000002,
+          "max": 172.212972
+        },
+        "packet_release_to_received_ms": {
+          "mean": 216.99023996296296,
+          "P50": 188.509092,
+          "P95": 358.9200656999999,
+          "P99": 455.0294684100001,
+          "max": 774.018903
+        },
+        "worker_pause_ack_ms": {
+          "mean": 4.895664325396825,
+          "P95": 19.47585925,
+          "max": 217.452351
+        }
+      },
+      "background": {
+        "run": "r1_async_input",
+        "policy": "async_input",
+        "repeat": 1,
+        "actual_jobs": 10,
+        "accepted_provisional_predictions": 1,
+        "max_queue_wait_ms": 56308.501227,
+        "max_enqueue_to_result_ms": 61165.163539,
+        "mean_network_elapsed_ms": 1089.1949186,
+        "saved_photo_bytes": 8671503,
+        "chosen_older_frame_jobs": 6
+      },
+      "producer_peak": {
+        "peak_retained_frames": 6,
+        "peak_retained_payload_bytes": 4418520,
+        "peak_transient_payload_bytes": 5149692
+      },
+      "cumulative_parent_memory_kB": {
+        "VmHWM": 238536,
+        "VmRSS": 101516,
+        "VmSwap": 76288
+      },
+      "received_packets_with_positive_model_IO_overlap": 309
+    },
+    {
+      "run": "r2_async_input",
+      "policy": "async_input",
+      "repeat": 2,
+      "processed": 385,
+      "skipped": 7,
+      "late": 363,
+      "FPS": 4.910714285714286,
+      "source_down_count": 10,
+      "metrics": {
+        "model_ms": {
+          "mean": 182.14466113246752,
+          "P50": 176.524443,
+          "P95": 241.69703099999995,
+          "P99": 361.208859759999,
+          "max": 549.479568
+        },
+        "after_model_to_count_ms": {
+          "mean": 17.379393454545454,
+          "P50": 13.728929,
+          "P95": 31.040401599999964,
+          "P99": 67.80922315999877,
+          "max": 215.099692
+        },
+        "processing_ms": {
+          "mean": 199.52405458701298,
+          "P50": 193.804234,
+          "P95": 267.28753879999994,
+          "P99": 383.2045413599994,
+          "max": 561.387002
+        },
+        "release_to_count_ms": {
+          "mean": 251.6875085922078,
+          "P50": 235.443507,
+          "P95": 343.56668499999995,
+          "P99": 448.14634779999966,
+          "max": 674.665109
+        },
+        "JPEG_frontend_read_ms": {
+          "mean": 1.416138966233766,
+          "P50": 0.175151,
+          "P95": 0.2680835999999997,
+          "P99": 15.983876879999723,
+          "max": 207.871125
+        },
+        "selector_ms": {
+          "mean": 0.44477061558441555,
+          "P50": 0.165273,
+          "P95": 0.6087703999999995,
+          "P99": 8.245876519999978,
+          "max": 24.195496
+        },
+        "packet_read_ms": {
+          "mean": 64.01980627272728,
+          "P50": 60.371477,
+          "P95": 85.44880979999994,
+          "P99": 167.98159187999974,
+          "max": 361.475495
+        },
+        "packet_verify_ms": {
+          "mean": 18.56750438961039,
+          "P50": 18.053064,
+          "P95": 24.766708599999983,
+          "P99": 34.503134039999956,
+          "max": 38.081305
+        },
+        "packet_foreground_wait_ms": {
+          "mean": 1.416138966233766,
+          "P50": 0.175151,
+          "P95": 0.2680835999999997,
+          "P99": 15.983876879999723,
+          "max": 207.871125
+        },
+        "packet_model_IO_overlap_ms": {
+          "mean": 25.634646376623376,
+          "P50": 25.747994,
+          "P95": 64.62506699999993,
+          "P99": 133.0176060399998,
+          "max": 164.99619
+        },
+        "packet_release_to_received_ms": {
+          "mean": 249.93656394545454,
+          "P50": 234.045979,
+          "P95": 335.4299904,
+          "P99": 447.53845615999967,
+          "max": 674.077478
+        },
+        "worker_pause_ack_ms": {
+          "mean": 1.7702270493506493,
+          "P95": 9.156854599999996,
+          "max": 73.80328
+        }
+      },
+      "background": {
+        "run": "r2_async_input",
+        "policy": "async_input",
+        "repeat": 2,
+        "actual_jobs": 10,
+        "accepted_provisional_predictions": 1,
+        "max_queue_wait_ms": 73751.651976,
+        "max_enqueue_to_result_ms": 79171.280787,
+        "mean_network_elapsed_ms": 166.75526109999998,
+        "saved_photo_bytes": 8419966,
+        "chosen_older_frame_jobs": 7
+      },
+      "producer_peak": {
+        "peak_retained_frames": 6,
+        "peak_retained_payload_bytes": 4418520,
+        "peak_transient_payload_bytes": 5149692
+      },
+      "cumulative_parent_memory_kB": {
+        "VmHWM": 238536,
+        "VmRSS": 108020,
+        "VmSwap": 67200
+      },
+      "received_packets_with_positive_model_IO_overlap": 271
+    },
+    {
+      "run": "r2_serial_input",
+      "policy": "serial_input",
+      "repeat": 2,
+      "processed": 348,
+      "skipped": 44,
+      "late": 347,
+      "FPS": 4.438775510204081,
+      "source_down_count": 10,
+      "metrics": {
+        "model_ms": {
+          "mean": 144.73582170114943,
+          "P50": 138.3097935,
+          "P95": 176.63830979999994,
+          "P99": 210.81114377999995,
+          "max": 236.675335
+        },
+        "after_model_to_count_ms": {
+          "mean": 79.94383765804598,
+          "P50": 74.234954,
+          "P95": 106.34015989999999,
+          "P99": 202.34311773999914,
+          "max": 425.521119
+        },
+        "processing_ms": {
+          "mean": 224.6796593591954,
+          "P50": 216.8825845,
+          "P95": 282.35751469999997,
+          "P99": 343.4069117699992,
+          "max": 567.304171
+        },
+        "release_to_count_ms": {
+          "mean": 328.83969150862066,
+          "P50": 330.5122005,
+          "P95": 416.6582419,
+          "P99": 499.1019623399999,
+          "max": 744.423428
+        },
+        "JPEG_frontend_read_ms": {
+          "mean": 64.83481148850575,
+          "P50": 59.2866095,
+          "P95": 78.46179709999996,
+          "P99": 160.08658850999933,
+          "max": 410.784202
+        },
+        "selector_ms": {
+          "mean": 0.22252496264367813,
+          "P50": 0.1567695,
+          "P95": 0.5494222000000001,
+          "P99": 0.7998742499999967,
+          "max": 0.931778
+        },
+        "packet_read_ms": {
+          "mean": 47.93637469827587,
+          "P50": 42.037009499999996,
+          "P95": 60.85024769999998,
+          "P99": 142.3835277799993,
+          "max": 393.423956
+        },
+        "packet_verify_ms": {
+          "mean": 16.832578566091954,
+          "P50": 17.2101875,
+          "P95": 18.42832135,
+          "P99": 19.129239899999995,
+          "max": 21.552363
+        },
+        "packet_foreground_wait_ms": {
+          "mean": 64.83481148850575,
+          "P50": 59.2866095,
+          "P95": 78.46179709999996,
+          "P99": 160.08658850999933,
+          "max": 410.784202
+        },
+        "packet_model_IO_overlap_ms": {
+          "mean": 0.0,
+          "P50": 0.0,
+          "P95": 0.0,
+          "P99": 0.0,
+          "max": 0.0
+        },
+        "packet_release_to_received_ms": {
+          "mean": 327.4744410086207,
+          "P50": 327.72260800000004,
+          "P95": 415.835156,
+          "P99": 498.6606180499999,
+          "max": 743.787717
+        },
+        "worker_pause_ack_ms": {
+          "mean": 0.4505928103448275,
+          "P95": 0.6458950499999992,
+          "max": 15.900006
+        }
+      },
+      "background": {
+        "run": "r2_serial_input",
+        "policy": "serial_input",
+        "repeat": 2,
+        "actual_jobs": 10,
+        "accepted_provisional_predictions": 0,
+        "max_queue_wait_ms": 73594.474567,
+        "max_enqueue_to_result_ms": 79075.25283,
+        "mean_network_elapsed_ms": 143.45423980000004,
+        "saved_photo_bytes": 8621081,
+        "chosen_older_frame_jobs": 6
+      },
+      "producer_peak": {
+        "peak_retained_frames": 0,
+        "peak_retained_payload_bytes": 0,
+        "peak_transient_payload_bytes": 0
+      },
+      "cumulative_parent_memory_kB": {
+        "VmHWM": 238536,
+        "VmRSS": 75636,
+        "VmSwap": 99328
+      },
+      "received_packets_with_positive_model_IO_overlap": 0
+    }
+  ],
+  "comparisons": [
+    {
+      "repeat": 1,
+      "serial_run": "r1_serial_input",
+      "async_run": "r1_async_input",
+      "processed_difference_async_minus_serial": 24,
+      "FPS_difference": 0.3061224489795915,
+      "deadline_misses_difference": -183,
+      "P95_release_to_count_ms_difference": -52.870641449999994,
+      "max_backend_completion_ms_difference": -15086.286594000005,
+      "same_count_does_not_establish_independent_accuracy": true
+    },
+    {
+      "repeat": 2,
+      "serial_run": "r2_serial_input",
+      "async_run": "r2_async_input",
+      "processed_difference_async_minus_serial": 37,
+      "FPS_difference": 0.47193877551020424,
+      "deadline_misses_difference": 16,
+      "P95_release_to_count_ms_difference": -73.09155690000006,
+      "max_backend_completion_ms_difference": 96.02795699999842,
+      "same_count_does_not_establish_independent_accuracy": true
+    }
+  ],
+  "repeats_are_independent_farm_sessions": false,
+  "new_forwards": 0,
+  "global_default_replaced": false,
+  "whole_goal_complete": false
+}

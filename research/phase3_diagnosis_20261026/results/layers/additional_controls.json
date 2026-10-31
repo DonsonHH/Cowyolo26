@@ -1,0 +1,255 @@
+{
+  "scope": "Additional ambiguity check for empty tracker IDs and stable-region coverage; reference-assisted diagnostic only",
+  "id_presence_control": [
+    {
+      "model": "generic",
+      "association_iou": 0.5,
+      "condition": "only_post_boxes_with_actual_id_then_reference_id_replacement",
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "matched_boxes_without_actual_id": 13
+    },
+    {
+      "model": "generic",
+      "association_iou": 0.3,
+      "condition": "only_post_boxes_with_actual_id_then_reference_id_replacement",
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "matched_boxes_without_actual_id": 13
+    },
+    {
+      "model": "pilot",
+      "association_iou": 0.5,
+      "condition": "only_post_boxes_with_actual_id_then_reference_id_replacement",
+      "events": [
+        {
+          "time_s": 4.333333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 130
+        },
+        {
+          "time_s": 8.2,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 9.9,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 297
+        },
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "matched_boxes_without_actual_id": 10
+    },
+    {
+      "model": "pilot",
+      "association_iou": 0.3,
+      "condition": "only_post_boxes_with_actual_id_then_reference_id_replacement",
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 115
+        },
+        {
+          "time_s": 8.2,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 289
+        },
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "matched_boxes_without_actual_id": 13
+    }
+  ],
+  "stable_region_runs_primary_iou05": [
+    {
+      "reference_id": 1,
+      "kind": "raw",
+      "matched_frames": 98,
+      "max_consecutive_A": 9,
+      "max_consecutive_B": 14
+    },
+    {
+      "reference_id": 1,
+      "kind": "post",
+      "matched_frames": 104,
+      "max_consecutive_A": 18,
+      "max_consecutive_B": 14
+    },
+    {
+      "reference_id": 14,
+      "kind": "raw",
+      "matched_frames": 72,
+      "max_consecutive_A": 22,
+      "max_consecutive_B": 5
+    },
+    {
+      "reference_id": 14,
+      "kind": "post",
+      "matched_frames": 62,
+      "max_consecutive_A": 22,
+      "max_consecutive_B": 2
+    },
+    {
+      "reference_id": 7,
+      "kind": "raw",
+      "matched_frames": 132,
+      "max_consecutive_A": 14,
+      "max_consecutive_B": 38
+    },
+    {
+      "reference_id": 7,
+      "kind": "post",
+      "matched_frames": 116,
+      "max_consecutive_A": 14,
+      "max_consecutive_B": 34
+    },
+    {
+      "reference_id": 16,
+      "kind": "raw",
+      "matched_frames": 71,
+      "max_consecutive_A": 4,
+      "max_consecutive_B": 10
+    },
+    {
+      "reference_id": 16,
+      "kind": "post",
+      "matched_frames": 54,
+      "max_consecutive_A": 5,
+      "max_consecutive_B": 7
+    },
+    {
+      "reference_id": 22,
+      "kind": "raw",
+      "matched_frames": 54,
+      "max_consecutive_A": 22,
+      "max_consecutive_B": 3
+    },
+    {
+      "reference_id": 22,
+      "kind": "post",
+      "matched_frames": 56,
+      "max_consecutive_A": 23,
+      "max_consecutive_B": 3
+    },
+    {
+      "reference_id": 17,
+      "kind": "raw",
+      "matched_frames": 190,
+      "max_consecutive_A": 29,
+      "max_consecutive_B": 24
+    },
+    {
+      "reference_id": 17,
+      "kind": "post",
+      "matched_frames": 169,
+      "max_consecutive_A": 15,
+      "max_consecutive_B": 24
+    }
+  ]
+}

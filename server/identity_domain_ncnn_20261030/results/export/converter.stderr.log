@@ -1,0 +1,39 @@
+pnnxparam = encoder.pnnx.param
+pnnxbin = encoder.pnnx.bin
+pnnxpy = encoder_pnnx.py
+pnnxonnx = encoder.pnnx.onnx
+ncnnparam = encoder.ncnn.param
+ncnnbin = encoder.ncnn.bin
+ncnnpy = encoder_ncnn.py
+fp16 = 0
+optlevel = 2
+device = cpu
+inputshape = [1,3,224,224]f32
+inputshape2 = 
+input = 
+input2 = 
+customop = 
+moduleop = 
+get inputshape from traced inputs
+inputshape = [1,3,224,224]f32
+############# pass_level0
+inline module = torch.nn.modules.flatten.Flatten
+inline module = torchvision.models.mobilenetv3.InvertedResidual
+inline module = torchvision.ops.misc.Conv2dNormActivation
+inline module = torchvision.ops.misc.SqueezeExcitation
+inline module = torch.nn.modules.flatten.Flatten
+inline module = torchvision.models.mobilenetv3.InvertedResidual
+inline module = torchvision.ops.misc.Conv2dNormActivation
+inline module = torchvision.ops.misc.SqueezeExcitation
+
+----------------
+
+############# pass_level1
+############# pass_level2
+############# pass_level3
+############# pass_level4
+############# pass_level5
+############# pass_ncnn
+model inputshape = [1,3,224,224]f32
+FLOPS = 115.531M
+memory OPS = 7.467M

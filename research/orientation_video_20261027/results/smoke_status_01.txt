@@ -1,0 +1,65 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129934|idcoo-video-rot-smoke|COMPLETED|0:0|00:00:08|
+129934.batch|batch|COMPLETED|0:0|00:00:08|1168K
+129934.0|python|COMPLETED|0:0|00:00:08|804K
+{"status": "SYNTHETIC_NONEMPTY_EMPTY_RESULTS_AND_REAL_BYTE_TRACK_SEAM_CONTROLS_PASS", "job_id": "129934", "protocol_sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b", "geometry_controls": {"box_edge_roundtrip_max_error": 0.0, "pixel_permutation_inverse_verified": true}, "actual64frame_conditions": [{"orientation": "original", "native_frames": 64, "pretracker_boxes": 0, "posttracker_boxes": 0, "maximum_inverse_float32_difference": 0.0, "callback_order": [{"name": "on_predict_postprocess_end", "module": "ultralytics.utils.callbacks.base"}, {"name": "restore_before_tracker", "module": "rotation_seam"}, {"name": "on_predict_postprocess_end", "module": "ultralytics.trackers.track"}], "original_tracker_coordinates_verified": true}, {"orientation": "clockwise90", "native_frames": 64, "pretracker_boxes": 0, "posttracker_boxes": 0, "maximum_inverse_float32_difference": 0.0, "callback_order": [{"name": "on_predict_postprocess_end", "module": "ultralytics.utils.callbacks.base"}, {"name": "restore_before_tracker", "module": "rotation_seam"}, {"name": "on_predict_postprocess_end", "module": "ultralytics.trackers.track"}], "original_tracker_coordinates_verified": true}], "new_training_updates": 0, "full_replay_completed": false, "source_final_test_or_identity_accuracy_verified": false, "whole_goal_complete": false}
+{
+  "status": "SYNTHETIC_NONEMPTY_EMPTY_RESULTS_AND_REAL_BYTE_TRACK_SEAM_CONTROLS_PASS",
+  "job_id": "129934",
+  "protocol_sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+  "geometry_controls": {
+    "box_edge_roundtrip_max_error": 0.0,
+    "pixel_permutation_inverse_verified": true
+  },
+  "actual64frame_conditions": [
+    {
+      "orientation": "original",
+      "native_frames": 64,
+      "pretracker_boxes": 0,
+      "posttracker_boxes": 0,
+      "maximum_inverse_float32_difference": 0.0,
+      "callback_order": [
+        {
+          "name": "on_predict_postprocess_end",
+          "module": "ultralytics.utils.callbacks.base"
+        },
+        {
+          "name": "restore_before_tracker",
+          "module": "rotation_seam"
+        },
+        {
+          "name": "on_predict_postprocess_end",
+          "module": "ultralytics.trackers.track"
+        }
+      ],
+      "original_tracker_coordinates_verified": true
+    },
+    {
+      "orientation": "clockwise90",
+      "native_frames": 64,
+      "pretracker_boxes": 0,
+      "posttracker_boxes": 0,
+      "maximum_inverse_float32_difference": 0.0,
+      "callback_order": [
+        {
+          "name": "on_predict_postprocess_end",
+          "module": "ultralytics.utils.callbacks.base"
+        },
+        {
+          "name": "restore_before_tracker",
+          "module": "rotation_seam"
+        },
+        {
+          "name": "on_predict_postprocess_end",
+          "module": "ultralytics.trackers.track"
+        }
+      ],
+      "original_tracker_coordinates_verified": true
+    }
+  ],
+  "new_training_updates": 0,
+  "full_replay_completed": false,
+  "source_final_test_or_identity_accuracy_verified": false,
+  "whole_goal_complete": false
+}

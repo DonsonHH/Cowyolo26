@@ -1,0 +1,45 @@
+optimizer_step
+    def optimizer_step(self):
+        """Perform a single step of the training optimizer with gradient clipping and EMA update."""
+        self.scaler.unscale_(self.optimizer)  # unscale gradients
+        torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=10.0)
+        self.scaler.step(self.optimizer)
+        self.scaler.update()
+        self.optimizer.zero_grad()
+        if self.ema:
+            self.ema.update(self.model)
+
+train setup signature (self)
+detection getmodel
+    def get_model(self, cfg: str | None = None, weights: str | None = None, verbose: bool = True):
+        """Return a YOLO detection model.
+
+        Args:
+            cfg (str, optional): Path to model configuration file.
+            weights (str, optional): Path to model weights.
+            verbose (bool): Whether to display model information.
+
+        Returns:
+            (DetectionModel): YOLO detection model.
+        """
+        model = DetectionModel(cfg, nc=self.data["nc"], ch=self.data["channels"], verbose=verbose and RANK == -1)
+        if weights:
+            model.load(weights)
+        return model
+
+build dataset signature (cfg: 'IterableSimpleNamespace', img_path: 'str', batch: 'int', data: 'dict[str, Any]', mode: 'str' = 'train', rect: 'bool' = False, stride: 'int' = 32, multi_modal: 'bool' = False, fraction: 'float | None' = None) -> 'Dataset'
+dataset constructor (*args, data: 'dict | None' = None, task: 'str' = 'detect', **kwargs)
+trainer batch callbacks
+12         self.run_callbacks("on_train_start")
+27             self.run_callbacks("on_train_epoch_start")
+46                 self.run_callbacks("on_train_batch_start")
+51                     self.accumulate = max(1, int(np.interp(ni, xi, [1, self.args.nbs / self.batch_size]).round()))
+109                 if ni - last_opt_step >= self.accumulate:
+110                     self.optimizer_step()
+136                     self.run_callbacks("on_batch_end")
+140                 self.run_callbacks("on_train_batch_end")
+155             self.run_callbacks("on_train_epoch_end")
+178                     self.run_callbacks("on_model_save")
+190             self.run_callbacks("on_fit_epoch_end")
+210             self.run_callbacks("on_train_end")
+213         self.run_callbacks("teardown")

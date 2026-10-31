@@ -1,0 +1,53 @@
+{
+  "relative": "yolo26_optimization_8/program_r256/program.json",
+  "sha256": "0bc7ddb5e2feb1fe71607ad6e7a3937a8715217aad8fe624040e7251e259d7da",
+  "bytes": 484543,
+  "keys": [
+    "size",
+    "input_id",
+    "output_id",
+    "names",
+    "shapes",
+    "nodes",
+    "ops",
+    "source_model",
+    "math"
+  ],
+  "summary": {
+    "size": 256,
+    "input_id": 1299,
+    "output_id": 2125,
+    "ops": {
+      "QuantizeLinear": 24,
+      "QuantConv": 94,
+      "Int8Lookup": 47,
+      "Split": 23,
+      "Identity": 42,
+      "DequantizeLinear": 30,
+      "FloatLookup": 17,
+      "Add": 21,
+      "Concat": 24,
+      "MaxPool": 3,
+      "Reshape": 14,
+      "Mul": 3,
+      "Transpose": 5,
+      "MatMul": 4,
+      "Softmax": 2,
+      "Depthwise": 8,
+      "Resize": 2,
+      "Slice": 2,
+      "Sub": 1,
+      "ReduceMax": 1,
+      "TopK": 2,
+      "Unsqueeze": 4,
+      "Expand": 2,
+      "GatherElements": 3,
+      "Flatten": 1,
+      "Mod": 1,
+      "Div": 1,
+      "Cast": 1
+    },
+    "source_model": "D:\\---college---\\yolo26\\yolo26_optimization_7\\r256_intdw\\model",
+    "math": "94 exact PL +8 fixed INT8 depthwise; common native float ops introduced by O7 engine require final verification/evaluation"
+  }
+}

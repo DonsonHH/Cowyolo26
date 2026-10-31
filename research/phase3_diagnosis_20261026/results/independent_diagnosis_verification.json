@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "implementation": "stdlib exhaustive per-frame IoU assignment and independent grouped-region visits",
+  "verified_capture_files": [
+    {
+      "path": "results\\capture\\generic\\raw_detector_boxes.csv",
+      "sha256": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec"
+    },
+    {
+      "path": "results\\capture\\generic\\post_tracker_boxes.csv",
+      "sha256": "3319d021d6948eb5d125ede2e5d4dfd6364b98d75b9f712f923cb82d3f82f597"
+    },
+    {
+      "path": "results\\capture\\pilot\\raw_detector_boxes.csv",
+      "sha256": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89"
+    },
+    {
+      "path": "results\\capture\\pilot\\post_tracker_boxes.csv",
+      "sha256": "0b9fb8616995c42505de7f50392f999da2a03d781a287864fe816d82b8405196"
+    }
+  ],
+  "verified_conditions": [
+    {
+      "model": "generic",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "generic",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "generic",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "generic",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "generic",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "generic",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "generic",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "generic",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "pilot",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": 2,
+      "exact_event_equality": true
+    },
+    {
+      "model": "pilot",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "pilot",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "pilot",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": 5,
+      "exact_event_equality": true
+    },
+    {
+      "model": "pilot",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": 3,
+      "exact_event_equality": true
+    },
+    {
+      "model": "pilot",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 6,
+      "exact_event_equality": true
+    },
+    {
+      "model": "pilot",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": 5,
+      "exact_event_equality": true
+    },
+    {
+      "model": "pilot",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": 3,
+      "exact_event_equality": true
+    }
+  ],
+  "scope": "Reference-assisted diagnostic arithmetic, not new generalisation or board performance"
+}

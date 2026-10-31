@@ -1,0 +1,2383 @@
+{
+  "job_id": "129693",
+  "reference_events": [
+    {
+      "time_s": 3.6666666666666665,
+      "track_id": 1,
+      "direction": "B->A",
+      "frame": 110
+    },
+    {
+      "time_s": 6.433333333333334,
+      "track_id": 14,
+      "direction": "B->A",
+      "frame": 193
+    },
+    {
+      "time_s": 8.266666666666667,
+      "track_id": 7,
+      "direction": "B->A",
+      "frame": 248
+    },
+    {
+      "time_s": 9.533333333333333,
+      "track_id": 16,
+      "direction": "B->A",
+      "frame": 286
+    },
+    {
+      "time_s": 10.733333333333333,
+      "track_id": 22,
+      "direction": "B->A",
+      "frame": 322
+    },
+    {
+      "time_s": 13.2,
+      "track_id": 17,
+      "direction": "B->A",
+      "frame": 396
+    }
+  ],
+  "interventions": [
+    {
+      "model": "generic",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 54,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 34,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": false
+    },
+    {
+      "model": "generic",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 3.6333333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 109
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "generic",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "generic",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.533333333333333,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 196
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame": 289
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 54,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 34,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "generic",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.6333333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 109
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "generic",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "generic",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 2,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.533333333333333,
+          "track_id": 5,
+          "direction": "B->A",
+          "frame": 196
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 25,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 31,
+          "direction": "B->A",
+          "frame": 289
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 54,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 34,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "pilot",
+      "condition": "actual_pipeline",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 8.2,
+          "track_id": 21,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 39,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": false
+    },
+    {
+      "model": "pilot",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 4.966666666666667,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 149
+        },
+        {
+          "time_s": 7.166666666666667,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 215
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.6,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 288
+        },
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        },
+        {
+          "time_s": 13.4,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 402
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 1.3000000000000003,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.7333333333333334,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.06666666666666643,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.2666666666666675,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.20000000000000107,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "pilot",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 4.333333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 130
+        },
+        {
+          "time_s": 8.2,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 9.9,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 297
+        },
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 5,
+        "temporally_matched": 5,
+        "correct_direction_matches": 5,
+        "wrong_direction_matches": 0,
+        "TP": 5,
+        "FP": 0,
+        "FN": 1,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 5
+          }
+        },
+        "mean_absolute_direction_count_error": 0.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.6666666666666665,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 1,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 2,
+            "time_error_s": 0.36666666666666714,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 3,
+            "time_error_s": 0.2666666666666675,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 4,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "pilot",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.5,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 21,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 39,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 2,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "pilot",
+      "condition": "raw_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 115
+        },
+        {
+          "time_s": 7.166666666666667,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 215
+        },
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        },
+        {
+          "time_s": 9.6,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 288
+        },
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        },
+        {
+          "time_s": 13.4,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 402
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.7333333333333334,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.06666666666666643,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.2666666666666675,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.20000000000000107,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "pilot",
+      "condition": "post_boxes_reference_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 115
+        },
+        {
+          "time_s": 8.2,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 246
+        },
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 289
+        },
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        },
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 5,
+        "temporally_matched": 5,
+        "correct_direction_matches": 5,
+        "wrong_direction_matches": 0,
+        "TP": 5,
+        "FP": 0,
+        "FN": 1,
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 5
+          }
+        },
+        "mean_absolute_direction_count_error": 0.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.16666666666666696,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 1,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 2,
+            "time_error_s": 0.09999999999999964,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 3,
+            "time_error_s": 0.2666666666666675,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 4,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "pilot",
+      "condition": "reference_boxes_tracker_ids",
+      "association_iou": 0.3,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 21,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 39,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 2,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "generic",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    },
+    {
+      "model": "pilot",
+      "condition": "reference_boxes_reference_ids",
+      "association_iou": null,
+      "events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        },
+        {
+          "time_s": 6.433333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 193
+        },
+        {
+          "time_s": 8.266666666666667,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 248
+        },
+        {
+          "time_s": 9.533333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 286
+        },
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        },
+        {
+          "time_s": 13.2,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 396
+        }
+      ],
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "reference_assisted": true
+    }
+  ],
+  "per_reference": [
+    {
+      "model": "generic",
+      "reference_id": 1,
+      "association_iou": 0.5,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 132,
+      "matched_post_frames": 129,
+      "associated_tracker_ids": [
+        2
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 3.6333333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 109
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 14,
+      "association_iou": 0.5,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 170,
+      "matched_post_frames": 148,
+      "associated_tracker_ids": [
+        5
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 7,
+      "association_iou": 0.5,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 143,
+      "matched_post_frames": 115,
+      "associated_tracker_ids": [
+        5,
+        25
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 16,
+      "association_iou": 0.5,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 156,
+      "matched_post_frames": 143,
+      "associated_tracker_ids": [
+        25,
+        31
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 22,
+      "association_iou": 0.5,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 152,
+      "matched_post_frames": 143,
+      "associated_tracker_ids": [
+        34,
+        51,
+        54
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 17,
+      "association_iou": 0.5,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 237,
+      "matched_post_frames": 233,
+      "associated_tracker_ids": [
+        34
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 1,
+      "association_iou": 0.3,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 132,
+      "matched_post_frames": 129,
+      "associated_tracker_ids": [
+        2
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 3.6333333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 109
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 3.6666666666666665,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 110
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 14,
+      "association_iou": 0.3,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 170,
+      "matched_post_frames": 149,
+      "associated_tracker_ids": [
+        5,
+        15
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 6.633333333333334,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 199
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 7,
+      "association_iou": 0.3,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 147,
+      "matched_post_frames": 115,
+      "associated_tracker_ids": [
+        5,
+        25
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 16,
+      "association_iou": 0.3,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 158,
+      "matched_post_frames": 146,
+      "associated_tracker_ids": [
+        25,
+        31
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 9.7,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 291
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 22,
+      "association_iou": 0.3,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 158,
+      "matched_post_frames": 144,
+      "associated_tracker_ids": [
+        34,
+        51,
+        54
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 10.733333333333333,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 322
+        }
+      ]
+    },
+    {
+      "model": "generic",
+      "reference_id": 17,
+      "association_iou": 0.3,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 240,
+      "matched_post_frames": 236,
+      "associated_tracker_ids": [
+        34
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.233333333333333,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 397
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 1,
+      "association_iou": 0.5,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 98,
+      "matched_post_frames": 104,
+      "associated_tracker_ids": [
+        1,
+        6,
+        9,
+        31
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 4.966666666666667,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 149
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 4.333333333333333,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 130
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 14,
+      "association_iou": 0.5,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 72,
+      "matched_post_frames": 62,
+      "associated_tracker_ids": [
+        5,
+        38
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 7.166666666666667,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 215
+        }
+      ],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "pilot",
+      "reference_id": 7,
+      "association_iou": 0.5,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 132,
+      "matched_post_frames": 116,
+      "associated_tracker_ids": [
+        5,
+        21
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 8.2,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 246
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 16,
+      "association_iou": 0.5,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 71,
+      "matched_post_frames": 54,
+      "associated_tracker_ids": [
+        21,
+        25,
+        44,
+        71
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 9.6,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 288
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 9.9,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 297
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 22,
+      "association_iou": 0.5,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 54,
+      "matched_post_frames": 56,
+      "associated_tracker_ids": [
+        21,
+        25
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 17,
+      "association_iou": 0.5,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 190,
+      "matched_post_frames": 169,
+      "associated_tracker_ids": [
+        39,
+        46,
+        77,
+        83,
+        92
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.4,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 402
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 1,
+      "association_iou": 0.3,
+      "reference_event_frame": 110,
+      "reference_visible_frames": 194,
+      "matched_raw_frames": 177,
+      "matched_post_frames": 169,
+      "associated_tracker_ids": [
+        1,
+        6,
+        9,
+        31
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 115
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 3.8333333333333335,
+          "track_id": 1,
+          "direction": "B->A",
+          "frame": 115
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 14,
+      "association_iou": 0.3,
+      "reference_event_frame": 193,
+      "reference_visible_frames": 261,
+      "matched_raw_frames": 90,
+      "matched_post_frames": 66,
+      "associated_tracker_ids": [
+        5,
+        38
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 7.166666666666667,
+          "track_id": 14,
+          "direction": "B->A",
+          "frame": 215
+        }
+      ],
+      "post_boxes_reference_ids_events": []
+    },
+    {
+      "model": "pilot",
+      "reference_id": 7,
+      "association_iou": 0.3,
+      "reference_event_frame": 248,
+      "reference_visible_frames": 332,
+      "matched_raw_frames": 153,
+      "matched_post_frames": 132,
+      "associated_tracker_ids": [
+        5,
+        21,
+        65
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 8.166666666666666,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 245
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 8.2,
+          "track_id": 7,
+          "direction": "B->A",
+          "frame": 246
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 16,
+      "association_iou": 0.3,
+      "reference_event_frame": 286,
+      "reference_visible_frames": 206,
+      "matched_raw_frames": 107,
+      "matched_post_frames": 105,
+      "associated_tracker_ids": [
+        21,
+        25,
+        44,
+        71
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 9.6,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 288
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 9.633333333333333,
+          "track_id": 16,
+          "direction": "B->A",
+          "frame": 289
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 22,
+      "association_iou": 0.3,
+      "reference_event_frame": 322,
+      "reference_visible_frames": 205,
+      "matched_raw_frames": 72,
+      "matched_post_frames": 62,
+      "associated_tracker_ids": [
+        21,
+        25
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 11.0,
+          "track_id": 22,
+          "direction": "B->A",
+          "frame": 330
+        }
+      ]
+    },
+    {
+      "model": "pilot",
+      "reference_id": 17,
+      "association_iou": 0.3,
+      "reference_event_frame": 396,
+      "reference_visible_frames": 277,
+      "matched_raw_frames": 232,
+      "matched_post_frames": 220,
+      "associated_tracker_ids": [
+        39,
+        46,
+        77,
+        83,
+        92
+      ],
+      "raw_boxes_reference_ids_events": [
+        {
+          "time_s": 13.4,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 402
+        }
+      ],
+      "post_boxes_reference_ids_events": [
+        {
+          "time_s": 13.166666666666666,
+          "track_id": 17,
+          "direction": "B->A",
+          "frame": 395
+        }
+      ]
+    }
+  ],
+  "interpretation": "Reference-assisted diagnostic controls only; actual_pipeline is the preserved reference-free algorithm, not proof of board deployment. Temporal F1 may associate neighbouring events; reference-ID details are retained for intervention interpretation.",
+  "inputs_sha256": {
+    "results/capture/generic/events.csv": "df66528c264a4b3466808872641b78935c36777c75900d0a9cc745a471efcd5d",
+    "results/capture/generic/post_tracker_boxes.csv": "3319d021d6948eb5d125ede2e5d4dfd6364b98d75b9f712f923cb82d3f82f597",
+    "results/capture/generic/raw_detector_boxes.csv": "ff0eb8503442ec8853a8dfef98d7bf4390aa14562cc5b5dc359f06f59582a1ec",
+    "results/capture/generic/tracks.csv": "79dfb5cf6fa346102f01fce0036878747034b4c46835880cdb298700f58b324e",
+    "results/capture/pilot/events.csv": "1c062c4d0503ee5a108e2e99c59a35225cb2b445f7e0881834aaa0f019f26f56",
+    "results/capture/pilot/post_tracker_boxes.csv": "0b9fb8616995c42505de7f50392f999da2a03d781a287864fe816d82b8405196",
+    "results/capture/pilot/raw_detector_boxes.csv": "4708babd8182f8cd563d1816147f97b3b5927ebec0ac0bb5a047814fe7b64b89",
+    "results/capture/pilot/tracks.csv": "c02c76d12bf269ac16fe5afa0d87684b89e76ef7d7e711a175b753499fbb7f42"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "status": "PRESERVE_COUNTING_BASELINE_AND_PRIORITIZE_INPUT_SCALE_ORIENTATION_TRAINING_BEFORE_CROP_LOCALIZER",
+  "created_UTC": "2026-10-29T08:29:16.848487+00:00",
+  "main_summary_sha256": "7a0c53eb7e275832f900abd7aea2ac64c6eb3ea604627ac15a89d5cbae555a87",
+  "probe_summary_sha256": "e2f58b9ad61412974112606f91d36b091529d2b60f992175e4331ab3966c71cf",
+  "pair_geometry_audit_sha256": "96c4df2b013980672db2f551402333db3d151bb92050e6c2c294a5db1454131c",
+  "evidence": [
+    "Val640CW90rectTrue bodymatches official1141 seed26592 seed27505 seed28226 outof1864.",
+    "Input8fixedimages12references:seed26CW640rectTrue4versusCW320rectTrue11;seed272versus10;seed282versus7.",
+    "RotationinverseIoUinvariantand64first/lastmainrepeatsreproduced;notexplainedbynativecoordinateconversion.",
+    "Samefixed8seed26squareCW6404versusCW32011,sochangingrectpaddingalonedoesnotrescueit.",
+    "Complete919referenceboxes:512idealAABBenvelopeshavemorethan25%areaoutsidethepublishedrotatedreference.",
+    "Only2920/8888trainreferencecasesgetmatchedcroptargets;traininglocalizeronlyonthesewouldomit5968missedreferences."
+  ],
+  "pipeline_or_weights_changed": false,
+  "imgsz320_global_adoption": false,
+  "frame_or_camera_resolution_selection_rule_added": false,
+  "all4models_and_all3seeds_retained": true,
+  "existing_human12_count_milestone_preserved": true,
+  "localizer_training_started": false,
+  "identity_reference_generated": false,
+  "source_event_identity_accuracy_computed": false,
+  "next_training_factorial": {
+    "resolution": [
+      320,
+      640
+    ],
+    "right_angle_rotation_augmentation": [
+      "none",
+      "uniform90degree_steps"
+    ],
+    "existing_control": "Existing320noextra-rotation3seedcheckpoints retainedasoriginalcontrol.",
+    "new_candidate_groups": [
+      "640noextra-rotation",
+      "320right-angle-augmentation",
+      "640right-angle-augmentation"
+    ],
+    "seeds": [
+      26,
+      27,
+      28
+    ],
+    "planned_new_training_runs": 9,
+    "training_images": "Same6809date-trainbodylabels;actualstepsandaugmentsettingsmustbefrozenbeforeexecution.",
+    "selection": "Allgroups/seedsreported;nochoiceonoriginalhuman12counts;check640/nativeandCWrotationgeometry,thenregressoriginal12andpublishedreverse6.",
+    "current_protocol_only_not_training_execution": true
+  },
+  "followup_body_geometry": "Afterdetectionstability,compareactualtorsoorientationlocalizationandidentityquerycoveragewithoutusingrboxasidentitytruth.",
+  "final_scope": "Publicdata development;sourceisolatedcount/identityreferencesandPYNQ-Z2jointperformance stillrequired.",
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

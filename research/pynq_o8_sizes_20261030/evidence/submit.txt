@@ -1,0 +1,14 @@
+renly
+mu01
+/share/home/renly
+PARTITION|AVAIL|TIMELIMIT|NODES|STATE|NODELIST|GRES
+cu*|up|infinite|1|mix|cu03|(null)
+cu*|up|infinite|2|alloc|cu[01-02]|(null)
+cu*|up|infinite|17|idle|cu[04-20]|(null)
+8gpu|up|infinite|1|idle|gpu01|gpu:V100S:8
+4gpu|up|infinite|2|idle|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+            130592|       cu|           rsi-b4b0-data| PENDING|      0:00|     30:00|(Dependency)
+            130591|       cu|           rsi-b4b0-gate| RUNNING|      0:45|     10:00|cu03
+TWO_FIXED_COW_SIZES_AND_ALL_O8_COMPILER_FILES_FROZEN
+130593

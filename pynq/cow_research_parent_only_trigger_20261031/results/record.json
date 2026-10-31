@@ -1,0 +1,435 @@
+{
+  "status": "ALL4_ACTUAL_COUNT_TRIGGER_OLD_NEW_NEW_OLD_ASYNC_CAUSAL_IDENTITY_RUNS_COMPLETE",
+  "PID": 2739,
+  "boot_id": "e7059099-ecb8-451e-a9aa-a66c8222196b",
+  "protocol_sha256": "17e08b19b38d438351e005ecc6fa90256f65b7ec8f780aa517449d7c3856af4c",
+  "actual_O8_forwards": 1532,
+  "qualification_forwards": 8,
+  "warmup_forwards": 8,
+  "cases": [
+    {
+      "case": "low_priority_parallel",
+      "run": "r1_old",
+      "repeat": 1,
+      "identity_model": "old",
+      "offered_slots": 392,
+      "processed_frames": 388,
+      "skipped_slots": 4,
+      "deadline_misses": 78,
+      "mean_processing_ms": 170.5876630541237,
+      "P95_release_to_count_ms": 338.0635420499999,
+      "source_down_count": 10,
+      "source_up_count": 0,
+      "processed_per_second_over_offered_duration": 4.948979591836735,
+      "periodic_events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 11,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 22,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 32,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 37,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "actual_background_jobs": 10,
+      "all_actual_O8_outputs_byte_exact_to_prior_real_video": true,
+      "clock_start_monotonic_ns": 10571347870444,
+      "period_end_monotonic_ns": 10649747870444,
+      "ring_peak_compressed_bytes": 4418520,
+      "enqueued_JPEG_payload_bytes_total": 6327471,
+      "producer_read_frames": 392,
+      "producer_thread_terminal": true,
+      "cumulative_parent_proc_status": "Name:\tpython3\nUmask:\t0022\nState:\tR (running)\nTgid:\t2739\nNgid:\t0\nPid:\t2739\nPPid:\t1\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t32\nGroups:\t0 \nNStgid:\t2739\nNSpid:\t2739\nNSpgid:\t2739\nNSsid:\t2739\nKthread:\t0\nVmPeak:\t  541004 kB\nVmSize:\t  533192 kB\nVmLck:\t      16 kB\nVmPin:\t       0 kB\nVmHWM:\t  231724 kB\nVmRSS:\t  172004 kB\nRssAnon:\t  145636 kB\nRssFile:\t   26368 kB\nRssShmem:\t       0 kB\nVmData:\t  232224 kB\nVmStk:\t     132 kB\nVmExe:\t    3832 kB\nVmLib:\t  235324 kB\nVmPTE:\t     448 kB\nVmSwap:\t   17664 kB\nCoreDumping:\t0\nTHP_enabled:\t0\nuntag_mask:\t0xffffffff\nThreads:\t3\nSigQ:\t0/2901\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t000001ffffffffff\nCapEff:\t000001ffffffffff\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tunknown\nSpeculationIndirectBranch:\tunsupported\nCpus_allowed:\t3\nCpus_allowed_list:\t0-1\nMems_allowed:\t1\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t6148\nnonvoluntary_ctxt_switches:\t1824\n"
+    },
+    {
+      "case": "low_priority_parallel",
+      "run": "r1_new",
+      "repeat": 1,
+      "identity_model": "new",
+      "offered_slots": 392,
+      "processed_frames": 369,
+      "skipped_slots": 23,
+      "deadline_misses": 94,
+      "mean_processing_ms": 183.24868264769646,
+      "P95_release_to_count_ms": 349.640903,
+      "source_down_count": 10,
+      "source_up_count": 0,
+      "processed_per_second_over_offered_duration": 4.706632653061225,
+      "periodic_events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 11,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 22,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 32,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 37,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "actual_background_jobs": 10,
+      "all_actual_O8_outputs_byte_exact_to_prior_real_video": true,
+      "clock_start_monotonic_ns": 10659167831330,
+      "period_end_monotonic_ns": 10737567831330,
+      "ring_peak_compressed_bytes": 4418520,
+      "enqueued_JPEG_payload_bytes_total": 6327471,
+      "producer_read_frames": 392,
+      "producer_thread_terminal": true,
+      "cumulative_parent_proc_status": "Name:\tpython3\nUmask:\t0022\nState:\tR (running)\nTgid:\t2739\nNgid:\t0\nPid:\t2739\nPPid:\t1\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t32\nGroups:\t0 \nNStgid:\t2739\nNSpid:\t2739\nNSpgid:\t2739\nNSsid:\t2739\nKthread:\t0\nVmPeak:\t  541004 kB\nVmSize:\t  530952 kB\nVmLck:\t      16 kB\nVmPin:\t       0 kB\nVmHWM:\t  231724 kB\nVmRSS:\t  119736 kB\nRssAnon:\t  107064 kB\nRssFile:\t   12672 kB\nRssShmem:\t       0 kB\nVmData:\t  229984 kB\nVmStk:\t     132 kB\nVmExe:\t    3832 kB\nVmLib:\t  235324 kB\nVmPTE:\t     446 kB\nVmSwap:\t   54016 kB\nCoreDumping:\t0\nTHP_enabled:\t0\nuntag_mask:\t0xffffffff\nThreads:\t3\nSigQ:\t0/2901\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t000001ffffffffff\nCapEff:\t000001ffffffffff\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tunknown\nSpeculationIndirectBranch:\tunsupported\nCpus_allowed:\t3\nCpus_allowed_list:\t0-1\nMems_allowed:\t1\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t8152\nnonvoluntary_ctxt_switches:\t3086\n"
+    },
+    {
+      "case": "low_priority_parallel",
+      "run": "r2_new",
+      "repeat": 2,
+      "identity_model": "new",
+      "offered_slots": 392,
+      "processed_frames": 385,
+      "skipped_slots": 7,
+      "deadline_misses": 100,
+      "mean_processing_ms": 173.7861405090909,
+      "P95_release_to_count_ms": 351.85187759999997,
+      "source_down_count": 10,
+      "source_up_count": 0,
+      "processed_per_second_over_offered_duration": 4.910714285714286,
+      "periodic_events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 4,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 7,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 10,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 16,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 19,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 21,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 31,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 36,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "actual_background_jobs": 10,
+      "all_actual_O8_outputs_byte_exact_to_prior_real_video": true,
+      "clock_start_monotonic_ns": 10749351933209,
+      "period_end_monotonic_ns": 10827751933209,
+      "ring_peak_compressed_bytes": 4418520,
+      "enqueued_JPEG_payload_bytes_total": 6327471,
+      "producer_read_frames": 392,
+      "producer_thread_terminal": true,
+      "cumulative_parent_proc_status": "Name:\tpython3\nUmask:\t0022\nState:\tR (running)\nTgid:\t2739\nNgid:\t0\nPid:\t2739\nPPid:\t1\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t32\nGroups:\t0 \nNStgid:\t2739\nNSpid:\t2739\nNSpgid:\t2739\nNSsid:\t2739\nKthread:\t0\nVmPeak:\t  541792 kB\nVmSize:\t  533872 kB\nVmLck:\t      16 kB\nVmPin:\t       0 kB\nVmHWM:\t  231724 kB\nVmRSS:\t  111596 kB\nRssAnon:\t   98668 kB\nRssFile:\t   12928 kB\nRssShmem:\t       0 kB\nVmData:\t  232904 kB\nVmStk:\t     132 kB\nVmExe:\t    3832 kB\nVmLib:\t  235324 kB\nVmPTE:\t     448 kB\nVmSwap:\t   65408 kB\nCoreDumping:\t0\nTHP_enabled:\t0\nuntag_mask:\t0xffffffff\nThreads:\t3\nSigQ:\t0/2901\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t000001ffffffffff\nCapEff:\t000001ffffffffff\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tunknown\nSpeculationIndirectBranch:\tunsupported\nCpus_allowed:\t3\nCpus_allowed_list:\t0-1\nMems_allowed:\t1\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t11007\nnonvoluntary_ctxt_switches:\t4796\n"
+    },
+    {
+      "case": "low_priority_parallel",
+      "run": "r2_old",
+      "repeat": 2,
+      "identity_model": "old",
+      "offered_slots": 392,
+      "processed_frames": 390,
+      "skipped_slots": 2,
+      "deadline_misses": 72,
+      "mean_processing_ms": 165.39263475641025,
+      "P95_release_to_count_ms": 314.61014739999996,
+      "source_down_count": 10,
+      "source_up_count": 0,
+      "processed_per_second_over_offered_duration": 4.974489795918367,
+      "periodic_events": [
+        {
+          "time_s": 360.0,
+          "track_id": 3,
+          "direction": "A->B",
+          "frame0": 9000
+        },
+        {
+          "time_s": 365.4,
+          "track_id": 5,
+          "direction": "A->B",
+          "frame0": 9135
+        },
+        {
+          "time_s": 370.6,
+          "track_id": 6,
+          "direction": "A->B",
+          "frame0": 9265
+        },
+        {
+          "time_s": 373.6,
+          "track_id": 8,
+          "direction": "A->B",
+          "frame0": 9340
+        },
+        {
+          "time_s": 373.8,
+          "track_id": 11,
+          "direction": "A->B",
+          "frame0": 9345
+        },
+        {
+          "time_s": 378.8,
+          "track_id": 17,
+          "direction": "A->B",
+          "frame0": 9470
+        },
+        {
+          "time_s": 387.6,
+          "track_id": 20,
+          "direction": "A->B",
+          "frame0": 9690
+        },
+        {
+          "time_s": 391.6,
+          "track_id": 22,
+          "direction": "A->B",
+          "frame0": 9790
+        },
+        {
+          "time_s": 396.2,
+          "track_id": 32,
+          "direction": "A->B",
+          "frame0": 9905
+        },
+        {
+          "time_s": 433.2,
+          "track_id": 37,
+          "direction": "A->B",
+          "frame0": 10830
+        }
+      ],
+      "actual_background_jobs": 10,
+      "all_actual_O8_outputs_byte_exact_to_prior_real_video": true,
+      "clock_start_monotonic_ns": 10836409020653,
+      "period_end_monotonic_ns": 10914809020653,
+      "ring_peak_compressed_bytes": 4418520,
+      "enqueued_JPEG_payload_bytes_total": 6327471,
+      "producer_read_frames": 392,
+      "producer_thread_terminal": true,
+      "cumulative_parent_proc_status": "Name:\tpython3\nUmask:\t0022\nState:\tR (running)\nTgid:\t2739\nNgid:\t0\nPid:\t2739\nPPid:\t1\nTracerPid:\t0\nUid:\t0\t0\t0\t0\nGid:\t0\t0\t0\t0\nFDSize:\t32\nGroups:\t0 \nNStgid:\t2739\nNSpid:\t2739\nNSpgid:\t2739\nNSsid:\t2739\nKthread:\t0\nVmPeak:\t  542004 kB\nVmSize:\t  533892 kB\nVmLck:\t      16 kB\nVmPin:\t       0 kB\nVmHWM:\t  231724 kB\nVmRSS:\t  104128 kB\nRssAnon:\t   92352 kB\nRssFile:\t   11776 kB\nRssShmem:\t       0 kB\nVmData:\t  232924 kB\nVmStk:\t     132 kB\nVmExe:\t    3832 kB\nVmLib:\t  235324 kB\nVmPTE:\t     448 kB\nVmSwap:\t   71552 kB\nCoreDumping:\t0\nTHP_enabled:\t0\nuntag_mask:\t0xffffffff\nThreads:\t3\nSigQ:\t0/2901\nSigPnd:\t0000000000000000\nShdPnd:\t0000000000000000\nSigBlk:\t0000000000000000\nSigIgn:\t0000000001001000\nSigCgt:\t0000000100000002\nCapInh:\t0000000000000000\nCapPrm:\t000001ffffffffff\nCapEff:\t000001ffffffffff\nCapBnd:\t000001ffffffffff\nCapAmb:\t0000000000000000\nNoNewPrivs:\t0\nSeccomp:\t0\nSeccomp_filters:\t0\nSpeculation_Store_Bypass:\tunknown\nSpeculationIndirectBranch:\tunsupported\nCpus_allowed:\t3\nCpus_allowed_list:\t0-1\nMems_allowed:\t1\nMems_allowed_list:\t0\nvoluntary_ctxt_switches:\t12902\nnonvoluntary_ctxt_switches:\t5562\n"
+    }
+  ],
+  "new_training_updates": 0,
+  "actual_camera_and_RFID_hardware": false,
+  "whole_goal_complete": false,
+  "foreground_main_thread_affinity": [
+    0,
+    1
+  ],
+  "PL_before": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.bit",
+  "historical_identity_qualification": {
+    "saved_PID": 2149,
+    "saved_boot_id": "9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f",
+    "PID_compared_across_boots": false
+  },
+  "historical_video_qualification": {
+    "saved_PID": 28957,
+    "saved_boot_id": "9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f",
+    "PID_compared_across_boots": false
+  },
+  "initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "BGR_actual_vector_gate": [
+    {
+      "scene": "original",
+      "frame0": 8995,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "original",
+      "frame0": 9345,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "original",
+      "frame0": 9790,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "original",
+      "frame0": 10830,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "toros",
+      "frame0": 110,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "toros",
+      "frame0": 193,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "toros",
+      "frame0": 248,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    },
+    {
+      "scene": "toros",
+      "frame0": 396,
+      "BGR_input_to_complete_O8_raw_byte_exact": true
+    }
+  ],
+  "hardware_status": {
+    "MM2S": "0x1002",
+    "S2MM": "0x1002",
+    "core": "0x2",
+    "error": "0x0",
+    "version": "0x80001"
+  },
+  "close_error": null,
+  "PL_after": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.bit",
+  "PL_after_sha256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "main_affinity_restored": [
+    0,
+    1
+  ],
+  "memory_after": "MemTotal:         503464 kB\nMemFree:           51524 kB\nMemAvailable:     363816 kB\nBuffers:            1868 kB\nCached:           308796 kB\nSwapCached:        15004 kB\nActive:           294816 kB\nInactive:         120688 kB\nActive(anon):      66336 kB\nInactive(anon):    38748 kB\nActive(file):     228480 kB\nInactive(file):    81940 kB\nUnevictable:          16 kB\nMlocked:              16 kB\nHighTotal:             0 kB\nHighFree:              0 kB\nLowTotal:         503464 kB\nLowFree:           51524 kB\nSwapTotal:        524284 kB\nSwapFree:         380924 kB\nDirty:                80 kB\nWriteback:             0 kB\nAnonPages:        102552 kB\nMapped:            20920 kB\nShmem:               244 kB\nKReclaimable:      13712 kB\nSlab:              28112 kB\nSReclaimable:      13712 kB\nSUnreclaim:        14400 kB\nKernelStack:         752 kB\nPageTables:         2368 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:      776016 kB\nCommitted_AS:     427784 kB\nVmallocTotal:     507904 kB\nVmallocUsed:        2044 kB\nVmallocChunk:          0 kB\nPercpu:              320 kB\nCmaTotal:         131072 kB\nCmaFree:           25464 kB\n"
+}

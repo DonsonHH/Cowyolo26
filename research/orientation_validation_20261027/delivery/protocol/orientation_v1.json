@@ -1,0 +1,84 @@
+{
+  "name": "Frozen Cows detector paired0/90degree validation control v1",
+  "created_UTC": "2026-10-27T14:59:34.158162+00:00",
+  "scope": "Paired development sensitivity test on the same previously used validation images. Not a new independent test or proof of video failure cause.",
+  "source_checkpoint_freeze_sha256": "44272a1dcdc1c94691f75cda5543dd6ac1752b4dfc5c3ed9e7a046761c216585",
+  "source_prepared_manifest_sha256": "fd664b040229d249fc0fd4135466696141f95e3449fad5bb98aeb2f3062f5423",
+  "validation_images": 1571,
+  "validation_objects": 1864,
+  "source_dates": {
+    "2020-02-28": 275,
+    "2020-02-29": 216,
+    "2020-03-01": 279,
+    "2020-03-02": 205,
+    "2020-03-03": 302,
+    "2020-03-04": 294
+  },
+  "seeds": [
+    26,
+    27,
+    28
+  ],
+  "checkpoints": [
+    {
+      "seed": 26,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74"
+    },
+    {
+      "seed": 27,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226"
+    },
+    {
+      "seed": 28,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216"
+    }
+  ],
+  "orientations": [
+    "original",
+    "clockwise90"
+  ],
+  "pixel_transformation": "np.rot90(native_cv2_BGR,k=-1).copy(); no interpolation/re-encoding/crop; original source bytes retained",
+  "box_transformation": "continuous image edges: [x1,y1,x2,y2] -> [H-y2,x1,H-y1,x2] with output dimensions(H,W)",
+  "prediction": {
+    "imgsz": 320,
+    "rect": false,
+    "batch": 16,
+    "confidence_floor": 0.01,
+    "nominal_iou_argument": 0.5,
+    "maximum_detections": 300,
+    "half": false,
+    "augment": false,
+    "device": 0
+  },
+  "metrics": {
+    "primary_confidence": 0.2,
+    "secondary_confidence": 0.01,
+    "box_IoU_thresholds": [
+      0.5,
+      0.75
+    ],
+    "matching": "one-to-one maximum-cardinality then maximum-IoU assignment, independent of prediction score after confidence filtering",
+    "primary": "matched cow body recall and precision at confidence0.2/IoU0.5; all6conditions reported",
+    "paired_uncertainty": "resample complete source dates10000times with RNG26; only6date clusters, exploratory bounds",
+    "not_reported": "No native_video passage accuracy, independent-farm claim or PYNQ performance"
+  },
+  "sample_visuals": {
+    "selection": "first8 validation basenames ranked by SHA256(orientation-control-v1:+basename), fixed before predictions",
+    "files": [
+      "07802.jpg",
+      "08339.jpg",
+      "07609.jpg",
+      "07171.jpg",
+      "08327.jpg",
+      "08348.jpg",
+      "07515.jpg",
+      "07077.jpg"
+    ]
+  },
+  "new_training_updates": 0,
+  "source_Toros_or_candidate_final_images_allowed": false,
+  "whole_goal_complete": false
+}

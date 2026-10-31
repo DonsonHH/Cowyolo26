@@ -1,0 +1,217 @@
+{
+  "condition": "seed26",
+  "split": "val",
+  "images": 1571,
+  "references": 1864,
+  "predictions": 1520,
+  "matched": 592,
+  "unmatched_references": 1272,
+  "unmatched_predictions": 928,
+  "reference_AABB_recall": 0.31759656652360513,
+  "prediction_precision_vs_reference_AABB": 0.3894736842105263,
+  "strata": {
+    "all": {
+      "reference_count": 1864,
+      "matched": 592,
+      "unmatched": 1272,
+      "engineering_crop_gate_passes": 6,
+      "ideal_AABB_exterior_fraction_all_references": {
+        "count": 1864,
+        "minimum": 0.0,
+        "p10": 0.0511425485382347,
+        "median": 0.30438195674804536,
+        "p90": 0.5004230832493862,
+        "maximum": 0.5879311365881246,
+        "mean": 0.2890648351215156
+      },
+      "metrics_on_matched": {
+        "reference_coverage": {
+          "count": 592,
+          "minimum": 0.5508228052768944,
+          "p10": 0.6520462652935501,
+          "median": 0.7535908709576902,
+          "p90": 0.8870031543905533,
+          "maximum": 1.0,
+          "mean": 0.7605101385317312
+        },
+        "reference_exterior_fraction": {
+          "count": 592,
+          "minimum": 0.031554938356670226,
+          "p10": 0.1710163979636552,
+          "median": 0.27867939566866623,
+          "p90": 0.4086206880664332,
+          "maximum": 0.5178782565602869,
+          "mean": 0.2850335114755025
+        },
+        "polygon_IoU": {
+          "count": 592,
+          "minimum": 0.4173970632062588,
+          "p10": 0.4945639412093313,
+          "median": 0.5696615381574786,
+          "p90": 0.6736702849043028,
+          "maximum": 0.8340050693174438,
+          "mean": 0.5779097973320488
+        },
+        "center_error_native_px": {
+          "count": 592,
+          "minimum": 2.7688493020814677,
+          "p10": 30.31599492912641,
+          "median": 71.50298959382116,
+          "p90": 111.27730891253164,
+          "maximum": 158.65693091298036,
+          "mean": 71.51530810110631
+        }
+      }
+    },
+    "complete": {
+      "reference_count": 919,
+      "matched": 237,
+      "unmatched": 682,
+      "engineering_crop_gate_passes": 1,
+      "ideal_AABB_exterior_fraction_all_references": {
+        "count": 919,
+        "minimum": 0.0,
+        "p10": 0.025680363454539747,
+        "median": 0.2865180692501713,
+        "p90": 0.5009463760992808,
+        "maximum": 0.5797101293754483,
+        "mean": 0.27575057863509256
+      },
+      "metrics_on_matched": {
+        "reference_coverage": {
+          "count": 237,
+          "minimum": 0.5512806518814527,
+          "p10": 0.6399805930502532,
+          "median": 0.7322913473206347,
+          "p90": 0.8384962967308482,
+          "maximum": 0.999929021924265,
+          "mean": 0.7375124192483715
+        },
+        "reference_exterior_fraction": {
+          "count": 237,
+          "minimum": 0.10892618725897174,
+          "p10": 0.18779544962855457,
+          "median": 0.28217617006879114,
+          "p90": 0.40184377507923885,
+          "maximum": 0.46152597985325583,
+          "mean": 0.290559362042292
+        },
+        "polygon_IoU": {
+          "count": 237,
+          "minimum": 0.4179982325140122,
+          "p10": 0.4915240269196765,
+          "median": 0.547991320049777,
+          "p90": 0.6463283583209906,
+          "maximum": 0.7646822363072735,
+          "mean": 0.5617159794022851
+        },
+        "center_error_native_px": {
+          "count": 237,
+          "minimum": 6.946221994724902,
+          "p10": 43.893732775800345,
+          "median": 77.13786359499464,
+          "p90": 111.33260677693116,
+          "maximum": 141.10722873049417,
+          "mean": 77.46749728909155
+        }
+      }
+    },
+    "clipped": {
+      "reference_count": 945,
+      "matched": 355,
+      "unmatched": 590,
+      "engineering_crop_gate_passes": 5,
+      "ideal_AABB_exterior_fraction_all_references": {
+        "count": 945,
+        "minimum": 0.0,
+        "p10": 0.08286242639015846,
+        "median": 0.32315826679503357,
+        "p90": 0.5001212693604007,
+        "maximum": 0.5879311365881246,
+        "mean": 0.3020127734400583
+      },
+      "metrics_on_matched": {
+        "reference_coverage": {
+          "count": 355,
+          "minimum": 0.5508228052768944,
+          "p10": 0.6643114308890024,
+          "median": 0.7670169587989542,
+          "p90": 0.9127880866696936,
+          "maximum": 1.0,
+          "mean": 0.7758635454899179
+        },
+        "reference_exterior_fraction": {
+          "count": 355,
+          "minimum": 0.031554938356670226,
+          "p10": 0.16795238086968006,
+          "median": 0.2759743054828193,
+          "p90": 0.4103607045743955,
+          "maximum": 0.5178782565602869,
+          "mean": 0.28134442250556135
+        },
+        "polygon_IoU": {
+          "count": 355,
+          "minimum": 0.4173970632062588,
+          "p10": 0.4970234181755896,
+          "median": 0.5841366023415088,
+          "p90": 0.6834288544104641,
+          "maximum": 0.8340050693174438,
+          "mean": 0.588720881414736
+        },
+        "center_error_native_px": {
+          "count": 355,
+          "minimum": 2.7688493020814677,
+          "p10": 26.45546546222634,
+          "median": 66.68440398390652,
+          "p90": 110.05613378881567,
+          "maximum": 158.65693091298036,
+          "mean": 67.54159306574716
+        }
+      }
+    }
+  },
+  "by_date": {
+    "2020-02-28": {
+      "images": 275,
+      "references": 321,
+      "matched": 93,
+      "unmatched_references": 228,
+      "predictions": 159
+    },
+    "2020-02-29": {
+      "images": 216,
+      "references": 251,
+      "matched": 96,
+      "unmatched_references": 155,
+      "predictions": 192
+    },
+    "2020-03-01": {
+      "images": 279,
+      "references": 354,
+      "matched": 115,
+      "unmatched_references": 239,
+      "predictions": 382
+    },
+    "2020-03-02": {
+      "images": 205,
+      "references": 235,
+      "matched": 75,
+      "unmatched_references": 160,
+      "predictions": 300
+    },
+    "2020-03-03": {
+      "images": 302,
+      "references": 386,
+      "matched": 110,
+      "unmatched_references": 276,
+      "predictions": 302
+    },
+    "2020-03-04": {
+      "images": 294,
+      "references": 317,
+      "matched": 103,
+      "unmatched_references": 214,
+      "predictions": 185
+    }
+  }
+}

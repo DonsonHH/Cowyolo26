@@ -1,0 +1,46 @@
+{
+  "status": "PRIOR_STATIC_ADDRESS_AND_TWO_HOSTNAMES_ONLY_NO_NETWORK_CONFIGURATION_CHANGE",
+  "created_UTC": "2026-10-30T15:05:50.572443+00:00",
+  "ARP": [
+    {
+      "destination": "192.168.3.1",
+      "source_interface_IP": "192.168.3.13",
+      "return_code": 0,
+      "returned_bytes": 6,
+      "MAC": "30-8A-F7-F6-5B-5B",
+      "elapsed_s": 0.0,
+      "matches_prior_board_MAC": false
+    },
+    {
+      "destination": "192.168.2.99",
+      "source_interface_IP": "192.168.3.13",
+      "return_code": 67,
+      "returned_bytes": 0,
+      "MAC": null,
+      "elapsed_s": 3.1409999999996217,
+      "matches_prior_board_MAC": null
+    }
+  ],
+  "DNS": [
+    {
+      "name": "pynq",
+      "server": "192.168.3.1",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "pynq : DNS 名称不存在。"
+    },
+    {
+      "name": "pynq.local",
+      "server": "192.168.3.1",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "pynq.local : DNS 名称不存在。"
+    }
+  ],
+  "prior_board_MAC_not_assumed_stable": "AA-1B-CD-A6-D9-A8",
+  "network_configuration_changed": false,
+  "credentials_sent": false,
+  "new_model_forwards": 0,
+  "scope": "SendARP cannot exclude a device with an off-subnet address; failure does not prove board power or service state.",
+  "source_documentation": "https://learn.microsoft.com/en-us/windows/win32/api/iphlpapi/nf-iphlpapi-sendarp"
+}

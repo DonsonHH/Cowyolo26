@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/preflight.py", line 71, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/preflight.py", line 50, in main
+    loss,items=model(batch);loss=loss.sum()
+               ~~~~~^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/nn/tasks.py", line 143, in forward
+    return self.loss(x, *args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/nn/tasks.py", line 333, in loss
+    self.criterion = self.init_criterion()
+                     ~~~~~~~~~~~~~~~~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/nn/tasks.py", line 520, in init_criterion
+    return E2ELoss(self) if getattr(self, "end2end", False) else v8DetectionLoss(self)
+           ~~~~~~~^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/utils/loss.py", line 1174, in __init__
+    self.one2many = loss_fn(model, tal_topk=10)
+                    ~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/utils/loss.py", line 342, in __init__
+    h = model.args  # hyperparameters
+        ^^^^^^^^^^
+  File "/share/home/renly/miniconda3/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1962, in __getattr__
+    raise AttributeError(
+        f"'{type(self).__name__}' object has no attribute '{name}'"
+    )
+AttributeError: 'DetectionModel' object has no attribute 'args'
+srun: error: gpu02: task 0: Exited with exit code 1

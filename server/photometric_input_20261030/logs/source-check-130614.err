@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/photometric_input_20261030/tools/verify_source_inputs.py", line 45, in <module>
+    assert sha(row['image_alias'])==row['sha256']
+           ~~~^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/photometric_input_20261030/tools/verify_source_inputs.py", line 12, in sha
+    def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+                                     ^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'read_bytes'

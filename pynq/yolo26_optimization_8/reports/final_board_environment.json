@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "platform": "Linux-6.6.10-xilinx-v2024.1-g3c0eca68c652-armv7l-with-glibc2.35",
+  "Python": "3.10.4 (main, Apr  2 2022, 09:04:19) [GCC 11.2.0]",
+  "PYNQ": "3.1.1",
+  "numpy": "1.21.5",
+  "OpenCV": "4.5.4",
+  "loaded_bitfile": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.bit",
+  "bit_SHA256": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+  "hwh_SHA256": "d6cf7f228c93f06523ad8e71efa9c280ba924ecc93d13f8ecdf90351238b4a6a",
+  "core": "0x80001",
+  "MM2S": "0x1002",
+  "S2MM": "0x1002",
+  "core_status": "0x2",
+  "error": "0x0",
+  "FCLK0_MHz": 100.0,
+  "ips": {
+    "axi_dma_0": {
+      "type": "xilinx.com:ip:axi_dma:7.1",
+      "phys_addr": 1077936128,
+      "addr_range": 65536,
+      "driver": "<class 'pynq.lib.dma.DMA'>"
+    },
+    "conv_accel_0": {
+      "type": "xilinx.com:module_ref:optimization_4_queue_top:1.0",
+      "phys_addr": 1136656384,
+      "addr_range": 4096,
+      "driver": "<class 'pynq.overlay.DefaultIP'>"
+    },
+    "processing_system7_0": {
+      "type": "xilinx.com:ip:processing_system7:5.5",
+      "phys_addr": null,
+      "addr_range": null,
+      "driver": "<class 'pynq.overlay.DefaultIP'>"
+    }
+  },
+  "memstat_raw": "0 0 13844815946100772864",
+  "BO_live_bytes": 0,
+  "BO_count": 0,
+  "temperatures": {
+    "/sys/bus/iio/devices/iio:device0/in_temp0_raw": "2644",
+    "/sys/bus/iio/devices/iio:device0/in_temp0_scale": "123.040771484",
+    "/sys/bus/iio/devices/iio:device0/in_temp0_offset": "-2219"
+  },
+  "gpp": "g++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0",
+  "monotonic": 9764.279974454,
+  "preservation": {
+    "status": "PASS",
+    "files": 1762,
+    "missing": [],
+    "changed": [],
+    "added": []
+  }
+}

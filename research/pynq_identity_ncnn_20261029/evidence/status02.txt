@@ -1,0 +1,40 @@
+JobID|State|ExitCode|Elapsed|MaxRSS
+130572|COMPLETED|0:0|00:00:06|
+130572.batch|COMPLETED|0:0|00:00:06|1180K
+{"group": "old_gallery", "completed_real_image_forwards": {"TorchCPU": 30, "ncnnCPU": 30}}
+{"group": "new_gallery", "completed_real_image_forwards": {"TorchCPU": 60, "ncnnCPU": 60}}
+{"group": "labelled_query", "completed_real_image_forwards": {"TorchCPU": 120, "ncnnCPU": 120}}
+{"group": "real_event_query", "completed_real_image_forwards": {"TorchCPU": 132, "ncnnCPU": 132}}
+{"status": "FIXED_BODY_ENCODER_EXPORTED_AND132_NCNN_EMBEDDINGS_PASS_REFERENCE_AND_RETRIEVAL_GATES", "created_UTC": "2026-10-29T15:48:23.430715+00:00", "job_id": "130572", "protocol_sha256": "e702092576c023c26d5f66f99fe16a512923feac02d9bd8fd37305e013a1e341", "encoder_checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b", "export_fp16": false, "ncnn_operators": ["BinaryOp", "Convolution", "ConvolutionDepthWise", "HardSigmoid", "HardSwish", "InnerProduct", "Input", "Pooling", "Split"], "real_image_forwards": {"TorchCPU": 132, "ncnnCPU": 132}, "export_trace_and_converter_probe_forwards_not_in_these_counts": true, "maximum_normalized_embedding_difference": 4.8354268074035645e-06, "maximum_prior_embedding_difference": 2.7567148208618164e-07, "mean_server_ncnn_embedding_ms": 1.9000632575757577, "all_retrieval_decisions_exact": true, "new_training_updates": 0, "board_inference_executed": false, "identity_accuracy_newly_proven": false, "whole_goal_complete": false}
+{
+  "status": "FIXED_BODY_ENCODER_EXPORTED_AND132_NCNN_EMBEDDINGS_PASS_REFERENCE_AND_RETRIEVAL_GATES",
+  "created_UTC": "2026-10-29T15:48:23.430715+00:00",
+  "job_id": "130572",
+  "protocol_sha256": "e702092576c023c26d5f66f99fe16a512923feac02d9bd8fd37305e013a1e341",
+  "encoder_checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+  "export_fp16": false,
+  "ncnn_operators": [
+    "BinaryOp",
+    "Convolution",
+    "ConvolutionDepthWise",
+    "HardSigmoid",
+    "HardSwish",
+    "InnerProduct",
+    "Input",
+    "Pooling",
+    "Split"
+  ],
+  "real_image_forwards": {
+    "TorchCPU": 132,
+    "ncnnCPU": 132
+  },
+  "export_trace_and_converter_probe_forwards_not_in_these_counts": true,
+  "maximum_normalized_embedding_difference": 4.8354268074035645e-06,
+  "maximum_prior_embedding_difference": 2.7567148208618164e-07,
+  "mean_server_ncnn_embedding_ms": 1.9000632575757577,
+  "all_retrieval_decisions_exact": true,
+  "new_training_updates": 0,
+  "board_inference_executed": false,
+  "identity_accuracy_newly_proven": false,
+  "whole_goal_complete": false
+}

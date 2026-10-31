@@ -1,0 +1,86 @@
+{
+  "name": "Conv-boundary fixed-range QAT and paired float continuation, development v1",
+  "seeds": [
+    26,
+    27,
+    28
+  ],
+  "scope": "Training/validation only. No fresh holdout claim. No old evaluation/future holdout image forward in this stage. Not an FPGA or all-integer implementation.",
+  "source_models": [
+    {
+      "seed": 26,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+      "sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+      "original_selected_epoch": 5
+    },
+    {
+      "seed": 27,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/best_encoder.pt",
+      "sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+      "original_selected_epoch": 5
+    },
+    {
+      "seed": 28,
+      "path": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/best_encoder.pt",
+      "sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+      "original_selected_epoch": 10
+    }
+  ],
+  "manifest_sha256": "dda82ba39a8a8f1b82bd309f5272ceb0471f74103850678e7355e6faff078aba",
+  "calibration_manifest_sha256": "2977907ef64834918fcf1f4bc5748b0285f08a4fb455574fa4da6eefc6a1e110",
+  "calibration": "Same64 training images as previous PTQ, deterministic BodyTransform; all fake quantisation disabled while observing float folded model; freeze all activation and weight scales before training, no validation calibration.",
+  "quantisation": {
+    "conv_count": 52,
+    "input_and_output": "UINT8 affine MinMax per tensor, range0..255",
+    "weight": "INT8 symmetric per output channel, range-128..127",
+    "bn": "Fold in eval with stored running statistics",
+    "bias": "FP32 retained",
+    "non_conv_operations": "FP32 retained",
+    "observers": "Frozen after train-only calibration; weights trained with straight-through fake-quant operations"
+  },
+  "conditions": [
+    "source_fp32",
+    "initial_fixed_range_qdq",
+    "paired_float_continuation",
+    "fixed_range_qat"
+  ],
+  "paired_control": "Identical source folded weights, training sample and augmentation seeds, optimiser, steps and loss. Float continuation has quantisers disabled throughout, QAT enabled throughout. All seeds reported.",
+  "training": {
+    "epochs": 6,
+    "batches_per_epoch": 20,
+    "identities_per_batch": 8,
+    "images_per_identity": 4,
+    "learning_rate": 3e-05,
+    "optimiser": "AdamW",
+    "weight_decay": 0.0001,
+    "loss": "mean(1-cos(student, frozen source teacher)) +0.25*batch-hard Euclidean triplet margin0.3",
+    "teacher": "Source trained encoder in eval on same augmented image; no validation/query training",
+    "checkpoint": "Fixed final epoch6; no checkpoint/seed selection"
+  },
+  "validation": "Existing5 registered+6unknown; galleryAug14 queriesAug18. Thresholds from ORT reference graph only using previous empirical FAR<=0.05 rule. Existing validation has been reused; exploratory development evidence.",
+  "reference_runtime": "CPU ORT1.23.2 optimisations disabled for reproducibility after previous default Windows mismatch. Default optimised output separately retained; not used to hide differences.",
+  "export_gate": {
+    "opset": 13,
+    "batch": 1,
+    "input": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "output": [
+      1,
+      576
+    ],
+    "training_vectors": 8,
+    "maximum_torch_ort_absolute_error": 0.001,
+    "minimum_cosine": 0.9999,
+    "maximum_weight_packing_absolute_error": 1e-06
+  },
+  "next_gate": "If training-only smoke export or finite real gradients fail, preserve artifacts and diagnose before full run; do not weaken fixed tolerances.",
+  "remaining_external_inputs": [
+    "independent counting-review JSON",
+    "PYNQ SSH/image/Vivado versions",
+    "raw-video identity mapping"
+  ]
+}

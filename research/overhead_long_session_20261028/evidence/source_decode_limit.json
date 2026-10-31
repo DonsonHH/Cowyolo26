@@ -1,0 +1,36 @@
+{
+  "status": "STRICT_SOURCE_FAILURE_RETAINED_AND_PACKET_CONTEXT_BOUND",
+  "strict_ffmpeg_exit": 183,
+  "showinfo_frames_before_stop": 15755,
+  "first_error": {
+    "log_line1": 31694,
+    "message": "[h264 @ 0x56305a8c1440] error while decoding MB 84 87, bytestream -11",
+    "latest_prior_showinfo": {
+      "output_frame0": 15751,
+      "pts": 56704230,
+      "relative_pts_time_s": 630.047
+    },
+    "context_lines": [
+      "[Parsed_showinfo_0 @ 0x145568001c00] n:15751 pts:56704230 pts_time:630.047 duration:   3600 duration_time:0.04    fmt:yuvj420p cl:left sar:0/1 s:2560x1440 i:P iskey:0 type:P checksum:F6C0ADCC plane_checksum:[028746B6 A232F3F2 D6FF7315] mean:[137 129 127] stdev:[37.0 4.9 3.6]",
+      "[Parsed_showinfo_0 @ 0x145568001c00] color_range:pc color_space:bt709 color_primaries:bt709 color_trc:bt709",
+      "[h264 @ 0x56305a8c1440] error while decoding MB 84 87, bytestream -11",
+      "[h264 @ 0x56305a8c1440] concealing 445 DC, 445 AC, 445 MV errors in I frame",
+      "[Parsed_showinfo_0 @ 0x145568001c00] n:15752 pts:56707830 pts_time:630.087 duration:   3600 duration_time:0.04    fmt:yuvj420p cl:left sar:0/1 s:2560x1440 i:P iskey:0 type:P checksum:E26C19E4 plane_checksum:[0D41B446 FED9F1B9 27FD73C7] mean:[137 129 127] stdev:[37.0 4.9 3.6]",
+      "[Parsed_showinfo_0 @ 0x145568001c00] color_range:pc color_space:bt709 color_primaries:bt709 color_trc:bt709"
+    ]
+  },
+  "source_packets": 15756,
+  "preceding_key_packet_index0": 15705,
+  "following_key_packet_index0": 15755,
+  "last_key_packet_index0": 15755,
+  "last_packet_end_byte": 260161466,
+  "conservative_quarantine_frames0_inclusive": [
+    15705,
+    15755
+  ],
+  "quarantine_reason": "Strict error occurs at the terminal packet group; conservatively retain from the prior keyframe through EOF. This bound is not exact damaged-frame ground truth.",
+  "exact_corrupt_frame_certified": false,
+  "full_video_clean_bitstream": false,
+  "new_model_predictions": 0,
+  "whole_goal_complete": false
+}

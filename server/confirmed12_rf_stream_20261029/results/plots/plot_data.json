@@ -1,0 +1,391 @@
+{
+  "case_states": [
+    {
+      "case_id": "S00_missing",
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      }
+    },
+    {
+      "case_id": "S01_single",
+      "terminal_status_counts": {
+        "RF_UNIQUE_CANDIDATE_UNVERIFIED": 5,
+        "VISUAL_ALL_CONDITIONS_REJECTED": 5,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      }
+    },
+    {
+      "case_id": "S02_duplicates",
+      "terminal_status_counts": {
+        "RF_UNIQUE_CANDIDATE_UNVERIFIED": 5,
+        "VISUAL_ALL_CONDITIONS_REJECTED": 5,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      }
+    },
+    {
+      "case_id": "S03_delay_inside",
+      "terminal_status_counts": {
+        "RF_UNIQUE_CANDIDATE_UNVERIFIED": 5,
+        "VISUAL_ALL_CONDITIONS_REJECTED": 5,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      }
+    },
+    {
+      "case_id": "S04_late",
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      }
+    },
+    {
+      "case_id": "S05_conflict",
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      }
+    },
+    {
+      "case_id": "S06_invalid",
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      }
+    },
+    {
+      "case_id": "S07_wrong_single",
+      "terminal_status_counts": {
+        "RF_UNIQUE_CANDIDATE_UNVERIFIED": 5,
+        "VISUAL_ALL_CONDITIONS_REJECTED": 5,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      }
+    },
+    {
+      "case_id": "S08_unregistered",
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      }
+    },
+    {
+      "case_id": "S09_missing_snapshot",
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "UNRESOLVED_NO_SNAPSHOT": 1,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 1
+      }
+    },
+    {
+      "case_id": "P00_burst_capacity",
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 4,
+        "UNRESOLVED_QUEUE_CAPACITY": 8
+      }
+    },
+    {
+      "case_id": "P01_expired",
+      "terminal_status_counts": {
+        "UNRESOLVED_EXPIRED_WAITING": 4,
+        "UNRESOLVED_QUEUE_CAPACITY": 8
+      }
+    }
+  ],
+  "counted_intervals": [
+    {
+      "event_id": "E001_f8995_tid86",
+      "track_id": 86,
+      "opened_frame0": 8940,
+      "closed_frame0": 8995,
+      "decision_frame0": 9010,
+      "injected_read_capture_frame0": 8990,
+      "RF_status": "RF_UNIQUE_CANDIDATE"
+    },
+    {
+      "event_id": "E002_f9135_tid88",
+      "track_id": 88,
+      "opened_frame0": 9080,
+      "closed_frame0": 9135,
+      "decision_frame0": 9150,
+      "injected_read_capture_frame0": 9130,
+      "RF_status": "RF_UNIQUE_CANDIDATE"
+    },
+    {
+      "event_id": "E003_f9265_tid91",
+      "track_id": 91,
+      "opened_frame0": 9205,
+      "closed_frame0": 9265,
+      "decision_frame0": 9280,
+      "injected_read_capture_frame0": 9260,
+      "RF_status": "RF_UNIQUE_CANDIDATE"
+    },
+    {
+      "event_id": "E004_f9340_tid93",
+      "track_id": 93,
+      "opened_frame0": 9275,
+      "closed_frame0": 9340,
+      "decision_frame0": 9355,
+      "injected_read_capture_frame0": 9335,
+      "RF_status": "RF_SHARED_WINDOW"
+    },
+    {
+      "event_id": "E005_f9345_tid95",
+      "track_id": 95,
+      "opened_frame0": 9305,
+      "closed_frame0": 9345,
+      "decision_frame0": 9360,
+      "injected_read_capture_frame0": 9340,
+      "RF_status": "RF_SHARED_WINDOW"
+    },
+    {
+      "event_id": "E006_f9365_tid94",
+      "track_id": 94,
+      "opened_frame0": 9320,
+      "closed_frame0": 9365,
+      "decision_frame0": 9380,
+      "injected_read_capture_frame0": 9360,
+      "RF_status": "RF_SHARED_WINDOW"
+    },
+    {
+      "event_id": "E007_f9465_tid96",
+      "track_id": 96,
+      "opened_frame0": 9385,
+      "closed_frame0": 9465,
+      "decision_frame0": 9480,
+      "injected_read_capture_frame0": 9460,
+      "RF_status": "RF_SHARED_WINDOW"
+    },
+    {
+      "event_id": "E008_f9605_tid103",
+      "track_id": 103,
+      "opened_frame0": 9555,
+      "closed_frame0": 9605,
+      "decision_frame0": 9620,
+      "injected_read_capture_frame0": 9600,
+      "RF_status": "RF_SHARED_WINDOW"
+    },
+    {
+      "event_id": "E009_f9690_tid98",
+      "track_id": 98,
+      "opened_frame0": 9395,
+      "closed_frame0": 9690,
+      "decision_frame0": 9705,
+      "injected_read_capture_frame0": 9685,
+      "RF_status": "RF_SHARED_WINDOW"
+    },
+    {
+      "event_id": "E010_f9790_tid102",
+      "track_id": 102,
+      "opened_frame0": 9515,
+      "closed_frame0": 9790,
+      "decision_frame0": 9805,
+      "injected_read_capture_frame0": 9785,
+      "RF_status": "RF_SHARED_WINDOW"
+    },
+    {
+      "event_id": "E011_f9900_tid117",
+      "track_id": 117,
+      "opened_frame0": 9815,
+      "closed_frame0": 9900,
+      "decision_frame0": 9915,
+      "injected_read_capture_frame0": 9895,
+      "RF_status": "RF_UNIQUE_CANDIDATE"
+    },
+    {
+      "event_id": "E012_f10830_tid141",
+      "track_id": 141,
+      "opened_frame0": 10755,
+      "closed_frame0": 10830,
+      "decision_frame0": 10845,
+      "injected_read_capture_frame0": 10825,
+      "RF_status": "RF_UNIQUE_CANDIDATE"
+    }
+  ],
+  "focus_context": {
+    "frame0": 9480,
+    "kind": "RF_CAUSAL_CONTEXT",
+    "event_id": "E007_f9465_tid96",
+    "target_reservation_id": "v-7f956dc0f8b2d9c2431d",
+    "passages": [
+      {
+        "event_id": "v-61198c0cecde527b69e0",
+        "opened": 8940,
+        "closed": 8995,
+        "snapshot_id": "E001_f8995_tid86",
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-4e4507caa5e8c1883405",
+        "opened": 9080,
+        "closed": 9135,
+        "snapshot_id": "E002_f9135_tid88",
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-d5a2e745f13066f06e27",
+        "opened": 9135,
+        "closed": 9135,
+        "snapshot_id": null,
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-2224204092e33de78b2a",
+        "opened": 9205,
+        "closed": 9265,
+        "snapshot_id": "E003_f9265_tid91",
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-ceaa9819c0bd304b4d3f",
+        "opened": 9275,
+        "closed": 9340,
+        "snapshot_id": "E004_f9340_tid93",
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-39b291ed5f98b2983073",
+        "opened": 9305,
+        "closed": 9345,
+        "snapshot_id": "E005_f9345_tid95",
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-97b9b071a022090ab8f2",
+        "opened": 9320,
+        "closed": 9365,
+        "snapshot_id": "E006_f9365_tid94",
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-7f956dc0f8b2d9c2431d",
+        "opened": 9385,
+        "closed": 9465,
+        "snapshot_id": "E007_f9465_tid96",
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-910f32049bf9c6d79ecc",
+        "opened": 9395,
+        "closed": 10889,
+        "snapshot_id": null,
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-0544f572120394a84a1c",
+        "opened": 9400,
+        "closed": 9400,
+        "snapshot_id": null,
+        "direction": "A->B",
+        "reader": "lane1"
+      },
+      {
+        "event_id": "v-b9f256f07364b6c64912",
+        "opened": 9470,
+        "closed": 10889,
+        "snapshot_id": null,
+        "direction": "A->B",
+        "reader": "lane1"
+      }
+    ],
+    "received_reads": [
+      {
+        "read_id": "S01_single_read001_primary",
+        "code": "SIM-TAG-001",
+        "captured": 8990,
+        "received": 8990,
+        "reader": "lane1",
+        "valid": true
+      },
+      {
+        "read_id": "S01_single_read002_primary",
+        "code": "SIM-TAG-002",
+        "captured": 9130,
+        "received": 9130,
+        "reader": "lane1",
+        "valid": true
+      },
+      {
+        "read_id": "S01_single_read003_primary",
+        "code": "SIM-TAG-003",
+        "captured": 9260,
+        "received": 9260,
+        "reader": "lane1",
+        "valid": true
+      },
+      {
+        "read_id": "S01_single_read004_primary",
+        "code": "SIM-TAG-004",
+        "captured": 9335,
+        "received": 9335,
+        "reader": "lane1",
+        "valid": true
+      },
+      {
+        "read_id": "S01_single_read005_primary",
+        "code": "SIM-TAG-005",
+        "captured": 9340,
+        "received": 9340,
+        "reader": "lane1",
+        "valid": true
+      },
+      {
+        "read_id": "S01_single_read006_primary",
+        "code": "SIM-TAG-006",
+        "captured": 9360,
+        "received": 9360,
+        "reader": "lane1",
+        "valid": true
+      },
+      {
+        "read_id": "S01_single_read007_primary",
+        "code": "SIM-TAG-007",
+        "captured": 9460,
+        "received": 9460,
+        "reader": "lane1",
+        "valid": true
+      }
+    ],
+    "already_consumed_read_ids": [
+      "S01_single_read001_primary",
+      "S01_single_read002_primary",
+      "S01_single_read003_primary"
+    ]
+  },
+  "focus_read": {
+    "read_id": "S01_single_read007_primary",
+    "code": "SIM-TAG-007",
+    "captured": 9460,
+    "received": 9460,
+    "reader": "lane1",
+    "valid": true
+  },
+  "focus_matching_passages": [
+    {
+      "event_id": "v-7f956dc0f8b2d9c2431d",
+      "opened": 9385,
+      "closed": 9465,
+      "snapshot_id": "E007_f9465_tid96",
+      "direction": "A->B",
+      "reader": "lane1"
+    },
+    {
+      "event_id": "v-910f32049bf9c6d79ecc",
+      "opened": 9395,
+      "closed": 10889,
+      "snapshot_id": null,
+      "direction": "A->B",
+      "reader": "lane1"
+    }
+  ],
+  "uncounted_visual_reservations": 13,
+  "source_summary_sha256": "660df794e467ceb9f5b1daa081a3035a098ffccd71e7dd98a8eea0955fb0fbc9",
+  "source_trace_sha256": "0afdcd540e119b1c7e2e52ab76df1b41ab521d7c16f2f0b4376af3f2750668ba"
+}

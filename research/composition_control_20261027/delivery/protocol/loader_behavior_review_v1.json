@@ -1,0 +1,10 @@
+{
+  "purpose": "Document actual fixed-version loader conventions found by preflight, without changing training recipe",
+  "validation_order": "rect=True validation sorts images by aspect ratio. Check exact membership and actual source order equality between arms rather than original manifest sequence.",
+  "duplicate_box_rows": "Ultralytics8.4.63 removes exact duplicate float32 class/bbox rows within each image. Per-slot source comparison in129836 explains all changes.",
+  "mixed": {"source_rows":10992,"actual_loader_rows":10986,"slots_with_duplicate_rows":6},
+  "real_repeated": {"source_rows":11230,"actual_loader_rows":11223,"slots_with_duplicate_rows":7},
+  "label_bytes_and_source_files_modified": false,
+  "training_protocol_or_parameter_selection_changed": false,
+  "failed_preflight_jobs_retained": [129832,129835]
+}

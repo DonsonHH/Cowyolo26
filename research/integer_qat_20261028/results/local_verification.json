@@ -1,0 +1,135 @@
+{
+  "status": "ALL_PAIRED_QAT_DELIVERY_FILES_AND12_VALIDATION_CONDITIONS_LOCALLY_VERIFIED",
+  "files": 145,
+  "bytes": 97165927,
+  "archive_sha256": "921774b9dc00245149a5602b682c316c6d0a2a3baba6bde5efa737c2dd055330",
+  "validation_conditions": [
+    {
+      "seed": 26,
+      "condition": "source_folded_fp32",
+      "C": 18,
+      "W": 0,
+      "U": 7,
+      "closed_top1": 25,
+      "unknown_false_accepts": 0,
+      "threshold": 0.8445392605552502
+    },
+    {
+      "seed": 26,
+      "condition": "initial_integer",
+      "C": 2,
+      "W": 0,
+      "U": 23,
+      "closed_top1": 18,
+      "unknown_false_accepts": 1,
+      "threshold": 0.9183051897063301
+    },
+    {
+      "seed": 26,
+      "condition": "paired_float_continuation",
+      "C": 18,
+      "W": 0,
+      "U": 7,
+      "closed_top1": 25,
+      "unknown_false_accepts": 1,
+      "threshold": 0.856968366705154
+    },
+    {
+      "seed": 26,
+      "condition": "integer_forward_qat",
+      "C": 10,
+      "W": 1,
+      "U": 14,
+      "closed_top1": 24,
+      "unknown_false_accepts": 1,
+      "threshold": 0.9538350432274523
+    },
+    {
+      "seed": 27,
+      "condition": "source_folded_fp32",
+      "C": 14,
+      "W": 0,
+      "U": 11,
+      "closed_top1": 25,
+      "unknown_false_accepts": 1,
+      "threshold": 0.8642474938085962
+    },
+    {
+      "seed": 27,
+      "condition": "initial_integer",
+      "C": 1,
+      "W": 0,
+      "U": 24,
+      "closed_top1": 18,
+      "unknown_false_accepts": 0,
+      "threshold": 0.9427465088566868
+    },
+    {
+      "seed": 27,
+      "condition": "paired_float_continuation",
+      "C": 16,
+      "W": 0,
+      "U": 9,
+      "closed_top1": 25,
+      "unknown_false_accepts": 1,
+      "threshold": 0.8783358336871954
+    },
+    {
+      "seed": 27,
+      "condition": "integer_forward_qat",
+      "C": 9,
+      "W": 0,
+      "U": 16,
+      "closed_top1": 25,
+      "unknown_false_accepts": 1,
+      "threshold": 0.949526677532107
+    },
+    {
+      "seed": 28,
+      "condition": "source_folded_fp32",
+      "C": 15,
+      "W": 0,
+      "U": 10,
+      "closed_top1": 25,
+      "unknown_false_accepts": 1,
+      "threshold": 0.830615758749053
+    },
+    {
+      "seed": 28,
+      "condition": "initial_integer",
+      "C": 3,
+      "W": 0,
+      "U": 22,
+      "closed_top1": 17,
+      "unknown_false_accepts": 0,
+      "threshold": 0.9339130564752891
+    },
+    {
+      "seed": 28,
+      "condition": "paired_float_continuation",
+      "C": 15,
+      "W": 0,
+      "U": 10,
+      "closed_top1": 25,
+      "unknown_false_accepts": 1,
+      "threshold": 0.8294581700918319
+    },
+    {
+      "seed": 28,
+      "condition": "integer_forward_qat",
+      "C": 7,
+      "W": 1,
+      "U": 17,
+      "closed_top1": 16,
+      "unknown_false_accepts": 1,
+      "threshold": 0.9274652482423682
+    }
+  ],
+  "paired_augmented_steps_verified": 360,
+  "formal_QAT_updates": 360,
+  "paired_float_updates": 360,
+  "source_input_roles_and_independent_verification_bound": true,
+  "validation_reused_calibration_queries": true,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

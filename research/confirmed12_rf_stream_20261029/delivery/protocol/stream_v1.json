@@ -1,0 +1,113 @@
+{
+  "name": "Causal visual reservation / synthetic RF stream / real frozen ReID queries on12 captured source events",
+  "created_UTC": "2026-10-28T19:28:13.648286+00:00",
+  "source_capture_final_review_sha256": "5e92fff47e800d072e647b6b448266fe57e4b109894d13112f719722edff370e",
+  "source_capture_protocol_sha256": "546bb4205dd2d253a256b0e47216f3ef763731dae3ebe949ea95de161a9d8ab9",
+  "source_identity": {
+    "study_summary_sha256": "b58871b746f838f7d160eadb00a13db43183ed089d89fdea03992df1a912e3cc",
+    "feature_index_sha256": "5180098236a19c08a395bac6565c34b06475272d0f9f2ef4a58095ae4fbd0ca9",
+    "gallery": "Same6 public evaluation-gallery identities,5registered images each, anonymous IDs only",
+    "conditions": [
+      {
+        "name": "A_official_frozen",
+        "seed": null,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/models/mobilenet_v3_small-047dcff4.pth",
+        "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+        "threshold": 0.873113640861386,
+        "preprocess": "official"
+      },
+      {
+        "name": "B_letterbox_frozen",
+        "seed": null,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/models/mobilenet_v3_small-047dcff4.pth",
+        "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+        "threshold": 0.8952453223004778,
+        "preprocess": "letterbox"
+      },
+      {
+        "name": "C_letterbox_trained_seed26",
+        "seed": 26,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+        "checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+        "threshold": 0.8445389603236383,
+        "preprocess": "letterbox"
+      },
+      {
+        "name": "C_letterbox_trained_seed27",
+        "seed": 27,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/best_encoder.pt",
+        "checkpoint_sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+        "threshold": 0.8642478136864173,
+        "preprocess": "letterbox"
+      },
+      {
+        "name": "C_letterbox_trained_seed28",
+        "seed": 28,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/best_encoder.pt",
+        "checkpoint_sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+        "threshold": 0.8306161540247587,
+        "preprocess": "letterbox"
+      }
+    ]
+  },
+  "body_transform_sha256": "b47ca84f25810f875ff3eb95f430ffbcec3d180ae9b6d0ac8aa0823ada8d67d3",
+  "worker_sha256": "6ec3a21716850278acf2ea9828abd97e7d4ee8eebe8f16eb9f5503ad0dc876a9",
+  "source_first_query_reference_path": "/share/home/renly/projects/idcoo_research_20261026/confirmed12_capture_identity_20261029/results/replay/events.json",
+  "source_first_query_reference_sha256": "397063158263042aeb1e465cad3c3da5205766f1b8338b718feb26a49ecb43f4",
+  "source_frozen_count_candidate_sha256": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+  "source_fps": 25,
+  "source_step_frames": 5,
+  "source_frame0_scope": [
+    8915,
+    10873
+  ],
+  "RF_reader": "lane1",
+  "visual_reservation_birth_center_y_inclusive": [
+    0.25,
+    0.75
+  ],
+  "include_tentative_visual_observations_as_blockers": true,
+  "RF_decision_wait_frames": 15,
+  "orphan_gap_frames": 50,
+  "RF_capture_guard_frames": 0,
+  "association_component_sha256": "efd0b501fa74f0ee5e46eafe344f30ee5f64561e09078acddc55f537e7e27f44",
+  "stream_adapter_sha256": "199ffb30560bd1797332790fb7c1bc1b64b6b6f1f880abf6f3562d500993e964",
+  "queue_capacity": 4,
+  "worker_result_capacity": 16,
+  "worker_deadline_wall_seconds": 30,
+  "worker_drain_wall_seconds": 30,
+  "functional_case_pacing": "Use saved previous cached-frontend relative monotonic availability at1x; no new foreground decoding or inference.",
+  "stress_case_scope": "Deterministic admission barrier holds worker before dequeue:4accepted8capacity rejects; expired case executes no query for4expired accepted tasks.",
+  "cases": [
+    "S00_missing",
+    "S01_single",
+    "S02_duplicates",
+    "S03_delay_inside",
+    "S04_late",
+    "S05_conflict",
+    "S06_invalid",
+    "S07_wrong_single",
+    "S08_unregistered",
+    "S09_missing_snapshot",
+    "P00_burst_capacity",
+    "P01_expired"
+  ],
+  "functional_cases": 10,
+  "pressure_controls": 2,
+  "expected_event_ledgers": 144,
+  "runtime_truth_separation": "Private mock read ownership not passed to OnlineLinker or worker. RF IDs useSIM namespace, not real or public cow identity ground truth.",
+  "input_sha256": {
+    "association.py": "efd0b501fa74f0ee5e46eafe344f30ee5f64561e09078acddc55f537e7e27f44",
+    "private_mock_read_ownership.json": "f1d27a897f5337ea1caf0ba80be91ed9746158a5e51e2d06a0247664cdeaaf2e",
+    "runtime_captures.json": "0f1a1c5609419c10661bb0c738dd166656bb23d4c4a7ea2fe46cfd3fb3111faf",
+    "runtime_cases.json": "0d2176baf6c62c403adc223b4af3ef80fa1d747bc75745165fa5feadc7652e66",
+    "runtime_registry.json": "b14e0e297b115d5c30588cc8ecef4688cd267e33b4c334e523e07dcfac9d6de8",
+    "runtime_visual_stream.json": "5def03b4ff07d1876faa7fdfd04a9924354335aa58016fe57b00c4c8de945904"
+  },
+  "real_RF_hardware_connected": false,
+  "source_cow_identity_reference_available": false,
+  "new_detector_forwards": 0,
+  "new_training_updates": 0,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

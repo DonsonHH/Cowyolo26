@@ -1,0 +1,120 @@
+[  0%] Built target ncnn-generate-spirv
+[  1%] Building CXX object src/CMakeFiles/ncnn.dir/allocator.cpp.o
+[  3%] Building CXX object src/CMakeFiles/ncnn.dir/benchmark.cpp.o
+[  5%] Building CXX object src/CMakeFiles/ncnn.dir/blob.cpp.o
+[  6%] Building CXX object src/CMakeFiles/ncnn.dir/c_api.cpp.o
+[  8%] Building CXX object src/CMakeFiles/ncnn.dir/command.cpp.o
+[ 10%] Building CXX object src/CMakeFiles/ncnn.dir/cpu.cpp.o
+[ 11%] Building CXX object src/CMakeFiles/ncnn.dir/datareader.cpp.o
+[ 13%] Building CXX object src/CMakeFiles/ncnn.dir/expression.cpp.o
+[ 15%] Building CXX object src/CMakeFiles/ncnn.dir/gpu.cpp.o
+[ 16%] Building CXX object src/CMakeFiles/ncnn.dir/layer.cpp.o
+[ 18%] Building CXX object src/CMakeFiles/ncnn.dir/mat.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/ncnn.dir/mat_pixel.cpp.o
+[ 21%] Building CXX object src/CMakeFiles/ncnn.dir/mat_pixel_affine.cpp.o
+[ 23%] Building CXX object src/CMakeFiles/ncnn.dir/mat_pixel_drawing.cpp.o
+[ 25%] Building CXX object src/CMakeFiles/ncnn.dir/mat_pixel_resize.cpp.o
+[ 26%] Building CXX object src/CMakeFiles/ncnn.dir/mat_pixel_rotate.cpp.o
+[ 28%] Building CXX object src/CMakeFiles/ncnn.dir/modelbin.cpp.o
+[ 30%] Building CXX object src/CMakeFiles/ncnn.dir/net.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/ncnn.dir/option.cpp.o
+[ 33%] Building CXX object src/CMakeFiles/ncnn.dir/paramdict.cpp.o
+[ 35%] Building CXX object src/CMakeFiles/ncnn.dir/pipeline.cpp.o
+[ 36%] Building CXX object src/CMakeFiles/ncnn.dir/pipelinecache.cpp.o
+[ 38%] Building CXX object src/CMakeFiles/ncnn.dir/simpleocv.cpp.o
+[ 40%] Building CXX object src/CMakeFiles/ncnn.dir/simpleomp.cpp.o
+[ 41%] Building CXX object src/CMakeFiles/ncnn.dir/simplestl.cpp.o
+[ 43%] Building CXX object src/CMakeFiles/ncnn.dir/simplemath.cpp.o
+[ 45%] Building CXX object src/CMakeFiles/ncnn.dir/simplevk.cpp.o
+[ 46%] Building CXX object src/CMakeFiles/ncnn.dir/layer/convolution.cpp.o
+[ 48%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/convolution_arm.cpp.o
+In file included from /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolution_arm.cpp:29:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolution_3x3_winograd.h: In function ‘void ncnn::conv3x3s1_winograd_gemm_transB_packed_tile(const ncnn::Mat&, const ncnn::Mat&, ncnn::Mat&, int, int, int, int, int, int)’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolution_3x3_winograd.h:763:169: warning: unused parameter ‘use_a53_a55_optimized_kernel’ [-Wunused-parameter]
+  763 | static void conv3x3s1_winograd_gemm_transB_packed_tile(const Mat& AT_tile, const Mat& BT_tile, Mat& top_blob, int batch, int max_ii, int max_jj, int k, int max_kk, int use_a53_a55_optimized_kernel)
+      |                                                                                                                                                                     ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolution_arm.cpp:30:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolution_im2col_gemm.h: In function ‘void ncnn::convolution_gemm_transB_packed_tile(const ncnn::Mat&, const ncnn::Mat&, const ncnn::Mat&, ncnn::Mat&, ncnn::Mat&, int, int, int, int, int, int, bool, int)’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolution_im2col_gemm.h:178:213: warning: unused parameter ‘use_a53_a55_optimized_kernel’ [-Wunused-parameter]
+  178 | static void convolution_gemm_transB_packed_tile(const Mat& AT_tile, const Mat& BT_tile, const Mat& CT_tile, Mat& topT_tile, Mat& top_blob, int i, int max_ii, int j, int max_jj, int k, int max_kk, bool k_end, int use_a53_a55_optimized_kernel)
+      |                                                                                                                                                                                                                 ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolution_arm.cpp: In member function ‘virtual int ncnn::Convolution_arm::forward(const ncnn::Mat&, ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolution_arm.cpp:382:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+  382 |     int elembits = bottom_blob.elembits();
+      |         ^~~~~~~~
+[ 50%] Building CXX object src/CMakeFiles/ncnn.dir/layer/flatten.cpp.o
+[ 51%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/flatten_arm.cpp.o
+[ 53%] Building CXX object src/CMakeFiles/ncnn.dir/layer/innerproduct.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/innerproduct_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/innerproduct_arm.cpp: In member function ‘virtual int ncnn::InnerProduct_arm::forward(const ncnn::Mat&, ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/innerproduct_arm.cpp:146:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+  146 |     int elembits = bottom_blob.elembits();
+      |         ^~~~~~~~
+[ 56%] Building CXX object src/CMakeFiles/ncnn.dir/layer/input.cpp.o
+[ 58%] Building CXX object src/CMakeFiles/ncnn.dir/layer/pooling.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/pooling_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/pooling_arm.cpp: In member function ‘virtual int ncnn::Pooling_arm::forward(const ncnn::Mat&, ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/pooling_arm.cpp:65:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+   65 |     int elembits = bottom_blob.elembits();
+      |         ^~~~~~~~
+[ 61%] Building CXX object src/CMakeFiles/ncnn.dir/layer/relu.cpp.o
+[ 63%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/relu_arm.cpp.o
+[ 65%] Building CXX object src/CMakeFiles/ncnn.dir/layer/sigmoid.cpp.o
+[ 66%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/sigmoid_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/sigmoid_arm.cpp: In member function ‘virtual int ncnn::Sigmoid_arm::forward_inplace(ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/sigmoid_arm.cpp:33:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+   33 |     int elembits = bottom_top_blob.elembits();
+      |         ^~~~~~~~
+[ 68%] Building CXX object src/CMakeFiles/ncnn.dir/layer/split.cpp.o
+[ 70%] Building CXX object src/CMakeFiles/ncnn.dir/layer/binaryop.cpp.o
+[ 71%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/binaryop_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/binaryop_arm.cpp: In member function ‘virtual int ncnn::BinaryOp_arm::forward(const std::vector<ncnn::Mat>&, std::vector<ncnn::Mat>&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/binaryop_arm.cpp:475:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+  475 |     int elembits = std::max(bottom_blobs[0].elembits(), bottom_blobs[1].elembits());
+      |         ^~~~~~~~
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/binaryop_arm.cpp: In member function ‘virtual int ncnn::BinaryOp_arm::forward_inplace(ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/binaryop_arm.cpp:636:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+  636 |     int elembits = bottom_top_blob.elembits();
+      |         ^~~~~~~~
+[ 73%] Building CXX object src/CMakeFiles/ncnn.dir/layer/convolutiondepthwise.cpp.o
+[ 75%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/convolutiondepthwise_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolutiondepthwise_arm.cpp: In member function ‘virtual int ncnn::ConvolutionDepthWise_arm::forward(const ncnn::Mat&, ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/convolutiondepthwise_arm.cpp:294:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+  294 |     int elembits = bottom_blob.elembits();
+      |         ^~~~~~~~
+[ 76%] Building CXX object src/CMakeFiles/ncnn.dir/layer/padding.cpp.o
+[ 78%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/padding_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/padding_arm.cpp: In member function ‘virtual int ncnn::Padding_arm::create_pipeline(const ncnn::Option&)’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/padding_arm.cpp:37:48: warning: unused parameter ‘opt’ [-Wunused-parameter]
+   37 | int Padding_arm::create_pipeline(const Option& opt)
+      |                                  ~~~~~~~~~~~~~~^~~
+[ 80%] Building CXX object src/CMakeFiles/ncnn.dir/layer/clip.cpp.o
+[ 81%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/clip_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/clip_arm.cpp: In member function ‘virtual int ncnn::Clip_arm::forward_inplace(ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/clip_arm.cpp:31:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+   31 |     int elembits = bottom_top_blob.elembits();
+      |         ^~~~~~~~
+[ 83%] Building CXX object src/CMakeFiles/ncnn.dir/layer/packing.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/packing_arm.cpp.o
+[ 86%] Building CXX object src/CMakeFiles/ncnn.dir/layer/cast.cpp.o
+[ 88%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/cast_arm.cpp.o
+[ 90%] Building CXX object src/CMakeFiles/ncnn.dir/layer/hardsigmoid.cpp.o
+[ 91%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/hardsigmoid_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/hardsigmoid_arm.cpp: In member function ‘virtual int ncnn::HardSigmoid_arm::forward_inplace(ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/hardsigmoid_arm.cpp:31:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+   31 |     int elembits = bottom_top_blob.elembits();
+      |         ^~~~~~~~
+[ 93%] Building CXX object src/CMakeFiles/ncnn.dir/layer/hardswish.cpp.o
+[ 95%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/hardswish_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/hardswish_arm.cpp: In member function ‘virtual int ncnn::HardSwish_arm::forward_inplace(ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/hardswish_arm.cpp:31:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+   31 |     int elembits = bottom_top_blob.elembits();
+      |         ^~~~~~~~
+[ 96%] Building CXX object src/CMakeFiles/ncnn.dir/layer/mish.cpp.o
+[ 98%] Building CXX object src/CMakeFiles/ncnn.dir/layer/arm/mish_arm.cpp.o
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/mish_arm.cpp: In member function ‘virtual int ncnn::Mish_arm::forward_inplace(ncnn::Mat&, const ncnn::Option&) const’:
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/source/ncnn-20261020/src/layer/arm/mish_arm.cpp:32:9: warning: unused variable ‘elembits’ [-Wunused-variable]
+   32 |     int elembits = bottom_top_blob.elembits();
+      |         ^~~~~~~~
+[100%] Linking CXX static library libncnn.a
+[100%] Built target ncnn

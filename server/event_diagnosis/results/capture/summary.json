@@ -1,0 +1,107 @@
+[
+  {
+    "model": "epoch20_seed26",
+    "job_id": "129805",
+    "checkpoint_sha256": "35879f94b91e4f477693cf730c880b5f5174674578f0457ee2dbde9809d15c98",
+    "frames": 479,
+    "raw_boxes": 286,
+    "post_tracker_boxes": 272,
+    "events": [
+      {
+        "time_s": 3.7333333333333334,
+        "track_id": 2,
+        "direction": "B->A",
+        "frame": 112
+      }
+    ],
+    "callback_order": [
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.utils.callbacks.base"
+      },
+      {
+        "name": "before_tracker",
+        "module": "__main__"
+      },
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.trackers.track"
+      }
+    ],
+    "frozen_baseline_event_equality": true,
+    "elapsed_s": 10.127599140629172,
+    "cuda_device": "Tesla V100S-PCIE-32GB"
+  },
+  {
+    "model": "epoch20_seed27",
+    "job_id": "129805",
+    "checkpoint_sha256": "12270f8e7f14867cce464d9707a7b81f10d08c9777a40cfb17948e0e72f00c4c",
+    "frames": 479,
+    "raw_boxes": 520,
+    "post_tracker_boxes": 475,
+    "events": [
+      {
+        "time_s": 3.9,
+        "track_id": 1,
+        "direction": "B->A",
+        "frame": 117
+      },
+      {
+        "time_s": 13.2,
+        "track_id": 36,
+        "direction": "B->A",
+        "frame": 396
+      }
+    ],
+    "callback_order": [
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.utils.callbacks.base"
+      },
+      {
+        "name": "before_tracker",
+        "module": "__main__"
+      },
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.trackers.track"
+      }
+    ],
+    "frozen_baseline_event_equality": true,
+    "elapsed_s": 9.246745673008263,
+    "cuda_device": "Tesla V100S-PCIE-32GB"
+  },
+  {
+    "model": "epoch20_seed28",
+    "job_id": "129805",
+    "checkpoint_sha256": "a6eb9677a036550fedcfd8ee36601f389c13f6b586b9094be2668b8ac613d27f",
+    "frames": 479,
+    "raw_boxes": 659,
+    "post_tracker_boxes": 586,
+    "events": [
+      {
+        "time_s": 3.933333333333333,
+        "track_id": 1,
+        "direction": "B->A",
+        "frame": 118
+      }
+    ],
+    "callback_order": [
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.utils.callbacks.base"
+      },
+      {
+        "name": "before_tracker",
+        "module": "__main__"
+      },
+      {
+        "name": "on_predict_postprocess_end",
+        "module": "ultralytics.trackers.track"
+      }
+    ],
+    "frozen_baseline_event_equality": true,
+    "elapsed_s": 9.219964293763041,
+    "cuda_device": "Tesla V100S-PCIE-32GB"
+  }
+]

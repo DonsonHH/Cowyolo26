@@ -1,0 +1,101 @@
+{
+  "status": "MANIFEST_CHECKPOINT_TRAINING_AND_10_EVENT_REPLAYS_PASS",
+  "manifest_files": 125,
+  "seeds_completed": [
+    26,
+    27,
+    28
+  ],
+  "epochs_each": 20,
+  "training_val_audited_rows": 6283,
+  "checks": [
+    {
+      "model": "generic",
+      "scene": "source",
+      "events": 0,
+      "event_replay": "PASS"
+    },
+    {
+      "model": "generic",
+      "scene": "Toros",
+      "events": 6,
+      "event_replay": "PASS",
+      "TP": 6,
+      "FP": 0,
+      "FN": 0,
+      "temporally_matched": 6,
+      "wrong_direction_matches": 0
+    },
+    {
+      "model": "pilot",
+      "scene": "source",
+      "events": 7,
+      "event_replay": "PASS"
+    },
+    {
+      "model": "pilot",
+      "scene": "Toros",
+      "events": 2,
+      "event_replay": "PASS",
+      "TP": 2,
+      "FP": 0,
+      "FN": 4,
+      "temporally_matched": 2,
+      "wrong_direction_matches": 0
+    },
+    {
+      "model": "epoch20_seed26",
+      "scene": "source",
+      "events": 8,
+      "event_replay": "PASS"
+    },
+    {
+      "model": "epoch20_seed26",
+      "scene": "Toros",
+      "events": 1,
+      "event_replay": "PASS",
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "temporally_matched": 1,
+      "wrong_direction_matches": 0
+    },
+    {
+      "model": "epoch20_seed27",
+      "scene": "source",
+      "events": 6,
+      "event_replay": "PASS"
+    },
+    {
+      "model": "epoch20_seed27",
+      "scene": "Toros",
+      "events": 2,
+      "event_replay": "PASS",
+      "TP": 2,
+      "FP": 0,
+      "FN": 4,
+      "temporally_matched": 2,
+      "wrong_direction_matches": 0
+    },
+    {
+      "model": "epoch20_seed28",
+      "scene": "source",
+      "events": 8,
+      "event_replay": "PASS"
+    },
+    {
+      "model": "epoch20_seed28",
+      "scene": "Toros",
+      "events": 1,
+      "event_replay": "PASS",
+      "TP": 1,
+      "FP": 0,
+      "FN": 5,
+      "temporally_matched": 1,
+      "wrong_direction_matches": 0
+    }
+  ],
+  "source_independent_accuracy_verified": false,
+  "board_verified": false,
+  "full_goal_complete": false
+}

@@ -1,0 +1,145 @@
+task: detect
+mode: train
+model: /share/home/renly/projects/idcoo_research_20261026/models/yolo26n.pt
+data: /share/home/renly/projects/idcoo_research_20261026/data/opencows2020/derived_detection/data.yaml
+epochs: 5
+time: null
+patience: 5
+batch: 32
+imgsz: 320
+save: true
+save_period: -1
+cache: false
+device: '0'
+workers: 4
+project: /share/home/renly/projects/idcoo_research_20261026/results/detection_pilot
+name: five_epoch_dev
+exist_ok: false
+pretrained: true
+optimizer: auto
+verbose: false
+seed: 26
+deterministic: true
+single_cls: false
+rect: false
+cos_lr: false
+close_mosaic: 0
+resume: false
+amp: false
+fraction: 1.0
+profile: false
+freeze: null
+multi_scale: 0.0
+compile: false
+overlap_mask: true
+mask_ratio: 4
+dropout: 0.0
+val: true
+split: val
+save_json: false
+conf: null
+iou: 0.7
+max_det: 300
+half: false
+dnn: false
+plots: false
+end2end: null
+source: null
+vid_stride: 1
+stream_buffer: false
+visualize: false
+augment: false
+agnostic_nms: false
+classes: null
+retina_masks: false
+embed: null
+show: false
+save_frames: false
+save_txt: false
+save_conf: false
+save_crop: false
+show_labels: true
+show_conf: true
+show_boxes: true
+line_width: null
+format: torchscript
+keras: false
+optimize: false
+int8: false
+dynamic: false
+simplify: true
+opset: null
+workspace: null
+nms: false
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+box: 7.5
+cls: 0.5
+cls_pw: 0.0
+dfl: 1.5
+pose: 12.0
+kobj: 1.0
+rle: 1.0
+angle: 1.0
+nbs: 64
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+bgr: 0.0
+mosaic: 1.0
+mixup: 0.0
+cutmix: 0.0
+copy_paste: 0.0
+copy_paste_mode: flip
+auto_augment: randaugment
+erasing: 0.4
+cfg: null
+tracker: botsort.yaml
+save_dir: /share/home/renly/projects/idcoo_research_20261026/results/detection_pilot/five_epoch_dev
+{
+  "job_id": "129657",
+  "split_counts": {
+    "val": 370,
+    "quarantine_duplicate_of_holdout": 19,
+    "train": 5913,
+    "dev_test": 741
+  },
+  "edits": {
+    "clipped_boxes": 1226,
+    "removed_zero_area_boxes": 1
+  },
+  "scope": "development-only hash-group split; cross-source/time/augmentation lineage is not verified; final generalization protocol must be constructed separately",
+  "seed": 20261026,
+  "original_files_changed": false
+}path: /share/home/renly/projects/idcoo_research_20261026/data/opencows2020/derived_detection
+train: images/train
+val: images/val
+test: images/dev_test
+names:
+  0: cow
+PARTITION|AVAIL|STATE|NODELIST|GRES
+cu*|up|mix|cu[16-20]|(null)
+cu*|up|idle|cu[01-15]|(null)
+8gpu|up|alloc|gpu01|gpu:V100S:8
+4gpu|up|mix|gpu[02-03]|gpu:V100S:4
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+   129749_[9-11%6]|     4gpu|         renly-patrol-m5| PENDING|      0:00|   1:30:00|     1|(JobArrayTaskLimit)
+          129749_8|     4gpu|         renly-patrol-m5| RUNNING|     10:41|   1:30:00|     1|gpu03
+          129749_7|     4gpu|         renly-patrol-m5| RUNNING|     11:43|   1:30:00|     1|gpu02
+          129749_6|     4gpu|         renly-patrol-m5| RUNNING|     11:52|   1:30:00|     1|gpu03
+          129749_0|     4gpu|         renly-patrol-m5| RUNNING|     26:44|   1:30:00|     1|gpu02
+          129749_1|     4gpu|         renly-patrol-m5| RUNNING|     26:44|   1:30:00|     1|gpu02
+          129749_2|     4gpu|         renly-patrol-m5| RUNNING|     26:44|   1:30:00|     1|gpu02
+            129760|       cu|   renly-m5-audit-report| PENDING|      0:00|     20:00|     1|(Dependency)

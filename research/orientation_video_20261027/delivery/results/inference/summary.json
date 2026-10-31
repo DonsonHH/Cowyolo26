@@ -1,0 +1,560 @@
+{
+  "status": "SIX_VIDEO_ROTATION_CONDITIONS_COMPLETE_ORIGINAL_TRACES_REPRODUCED",
+  "job_id": "129940",
+  "conditions": [
+    {
+      "name": "original_seed26",
+      "title": "Cows seed26 input original",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "seed": 26,
+      "orientation": "original",
+      "arm": "Cows2021_date_grouped",
+      "scenes": [
+        {
+          "scene": "source",
+          "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+          "processed_frames": 10874,
+          "sampled_inference_frames": 2175,
+          "rendered_frames": 1962,
+          "A_to_B": 0,
+          "B_to_A": 0,
+          "events": 0,
+          "elapsed_s_host_replay": 84.41964908316731,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            8912,
+            10873
+          ],
+          "detector_input_orientation": "original",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 1501,
+          "posttracker_boxes_all_ROIs": 1488,
+          "original_condition_prior_events_and_tracks_reproduced": true,
+          "scope": "Previously observed development video; no new independent accuracy claim"
+        },
+        {
+          "scene": "Toros",
+          "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+          "processed_frames": 479,
+          "sampled_inference_frames": 479,
+          "rendered_frames": 0,
+          "A_to_B": 0,
+          "B_to_A": 0,
+          "events": 0,
+          "elapsed_s_host_replay": 5.838457467965782,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            0,
+            478
+          ],
+          "detector_input_orientation": "original",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 28,
+          "posttracker_boxes_all_ROIs": 28,
+          "original_condition_prior_events_and_tracks_reproduced": true,
+          "scope": "Previously used6-event diagnostic; not fresh generalisation"
+        }
+      ],
+      "Toros_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "name": "clockwise90_seed26",
+      "title": "Cows seed26 input clockwise90",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed26/weights/last.pt",
+      "checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+      "seed": 26,
+      "orientation": "clockwise90",
+      "arm": "Cows2021_date_grouped",
+      "scenes": [
+        {
+          "scene": "source",
+          "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+          "processed_frames": 10874,
+          "sampled_inference_frames": 2175,
+          "rendered_frames": 1962,
+          "A_to_B": 8,
+          "B_to_A": 0,
+          "events": 8,
+          "elapsed_s_host_replay": 139.02934669982642,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            8912,
+            10873
+          ],
+          "detector_input_orientation": "clockwise90",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 3404,
+          "posttracker_boxes_all_ROIs": 3062,
+          "original_condition_prior_events_and_tracks_reproduced": null,
+          "scope": "Previously observed development video; no new independent accuracy claim"
+        },
+        {
+          "scene": "Toros",
+          "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+          "processed_frames": 479,
+          "sampled_inference_frames": 479,
+          "rendered_frames": 0,
+          "A_to_B": 0,
+          "B_to_A": 0,
+          "events": 0,
+          "elapsed_s_host_replay": 13.546705698594451,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            0,
+            478
+          ],
+          "detector_input_orientation": "clockwise90",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 0,
+          "posttracker_boxes_all_ROIs": 0,
+          "original_condition_prior_events_and_tracks_reproduced": null,
+          "scope": "Previously used6-event diagnostic; not fresh generalisation"
+        }
+      ],
+      "Toros_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "name": "original_seed27",
+      "title": "Cows seed27 input original",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "checkpoint_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "seed": 27,
+      "orientation": "original",
+      "arm": "Cows2021_date_grouped",
+      "scenes": [
+        {
+          "scene": "source",
+          "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+          "processed_frames": 10874,
+          "sampled_inference_frames": 2175,
+          "rendered_frames": 1962,
+          "A_to_B": 1,
+          "B_to_A": 0,
+          "events": 1,
+          "elapsed_s_host_replay": 83.55832414142787,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            8912,
+            10873
+          ],
+          "detector_input_orientation": "original",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 2338,
+          "posttracker_boxes_all_ROIs": 2264,
+          "original_condition_prior_events_and_tracks_reproduced": true,
+          "scope": "Previously observed development video; no new independent accuracy claim"
+        },
+        {
+          "scene": "Toros",
+          "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+          "processed_frames": 479,
+          "sampled_inference_frames": 479,
+          "rendered_frames": 0,
+          "A_to_B": 0,
+          "B_to_A": 0,
+          "events": 0,
+          "elapsed_s_host_replay": 4.839147120714188,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            0,
+            478
+          ],
+          "detector_input_orientation": "original",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 35,
+          "posttracker_boxes_all_ROIs": 35,
+          "original_condition_prior_events_and_tracks_reproduced": true,
+          "scope": "Previously used6-event diagnostic; not fresh generalisation"
+        }
+      ],
+      "Toros_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "name": "clockwise90_seed27",
+      "title": "Cows seed27 input clockwise90",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed27/weights/last.pt",
+      "checkpoint_sha256": "132b62e8918429ac6e0202eae1a6924550a1c3e1634545c6e4e174f25c921226",
+      "seed": 27,
+      "orientation": "clockwise90",
+      "arm": "Cows2021_date_grouped",
+      "scenes": [
+        {
+          "scene": "source",
+          "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+          "processed_frames": 10874,
+          "sampled_inference_frames": 2175,
+          "rendered_frames": 1962,
+          "A_to_B": 6,
+          "B_to_A": 0,
+          "events": 6,
+          "elapsed_s_host_replay": 145.56399002298713,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            8912,
+            10873
+          ],
+          "detector_input_orientation": "clockwise90",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 2312,
+          "posttracker_boxes_all_ROIs": 2250,
+          "original_condition_prior_events_and_tracks_reproduced": null,
+          "scope": "Previously observed development video; no new independent accuracy claim"
+        },
+        {
+          "scene": "Toros",
+          "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+          "processed_frames": 479,
+          "sampled_inference_frames": 479,
+          "rendered_frames": 0,
+          "A_to_B": 0,
+          "B_to_A": 0,
+          "events": 0,
+          "elapsed_s_host_replay": 13.411492334678769,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            0,
+            478
+          ],
+          "detector_input_orientation": "clockwise90",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 0,
+          "posttracker_boxes_all_ROIs": 0,
+          "original_condition_prior_events_and_tracks_reproduced": null,
+          "scope": "Previously used6-event diagnostic; not fresh generalisation"
+        }
+      ],
+      "Toros_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "name": "original_seed28",
+      "title": "Cows seed28 input original",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "checkpoint_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "seed": 28,
+      "orientation": "original",
+      "arm": "Cows2021_date_grouped",
+      "scenes": [
+        {
+          "scene": "source",
+          "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+          "processed_frames": 10874,
+          "sampled_inference_frames": 2175,
+          "rendered_frames": 1962,
+          "A_to_B": 0,
+          "B_to_A": 0,
+          "events": 0,
+          "elapsed_s_host_replay": 81.43629489839077,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            8912,
+            10873
+          ],
+          "detector_input_orientation": "original",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 1745,
+          "posttracker_boxes_all_ROIs": 1544,
+          "original_condition_prior_events_and_tracks_reproduced": true,
+          "scope": "Previously observed development video; no new independent accuracy claim"
+        },
+        {
+          "scene": "Toros",
+          "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+          "processed_frames": 479,
+          "sampled_inference_frames": 479,
+          "rendered_frames": 0,
+          "A_to_B": 0,
+          "B_to_A": 0,
+          "events": 0,
+          "elapsed_s_host_replay": 5.825582907535136,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            0,
+            478
+          ],
+          "detector_input_orientation": "original",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 53,
+          "posttracker_boxes_all_ROIs": 53,
+          "original_condition_prior_events_and_tracks_reproduced": true,
+          "scope": "Previously used6-event diagnostic; not fresh generalisation"
+        }
+      ],
+      "Toros_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    },
+    {
+      "name": "clockwise90_seed28",
+      "title": "Cows seed28 input clockwise90",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/results/training/seed28/weights/last.pt",
+      "checkpoint_sha256": "93b8746381cd997d98dba809685ba53f7779da750750aa39bea24646c843a216",
+      "seed": 28,
+      "orientation": "clockwise90",
+      "arm": "Cows2021_date_grouped",
+      "scenes": [
+        {
+          "scene": "source",
+          "source_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+          "processed_frames": 10874,
+          "sampled_inference_frames": 2175,
+          "rendered_frames": 1962,
+          "A_to_B": 8,
+          "B_to_A": 0,
+          "events": 8,
+          "elapsed_s_host_replay": 142.99942350015044,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            8912,
+            10873
+          ],
+          "detector_input_orientation": "clockwise90",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 1126,
+          "posttracker_boxes_all_ROIs": 1052,
+          "original_condition_prior_events_and_tracks_reproduced": null,
+          "scope": "Previously observed development video; no new independent accuracy claim"
+        },
+        {
+          "scene": "Toros",
+          "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+          "processed_frames": 479,
+          "sampled_inference_frames": 479,
+          "rendered_frames": 0,
+          "A_to_B": 0,
+          "B_to_A": 0,
+          "events": 0,
+          "elapsed_s_host_replay": 12.634982194751501,
+          "counter_initialised_at_source_frame": 0,
+          "source_output_frame_range": [
+            0,
+            478
+          ],
+          "detector_input_orientation": "clockwise90",
+          "tracker_and_counter_coordinate_system": "original native camera",
+          "detector_pretracker_boxes": 0,
+          "posttracker_boxes_all_ROIs": 0,
+          "original_condition_prior_events_and_tracks_reproduced": null,
+          "scope": "Previously used6-event diagnostic; not fresh generalisation"
+        }
+      ],
+      "Toros_event_metrics": {
+        "reference_events": 6,
+        "predicted_events": 0,
+        "temporally_matched": 0,
+        "correct_direction_matches": 0,
+        "wrong_direction_matches": 0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "direction_accuracy_given_temporal_match": null,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 0
+          }
+        },
+        "mean_absolute_direction_count_error": 3.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "unmatched_prediction_indices": []
+      }
+    }
+  ],
+  "training_freeze_sha256": "44272a1dcdc1c94691f75cda5543dd6ac1752b4dfc5c3ed9e7a046761c216585",
+  "protocol_sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+  "all_three_seeds_and_two_orientations_reported": true,
+  "new_training_updates": 0,
+  "source_count_accuracy": null,
+  "source_identity_accuracy": null,
+  "scope": "Diagnostic on previously used development videos and6event Toros reference; no new independent accuracy claim or model selection",
+  "device": "Tesla V100S-PCIE-32GB"
+}

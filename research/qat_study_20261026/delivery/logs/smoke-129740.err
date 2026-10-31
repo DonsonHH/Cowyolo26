@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/qat_study/tools/smoke_qat.py", line 85, in <module>
+    main()
+    ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/qat_study/tools/smoke_qat.py", line 46, in main
+    assert equality['reference_all_pass'], 'Reference QAT/ONNX parity failed; retain vectors and stop before full training'
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Reference QAT/ONNX parity failed; retain vectors and stop before full training
+srun: error: gpu02: task 0: Exited with exit code 1

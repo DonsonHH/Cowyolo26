@@ -1,0 +1,13 @@
+{
+  "created_UTC": "2026-10-30T06:26:47.935064+00:00",
+  "port": "COM6",
+  "baud": 115200,
+  "format": "8N1",
+  "command_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\cpu_partition_20261030\\tools\\serial_status.txt",
+  "no_reset_command": true,
+  "status": "SERIAL_COMMAND_COMPLETE",
+  "exit_code": 0,
+  "output": "python3 -c 'from pathlib import Path; import json; r=Path('\"'\"'/home/xilinx/jupyter_notebooks/cow_research_cpu_partition_20261030'\"'\"'); launch=json.loads((r/'\"'\"'launch.json'\"'\"').read_text()); proc=Path('\"'\"'/proc'\"'\"')/str(launch['\"'\"'PID'\"'\"']); print(json.dumps({'\"'\"'task'\"'\"':'\"'\"'fixed10_CPU_affinity'\"'\"','\"'\"'PID'\"'\"':launch['\"'\"'PID'\"'\"'],'\"'\"'proc_exists'\"'\"':proc.exists(),'\"'\"'proc_state'\"'\"':(proc/'\"'\"'stat'\"'\"').read_text().rsplit('\"'\"')'\"'\"',1)[1].split()[0] if proc.exists() else None,'\"'\"'progress'\"'\"':json.loads((r/'\"'\"'results/progress.json'\"'\"').read_text()) if (r/'\"'\"'results/progress.json'\"'\"').exists() else None,'\"'\"'terminal'\"'\"':json.loads((r/'\"'\"'results/terminal.json'\"'\"').read_text()) if (r/'\"'\"'results/terminal.json'\"'\"').exists() else None,'\"'\"'cases_done'\"'\"':len(json.loads((r/'\"'\"'results/record.json'\"'\"').read_text()).get('\"'\"'cases'\"'\"',[])) if (r/'\"'\"'results/record.json'\"'\"').exists() else 0,'\"'\"'log_tail'\"'\"':(r/'\"'\"'run.log'\"'\"').read_text()[-1500:]}))'; printf '\\nCOW_SERIAL_DONE_f9607045fa66 rc=%s\\n' \"$?\"\r\n\u001b[?2004l\r{\"task\": \"fixed10_CPU_affinity\", \"PID\": 11554, \"proc_exists\": true, \"proc_state\": \"S\", \"progress\": null, \"terminal\": null, \"cases_done\": 0, \"log_tail\": \"\"}\r\n\r\nCOW_SERIAL_DONE_f9607045fa66 rc=0\r\n\u001b[?2004hxilinx@pynq:~$ ",
+  "prefix": "",
+  "elapsed_s": 1.2660000000032596
+}

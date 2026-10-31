@@ -1,0 +1,11 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+            129929|     4gpu|   idcoo-orientation-val| RUNNING|      1:51|gpu02
+            129930|       cu|idcoo-orientation-collec| PENDING|      0:00|(Dependency)
+JobID|JobName|Partition|State|ExitCode|Elapsed|MaxRSS
+129929|idcoo-orientation-val|4gpu|RUNNING|0:0|00:01:52|
+129929.batch|batch||RUNNING|0:0|00:01:52|
+129929.0|python||RUNNING|0:0|00:01:52|
+129930|idcoo-orientation-collect|cu|PENDING|0:0|00:00:00|
+{"seed": 28, "images_per_orientation_predicted": 16, "validation_images": 1571, "elapsed_s": 84.7865676973015}
+{"seed": 28, "images_per_orientation_predicted": 336, "validation_images": 1571, "elapsed_s": 93.17314002942294}
+{"seed": 28, "images_per_orientation_predicted": 656, "validation_images": 1571, "elapsed_s": 101.44384519662708}

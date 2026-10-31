@@ -1,0 +1,16 @@
+             JOBID|PARTITION|                        NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed
+130637|FAILED|1:0|00:00:24
+{"baseline_complete": 1, "caches": 111, "probe_started": false}
+{"baseline_complete": 21, "caches": 111, "probe_started": false}
+{"baseline_complete": 41, "caches": 111, "probe_started": false}
+{"baseline_complete": 61, "caches": 111, "probe_started": false}
+{"baseline_complete": 81, "caches": 111, "probe_started": false}
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/unconfirmed_iou_20261030/tools/run_control.py", line 107, in main
+    actual,log=replay(c,p,LoggedBase);expected=gz(c['trace_file']);result=compare(actual,expected,c['board_reference'])
+                                                                          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/unconfirmed_iou_20261030/tools/run_control.py", line 57, in compare
+    for kind in ['confirmed_only_events','handoff_events']:assert actual[kind]==expected[kind]
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

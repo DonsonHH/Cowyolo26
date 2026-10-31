@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/train_one.py", line 65, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/composition_control/tools/train_one.py", line 49, in main
+    assert trainer.observed_batches==1850 and len(history)==10 and trainer.observed_optimizer_steps>0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+srun: error: gpu02: task 0: Exited with exit code 1

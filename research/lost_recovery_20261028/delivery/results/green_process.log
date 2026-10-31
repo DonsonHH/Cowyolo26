@@ -1,0 +1,19 @@
+test_01_lost_identity_recovers_on_overlapping_low (__main__.ActualTrackerTests.test_01_lost_identity_recovers_on_overlapping_low) ... ok
+test_02_two_lost_identities_recover_without_new_ID (__main__.ActualTrackerTests.test_02_two_lost_identities_recover_without_new_ID) ... ok
+test_03_active_low_continuity_still_works (__main__.ActualTrackerTests.test_03_active_low_continuity_still_works) ... ok
+test_04_low_without_confirmed_origin_cannot_create_identity (__main__.ActualTrackerTests.test_04_low_without_confirmed_origin_cannot_create_identity) ... ok
+test_05_disjoint_low_cannot_recover_lost (__main__.ActualTrackerTests.test_05_disjoint_low_cannot_recover_lost) ... ok
+test_06_low_IoU_below_half_cannot_recover_lost (__main__.ActualTrackerTests.test_06_low_IoU_below_half_cannot_recover_lost) ... ok
+test_07_expired_ID_cannot_be_revived_by_low (__main__.ActualTrackerTests.test_07_expired_ID_cannot_be_revived_by_low) ... ok
+test_08_firststage_score_fusion_still_enabled (__main__.ActualTrackerTests.test_08_firststage_score_fusion_still_enabled) ... ok
+test_09_high_firststage_precedes_samebox_low (__main__.ActualTrackerTests.test_09_high_firststage_precedes_samebox_low) ... ok
+test_10_one_low_observation_cannot_recover_two_lost_IDs (__main__.ActualTrackerTests.test_10_one_low_observation_cannot_recover_two_lost_IDs) ... ok
+test_11_removed_tentative_ID_cannot_use_low (__main__.ActualTrackerTests.test_11_removed_tentative_ID_cannot_use_low) ... ok
+test_12_only_lost_eligibility_expression_changes (__main__.ActualTrackerTests.test_12_only_lost_eligibility_expression_changes) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.013s
+
+OK
+
+{"mode": "candidate_green", "tests": 12, "failures": 0, "errors": 0, "skipped": 0, "expected_two_failures_reproduced": false, "gate_passed": true, "synthetic_tracker_sequences_not_cattle_accuracy": true}

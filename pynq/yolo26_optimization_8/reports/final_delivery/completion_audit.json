@@ -1,0 +1,249 @@
+{
+  "status": "TECHNICAL_AND_DOCUMENTATION_REQUIREMENTS_PROVEN_ARCHIVE_PENDING",
+  "requirements": [
+    {
+      "id": "SCOPE",
+      "requirement": "Independent O8; same O7 model math/resolutions; unchanged predecessors",
+      "status": "PROVEN",
+      "evidence": [
+        "math_and_source_integrity.json",
+        "preservation_PC_final.json",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\preservation_board_final.json"
+      ]
+    },
+    {
+      "id": "AUTHORIZE",
+      "requirement": "Explicit new-build permission precedes volatile programming",
+      "status": "PROVEN",
+      "evidence": [
+        "new_programming_authorization.json",
+        "authorized_o8_load_retry.log",
+        "formal_A_D_runs.log"
+      ]
+    },
+    {
+      "id": "A/D",
+      "requirement": "Three independent100-frame rounds each variant, cold/warm separate, all raw timings retained",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\paired_A_D_summary_1746752042475934377.json",
+        "each run summary.json and per_frame.jsonl"
+      ]
+    },
+    {
+      "id": "C/D",
+      "requirement": "Three independent100-frame rounds each variant, cold/warm separate, all raw timings retained",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\formal_C_D_summary_1746752351049758428.json",
+        "each run summary.json and per_frame.jsonl"
+      ]
+    },
+    {
+      "id": "SPEED",
+      "requirement": "r224 A/D>=1.10; all rounds same direction; P95 not regressed",
+      "status": "PROVEN",
+      "evidence": [
+        "formal_A_all300_frames.csv",
+        "formal_D_all300_frames.csv",
+        "summary.json"
+      ]
+    },
+    {
+      "id": "B",
+      "requirement": "Software-only B three formal100 rounds preserved and verified against raw JSONL",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\formal_B_summary_1746749248150606855.json",
+        "formal_B_all300_frames.csv"
+      ]
+    },
+    {
+      "id": "MECHANISM",
+      "requirement": "Actual local cache in full graph; same-firmware C/D benefit and real DDR reduction",
+      "status": "PROVEN",
+      "evidence": [
+        "formal_C_D_runs.log",
+        "summary.json",
+        "resident_pair_diagnostics.csv"
+      ]
+    },
+    {
+      "id": "REP192",
+      "requirement": "Same100 distinct board images,411logical outputs/raw/TopK/boxes exact; numerical checks outside timing",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\representative_D_resumed_1746752996569959866\\r192_per_image.jsonl",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\representative_A_B_1746749722398861404\\r192_per_image.jsonl"
+      ]
+    },
+    {
+      "id": "AP192",
+      "requirement": "Frozen final math formal PC COCO5000; AP exactly O7, not board5000",
+      "status": "PROVEN",
+      "evidence": [
+        "formal_coco5000_20261019_163226/r192/metrics.json",
+        "formal_coco5000_20261019_163226/r192/predictions.json"
+      ]
+    },
+    {
+      "id": "REP224",
+      "requirement": "Same100 distinct board images,411logical outputs/raw/TopK/boxes exact; numerical checks outside timing",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\representative_D_resumed_1746752996569959866\\r224_per_image.jsonl",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\representative_A_B_1746749722398861404\\r224_per_image.jsonl"
+      ]
+    },
+    {
+      "id": "AP224",
+      "requirement": "Frozen final math formal PC COCO5000; AP exactly O7, not board5000",
+      "status": "PROVEN",
+      "evidence": [
+        "formal_coco5000_20261019_163226/r224/metrics.json",
+        "formal_coco5000_20261019_163226/r224/predictions.json"
+      ]
+    },
+    {
+      "id": "REP256",
+      "requirement": "Same100 distinct board images,411logical outputs/raw/TopK/boxes exact; numerical checks outside timing",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\representative_D_resumed_1746752996569959866\\r256_per_image.jsonl",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\representative_A_B_1746749722398861404\\r256_per_image.jsonl"
+      ]
+    },
+    {
+      "id": "AP256",
+      "requirement": "Frozen final math formal PC COCO5000; AP exactly O7, not board5000",
+      "status": "PROVEN",
+      "evidence": [
+        "formal_coco5000_20261019_163226/r256/metrics.json",
+        "formal_coco5000_20261019_163226/r256/predictions.json"
+      ]
+    },
+    {
+      "id": "continuous1000",
+      "requirement": "Actual frame count/errors and stable BO/close accounting",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\continuous1000_1746753240416977189\\per_frame.jsonl",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\continuous1000_1746753240416977189\\summary.json"
+      ]
+    },
+    {
+      "id": "fast192_camera100",
+      "requirement": "Actual frame count/errors and stable BO/close accounting",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\fast192_camera100_1746753240416977189\\per_frame.jsonl",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\fast192_camera100_1746753240416977189\\summary.json"
+      ]
+    },
+    {
+      "id": "flagship224_camera100",
+      "requirement": "Actual frame count/errors and stable BO/close accounting",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\flagship224_camera100_1746753240416977189\\per_frame.jsonl",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\flagship224_camera100_1746753240416977189\\summary.json"
+      ]
+    },
+    {
+      "id": "quality256_fixed100",
+      "requirement": "Actual frame count/errors and stable BO/close accounting",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\quality256_fixed100_1746753240416977189\\per_frame.jsonl",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\quality256_fixed100_1746753240416977189\\summary.json"
+      ]
+    },
+    {
+      "id": "NUMERIC",
+      "requirement": "Actual PL vectors/layouts/padding/modes/full capacity/errors plusINT32extrema/ties/saturation",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\resident_vectors_1746751614365470621\\summary.json",
+        "board_addenda/reports/actual_requant_boundaries_1746756068386150649"
+      ]
+    },
+    {
+      "id": "RECOVERY",
+      "requirement": "Actual live abort/reset, cache invalid consumer rejection, then valid pair; no new FPGA load",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\recovery_1746753789810822223\\summary.json",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\recovery_1746754007354146237\\summary.json"
+      ]
+    },
+    {
+      "id": "GOLDEN",
+      "requirement": "All actual dense/DW boundary outputs independently checked; actual camera PC parity",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\actual_integer_1792400487031271200\\actual_PL_exactness.json",
+        "camera_PC_board_parity.json"
+      ]
+    },
+    {
+      "id": "HARDWARE",
+      "requirement": "Same-build artifacts/source,100MHz/setup/hold/route/DRC without waivers",
+      "status": "PROVEN",
+      "evidence": [
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\hardware\\builds\\20261019_161318_762291_physopt",
+        "hardware_physopt.log"
+      ]
+    },
+    {
+      "id": "CAPACITY",
+      "requirement": "Persistent BO pool/max packet/page rounding independently matches board; no per-frame alloc",
+      "status": "PROVEN",
+      "evidence": [
+        "CMA_packet_capacity_audit.json",
+        "long_camera_per_frame raw memstat samples"
+      ]
+    },
+    {
+      "id": "REBUILD",
+      "requirement": "Three graph/plans recreated identical; ARM .so rebuilt identical; PC rebuilt all tensors0diff",
+      "status": "PROVEN",
+      "evidence": [
+        "recompile_all_graphs.log",
+        "native_rebuild_equivalence_final.log",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\native_rebuild_independent_native_rebuild_1746754021516470339.json"
+      ]
+    },
+    {
+      "id": "NORMAL",
+      "requirement": "Three size normal CLI plus actual camera CLI run, downloadFalse and hashes",
+      "status": "PROVEN",
+      "evidence": [
+        "normal_entry_smoke_final.log",
+        "D:\\---college---\\yolo26\\reports\\optimization_8\\board_evidence\\evidence_1746754596223353710\\reports\\normal_entry_1746754404842885183\\summary.json"
+      ]
+    },
+    {
+      "id": "DELIVERABLES",
+      "requirement": "Chinese complete report/self-review/reproduce and full raw logs/code/models/firmware",
+      "status": "PROVEN",
+      "evidence": [
+        "optimization_8_report.md",
+        "review_report.md",
+        "README_reproduce.md",
+        "release_manifest.json"
+      ]
+    },
+    {
+      "id": "REFERENCE",
+      "requirement": "Frozen O7 standalone normal runtime/A reference and restore bit/hwh included",
+      "status": "PROVEN",
+      "evidence": [
+        "frozen_O7_reference_closure.json",
+        "yolo26_optimization_8/reference_o7",
+        "yolo26_optimization_8/hardware/restore_baseline"
+      ]
+    }
+  ],
+  "formal_raw_frames_verified": 1500,
+  "scope": "No new VM or board5000/power/Fmax/frame-age claim. Release CRC/member hashes and extracted-runtime check are a separate final gate."
+}

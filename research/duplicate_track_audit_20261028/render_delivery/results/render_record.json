@@ -1,0 +1,373 @@
+{
+  "status": "SOURCE_CASE_PANELS_AND_STANDARD_PLOT_RENDERED",
+  "job_id": "130297",
+  "audit_sha256": "75280a8af47fa6b4a2ed2bbc681aec563d1e29a8559de73a849d6a66d9d3ab44",
+  "source_sha256": "1172810976a09e1a75a8b0a69edf21038393aa6f6b1c1273b8d7c34f62146a6c",
+  "matplotlib_version": "3.11.2",
+  "native_frames": [
+    120,
+    323,
+    345,
+    421
+  ],
+  "representative_crops": [
+    {
+      "case": "generic_installed",
+      "frame": 421,
+      "crop_xyxy": [
+        1683,
+        285,
+        1920,
+        623
+      ]
+    },
+    {
+      "case": "generic_secondstage_iou",
+      "frame": 421,
+      "crop_xyxy": [
+        1683,
+        285,
+        1920,
+        623
+      ]
+    },
+    {
+      "case": "generic_allow_lost_iou",
+      "frame": 421,
+      "crop_xyxy": [
+        1683,
+        285,
+        1920,
+        623
+      ]
+    },
+    {
+      "case": "pilot_installed",
+      "frame": 345,
+      "crop_xyxy": [
+        687,
+        102,
+        1609,
+        678
+      ]
+    },
+    {
+      "case": "pilot_secondstage_iou",
+      "frame": 345,
+      "crop_xyxy": [
+        687,
+        102,
+        1609,
+        678
+      ]
+    },
+    {
+      "case": "pilot_allow_lost_iou",
+      "frame": 345,
+      "crop_xyxy": [
+        687,
+        102,
+        1609,
+        678
+      ]
+    }
+  ],
+  "bar_fields": [
+    "high_overlap_pair_frames",
+    "GT_primary_supported_pair_frames",
+    "GT_sensitivity_supported_pair_frames"
+  ],
+  "bar_values": [
+    [
+      2,
+      3,
+      3,
+      22,
+      22,
+      23
+    ],
+    [
+      1,
+      1,
+      1,
+      13,
+      13,
+      13
+    ],
+    [
+      1,
+      1,
+      1,
+      22,
+      22,
+      23
+    ]
+  ],
+  "timeline": [
+    {
+      "condition": "generic_installed",
+      "distinct_frames": [
+        421
+      ],
+      "support_color_class": [
+        2
+      ]
+    },
+    {
+      "condition": "generic_secondstage_iou",
+      "distinct_frames": [
+        323,
+        421
+      ],
+      "support_color_class": [
+        0,
+        2
+      ]
+    },
+    {
+      "condition": "generic_allow_lost_iou",
+      "distinct_frames": [
+        323,
+        421
+      ],
+      "support_color_class": [
+        0,
+        2
+      ]
+    },
+    {
+      "condition": "pilot_installed",
+      "distinct_frames": [
+        69,
+        89,
+        91,
+        93,
+        101,
+        237,
+        238,
+        245,
+        247,
+        248,
+        249,
+        311,
+        312,
+        343,
+        344,
+        345,
+        346,
+        347,
+        390,
+        391,
+        442,
+        464
+      ],
+      "support_color_class": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "condition": "pilot_secondstage_iou",
+      "distinct_frames": [
+        69,
+        89,
+        91,
+        93,
+        101,
+        237,
+        238,
+        245,
+        247,
+        248,
+        249,
+        311,
+        312,
+        343,
+        344,
+        345,
+        346,
+        347,
+        390,
+        391,
+        442,
+        464
+      ],
+      "support_color_class": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "condition": "pilot_allow_lost_iou",
+      "distinct_frames": [
+        69,
+        89,
+        91,
+        93,
+        101,
+        120,
+        237,
+        238,
+        245,
+        247,
+        248,
+        249,
+        311,
+        312,
+        343,
+        344,
+        345,
+        346,
+        347,
+        390,
+        391,
+        442,
+        464
+      ],
+      "support_color_class": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "output_files": [
+    {
+      "path": "all6_representatives.jpg",
+      "bytes": 294493,
+      "sha256": "26504e90828d0aa27affe8db599dc7ce6b2317e9a99f28ac0a8851e2222f5044"
+    },
+    {
+      "path": "known_case_and_distinct_cow_counterexample.jpg",
+      "bytes": 353781,
+      "sha256": "8966161a785f1fa16d2534191b9e0cb0df58da06c470bd1bcafddaf96f21993b"
+    },
+    {
+      "path": "native_f120.jpg",
+      "bytes": 474268,
+      "sha256": "28c2844251857d5a323bcdad6f7fd3f176bd8cefc25ad57200ce2fb146ef1aed"
+    },
+    {
+      "path": "native_f323.jpg",
+      "bytes": 490274,
+      "sha256": "6b96ebe9cc48b774efb4c1a6f07f0e6c19c5f73909b8bcfe67f32bc9bfc9d119"
+    },
+    {
+      "path": "native_f345.jpg",
+      "bytes": 496704,
+      "sha256": "ef6f0c59f9c1e72a9d2f376dc72287b32908fcb34ed55b9785c02af2e0e26f24"
+    },
+    {
+      "path": "native_f421.jpg",
+      "bytes": 497112,
+      "sha256": "a80c25bbea2da3e6f85d45dbffaac29c3194004a402a03dfa6be1632a588f9fa"
+    },
+    {
+      "path": "redundancy_diagnostics.pdf",
+      "bytes": 24500,
+      "sha256": "15115d11da88586dbc3499514a04db88cfd95776b0cea71e31ea14fd03af1d83"
+    },
+    {
+      "path": "redundancy_diagnostics.png",
+      "bytes": 168676,
+      "sha256": "48c528b35b2e5b3ae7337615e4499e9397493977a5fcd58cb15c0f290c863c24"
+    },
+    {
+      "path": "redundancy_diagnostics.svg",
+      "bytes": 111913,
+      "sha256": "f3133da229b64a797009b0caee113bcfb325ecfc98095a43707605b0d11c47ce"
+    },
+    {
+      "path": "representative_1.jpg",
+      "bytes": 28687,
+      "sha256": "212a7ff093493818e9f2a3f3104df8a51f480f47303c5d20e96f902bff54e4e6"
+    },
+    {
+      "path": "representative_2.jpg",
+      "bytes": 28706,
+      "sha256": "7bf1fc07822bafa1d1f4b7e588211bd23eb625d7bd1289a14f06d478b501156e"
+    },
+    {
+      "path": "representative_3.jpg",
+      "bytes": 28695,
+      "sha256": "099dfc50d6d4e6238aa58f7a3de2c228c4146208b813612416d096f8c9aad2f3"
+    },
+    {
+      "path": "representative_4.jpg",
+      "bytes": 55828,
+      "sha256": "ae53ffc5d16c6f87b735022ec2a2cf48b73e6a2ab15a273b3c2d5f6d15203d17"
+    },
+    {
+      "path": "representative_5.jpg",
+      "bytes": 55736,
+      "sha256": "58696261b12032992365a4eacfeee0f3939c3728c60ee3d48dcc8b2446b0df39"
+    },
+    {
+      "path": "representative_6.jpg",
+      "bytes": 55776,
+      "sha256": "ab5e9984b3040245e3752bb78efc6d28bfbdf7fb2aa58326a71322d789c15231"
+    }
+  ],
+  "new_detector_forwards": 0,
+  "new_independent_reference": false
+}

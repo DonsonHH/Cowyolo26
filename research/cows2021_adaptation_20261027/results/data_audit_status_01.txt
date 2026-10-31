@@ -1,0 +1,14 @@
+             JOBID|PARTITION|                     NAME|   STATE|      TIME|NODELIST(REASON)
+            129914|       cu| idcoo-cows21-image-audit| RUNNING|      4:48|cu16
+JobID|JobName|Partition|State|ExitCode|Elapsed|AllocCPUS|ReqMem|MaxRSS
+129914|idcoo-cows21-image-audit|cu|RUNNING|0:0|00:04:48|2|8G|
+129914.batch|batch||RUNNING|0:0|00:04:48|2||
+129914.0|python||RUNNING|0:0|00:04:48|2||
+129915|idcoo-cows21-archive-crc|cu|COMPLETED|0:0|00:00:10|2|4G|
+129915.batch|batch||COMPLETED|0:0|00:00:10|2||1172K
+129915.0|python||COMPLETED|0:0|00:00:10|2||800K
+{"decoded_new_images": 6500, "errors": 0, "elapsed_s": 140.9147907588631}
+{"decoded_new_images": 7000, "errors": 0, "elapsed_s": 151.45001987554133}
+{"decoded_new_images": 7500, "errors": 0, "elapsed_s": 162.11201712675393}
+{"decoded_new_images": 8000, "errors": 0, "elapsed_s": 172.58006195537746}
+{"status": "ALL_8380_NATIVE_JPEGS_MATCH_OFFICIAL_ZIP_MEMBER_CRC_AND_SIZE", "job_id": "129915", "source_selected_member_manifest_sha256": "ec65a09a155fc3423b693a2fef8d3e7414f446768c1046e20ec7d6b02f112728", "native_byte_manifest_sha256": "4d1ef88f285d0d424316f598ee593b9f5315f5f47cd66cb0f36fa203c78a7cc1", "images_checked": 8380, "roles": {"train": 6809, "validation": 1571}, "mismatches": [], "native_total_bytes": 2747795477, "official_ZIP_total_bytes": 2747795477, "CRC_is_byte_integrity_check_not_a_cryptographic_signature": true, "image_pixels_decoded_or_model_forward": false, "candidate_final_payload_read": false, "elapsed_s": 10.463058670982718, "whole_goal_complete": false}

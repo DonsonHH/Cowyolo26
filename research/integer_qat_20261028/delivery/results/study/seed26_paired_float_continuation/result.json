@@ -1,0 +1,179 @@
+{
+  "seed": 26,
+  "condition": "paired_float_continuation",
+  "quantized": false,
+  "updates": 120,
+  "state_sha256": "2838328e7ee597000b5e4f37b0bc6884437e742081df974454ff74057d52c53c",
+  "model_path": "/share/home/renly/projects/idcoo_research_20261026/integer_qat_20261028/results/study/seed26_paired_float_continuation/packed.onnx",
+  "model_sha256": "7f9a96aa80324389a9aaa22d6d091b67568679d3b26aca7efd3ad4a46912f4ce",
+  "export_gate": {
+    "required_all_vectors_pass": true,
+    "rows": [
+      {
+        "vector": 0,
+        "maximum_absolute_error": 6.966292858123779e-07,
+        "cosine": 0.9999999999897489,
+        "pass": true
+      },
+      {
+        "vector": 1,
+        "maximum_absolute_error": 5.066394805908203e-07,
+        "cosine": 0.9999999999931479,
+        "pass": true
+      },
+      {
+        "vector": 2,
+        "maximum_absolute_error": 6.48200511932373e-07,
+        "cosine": 0.9999999999935902,
+        "pass": true
+      },
+      {
+        "vector": 3,
+        "maximum_absolute_error": 8.642673492431641e-07,
+        "cosine": 0.9999999999881362,
+        "pass": true
+      },
+      {
+        "vector": 4,
+        "maximum_absolute_error": 7.003545761108398e-07,
+        "cosine": 0.9999999999949822,
+        "pass": true
+      },
+      {
+        "vector": 5,
+        "maximum_absolute_error": 8.791685104370117e-07,
+        "cosine": 0.9999999999890619,
+        "pass": true
+      },
+      {
+        "vector": 6,
+        "maximum_absolute_error": 5.159527063369751e-07,
+        "cosine": 0.9999999999944563,
+        "pass": true
+      },
+      {
+        "vector": 7,
+        "maximum_absolute_error": 6.854534149169922e-07,
+        "cosine": 0.9999999999920275,
+        "pass": true
+      }
+    ],
+    "packed_sha256": "7f9a96aa80324389a9aaa22d6d091b67568679d3b26aca7efd3ad4a46912f4ce",
+    "state_sha256": "2838328e7ee597000b5e4f37b0bc6884437e742081df974454ff74057d52c53c"
+  },
+  "threshold": {
+    "threshold": 0.856968366705154,
+    "calibration_known_correct_accepted": 18,
+    "calibration_known_wrong_accepted": 0,
+    "calibration_unknown_false_accepts": 1,
+    "calibration_unknown_queries": 30,
+    "calibration_unknown_far": 0.03333333333333333,
+    "selection": "Max correctly accepted known subject to empirical unknown FAR<=0.05; ties min known wrong accepts then higher threshold"
+  },
+  "validation": {
+    "known_queries": 25,
+    "unknown_queries": 30,
+    "known_correct_accepted_C": 18,
+    "known_wrong_accepted_W": 0,
+    "known_rejected_U": 7,
+    "query_missing_M": 0,
+    "known_closed_top1_correct": 25,
+    "known_closed_top1_accuracy": 1.0,
+    "known_correct_accepted_rate": 0.72,
+    "known_wrong_accepted_rate": 0.0,
+    "unknown_false_accepts": 1,
+    "unknown_false_acceptance_rate": 0.03333333333333333,
+    "all_accepted_wrong_fraction": 0.05263157894736842,
+    "per_identity": [
+      {
+        "identity": "007",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 1.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "011",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.4,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "012",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "019",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.4,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "022",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "024",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "030",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      },
+      {
+        "identity": "039",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.2
+      },
+      {
+        "identity": "041",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 0.8,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "045",
+        "is_known": true,
+        "queries": 5,
+        "closed_top1_accuracy": 1.0,
+        "correct_accepted_rate": 1.0,
+        "false_accept_rate": null
+      },
+      {
+        "identity": "081",
+        "is_known": false,
+        "queries": 5,
+        "closed_top1_accuracy": null,
+        "correct_accepted_rate": null,
+        "false_accept_rate": 0.0
+      }
+    ],
+    "unit": "Curated image query, not complete passage or field ear-tag event"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "status": "FIXED_SAME_O8_SIZE_COW_COMPILE_AND_CPU_PARITY_COMPLETE",
+  "created_UTC": "2026-10-29T17:34:12.157613+00:00",
+  "job_id": "130594",
+  "protocol_sha256": "371c6c1174cfd7de407d65bd045983a035aaa371ee131914bc1ac75ee870bb0f",
+  "size": 256,
+  "checkpoint_sha256": "d218615b6a29e98e0464cbba29dc22deb95b932e3ce2d94125ca79d2167fa4a0",
+  "FP32_onnx_sha256": "b9e4cdbf74ad0e401b00bf39db079062a2115377120537be443026f79a880b15",
+  "QDQ_onnx_sha256": "ef0967c90899f0bd2bf7f90f72079f207713d516bf29b5d12891645386188d99",
+  "actual_train_calibration_images": 128,
+  "class_count": 1,
+  "primary_model": "S256_rot90_seed26",
+  "normalization_parity": [
+    {
+      "file_name": "04930.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "39f5914ec3592a5d1660f4c562d695980ef8bf13c39ffd5a67b962c696ef5bae"
+    },
+    {
+      "file_name": "06639.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "c55f9f0cfed995957cca16189026077783d6546b655df3032c984631c946b0c4"
+    },
+    {
+      "file_name": "00902.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "67946cdffc32af9dd2246c24e2897d6e8bac8b24e6e88046bfc374368445213a"
+    },
+    {
+      "file_name": "00644.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "10890c1fa3ddfda584085c77e97064c69d5dbc3ccfcd6549321cb79b31b7d431"
+    },
+    {
+      "file_name": "01348.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "897b9cb74ce08aba1fda2223be4b92f410d0ae78cf3b16700802fdb610a56320"
+    },
+    {
+      "file_name": "01786.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "5360e39a1668ceeb733f142a2c6bd7d16d66de33445319462f73b26b43907d0b"
+    },
+    {
+      "file_name": "02761.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "e911358e6469144282f2f1e86792a8063ef7a1615e6743f6d17cf74cdcdc9ffa"
+    },
+    {
+      "file_name": "03923.jpg",
+      "outputs_byte_exact": true,
+      "raw_sha256": "bb814475c3d46b9b5d65ce4b89ed048d863f79d820240bcaa8d35b1a8fda33bd"
+    }
+  ],
+  "integer_depthwise_ids": [
+    35,
+    60,
+    65,
+    78,
+    83,
+    89,
+    95,
+    99
+  ],
+  "compiled_op_counts": {
+    "QuantizeLinear": 24,
+    "QuantConv": 94,
+    "Int8Lookup": 47,
+    "Split": 23,
+    "Identity": 42,
+    "DequantizeLinear": 30,
+    "FloatLookup": 17,
+    "Add": 21,
+    "Concat": 24,
+    "MaxPool": 3,
+    "Reshape": 15,
+    "Transpose": 5,
+    "MatMul": 4,
+    "Mul": 3,
+    "Softmax": 2,
+    "Depthwise": 8,
+    "Resize": 2,
+    "Slice": 2,
+    "Sub": 1,
+    "ReduceMax": 1,
+    "TopK": 2,
+    "Unsqueeze": 4,
+    "Flatten": 2,
+    "Expand": 2,
+    "GatherElements": 3,
+    "Mod": 1,
+    "Cast": 1
+  },
+  "graph_sha256": "c083b7e307ac4233f73f3b5e7ded6a041982e42d366c70c5c65fb71edf446216",
+  "resident_plan_sha256": "adf50c9fdf4a24ee00ebc0921e1d5c09e782346765f80428a5227501c22aa9f0",
+  "resident_pairs": 25,
+  "native_PC_library_sha256": "ca6bc4d2eb78210e59f441657b3f7d797239682bdb48d5d31db238f6fd329ae0",
+  "class_head_code_checks": [
+    {
+      "conv_id": 70,
+      "Cout": 1,
+      "codes": 256,
+      "finite": true,
+      "range_valid": true
+    },
+    {
+      "conv_id": 87,
+      "Cout": 1,
+      "codes": 256,
+      "finite": true,
+      "range_valid": true
+    },
+    {
+      "conv_id": 101,
+      "Cout": 1,
+      "codes": 256,
+      "finite": true,
+      "range_valid": true
+    }
+  ],
+  "CPU_integer_parity_vectors": [
+    {
+      "file_name": "04930.jpg",
+      "input_sha256": "b3adcbd3102ffe5e28e7e3029141a8829c817c72c2181d0d3d2745bfbafdba42",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "06639.jpg",
+      "input_sha256": "61031f86e32d7e19d7c9f0a21869c446eafc25ef36a580e35ce7c69423ee6fa0",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "00902.jpg",
+      "input_sha256": "1bcd0ff7819296801e1e0b9b5bf3e42e346f4e2d999311058b5199023b27e738",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "00644.jpg",
+      "input_sha256": "db44fcfd8a8ad5726690362ab947a88f3d3c0862a8d548a28f6c634ef8a8cd5e",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "01348.jpg",
+      "input_sha256": "9c3c7ab078a15bd142f0f5321f11d7936b592299b3e22898568bfa8fdfc38355",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "01786.jpg",
+      "input_sha256": "11aa4739a6f6f06dcd613c231556719574d0450be23e02d7b2feff293700ec33",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "02761.jpg",
+      "input_sha256": "84fbb9ee67e6d5061006e66c9c447baa4e61d6c55a1b70bd8a7bf5831d66a02d",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    },
+    {
+      "file_name": "03923.jpg",
+      "input_sha256": "1e7998dd5f8201c266ad538688c5218c59f262a833cbd6e878c89c8a4ce47de6",
+      "maximum_box_error": 0.0,
+      "maximum_score_error": 0.0,
+      "classes_exact": true,
+      "passes": true
+    }
+  ],
+  "maximum_box_parity_error": 0.0,
+  "maximum_score_parity_error": 0.0,
+  "all_native_CPU_parity_gates_pass": true,
+  "new_training_updates": 0,
+  "source_video_Toros_or_validation_pixels_used": false,
+  "board_inference_executed": false,
+  "whole_goal_complete": false
+}

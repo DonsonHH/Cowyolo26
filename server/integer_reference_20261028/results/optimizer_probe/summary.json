@@ -1,0 +1,276 @@
+{
+  "status": "ACTUAL_OPTIMIZED_GRAPH_EXACT_REPLAY_AND_FIRST_DIVERGENCES_CAPTURED",
+  "job_id": "129981",
+  "protocol_sha256": "62659469475dad6e06f481ed3c9c6555ca3432ceb1e75a4c273d2078a6679e7b",
+  "source_candidate_sha256": "d5e5523600ef6b31f3ae2e33181754305251c6fffb7bdaf6443511797caeddf6",
+  "snapshots": {
+    "OFF": {
+      "file": "actual_optimized_OFF.onnx",
+      "sha256": "1691aa7c89bb745716512e263aead53e0967d5fa621c8c73b19135c54b3a9933"
+    },
+    "BASIC": {
+      "file": "actual_optimized_BASIC.onnx",
+      "sha256": "00fb381899b139d421ddfe710ef4dfed752eef48bfb0cf2639156448e5452e13"
+    },
+    "EXTENDED": {
+      "file": "actual_optimized_EXTENDED.onnx",
+      "sha256": "2f212f100f08bb6360a37ef12a31efc16e4d6bb4a2b29b8de8b00163e6fee329"
+    },
+    "ALL": {
+      "file": "actual_optimized_ALL.onnx",
+      "sha256": "2f212f100f08bb6360a37ef12a31efc16e4d6bb4a2b29b8de8b00163e6fee329"
+    }
+  },
+  "levels_passed": {
+    "OFF": 8,
+    "BASIC": 8,
+    "EXTENDED": 6,
+    "ALL": 6
+  },
+  "prior_OFF_ALL_outputs_exactly_reproduced": true,
+  "serialized_ALL_replay_vectors": [
+    {
+      "vector": 0,
+      "serialized_replay_exact_original_ALL": true
+    },
+    {
+      "vector": 1,
+      "serialized_replay_exact_original_ALL": true
+    },
+    {
+      "vector": 2,
+      "serialized_replay_exact_original_ALL": true
+    },
+    {
+      "vector": 3,
+      "serialized_replay_exact_original_ALL": true
+    },
+    {
+      "vector": 4,
+      "serialized_replay_exact_original_ALL": true
+    },
+    {
+      "vector": 5,
+      "serialized_replay_exact_original_ALL": true
+    },
+    {
+      "vector": 6,
+      "serialized_replay_exact_original_ALL": true
+    },
+    {
+      "vector": 7,
+      "serialized_replay_exact_original_ALL": true
+    }
+  ],
+  "common_tensors_per_traced_vector": 530,
+  "tracing_preservation_checks": [
+    {
+      "vector": 2,
+      "original_embedding_unchanged_after_trace_outputs": true,
+      "serialized_ALL_embedding_unchanged_after_trace_outputs": true
+    },
+    {
+      "vector": 5,
+      "original_embedding_unchanged_after_trace_outputs": true,
+      "serialized_ALL_embedding_unchanged_after_trace_outputs": true
+    }
+  ],
+  "first_divergences": [
+    {
+      "vector": 2,
+      "first_common_difference": {
+        "vector": 2,
+        "source_order": 100,
+        "tensor": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0",
+        "dtype": "uint8",
+        "shape": [
+          1,
+          24,
+          28,
+          28
+        ],
+        "different_elements": 1,
+        "maximum_absolute_error": 1.0,
+        "source_producer": {
+          "name": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear",
+          "domain": "",
+          "op_type": "QuantizeLinear",
+          "inputs": [
+            "/encoder/encoder.0/encoder.0.3/Add_output_0",
+            "encoder.0.4.block.0.0.input_quant.scale",
+            "onnx::QuantizeLinear_1843"
+          ],
+          "outputs": [
+            "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+          ]
+        },
+        "optimized_producer": {
+          "name": "/encoder/encoder.0/encoder.0.3/Add",
+          "domain": "com.microsoft",
+          "op_type": "QLinearAdd",
+          "inputs": [
+            "/encoder/encoder.0/encoder.0.3/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+            "encoder.0.3.block.2.0.output_quant.scale",
+            "onnx::QuantizeLinear_1827",
+            "/encoder/encoder.0/encoder.0.2/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+            "encoder.0.2.block.2.0.output_quant.scale",
+            "onnx::QuantizeLinear_1833",
+            "encoder.0.4.block.0.0.input_quant.scale",
+            "onnx::QuantizeLinear_1843"
+          ],
+          "outputs": [
+            "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+          ]
+        }
+      },
+      "first_common_integer_difference": {
+        "vector": 2,
+        "source_order": 100,
+        "tensor": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0",
+        "dtype": "uint8",
+        "shape": [
+          1,
+          24,
+          28,
+          28
+        ],
+        "different_elements": 1,
+        "maximum_absolute_error": 1.0,
+        "source_producer": {
+          "name": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear",
+          "domain": "",
+          "op_type": "QuantizeLinear",
+          "inputs": [
+            "/encoder/encoder.0/encoder.0.3/Add_output_0",
+            "encoder.0.4.block.0.0.input_quant.scale",
+            "onnx::QuantizeLinear_1843"
+          ],
+          "outputs": [
+            "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+          ]
+        },
+        "optimized_producer": {
+          "name": "/encoder/encoder.0/encoder.0.3/Add",
+          "domain": "com.microsoft",
+          "op_type": "QLinearAdd",
+          "inputs": [
+            "/encoder/encoder.0/encoder.0.3/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+            "encoder.0.3.block.2.0.output_quant.scale",
+            "onnx::QuantizeLinear_1827",
+            "/encoder/encoder.0/encoder.0.2/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+            "encoder.0.2.block.2.0.output_quant.scale",
+            "onnx::QuantizeLinear_1833",
+            "encoder.0.4.block.0.0.input_quant.scale",
+            "onnx::QuantizeLinear_1843"
+          ],
+          "outputs": [
+            "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+          ]
+        }
+      },
+      "all_different_common_tensors": 401,
+      "common_tensors": 530
+    },
+    {
+      "vector": 5,
+      "first_common_difference": {
+        "vector": 5,
+        "source_order": 100,
+        "tensor": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0",
+        "dtype": "uint8",
+        "shape": [
+          1,
+          24,
+          28,
+          28
+        ],
+        "different_elements": 1,
+        "maximum_absolute_error": 1.0,
+        "source_producer": {
+          "name": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear",
+          "domain": "",
+          "op_type": "QuantizeLinear",
+          "inputs": [
+            "/encoder/encoder.0/encoder.0.3/Add_output_0",
+            "encoder.0.4.block.0.0.input_quant.scale",
+            "onnx::QuantizeLinear_1843"
+          ],
+          "outputs": [
+            "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+          ]
+        },
+        "optimized_producer": {
+          "name": "/encoder/encoder.0/encoder.0.3/Add",
+          "domain": "com.microsoft",
+          "op_type": "QLinearAdd",
+          "inputs": [
+            "/encoder/encoder.0/encoder.0.3/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+            "encoder.0.3.block.2.0.output_quant.scale",
+            "onnx::QuantizeLinear_1827",
+            "/encoder/encoder.0/encoder.0.2/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+            "encoder.0.2.block.2.0.output_quant.scale",
+            "onnx::QuantizeLinear_1833",
+            "encoder.0.4.block.0.0.input_quant.scale",
+            "onnx::QuantizeLinear_1843"
+          ],
+          "outputs": [
+            "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+          ]
+        }
+      },
+      "first_common_integer_difference": {
+        "vector": 5,
+        "source_order": 100,
+        "tensor": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0",
+        "dtype": "uint8",
+        "shape": [
+          1,
+          24,
+          28,
+          28
+        ],
+        "different_elements": 1,
+        "maximum_absolute_error": 1.0,
+        "source_producer": {
+          "name": "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear",
+          "domain": "",
+          "op_type": "QuantizeLinear",
+          "inputs": [
+            "/encoder/encoder.0/encoder.0.3/Add_output_0",
+            "encoder.0.4.block.0.0.input_quant.scale",
+            "onnx::QuantizeLinear_1843"
+          ],
+          "outputs": [
+            "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+          ]
+        },
+        "optimized_producer": {
+          "name": "/encoder/encoder.0/encoder.0.3/Add",
+          "domain": "com.microsoft",
+          "op_type": "QLinearAdd",
+          "inputs": [
+            "/encoder/encoder.0/encoder.0.3/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+            "encoder.0.3.block.2.0.output_quant.scale",
+            "onnx::QuantizeLinear_1827",
+            "/encoder/encoder.0/encoder.0.2/block/block.2/block.2.0/output_quant/QuantizeLinear_output_0",
+            "encoder.0.2.block.2.0.output_quant.scale",
+            "onnx::QuantizeLinear_1833",
+            "encoder.0.4.block.0.0.input_quant.scale",
+            "onnx::QuantizeLinear_1843"
+          ],
+          "outputs": [
+            "/encoder/encoder.0/encoder.0.4/block/block.0/block.0.0/input_quant/QuantizeLinear_output_0"
+          ]
+        }
+      },
+      "all_different_common_tensors": 411,
+      "common_tensors": 530
+    }
+  ],
+  "specific_causal_transformer_proven": false,
+  "new_training_updates": 0,
+  "new_image_reads": 0,
+  "FPGA_execution": false,
+  "elapsed_s": 1.4495514538139105,
+  "whole_goal_complete": false
+}

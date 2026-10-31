@@ -1,0 +1,138 @@
+{
+  "status": "3142_VALIDATION_MATCHES_AND12_VIDEO_COUNTER_PATHS_INDEPENDENTLY_RECOMPUTED",
+  "created_UTC": "2026-10-29T21:37:11.805162+00:00",
+  "validation_matching_problems": 3142,
+  "validation_reference_boxes": 3728,
+  "validation_predicted_boxes": 4148,
+  "maximum_independent_reference_geometry_error": 2.2737367544323206e-13,
+  "raw_video_ticks": 5308,
+  "raw_video_boxes_inverse_checked": 3154,
+  "maximum_inverse_error": 0.0,
+  "counter_ticks": 5468,
+  "counter_paths": 12,
+  "publisher_event_score_conditions": 8,
+  "native_integer_input_anchor_bytes_checked": 8,
+  "validation_metrics": [
+    {
+      "mode": "FP32",
+      "images": 1571,
+      "references": 1864,
+      "TP": 1838,
+      "unmatched_reference": 26,
+      "unmatched_prediction": 230,
+      "recall": 0.9860515021459227,
+      "precision_vs_reference": 0.8887814313346228
+    },
+    {
+      "mode": "QDQ",
+      "images": 1571,
+      "references": 1864,
+      "TP": 1839,
+      "unmatched_reference": 25,
+      "unmatched_prediction": 241,
+      "recall": 0.9865879828326181,
+      "precision_vs_reference": 0.8841346153846154
+    }
+  ],
+  "video_counts": [
+    {
+      "scene": "original",
+      "mode": "FP32",
+      "stride": 5,
+      "counter": "confirmed_only_events",
+      "down": 10,
+      "up": 0
+    },
+    {
+      "scene": "original",
+      "mode": "FP32",
+      "stride": 5,
+      "counter": "handoff_events",
+      "down": 10,
+      "up": 0
+    },
+    {
+      "scene": "original",
+      "mode": "QDQ",
+      "stride": 5,
+      "counter": "confirmed_only_events",
+      "down": 9,
+      "up": 0
+    },
+    {
+      "scene": "original",
+      "mode": "QDQ",
+      "stride": 5,
+      "counter": "handoff_events",
+      "down": 10,
+      "up": 0
+    },
+    {
+      "scene": "toros",
+      "mode": "FP32",
+      "stride": 6,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 2
+    },
+    {
+      "scene": "toros",
+      "mode": "FP32",
+      "stride": 6,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 3
+    },
+    {
+      "scene": "toros",
+      "mode": "FP32",
+      "stride": 1,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 4
+    },
+    {
+      "scene": "toros",
+      "mode": "FP32",
+      "stride": 1,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 4
+    },
+    {
+      "scene": "toros",
+      "mode": "QDQ",
+      "stride": 6,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 2
+    },
+    {
+      "scene": "toros",
+      "mode": "QDQ",
+      "stride": 6,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 3
+    },
+    {
+      "scene": "toros",
+      "mode": "QDQ",
+      "stride": 1,
+      "counter": "confirmed_only_events",
+      "down": 0,
+      "up": 4
+    },
+    {
+      "scene": "toros",
+      "mode": "QDQ",
+      "stride": 1,
+      "counter": "handoff_events",
+      "down": 0,
+      "up": 4
+    }
+  ],
+  "no_failed_quality_forward_in_this_phase": true,
+  "whole_goal_complete": false,
+  "new_network_forwards": 0
+}

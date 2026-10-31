@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "job": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/jobs/validation_1746752988042775971",
+  "PID": 12831,
+  "steps": [
+    {
+      "step": "representative_D.py",
+      "exit": 0,
+      "log": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/jobs/validation_1746752988042775971/representative_D.py.log"
+    },
+    {
+      "step": "long_and_camera_runs.py",
+      "exit": 0,
+      "log": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/jobs/validation_1746752988042775971/long_and_camera_runs.py.log"
+    },
+    {
+      "step": "profile_costs.py",
+      "exit": 0,
+      "log": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/jobs/validation_1746752988042775971/profile_costs.py.log"
+    },
+    {
+      "step": "board_recovery_test.py",
+      "exit": 1,
+      "log": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/jobs/validation_1746752988042775971/board_recovery_test.py.log"
+    }
+  ],
+  "failure": "Traceback (most recent call last):\n  File \"/home/xilinx/jupyter_notebooks/yolo26_optimization_8/jobs/validation_1746752988042775971/coordinator.py\", line 8, in <module>\n    records.append(dict(step=name,exit=p.returncode,log=str(log)));assert p.returncode==0,log.read_text()[-5000:]\nAssertionError: O8_RECOVERY_REPORT {\"status\": \"FAIL\", \"rows\": [], \"failure\": \"Traceback (most recent call last):\\n  File \\\"/home/xilinx/jupyter_notebooks/yolo26_optimization_8/jobs/validation_1746752988042775971/board_recovery_test.py\\\", line 12, in <module>\\n    if time.monotonic()>deadline:raise RuntimeError('queue did not start')\\nRuntimeError: queue did not start\\n\"} /home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/recovery_1746753789810822223\nTraceback (most recent call last):\n  File \"/home/xilinx/jupyter_notebooks/yolo26_optimization_8/jobs/validation_1746752988042775971/board_recovery_test.py\", line 12, in <module>\n    if time.monotonic()>deadline:raise RuntimeError('queue did not start')\nRuntimeError: queue did not start\n\n"
+}

@@ -1,0 +1,3085 @@
+{
+  "status": "TWO_FIXED_DETECTOR_CACHES_SIX_TRACKER_RUNS_TWELVE_REFERENCED_COUNTER_PATHS_SCORED",
+  "job_id": "130293",
+  "protocol_sha256": "028a0985cebd08a8ae2abbfca4f670dcdabfbbe564aafbbb3281dc4de84d7b83",
+  "reference_events": [
+    {
+      "time_s": 3.6666666666666665,
+      "track_id": 1,
+      "direction": "B->A",
+      "frame": 110
+    },
+    {
+      "time_s": 6.433333333333334,
+      "track_id": 14,
+      "direction": "B->A",
+      "frame": 193
+    },
+    {
+      "time_s": 8.266666666666667,
+      "track_id": 7,
+      "direction": "B->A",
+      "frame": 248
+    },
+    {
+      "time_s": 9.533333333333333,
+      "track_id": 16,
+      "direction": "B->A",
+      "frame": 286
+    },
+    {
+      "time_s": 10.733333333333333,
+      "track_id": 22,
+      "direction": "B->A",
+      "frame": 322
+    },
+    {
+      "time_s": 13.2,
+      "track_id": 17,
+      "direction": "B->A",
+      "frame": 396
+    }
+  ],
+  "conditions": [
+    {
+      "name": "generic_installed",
+      "model": "generic",
+      "variant": "installed",
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "frames": 479,
+      "raw_rows": 1323,
+      "posttracker_rows": 1158,
+      "ROI_rows": 1145,
+      "ROI_IDs": 14,
+      "confirmed_only_events": 6,
+      "handoff_events": 6,
+      "baseline_exact": true,
+      "low_stage_matches": 0,
+      "low_Lost_recoveries": 0,
+      "scores": [
+        {
+          "condition_id": "generic_installed_confirmed_only",
+          "model": "generic",
+          "tracker_variant": "installed",
+          "counter_variant": "confirmed_only",
+          "main_method": true,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "prediction_ID": 2,
+              "prediction_frame": 110,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "prediction_ID": 5,
+              "prediction_frame": 199,
+              "time_error_s": 0.20000000000000018,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 25,
+              "prediction_frame": 245,
+              "time_error_s": 0.10000000000000142,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "prediction_ID": 31,
+              "prediction_frame": 291,
+              "time_error_s": 0.16666666666666607,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "prediction_ID": 54,
+              "prediction_frame": 322,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 34,
+              "prediction_frame": 397,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            }
+          ],
+          "events_path": "results/generic_installed/confirmed_only_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        },
+        {
+          "condition_id": "generic_installed_handoff",
+          "model": "generic",
+          "tracker_variant": "installed",
+          "counter_variant": "handoff",
+          "main_method": true,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "prediction_ID": 2,
+              "prediction_frame": 110,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "prediction_ID": 5,
+              "prediction_frame": 199,
+              "time_error_s": 0.20000000000000018,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 25,
+              "prediction_frame": 245,
+              "time_error_s": 0.10000000000000142,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "prediction_ID": 31,
+              "prediction_frame": 291,
+              "time_error_s": 0.16666666666666607,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "prediction_ID": 54,
+              "prediction_frame": 322,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 34,
+              "prediction_frame": 397,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            }
+          ],
+          "events_path": "results/generic_installed/handoff_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        }
+      ],
+      "new_detector_forwards": 0,
+      "training_updates": 0,
+      "FPGA_execution_verified": false
+    },
+    {
+      "name": "generic_secondstage_iou",
+      "model": "generic",
+      "variant": "secondstage_iou",
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "frames": 479,
+      "raw_rows": 1323,
+      "posttracker_rows": 1177,
+      "ROI_rows": 1171,
+      "ROI_IDs": 14,
+      "confirmed_only_events": 6,
+      "handoff_events": 6,
+      "baseline_exact": false,
+      "low_stage_matches": 25,
+      "low_Lost_recoveries": 0,
+      "scores": [
+        {
+          "condition_id": "generic_secondstage_iou_confirmed_only",
+          "model": "generic",
+          "tracker_variant": "secondstage_iou",
+          "counter_variant": "confirmed_only",
+          "main_method": false,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "prediction_ID": 2,
+              "prediction_frame": 110,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "prediction_ID": 5,
+              "prediction_frame": 199,
+              "time_error_s": 0.20000000000000018,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 25,
+              "prediction_frame": 245,
+              "time_error_s": 0.10000000000000142,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "prediction_ID": 31,
+              "prediction_frame": 291,
+              "time_error_s": 0.16666666666666607,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "prediction_ID": 54,
+              "prediction_frame": 322,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 34,
+              "prediction_frame": 397,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            }
+          ],
+          "events_path": "results/generic_secondstage_iou/confirmed_only_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        },
+        {
+          "condition_id": "generic_secondstage_iou_handoff",
+          "model": "generic",
+          "tracker_variant": "secondstage_iou",
+          "counter_variant": "handoff",
+          "main_method": true,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "prediction_ID": 2,
+              "prediction_frame": 110,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "prediction_ID": 5,
+              "prediction_frame": 199,
+              "time_error_s": 0.20000000000000018,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 25,
+              "prediction_frame": 245,
+              "time_error_s": 0.10000000000000142,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "prediction_ID": 31,
+              "prediction_frame": 291,
+              "time_error_s": 0.16666666666666607,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "prediction_ID": 54,
+              "prediction_frame": 322,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 34,
+              "prediction_frame": 397,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            }
+          ],
+          "events_path": "results/generic_secondstage_iou/handoff_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        }
+      ],
+      "new_detector_forwards": 0,
+      "training_updates": 0,
+      "FPGA_execution_verified": false
+    },
+    {
+      "name": "generic_allow_lost_iou",
+      "model": "generic",
+      "variant": "allow_lost_iou",
+      "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "frames": 479,
+      "raw_rows": 1323,
+      "posttracker_rows": 1193,
+      "ROI_rows": 1191,
+      "ROI_IDs": 13,
+      "confirmed_only_events": 6,
+      "handoff_events": 6,
+      "baseline_exact": false,
+      "low_stage_matches": 42,
+      "low_Lost_recoveries": 14,
+      "scores": [
+        {
+          "condition_id": "generic_allow_lost_iou_confirmed_only",
+          "model": "generic",
+          "tracker_variant": "allow_lost_iou",
+          "counter_variant": "confirmed_only",
+          "main_method": false,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "prediction_ID": 2,
+              "prediction_frame": 110,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "prediction_ID": 5,
+              "prediction_frame": 199,
+              "time_error_s": 0.20000000000000018,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 24,
+              "prediction_frame": 245,
+              "time_error_s": 0.10000000000000142,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "prediction_ID": 30,
+              "prediction_frame": 291,
+              "time_error_s": 0.16666666666666607,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "prediction_ID": 50,
+              "prediction_frame": 322,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 33,
+              "prediction_frame": 397,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            }
+          ],
+          "events_path": "results/generic_allow_lost_iou/confirmed_only_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        },
+        {
+          "condition_id": "generic_allow_lost_iou_handoff",
+          "model": "generic",
+          "tracker_variant": "allow_lost_iou",
+          "counter_variant": "handoff",
+          "main_method": true,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 6,
+            "temporally_matched": 6,
+            "correct_direction_matches": 6,
+            "wrong_direction_matches": 0,
+            "TP": 6,
+            "FP": 0,
+            "FN": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 6
+              }
+            },
+            "mean_absolute_direction_count_error": 0.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 1,
+                "prediction_index": 1,
+                "time_error_s": 0.20000000000000018,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 2,
+                "time_error_s": 0.10000000000000142,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 3,
+                "prediction_index": 3,
+                "time_error_s": 0.16666666666666607,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 4,
+                "prediction_index": 4,
+                "time_error_s": 0.0,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 5,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "prediction_ID": 2,
+              "prediction_frame": 110,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "prediction_ID": 5,
+              "prediction_frame": 199,
+              "time_error_s": 0.20000000000000018,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 24,
+              "prediction_frame": 245,
+              "time_error_s": 0.10000000000000142,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "prediction_ID": 30,
+              "prediction_frame": 291,
+              "time_error_s": 0.16666666666666607,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "prediction_ID": 50,
+              "prediction_frame": 322,
+              "time_error_s": 0.0,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 33,
+              "prediction_frame": 397,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            }
+          ],
+          "events_path": "results/generic_allow_lost_iou/handoff_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        }
+      ],
+      "new_detector_forwards": 0,
+      "training_updates": 0,
+      "FPGA_execution_verified": false
+    },
+    {
+      "name": "pilot_installed",
+      "model": "pilot",
+      "variant": "installed",
+      "checkpoint_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+      "frames": 479,
+      "raw_rows": 1064,
+      "posttracker_rows": 905,
+      "ROI_rows": 891,
+      "ROI_IDs": 19,
+      "confirmed_only_events": 2,
+      "handoff_events": 2,
+      "baseline_exact": true,
+      "low_stage_matches": 0,
+      "low_Lost_recoveries": 0,
+      "scores": [
+        {
+          "condition_id": "pilot_installed_confirmed_only",
+          "model": "pilot",
+          "tracker_variant": "installed",
+          "counter_variant": "confirmed_only",
+          "main_method": true,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 2,
+            "temporally_matched": 2,
+            "correct_direction_matches": 2,
+            "wrong_direction_matches": 0,
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 2
+              }
+            },
+            "mean_absolute_direction_count_error": 2.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 1,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 21,
+              "prediction_frame": 246,
+              "time_error_s": 0.0666666666666682,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 39,
+              "prediction_frame": 395,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "reference_direction": "B->A"
+            }
+          ],
+          "events_path": "results/pilot_installed/confirmed_only_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        },
+        {
+          "condition_id": "pilot_installed_handoff",
+          "model": "pilot",
+          "tracker_variant": "installed",
+          "counter_variant": "handoff",
+          "main_method": true,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 2,
+            "temporally_matched": 2,
+            "correct_direction_matches": 2,
+            "wrong_direction_matches": 0,
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 2
+              }
+            },
+            "mean_absolute_direction_count_error": 2.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 1,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 21,
+              "prediction_frame": 246,
+              "time_error_s": 0.0666666666666682,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 39,
+              "prediction_frame": 395,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "reference_direction": "B->A"
+            }
+          ],
+          "events_path": "results/pilot_installed/handoff_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        }
+      ],
+      "new_detector_forwards": 0,
+      "training_updates": 0,
+      "FPGA_execution_verified": false
+    },
+    {
+      "name": "pilot_secondstage_iou",
+      "model": "pilot",
+      "variant": "secondstage_iou",
+      "checkpoint_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+      "frames": 479,
+      "raw_rows": 1064,
+      "posttracker_rows": 927,
+      "ROI_rows": 922,
+      "ROI_IDs": 19,
+      "confirmed_only_events": 2,
+      "handoff_events": 2,
+      "baseline_exact": false,
+      "low_stage_matches": 29,
+      "low_Lost_recoveries": 0,
+      "scores": [
+        {
+          "condition_id": "pilot_secondstage_iou_confirmed_only",
+          "model": "pilot",
+          "tracker_variant": "secondstage_iou",
+          "counter_variant": "confirmed_only",
+          "main_method": false,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 2,
+            "temporally_matched": 2,
+            "correct_direction_matches": 2,
+            "wrong_direction_matches": 0,
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 2
+              }
+            },
+            "mean_absolute_direction_count_error": 2.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 1,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 20,
+              "prediction_frame": 246,
+              "time_error_s": 0.0666666666666682,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 38,
+              "prediction_frame": 395,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "reference_direction": "B->A"
+            }
+          ],
+          "events_path": "results/pilot_secondstage_iou/confirmed_only_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        },
+        {
+          "condition_id": "pilot_secondstage_iou_handoff",
+          "model": "pilot",
+          "tracker_variant": "secondstage_iou",
+          "counter_variant": "handoff",
+          "main_method": true,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 2,
+            "temporally_matched": 2,
+            "correct_direction_matches": 2,
+            "wrong_direction_matches": 0,
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 2
+              }
+            },
+            "mean_absolute_direction_count_error": 2.0,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 2,
+                "prediction_index": 0,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 1,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              0,
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 20,
+              "prediction_frame": 246,
+              "time_error_s": 0.0666666666666682,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 38,
+              "prediction_frame": 395,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "reference_direction": "B->A"
+            }
+          ],
+          "events_path": "results/pilot_secondstage_iou/handoff_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        }
+      ],
+      "new_detector_forwards": 0,
+      "training_updates": 0,
+      "FPGA_execution_verified": false
+    },
+    {
+      "name": "pilot_allow_lost_iou",
+      "model": "pilot",
+      "variant": "allow_lost_iou",
+      "checkpoint_sha256": "9b38f145a01585908fa9f1c44f3b00e4fb43f3cdf7f1fe2c8c387252ce47e81b",
+      "frames": 479,
+      "raw_rows": 1064,
+      "posttracker_rows": 935,
+      "ROI_rows": 931,
+      "ROI_IDs": 19,
+      "confirmed_only_events": 3,
+      "handoff_events": 3,
+      "baseline_exact": false,
+      "low_stage_matches": 37,
+      "low_Lost_recoveries": 8,
+      "scores": [
+        {
+          "condition_id": "pilot_allow_lost_iou_confirmed_only",
+          "model": "pilot",
+          "tracker_variant": "allow_lost_iou",
+          "counter_variant": "confirmed_only",
+          "main_method": false,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 3,
+            "temporally_matched": 3,
+            "correct_direction_matches": 3,
+            "wrong_direction_matches": 0,
+            "TP": 3,
+            "FP": 0,
+            "FN": 3,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 3
+              }
+            },
+            "mean_absolute_direction_count_error": 1.5,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.5000000000000004,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 1,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 2,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "prediction_ID": 1,
+              "prediction_frame": 125,
+              "time_error_s": 0.5000000000000004,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 18,
+              "prediction_frame": 246,
+              "time_error_s": 0.0666666666666682,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 36,
+              "prediction_frame": 395,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "reference_direction": "B->A"
+            }
+          ],
+          "events_path": "results/pilot_allow_lost_iou/confirmed_only_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        },
+        {
+          "condition_id": "pilot_allow_lost_iou_handoff",
+          "model": "pilot",
+          "tracker_variant": "allow_lost_iou",
+          "counter_variant": "handoff",
+          "main_method": true,
+          "metrics": {
+            "reference_events": 6,
+            "predicted_events": 3,
+            "temporally_matched": 3,
+            "correct_direction_matches": 3,
+            "wrong_direction_matches": 0,
+            "TP": 3,
+            "FP": 0,
+            "FN": 3,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "direction_accuracy_given_temporal_match": 1.0,
+            "counts": {
+              "A->B": {
+                "reference": 0,
+                "prediction": 0
+              },
+              "B->A": {
+                "reference": 6,
+                "prediction": 3
+              }
+            },
+            "mean_absolute_direction_count_error": 1.5,
+            "matching_tolerance_s": 2.0,
+            "pairs": [
+              {
+                "reference_index": 0,
+                "prediction_index": 0,
+                "time_error_s": 0.5000000000000004,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 2,
+                "prediction_index": 1,
+                "time_error_s": 0.0666666666666682,
+                "direction_correct": true
+              },
+              {
+                "reference_index": 5,
+                "prediction_index": 2,
+                "time_error_s": 0.033333333333333215,
+                "direction_correct": true
+              }
+            ],
+            "unmatched_reference_indices": [
+              1,
+              3,
+              4
+            ],
+            "unmatched_prediction_indices": []
+          },
+          "event_ledger": [
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 1,
+              "reference_frame": 110,
+              "prediction_ID": 1,
+              "prediction_frame": 125,
+              "time_error_s": 0.5000000000000004,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 7,
+              "reference_frame": 248,
+              "prediction_ID": 18,
+              "prediction_frame": 246,
+              "time_error_s": 0.0666666666666682,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "correct_direction_match",
+              "reference_ID": 17,
+              "reference_frame": 396,
+              "prediction_ID": 36,
+              "prediction_frame": 395,
+              "time_error_s": 0.033333333333333215,
+              "reference_direction": "B->A",
+              "prediction_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 14,
+              "reference_frame": 193,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 16,
+              "reference_frame": 286,
+              "reference_direction": "B->A"
+            },
+            {
+              "kind": "unmatched_reference",
+              "reference_ID": 22,
+              "reference_frame": 322,
+              "reference_direction": "B->A"
+            }
+          ],
+          "events_path": "results/pilot_allow_lost_iou/handoff_events.json",
+          "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+        }
+      ],
+      "new_detector_forwards": 0,
+      "training_updates": 0,
+      "FPGA_execution_verified": false
+    }
+  ],
+  "scores": [
+    {
+      "condition_id": "generic_installed_confirmed_only",
+      "model": "generic",
+      "tracker_variant": "installed",
+      "counter_variant": "confirmed_only",
+      "main_method": true,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 2,
+          "prediction_frame": 110,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "prediction_ID": 5,
+          "prediction_frame": 199,
+          "time_error_s": 0.20000000000000018,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 25,
+          "prediction_frame": 245,
+          "time_error_s": 0.10000000000000142,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "prediction_ID": 31,
+          "prediction_frame": 291,
+          "time_error_s": 0.16666666666666607,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "prediction_ID": 54,
+          "prediction_frame": 322,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 34,
+          "prediction_frame": 397,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        }
+      ],
+      "events_path": "results/generic_installed/confirmed_only_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "generic_installed_handoff",
+      "model": "generic",
+      "tracker_variant": "installed",
+      "counter_variant": "handoff",
+      "main_method": true,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 2,
+          "prediction_frame": 110,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "prediction_ID": 5,
+          "prediction_frame": 199,
+          "time_error_s": 0.20000000000000018,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 25,
+          "prediction_frame": 245,
+          "time_error_s": 0.10000000000000142,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "prediction_ID": 31,
+          "prediction_frame": 291,
+          "time_error_s": 0.16666666666666607,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "prediction_ID": 54,
+          "prediction_frame": 322,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 34,
+          "prediction_frame": 397,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        }
+      ],
+      "events_path": "results/generic_installed/handoff_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "generic_secondstage_iou_confirmed_only",
+      "model": "generic",
+      "tracker_variant": "secondstage_iou",
+      "counter_variant": "confirmed_only",
+      "main_method": false,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 2,
+          "prediction_frame": 110,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "prediction_ID": 5,
+          "prediction_frame": 199,
+          "time_error_s": 0.20000000000000018,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 25,
+          "prediction_frame": 245,
+          "time_error_s": 0.10000000000000142,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "prediction_ID": 31,
+          "prediction_frame": 291,
+          "time_error_s": 0.16666666666666607,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "prediction_ID": 54,
+          "prediction_frame": 322,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 34,
+          "prediction_frame": 397,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        }
+      ],
+      "events_path": "results/generic_secondstage_iou/confirmed_only_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "generic_secondstage_iou_handoff",
+      "model": "generic",
+      "tracker_variant": "secondstage_iou",
+      "counter_variant": "handoff",
+      "main_method": true,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 2,
+          "prediction_frame": 110,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "prediction_ID": 5,
+          "prediction_frame": 199,
+          "time_error_s": 0.20000000000000018,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 25,
+          "prediction_frame": 245,
+          "time_error_s": 0.10000000000000142,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "prediction_ID": 31,
+          "prediction_frame": 291,
+          "time_error_s": 0.16666666666666607,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "prediction_ID": 54,
+          "prediction_frame": 322,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 34,
+          "prediction_frame": 397,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        }
+      ],
+      "events_path": "results/generic_secondstage_iou/handoff_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "generic_allow_lost_iou_confirmed_only",
+      "model": "generic",
+      "tracker_variant": "allow_lost_iou",
+      "counter_variant": "confirmed_only",
+      "main_method": false,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 2,
+          "prediction_frame": 110,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "prediction_ID": 5,
+          "prediction_frame": 199,
+          "time_error_s": 0.20000000000000018,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 24,
+          "prediction_frame": 245,
+          "time_error_s": 0.10000000000000142,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "prediction_ID": 30,
+          "prediction_frame": 291,
+          "time_error_s": 0.16666666666666607,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "prediction_ID": 50,
+          "prediction_frame": 322,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 33,
+          "prediction_frame": 397,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        }
+      ],
+      "events_path": "results/generic_allow_lost_iou/confirmed_only_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "generic_allow_lost_iou_handoff",
+      "model": "generic",
+      "tracker_variant": "allow_lost_iou",
+      "counter_variant": "handoff",
+      "main_method": true,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 2,
+          "prediction_frame": 110,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "prediction_ID": 5,
+          "prediction_frame": 199,
+          "time_error_s": 0.20000000000000018,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 24,
+          "prediction_frame": 245,
+          "time_error_s": 0.10000000000000142,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "prediction_ID": 30,
+          "prediction_frame": 291,
+          "time_error_s": 0.16666666666666607,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "prediction_ID": 50,
+          "prediction_frame": 322,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 33,
+          "prediction_frame": 397,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        }
+      ],
+      "events_path": "results/generic_allow_lost_iou/handoff_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "pilot_installed_confirmed_only",
+      "model": "pilot",
+      "tracker_variant": "installed",
+      "counter_variant": "confirmed_only",
+      "main_method": true,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 21,
+          "prediction_frame": 246,
+          "time_error_s": 0.0666666666666682,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 39,
+          "prediction_frame": 395,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "reference_direction": "B->A"
+        }
+      ],
+      "events_path": "results/pilot_installed/confirmed_only_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "pilot_installed_handoff",
+      "model": "pilot",
+      "tracker_variant": "installed",
+      "counter_variant": "handoff",
+      "main_method": true,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 21,
+          "prediction_frame": 246,
+          "time_error_s": 0.0666666666666682,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 39,
+          "prediction_frame": 395,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "reference_direction": "B->A"
+        }
+      ],
+      "events_path": "results/pilot_installed/handoff_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "pilot_secondstage_iou_confirmed_only",
+      "model": "pilot",
+      "tracker_variant": "secondstage_iou",
+      "counter_variant": "confirmed_only",
+      "main_method": false,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 20,
+          "prediction_frame": 246,
+          "time_error_s": 0.0666666666666682,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 38,
+          "prediction_frame": 395,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "reference_direction": "B->A"
+        }
+      ],
+      "events_path": "results/pilot_secondstage_iou/confirmed_only_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "pilot_secondstage_iou_handoff",
+      "model": "pilot",
+      "tracker_variant": "secondstage_iou",
+      "counter_variant": "handoff",
+      "main_method": true,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 2,
+        "temporally_matched": 2,
+        "correct_direction_matches": 2,
+        "wrong_direction_matches": 0,
+        "TP": 2,
+        "FP": 0,
+        "FN": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 2
+          }
+        },
+        "mean_absolute_direction_count_error": 2.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 2,
+            "prediction_index": 0,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 1,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 20,
+          "prediction_frame": 246,
+          "time_error_s": 0.0666666666666682,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 38,
+          "prediction_frame": 395,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "reference_direction": "B->A"
+        }
+      ],
+      "events_path": "results/pilot_secondstage_iou/handoff_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "pilot_allow_lost_iou_confirmed_only",
+      "model": "pilot",
+      "tracker_variant": "allow_lost_iou",
+      "counter_variant": "confirmed_only",
+      "main_method": false,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.5000000000000004,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 1,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 2,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 1,
+          "prediction_frame": 125,
+          "time_error_s": 0.5000000000000004,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 18,
+          "prediction_frame": 246,
+          "time_error_s": 0.0666666666666682,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 36,
+          "prediction_frame": 395,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "reference_direction": "B->A"
+        }
+      ],
+      "events_path": "results/pilot_allow_lost_iou/confirmed_only_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "pilot_allow_lost_iou_handoff",
+      "model": "pilot",
+      "tracker_variant": "allow_lost_iou",
+      "counter_variant": "handoff",
+      "main_method": true,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 3,
+        "temporally_matched": 3,
+        "correct_direction_matches": 3,
+        "wrong_direction_matches": 0,
+        "TP": 3,
+        "FP": 0,
+        "FN": 3,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 3
+          }
+        },
+        "mean_absolute_direction_count_error": 1.5,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.5000000000000004,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 1,
+            "time_error_s": 0.0666666666666682,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 2,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [
+          1,
+          3,
+          4
+        ],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 1,
+          "prediction_frame": 125,
+          "time_error_s": 0.5000000000000004,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 18,
+          "prediction_frame": 246,
+          "time_error_s": 0.0666666666666682,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 36,
+          "prediction_frame": 395,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "reference_direction": "B->A"
+        },
+        {
+          "kind": "unmatched_reference",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "reference_direction": "B->A"
+        }
+      ],
+      "events_path": "results/pilot_allow_lost_iou/handoff_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    }
+  ],
+  "main_method_conditions": 8,
+  "diagnostic_additional_conditions": 4,
+  "new_detector_forwards": 0,
+  "training_updates": 0,
+  "new_independent_test": false,
+  "MultiCam_source_truth_received": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

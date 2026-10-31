@@ -1,0 +1,58 @@
+# B区观察中断：检测与关联边界
+
+2026年10月28日。固定已有seed28、全图640、5Hz的检测缓存，针对临时ID117补充11个源帧的关联记录。**该案例同时涉及检测输出缺口、丢失轨迹的匹配资格和代价门槛；并非轨迹中心移出了ROI。** 本轮只观察和复算，没有修改跟踪器或计数器。
+
+当前入口观察交接候选仍为12／11／11次向下预测；本轮没有新增通行结果或源片准确率。
+
+## 1. 记录覆盖和回归
+
+从帧0使用同一缓存重放整个范围，逐项精确复现seed28的全部范围内轨迹、历史和原11条事件，再读取9340–9390、每5帧一次的11个关联时点。原输出保持不变，插桩只记录候选框、预测框、匹配代价、轨迹状态和输出资格。
+
+实际安装版本的`byte_tracker.py`、默认参数及`matching.py`均校验SHA。记录的是这个环境下Ultralytics 8.4.63的实现，不能外推为所有版本的ByteTrack行为。[冻结案例协议](<C:/Users/Donson/Documents/ChatGPT/奶牛/paired_event_intake_20261028/protocol/exit_probe_v1.json>)、[原始关联记录](<C:/Users/Donson/Documents/ChatGPT/奶牛/paired_event_intake_20261028/exit_probe_delivery/results/exit_probe/association_trace.json>)及[本机独立复算](<C:/Users/Donson/Documents/ChatGPT/奶牛/paired_event_intake_20261028/results/exit_probe_local_verification.json>)。
+
+## 2. 关键时点发生了什么
+
+第一阶段处理分数至少0.25的框，融合IoU和分数，门槛0.8；第二阶段仅接收仍处于Tracked状态、第一阶段未匹配的轨迹，处理0.1–0.25之间的低分框，门槛0.5。本段检测缓存本身只保存置信阈值0.2以上的检测。
+
+| 源帧 | ID117与候选 | 实际结果 |
+| --- | --- | --- |
+| 9355 | 高分框0.688，第一阶段代价0.4637 | 正常输出，中心纵坐标0.6113，形成一次B观察 |
+| 9360 | 第一阶段最小代价0.9761，超过0.8；低分框与目标预测框不重叠 | 无匹配，转为Lost；B连续观察中断 |
+| 9365 | ROI内有0.2233低分框，几何诊断IoU约0.6514 | ID117已Lost，不具备当前二次匹配资格；诊断融合代价0.8546也高于0.5，未恢复输出 |
+| 9370 | 低分框0.2072与目标预测框诊断IoU约0.1929 | 仍Lost，融合代价0.9600，无输出；不能因时间接近认定该框是同一头牛 |
+| 9375 | 0.7428高分框，第一阶段代价0.6777 | 重新激活ID117，中心纵坐标0.7040，但只形成单次B观察 |
+| 9380 | 第一阶段最小代价0.800637，略高于0.8 | 再次失配转Lost；B仍未连续三次 |
+
+这11帧中，ID117只在9340、9345、9350、9355、9375输出；其输出没有因横向中心移出ROI被额外排除。9360帧只有一个ROI原始框，图上对应另一处牛体；仅从框数不能把缺口全归为跟踪失败。9380最接近的高分框也不能自动认作目标个体，尤其在并排牛条件下，直接放宽全局门槛可能引入错关联。
+
+![B区源图、原始框与跟踪状态](<C:/Users/Donson/Documents/ChatGPT/奶牛/paired_event_intake_20261028/figures/B_case_raw_and_tracker.jpg>)
+
+青色：分数至少0.25的原始框；黄色：低分原始框；粉色实线：ID117实际跟踪输出；粉色虚线：Lost状态的预测框。**虚线不是新的观测，未交给计数器。** [不带模型框的六张源帧接触表](<C:/Users/Donson/Documents/ChatGPT/奶牛/paired_event_intake_20261028/figures/B_case_native_frames.jpg>)供核对。这里是已看过预测后的开发案例检查，不是独立真值。
+
+## 3. 二次匹配的代价范围限制
+
+当前安装实现对第二阶段也应用`fuse_score`。对应公式为：
+
+`cost = 1 - IoU × detection_score`
+
+当低分框`score < 0.25`且`IoU ≤ 1`时，`cost > 0.75`；而第二阶段接受门槛为0.5。因此在这组默认参数与融合配置下，这条低分分支无法得到满足门槛的配对。即使框完全重合，也不够。
+
+为核实这一结论，另用安装环境真实的融合／匹配函数计算5个分数×5个IoU的25对软件用例，全部被拒绝；本机按公式独立重算一致。[25对数值](<C:/Users/Donson/Documents/ChatGPT/奶牛/paired_event_intake_20261028/exit_probe_delivery/results/exit_probe/low_score_cost_grid.json>)。11帧的50项真实代价或IoU也独立复算一致，最大差约`1.23×10⁻⁷`。
+
+实际源码证据：[二次匹配资格与0.5门槛](<C:/Users/Donson/Documents/ChatGPT/奶牛/counting_recovery_20261028/evidence/installed_byte_tracker.py:396>)、[分数融合](<C:/Users/Donson/Documents/ChatGPT/奶牛/paired_event_intake_20261028/evidence/installed_matching.py:151>)、[默认0.25高分门槛](<C:/Users/Donson/Documents/ChatGPT/奶牛/counting_recovery_20261028/evidence/installed_bytetrack.yaml:7>)。
+
+该数值限制与“Lost轨迹没有资格参加第二阶段”是两个因素，分别保留。只修正第二阶段代价，并不会自动使已经Lost的ID117参加匹配；不能将一处公式修改说成已经解决此牛或整段漏计。
+
+## 4. 接下来怎样验证
+
+下一项适合单独控制的是**第二阶段代价合同**：保持第一阶段及全部检测／计数参数不变，只检验第二阶段改为纯IoU代价后的行为。先用完全重合的低分框检查可达性，再用所有三个冻结模型配对重放，列出新增事件、消失事件及ID变化，不根据“十几头”选择门槛。
+
+Lost轨迹的低分恢复资格需要另一个独立对照，不能与代价修改一起改。检测完全没有目标框的时点也不能靠预测框补成真实观测。各项变化都要经独立事件参考确认，尤其要核查并排牛的错关联和物理重复风险。
+
+当前尚未实施或采用上述关联修改，预测保持12／11／11。本轮完成了边界定位，为后续选择改动提供依据，未声称它是全部漏计原因、跨场泛化修复或论文主要创新。
+
+## 5. 调度与复核记录
+
+作业130276最初在`cu`排队，随后实时确认该分区20节点全部分配，而`4gpu`有空闲CPU容量。保留同一作业ID，把待运行作业切换到`4gpu`，请求仍为2CPU／4GB／5分钟，没有请求GPU或运行检测器。最终`COMPLETED 0:0`，5秒；没有取消／重复提交，也没有修改其他任务。[调度变更](<C:/Users/Donson/Documents/ChatGPT/奶牛/paired_event_intake_20261028/results/same_job_partition_change.txt>)。
+
+9文件交付包12520字节，SHA为`350cdcbef5bc35e51316639cf2dafc8fc48e396f6ac85ceb1a5eaa09ecbbb997`。第一次本机检查错误地把阈值分组内的检测索引当作原始帧行号；依据安装版本`parse_bboxes`修正为分组内索引后，坐标／分数／代价逐项通过。原验证脚本保留，未更改原始探针数据或重新计算模型输出。详见[自审](<C:/Users/Donson/Documents/ChatGPT/奶牛/paired_event_intake_20261028/Review与当前状态.md>)。

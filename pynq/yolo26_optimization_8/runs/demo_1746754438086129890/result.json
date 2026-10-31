@@ -1,0 +1,92 @@
+{
+  "profile": "flagship224",
+  "input_size": 224,
+  "initialization_ms": 12271.224719999736,
+  "device_initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "selected": {
+    "selection": "all",
+    "options": 4,
+    "pairs": 25,
+    "DMA_transactions": 69,
+    "plan": "plans/r224_all/resident_plan.bin",
+    "screen_D_mean_ms": 208.19715790003102,
+    "screen_C_mean_ms": 215.81133869995028,
+    "screen_only": true,
+    "screen_summary_sha256": "b387b7efcbd340b6d72b331be2c1273eb04d9d84ef592acc2f13a2ef8abd279f",
+    "reason": "all25 lower complete E2E than adjacent17 and same-firmware DDR in screening; full formal validation follows"
+  },
+  "cold_first_frame_ms": 395.78962400082673,
+  "records": [
+    {
+      "index": 0,
+      "E2E_ms": 395.78962400082673,
+      "capture_or_read_ms": 775.6470879994595,
+      "annotate_save_ms": 224.1772609995678,
+      "detections": [
+        {
+          "box": [
+            17.837247848510742,
+            228.42942810058594,
+            792.1627197265625,
+            740.6134643554688
+          ],
+          "score": 0.8135078549385071,
+          "class_id": 5,
+          "class_name": "bus"
+        },
+        {
+          "box": [
+            45.3698844909668,
+            402.82928466796875,
+            231.0323028564453,
+            892.5939331054688
+          ],
+          "score": 0.7847009301185608,
+          "class_id": 0,
+          "class_name": "person"
+        },
+        {
+          "box": [
+            202.85667419433594,
+            405.7133483886719,
+            356.5083312988281,
+            853.864013671875
+          ],
+          "score": 0.5,
+          "class_id": 0,
+          "class_name": "person"
+        },
+        {
+          "box": [
+            675.3170166015625,
+            364.4163818359375,
+            810.0,
+            870.1864013671875
+          ],
+          "score": 0.34374770522117615,
+          "class_id": 0,
+          "class_name": "person"
+        }
+      ],
+      "status": {
+        "MM2S": "0x1002",
+        "S2MM": "0x1002",
+        "core": "0x2",
+        "error": "0x0",
+        "version": "0x80001"
+      }
+    }
+  ],
+  "summary": {
+    "mean": 395.78962400082673,
+    "median": 395.78962400082673,
+    "min": 395.78962400082673,
+    "max": 395.78962400082673,
+    "p95": 395.78962400082673
+  },
+  "scope": "Complete board preprocess/native inference/detection decode. Cold demo is not warmed100 benchmark. Camera frame age unmeasured."
+}

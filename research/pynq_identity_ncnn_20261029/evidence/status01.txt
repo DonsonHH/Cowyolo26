@@ -1,0 +1,15 @@
+JobID|State|ExitCode|Elapsed|MaxRSS
+130569|FAILED|1:0|00:00:04|
+130569.batch|FAILED|1:0|00:00:04|1176K
+    return convert(ptpath, inputs, inputs2, input_shapes, input_types, input_shapes2, input_types2, device, customop, moduleop, optlevel, pnnxparam, pnnxbin, pnnxpy, pnnxonnx, ncnnparam, ncnnbin, ncnnpy, fp16)
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_identity_ncnn_20261029/dependencies/pnnx/utils/convert.py", line 160, in convert
+    spec.loader.exec_module(foo)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1161, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1091, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/share/home/renly/projects/idcoo_research_20261026/pynq_identity_ncnn_20261029/results/export/encoder_pnnx.py", line 25
+    self.0_1_block_0_2 = nn.ReLU()
+            ^
+SyntaxError: invalid decimal literal

@@ -1,0 +1,68 @@
+{
+  "name": "Explicit integer Conv accumulation with fixed floating boundary v1",
+  "created_UTC": "2026-10-27T16:34:53.556244+00:00",
+  "scope": "Eight already-used calibration training vectors, seed26 fixed graph. Numerical diagnostic only; no accuracy, training, validation, test or FPGA claim.",
+  "inputs": [
+    {
+      "local_source": "qat_study_20261026/delivery/results/smoke/initial_qat_unpacked.onnx",
+      "remote_source": "/share/home/renly/projects/idcoo_research_20261026/qat_study/results/smoke/initial_qat_unpacked.onnx",
+      "bytes": 3896970,
+      "sha256": "224ad068397e270806395bd32e01066b7bff7e0b9d3de44811c9a90fdef9445e"
+    },
+    {
+      "local_source": "qat_study_20261026/delivery/results/smoke/initial_qat_packed.onnx",
+      "remote_source": "/share/home/renly/projects/idcoo_research_20261026/qat_study/results/smoke/initial_qat_packed.onnx",
+      "bytes": 1147668,
+      "sha256": "32a6e22252a9d4d9c924fc897c62e71d326ee2c4705ff99bf47f4f2842b57a89"
+    },
+    {
+      "local_source": "qat_study_20261026/delivery/results/smoke/export_parity_vectors.npz",
+      "remote_source": "/share/home/renly/projects/idcoo_research_20261026/qat_study/results/smoke/export_parity_vectors.npz",
+      "bytes": 530144,
+      "sha256": "e80cb1afac9b0d7f150e2d63c375f97ff1790f53402bdefe08ef5241a69f4d8c"
+    },
+    {
+      "local_source": "qat_study_20261026/protocol/qat_v2.json",
+      "remote_source": "/share/home/renly/projects/idcoo_research_20261026/qat_study/protocol/qat_v2.json",
+      "bytes": 4678,
+      "sha256": "28b37395ce1c696f16c734881e87713a1c77d14bc0931c962a1b39b503d7ddd6"
+    },
+    {
+      "local_source": "qat_study_20261026/tools/qat_components.py",
+      "remote_source": "/share/home/renly/projects/idcoo_research_20261026/qat_study/tools/qat_components.py",
+      "bytes": 12256,
+      "sha256": "66b432d6c12e673474b874f330d78127632be3cc5496fe687830bbb01d520db5"
+    }
+  ],
+  "preserved_baseline": "Original QDQ + FP32 Conv; restore same52foldedConvweights/qparams and reproduce old7of8pass and failingindex3 before changing arithmetic.",
+  "candidate_change": "New numerical reference candidate, not a claim that old standardQDQ has been fixed.",
+  "arithmetic": {
+    "activation_quantisation": "FP32 division by stored scale, nearest-even round, addUINT8zero-point and saturate0..255",
+    "weight": "Use exact existing52packedINT8arrays, encode asUINT8(w+128) withzero-point128 for ConvInteger kernel compatibility; no new calibration or weight quantisation",
+    "accumulation": "Subtract zero-points and exact INT64 reference dot products, assert worst-case absolute sum bound fits signedINT32; exported standardConvInteger returnsINT32",
+    "reconstruction": "CastINT32toDOUBLE, multiply input scaleDOUBLE then per-output-channel weight scaleDOUBLE, add originalFP32bias castDOUBLE, castresultFP32",
+    "output_quantisation": "Original scale/zero/range, explicitFP32divide/nearest-even thenFP32dequantise",
+    "non_conv_operations": "OriginalFP32Torch/ONNX operations retained; not an all-integer network or fixed-point hardware design"
+  },
+  "gates": {
+    "vectors": 8,
+    "maximum_absolute_embedding_difference": 0.001,
+    "minimum_cosine": 0.9999,
+    "unchanged_packing_tolerance": 1e-06,
+    "integer_accumulator_difference": 0,
+    "original_baseline_failure_must_remain_visible": true
+  },
+  "comparisons": [
+    "originalTorch_vs_originalORTdisabled",
+    "integerReference_vs_ConvIntegerORTdisabled",
+    "integerReference_vs_ConvIntegerORTdefault",
+    "all52accumulators_pervector",
+    "independentFP64integerConvolution_recalculation"
+  ],
+  "decisions": "Report everyvector and preserve failures; no formalQAT until same gate and actual-gradient smoke pass on every trainingseed under a separately approved/frozen numerical implementation.",
+  "new_training_updates": 0,
+  "new_calibration_image_reads": 0,
+  "new_independent_accuracy_claim": false,
+  "board_execution": false,
+  "whole_goal_complete": false
+}

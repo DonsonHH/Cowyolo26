@@ -1,0 +1,283 @@
+{
+  "name": "Frozen QAT development retrieval risk decomposition v1",
+  "created_UTC": "2026-10-27T17:57:09.732585+00:00",
+  "input_files": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\summary.json",
+      "bytes": 110162,
+      "sha256": "31aff5af101e40f76b5952b26c5b8d266da790d34a8fd9cbf251d55e09e037e9"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\validation_index.json",
+      "bytes": 58140,
+      "sha256": "35e0c8010e230c50c70ef96a64902d9cd302dfd0d17add813b9a4da7bc3bcb24"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\all_models_thresholds_frozen.json",
+      "bytes": 2649,
+      "sha256": "4e7d189923fd2d01c0845ffe78d695399af21f58f66d074e61157770560b1eb8"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_source_folded_fp32\\validation_embeddings.npz",
+      "bytes": 170708,
+      "sha256": "764d7f654b0c20f05a3772d76b4fdf775a6529a46cf7bda53fd002cbc2e0d507"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_source_folded_fp32\\predictions.json",
+      "bytes": 10789,
+      "sha256": "64fe72a204f1e97bbc5e31c9e0d20b4eb15ed8df6666178fb045e152ce918e9c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_source_folded_fp32\\threshold.json",
+      "bytes": 373,
+      "sha256": "89a42548927f2be7c20f5de9b10f642ef9689dd2ba5fee9082a1c99e72042209"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_source_folded_fp32\\result.json",
+      "bytes": 5105,
+      "sha256": "998ac9b33c019257946da9efb480204185531e5b3095e7fd0cee71d3beebc3d8"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_initial_integer\\validation_embeddings.npz",
+      "bytes": 170765,
+      "sha256": "25314b64d9e9732a100037501769663226ad6a63fa4b2a91011ee0961cdad538"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_initial_integer\\predictions.json",
+      "bytes": 10799,
+      "sha256": "ee47c79dd8600936c1bcfe6f8f4743694cfce6790fefbcfeadb7072bc6874477"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_initial_integer\\threshold.json",
+      "bytes": 388,
+      "sha256": "fd418713f22fb2310c54de11b64d8d1d77a792cee5682b35cce9cea44c213123"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_initial_integer\\result.json",
+      "bytes": 10832,
+      "sha256": "631b87d5fc34f2b15e4fa036dd8314f8e949a483925f70ed6b120252d91fab53"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_paired_float_continuation\\validation_embeddings.npz",
+      "bytes": 170699,
+      "sha256": "29f58fc04fa00c7e657002af91f07dc43b7c3fe8142dd424022657e00ae0be79"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_paired_float_continuation\\predictions.json",
+      "bytes": 10785,
+      "sha256": "3107f7bc667b1671653964cd3a9a3e0630fecbffa3819c9c92e5cdfd15b87b87"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_paired_float_continuation\\threshold.json",
+      "bytes": 388,
+      "sha256": "ddb586e56e75044d7f693d336f390e9b7b124c5d359d33419dc9f5fa2ac670b2"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_paired_float_continuation\\result.json",
+      "bytes": 5161,
+      "sha256": "de70e55186ad456a061e71d65c9f6027dae20e885745168f50772367422fc61c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_integer_forward_qat\\validation_embeddings.npz",
+      "bytes": 170305,
+      "sha256": "aecdf86235510f2a789c00c0e02081232e2f36837fd9a336f6942eb88a2423ed"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_integer_forward_qat\\predictions.json",
+      "bytes": 10792,
+      "sha256": "ff8873e064254d3584754f2e51531d6b21993720ce4ffa74db387c6918b5e24e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_integer_forward_qat\\threshold.json",
+      "bytes": 389,
+      "sha256": "6b0da4f255cc359c142cf3f816f92c56c30efdcbe14291eab5a5929face6bdce"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed26_integer_forward_qat\\result.json",
+      "bytes": 10845,
+      "sha256": "600a6e85a199cc01c3a0674ffc17068effd25819a208be5a113e46b10b430e18"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_source_folded_fp32\\validation_embeddings.npz",
+      "bytes": 170652,
+      "sha256": "ab039f347ebcc9f39b15ec81a65bd55be2a8ae9b6bdf2ef88f8158557f2b07d3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_source_folded_fp32\\predictions.json",
+      "bytes": 10791,
+      "sha256": "ad7ab32557ee68d11ca7e0bfde486fd357cab7171f4ffb62ea335c298d6edc93"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_source_folded_fp32\\threshold.json",
+      "bytes": 389,
+      "sha256": "71373e4a07d8e2fc2fd69579b7ba1f4d1e31eadbb7d038a43e4f67e158601450"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_source_folded_fp32\\result.json",
+      "bytes": 5153,
+      "sha256": "409691ac207e2da3814b83c2c711dbb696886e53fd816794b3b0d78776f7356c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_initial_integer\\validation_embeddings.npz",
+      "bytes": 170845,
+      "sha256": "99403e93f5b2dc2a6932e182f01bcb585b41b85f0c29a417bfcb00e037fb537e"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_initial_integer\\predictions.json",
+      "bytes": 10807,
+      "sha256": "c368656bb13a6bd531d26c950efded59fb1340e04d557d8156e88162da47c8f6"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_initial_integer\\threshold.json",
+      "bytes": 372,
+      "sha256": "71f8f42bad6f3ec6532b99a66f99cd57d2e90b0c13b32960b827bdcdf05c1170"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_initial_integer\\result.json",
+      "bytes": 10778,
+      "sha256": "225f3705d113dbbbcfd3fd0b0f3be41e4b050238346bff87bdc14209aabed394"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_paired_float_continuation\\validation_embeddings.npz",
+      "bytes": 170589,
+      "sha256": "b73b83f36fd9635fcaebc43eefd3b70471fd2e2eea33627e7fc8735a6dab3afb"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_paired_float_continuation\\predictions.json",
+      "bytes": 10792,
+      "sha256": "6697aaa9379cc3955eb0f7ea6553265371bc97bdb9a27da41ad67171a0b005e3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_paired_float_continuation\\threshold.json",
+      "bytes": 389,
+      "sha256": "82664df851e392769a12f4c329c56d9e4332f5459e75c23794e60d8b1f3f993a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_paired_float_continuation\\result.json",
+      "bytes": 5169,
+      "sha256": "baf23bd656696678de8e27155d78810813c11d6709e45c4d6c6052da0203ff68"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_integer_forward_qat\\validation_embeddings.npz",
+      "bytes": 169658,
+      "sha256": "ea7dd5758d9e8ee707d8a8e4a99c651090e3251831c6239a50d8259091c81e8f"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_integer_forward_qat\\predictions.json",
+      "bytes": 10796,
+      "sha256": "39ee7d8835827dbc83a03d804ab2e1456901c569bb123fbac96271f0101c816d"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_integer_forward_qat\\threshold.json",
+      "bytes": 387,
+      "sha256": "48deff142d8cd4d7d735dc7d8be4356a535b666e53cd142d9b7ee1923b5cfdda"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed27_integer_forward_qat\\result.json",
+      "bytes": 10826,
+      "sha256": "20f3c29c96a63e24d4a5717096f6d0178d240fe1374ad7d373f5b63397a73fbf"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_source_folded_fp32\\validation_embeddings.npz",
+      "bytes": 170719,
+      "sha256": "847b9b5729d9d6b83c4ca1a6f949ab316807b53e67c7ab6563fdbbd442dcf21b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_source_folded_fp32\\predictions.json",
+      "bytes": 10788,
+      "sha256": "116016baed25fc1201d44c7577d8f7240217a085c905fda7aea3753250f3d939"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_source_folded_fp32\\threshold.json",
+      "bytes": 388,
+      "sha256": "08935a6027eedc6f08affb963c4a662e2276fc76b9f52407ef767452969287ff"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_source_folded_fp32\\result.json",
+      "bytes": 5130,
+      "sha256": "0c8710e2709ea2e39df4c295a9d3a0f83c9a95b0180a11b3ef428d87124030db"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_initial_integer\\validation_embeddings.npz",
+      "bytes": 170751,
+      "sha256": "55d6a406d839d8099a707c1aaf892703feddb6fb6470c342cd9c8967cf0d75f3"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_initial_integer\\predictions.json",
+      "bytes": 10795,
+      "sha256": "df2bb9df7b6a4819376b1821035e8a1b42e3c7c64c6aa7d14fecc7782ba98fac"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_initial_integer\\threshold.json",
+      "bytes": 372,
+      "sha256": "76cf54b2fdc3e326198e2e33b9da7ce6c49377b85840801f9bba6e14f704f540"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_initial_integer\\result.json",
+      "bytes": 10781,
+      "sha256": "49feff7c7359e0676dceae56c9b2b26d667586fde3cd34ce067c8fdfce8a53b1"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_paired_float_continuation\\validation_embeddings.npz",
+      "bytes": 170761,
+      "sha256": "e6a7030fea3d79f1c590cef24d7b8801e4c82793b7854dc1f567a50614018204"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_paired_float_continuation\\predictions.json",
+      "bytes": 10790,
+      "sha256": "0bfd5efd1597edeb36e0709b916f9fc68dc892246b7b296a351b1901989f6bf1"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_paired_float_continuation\\threshold.json",
+      "bytes": 389,
+      "sha256": "d2dd6f9a1abbf2d87d7371426a5872d30d205f1795da5800665b3795715f5cab"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_paired_float_continuation\\result.json",
+      "bytes": 5152,
+      "sha256": "b9ae90b7b7f0ccb4f45f261252829a985c7cb978c4344dc5213d3419f40c9ccb"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_integer_forward_qat\\validation_embeddings.npz",
+      "bytes": 169046,
+      "sha256": "31201722e879b9c61740ad85b336305cebe3e21f616b510ba50b6300c239cbd8"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_integer_forward_qat\\predictions.json",
+      "bytes": 10795,
+      "sha256": "365b17d02ccdbf20605e87752d533f62fc471d10fa90205ba85dfb4b58e63e6c"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_integer_forward_qat\\threshold.json",
+      "bytes": 388,
+      "sha256": "ebe22bf7f0e652342d9619f8c9f767cafac2414f86e881062cd04269247863f4"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\integer_qat_20261028\\delivery\\results\\study\\seed28_integer_forward_qat\\result.json",
+      "bytes": 10843,
+      "sha256": "4f3c20919a95aeb2f0971b7a92de2599d950f4d021983f00df3bd3c3141f45aa"
+    }
+  ],
+  "seeds": [
+    26,
+    27,
+    28
+  ],
+  "conditions": [
+    "source_folded_fp32",
+    "initial_integer",
+    "paired_float_continuation",
+    "integer_forward_qat"
+  ],
+  "analysis": [
+    "FrozenC/W/U and correct-ranking-reject/wrong-ranking-reject",
+    "Peranonymousidentity counts and top1/top2 margins",
+    "Trueidentity vs strongestotheridentity scores; unknownbestscore",
+    "Pairedfloat-vsQAT outcome transitions for samequery",
+    "Enumerateallwrongacceptedqueries and allunknownfalseaccepts for qualitative followup"
+  ],
+  "selection": "All12frozenconditions, all55existingqueries; no newthresholds/modelselection/inference/training.",
+  "figure": "Primary6pairedfloat/QATconditions, same scoreaxes, knowncorrect/rejected/wrong andunknown scores shown withfrozenthreshold.",
+  "new_independent_test_or_board_claim": false,
+  "whole_goal_complete": false
+}

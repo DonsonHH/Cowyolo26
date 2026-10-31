@@ -1,0 +1,185 @@
+{
+  "source_files_inspected": 102,
+  "code_findings": [
+    {
+      "repository": "Phoenix4582/CowIDentifier",
+      "file": "Self-Supervised/utilities/imageUtils.py",
+      "sha256": "7b8818f38188957be449f7b0236bf476e1c303435e52a29e6161ba334eff0ac0",
+      "matches": [
+        {
+          "line": 374,
+          "text": "cropped = cv2.warpPerspective(image, M, (width, height))"
+        }
+      ]
+    },
+    {
+      "repository": "Phoenix4582/CowIDentifier",
+      "file": "Supervised/datasets/MultiCamCows/MultiCamCows.py",
+      "sha256": "517be9ab1a7884aeeaf0b6c1201820d6371bc0f19b093fb2b9cc74fb47e80af8",
+      "matches": [
+        {
+          "line": 100,
+          "text": "current_camera = self.__retrieveCameraIDFromImg(img_path)"
+        },
+        {
+          "line": 119,
+          "text": "def __retrieveCameraIDFromImg(self, filepath):"
+        }
+      ]
+    },
+    {
+      "repository": "Phoenix4582/CowIDentifier",
+      "file": "Supervised/utilities/imageUtils.py",
+      "sha256": "7b8818f38188957be449f7b0236bf476e1c303435e52a29e6161ba334eff0ac0",
+      "matches": [
+        {
+          "line": 374,
+          "text": "cropped = cv2.warpPerspective(image, M, (width, height))"
+        }
+      ]
+    },
+    {
+      "repository": "Phoenix4582/DailyCowIdentifier",
+      "file": "utilities/imageUtils.py",
+      "sha256": "7b8818f38188957be449f7b0236bf476e1c303435e52a29e6161ba334eff0ac0",
+      "matches": [
+        {
+          "line": 374,
+          "text": "cropped = cv2.warpPerspective(image, M, (width, height))"
+        }
+      ]
+    },
+    {
+      "repository": "Phoenix4582/SpeciesIdentifier",
+      "file": "utils.py",
+      "sha256": "3ac0bbb9c1fc6da184504990478ae1152951b6b1c67d2d812d12bb5fcdc3e8fa",
+      "matches": [
+        {
+          "line": 293,
+          "text": "tracklet_info = {}"
+        },
+        {
+          "line": 325,
+          "text": "tracklet_info = update_info(info, tracklet_info)"
+        },
+        {
+          "line": 326,
+          "text": "new_frame = augment_frame(frame, info, tracklet_info, show_box, show_track)"
+        },
+        {
+          "line": 337,
+          "text": "start_time = parse_time(video_path)"
+        },
+        {
+          "line": 343,
+          "text": "csv_dest = os.path.join(dest_dir, 'tracklet_{}.csv'.format(current))"
+        },
+        {
+          "line": 345,
+          "text": "write_to_csv(csv_dest, start_time, len(frame_ids), freq, tracklet_info)"
+        },
+        {
+          "line": 376,
+          "text": "def update_info(info: list, tracklet_info: dict):"
+        },
+        {
+          "line": 379,
+          "text": "Inference Illustration(dots_dict): Save a temporary dictionary for visual representation of video inference.(Omitted since tracklet_info contains everything)"
+        },
+        {
+          "line": 380,
+          "text": "Tracklet Recording(tracklet_info): Record all tracklet info ([cx, cy, w, h, theta] per element) for outputting a csv file."
+        },
+        {
+          "line": 383,
+          "text": "tracklet_elements = find_center_coords(bboxes)"
+        },
+        {
+          "line": 386,
+          "text": "if len(tracklet_info.keys()) == 0:"
+        },
+        {
+          "line": 387,
+          "text": "if len(tracklet_elements) != 0:"
+        },
+        {
+          "line": 388,
+          "text": "for id, element in enumerate(tracklet_elements):"
+        },
+        {
+          "line": 391,
+          "text": "tracklet_info.update({id:new_entry_with_id})"
+        },
+        {
+          "line": 394,
+          "text": "if len(tracklet_elements) == 0:"
+        },
+        {
+          "line": 395,
+          "text": "for key, value in tracklet_info.items():"
+        },
+        {
+          "line": 397,
+          "text": "tracklet_info.update({key:value})"
+        },
+        {
+          "line": 399,
+          "text": "tracklet_info = pair_centers_with_dict(tracklet_elements, tracklet_info, calculate_distance)"
+        },
+        {
+          "line": 400,
+          "text": "# tracklet_info = pair_centers_with_dict(tracklet_elements, tracklet_info, calculate_iou)"
+        },
+        {
+          "line": 402,
+          "text": "return tracklet_info"
+        },
+        {
+          "line": 652,
+          "text": "infused_img = cv2.drawContours(img, [box], 0, color, 2)"
+        },
+        {
+          "line": 666,
+          "text": "# def find_center_coords(bboxes, tracklet_info=False):"
+        },
+        {
+          "line": 667,
+          "text": "#     if tracklet_info:"
+        }
+      ]
+    },
+    {
+      "repository": "Phoenix4582/SpeciesIdentifier",
+      "file": "utils_video.py",
+      "sha256": "7e6a593404476209fe5871a40e510401a9d05bfb0cc06c1d3b07bfc38d8ad690",
+      "matches": [
+        {
+          "line": 42,
+          "text": "fused_img = cv2.drawContours(img, [box], 0, (255, 0, 0), 2)"
+        },
+        {
+          "line": 61,
+          "text": "warped = cv2.warpPerspective(img, M, (width, height))"
+        },
+        {
+          "line": 74,
+          "text": "timestamp_csv = os.path.join(dest, \"timestamps.csv\")"
+        },
+        {
+          "line": 80,
+          "text": "writer.writerow(selected_timestamps)"
+        },
+        {
+          "line": 126,
+          "text": "def parse_time(video_filename:str):"
+        },
+        {
+          "line": 153,
+          "text": "video_datetime = parse_time(video_path)"
+        }
+      ]
+    }
+  ],
+  "explicit_dataset_image_to_source_frame_mapping_found": false,
+  "status": "CODE_CAPABILITY_AND_RELEASE_MAPPING_ARE_SEPARATE"
+}

@@ -1,0 +1,64 @@
+CURRENT_PL /home/xilinx/jupyter_notebooks/yolo26_optimization_5/exact_mainline/optimization_5_exact.bit
+('firmware_manifest.json', 942)
+('optimization_8_resident.bit', 4045771)
+('optimization_8_resident.xsa', 1192454)
+('optimization_8_resident.hwh', 325240)
+    def get_parser(self, partial:bool=False):
+        """Returns a parser object for the bitstream
+
+        The returned object contains all of the data that
+        was processed from both the HWH and Xclbin metadata
+        attached to the object. Note that the parser may
+        contain synthetic xclbin data where that is necessary
+
+        """
+        from .hwh_parser import HWH
+        from .xclbin_parser import XclBin
+
+        hwh_data = self.get_hwh_data()
+        xclbin_data = self.get_xclbin_data()
+        is_xsa = self.is_xsa()
+        self._xsa_bitstream_file = None
+        if hwh_data is not None and not is_xsa:
+
+            if partial:
+                parser = HWH(hwh_data=hwh_data)
+            else:
+                try:
+                    parser = self._get_cache() 
+                except CacheMetadataError:
+                    parser = RuntimeMetadataParser(Metadata(input=self._filepath.with_suffix(".hwh")))
+                except:
+                    raise RuntimeError(f"Unable to parse metadata")
+
+            if xclbin_data is None:
+                xclbin_data = _create_xclbin(parser.mem_dict)
+            xclbin_parser = XclBin(xclbin_data=xclbin_data)
+            _unify_dictionaries(parser, xclbin_parser)
+
+            if not partial:
+                parser.refresh_hierarchy_dict()
+        elif xclbin_data is not None:
+            parser = XclBin(xclbin_data=xclbin_data)
+        elif is_xsa:
+            parser = RuntimeMetadataParser(Metadata(input=self._filepath))
+            if xclbin_data is None:
+                xclbin_data = _create_xclbin(parser.mem_dict)
+            xclbin_parser = XclBin(xclbin_data=xclbin_data)
+            _unify_dictionaries(parser, xclbin_parser)
+            parser.refresh_hierarchy_dict()
+            self._xsa_bitstream_file = parser.xsa.bitstreamPaths[0]
+        else:
+            return None
+        parser.bin_data = self.get_bin_data()
+        parser.xclbin_data = xclbin_data
+        parser.dtbo_data = self.get_dtbo_data()
+        return parser
+
+HANDLER <class 'pynq.pl_server.embedded_device.BitfileHandler'>
+class BitfileHandler(BitstreamHandler):
+    def get_bin_data(self):
+        bit_data = self._filepath.read_bytes()
+        return bit2bin(bit_data)
+
+DIRECT_HWH_METADATA_PASS <class 'pynqmetadata.frontends.hwh_frontend.HwhFrontend'>

@@ -1,0 +1,70 @@
+--- original_trigger_driver.py
+
++++ parent_only_trigger_driver.py
+
+@@ -1,8 +1,7 @@
+
+ from pathlib import Path
+ import os,sys,json,gzip,hashlib,time,fcntl,multiprocessing,traceback,signal
+ os.environ['XILINX_XRT']='/usr';os.environ['OMP_NUM_THREADS']='1';os.environ['OPENBLAS_NUM_THREADS']='1';sys.dont_write_bytecode=True
+-import cv2,numpy as np
+-from pynq import PL
++import numpy as np
+ ROOT=Path(__file__).resolve().parent
+ O8=Path('/home/xilinx/jupyter_notebooks/yolo26_optimization_8')
+ PORT=Path('/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029')
+@@ -10,10 +9,6 @@
+
+ MODEL=Path('/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030')
+ IDENTITY=Path('/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029')
+ sys.path[:0]=[str(O8),str(O8/'runtime_fast'),str(PORT),str(PORT/'source/lap-0.5.13')]
+-from native_graph import NativeGraph
+-from device_initialize import initialize
+-from board_runtime import decode
+-from frame_pipeline import FramePipeline
+ from background_selected_worker import worker
+ from causal_selector import CausalSelector, MAX_AGE_FRAMES, MAX_FRAMES
+ from jpeg_producer import JPEGProducer
+@@ -29,20 +24,30 @@
+
+ def savegz(p,x):
+  with gzip.GzipFile(filename=str(p),mode='wb',mtime=0) as f:f.write(json.dumps(x,separators=(',',':')).encode())
+ def main():
++ import cv2
++ from pynq import PL
++ from native_graph import NativeGraph
++ from device_initialize import initialize
++ from board_runtime import decode
++ from frame_pipeline import FramePipeline
+  p=load(ROOT/'run_protocol.json');out=ROOT/'results';out.mkdir(exist_ok=False);cv2.setNumThreads(1);initial_affinity=sorted(os.sched_getaffinity(0));assert initial_affinity==[0,1];os.sched_setaffinity(0,set(p['foreground_affinity']))
+  state={'status':'RUNNING','PID':os.getpid(),'boot_id':Path('/proc/sys/kernel/random/boot_id').read_text().strip(),
+   'protocol_sha256':sha(ROOT/'run_protocol.json'),'actual_O8_forwards':0,'qualification_forwards':0,'warmup_forwards':0,'cases':[],
+   'new_training_updates':0,'actual_camera_and_RFID_hardware':False,'whole_goal_complete':False,'foreground_main_thread_affinity':sorted(os.sched_getaffinity(0))}
+  graph=lock=None;child=None;producer=None;failure=None;close_error=None
+  try:
++  assert state['boot_id']==p['expected_boot_id']
++  state['PL_before']=PL.bitfile_name
+   for row in p['payload_files']:assert sha(ROOT/row['file'])==row['sha256']
+   for row in p['runtime_files']:assert sha(row['file'])==row['sha256']
+   it=load(IDENTITY/'vectors_results_v3/terminal.json');ir=load(IDENTITY/'vectors_results_v3/record.json')
+   assert it['status']==ir['status']=='ALL132_ACTUAL_ARM_NCNN_VECTORS_PREPROCESS_AND_RETRIEVAL_PASS_FROZEN_GATES'
+-  assert it['record_sha256']==sha(IDENTITY/'vectors_results_v3/record.json') and not (Path('/proc')/str(it['PID'])).exists()
++  assert it['record_sha256']==sha(IDENTITY/'vectors_results_v3/record.json')
++  state['historical_identity_qualification']={'saved_PID':it['PID'],'saved_boot_id':ir.get('boot_id'),'PID_compared_across_boots':False}
+   vt=load(VIDEO/'results/terminal.json');vr=load(VIDEO/'results/record.json')
+   assert vt['status']==vr['status']=='ALL2654_ACTUAL_O8_VIDEO_INPUTS_AND_REAL_ARM_COUNTER_PATHS_COMPLETE'
+-  assert vt['record_sha256']==sha(VIDEO/'results/record.json') and not (Path('/proc')/str(vt['PID'])).exists()
++  assert vt['record_sha256']==sha(VIDEO/'results/record.json')
++  state['historical_video_qualification']={'saved_PID':vt['PID'],'saved_boot_id':vr.get('boot_id'),'PID_compared_across_boots':False}
+   assert vr['model_checkpoint_sha256']==p['foreground_source_model'] and vr['actual_anchor_integer_parity_bytes_exact']==8
+   assert sha(PL.bitfile_name)==p['O8_bit_sha256']
+   spec=p['video'];inputs=load(VIDEO/'board_input_manifest.json');selected=[r for r in inputs if r['scene']=='original' and 8912<=r['frame0']<=10873]
+@@ -136,6 +141,7 @@
+
+         'source_JPEG_sha256':camera_byframe[selected_frame]['sha256'],'release_monotonic_ns':release,'enqueued_monotonic_ns':enqueued_ns,'simulated_RFID_read':False}
+       if causal:
+        assert selected_frame in jpeg_ring;job['_jpeg_payload']=jpeg_ring[selected_frame];enqueued_payload_bytes+=len(job['_jpeg_payload'])
++      assert len(enqueued)<p['maximum_identity_jobs_per_case'],'DynamicIdentityBudgetCapReachedBeforePublish'
+       requests.put_nowait(job);enqueued.append({k:v for k,v in job.items() if k!='_jpeg_payload'})
+     raws.append(actual[0]);raw_frames.append(frame)
+     if len(raws)%50==0:

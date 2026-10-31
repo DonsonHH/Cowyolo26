@@ -1,0 +1,141 @@
+{
+  "status": "TWICE_DETERMINISTIC_RED_REPRODUCTION",
+  "runs": [
+    {
+      "run": 1,
+      "python_exit_code": 2,
+      "output": {
+        "status": "REPRODUCED_FROZEN_MISSED_EVENTS",
+        "conditions": [
+          {
+            "seed": 26,
+            "actual_counter_replayed": true,
+            "events": [
+              {
+                "time_s": 3.7333333333333334,
+                "track_id": 2,
+                "direction": "B->A",
+                "source_frame": 112
+              }
+            ],
+            "TP": 1,
+            "FP": 0,
+            "FN": 5,
+            "temporally_matched": 1,
+            "wrong_direction_matches": 0
+          },
+          {
+            "seed": 27,
+            "actual_counter_replayed": true,
+            "events": [
+              {
+                "time_s": 3.9,
+                "track_id": 1,
+                "direction": "B->A",
+                "source_frame": 117
+              },
+              {
+                "time_s": 13.2,
+                "track_id": 36,
+                "direction": "B->A",
+                "source_frame": 396
+              }
+            ],
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "temporally_matched": 2,
+            "wrong_direction_matches": 0
+          },
+          {
+            "seed": 28,
+            "actual_counter_replayed": true,
+            "events": [
+              {
+                "time_s": 3.933333333333333,
+                "track_id": 1,
+                "direction": "B->A",
+                "source_frame": 118
+              }
+            ],
+            "TP": 1,
+            "FP": 0,
+            "FN": 5,
+            "temporally_matched": 1,
+            "wrong_direction_matches": 0
+          }
+        ],
+        "expected_complete_reference_events": 6,
+        "exit2_means_symptom_reproduced": true
+      }
+    },
+    {
+      "run": 2,
+      "python_exit_code": 2,
+      "output": {
+        "status": "REPRODUCED_FROZEN_MISSED_EVENTS",
+        "conditions": [
+          {
+            "seed": 26,
+            "actual_counter_replayed": true,
+            "events": [
+              {
+                "time_s": 3.7333333333333334,
+                "track_id": 2,
+                "direction": "B->A",
+                "source_frame": 112
+              }
+            ],
+            "TP": 1,
+            "FP": 0,
+            "FN": 5,
+            "temporally_matched": 1,
+            "wrong_direction_matches": 0
+          },
+          {
+            "seed": 27,
+            "actual_counter_replayed": true,
+            "events": [
+              {
+                "time_s": 3.9,
+                "track_id": 1,
+                "direction": "B->A",
+                "source_frame": 117
+              },
+              {
+                "time_s": 13.2,
+                "track_id": 36,
+                "direction": "B->A",
+                "source_frame": 396
+              }
+            ],
+            "TP": 2,
+            "FP": 0,
+            "FN": 4,
+            "temporally_matched": 2,
+            "wrong_direction_matches": 0
+          },
+          {
+            "seed": 28,
+            "actual_counter_replayed": true,
+            "events": [
+              {
+                "time_s": 3.933333333333333,
+                "track_id": 1,
+                "direction": "B->A",
+                "source_frame": 118
+              }
+            ],
+            "TP": 1,
+            "FP": 0,
+            "FN": 5,
+            "temporally_matched": 1,
+            "wrong_direction_matches": 0
+          }
+        ],
+        "expected_complete_reference_events": 6,
+        "exit2_means_symptom_reproduced": true
+      }
+    }
+  ]
+}

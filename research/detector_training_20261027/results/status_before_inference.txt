@@ -1,0 +1,24 @@
+JobID                             JobName      State ExitCode    Elapsed     MaxRSS        NodeList 
+------------ ---------------------------- ---------- -------- ---------- ---------- --------------- 
+129785                idcoo-detector-20x3  COMPLETED      0:0   00:21:30                      gpu03 
+129785.batch                        batch  COMPLETED      0:0   00:21:30     13868K           gpu03 
+129785.0                           python  COMPLETED      0:0   00:21:29  47554320K           gpu03 
+129792       idcoo-detector-source-compa+    RUNNING      0:0   00:00:08                      gpu02 
+129792.batch                        batch    RUNNING      0:0   00:00:08                      gpu02 
+129792.0                           python    RUNNING      0:0   00:00:08                      gpu02 
+129797             idcoo-detector-collect    PENDING      0:0   00:00:00              None assigned 
+{
+  "status": "COMPLETED_PUBLIC_LABEL_TRAINING_3SEEDS_20EPOCHS",
+  "job_id": "129785",
+  "protocol_sha256": "c3a1cf3cb8f34c27a2a6945ac705f2beb45abdb851c6bd70cccc92f1fc2e6eff",
+  "torch": "2.8.0+cu128",
+  "ultralytics": "8.4.63",
+  "gpu": "Tesla V100S-PCIE-32GB",
+  "input_audit_sha256": "621d43a3e3d7d447048fc64219154a981a752f24cadad65ad60bf882d2fe3b41",
+  "conditions": [
+    {
+      "seed": 26,
+      "epochs_completed": 20,
+      "selected_checkpoint_rule": "Fixed final epoch last.pt for every seed; not selected on video or external counts",
+      "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/detector_training/results/training/seed26/weights/last.pt",
+      "checkpoint_sha256": "35879f94b91e4f477693cf730c880b5f5174674578f0457ee2dbde9809d15c98",

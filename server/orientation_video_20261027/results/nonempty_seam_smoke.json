@@ -1,0 +1,175 @@
+{
+  "status": "REAL_NONEMPTY_NEURAL_BOXES_IN_BOTH_ORIENTATIONS_RESTORE_BEFORE_BYTE_TRACK",
+  "job_id": "129936",
+  "protocol_sha256": "ac71fc30e4487d044914870543e73005c7854b9d2f4980e12b601b4446bb553b",
+  "development_sample": "07802.jpg",
+  "selection": "first pre-fixed sample from completed1571image orientation control, not a new held-out input",
+  "records": [
+    {
+      "orientation": "original",
+      "sample_file": "07802.jpg",
+      "source_sha256": "5476385224e1a5d576d7e35474c9355faba631b3f37660f23447332a3cb2eb5c",
+      "pretracker_boxes": [
+        {
+          "frame": 0,
+          "time_s": 0.0,
+          "confidence": 0.9367964863777161,
+          "input_x1": 12.135467529296875,
+          "input_y1": 26.512786865234375,
+          "input_x2": 570.4803466796875,
+          "input_y2": 355.3344421386719,
+          "x1": 12.135467529296875,
+          "y1": 26.512786865234375,
+          "x2": 570.4803466796875,
+          "y2": 355.3344421386719
+        },
+        {
+          "frame": 0,
+          "time_s": 0.0,
+          "confidence": 0.29790011048316956,
+          "input_x1": 986.0313720703125,
+          "input_y1": 0.0,
+          "input_x2": 1279.840576171875,
+          "input_y2": 300.7313537597656,
+          "x1": 986.0313720703125,
+          "y1": 0.0,
+          "x2": 1279.840576171875,
+          "y2": 300.7313537597656
+        }
+      ],
+      "posttracker_data": [
+        [
+          12.135498046875,
+          26.512786865234375,
+          570.4803466796875,
+          355.3344421386719,
+          1.0,
+          0.9367964863777161,
+          0.0
+        ],
+        [
+          986.0314331054688,
+          0.0,
+          1279.840576171875,
+          300.7313537597656,
+          2.0,
+          0.29790011048316956,
+          0.0
+        ]
+      ],
+      "native_H": 720,
+      "native_W": 1280,
+      "callback_order": [
+        {
+          "name": "on_predict_postprocess_end",
+          "module": "ultralytics.utils.callbacks.base"
+        },
+        {
+          "name": "restore_before_tracker",
+          "module": "rotation_seam"
+        },
+        {
+          "name": "on_predict_postprocess_end",
+          "module": "ultralytics.trackers.track"
+        }
+      ],
+      "seam_checks": [
+        {
+          "frame": 0,
+          "native_H": 720,
+          "native_W": 1280,
+          "input_H": 720,
+          "input_W": 1280,
+          "detector_boxes": 2,
+          "max_float32_inverse_difference": 0.0,
+          "native_coordinates_restored_before_tracker": true
+        }
+      ],
+      "nonempty_neural_boxes_restored_in_native_camera": true
+    },
+    {
+      "orientation": "clockwise90",
+      "sample_file": "07802.jpg",
+      "source_sha256": "5476385224e1a5d576d7e35474c9355faba631b3f37660f23447332a3cb2eb5c",
+      "pretracker_boxes": [
+        {
+          "frame": 0,
+          "time_s": 0.0,
+          "confidence": 0.6605483889579773,
+          "input_x1": 364.1620178222656,
+          "input_y1": 19.195037841796875,
+          "input_x2": 700.8153686523438,
+          "input_y2": 600.0760498046875,
+          "x1": 19.195037841796875,
+          "y1": 19.18463134765625,
+          "x2": 600.0760498046875,
+          "y2": 355.8379821777344
+        },
+        {
+          "frame": 0,
+          "time_s": 0.0,
+          "confidence": 0.6310116052627563,
+          "input_x1": 398.10760498046875,
+          "input_y1": 946.5538940429688,
+          "input_x2": 720.0,
+          "input_y2": 1280.0,
+          "x1": 946.5538940429688,
+          "y1": 0.0,
+          "x2": 1280.0,
+          "y2": 321.89239501953125
+        }
+      ],
+      "posttracker_data": [
+        [
+          19.195068359375,
+          19.18463134765625,
+          600.0760498046875,
+          355.8379821777344,
+          1.0,
+          0.6605483889579773,
+          0.0
+        ],
+        [
+          946.553955078125,
+          0.0,
+          1280.0,
+          321.89239501953125,
+          2.0,
+          0.6310116052627563,
+          0.0
+        ]
+      ],
+      "native_H": 720,
+      "native_W": 1280,
+      "callback_order": [
+        {
+          "name": "on_predict_postprocess_end",
+          "module": "ultralytics.utils.callbacks.base"
+        },
+        {
+          "name": "restore_before_tracker",
+          "module": "rotation_seam"
+        },
+        {
+          "name": "on_predict_postprocess_end",
+          "module": "ultralytics.trackers.track"
+        }
+      ],
+      "seam_checks": [
+        {
+          "frame": 0,
+          "native_H": 720,
+          "native_W": 1280,
+          "input_H": 1280,
+          "input_W": 720,
+          "detector_boxes": 2,
+          "max_float32_inverse_difference": 0.0,
+          "native_coordinates_restored_before_tracker": true
+        }
+      ],
+      "nonempty_neural_boxes_restored_in_native_camera": true
+    }
+  ],
+  "training_updates": 0,
+  "video_event_or_final_accuracy_claimed": false
+}

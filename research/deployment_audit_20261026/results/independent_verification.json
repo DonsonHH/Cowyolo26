@@ -1,0 +1,810 @@
+{
+  "status": "PASS",
+  "bundle_sha256": "5e7d093bc61e5c0403e817f613554f74582830e0a7da53e61c9bc590d794be94",
+  "manifest_files_verified": 65,
+  "local_runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "onnx": "1.19.0",
+    "onnxruntime": "1.23.2",
+    "threads": 2
+  },
+  "graphs_independently_checked": {
+    "detector": {
+      "node_counts": {
+        "Conv": 102,
+        "Sigmoid": 88,
+        "Mul": 93,
+        "Constant": 46,
+        "Split": 12,
+        "Add": 23,
+        "Concat": 26,
+        "MaxPool": 3,
+        "Reshape": 14,
+        "Transpose": 5,
+        "MatMul": 4,
+        "Softmax": 2,
+        "Resize": 2,
+        "Shape": 3,
+        "Gather": 4,
+        "Div": 2,
+        "Slice": 2,
+        "Sub": 1,
+        "ReduceMax": 1,
+        "TopK": 2,
+        "Unsqueeze": 3,
+        "ConstantOfShape": 2,
+        "Expand": 2,
+        "Tile": 2,
+        "GatherElements": 2,
+        "Flatten": 2,
+        "Cast": 3,
+        "Mod": 1
+      },
+      "initializer_bytes": 9500124,
+      "initializer_dtype_bytes": {
+        "float32": 9500124
+      },
+      "Conv_MACs_including_QDQ_weight_shapes": 389018880,
+      "MatMul_MACs_known_shapes": 1382400,
+      "Conv_groups_histogram": {
+        "1": 94,
+        "128": 3,
+        "64": 4,
+        "256": 1
+      }
+    },
+    "C_letterbox_trained_seed26_fp32": {
+      "node_counts": {
+        "Conv": 52,
+        "HardSigmoid": 27,
+        "Mul": 27,
+        "Relu": 14,
+        "GlobalAveragePool": 10,
+        "Add": 6,
+        "Flatten": 1,
+        "ReduceL2": 1,
+        "Constant": 1,
+        "Clip": 1,
+        "Shape": 1,
+        "Expand": 1,
+        "Div": 1
+      },
+      "initializer_bytes": 3683808,
+      "initializer_dtype_bytes": {
+        "float32": 3683808
+      },
+      "Conv_MACs_including_QDQ_weight_shapes": 54896576,
+      "MatMul_MACs_known_shapes": 0,
+      "Conv_groups_histogram": {
+        "1": 41,
+        "16": 1,
+        "72": 1,
+        "88": 1,
+        "96": 1,
+        "240": 2,
+        "120": 1,
+        "144": 1,
+        "288": 1,
+        "576": 2
+      }
+    },
+    "C_letterbox_trained_seed26_qdq": {
+      "node_counts": {
+        "Constant": 1,
+        "DequantizeLinear": 203,
+        "QuantizeLinear": 99,
+        "Conv": 52,
+        "HardSigmoid": 27,
+        "Mul": 27,
+        "Relu": 14,
+        "GlobalAveragePool": 10,
+        "Add": 6,
+        "Flatten": 1,
+        "ReduceL2": 1,
+        "Shape": 1,
+        "Clip": 1,
+        "Expand": 1,
+        "Div": 1
+      },
+      "initializer_bytes": 1064551,
+      "initializer_dtype_bytes": {
+        "float32": 71948,
+        "uint8": 99,
+        "int8": 920952,
+        "int32": 71552
+      },
+      "Conv_MACs_including_QDQ_weight_shapes": 54896576,
+      "MatMul_MACs_known_shapes": 0,
+      "Conv_groups_histogram": {
+        "1": 41,
+        "16": 1,
+        "72": 1,
+        "88": 1,
+        "96": 1,
+        "240": 2,
+        "120": 1,
+        "144": 1,
+        "288": 1,
+        "576": 2
+      }
+    },
+    "C_letterbox_trained_seed27_fp32": {
+      "node_counts": {
+        "Conv": 52,
+        "HardSigmoid": 27,
+        "Mul": 27,
+        "Relu": 14,
+        "GlobalAveragePool": 10,
+        "Add": 6,
+        "Flatten": 1,
+        "ReduceL2": 1,
+        "Constant": 1,
+        "Clip": 1,
+        "Shape": 1,
+        "Expand": 1,
+        "Div": 1
+      },
+      "initializer_bytes": 3683808,
+      "initializer_dtype_bytes": {
+        "float32": 3683808
+      },
+      "Conv_MACs_including_QDQ_weight_shapes": 54896576,
+      "MatMul_MACs_known_shapes": 0,
+      "Conv_groups_histogram": {
+        "1": 41,
+        "16": 1,
+        "72": 1,
+        "88": 1,
+        "96": 1,
+        "240": 2,
+        "120": 1,
+        "144": 1,
+        "288": 1,
+        "576": 2
+      }
+    },
+    "C_letterbox_trained_seed27_qdq": {
+      "node_counts": {
+        "Constant": 1,
+        "DequantizeLinear": 203,
+        "QuantizeLinear": 99,
+        "Conv": 52,
+        "HardSigmoid": 27,
+        "Mul": 27,
+        "Relu": 14,
+        "GlobalAveragePool": 10,
+        "Add": 6,
+        "Flatten": 1,
+        "ReduceL2": 1,
+        "Shape": 1,
+        "Clip": 1,
+        "Expand": 1,
+        "Div": 1
+      },
+      "initializer_bytes": 1064551,
+      "initializer_dtype_bytes": {
+        "float32": 71948,
+        "uint8": 99,
+        "int8": 920952,
+        "int32": 71552
+      },
+      "Conv_MACs_including_QDQ_weight_shapes": 54896576,
+      "MatMul_MACs_known_shapes": 0,
+      "Conv_groups_histogram": {
+        "1": 41,
+        "16": 1,
+        "72": 1,
+        "88": 1,
+        "96": 1,
+        "240": 2,
+        "120": 1,
+        "144": 1,
+        "288": 1,
+        "576": 2
+      }
+    },
+    "C_letterbox_trained_seed28_fp32": {
+      "node_counts": {
+        "Conv": 52,
+        "HardSigmoid": 27,
+        "Mul": 27,
+        "Relu": 14,
+        "GlobalAveragePool": 10,
+        "Add": 6,
+        "Flatten": 1,
+        "ReduceL2": 1,
+        "Constant": 1,
+        "Clip": 1,
+        "Shape": 1,
+        "Expand": 1,
+        "Div": 1
+      },
+      "initializer_bytes": 3683808,
+      "initializer_dtype_bytes": {
+        "float32": 3683808
+      },
+      "Conv_MACs_including_QDQ_weight_shapes": 54896576,
+      "MatMul_MACs_known_shapes": 0,
+      "Conv_groups_histogram": {
+        "1": 41,
+        "16": 1,
+        "72": 1,
+        "88": 1,
+        "96": 1,
+        "240": 2,
+        "120": 1,
+        "144": 1,
+        "288": 1,
+        "576": 2
+      }
+    },
+    "C_letterbox_trained_seed28_qdq": {
+      "node_counts": {
+        "Constant": 1,
+        "DequantizeLinear": 203,
+        "QuantizeLinear": 99,
+        "Conv": 52,
+        "HardSigmoid": 27,
+        "Mul": 27,
+        "Relu": 14,
+        "GlobalAveragePool": 10,
+        "Add": 6,
+        "Flatten": 1,
+        "ReduceL2": 1,
+        "Shape": 1,
+        "Clip": 1,
+        "Expand": 1,
+        "Div": 1
+      },
+      "initializer_bytes": 1064551,
+      "initializer_dtype_bytes": {
+        "float32": 71948,
+        "uint8": 99,
+        "int8": 920952,
+        "int32": 71552
+      },
+      "Conv_MACs_including_QDQ_weight_shapes": 54896576,
+      "MatMul_MACs_known_shapes": 0,
+      "Conv_groups_histogram": {
+        "1": 41,
+        "16": 1,
+        "72": 1,
+        "88": 1,
+        "96": 1,
+        "240": 2,
+        "120": 1,
+        "144": 1,
+        "288": 1,
+        "576": 2
+      }
+    }
+  },
+  "detector_actual_local_forwards": [
+    {
+      "detections": 1,
+      "max_coordinate_error_input_pixels": 7.62939453125e-06,
+      "max_score_error": 2.384185791015625e-07,
+      "torch_vs_local_ORT_strong_detection_parity": "PASS"
+    },
+    {
+      "detections": 1,
+      "max_coordinate_error_input_pixels": 1.52587890625e-05,
+      "max_score_error": 3.5762786865234375e-07,
+      "torch_vs_local_ORT_strong_detection_parity": "PASS"
+    },
+    {
+      "detections": 1,
+      "max_coordinate_error_input_pixels": 1.52587890625e-05,
+      "max_score_error": 5.960464477539063e-08,
+      "torch_vs_local_ORT_strong_detection_parity": "PASS"
+    },
+    {
+      "detections": 2,
+      "max_coordinate_error_input_pixels": 7.62939453125e-06,
+      "max_score_error": 7.152557373046875e-07,
+      "torch_vs_local_ORT_strong_detection_parity": "PASS"
+    },
+    {
+      "detections": 3,
+      "max_coordinate_error_input_pixels": 1.52587890625e-05,
+      "max_score_error": 9.5367431640625e-07,
+      "torch_vs_local_ORT_strong_detection_parity": "PASS"
+    },
+    {
+      "detections": 1,
+      "max_coordinate_error_input_pixels": 3.0517578125e-05,
+      "max_score_error": 2.980232238769531e-07,
+      "torch_vs_local_ORT_strong_detection_parity": "PASS"
+    },
+    {
+      "detections": 1,
+      "max_coordinate_error_input_pixels": 0.0,
+      "max_score_error": 0.0,
+      "torch_vs_local_ORT_strong_detection_parity": "PASS"
+    }
+  ],
+  "identity_metrics": [
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "fp32",
+      "threshold": 0.8445389603236383,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 28,
+        "known_correct_accepted_C": 23,
+        "known_wrong_accepted_W": 1,
+        "known_rejected_U": 6,
+        "unknown_false_accepts": 1
+      },
+      "independent_score_and_threshold_check": "PASS"
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "qdq",
+      "threshold": 0.901422236359813,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 19,
+        "known_correct_accepted_C": 4,
+        "known_wrong_accepted_W": 4,
+        "known_rejected_U": 22,
+        "unknown_false_accepts": 3
+      },
+      "independent_score_and_threshold_check": "PASS"
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "fp32",
+      "threshold": 0.8642478136864173,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 29,
+        "known_correct_accepted_C": 14,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 16,
+        "unknown_false_accepts": 3
+      },
+      "independent_score_and_threshold_check": "PASS"
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "qdq",
+      "threshold": 0.9351450157334532,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 19,
+        "known_correct_accepted_C": 0,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 30,
+        "unknown_false_accepts": 0
+      },
+      "independent_score_and_threshold_check": "PASS"
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "fp32",
+      "threshold": 0.8306161540247587,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 29,
+        "known_correct_accepted_C": 17,
+        "known_wrong_accepted_W": 0,
+        "known_rejected_U": 13,
+        "unknown_false_accepts": 0
+      },
+      "independent_score_and_threshold_check": "PASS"
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "qdq",
+      "threshold": 0.9049211771370602,
+      "counts": {
+        "known_queries": 30,
+        "unknown_queries": 30,
+        "known_closed_top1_correct": 15,
+        "known_correct_accepted_C": 5,
+        "known_wrong_accepted_W": 3,
+        "known_rejected_U": 22,
+        "unknown_false_accepts": 5
+      },
+      "independent_score_and_threshold_check": "PASS"
+    }
+  ],
+  "identity_local_forward_checks": [
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "fp32",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00001_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "fp32",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00017_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "fp32",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "fp32",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00005_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "fp32",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "fp32",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00024_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "fp32",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "fp32",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00004_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "qdq",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00001_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "qdq",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00017_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "qdq",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "qdq",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00005_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "qdq",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "qdq",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00024_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "qdq",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed26",
+      "precision": "qdq",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00004_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "fp32",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00001_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "fp32",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00017_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "fp32",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "fp32",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00005_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "fp32",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "fp32",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00024_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "fp32",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "fp32",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00004_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "qdq",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00001_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "qdq",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00017_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "qdq",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "qdq",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00005_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "qdq",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "qdq",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00024_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "qdq",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed27",
+      "precision": "qdq",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00004_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "fp32",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00001_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "fp32",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00017_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "fp32",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "fp32",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00005_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "fp32",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "fp32",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00024_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "fp32",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "fp32",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00004_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "qdq",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00001_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "qdq",
+      "split": "validation_gallery",
+      "source": "data/2023Aug14/007/00017_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "qdq",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "qdq",
+      "split": "validation_query",
+      "source": "data/2023Aug18/007/00005_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "qdq",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "qdq",
+      "split": "evaluation_gallery",
+      "source": "data/2023Aug14/009/00024_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "qdq",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00000_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    },
+    {
+      "condition": "C_letterbox_trained_seed28",
+      "precision": "qdq",
+      "split": "evaluation_query",
+      "source": "data/2023Aug20/001/00004_1.jpg",
+      "maximum_feature_error_linux_vs_windows": 0.0,
+      "declared_tolerance_passed": true
+    }
+  ],
+  "QDQ_portability_tolerance_failures": [],
+  "calibration_training_only": true,
+  "calibration_images": 64,
+  "pynq_or_FPGA_compile_verified": false,
+  "scope": "Host Linux export vs Windows CPU numerical replay and independent resource/metric arithmetic. No ARM execution, synthesis, resource place/route, board latency or fresh accuracy benchmark."
+}

@@ -1,0 +1,14 @@
+JobID                         JobName      State ExitCode    Elapsed     MaxRSS        NodeList 
+------------ ------------------------ ---------- -------- ---------- ---------- --------------- 
+129740                idcoo-qat-smoke     FAILED      1:0   00:00:09                      gpu02 
+129740.batch                    batch     FAILED      1:0   00:00:09      1172K           gpu02 
+129740.0                       python     FAILED      1:0   00:00:09       800K           gpu02 
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/qat_study/tools/smoke_qat.py", line 85, in <module>
+    main()
+    ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/qat_study/tools/smoke_qat.py", line 46, in main
+    assert equality['reference_all_pass'], 'Reference QAT/ONNX parity failed; retain vectors and stop before full training'
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Reference QAT/ONNX parity failed; retain vectors and stop before full training
+srun: error: gpu02: task 0: Exited with exit code 1

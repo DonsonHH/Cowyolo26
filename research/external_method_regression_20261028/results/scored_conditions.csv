@@ -1,0 +1,13 @@
+condition_id,model,tracker_variant,counter_variant,main_method,reference_events,predicted_events,TP,FP,FN,wrong_direction_matches,precision,recall,f1
+generic_installed_confirmed_only,generic,installed,confirmed_only,True,6,6,6,0,0,0,1.0,1.0,1.0
+generic_installed_handoff,generic,installed,handoff,True,6,6,6,0,0,0,1.0,1.0,1.0
+generic_secondstage_iou_confirmed_only,generic,secondstage_iou,confirmed_only,False,6,6,6,0,0,0,1.0,1.0,1.0
+generic_secondstage_iou_handoff,generic,secondstage_iou,handoff,True,6,6,6,0,0,0,1.0,1.0,1.0
+generic_allow_lost_iou_confirmed_only,generic,allow_lost_iou,confirmed_only,False,6,6,6,0,0,0,1.0,1.0,1.0
+generic_allow_lost_iou_handoff,generic,allow_lost_iou,handoff,True,6,6,6,0,0,0,1.0,1.0,1.0
+pilot_installed_confirmed_only,pilot,installed,confirmed_only,True,6,2,2,0,4,0,1.0,0.3333333333333333,0.5
+pilot_installed_handoff,pilot,installed,handoff,True,6,2,2,0,4,0,1.0,0.3333333333333333,0.5
+pilot_secondstage_iou_confirmed_only,pilot,secondstage_iou,confirmed_only,False,6,2,2,0,4,0,1.0,0.3333333333333333,0.5
+pilot_secondstage_iou_handoff,pilot,secondstage_iou,handoff,True,6,2,2,0,4,0,1.0,0.3333333333333333,0.5
+pilot_allow_lost_iou_confirmed_only,pilot,allow_lost_iou,confirmed_only,False,6,3,3,0,3,0,1.0,0.5,0.6666666666666666
+pilot_allow_lost_iou_handoff,pilot,allow_lost_iou,handoff,True,6,3,3,0,3,0,1.0,0.5,0.6666666666666666

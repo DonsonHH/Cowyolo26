@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>奶牛通行源视频标注</title>
+<style>
+:root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#eef3f4;background:#11191d;color-scheme:dark}*{box-sizing:border-box}body{margin:0}main{max-width:1480px;margin:auto;padding:24px}h1{font-size:25px;margin:0 0 8px}h2{font-size:17px;margin:0 0 14px}.muted,small{color:#afbec5;line-height:1.6}header{margin-bottom:22px}.layout{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(320px,1fr);gap:20px}.panel{padding:20px;border:1px solid #34434b;background:#19252b;border-radius:12px;margin-bottom:18px}.player{position:relative;background:#050808;line-height:0;border-radius:8px;overflow:hidden}video{display:block;width:100%;max-height:70vh}canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:12px 0}button,input,select,textarea{font:inherit;border:1px solid #526772;border-radius:6px;padding:9px 11px;background:#142027;color:inherit}button{cursor:pointer;background:#283c46}button:hover{background:#385562}button.primary{background:#ace1cc;color:#122e22;border-color:#ace1cc;font-weight:650}button.danger{color:#ffb1ac}button:disabled{opacity:.5;cursor:default}input[type=number]{width:100%}input[type=checkbox]{width:auto}label{display:block;font-size:13px;color:#c5d2d9;margin:12px 0 6px}input[type=text],select,textarea{width:100%}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.clock{font:600 16px ui-monospace,monospace;color:#b3ebd3}.event{padding:11px 0;border-bottom:1px solid #34434b;display:grid;grid-template-columns:1fr auto;gap:8px}.event p{margin:4px 0;font-size:13px}.badge{font-size:12px;color:#e8cd8c}#status{min-height:26px;line-height:1.5;color:#b3ebd3}.error{color:#ffb1ac!important}details{margin-top:14px;font-size:13px;line-height:1.8}summary{cursor:pointer;color:#bad8d2}ol{padding-left:21px}a{color:#b3ebd3}.mono{font-family:ui-monospace,monospace;overflow-wrap:anywhere}.help{font-size:13px;line-height:1.7}#events{max-height:460px;overflow:auto}.range{font-size:13px;margin:8px 0}footer{margin-top:12px;font-size:12px;color:#93aab5}input[type=file]{max-width:100%}@media(max-width:840px){main{padding:14px}.layout{grid-template-columns:1fr}.panel{padding:15px}h1{font-size:22px}video{max-height:none}.two{gap:8px}}
+</style>
+<main>
+<header><h1>奶牛通行源视频标注</h1><div class="muted">从原始画面记录通行事件。页面不载入模型框、轨迹或预测计数；导出结果用于独立复核。<p id="qaNotice" class="help badge" hidden>QA测试视图：事件仅用于功能检查，不是科研参考。</p></div></header>
+<div class="layout"><section>
+<div class="panel"><h2>MultiCam · camera1 · 2023-08-14</h2>
+<p class="help badge">按你指定的范围，默认只看源帧8912–10873（356.48–434.92秒）。帧号沿用原片；已有草稿保留。<label><input type="checkbox" id="focusOnly" checked> 聚焦奶牛出现时段</label> <a href="training_preview.html" target="_blank">查看最新20轮模型效果</a> · <a href="model_preview.html" target="_blank">此前五轮对照</a></p>
+<div class="player"><video id="video" preload="metadata" playsinline><source src="../inputs/multicam_annotation.webm" type="video/webm"><source src="../inputs/multicam_original.mp4" type="video/mp4"></video><canvas id="gate"></canvas></div>
+<div class="row"><button id="play">播放 / 暂停</button><button id="back">前一帧</button><button id="next">后一帧</button><select id="speed" aria-label="播放速度" style="width:auto"><option value="0.25">0.25倍</option><option value="0.5">0.5倍</option><option value="1" selected>1倍</option><option value="2">2倍</option></select><label style="margin:0"><input type="checkbox" id="showGate" checked> 显示参考区域</label></div>
+<div class="row"><span class="clock" id="clock">等待源视频…</span><input id="seek" type="range" min="8912" max="10873" value="8912" step="1" aria-label="源视频帧位置" style="flex:1;min-width:120px"></div>
+<div class="two"><div><label for="jump">跳转到源帧</label><input id="jump" type="number" min="0" max="14008" value="0"></div><div style="align-self:end"><button id="jumpButton">跳转</button><button id="mark">取当前帧为事件时间</button></div></div>
+<p class="help muted">A在上方，B在下方；黄色横线为画面高度40%与60%，虚线竖边为通道范围。按身体中心稳定跨区记录：先在起始区连续观察3帧，再到另一侧连续3帧，记第3帧。遮挡或起止截断时保留疑难状态。</p><p class="help badge">源视频末帧14008附近存在严格解码错误，暂不将该帧作为完整通行参考。兼容副本保留了帧序，不能恢复该处丢失的图像信息。</p>
+<details><summary>标注规范与快捷键</summary><ol><li>先填写复核者代号及此前是否看过预测，保持原始视频时序。</li><li>空格播放/暂停，左右方向键移动1帧，Shift加方向键移动1秒。输入框内不会触发快捷键。</li><li>同一头牛完整去而复返分别记两次方向事件。只露出边缘、从中间出现、跟丢后身份不清的片段记为“截断”或“疑难”。</li><li>分别记录已完整观看的帧段。未覆盖区不应作为零通行或正确拒绝统计。</li><li>帧号按25fps源时间定位，关键事件须逐帧复核；浏览器播放只是标注工具，冻结前需用解码源帧再次核对。</li><li>本页保存草稿；独立第二复核者或仲裁完成后，才能建立冻结参考集。</li></ol></details>
+</div>
+<div class="panel"><h2>已完整审阅的源帧段</h2><div class="two"><div><label for="rangeStart">开始帧</label><input id="rangeStart" type="number" min="0" max="14008" value="8912"></div><div><label for="rangeEnd">结束帧（含）</label><input id="rangeEnd" type="number" min="0" max="14008" value="10873"></div></div><div class="row"><button id="rangeAdd">记录已审阅帧段</button></div><div id="ranges"></div></div>
+</section><aside>
+<div class="panel"><h2>本次复核信息</h2><label for="reviewer">复核者代号</label><input id="reviewer" type="text" placeholder="例如 reviewer-A；不必填写姓名"><label for="blinding">此前是否看过本片的模型预测</label><select id="blinding"><option value="not_declared">请选择</option><option value="source_only_no_prior_predictions_declared">未看过，直接按源视频标注</option><option value="prior_outputs_seen">看过预测或预测摘要</option></select><small>该项是复核者声明，导出不会自动标成已通过独立复核。</small></div>
+<div class="panel"><h2>记录一次通行</h2><div class="two"><div><label for="eventFrame">完成事件源帧</label><input id="eventFrame" type="number" min="0" max="14008" value="0"></div><div><label for="direction">方向</label><select id="direction"><option value="A->B">A → B（向下）</option><option value="B->A">B → A（向上）</option></select></div></div>
+<label for="completion">参考状态</label><select id="completion"><option value="complete">看见完整跨区</option><option value="censored">起始或结束截断</option><option value="uncertain">遮挡 / 身份连续性不清</option></select><label for="trackLabel">临时视觉个体代号（可空）</label><input id="trackLabel" type="text" placeholder="只在本片有效，不是牛的档案身份"><label><input id="occlusion" type="checkbox"> 本次存在明显遮挡</label><label for="note">依据或争议说明</label><textarea id="note" rows="2" placeholder="记录如何判断、哪里不确定"></textarea><div class="row"><button id="add" class="primary">加入事件表</button></div></div>
+<div class="panel"><h2>当前草稿事件 <span id="count" class="badge">0</span></h2><div id="events"></div><div class="row"><button id="export" class="primary">导出复核JSON</button><button id="importButton">导入草稿</button><input id="import" type="file" accept="application/json,.json" hidden></div><div id="status" role="status" aria-live="polite"></div><small>草稿仅存于当前浏览器；导出文件作为备份。独立复核者应从空表开始。</small></div>
+</aside></div><footer>来源：MultiCamCows2024原视频，2560×1440，25fps，共14009帧。优先播放1280×720的VP9兼容副本，保留帧序与25fps；关键标注须回查原始源帧。原文件SHA256：<span class="mono">5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1</span>。本工具无网络上传功能。</footer>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),video=$('video');
+const config={source_id:'mc_camera1_aug14',sha256:'5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1',fps:25,frames:14009,unreliable_source_frame_ranges:[[14008,14008]],gate:{axis:'y',roi_x:[.34,.75],boundaries:[.4,.6],stable_samples:3}};
+$('qaNotice').hidden=!new URLSearchParams(location.search).has('qa');
+const focus={first:8912,last:10873};
+const key='cow-source-annotation-v1-'+(new URLSearchParams(location.search).has('qa')?'qa':'main');
+const fresh=()=>({schema_version:'cattle-passages-v1',review_session_id:crypto.randomUUID(),source:config,annotation_status:'draft_pending_independent_review',reviewer:'',blinding:'not_declared',reviewed_intervals:[],events:[]});
+let state=fresh();
+function message(text,error=false){$('status').textContent=text;$('status').classList.toggle('error',error)}
+function validFrame(value){return Number.isInteger(value)&&value>=0&&value<config.frames}
+function frame(){return Math.min(config.frames-1,Math.max(0,Math.floor(video.currentTime*config.fps+1e-5)))}
+function save(){state.reviewer=$('reviewer').value.trim();state.blinding=$('blinding').value;try{localStorage.setItem(key,JSON.stringify(state))}catch{message('浏览器未保存草稿，请及时导出文件。',true)}}
+function go(f){const a=$('focusOnly').checked?focus.first:0,b=$('focusOnly').checked?focus.last:config.frames-1;video.pause();video.currentTime=(Math.min(b,Math.max(a,f))+.03)/config.fps}
+function text(tag,content){const n=document.createElement(tag);n.textContent=content;return n}
+function render(){
+ $('events').replaceChildren();$('ranges').replaceChildren();$('count').textContent=state.events.length;
+ for(const event of [...state.events].sort((a,b)=>a.source_frame-b.source_frame)){
+  const row=document.createElement('div');row.className='event';const detail=document.createElement('div');
+  detail.append(text('strong',`${event.direction} · 帧 ${event.source_frame} · ${event.time_s.toFixed(2)}秒`));
+  detail.append(text('p',`${{complete:'完整跨区',censored:'截断',uncertain:'疑难'}[event.completion]}${event.occlusion?' · 遮挡':''}${event.visual_track_label?' · '+event.visual_track_label:''}`));
+  if(event.review_note)detail.append(text('p',event.review_note));
+  const actions=document.createElement('div');const seek=text('button','查看');seek.onclick=()=>go(event.source_frame);const del=text('button','删除');del.className='danger';del.onclick=()=>{state.events=state.events.filter(e=>e.event_id!==event.event_id);save();render()};actions.append(seek,del);row.append(detail,actions);$('events').append(row);
+ }
+ state.reviewed_intervals.forEach((range,i)=>{const row=document.createElement('div');row.className='range';row.append(text('span',`源帧 ${range.start_frame}–${range.end_frame} `));const del=text('button','移除');del.onclick=()=>{state.reviewed_intervals.splice(i,1);save();render()};row.append(del);$('ranges').append(row)});
+}
+function validate(value){
+ if(value.schema_version!=='cattle-passages-v1'||value.source?.sha256!==config.sha256||value.source.fps!==config.fps||value.source.frames!==config.frames)throw Error('来源或文件格式不匹配');
+ if(!Array.isArray(value.events)||!Array.isArray(value.reviewed_intervals))throw Error('缺少事件或审阅帧段');
+ const ids=new Set();for(const e of value.events){if(!validFrame(e.source_frame)||!['A->B','B->A'].includes(e.direction)||!['complete','censored','uncertain'].includes(e.completion)||typeof e.time_s!=='number'||!Number.isFinite(e.time_s)||Math.abs(e.time_s-e.source_frame/config.fps)>1e-6||typeof e.event_id!=='string'||ids.has(e.event_id))throw Error('事件帧、方向、状态或编号不合法');ids.add(e.event_id)}
+ for(const r of value.reviewed_intervals)if(!validFrame(r.start_frame)||!validFrame(r.end_frame)||r.end_frame<r.start_frame)throw Error('审阅帧段不合法');
+ if(!['not_declared','source_only_no_prior_predictions_declared','prior_outputs_seen'].includes(value.blinding))throw Error('复核方式不合法');
+ return value;
+}
+try{const cached=localStorage.getItem(key);if(cached)state=validate(JSON.parse(cached))}catch{message('旧草稿格式不匹配；当前从空表开始。',true)}
+$('reviewer').value=state.reviewer;$('blinding').value=state.blinding;render();
+$('reviewer').onchange=save;$('blinding').onchange=save;
+function drawGate(){const c=$('gate'),ctx=c.getContext('2d');c.width=video.clientWidth;c.height=video.clientHeight;if(!$('showGate').checked)return;const w=c.width,h=c.height;ctx.strokeStyle='#ffe19d';ctx.lineWidth=2;ctx.font='bold 17px system-ui';ctx.fillStyle='#fff2c4';for(const y of [.4,.6]){ctx.beginPath();ctx.moveTo(.34*w,y*h);ctx.lineTo(.75*w,y*h);ctx.stroke()}ctx.setLineDash([7,5]);for(const x of [.34,.75]){ctx.beginPath();ctx.moveTo(x*w,0);ctx.lineTo(x*w,h);ctx.stroke()}ctx.fillText('A',.35*w,.34*h);ctx.fillText('B',.35*w,.69*h)}
+function updateClock(){const f=frame();if($('focusOnly').checked&&f>focus.last){go(focus.last);return}$('clock').textContent=`源帧 ${f} / 14008 · ${(f/25).toFixed(2)}秒`;$('seek').value=f;if(document.activeElement!==$('jump'))$('jump').value=f}
+video.onloadedmetadata=()=>{if($('focusOnly').checked)go(focus.first);updateClock();drawGate();message('已聚焦8912–10873帧；草稿事件和源帧号保持原样。')};video.ontimeupdate=updateClock;video.onseeked=updateClock;
+$('focusOnly').onchange=()=>{$('seek').min=$('focusOnly').checked?focus.first:0;$('seek').max=$('focusOnly').checked?focus.last:config.frames-1;if($('focusOnly').checked&&(frame()<focus.first||frame()>focus.last))go(focus.first);updateClock()};
+video.onerror=()=>message('无法读取视频，请确认inputs中的兼容副本或原始文件存在。',true);
+new ResizeObserver(drawGate).observe(video);$('showGate').onchange=drawGate;
+$('play').onclick=()=>{if(video.paused)video.play().catch(()=>message('播放失败，请检查视频文件。',true));else video.pause()};
+$('speed').onchange=()=>video.playbackRate=Number($('speed').value);$('back').onclick=()=>go(frame()-1);$('next').onclick=()=>go(frame()+1);$('seek').oninput=()=>go(Number($('seek').value));$('jump').onfocus=()=>video.pause();$('jumpButton').onclick=()=>{const f=Number($('jump').value);if(validFrame(f))go(f);else message('请输入有效源帧。',true)};
+$('mark').onclick=()=>{$('eventFrame').value=frame();message('已取当前源帧；确认方向与状态后加入事件表。')};
+$('add').onclick=()=>{const f=Number($('eventFrame').value);if(!validFrame(f))return message('事件源帧不合法。',true);if(f===14008&&$('completion').value==='complete')return message('源末帧解码异常；请记为截断或疑难，保留依据。',true);const coincident=state.events.some(e=>e.source_frame===f&&e.direction===$('direction').value);state.events.push({event_id:crypto.randomUUID(),source_frame:f,time_s:f/25,direction:$('direction').value,completion:$('completion').value,visual_track_label:$('trackLabel').value.trim(),occlusion:$('occlusion').checked,review_note:$('note').value.trim()});save();render();message(coincident?'事件已加入；同帧可有多头牛，请确认个体代号并排除重复记录。':'事件已加入草稿。')};
+$('rangeAdd').onclick=()=>{const a=Number($('rangeStart').value),b=Number($('rangeEnd').value);if(!validFrame(a)||!validFrame(b)||a>b)return message('审阅帧段不合法。',true);state.reviewed_intervals.push({start_frame:a,end_frame:b});save();render();message('已记录该帧段完成审阅。')};
+$('export').onclick=()=>{save();if(!state.reviewer||state.blinding==='not_declared')return message('请先填写复核者代号，并声明此前是否看过预测。',true);validate(state);const payload={...state,annotation_status:'draft_pending_independent_review',exported_at:new Date().toISOString()};const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download=`${config.source_id}_${state.reviewer.replace(/[^\w\u4e00-\u9fff-]/g,'_')}.json`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);message('已导出草稿；独立复核和关键源帧核查尚需另行记录。')};
+$('importButton').onclick=()=>$('import').click();$('import').onchange=async()=>{try{const file=$('import').files[0];if(!file)return;const value=validate(JSON.parse(await file.text()));state={...value,annotation_status:'draft_pending_independent_review'};$('reviewer').value=state.reviewer||'';$('blinding').value=state.blinding;save();render();message('已导入草稿，仍保持待独立复核状态。')}catch(e){message(e.message,true)}};
+document.addEventListener('keydown',event=>{if(['INPUT','TEXTAREA','SELECT','BUTTON'].includes(document.activeElement.tagName))return;if(event.code==='Space'){event.preventDefault();$('play').click()}if(event.code==='ArrowLeft'||event.code==='ArrowRight'){event.preventDefault();go(frame()+(event.code==='ArrowLeft'?-1:1)*(event.shiftKey?25:1))}});
+window.cowAnnotation={snapshot:()=>structuredClone(state),validate,sourceConfig:config};
+</script>
+</html>

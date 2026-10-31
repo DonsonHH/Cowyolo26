@@ -1,0 +1,382 @@
+{
+  "status": "144_STREAM_EVENT_LEDGERS_120_CAUSAL_RF_CONTEXTS_AND515_REAL_QUERY_DECISIONS_INDEPENDENTLY_VERIFIED",
+  "cases_checked": 12,
+  "event_ledgers": 144,
+  "causal_RF_contexts": 120,
+  "read_window_incidence_entries": 16898,
+  "real_model_query_results": 515,
+  "image_dotproducts_verified": 15450,
+  "identity_scores_verified": 3090,
+  "maximum_query_feature_difference_from_prior_actual_source_run": 0.0,
+  "maximum_independent_score_error": 1.4432899320127035e-15,
+  "unique_RF_consumed_observation_links": 30,
+  "all_terminal_status_counts": {
+    "VISUAL_ALL_CONDITIONS_REJECTED": 84,
+    "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 19,
+    "RF_UNIQUE_CANDIDATE_UNVERIFIED": 20,
+    "UNRESOLVED_NO_SNAPSHOT": 1,
+    "UNRESOLVED_QUEUE_CAPACITY": 16,
+    "UNRESOLVED_EXPIRED_WAITING": 4
+  },
+  "case_checks": [
+    {
+      "case_id": "S00_missing",
+      "RF_status_counts": {
+        "RF_NO_TIMELY_READ": 12
+      },
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      },
+      "real_query_forwards": 60,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "S01_single",
+      "RF_status_counts": {
+        "RF_UNIQUE_CANDIDATE": 5,
+        "RF_SHARED_WINDOW": 7
+      },
+      "terminal_status_counts": {
+        "RF_UNIQUE_CANDIDATE_UNVERIFIED": 5,
+        "VISUAL_ALL_CONDITIONS_REJECTED": 5,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      },
+      "real_query_forwards": 35,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [
+        {
+          "event_id": "E001_f8995_tid86",
+          "RF_candidate": "SIM-REGISTRY-001",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-001"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E002_f9135_tid88",
+          "RF_candidate": "SIM-REGISTRY-002",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-002"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E003_f9265_tid91",
+          "RF_candidate": "SIM-REGISTRY-003",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-003"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E011_f9900_tid117",
+          "RF_candidate": "SIM-REGISTRY-011",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-011"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E012_f10830_tid141",
+          "RF_candidate": "SIM-REGISTRY-012",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-012"
+          ],
+          "mock_owner_matches_event": true
+        }
+      ],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "S02_duplicates",
+      "RF_status_counts": {
+        "RF_UNIQUE_CANDIDATE": 5,
+        "RF_SHARED_WINDOW": 7
+      },
+      "terminal_status_counts": {
+        "RF_UNIQUE_CANDIDATE_UNVERIFIED": 5,
+        "VISUAL_ALL_CONDITIONS_REJECTED": 5,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      },
+      "real_query_forwards": 35,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [
+        {
+          "event_id": "E001_f8995_tid86",
+          "RF_candidate": "SIM-REGISTRY-001",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-001"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E002_f9135_tid88",
+          "RF_candidate": "SIM-REGISTRY-002",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-002"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E003_f9265_tid91",
+          "RF_candidate": "SIM-REGISTRY-003",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-003"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E011_f9900_tid117",
+          "RF_candidate": "SIM-REGISTRY-011",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-011"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E012_f10830_tid141",
+          "RF_candidate": "SIM-REGISTRY-012",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-012"
+          ],
+          "mock_owner_matches_event": true
+        }
+      ],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "S03_delay_inside",
+      "RF_status_counts": {
+        "RF_UNIQUE_CANDIDATE": 5,
+        "RF_SHARED_WINDOW": 7
+      },
+      "terminal_status_counts": {
+        "RF_UNIQUE_CANDIDATE_UNVERIFIED": 5,
+        "VISUAL_ALL_CONDITIONS_REJECTED": 5,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      },
+      "real_query_forwards": 35,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [
+        {
+          "event_id": "E001_f8995_tid86",
+          "RF_candidate": "SIM-REGISTRY-001",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-001"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E002_f9135_tid88",
+          "RF_candidate": "SIM-REGISTRY-002",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-002"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E003_f9265_tid91",
+          "RF_candidate": "SIM-REGISTRY-003",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-003"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E011_f9900_tid117",
+          "RF_candidate": "SIM-REGISTRY-011",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-011"
+          ],
+          "mock_owner_matches_event": true
+        },
+        {
+          "event_id": "E012_f10830_tid141",
+          "RF_candidate": "SIM-REGISTRY-012",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-012"
+          ],
+          "mock_owner_matches_event": true
+        }
+      ],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "S04_late",
+      "RF_status_counts": {
+        "RF_NO_TIMELY_READ": 8,
+        "RF_SHARED_WINDOW": 4
+      },
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      },
+      "real_query_forwards": 60,
+      "late_observation_links": 13,
+      "unique_late_read_ids": 12,
+      "mock_RF_ownership_audit": [],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "S05_conflict",
+      "RF_status_counts": {
+        "RF_MULTI_CODE": 5,
+        "RF_SHARED_WINDOW": 7
+      },
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      },
+      "real_query_forwards": 60,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "S06_invalid",
+      "RF_status_counts": {
+        "RF_NO_TIMELY_READ": 12
+      },
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      },
+      "real_query_forwards": 60,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "S07_wrong_single",
+      "RF_status_counts": {
+        "RF_UNIQUE_CANDIDATE": 5,
+        "RF_SHARED_WINDOW": 7
+      },
+      "terminal_status_counts": {
+        "RF_UNIQUE_CANDIDATE_UNVERIFIED": 5,
+        "VISUAL_ALL_CONDITIONS_REJECTED": 5,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      },
+      "real_query_forwards": 35,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [
+        {
+          "event_id": "E001_f8995_tid86",
+          "RF_candidate": "SIM-REGISTRY-002",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-001"
+          ],
+          "mock_owner_matches_event": false
+        },
+        {
+          "event_id": "E002_f9135_tid88",
+          "RF_candidate": "SIM-REGISTRY-003",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-002"
+          ],
+          "mock_owner_matches_event": false
+        },
+        {
+          "event_id": "E003_f9265_tid91",
+          "RF_candidate": "SIM-REGISTRY-004",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-003"
+          ],
+          "mock_owner_matches_event": false
+        },
+        {
+          "event_id": "E011_f9900_tid117",
+          "RF_candidate": "SIM-REGISTRY-012",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-011"
+          ],
+          "mock_owner_matches_event": false
+        },
+        {
+          "event_id": "E012_f10830_tid141",
+          "RF_candidate": "SIM-REGISTRY-001",
+          "simulated_read_owner_records": [
+            "SIM-REGISTRY-012"
+          ],
+          "mock_owner_matches_event": false
+        }
+      ],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "S08_unregistered",
+      "RF_status_counts": {
+        "RF_UNREGISTERED_CODE": 5,
+        "RF_SHARED_WINDOW": 7
+      },
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 2
+      },
+      "real_query_forwards": 60,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "S09_missing_snapshot",
+      "RF_status_counts": {
+        "RF_NO_TIMELY_READ": 12
+      },
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 10,
+        "UNRESOLVED_NO_SNAPSHOT": 1,
+        "VISUAL_THRESHOLD_CANDIDATE_UNVERIFIED": 1
+      },
+      "real_query_forwards": 55,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "P00_burst_capacity",
+      "RF_status_counts": {},
+      "terminal_status_counts": {
+        "VISUAL_ALL_CONDITIONS_REJECTED": 4,
+        "UNRESOLVED_QUEUE_CAPACITY": 8
+      },
+      "real_query_forwards": 20,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    },
+    {
+      "case_id": "P01_expired",
+      "RF_status_counts": {},
+      "terminal_status_counts": {
+        "UNRESOLVED_EXPIRED_WAITING": 4,
+        "UNRESOLVED_QUEUE_CAPACITY": 8
+      },
+      "real_query_forwards": 0,
+      "late_observation_links": 0,
+      "unique_late_read_ids": 0,
+      "mock_RF_ownership_audit": [],
+      "notes": "Mock owner correspondence is a software control, not real cow identity correctness."
+    }
+  ],
+  "source_events_are_reused_not144_independent_cows": true,
+  "source_cow_identity_accuracy": null,
+  "RF_hardware_connected": false,
+  "new_detector_forwards": 0,
+  "new_training_updates": 0,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

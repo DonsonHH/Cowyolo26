@@ -1,0 +1,295 @@
+{
+  "name": "generic_allow_lost_iou",
+  "model": "generic",
+  "variant": "allow_lost_iou",
+  "checkpoint_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "frames": 479,
+  "raw_rows": 1323,
+  "posttracker_rows": 1193,
+  "ROI_rows": 1191,
+  "ROI_IDs": 13,
+  "confirmed_only_events": 6,
+  "handoff_events": 6,
+  "baseline_exact": false,
+  "low_stage_matches": 42,
+  "low_Lost_recoveries": 14,
+  "scores": [
+    {
+      "condition_id": "generic_allow_lost_iou_confirmed_only",
+      "model": "generic",
+      "tracker_variant": "allow_lost_iou",
+      "counter_variant": "confirmed_only",
+      "main_method": false,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 2,
+          "prediction_frame": 110,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "prediction_ID": 5,
+          "prediction_frame": 199,
+          "time_error_s": 0.20000000000000018,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 24,
+          "prediction_frame": 245,
+          "time_error_s": 0.10000000000000142,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "prediction_ID": 30,
+          "prediction_frame": 291,
+          "time_error_s": 0.16666666666666607,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "prediction_ID": 50,
+          "prediction_frame": 322,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 33,
+          "prediction_frame": 397,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        }
+      ],
+      "events_path": "results/generic_allow_lost_iou/confirmed_only_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    },
+    {
+      "condition_id": "generic_allow_lost_iou_handoff",
+      "model": "generic",
+      "tracker_variant": "allow_lost_iou",
+      "counter_variant": "handoff",
+      "main_method": true,
+      "metrics": {
+        "reference_events": 6,
+        "predicted_events": 6,
+        "temporally_matched": 6,
+        "correct_direction_matches": 6,
+        "wrong_direction_matches": 0,
+        "TP": 6,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "direction_accuracy_given_temporal_match": 1.0,
+        "counts": {
+          "A->B": {
+            "reference": 0,
+            "prediction": 0
+          },
+          "B->A": {
+            "reference": 6,
+            "prediction": 6
+          }
+        },
+        "mean_absolute_direction_count_error": 0.0,
+        "matching_tolerance_s": 2.0,
+        "pairs": [
+          {
+            "reference_index": 0,
+            "prediction_index": 0,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 1,
+            "prediction_index": 1,
+            "time_error_s": 0.20000000000000018,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 2,
+            "prediction_index": 2,
+            "time_error_s": 0.10000000000000142,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 3,
+            "prediction_index": 3,
+            "time_error_s": 0.16666666666666607,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 4,
+            "prediction_index": 4,
+            "time_error_s": 0.0,
+            "direction_correct": true
+          },
+          {
+            "reference_index": 5,
+            "prediction_index": 5,
+            "time_error_s": 0.033333333333333215,
+            "direction_correct": true
+          }
+        ],
+        "unmatched_reference_indices": [],
+        "unmatched_prediction_indices": []
+      },
+      "event_ledger": [
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 1,
+          "reference_frame": 110,
+          "prediction_ID": 2,
+          "prediction_frame": 110,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 14,
+          "reference_frame": 193,
+          "prediction_ID": 5,
+          "prediction_frame": 199,
+          "time_error_s": 0.20000000000000018,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 7,
+          "reference_frame": 248,
+          "prediction_ID": 24,
+          "prediction_frame": 245,
+          "time_error_s": 0.10000000000000142,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 16,
+          "reference_frame": 286,
+          "prediction_ID": 30,
+          "prediction_frame": 291,
+          "time_error_s": 0.16666666666666607,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 22,
+          "reference_frame": 322,
+          "prediction_ID": 50,
+          "prediction_frame": 322,
+          "time_error_s": 0.0,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        },
+        {
+          "kind": "correct_direction_match",
+          "reference_ID": 17,
+          "reference_frame": 396,
+          "prediction_ID": 33,
+          "prediction_frame": 397,
+          "time_error_s": 0.033333333333333215,
+          "reference_direction": "B->A",
+          "prediction_direction": "B->A"
+        }
+      ],
+      "events_path": "results/generic_allow_lost_iou/handoff_events.json",
+      "reference_authority": "Already-used publisher trajectory-derived six-event diagnostic reference; no new test claim"
+    }
+  ],
+  "new_detector_forwards": 0,
+  "training_updates": 0,
+  "FPGA_execution_verified": false
+}

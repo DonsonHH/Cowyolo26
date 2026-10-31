@@ -1,0 +1,82 @@
+{
+  "status": "PASS_REAL_LOADER_AND_TWO_DISCARDED_UPDATES_PER_ARM",
+  "job_id": "129840",
+  "protocol_sha256": "aa99a723e95e1d7a593aec9d0de83f9de0f9c7a1d883985f91ab1637bc1f9cd5",
+  "data_prepared_sha256": "c942717d0c5eeb467e2c15314ef960da44166f67e560c57c9ec3e0cd1279d4b9",
+  "conditions": [
+    {
+      "arm": "mixed",
+      "loaded_train_slots": 5913,
+      "loaded_val_slots": 370,
+      "unique_train_filenames": 5913,
+      "repetition_distribution": {
+        "1": 5913
+      },
+      "train_annotation_instances": 10986,
+      "cuda_real_discarded_updates": [
+        {
+          "step": 1,
+          "loss": 179.05274963378906,
+          "loss_items": [
+            1.7678651809692383,
+            4.427680969238281,
+            0.02599097043275833
+          ],
+          "gradient_tensors": 366
+        },
+        {
+          "step": 2,
+          "loss": 173.03439331054688,
+          "loss_items": [
+            1.7268518209457397,
+            4.245429992675781,
+            0.022663181647658348
+          ],
+          "gradient_tensors": 366
+        }
+      ],
+      "parameter_tensors_changed": 366,
+      "initial_model_digest": "98b0f08adb5a735a74cc03a2631f0098bf3a6968b93b978eb6775f5a775d9a0e"
+    },
+    {
+      "arm": "real_repeated",
+      "loaded_train_slots": 5913,
+      "loaded_val_slots": 370,
+      "unique_train_filenames": 2596,
+      "repetition_distribution": {
+        "3": 721,
+        "2": 1875
+      },
+      "train_annotation_instances": 11223,
+      "cuda_real_discarded_updates": [
+        {
+          "step": 1,
+          "loss": 174.2096405029297,
+          "loss_items": [
+            1.7786877155303955,
+            3.9192776679992676,
+            0.023220490664243698
+          ],
+          "gradient_tensors": 366
+        },
+        {
+          "step": 2,
+          "loss": 164.0441436767578,
+          "loss_items": [
+            1.731947898864746,
+            3.7176668643951416,
+            0.018515126779675484
+          ],
+          "gradient_tensors": 366
+        }
+      ],
+      "parameter_tensors_changed": 366,
+      "initial_model_digest": "98b0f08adb5a735a74cc03a2631f0098bf3a6968b93b978eb6775f5a775d9a0e"
+    }
+  ],
+  "source_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "device": "Tesla V100S-PCIE-32GB",
+  "checkpoints_from_smoke_retained_for_training": false,
+  "validation_actual_source_order_equal": true,
+  "validation_loading_rule": "Rectangular loader may aspect-sort; exact membership and actual source order equality checked"
+}

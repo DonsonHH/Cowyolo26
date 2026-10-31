@@ -1,0 +1,11 @@
+O7_RUN_OUTPUT /home/xilinx/jupyter_notebooks/yolo26_optimization_8/reports/baseline_A_r224_1746747879194573959_0 FAIL
+Traceback (most recent call last):
+  File "/home/xilinx/jupyter_notebooks/yolo26_optimization_7/run_board.py", line 61, in <module>
+    if __name__=='__main__':main()
+  File "/home/xilinx/jupyter_notebooks/yolo26_optimization_7/run_board.py", line 23, in main
+    raw,boxes,item=one(image,'cold',0);cold_raw=raw.copy();result['cold_first_frame']=item;np.save(O/'cold_raw.npy',raw);cv2.imwrite(str(O/'bus_detected.jpg'),annotate(image,boxes));np.save(O/'bus_boxes.npy',boxes)
+  File "/home/xilinx/jupyter_notebooks/yolo26_optimization_7/run_board.py", line 16, in one
+    st=time.perf_counter();raw=g.run_image(im);before_decode=time.perf_counter();boxes=decode(raw,im.shape,size=a.size);end=time.perf_counter();tim=g.timers
+  File "/home/xilinx/jupyter_notebooks/yolo26_optimization_7/native_graph.py", line 73, in run_image
+    if rc:raise RuntimeError(self.lib.o7_error().decode(),self.failure)
+RuntimeError: ('node 1: DMA submit', None)

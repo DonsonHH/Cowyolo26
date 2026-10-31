@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+srun: error: cu01: task 0: Exited with exit code 1
+  File "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/tools/compact_media.py", line 15, in <module>
+    (ROOT/'logs'/f'compact-{source.parent.name}.log').write_bytes(result.stderr);assert result.returncode==0,result.stderr[-500:]
+                                                                                        ^^^^^^^^^^^^^^^^^^^^
+AssertionError: b"Unrecognized option 'preset'.\nError splitting the argument list: Option not found\n"

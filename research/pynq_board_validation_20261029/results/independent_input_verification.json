@@ -1,0 +1,38 @@
+{
+  "status": "12_INDEPENDENT_PIL_DECODE_AND_TRANSPOSE36_INPUT_CONDITIONS108_ARRAYS_AND324_TIMINGS_VERIFIED",
+  "created_host_UTC": "2026-10-29T11:36:00.591404+00:00",
+  "archive_sha256": "c40d68f4cda732e8701ceedada630bc5aa182f85caaf128f8209f3badab6c47d",
+  "archive_members": 56,
+  "native_source_photos_independently_decoded": 12,
+  "native_cv2_rotation_vs_independent_transpose_exact": true,
+  "letterbox_conditions": 36,
+  "saved_arrays_verified": 108,
+  "native_cv2_letterbox_exact_conditions": 36,
+  "resize_first_different_conditions": 12,
+  "resize_first_total_different_uint8_channels": 61051,
+  "resize_first_maximum_uint8_difference": 1,
+  "resize_first_adopted_as_identical_input": false,
+  "timing": {
+    "np_rot90_copy_native_baseline": {
+      "samples": 108,
+      "mean_ms": 1068.4886337407409,
+      "median_ms": 1060.9982905000002,
+      "maximum_ms": 1127.603814
+    },
+    "cv2_rotate_native": {
+      "samples": 108,
+      "mean_ms": 320.08744668518517,
+      "median_ms": 317.27556300000003,
+      "maximum_ms": 380.225255
+    },
+    "cv2_resize_before_rotate": {
+      "samples": 108,
+      "mean_ms": 10.592483638888888,
+      "median_ms": 10.1104245,
+      "maximum_ms": 17.480283
+    }
+  },
+  "new_network_forwards": 0,
+  "actual_camera_measurement": false,
+  "whole_goal_complete": false
+}

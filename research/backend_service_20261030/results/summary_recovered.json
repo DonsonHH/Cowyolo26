@@ -1,0 +1,335 @@
+{
+  "status": "SERIAL_RECOVERED_POLICY_TRADEOFF_COMPONENTS39_ACTUAL_JOBS_AND_PAIRED_ORDER_DIFFERENCES_RECOMPUTED",
+  "created_UTC": "2026-10-30T04:04:37.504171+00:00",
+  "cases": [
+    {
+      "run": "r1_idle_gate",
+      "policy": "idle_gate",
+      "repeat": 1,
+      "processed": 378,
+      "skipped": 14,
+      "late": 191,
+      "count_down": 10,
+      "FPS": 4.821428571428571,
+      "P95_release_to_frontend_ms": 332.14919104999996,
+      "mean_model_ms": 168.02668414814815,
+      "actual_identity_jobs": 10,
+      "accepted_predictions": 1,
+      "max_queue_wait_ms": 47440.273191,
+      "max_enqueue_to_result_ms": 52505.936321,
+      "CPU_windows_positive_ticks": 0,
+      "sum_child_CPU_ticks": 0,
+      "clock_ticks_per_second": 100,
+      "metrics": {
+        "model_ms": {
+          "mean": 168.02668414814815,
+          "P50": 151.828283,
+          "P95": 220.80702175000002,
+          "P99": 333.6070995600009,
+          "max": 1057.465124
+        },
+        "processing_ms": {
+          "mean": 188.54440816402112,
+          "P50": 168.89857849999999,
+          "P95": 256.9084278499999,
+          "P99": 347.9703315100009,
+          "max": 1244.181654
+        },
+        "after_model_to_count_ms": {
+          "mean": 20.517724015873018,
+          "P50": 14.5270555,
+          "P95": 32.904228549999985,
+          "P99": 101.6602044400005,
+          "max": 870.747852
+        },
+        "release_to_count_ms": {
+          "mean": 218.42146762169313,
+          "P50": 206.806846,
+          "P95": 332.14919104999996,
+          "P99": 461.5806886200021,
+          "max": 1266.716849
+        },
+        "JPEG_frontend_read_ms": {
+          "mean": 1.6525146719576722,
+          "P50": 0.178237,
+          "P95": 0.2366108,
+          "P99": 67.17450691000009,
+          "max": 170.780307
+        },
+        "selector_ms": {
+          "mean": 0.2530283492063492,
+          "P50": 0.17284,
+          "P95": 0.6214801,
+          "P99": 0.79094145,
+          "max": 1.040597
+        }
+      },
+      "backend_mean_network_elapsed_ms": 717.5609723,
+      "backend_mean_network_CPU_ms": 144.7814707,
+      "backend_actual_CPU_ms": 8878.849478,
+      "producer_peak": {
+        "peak_retained_frames": 6,
+        "peak_retained_payload_bytes": 4418520,
+        "peak_transient_payload_bytes": 5149692
+      },
+      "cumulative_parent_memory_kB": {
+        "VmHWM": 222520,
+        "VmRSS": 154744,
+        "VmSwap": 22144
+      }
+    },
+    {
+      "run": "r1_low_priority_parallel",
+      "policy": "low_priority_parallel",
+      "repeat": 1,
+      "processed": 362,
+      "skipped": 30,
+      "late": 177,
+      "count_down": 9,
+      "FPS": 4.61734693877551,
+      "P95_release_to_frontend_ms": 371.85083724999987,
+      "mean_model_ms": 166.72506656629835,
+      "actual_identity_jobs": 9,
+      "accepted_predictions": 1,
+      "max_queue_wait_ms": 715.297839,
+      "max_enqueue_to_result_ms": 2559.912753,
+      "CPU_windows_positive_ticks": 48,
+      "sum_child_CPU_ticks": 857,
+      "clock_ticks_per_second": 100,
+      "metrics": {
+        "model_ms": {
+          "mean": 166.72506656629835,
+          "P50": 145.583209,
+          "P95": 236.83676465,
+          "P99": 316.65932494999976,
+          "max": 518.781383
+        },
+        "processing_ms": {
+          "mean": 196.4338654668508,
+          "P50": 163.324683,
+          "P95": 290.35459885,
+          "P99": 467.62735897999875,
+          "max": 2943.377842
+        },
+        "after_model_to_count_ms": {
+          "mean": 29.708798900552488,
+          "P50": 14.507985000000001,
+          "P95": 37.119217,
+          "P99": 177.8534662599999,
+          "max": 2715.36239
+        },
+        "release_to_count_ms": {
+          "mean": 228.5906785248619,
+          "P50": 189.305434,
+          "P95": 371.85083724999987,
+          "P99": 600.7868728999982,
+          "max": 2994.897157
+        },
+        "JPEG_frontend_read_ms": {
+          "mean": 12.399403469613258,
+          "P50": 0.1736465,
+          "P95": 0.27030445,
+          "P99": 151.77174555999974,
+          "max": 2695.552433
+        },
+        "selector_ms": {
+          "mean": 0.24704290055248618,
+          "P50": 0.17014400000000002,
+          "P95": 0.5898316,
+          "P99": 0.8252547699999983,
+          "max": 0.949692
+        }
+      },
+      "backend_mean_network_elapsed_ms": 183.16481877777778,
+      "backend_mean_network_CPU_ms": 161.88098366666668,
+      "backend_actual_CPU_ms": 8433.115376,
+      "producer_peak": {
+        "peak_retained_frames": 6,
+        "peak_retained_payload_bytes": 4418520,
+        "peak_transient_payload_bytes": 5149692
+      },
+      "cumulative_parent_memory_kB": {
+        "VmHWM": 222520,
+        "VmRSS": 101956,
+        "VmSwap": 73728
+      }
+    },
+    {
+      "run": "r2_low_priority_parallel",
+      "policy": "low_priority_parallel",
+      "repeat": 2,
+      "processed": 335,
+      "skipped": 57,
+      "late": 304,
+      "count_down": 10,
+      "FPS": 4.2729591836734695,
+      "P95_release_to_frontend_ms": 504.0983255000001,
+      "mean_model_ms": 209.052666880597,
+      "actual_identity_jobs": 10,
+      "accepted_predictions": 0,
+      "max_queue_wait_ms": 700.138879,
+      "max_enqueue_to_result_ms": 2194.53244,
+      "CPU_windows_positive_ticks": 46,
+      "sum_child_CPU_ticks": 975,
+      "clock_ticks_per_second": 100,
+      "metrics": {
+        "model_ms": {
+          "mean": 209.052666880597,
+          "P50": 181.385046,
+          "P95": 319.4839630000001,
+          "P99": 623.5388269200039,
+          "max": 2908.714229
+        },
+        "processing_ms": {
+          "mean": 230.56575450149256,
+          "P50": 198.387907,
+          "P95": 361.28821570000025,
+          "P99": 780.2644150400034,
+          "max": 2921.715595
+        },
+        "after_model_to_count_ms": {
+          "mean": 21.513087620895522,
+          "P50": 14.69347,
+          "P95": 39.4840638,
+          "P99": 91.85692930000012,
+          "max": 874.283248
+        },
+        "release_to_count_ms": {
+          "mean": 293.1904381313433,
+          "P50": 244.25962,
+          "P95": 504.0983255000001,
+          "P99": 841.7983361600028,
+          "max": 2960.876274
+        },
+        "JPEG_frontend_read_ms": {
+          "mean": 3.6090955253731343,
+          "P50": 0.17523,
+          "P95": 0.3108077000000011,
+          "P99": 26.345336820000078,
+          "max": 858.935205
+        },
+        "selector_ms": {
+          "mean": 0.45137753432835814,
+          "P50": 0.16776,
+          "P95": 0.6036935,
+          "P99": 9.15363216000002,
+          "max": 22.576271
+        }
+      },
+      "backend_mean_network_elapsed_ms": 180.90303260000002,
+      "backend_mean_network_CPU_ms": 161.1569772,
+      "backend_actual_CPU_ms": 9458.643032,
+      "producer_peak": {
+        "peak_retained_frames": 6,
+        "peak_retained_payload_bytes": 4418520,
+        "peak_transient_payload_bytes": 5149692
+      },
+      "cumulative_parent_memory_kB": {
+        "VmHWM": 222520,
+        "VmRSS": 104056,
+        "VmSwap": 69376
+      }
+    },
+    {
+      "run": "r2_idle_gate",
+      "policy": "idle_gate",
+      "repeat": 2,
+      "processed": 391,
+      "skipped": 1,
+      "late": 187,
+      "count_down": 10,
+      "FPS": 4.987244897959183,
+      "P95_release_to_frontend_ms": 288.016956,
+      "mean_model_ms": 162.58492914833758,
+      "actual_identity_jobs": 10,
+      "accepted_predictions": 1,
+      "max_queue_wait_ms": 43707.639898,
+      "max_enqueue_to_result_ms": 51403.018791,
+      "CPU_windows_positive_ticks": 0,
+      "sum_child_CPU_ticks": 0,
+      "clock_ticks_per_second": 100,
+      "metrics": {
+        "model_ms": {
+          "mean": 162.58492914833758,
+          "P50": 148.526603,
+          "P95": 219.564935,
+          "P99": 251.67323920000007,
+          "max": 312.714165
+        },
+        "processing_ms": {
+          "mean": 180.76640897442456,
+          "P50": 165.709194,
+          "P95": 249.94206400000002,
+          "P99": 290.98642210000014,
+          "max": 346.626719
+        },
+        "after_model_to_count_ms": {
+          "mean": 18.181479826086957,
+          "P50": 14.514566,
+          "P95": 35.185991,
+          "P99": 72.39974820000016,
+          "max": 192.488307
+        },
+        "release_to_count_ms": {
+          "mean": 204.495907741688,
+          "P50": 193.015644,
+          "P95": 288.016956,
+          "P99": 332.70107490000015,
+          "max": 473.671559
+        },
+        "JPEG_frontend_read_ms": {
+          "mean": 0.6274861534526854,
+          "P50": 0.173864,
+          "P95": 0.24312899999999998,
+          "P99": 16.061658600000115,
+          "max": 58.591138
+        },
+        "selector_ms": {
+          "mean": 0.29039230434782604,
+          "P50": 0.160264,
+          "P95": 0.5548,
+          "P99": 0.8816593000000001,
+          "max": 21.876917
+        }
+      },
+      "backend_mean_network_elapsed_ms": 1026.819419,
+      "backend_mean_network_CPU_ms": 148.20495599999998,
+      "backend_actual_CPU_ms": 8969.637294,
+      "producer_peak": {
+        "peak_retained_frames": 6,
+        "peak_retained_payload_bytes": 4418520,
+        "peak_transient_payload_bytes": 5149692
+      },
+      "cumulative_parent_memory_kB": {
+        "VmHWM": 222520,
+        "VmRSS": 79560,
+        "VmSwap": 95360
+      }
+    }
+  ],
+  "paired_order_comparisons": [
+    {
+      "repeat": 1,
+      "processed_delta_parallel_minus_idle": -16,
+      "count_delta": -1,
+      "late_delta": -14,
+      "FPS_delta": -0.204081632653061,
+      "P95_release_to_frontend_ms_delta": 39.701646199999914,
+      "max_backend_enqueue_to_result_ms_delta": -49946.023568000004
+    },
+    {
+      "repeat": 2,
+      "processed_delta_parallel_minus_idle": -56,
+      "count_delta": 0,
+      "late_delta": 117,
+      "FPS_delta": -0.7142857142857135,
+      "P95_release_to_frontend_ms_delta": 216.0813695000001,
+      "max_backend_enqueue_to_result_ms_delta": -49208.486351
+    }
+  ],
+  "original_full_archive_downloaded": false,
+  "raw_photo_input_numeric_verification": "SERIAL_NUMERIC_PROOFS_AND_LOCAL39_PHOTO_PIXELS_INPUTS_ACTUAL_FEATURES_SCORES_RECONSTRUCTED_VERIFIED",
+  "new_forwards": 0,
+  "global_default_changed": false,
+  "whole_goal_complete": false
+}

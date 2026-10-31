@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/tools/replay.py", line 132, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/tools/replay.py", line 119, in main
+    results=[run(p,arm,pilot,out) for arm in p['arms']]
+             ~~~^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/counting_recovery_20261028/tools/replay.py", line 38, in run
+    tick=time.perf_counter();result=model.track(model_input,persist=True,tracker=p['tracker'],classes=[cow],
+                                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        imgsz=arm['imgsz'],conf=arm['confidence'],iou=.5,device=0,verbose=False)[0]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/engine/model.py", line 580, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/engine/model.py", line 537, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+                                                                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/engine/predictor.py", line 228, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Results into one
+  File "/share/home/renly/miniconda3/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 38, in generator_context
+    response = gen.send(None)
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/engine/predictor.py", line 325, in stream_inference
+    self.run_callbacks("on_predict_start")
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/engine/predictor.py", line 516, in run_callbacks
+    callback(self)
+    ~~~~~~~~^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/trackers/track.py", line 47, in on_predict_start
+    tracker = check_yaml(predictor.args.tracker)
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/utils/checks.py", line 707, in check_yaml
+    return check_file(file, suffix, hard=hard)
+  File "/share/home/renly/projects/idcoo_research_20261026/env/lib/python3.13/site-packages/ultralytics/utils/checks.py", line 690, in check_file
+    raise FileNotFoundError(f"'{file}' does not exist")
+FileNotFoundError: 'samebuiltinbytetrack.yaml' does not exist
+srun: error: gpu02: task 0: Exited with exit code 1

@@ -1,0 +1,223 @@
+{
+  "name": "Accepted12-event source replay with native capture, bounded mock-RF queue and actual frozen CPU ReID",
+  "created_UTC": "2026-10-28T18:47:01.574790+00:00",
+  "source_video": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+  "source_video_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "width": 2560,
+  "height": 1440,
+  "fps": 25,
+  "stride": 5,
+  "decode_end_frame0_exclusive": 10874,
+  "export_event_scope_frame0_halfopen": [
+    8912,
+    10874
+  ],
+  "frozen_development_candidate_sha256": "5536882add54dc5315a3865b01782c5838c5c39adcce1ea984ec8963a7079d9b",
+  "human_confirmation_sha256": "fe8a895cd6ac71815ff8e2f6ad8d932a6453c41971b6b7a18ea9c2f743dd0f9f",
+  "expected_events": [
+    {
+      "time_s": 359.8,
+      "track_id": 86,
+      "direction": "A->B",
+      "frame0": 8995
+    },
+    {
+      "time_s": 365.4,
+      "track_id": 88,
+      "direction": "A->B",
+      "frame0": 9135
+    },
+    {
+      "time_s": 370.6,
+      "track_id": 91,
+      "direction": "A->B",
+      "frame0": 9265
+    },
+    {
+      "time_s": 373.6,
+      "track_id": 93,
+      "direction": "A->B",
+      "frame0": 9340
+    },
+    {
+      "time_s": 373.8,
+      "track_id": 95,
+      "direction": "A->B",
+      "frame0": 9345
+    },
+    {
+      "time_s": 374.6,
+      "track_id": 94,
+      "direction": "A->B",
+      "frame0": 9365
+    },
+    {
+      "time_s": 378.6,
+      "track_id": 96,
+      "direction": "A->B",
+      "frame0": 9465
+    },
+    {
+      "time_s": 384.2,
+      "track_id": 103,
+      "direction": "A->B",
+      "frame0": 9605
+    },
+    {
+      "time_s": 387.6,
+      "track_id": 98,
+      "direction": "A->B",
+      "frame0": 9690
+    },
+    {
+      "time_s": 391.6,
+      "track_id": 102,
+      "direction": "A->B",
+      "frame0": 9790
+    },
+    {
+      "time_s": 396.0,
+      "track_id": 117,
+      "direction": "A->B",
+      "frame0": 9900
+    },
+    {
+      "time_s": 433.2,
+      "track_id": 141,
+      "direction": "A->B",
+      "frame0": 10830
+    }
+  ],
+  "cache_files": [
+    {
+      "name": "post_tracker_boxes.csv",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed26__original_fused/post_tracker_boxes.csv",
+      "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\firststage_iou_regression_20261029\\delivery\\results\\original_seed26__original_fused\\post_tracker_boxes.csv",
+      "sha256": "a49a65fb78772b45e8de33cfc5da95f1a62c4338a68de8e8945a23110c0c1839",
+      "bytes": 217173
+    },
+    {
+      "name": "observations.json",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed26__original_fused/observations.json",
+      "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\firststage_iou_regression_20261029\\delivery\\results\\original_seed26__original_fused\\observations.json",
+      "sha256": "237d5eff22fed2f96cb8ea958f7d1fc9b5b30be80254cadb131101106ff89c80",
+      "bytes": 398017
+    },
+    {
+      "name": "handoff_events_all_history.json",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed26__original_fused/handoff_events_all_history.json",
+      "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\firststage_iou_regression_20261029\\delivery\\results\\original_seed26__original_fused\\handoff_events_all_history.json",
+      "sha256": "aaaca7a9a725792e850889c985ce292ca9e0552b83a1fbe3dbf2974ee6beb034",
+      "bytes": 1136
+    },
+    {
+      "name": "summary.json",
+      "path": "/share/home/renly/projects/idcoo_research_20261026/firststage_iou_regression_20261029/results/original_seed26__original_fused/summary.json",
+      "local": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\firststage_iou_regression_20261029\\delivery\\results\\original_seed26__original_fused\\summary.json",
+      "sha256": "eaa23d4bfdebc3e5868e4a322d4f1f7a32e7c0aae65153d36d1978db23aa20fe",
+      "bytes": 4605
+    }
+  ],
+  "detector_checkpoint_sha256": "51b342c474ba321a438b86512c63b8bbeb78d1b86e32b9961fdc21f4ff186a74",
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "counter_variant": "original_association_confirmation_handoff",
+  "snapshots": {
+    "per_track_candidates": 3,
+    "recent_source_seconds": 2,
+    "global_encoded_frame_cap_bytes": 33554432,
+    "maximum_tracks": 32,
+    "minimum_crop_side": 128,
+    "eligible_y_centres": [
+      0.25,
+      0.75
+    ],
+    "quality": "Variance of Laplacian on grayscale native-box crop resized to height128 preserving aspect; select maximum, ties earlier source frame",
+    "storage": "JPEG95 native frame shared between tracks, plus lossless grayscale quality thumbnails; export selected native JPEG and lossless crop/oriented PNG derivatives. Source coordinates/hashes retained.",
+    "orientation": "A->B vertical-down passage: rotate crop90deg CCW; B->A rotate90deg CW so assumed movement points right; experimental motion-based assumption, not published rotated-box equivalence",
+    "budget_scope": "Retained JPEG plus quality-thumbnail bytes after admission; excludes codec transients, decoded frames, Python object overhead, inference runtime and model buffers.",
+    "quality_evidence": "Store the exact pre-JPEG resized grayscale thumbnail as lossless PNG; recompute Laplacian variance independently from those pixels."
+  },
+  "rf_window_source_seconds": 0.5,
+  "rf_mode": "EXPLICIT_MOCK_MISSING_NO_READER",
+  "rf_processing": "First5Hz processing tick at or after source event time plus0.5s; usually0.6source seconds later",
+  "worker_queue_capacity": 4,
+  "worker_result_capacity": 16,
+  "worker_deadline_wall_seconds": 30,
+  "worker_drain_wall_seconds": 30,
+  "worker_ready_timeout_seconds": 120,
+  "identity": {
+    "study_summary_sha256": "b58871b746f838f7d160eadb00a13db43183ed089d89fdea03992df1a912e3cc",
+    "feature_index_sha256": "5180098236a19c08a395bac6565c34b06475272d0f9f2ef4a58095ae4fbd0ca9",
+    "gallery": "Same6 public evaluation-gallery identities,5registered images each, anonymous IDs only",
+    "conditions": [
+      {
+        "name": "A_official_frozen",
+        "seed": null,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/models/mobilenet_v3_small-047dcff4.pth",
+        "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+        "threshold": 0.873113640861386,
+        "preprocess": "official"
+      },
+      {
+        "name": "B_letterbox_frozen",
+        "seed": null,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/models/mobilenet_v3_small-047dcff4.pth",
+        "checkpoint_sha256": "047dcff4addef86ea5bc2eff13c9614dc11f47ab1160d0a71a25e7db994f4e1f",
+        "threshold": 0.8952453223004778,
+        "preprocess": "letterbox"
+      },
+      {
+        "name": "C_letterbox_trained_seed26",
+        "seed": 26,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed26/best_encoder.pt",
+        "checkpoint_sha256": "6653555c9c806e23d2747b06db53424541254364065c53c5311b7ae2ded06b8b",
+        "threshold": 0.8445389603236383,
+        "preprocess": "letterbox"
+      },
+      {
+        "name": "C_letterbox_trained_seed27",
+        "seed": 27,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed27/best_encoder.pt",
+        "checkpoint_sha256": "b6035be271b2df6ab839c6e06bb980acf7dcbec3ce0193f615eb498716115128",
+        "threshold": 0.8642478136864173,
+        "preprocess": "letterbox"
+      },
+      {
+        "name": "C_letterbox_trained_seed28",
+        "seed": 28,
+        "checkpoint": "/share/home/renly/projects/idcoo_research_20261026/identity_training/results/study/C_letterbox_trained_seed28/best_encoder.pt",
+        "checkpoint_sha256": "cecbb7229b173cd3890fc939fe42f3c47696d700ee43aa1c124ea94f68ed53e6",
+        "threshold": 0.8306161540247587,
+        "preprocess": "letterbox"
+      }
+    ]
+  },
+  "upstream_identity_worker_sha256": "dfc036de31f5ccedaff0a4eddf15a7a6d2ccfcf9ebd5f11fd10293d5aafe9543",
+  "identity_worker_audit_changes_only": [
+    "gallery_source_byte_hash_validation",
+    "export_actual_gallery_vectors",
+    "save_input_tensor_hash_and_all_scores"
+  ],
+  "identity_worker_sha256": "6ec3a21716850278acf2ea9828abd97e7d4ee8eebe8f16eb9f5503ad0dc876a9",
+  "body_transform_sha256": "b47ca84f25810f875ff3eb95f430ffbcec3d180ae9b6d0ac8aa0823ada8d67d3",
+  "input_module_sha256": {
+    "confirmation_counter.py": "43dc019982f23bd2cab92471d2bc4a5b1824258ec86edd2f17f4fd67f994976f",
+    "gallery_source_index.json": "df4aec91ca41461a983da285b8ec507bb04c4aeb96f8f1a6813df35b2d99a322",
+    "snapshot_bank.py": "08208ddc10892210fe4fda5e86ab36f31464f714d8bdaee516bbf4e86be85aba",
+    "test_snapshot_bank.py": "4fba2e7d8f0a2cb922a69e74ce24f4341ec95a567a9f07af6d79db4c21c751c3",
+    "zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+  },
+  "selection_cannot_read_identity_scores": true,
+  "source_identity_ground_truth_available": false,
+  "verified_identity_must_remain_false": true,
+  "new_detector_forwards": 0,
+  "new_training_updates": 0,
+  "runtime_scope": "Server CPU functional replay from frozen native detections;5model comparison, not realtime/PYNQ performance.",
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

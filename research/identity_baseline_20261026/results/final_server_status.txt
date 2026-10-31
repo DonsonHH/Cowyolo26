@@ -1,0 +1,39 @@
+JobID|JobName|State|ExitCode|Elapsed
+129695|idcoo-tracker-replay|COMPLETED|0:0|00:00:07
+129695.batch|batch|COMPLETED|0:0|00:00:07
+129695.0|python|COMPLETED|0:0|00:00:06
+129696|idcoo-id-input-audit|COMPLETED|0:0|00:00:01
+129696.batch|batch|COMPLETED|0:0|00:00:01
+129696.0|python|COMPLETED|0:0|00:00:01
+129697|idcoo-id-features|COMPLETED|0:0|00:00:06
+129697.batch|batch|COMPLETED|0:0|00:00:06
+129697.0|python|COMPLETED|0:0|00:00:00
+129697.1|python|COMPLETED|0:0|00:00:06
+129698|idcoo-id-group-eval|COMPLETED|0:0|00:00:00
+129698.batch|batch|COMPLETED|0:0|00:00:00
+129698.0|python|COMPLETED|0:0|00:00:00
+test_bootstrap_resamples_identities (__main__.IdentityMetricsContract.test_bootstrap_resamples_identities) ... ok
+test_calibration_requires_unknown (__main__.IdentityMetricsContract.test_calibration_requires_unknown) ... ok
+test_empty_acceptance_is_na (__main__.IdentityMetricsContract.test_empty_acceptance_is_na) ... ok
+test_known_wrong_and_unknown_false_accept_are_separate (__main__.IdentityMetricsContract.test_known_wrong_and_unknown_false_accept_are_separate) ... ok
+test_reject_all_is_a_valid_solution (__main__.IdentityMetricsContract.test_reject_all_is_a_valid_solution) ... ok
+test_threshold_does_not_accept_nearly_equal_but_lower_score (__main__.IdentityMetricsContract.test_threshold_does_not_accept_nearly_equal_but_lower_score) ... ok
+test_unknown_calibration_false_accept_target (__main__.IdentityMetricsContract.test_unknown_calibration_false_accept_target) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.015s
+
+OK
+Task staging PID 1980899 is no longer present
+Task staging PID 1987769 is no longer present
+Task staging PID 2038308 is no longer present
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT| NODES|NODELIST(REASON)
+    129701_[3-8%3]|     4gpu|         renly-patrol-m3| PENDING|      0:00|     45:00|     1|(JobArrayTaskLimit)
+          129701_0|     4gpu|         renly-patrol-m3| RUNNING|      1:22|     45:00|     1|gpu02
+          129701_1|     4gpu|         renly-patrol-m3| RUNNING|      1:22|     45:00|     1|gpu02
+          129701_2|     4gpu|         renly-patrol-m3| RUNNING|      1:22|     45:00|     1|gpu02
+            129704|       cu|   renly-m3-audit-report| PENDING|      0:00|     10:00|     1|(Dependency)
+e821ccbb9886ef615a504a80170eda2abb3979ad9916e1cad00335a5a77b6f97  /share/home/renly/projects/idcoo_research_20261026/identity_baseline/tools/run_identity_baseline.py
+ce1268319d87b10040f7aae099f92af60e37233ec29625cd7ff2b0ad43ff73f6  /share/home/renly/projects/idcoo_research_20261026/identity_baseline/tools/aggregate_identity.py
+42b086741cec530d32cf2b5f364722ee0135c55ea05d460166b2b0baa4770c27  /share/home/renly/projects/idcoo_research_20261026/identity_baseline/protocol/identity_pilot_v1.json
+09aa1690240f48c38b9b77a97b867e89bc313008286fa57ba921443feade0e17  /share/home/renly/projects/idcoo_research_20261026/identity_baseline/protocol/aggregation_v1.json

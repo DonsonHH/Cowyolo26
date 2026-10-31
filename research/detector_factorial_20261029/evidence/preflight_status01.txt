@@ -1,0 +1,16 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|TIME_LIMIT|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+130516|cow-factorial-preflight|COMPLETED|0:0|00:00:19|
+130516.batch|batch|COMPLETED|0:0|00:00:19|1176K
+[K[34m[1mtrain: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/train.cache... 6809 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 6809/6809 1.9Git/s 0.0s
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 2271.9±500.6 MB/s, size: 333.7 KB)
+[K[34m[1mval: [0mScanning /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/labels/val.cache... 1571 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1571/1571 366.1Mit/s 0.0s
+[34m[1moptimizer:[0m AdamW(lr=0.002, momentum=0.9) with parameter groups 114 weight(decay=0.0), 126 weight(decay=0.0005), 126 bias(decay=0.0)
+Image sizes 256 train, 256 val
+Using 0 dataloader workers
+Logging results to [1m/share/home/renly/projects/idcoo_research_20261026/detector_factorial_20261029/results/preflight_discarded/rot256[0m
+Starting training for 10 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+[K       1/10      1.36G      1.738      3.628    0.02552        100        256: 0% ──────────── 0/213  0.5s[K       1/10      1.38G       1.73      3.638      0.026         85        256: 0% ──────────── 1/213 1.2s/it 0.8s<4:09[K       1/10      1.38G       1.73      3.638      0.026         85        256: 0% ──────────── 1/213 1.2s/it 0.8s<4:09
+{"status": "48_CPU_CUDA_ROTATION_ORACLES_AND3_REAL_TRAINER_TWO_UPDATE_SMOKES_PASS", "created_UTC": "2026-10-29T12:20:52.715200+00:00", "job_id": "130516", "protocol_sha256": "43ad5590cbb6ee6be15356af4c0499b947e627aaf72bb1858ccb800add0f69b1", "discarded_optimizer_steps": 6, "formal_training_updates": 0, "all_source_image_and_label_hashes_verified": 8380, "source_video_Toros_or_final_candidates_forward": false, "torch": "2.8.0+cu128", "ultralytics": "8.4.63", "device": "Tesla V100S-PCIE-32GB", "no_formal_checkpoint_reuse": true, "whole_goal_complete": false}

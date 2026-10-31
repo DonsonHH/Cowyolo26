@@ -1,0 +1,61 @@
+{
+  "status": "SAME_O8_S256_AND_S320_ACTUAL_BOARD_VECTORS_AND_ORDERED_FLOAT_REFERENCE_REVIEWED",
+  "created_UTC": "2026-10-29T18:13:35.043204+00:00",
+  "actual_new_board_qualification_vectors": 16,
+  "actual_new_board_warmups": 4,
+  "same_O8_firmware_as192": true,
+  "s256_mean_tensor_to_raw_ms": 235.54665725,
+  "s320_mean_tensor_to_raw_ms": 370.925488,
+  "s256_all8_over200ms": true,
+  "s320_all8_over200ms": true,
+  "all16_actual_raw_bytes_exact_to_native_and_qualified_reference": true,
+  "ordered_reference_vectors_exact": 24,
+  "original_numpy_reference_vectors_exact": 23,
+  "original320_full_raw_failure_preserved": true,
+  "reference_nonconv_float_order_explicitly_revised": true,
+  "native_engine_weights_calibration_or_firmware_changed": false,
+  "single_INT8_boundary_intervention_causally_restores_full_raw": true,
+  "s320_first_failed_board_forward_count": 0,
+  "both_actual_board_processes_terminal_and_absent": true,
+  "new_training_updates": 0,
+  "full_video_count_or_joint5FPS_at_256_or320_proven": false,
+  "whole_goal_complete": false,
+  "evidence_hashes": {
+    "protocol/sizes_v1.json": "c53331550a5dce2abec5d7ac0b7fb16ecfd3416156f45bad10510fa095ffdf67",
+    "protocol/ordered_float_reference_v1.json": "35772e04adc6d4a4ff688df2610819bb7f1eee59800402301928cb5aa5df60ed",
+    "protocol/ordered_float_reference_v2.json": "51a3baab88c62fd047a6b689f78c8d7e3028ec976132deeeeba67d9f0ed45777",
+    "protocol/board_s256_v1.json": "44115dd48410635fe9eebc48a672ec0388ac3f0cef452c665b2baa1819422ca2",
+    "protocol/board_s320_v1.json": "a626a850f310a18f6d227ca85179eddb40432c7fdf3da812461a793bc564166d",
+    "protocol/board_s320_v2.json": "3b8adbc4e945df02d5f54208dba2c3ba7c1248ab78d4cc07a97b70c50f114179",
+    "results/compile_transfer_verification.json": "55b8de62fe027c6afb12d3ac574a4581cf46ff779fb9112e53a8c3ffbfd7965d",
+    "results/failed320_parity_diagnostic.json": "6a7405923eb45202cc511c0ef0214a3a723c84d9d60016be65bfb90bcd016854",
+    "results/ordered_reference_verification.json": "d2398e4ba161668edde35936ff5d23baae996198d05a1ff126295e17c1f38a17",
+    "results/s256_board_verification.json": "6b97ccfd82bdac490abd0f738fb4bfd4f5ce33a9d9d0d7287ed11ce7833e41a3",
+    "results/s320_board_verification.json": "db233cb816c73565ee175f2d850f70a75b8e8ee71e1f8f5b777b7b13e68698a6",
+    "numeric_delivery/results/probe320_causal/summary.json": "6250dc0a7e6e314c501cea226c559d2cfa227ed9576c93790a8c3943e885cfe3",
+    "numeric_delivery/results/ordered_reference/summary.json": "508124e69c1b9647239bf11ade0549c9c143896febd977bdd2f2aef72781d483",
+    "s256_board_delivery/results/record.json": "b73adf29ad1eed6e942e99337e34975bccca232d8ea64fa497866ed6bdeaa35e",
+    "s256_board_delivery/results/terminal.json": "934f8e540259c3be24d815a41d35a43555c3a69cb56413b2a1b570487a67ad7e",
+    "s320_board_delivery/results_v2/record.json": "a3826398bb94d2c5937bc3566dbbcf4aabcf7f89bc75f6df011b528cc61be25f",
+    "s320_board_delivery/results_v2/terminal.json": "2d19f2efa63e7e8b997463d2fdf3437245d626ef6562383094edbe60c77f25db",
+    "evidence/status01.txt": "0a0e87649629092c13c5c0547ef8abbc531fa382f2e62e33b22c3f6e6bbe09f4",
+    "evidence/s320_board_status01.json": "8157a9e14eaab55f3c7a59d640b98505e5d5c5dc5e6ef61eb97366b01cbc3d81",
+    "tools/ordered_float_reference.py": "e171f4d744276f59a8d2ca993c8de9d08eed4ba3ce4698b4bc99e753ff15f708",
+    "tools/ordered_hybrid_executor.py": "47fb4dbf4ce07ce4b9a872803aa96a1f6c8db7f8b04c0543b2c0b4cf93338cb0",
+    "tools/board_s320_vectors_v2.py": "a7e7c7937ad1936526a24176042046dcbd22769253d45f26226b7e8dc2ac3d17"
+  },
+  "documents": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_o8_sizes_20261030\\\u8ba1\u5212\u4e0e\u9a8c\u6536.md",
+      "sha256": "60d31440999c7f6eee165bd64dd8080547d25110615fdd03e63dc17d3c64ec36"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_o8_sizes_20261030\\\u540cO8\u4e09\u5c3a\u5bf8\u5b9e\u673a\u4e0e320\u6570\u503c\u53e3\u5f84.md",
+      "sha256": "4fe3a0c89a7728aa9f682bd010bce662adc682e6deadcda6a34aa0e56d69207a"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_o8_sizes_20261030\\Review\u4e0e\u5f53\u524d\u72b6\u6001.md",
+      "sha256": "d14f48866481332cded6808688b2685179e6159c6145069cbb5ce52129c28eee"
+    }
+  ]
+}

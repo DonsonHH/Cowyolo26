@@ -1,0 +1,71 @@
+from pathlib import Path
+import json
+
+ROOT = Path(__file__).resolve().parents[1]
+summary = json.loads((ROOT / "delivery/results/evaluation/summary.json").read_text(encoding="utf-8"))
+rows = [row for row in summary["metrics"] if row["GT_policy"] == "clipped" and row["lighting"] == "all"]
+names = {"official": "官方YOLO26n", "old_rot192": "旧192直角seed26", "new_mosaic050": "新192 mosaic0.5 seed26"}
+table = ["| 模型 | 测试输入 | AP（%） | AP50（%） | TP／FP／FN，conf0.20 | Recall（%） |", "| --- | ---: | ---: | ---: | --- | ---: |"]
+for row in rows:
+    fixed = row["fixed_all_images"]
+    table.append(f"| {names[row['model']]} | {row['input_size']} | {row['AP']*100:.2f} | {row['AP50']*100:.2f} | {fixed['TP']}／{fixed['FP']}／{fixed['FN']} | {fixed['recall']*100:.2f} |")
+lighting = ["| 192输入模型 | 白天26图／270框 AP（%） | 室内12图／97框 AP（%） | 红外12图／83框 AP（%） |", "| --- | ---: | ---: | ---: |"]
+for name in names:
+    values = [next(row for row in summary["metrics"] if row["model"] == name and row["input_size"] == 192 and row["GT_policy"] == "clipped" and row["lighting"] == light)["AP"] * 100 for light in ["daylight", "indoorlight", "infrared"]]
+    lighting.append("| " + names[name] + " | " + " | ".join(f"{value:.2f}" for value in values) + " |")
+differences = []
+for row in summary["metrics"]:
+    if row["GT_policy"] == "clipped":
+        other = next(item for item in summary["metrics"] if item["condition"] == row["condition"] and item["lighting"] == row["lighting"] and item["GT_policy"] == "unclipped")
+        differences.extend(abs(left - right) for left, right in zip(row["all12_COCO_stats"], other["all12_COCO_stats"]))
+assert max(differences) == 0
+text = """# COLO外来源检测结果：泛化和定位仍是主要限制
+
+2026年10月30日。固定三个既有模型、三个输入尺寸，在COLO官方Top-View测试50图上完成450次Torch CPU图像前向。**新mosaic0.5没有在192输入下改善总体AP或召回；它减少误检的同时丢失了一些匹配。扩大测试输入改善多个指标，但不能由此承诺PYNQ-Z2达到5FPS。** 默认权重和跟踪规则均未替换。
+
+## 协议与完整结果
+
+[计划](计划与验收.md)和[机器协议](protocol/run_v1.json)在首次请求测试像素之前冻结。来源是[COLO作者v1.0.0归档](https://github.com/Niche-Lab/COLO/releases/tag/v1.0.0)；[来源准入报告](../external_sources_20261030/公开俯视数据来源与准入结论.md)记录许可、广角高位俯拍、作者遮挡框、分区重复与标签问题。此来源没有完整通行事件或永久身份，不能据此声称新的双向计数／身份精度。
+
+保留全部50张640导出图。原451框不改；主指标隔离预先发现的零宽annotation127，其余450框裁到图像边界、重算面积。另做450正面积原坐标敏感性评分，9条件×4光照汇总的全部12项COCO统计均与主口径相同，最大差0。测试前已定的15个轻微越界框没有被删除。[原始标签和处理记录](input/GT_quarantine_and_transform.json)
+
+COCO AP采用IoU0.50:0.05:0.95、101召回点、maxDets100，保留cow分数≥0.001的候选。表中TP／FP／FN另用固定分数≥0.20、IoU≥0.50一对一匹配，故不能从单一阈值召回直接推算AP。
+
+""" + "\n".join(table) + """
+
+这里的256／320是**同一套192训练权重改变测试输入**；不是之前独立训练的256／320权重，也不是量化O8输出。官方80类模型只保留cow19，两个单类模型为cow0；三者映射到相同标签。原图RGB线性缩放，不做通道ROI、旋转、增强或额外NMS；保存每图实际输入hash和全部300×6 raw候选。它是固定FP32外来源检测对照，不是板上性能测试。[完整72组结果](delivery/results/evaluation/summary.json)
+
+## 结果对后续科研的含义
+
+192时，旧模型92个匹配、21个误检，新模型86个匹配、5个误检，召回20.44%→19.11%；AP约11.99%→11.97%。这支持“误检／漏检取舍”，不支持“新模型全面更好”。320时新模型AP50为46.66%，高于官方39.64%，但AP为17.03%、低于官方22.17%；不同定位严格度的排序不同，不能只报有利的AP50。
+
+""" + "\n".join(lighting) + """
+
+光照子集不是独立牧场重复，也没有做显著性检验。原生图、作者框与固定预测图中可见大量顶部边界牛、栏杆遮挡、红外低对比和明显广角变形；躯干框训练与作者框范围也不同。这些都是需要受控分解的因素，不能把低分全归因于一种原因。50张来源测试可否直接代表目标牧场须由实际相机视角和事件验证决定。
+
+现阶段优先做检测对象定义与独立通行参考，而非为追这50图分数调门限或换seed。若下一步加入COLO训练，必须另立训练协议、只用其训练分区，并明确这次测试结果已经被查看；最终论文泛化结论仍要有未用于方法选择的新会话／牧场。既有Cows2021最终留出日期仍未开启。本轮没有训练更新，也没有新增现场传感器或身份标签。
+
+## 原始数据复核与可查看材料
+
+Slurm作业**130734，COMPLETED，0:0**；45次十图网络调用、450图前向、无预热。9条件raw先全部存盘并冻结，再评分。任务18秒的作业时长来自服务器，不作PYNQ FPS；Slurm报告的MaxRSS数值不足以代表Torch实际峰值内存，本轮不作内存结论。依赖放在任务vendor内，没有修改既有训练环境。[作业日志](delivery/logs/evaluation-130734.out) · [退出状态](delivery/logs/sacct-130734.txt)
+
+结果归档3,485,997字节、128成员／127清单文件，本机SHA与服务器一致。Windows以完整raw重新解码并独立实现IoU匹配，核对两种GT口径的900个逐图记录；同版本官方COCO evaluator在本机重新运行72组，precision／recall／scores数组与服务器的**最大差为0**，没有新模型前向。[独立复算](results/independent_verification.json)
+
+六张定性图索引0／10／20／30／40／49在像素开启前冻结。11张联系表共66面板已实际查看，并逐面板与原图／标注／预测反查像素。它们包含漏检和背景误检，没有按结果挑图。[原图](results/fixed_panels/raw.png) · [作者GT](results/fixed_panels/publisher_GT.png) · [旧192](results/fixed_panels/old_rot192_s192.png) · [新192](results/fixed_panels/new_mosaic050_s192.png) · [视觉Review](results/visual_review.json)
+
+失败记录保留：首次下载工具句柄失效，直接检查相应进程已不存在，42个完整JPEG仍在；仅补8个缺失图，没有重下42图。补齐后索引写出因缺少results目录失败，随后仅从50个本地原JPEG按官方CRC／尺寸恢复索引；没有重下或重跑推理，原HTTP头未持久化的范围明确标记。[下载终态](results/test50_acquisition.json)
+
+首次本地评分复核因Linux／Windows wheel的`cocoeval.py`文件hash不同而停止。对照确认只是534处CRLF换行，逐行代码完全相同；v2保留两个文件hash，仅对代码比对规范化换行，所有数值门限仍为绝对1e-12。本次复算差0，不是放宽精度门限。[换行诊断](evidence/COCOeval_cross_platform_source_hash_failure.json)
+
+## 自审与下一步
+
+BLOCKER：当前没有新增通行或永久身份真值。完整研究尚未达到稳定同板性能、跨来源可靠计数与真实掉标身份恢复的论文结论。
+
+IMPORTANT：三模型九条件均报告，没有调阈值、换seed或把较大输入写成较快硬件。AP／固定阈值召回、图像框数／通行事件、FP32／实际O8均分开。依据[COCO官方实现](https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py)评分，实际执行版本为hash绑定的2.0.11 wheel。
+
+POLISH：助手读完报告并回查协议、raw、全体评分、固定样例、失败和退出记录；此为助手自审及独立程序复算，不是独立人工复标。下一阶段先固定检测对象和独立通行／身份评价入口，再决定训练或预算调度对照，保留默认和既有12头人工总数。
+"""
+target = ROOT / "COLO三模型三尺寸外来源检测与下一步.md"
+assert not target.exists()
+target.write_text(text, encoding="utf-8")
+print(str(target))

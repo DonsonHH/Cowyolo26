@@ -1,0 +1,1211 @@
+{
+  "status": "ACTUAL640_DETECTOR_TORSO_SOURCE_PAIRS_ALL8380_IMAGES_AND4_VALIDATION_MODELS_COMPLETE",
+  "created_UTC": "2026-10-29T08:11:32.863776+00:00",
+  "Slurm_JOB_ID": "130498",
+  "node": "gpu02",
+  "protocol_sha256": "3e26b4c19975e43dae1af1d17b54e93a02dd23c96b8d52ebbd8368958504287e",
+  "pair_manifest_sha256": "f80176c35402c1dba4416249fb111aff35178352f2be7abe2807990aa4ea301c",
+  "torch": "2.8.0+cu128",
+  "ultralytics": "8.4.63",
+  "opencv": "4.12.0",
+  "detector_actual_image_forwards": 13093,
+  "active_predictor_inference_image_calls": 13093,
+  "predictor_input_tensor_shape_counts": {
+    "(1, 3, 640, 384)": 13093
+  },
+  "framework_warmup_forward_not_counted_as_source_image": true,
+  "unique_source_images_hashed_and_decoded": 8380,
+  "train_pair_model": "seed26",
+  "all_four_validation_models_reported": true,
+  "condition_summaries": [
+    {
+      "condition": "official",
+      "split": "val",
+      "images": 1571,
+      "references": 1864,
+      "predictions": 2101,
+      "matched": 1141,
+      "unmatched_references": 723,
+      "unmatched_predictions": 960,
+      "reference_AABB_recall": 0.6121244635193133,
+      "prediction_precision_vs_reference_AABB": 0.5430747263207997,
+      "strata": {
+        "all": {
+          "reference_count": 1864,
+          "matched": 1141,
+          "unmatched": 723,
+          "engineering_crop_gate_passes": 116,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 1864,
+            "minimum": 0.0,
+            "p10": 0.0511425485382347,
+            "median": 0.30438195674804536,
+            "p90": 0.5004230832493862,
+            "maximum": 0.5879311365881246,
+            "mean": 0.2890648351215156
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 1141,
+              "minimum": 0.610044261709548,
+              "p10": 0.9403673736369922,
+              "median": 0.9804449980311291,
+              "p90": 1.0,
+              "maximum": 1.0,
+              "mean": 0.9737094514236465
+            },
+            "reference_exterior_fraction": {
+              "count": 1141,
+              "minimum": 0.05121800855070113,
+              "p10": 0.24823182314189873,
+              "median": 0.3931533717278529,
+              "p90": 0.5627708384473318,
+              "maximum": 0.7219386523393572,
+              "mean": 0.39937892910907735
+            },
+            "polygon_IoU": {
+              "count": 1141,
+              "minimum": 0.2749414738945254,
+              "p10": 0.4305144361097616,
+              "median": 0.5983634627222971,
+              "p90": 0.7393586254230715,
+              "maximum": 0.9422148181802884,
+              "mean": 0.5902596618158448
+            },
+            "center_error_native_px": {
+              "count": 1141,
+              "minimum": 0.6063591089485818,
+              "p10": 19.78004044485248,
+              "median": 67.06713054842886,
+              "p90": 106.09547586961472,
+              "maximum": 244.00547251764326,
+              "mean": 65.29517910352325
+            }
+          }
+        },
+        "complete": {
+          "reference_count": 919,
+          "matched": 544,
+          "unmatched": 375,
+          "engineering_crop_gate_passes": 41,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 919,
+            "minimum": 0.0,
+            "p10": 0.025680363454539747,
+            "median": 0.2865180692501713,
+            "p90": 0.5009463760992808,
+            "maximum": 0.5797101293754483,
+            "mean": 0.27575057863509256
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 544,
+              "minimum": 0.7586220498375182,
+              "p10": 0.9408641352854643,
+              "median": 0.9805399301045195,
+              "p90": 1.0,
+              "maximum": 1.0,
+              "mean": 0.974418908933577
+            },
+            "reference_exterior_fraction": {
+              "count": 544,
+              "minimum": 0.09463155891727315,
+              "p10": 0.2698975228399666,
+              "median": 0.40113169484401084,
+              "p90": 0.5673116591635662,
+              "maximum": 0.7180435733696283,
+              "mean": 0.41067606785498906
+            },
+            "polygon_IoU": {
+              "count": 544,
+              "minimum": 0.2806382332632202,
+              "p10": 0.4269132986678443,
+              "median": 0.5872134106020828,
+              "p90": 0.71551247446967,
+              "maximum": 0.8963182744045306,
+              "mean": 0.5798140024362642
+            },
+            "center_error_native_px": {
+              "count": 544,
+              "minimum": 2.0,
+              "p10": 21.09502310972902,
+              "median": 72.9665971176204,
+              "p90": 107.00362142199099,
+              "maximum": 152.50737687075994,
+              "mean": 69.03977898594961
+            }
+          }
+        },
+        "clipped": {
+          "reference_count": 945,
+          "matched": 597,
+          "unmatched": 348,
+          "engineering_crop_gate_passes": 75,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 945,
+            "minimum": 0.0,
+            "p10": 0.08286242639015846,
+            "median": 0.32315826679503357,
+            "p90": 0.5001212693604007,
+            "maximum": 0.5879311365881246,
+            "mean": 0.3020127734400583
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 597,
+              "minimum": 0.610044261709548,
+              "p10": 0.9394202927283565,
+              "median": 0.9802447949133734,
+              "p90": 1.0,
+              "maximum": 1.0,
+              "mean": 0.9730629775787518
+            },
+            "reference_exterior_fraction": {
+              "count": 597,
+              "minimum": 0.05121800855070113,
+              "p10": 0.2325101314179258,
+              "median": 0.3820944740291009,
+              "p90": 0.556858204409623,
+              "maximum": 0.7219386523393572,
+              "mean": 0.3890847189285481
+            },
+            "polygon_IoU": {
+              "count": 597,
+              "minimum": 0.2749414738945254,
+              "p10": 0.4393420079482537,
+              "median": 0.607897761087853,
+              "p90": 0.7509867856060322,
+              "maximum": 0.9422148181802884,
+              "mean": 0.5997779846005882
+            },
+            "center_error_native_px": {
+              "count": 597,
+              "minimum": 0.6063591089485818,
+              "p10": 18.043380469496412,
+              "median": 62.04507647603676,
+              "p90": 105.35288537587853,
+              "maximum": 244.00547251764326,
+              "mean": 61.88301438653846
+            }
+          }
+        }
+      },
+      "by_date": {
+        "2020-02-28": {
+          "images": 275,
+          "references": 321,
+          "matched": 199,
+          "unmatched_references": 122,
+          "predictions": 389
+        },
+        "2020-02-29": {
+          "images": 216,
+          "references": 251,
+          "matched": 150,
+          "unmatched_references": 101,
+          "predictions": 284
+        },
+        "2020-03-01": {
+          "images": 279,
+          "references": 354,
+          "matched": 216,
+          "unmatched_references": 138,
+          "predictions": 461
+        },
+        "2020-03-02": {
+          "images": 205,
+          "references": 235,
+          "matched": 158,
+          "unmatched_references": 77,
+          "predictions": 255
+        },
+        "2020-03-03": {
+          "images": 302,
+          "references": 386,
+          "matched": 256,
+          "unmatched_references": 130,
+          "predictions": 451
+        },
+        "2020-03-04": {
+          "images": 294,
+          "references": 317,
+          "matched": 162,
+          "unmatched_references": 155,
+          "predictions": 261
+        }
+      }
+    },
+    {
+      "condition": "seed26",
+      "split": "train",
+      "images": 6809,
+      "references": 8888,
+      "predictions": 5926,
+      "matched": 2920,
+      "unmatched_references": 5968,
+      "unmatched_predictions": 3006,
+      "reference_AABB_recall": 0.32853285328532855,
+      "prediction_precision_vs_reference_AABB": 0.49274384070199123,
+      "strata": {
+        "all": {
+          "reference_count": 8888,
+          "matched": 2920,
+          "unmatched": 5968,
+          "engineering_crop_gate_passes": 39,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 8888,
+            "minimum": 0.0,
+            "p10": 0.0,
+            "median": 0.33430271844189996,
+            "p90": 0.5244527545340063,
+            "maximum": 0.6206530337021632,
+            "mean": 0.30827549150995676
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 2920,
+              "minimum": 0.5436965616695849,
+              "p10": 0.6640567831719366,
+              "median": 0.7788952022293214,
+              "p90": 0.9224308225375862,
+              "maximum": 1.0,
+              "mean": 0.7859153067776501
+            },
+            "reference_exterior_fraction": {
+              "count": 2920,
+              "minimum": 0.08572933419862117,
+              "p10": 0.19185147264320399,
+              "median": 0.2983442522845225,
+              "p90": 0.4193123718109608,
+              "maximum": 0.6050905373806414,
+              "mean": 0.30181245145192176
+            },
+            "polygon_IoU": {
+              "count": 2920,
+              "minimum": 0.38122181585442405,
+              "p10": 0.5013932645465916,
+              "median": 0.5755565818469064,
+              "p90": 0.6650371480381911,
+              "maximum": 0.8337574833608636,
+              "mean": 0.5794517171716477
+            },
+            "center_error_native_px": {
+              "count": 2920,
+              "minimum": 0.22154700689905668,
+              "p10": 21.505237847285525,
+              "median": 62.95097512690396,
+              "p90": 102.28067248110307,
+              "maximum": 159.50226357976553,
+              "mean": 62.5327936749499
+            }
+          }
+        },
+        "complete": {
+          "reference_count": 4435,
+          "matched": 1281,
+          "unmatched": 3154,
+          "engineering_crop_gate_passes": 11,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 4435,
+            "minimum": 0.0,
+            "p10": 0.0,
+            "median": 0.30980288990043126,
+            "p90": 0.5345969798891159,
+            "maximum": 0.6062117876034931,
+            "mean": 0.2893633284787553
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 1281,
+              "minimum": 0.5436965616695849,
+              "p10": 0.6477466649272463,
+              "median": 0.7600885065575881,
+              "p90": 0.8861391034818644,
+              "maximum": 1.0,
+              "mean": 0.7636635665977443
+            },
+            "reference_exterior_fraction": {
+              "count": 1281,
+              "minimum": 0.08572933419862117,
+              "p10": 0.18894795303078393,
+              "median": 0.2895903673270146,
+              "p90": 0.4102980189123274,
+              "maximum": 0.6050905373806414,
+              "mean": 0.2945133996058714
+            },
+            "polygon_IoU": {
+              "count": 1281,
+              "minimum": 0.38122181585442405,
+              "p10": 0.4959477446781462,
+              "median": 0.569552380810633,
+              "p90": 0.6598182720200116,
+              "maximum": 0.8332131282238554,
+              "mean": 0.5731486566899334
+            },
+            "center_error_native_px": {
+              "count": 1281,
+              "minimum": 1.5,
+              "p10": 30.083217912982647,
+              "median": 69.11222757226105,
+              "p90": 105.63261806847353,
+              "maximum": 151.0,
+              "mean": 68.54563603760944
+            }
+          }
+        },
+        "clipped": {
+          "reference_count": 4453,
+          "matched": 1639,
+          "unmatched": 2814,
+          "engineering_crop_gate_passes": 28,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 4453,
+            "minimum": 0.0,
+            "p10": 0.1044912414417844,
+            "median": 0.34912050789520266,
+            "p90": 0.5165588699020547,
+            "maximum": 0.6206530337021632,
+            "mean": 0.3271112074415486
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 1639,
+              "minimum": 0.5484375467795568,
+              "p10": 0.678821743847957,
+              "median": 0.7997652901061048,
+              "p90": 0.946953300204224,
+              "maximum": 1.0,
+              "mean": 0.8033066912623721
+            },
+            "reference_exterior_fraction": {
+              "count": 1639,
+              "minimum": 0.08626037496499672,
+              "p10": 0.1946151945956385,
+              "median": 0.3090551718719087,
+              "p90": 0.42426152692430397,
+              "maximum": 0.5428261201887647,
+              "mean": 0.30751720155246504
+            },
+            "polygon_IoU": {
+              "count": 1639,
+              "minimum": 0.4291530043010826,
+              "p10": 0.5070598907283199,
+              "median": 0.5800239266860546,
+              "p90": 0.6678586209595743,
+              "maximum": 0.8337574833608636,
+              "mean": 0.5843780261875572
+            },
+            "center_error_native_px": {
+              "count": 1639,
+              "minimum": 0.22154700689905668,
+              "p10": 17.044955352344214,
+              "median": 57.42349170601915,
+              "p90": 98.77898171102743,
+              "maximum": 159.50226357976553,
+              "mean": 57.8333116331153
+            }
+          }
+        }
+      },
+      "by_date": {
+        "2020-02-05": {
+          "images": 203,
+          "references": 303,
+          "matched": 116,
+          "unmatched_references": 187,
+          "predictions": 187
+        },
+        "2020-02-10": {
+          "images": 238,
+          "references": 279,
+          "matched": 112,
+          "unmatched_references": 167,
+          "predictions": 228
+        },
+        "2020-02-11": {
+          "images": 545,
+          "references": 853,
+          "matched": 255,
+          "unmatched_references": 598,
+          "predictions": 545
+        },
+        "2020-02-12": {
+          "images": 447,
+          "references": 565,
+          "matched": 158,
+          "unmatched_references": 407,
+          "predictions": 343
+        },
+        "2020-02-13": {
+          "images": 442,
+          "references": 539,
+          "matched": 179,
+          "unmatched_references": 360,
+          "predictions": 374
+        },
+        "2020-02-14": {
+          "images": 415,
+          "references": 546,
+          "matched": 223,
+          "unmatched_references": 323,
+          "predictions": 380
+        },
+        "2020-02-15": {
+          "images": 465,
+          "references": 595,
+          "matched": 218,
+          "unmatched_references": 377,
+          "predictions": 481
+        },
+        "2020-02-16": {
+          "images": 444,
+          "references": 625,
+          "matched": 222,
+          "unmatched_references": 403,
+          "predictions": 518
+        },
+        "2020-02-18": {
+          "images": 344,
+          "references": 394,
+          "matched": 109,
+          "unmatched_references": 285,
+          "predictions": 218
+        },
+        "2020-02-19": {
+          "images": 413,
+          "references": 619,
+          "matched": 197,
+          "unmatched_references": 422,
+          "predictions": 423
+        },
+        "2020-02-20": {
+          "images": 332,
+          "references": 468,
+          "matched": 152,
+          "unmatched_references": 316,
+          "predictions": 289
+        },
+        "2020-02-21": {
+          "images": 374,
+          "references": 534,
+          "matched": 208,
+          "unmatched_references": 326,
+          "predictions": 347
+        },
+        "2020-02-22": {
+          "images": 405,
+          "references": 477,
+          "matched": 140,
+          "unmatched_references": 337,
+          "predictions": 286
+        },
+        "2020-02-23": {
+          "images": 337,
+          "references": 382,
+          "matched": 102,
+          "unmatched_references": 280,
+          "predictions": 230
+        },
+        "2020-02-24": {
+          "images": 318,
+          "references": 349,
+          "matched": 99,
+          "unmatched_references": 250,
+          "predictions": 183
+        },
+        "2020-02-25": {
+          "images": 424,
+          "references": 533,
+          "matched": 144,
+          "unmatched_references": 389,
+          "predictions": 314
+        },
+        "2020-02-26": {
+          "images": 406,
+          "references": 532,
+          "matched": 185,
+          "unmatched_references": 347,
+          "predictions": 344
+        },
+        "2020-02-27": {
+          "images": 257,
+          "references": 295,
+          "matched": 101,
+          "unmatched_references": 194,
+          "predictions": 236
+        }
+      }
+    },
+    {
+      "condition": "seed26",
+      "split": "val",
+      "images": 1571,
+      "references": 1864,
+      "predictions": 1520,
+      "matched": 592,
+      "unmatched_references": 1272,
+      "unmatched_predictions": 928,
+      "reference_AABB_recall": 0.31759656652360513,
+      "prediction_precision_vs_reference_AABB": 0.3894736842105263,
+      "strata": {
+        "all": {
+          "reference_count": 1864,
+          "matched": 592,
+          "unmatched": 1272,
+          "engineering_crop_gate_passes": 6,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 1864,
+            "minimum": 0.0,
+            "p10": 0.0511425485382347,
+            "median": 0.30438195674804536,
+            "p90": 0.5004230832493862,
+            "maximum": 0.5879311365881246,
+            "mean": 0.2890648351215156
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 592,
+              "minimum": 0.5508228052768944,
+              "p10": 0.6520462652935501,
+              "median": 0.7535908709576902,
+              "p90": 0.8870031543905533,
+              "maximum": 1.0,
+              "mean": 0.7605101385317312
+            },
+            "reference_exterior_fraction": {
+              "count": 592,
+              "minimum": 0.031554938356670226,
+              "p10": 0.1710163979636552,
+              "median": 0.27867939566866623,
+              "p90": 0.4086206880664332,
+              "maximum": 0.5178782565602869,
+              "mean": 0.2850335114755025
+            },
+            "polygon_IoU": {
+              "count": 592,
+              "minimum": 0.4173970632062588,
+              "p10": 0.4945639412093313,
+              "median": 0.5696615381574786,
+              "p90": 0.6736702849043028,
+              "maximum": 0.8340050693174438,
+              "mean": 0.5779097973320488
+            },
+            "center_error_native_px": {
+              "count": 592,
+              "minimum": 2.7688493020814677,
+              "p10": 30.31599492912641,
+              "median": 71.50298959382116,
+              "p90": 111.27730891253164,
+              "maximum": 158.65693091298036,
+              "mean": 71.51530810110631
+            }
+          }
+        },
+        "complete": {
+          "reference_count": 919,
+          "matched": 237,
+          "unmatched": 682,
+          "engineering_crop_gate_passes": 1,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 919,
+            "minimum": 0.0,
+            "p10": 0.025680363454539747,
+            "median": 0.2865180692501713,
+            "p90": 0.5009463760992808,
+            "maximum": 0.5797101293754483,
+            "mean": 0.27575057863509256
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 237,
+              "minimum": 0.5512806518814527,
+              "p10": 0.6399805930502532,
+              "median": 0.7322913473206347,
+              "p90": 0.8384962967308482,
+              "maximum": 0.999929021924265,
+              "mean": 0.7375124192483715
+            },
+            "reference_exterior_fraction": {
+              "count": 237,
+              "minimum": 0.10892618725897174,
+              "p10": 0.18779544962855457,
+              "median": 0.28217617006879114,
+              "p90": 0.40184377507923885,
+              "maximum": 0.46152597985325583,
+              "mean": 0.290559362042292
+            },
+            "polygon_IoU": {
+              "count": 237,
+              "minimum": 0.4179982325140122,
+              "p10": 0.4915240269196765,
+              "median": 0.547991320049777,
+              "p90": 0.6463283583209906,
+              "maximum": 0.7646822363072735,
+              "mean": 0.5617159794022851
+            },
+            "center_error_native_px": {
+              "count": 237,
+              "minimum": 6.946221994724902,
+              "p10": 43.893732775800345,
+              "median": 77.13786359499464,
+              "p90": 111.33260677693116,
+              "maximum": 141.10722873049417,
+              "mean": 77.46749728909155
+            }
+          }
+        },
+        "clipped": {
+          "reference_count": 945,
+          "matched": 355,
+          "unmatched": 590,
+          "engineering_crop_gate_passes": 5,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 945,
+            "minimum": 0.0,
+            "p10": 0.08286242639015846,
+            "median": 0.32315826679503357,
+            "p90": 0.5001212693604007,
+            "maximum": 0.5879311365881246,
+            "mean": 0.3020127734400583
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 355,
+              "minimum": 0.5508228052768944,
+              "p10": 0.6643114308890024,
+              "median": 0.7670169587989542,
+              "p90": 0.9127880866696936,
+              "maximum": 1.0,
+              "mean": 0.7758635454899179
+            },
+            "reference_exterior_fraction": {
+              "count": 355,
+              "minimum": 0.031554938356670226,
+              "p10": 0.16795238086968006,
+              "median": 0.2759743054828193,
+              "p90": 0.4103607045743955,
+              "maximum": 0.5178782565602869,
+              "mean": 0.28134442250556135
+            },
+            "polygon_IoU": {
+              "count": 355,
+              "minimum": 0.4173970632062588,
+              "p10": 0.4970234181755896,
+              "median": 0.5841366023415088,
+              "p90": 0.6834288544104641,
+              "maximum": 0.8340050693174438,
+              "mean": 0.588720881414736
+            },
+            "center_error_native_px": {
+              "count": 355,
+              "minimum": 2.7688493020814677,
+              "p10": 26.45546546222634,
+              "median": 66.68440398390652,
+              "p90": 110.05613378881567,
+              "maximum": 158.65693091298036,
+              "mean": 67.54159306574716
+            }
+          }
+        }
+      },
+      "by_date": {
+        "2020-02-28": {
+          "images": 275,
+          "references": 321,
+          "matched": 93,
+          "unmatched_references": 228,
+          "predictions": 159
+        },
+        "2020-02-29": {
+          "images": 216,
+          "references": 251,
+          "matched": 96,
+          "unmatched_references": 155,
+          "predictions": 192
+        },
+        "2020-03-01": {
+          "images": 279,
+          "references": 354,
+          "matched": 115,
+          "unmatched_references": 239,
+          "predictions": 382
+        },
+        "2020-03-02": {
+          "images": 205,
+          "references": 235,
+          "matched": 75,
+          "unmatched_references": 160,
+          "predictions": 300
+        },
+        "2020-03-03": {
+          "images": 302,
+          "references": 386,
+          "matched": 110,
+          "unmatched_references": 276,
+          "predictions": 302
+        },
+        "2020-03-04": {
+          "images": 294,
+          "references": 317,
+          "matched": 103,
+          "unmatched_references": 214,
+          "predictions": 185
+        }
+      }
+    },
+    {
+      "condition": "seed27",
+      "split": "val",
+      "images": 1571,
+      "references": 1864,
+      "predictions": 840,
+      "matched": 505,
+      "unmatched_references": 1359,
+      "unmatched_predictions": 335,
+      "reference_AABB_recall": 0.2709227467811159,
+      "prediction_precision_vs_reference_AABB": 0.6011904761904762,
+      "strata": {
+        "all": {
+          "reference_count": 1864,
+          "matched": 505,
+          "unmatched": 1359,
+          "engineering_crop_gate_passes": 14,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 1864,
+            "minimum": 0.0,
+            "p10": 0.0511425485382347,
+            "median": 0.30438195674804536,
+            "p90": 0.5004230832493862,
+            "maximum": 0.5879311365881246,
+            "mean": 0.2890648351215156
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 505,
+              "minimum": 0.5770642201834862,
+              "p10": 0.7275177186228535,
+              "median": 0.824410261663965,
+              "p90": 0.9376786314755055,
+              "maximum": 1.0,
+              "mean": 0.8247799143390169
+            },
+            "reference_exterior_fraction": {
+              "count": 505,
+              "minimum": 0.04371111425339369,
+              "p10": 0.1930016605834786,
+              "median": 0.2979590895588542,
+              "p90": 0.39474114225731544,
+              "maximum": 0.5049940756116087,
+              "mean": 0.29425560978396065
+            },
+            "polygon_IoU": {
+              "count": 505,
+              "minimum": 0.4439655258557192,
+              "p10": 0.5278306693335507,
+              "median": 0.6073569209762971,
+              "p90": 0.6938736453582166,
+              "maximum": 0.8157293634336409,
+              "mean": 0.6096986365212019
+            },
+            "center_error_native_px": {
+              "count": 505,
+              "minimum": 2.2168887302449236,
+              "p10": 18.264357477675475,
+              "median": 54.398160204381405,
+              "p90": 94.15618080962354,
+              "maximum": 145.64127127694115,
+              "mean": 55.60257809829848
+            }
+          }
+        },
+        "complete": {
+          "reference_count": 919,
+          "matched": 226,
+          "unmatched": 693,
+          "engineering_crop_gate_passes": 4,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 919,
+            "minimum": 0.0,
+            "p10": 0.025680363454539747,
+            "median": 0.2865180692501713,
+            "p90": 0.5009463760992808,
+            "maximum": 0.5797101293754483,
+            "mean": 0.27575057863509256
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 226,
+              "minimum": 0.5770642201834862,
+              "p10": 0.7184293560963798,
+              "median": 0.8117610809943908,
+              "p90": 0.9042280642504164,
+              "maximum": 0.9852993395669997,
+              "mean": 0.8077294601710502
+            },
+            "reference_exterior_fraction": {
+              "count": 226,
+              "minimum": 0.04371111425339369,
+              "p10": 0.20915900786466946,
+              "median": 0.2991553180295105,
+              "p90": 0.39616546432375965,
+              "maximum": 0.4643282725482697,
+              "mean": 0.29899262620499656
+            },
+            "polygon_IoU": {
+              "count": 226,
+              "minimum": 0.4439655258557192,
+              "p10": 0.5167577835052839,
+              "median": 0.5955051047988446,
+              "p90": 0.6723328977483651,
+              "maximum": 0.8056197193348942,
+              "mean": 0.5973635395929944
+            },
+            "center_error_native_px": {
+              "count": 226,
+              "minimum": 5.408326913195984,
+              "p10": 28.120992695251118,
+              "median": 60.229764445233386,
+              "p90": 93.03227090475144,
+              "maximum": 129.63120766235267,
+              "mean": 60.57570458586065
+            }
+          }
+        },
+        "clipped": {
+          "reference_count": 945,
+          "matched": 279,
+          "unmatched": 666,
+          "engineering_crop_gate_passes": 10,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 945,
+            "minimum": 0.0,
+            "p10": 0.08286242639015846,
+            "median": 0.32315826679503357,
+            "p90": 0.5001212693604007,
+            "maximum": 0.5879311365881246,
+            "mean": 0.3020127734400583
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 279,
+              "minimum": 0.6184862153967096,
+              "p10": 0.7317214690498538,
+              "median": 0.8321748747615352,
+              "p90": 0.9458788785796284,
+              "maximum": 1.0,
+              "mean": 0.8385913933424595
+            },
+            "reference_exterior_fraction": {
+              "count": 279,
+              "minimum": 0.04563519813519812,
+              "p10": 0.18989471432204397,
+              "median": 0.29700649014731983,
+              "p90": 0.39340271145517425,
+              "maximum": 0.5049940756116087,
+              "mean": 0.29041845669738675
+            },
+            "polygon_IoU": {
+              "count": 279,
+              "minimum": 0.44417430331210533,
+              "p10": 0.5383578603793198,
+              "median": 0.6173714126358504,
+              "p90": 0.7071215689192992,
+              "maximum": 0.8157293634336409,
+              "mean": 0.6196905071512195
+            },
+            "center_error_native_px": {
+              "count": 279,
+              "minimum": 2.2168887302449236,
+              "p10": 15.27496033023315,
+              "median": 48.22277309149818,
+              "p90": 94.73616405596344,
+              "maximum": 145.64127127694115,
+              "mean": 51.574167395111914
+            }
+          }
+        }
+      },
+      "by_date": {
+        "2020-02-28": {
+          "images": 275,
+          "references": 321,
+          "matched": 102,
+          "unmatched_references": 219,
+          "predictions": 144
+        },
+        "2020-02-29": {
+          "images": 216,
+          "references": 251,
+          "matched": 82,
+          "unmatched_references": 169,
+          "predictions": 111
+        },
+        "2020-03-01": {
+          "images": 279,
+          "references": 354,
+          "matched": 100,
+          "unmatched_references": 254,
+          "predictions": 181
+        },
+        "2020-03-02": {
+          "images": 205,
+          "references": 235,
+          "matched": 49,
+          "unmatched_references": 186,
+          "predictions": 115
+        },
+        "2020-03-03": {
+          "images": 302,
+          "references": 386,
+          "matched": 76,
+          "unmatched_references": 310,
+          "predictions": 146
+        },
+        "2020-03-04": {
+          "images": 294,
+          "references": 317,
+          "matched": 96,
+          "unmatched_references": 221,
+          "predictions": 143
+        }
+      }
+    },
+    {
+      "condition": "seed28",
+      "split": "val",
+      "images": 1571,
+      "references": 1864,
+      "predictions": 1556,
+      "matched": 226,
+      "unmatched_references": 1638,
+      "unmatched_predictions": 1330,
+      "reference_AABB_recall": 0.12124463519313304,
+      "prediction_precision_vs_reference_AABB": 0.14524421593830333,
+      "strata": {
+        "all": {
+          "reference_count": 1864,
+          "matched": 226,
+          "unmatched": 1638,
+          "engineering_crop_gate_passes": 5,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 1864,
+            "minimum": 0.0,
+            "p10": 0.0511425485382347,
+            "median": 0.30438195674804536,
+            "p90": 0.5004230832493862,
+            "maximum": 0.5879311365881246,
+            "mean": 0.2890648351215156
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 226,
+              "minimum": 0.5557721979625972,
+              "p10": 0.6314131133203296,
+              "median": 0.7919705000949946,
+              "p90": 0.9548337292428175,
+              "maximum": 1.0,
+              "mean": 0.7923195438973408
+            },
+            "reference_exterior_fraction": {
+              "count": 226,
+              "minimum": 0.12692504450549413,
+              "p10": 0.2031090798442537,
+              "median": 0.2986993737611876,
+              "p90": 0.40504682169542205,
+              "maximum": 0.5031514315242902,
+              "mean": 0.2991518449531061
+            },
+            "polygon_IoU": {
+              "count": 226,
+              "minimum": 0.41449968772147117,
+              "p10": 0.49739833641690856,
+              "median": 0.5803976497883239,
+              "p90": 0.6587194634513873,
+              "maximum": 0.8122830438447083,
+              "mean": 0.583490545108619
+            },
+            "center_error_native_px": {
+              "count": 226,
+              "minimum": 4.668154537292249,
+              "p10": 13.655502279508609,
+              "median": 59.68458762528229,
+              "p90": 113.39151289882878,
+              "maximum": 141.92691781335915,
+              "mean": 63.168591689231754
+            }
+          }
+        },
+        "complete": {
+          "reference_count": 919,
+          "matched": 88,
+          "unmatched": 831,
+          "engineering_crop_gate_passes": 2,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 919,
+            "minimum": 0.0,
+            "p10": 0.025680363454539747,
+            "median": 0.2865180692501713,
+            "p90": 0.5009463760992808,
+            "maximum": 0.5797101293754483,
+            "mean": 0.27575057863509256
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 88,
+              "minimum": 0.5557721979625972,
+              "p10": 0.6270337033976302,
+              "median": 0.757307118823962,
+              "p90": 0.8970929826687322,
+              "maximum": 0.9736525338305948,
+              "mean": 0.7590181646949513
+            },
+            "reference_exterior_fraction": {
+              "count": 88,
+              "minimum": 0.12827266298103646,
+              "p10": 0.20677157869391136,
+              "median": 0.2984565464299105,
+              "p90": 0.40466117905416704,
+              "maximum": 0.4496298954701723,
+              "mean": 0.29984310726996166
+            },
+            "polygon_IoU": {
+              "count": 88,
+              "minimum": 0.41449968772147117,
+              "p10": 0.4883941272612095,
+              "median": 0.5583259523086206,
+              "p90": 0.6519838298725161,
+              "maximum": 0.7895288838507644,
+              "mean": 0.5675104663864246
+            },
+            "center_error_native_px": {
+              "count": 88,
+              "minimum": 7.106335201775948,
+              "p10": 28.195647572641032,
+              "median": 70.89231941977194,
+              "p90": 116.08005950570511,
+              "maximum": 141.92691781335915,
+              "mean": 71.56441266893863
+            }
+          }
+        },
+        "clipped": {
+          "reference_count": 945,
+          "matched": 138,
+          "unmatched": 807,
+          "engineering_crop_gate_passes": 3,
+          "ideal_AABB_exterior_fraction_all_references": {
+            "count": 945,
+            "minimum": 0.0,
+            "p10": 0.08286242639015846,
+            "median": 0.32315826679503357,
+            "p90": 0.5001212693604007,
+            "maximum": 0.5879311365881246,
+            "mean": 0.3020127734400583
+          },
+          "metrics_on_matched": {
+            "reference_coverage": {
+              "count": 138,
+              "minimum": 0.5660710340023666,
+              "p10": 0.6437209102320696,
+              "median": 0.8170240635069909,
+              "p90": 0.9693751591963461,
+              "maximum": 1.0,
+              "mean": 0.8135552059974152
+            },
+            "reference_exterior_fraction": {
+              "count": 138,
+              "minimum": 0.12692504450549413,
+              "p10": 0.19982115031776201,
+              "median": 0.3002724713319066,
+              "p90": 0.4044400145020913,
+              "maximum": 0.5031514315242902,
+              "mean": 0.2987110399974301
+            },
+            "polygon_IoU": {
+              "count": 138,
+              "minimum": 0.45104808332909074,
+              "p10": 0.5163940048306154,
+              "median": 0.5923430790797155,
+              "p90": 0.6595682869491282,
+              "maximum": 0.8122830438447083,
+              "mean": 0.5936807402358154
+            },
+            "center_error_native_px": {
+              "count": 138,
+              "minimum": 4.668154537292249,
+              "p10": 12.520813096326437,
+              "median": 53.900310472054215,
+              "p90": 107.69195352713572,
+              "maximum": 141.50063958450534,
+              "mean": 57.814734832607066
+            }
+          }
+        }
+      },
+      "by_date": {
+        "2020-02-28": {
+          "images": 275,
+          "references": 321,
+          "matched": 35,
+          "unmatched_references": 286,
+          "predictions": 287
+        },
+        "2020-02-29": {
+          "images": 216,
+          "references": 251,
+          "matched": 48,
+          "unmatched_references": 203,
+          "predictions": 168
+        },
+        "2020-03-01": {
+          "images": 279,
+          "references": 354,
+          "matched": 43,
+          "unmatched_references": 311,
+          "predictions": 383
+        },
+        "2020-03-02": {
+          "images": 205,
+          "references": 235,
+          "matched": 22,
+          "unmatched_references": 213,
+          "predictions": 262
+        },
+        "2020-03-03": {
+          "images": 302,
+          "references": 386,
+          "matched": 29,
+          "unmatched_references": 357,
+          "predictions": 252
+        },
+        "2020-03-04": {
+          "images": 294,
+          "references": 317,
+          "matched": 49,
+          "unmatched_references": 268,
+          "predictions": 204
+        }
+      }
+    }
+  ],
+  "crop_target_counts": {
+    "val_official": 1141,
+    "train_seed26": 2920,
+    "val_seed26": 592,
+    "val_seed27": 505,
+    "val_seed28": 226
+  },
+  "case_records": 24,
+  "case_unique_source_files": 18,
+  "new_training_updates": 0,
+  "identity_encoder_forwards": 0,
+  "animal_identity_labels_generated": false,
+  "native_passage_counts_or_identity_accuracy_computed": false,
+  "candidate_final_images_accessed": false,
+  "current_counting_pipeline_changed": false,
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false,
+  "wall_s": 552.097484247,
+  "peak_process_rss_kib": 1827928,
+  "CUDA_peak_allocated_bytes": 86858752
+}

@@ -1,0 +1,25 @@
+Compiling _lapjv_cpp/_lapjv.pyx because it changed.
+[1/1] Cythonizing _lapjv_cpp/_lapjv.pyx
+running build_ext
+building 'lap._lapjv' extension
+creating build
+creating build/temp.linux-armv7l-3.10
+creating build/temp.linux-armv7l-3.10/_lapjv_cpp
+arm-linux-gnueabihf-gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I_lapjv_cpp -I/usr/lib/python3/dist-packages/numpy/core/include -Ilap -I/usr/local/share/pynq-venv/include -I/usr/include/python3.10 -c _lapjv_cpp/_lapjv.cpp -o build/temp.linux-armv7l-3.10/_lapjv_cpp/_lapjv.o
+In file included from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarraytypes.h:1969,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/ndarrayobject.h:12,
+                 from /usr/lib/python3/dist-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from _lapjv_cpp/_lapjv.cpp:788:
+/usr/lib/python3/dist-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+_lapjv_cpp/_lapjv.cpp: In function ‘PyObject* __pyx_pf_3lap_6_lapjv_lapjv(PyObject*, PyArrayObject*, char, double, char)’:
+_lapjv_cpp/_lapjv.cpp:2809:33: warning: comparison of integer expressions of different signedness: ‘int’ and ‘uint_t’ {aka ‘unsigned int’} [-Wsign-compare]
+ 2809 |   for (__pyx_t_9 = 0; __pyx_t_9 < __pyx_t_13; __pyx_t_9+=1) {
+      |                       ~~~~~~~~~~^~~~~~~~~~~~
+arm-linux-gnueabihf-gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I_lapjv_cpp -I/usr/lib/python3/dist-packages/numpy/core/include -Ilap -I/usr/local/share/pynq-venv/include -I/usr/include/python3.10 -c _lapjv_cpp/lapjv.cpp -o build/temp.linux-armv7l-3.10/_lapjv_cpp/lapjv.o
+arm-linux-gnueabihf-gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I_lapjv_cpp -I/usr/lib/python3/dist-packages/numpy/core/include -Ilap -I/usr/local/share/pynq-venv/include -I/usr/include/python3.10 -c _lapjv_cpp/lapmod.cpp -o build/temp.linux-armv7l-3.10/_lapjv_cpp/lapmod.o
+creating build/lib.linux-armv7l-3.10
+creating build/lib.linux-armv7l-3.10/lap
+arm-linux-gnueabihf-g++ -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions -g -fwrapv -O2 -Wl,-Bsymbolic-functions -g -fwrapv -O2 -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 build/temp.linux-armv7l-3.10/_lapjv_cpp/_lapjv.o build/temp.linux-armv7l-3.10/_lapjv_cpp/lapjv.o build/temp.linux-armv7l-3.10/_lapjv_cpp/lapmod.o -o build/lib.linux-armv7l-3.10/lap/_lapjv.cpython-310-arm-linux-gnueabihf.so
+copying build/lib.linux-armv7l-3.10/lap/_lapjv.cpython-310-arm-linux-gnueabihf.so -> lap

@@ -1,0 +1,26 @@
+{
+  "status": "FOUR_NATIVE_CONTACTS_TWENTY_ANCHORS_REVIEWED_BEFORE_INFERENCE",
+  "source_pixels_seen_before_new_model_predictions": true,
+  "reviewed_source_sequences": ["2020-03-08_12-52-4", "2020-03-09_12-31-58", "2020-03-10_12-53-48", "2020-03-10_14-4-31"],
+  "native_anchors_visually_reviewed": 20,
+  "full_video_frames_decode_checked": 637,
+  "whole_frame_by_frame_visual_review": false,
+  "camera_observation": "Ordinary rectangular directly-overhead cattle walkway footage, 1280x720. Cow backs and coat patterns visible without circular fisheye presentation. Walking cows mainly move left to right; other cows remain along the upper/right parts of the image.",
+  "camera_axis_selected": "x",
+  "perpendicular_ROI_selected": [0.05, 0.9],
+  "input_rotation_degrees": 0,
+  "calibration_basis": "Use native horizontal walkway direction, with 40%/60% x gates. The native view already presents the regular overhead orientation; exclude only the extreme top strip and the lower drain/railing region. Do not choose calibration using model counts.",
+  "clipping_observation": "Several cows are already partly present in the first frame or still present at the final frame. Stationary and moving cows coexist. A visible cow is not automatically a fully observed passage event.",
+  "per_sequence_observations": [
+    {"sequence": "2020-03-08_12-52-4", "observation": "Several cows, moving white-backed cow and following dark-backed cow; first/last-frame truncation, and cows along upper boundary."},
+    {"sequence": "2020-03-09_12-31-58", "observation": "White-backed cow already central at clip start, later another cow enters view; incomplete boundaries require separate event rules."},
+    {"sequence": "2020-03-10_12-53-48", "observation": "White-backed moving cow traverses horizontally beneath largely stationary cows; partial animal remains near right clip boundary."},
+    {"sequence": "2020-03-10_14-4-31", "observation": "A moving cow crosses in front of a stationary cow at upper right; reflection/wet-floor appearance differs, and moving cow is clipped at beginning/end."}
+  ],
+  "publisher_or_human_event_GT_available": false,
+  "reference_counts_inferred_from_snapshots": false,
+  "source_confirmed_12_count_reference_changed": false,
+  "reserved_final_date_2020_03_11_pixels_opened": false,
+  "browser_interaction_QA": "Not attempted in this phase; native files directly reviewed. Existing browser/Node kernel-asset initialization failure from the prior phase remains recorded, no browser playback claim.",
+  "whole_goal_complete": false
+}

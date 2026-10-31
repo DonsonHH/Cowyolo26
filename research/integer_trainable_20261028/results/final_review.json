@@ -1,0 +1,81 @@
+{
+  "status": "TRAINABLE_THREE_SEED_SMOKE_DELIVERY_AND_FULL_REPORT_REVIEW_COMPLETE",
+  "created_UTC": "2026-10-27T17:42:19.075361+00:00",
+  "goal_turn_classification": "progress",
+  "full_manual_report_review_complete": true,
+  "actual_results": {
+    "seeds": [
+      26,
+      27,
+      28
+    ],
+    "initial_and_postupdate_model_conditions": 6,
+    "local_forward_metric_conditions": 192,
+    "independent_integer_layers": 2496,
+    "independent_accumulator_elements": 67951488,
+    "actual_discarded_smoke_updates": 6,
+    "formal_QAT_updates_in_smoke_stage": 0,
+    "files_verified": 82,
+    "training_images_read": 216,
+    "validation_or_holdout_images_read": 0,
+    "CPU_GPU_fold_initialization_difference_retained": true,
+    "new_vs_prior_feature_max_difference": 0.02865108847618103,
+    "FPGA_execution_verified": false
+  },
+  "synthesis_review_sha256": "912df5696c03f02b1d30936787c61bb9a3fb9c9641594b31ab0e3bd82a821ff1",
+  "evidence_files": [
+    {
+      "path": "三seed可训练整数前向与准入结果.md",
+      "sha256": "61350b499cc9002c4fda8963df5965b118b68e1756ab4a5855ee44f3e3d454d7"
+    },
+    {
+      "path": "Review与当前状态.md",
+      "sha256": "d002f3bb796b0122148d45c26da5b8b2a5516a23d7a44c03e453ed6219db640e"
+    },
+    {
+      "path": "protocol/trainable_integer_smoke_v1.json",
+      "sha256": "56031ab9241b59b8a8b1680c8829aaa6b3372215f7d95de2184ee85e0cffee80"
+    },
+    {
+      "path": "results/local_verification.json",
+      "sha256": "4176073c224331875c257280a41e192e70c2ce934682e13847761c9b3887227f"
+    },
+    {
+      "path": "results/initialization_probe.json",
+      "sha256": "67b8bec180e522e0efb24ad3b77f29e1941711fb34cb2c4fb597a6a3c4806623"
+    },
+    {
+      "path": "results/initialization_local_verification.json",
+      "sha256": "47d011b074a594f3df8345caf3f0b7dd0d19406be735a5e2757a365723ff164f"
+    },
+    {
+      "path": "results/delivery_status_01.txt",
+      "sha256": "6a792bf61200e070d8773bfdb5e3822849691f540e0551db591db1c37212921e"
+    },
+    {
+      "path": "results/initialization_status_01.txt",
+      "sha256": "65f852add2d76d821249e5b22f6acb5be172b8434339383893cc96a636c57786"
+    },
+    {
+      "path": "delivery/results/smoke_v2/summary.json",
+      "sha256": "f065d15543d3e42aad6e63d3c2fbcc38df8390c91cc7a1de250a396b6a5ff5fb"
+    },
+    {
+      "path": "delivery/results/independent_verification.json",
+      "sha256": "d733785fc22c64384220d0bfb6053beb37d030e1232e3375d1d54b8f57ec6f5f"
+    }
+  ],
+  "all_smoke_initial_and_postupdate_gates_verified": true,
+  "actual_discarded_smoke_updates": 6,
+  "formal_QAT_updates_in_this_phase": 0,
+  "formal_training_is_separate_stage": "integer_qat_20261028",
+  "remaining_goal_requirements": [
+    "formal_paired_training_and_identity_risk",
+    "independent_bidirectional_count",
+    "identity_RF_mapping",
+    "PYNQ_Z2_joint_inference",
+    "principal_paper_contribution"
+  ],
+  "FPGA_execution_verified": false,
+  "whole_goal_complete": false
+}

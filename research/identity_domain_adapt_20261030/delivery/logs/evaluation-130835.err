@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/identity_domain_adapt_20261030/tools/evaluate.py", line 51, in <module>
+    assert sha(row['path'])==row['sha256']
+           ~~~^^^^^^^^^^^^^
+  File "/share/home/renly/projects/idcoo_research_20261026/identity_domain_adapt_20261030/tools/evaluate.py", line 15, in sha
+    def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+                                        ^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'read_bytes'
+srun: error: cu03: task 0: Exited with exit code 1

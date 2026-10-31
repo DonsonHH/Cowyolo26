@@ -1,0 +1,16 @@
+             JOBID|PARTITION|                        NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|State|ExitCode|Elapsed|MaxRSS
+130628|FAILED|1:0|00:00:05|
+130628.batch|FAILED|1:0|00:00:05|1172K
+{"condition": "mosaic050_seed27", "error_text": "Exception in thread Thread-2 (_pin_memory_loop):\n", "error_mtime_ns": 1793303981480816381, "complete_mtime_ns": 1793303980261811985, "complete_exists": true}
+{"condition": "mosaic100_seed28", "error_text": "Exception in thread Thread-2 (_pin_memory_loop):\n", "error_mtime_ns": 1793303987436837860, "complete_mtime_ns": 1793303987379837655, "complete_exists": true}
+evaluation-130628.out:
+evaluation-130628.err:Traceback (most recent call last):
+  File "/share/home/renly/projects/idcoo_research_20261026/mosaic_pair_20261030/tools/evaluate.py", line 163, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/share/home/renly/projects/idcoo_research_20261026/mosaic_pair_20261030/tools/evaluate.py", line 59, in main
+    assert json.loads(json.dumps(trace))==gz(folder/('stride'+str(stride)+'_counter_trace.json.gz'))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+

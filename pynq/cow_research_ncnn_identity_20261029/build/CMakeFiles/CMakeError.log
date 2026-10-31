@@ -1,0 +1,19 @@
+Performing C++ SOURCE FILE Test NCNN_COMPILER_SUPPORT_ARM_VFPV4 failed with the following output:
+Change Dir: /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_5ec88/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5ec88.dir/build.make CMakeFiles/cmTC_5ec88.dir/build
+gmake[1]: Entering directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5ec88.dir/src.cxx.o
+/usr/bin/c++ -DNCNN_COMPILER_SUPPORT_ARM_VFPV4  -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard -mfpu=neon-vfpv4 -O3 -DNDEBUG -fPIC -o CMakeFiles/cmTC_5ec88.dir/src.cxx.o -c /home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build/CMakeFiles/CMakeTmp/src.cxx
+/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build/CMakeFiles/CMakeTmp/src.cxx:2:1: error: ‘float16x4_t’ does not name a type; did you mean ‘bfloat16x4_t’?
+    2 | float16x4_t test(float32x4_t a) { return vcvt_f16_f32(a); }
+      | ^~~~~~~~~~~
+      | bfloat16x4_t
+gmake[1]: *** [CMakeFiles/cmTC_5ec88.dir/build.make:78: CMakeFiles/cmTC_5ec88.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_5ec88/fast] Error 2
+
+
+Source file was:
+#include <arm_neon.h>
+float16x4_t test(float32x4_t a) { return vcvt_f16_f32(a); }

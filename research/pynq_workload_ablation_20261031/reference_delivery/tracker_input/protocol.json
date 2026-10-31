@@ -1,0 +1,193 @@
+{
+  "status": "FROZEN_FULL_ASSOCIATION_REPLAY_OF_ACTUAL5_COMPLETED_PERIODS_FROM_FAILED_EIGHT_RUN_PLAN",
+  "created_UTC": "2026-10-31T08:40:30.604275+00:00",
+  "source_board_protocol_sha256": "9329f1fc27a2059ffbddd459b289b69061d9f05f4f51e1e1ca840e5528456cb8",
+  "video": {
+    "name": "original",
+    "path": "/share/home/renly/projects/idcoo_research_20261026/data/multicam_samples/camera1/2023-08-14T12-54-48.mp4",
+    "sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+    "width": 2560,
+    "height": 1440,
+    "fps": 25,
+    "decode_end_exclusive": 10874,
+    "inference_stride": 5,
+    "orientation": "clockwise90",
+    "axis": "y",
+    "perpendicular_ROI": [
+      0.34,
+      0.75
+    ],
+    "scope_start_frame0": 8912,
+    "scope_end_exclusive": 10874,
+    "counter_replay_strides": [
+      5
+    ],
+    "human_down_total": 12,
+    "formal_event_scoring": false,
+    "detection_crop_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "crop_size_WH": [
+      1050,
+      1440
+    ],
+    "pixel_control_frames": [
+      8995,
+      9345,
+      9790,
+      10830
+    ],
+    "source_long_dimension_ratio_full_to_crop": 1.7777777777777777
+  },
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "cases": [
+    {
+      "run": "r1_A",
+      "raw": "tracker_input/r1_A/actual_raw.npz",
+      "trace": "tracker_input/r1_A/counter_trace.json.gz"
+    },
+    {
+      "run": "r2_B",
+      "raw": "tracker_input/r2_B/actual_raw.npz",
+      "trace": "tracker_input/r2_B/counter_trace.json.gz"
+    },
+    {
+      "run": "r3_C",
+      "raw": "tracker_input/r3_C/actual_raw.npz",
+      "trace": "tracker_input/r3_C/counter_trace.json.gz"
+    },
+    {
+      "run": "r4_D",
+      "raw": "tracker_input/r4_D/actual_raw.npz",
+      "trace": "tracker_input/r4_D/counter_trace.json.gz"
+    },
+    {
+      "run": "r5_D",
+      "raw": "tracker_input/r5_D/actual_raw.npz",
+      "trace": "tracker_input/r5_D/counter_trace.json.gz"
+    }
+  ],
+  "box_tolerance_pixels": 0.002,
+  "axis_tolerance": 2e-06,
+  "IDs_and_events_exact_required": true,
+  "model_forwards": 0,
+  "files": [
+    {
+      "file": "tools/plot_partial_results_v1.py",
+      "sha256": "05639d5dd0e06c02289923df3293d6c357caa92e5e4c721d378837293b125045"
+    },
+    {
+      "file": "tools/replay_tracker.py",
+      "sha256": "c9f93c3d7223aace3c1ae0dd19b9bbe7b02b6f04379ad2a9526aa8cbe5eb8b25"
+    },
+    {
+      "file": "tools/tracker_replay.slurm",
+      "sha256": "cd736c0a61348be61d7f46dd78bd9ef820a17a00b55c922d34745a3bf58460d6"
+    },
+    {
+      "file": "tracker_input/history.json.gz",
+      "sha256": "60d68087a80fe4dca9538ac400c2912ea8a13cca0551a990d3d37541004efda3"
+    },
+    {
+      "file": "tracker_input/r1_A/actual_raw.npz",
+      "sha256": "a11a97162e56859f8bab31c7966783c8ef5ccf140b94e998f6e358c93acc184f"
+    },
+    {
+      "file": "tracker_input/r1_A/counter_trace.json.gz",
+      "sha256": "3feb57417ec63dbd29e8c08c8455fb415564c7a34740be51636af97af1c04184"
+    },
+    {
+      "file": "tracker_input/r2_B/actual_raw.npz",
+      "sha256": "2bb740351497adbf55d3ae47ea83cf4a42e1a5ab86128619aadcfd314ff04ad3"
+    },
+    {
+      "file": "tracker_input/r2_B/counter_trace.json.gz",
+      "sha256": "759edbb1c91d2a04ac03a6a36407c9d80bf7f1af4c937d02041090b79a0303df"
+    },
+    {
+      "file": "tracker_input/r3_C/actual_raw.npz",
+      "sha256": "9f087ac8983e18abeac4745fc3397cacd677445aa7a5c21384da39d1576a8d95"
+    },
+    {
+      "file": "tracker_input/r3_C/counter_trace.json.gz",
+      "sha256": "1423f0b03e305757a3f83626b914219052fb84f7d1ddb8370cec19cc55fb4730"
+    },
+    {
+      "file": "tracker_input/r4_D/actual_raw.npz",
+      "sha256": "01ab36c15de8a219145ed980396d7ee0f6baf28fdb322d5c999c5c0e38a67307"
+    },
+    {
+      "file": "tracker_input/r4_D/counter_trace.json.gz",
+      "sha256": "99a2895c24ead3b47adec73f3e3be6e67352f4849eee095afb5b6976590afbf7"
+    },
+    {
+      "file": "tracker_input/r5_D/actual_raw.npz",
+      "sha256": "30cffdb9b0055ec79702633adf7c0b1540d8d9f69e2ae887e4e28a9d81283d86"
+    },
+    {
+      "file": "tracker_input/r5_D/counter_trace.json.gz",
+      "sha256": "efffbd29b88c22f99da129b5efe36aa1dc93c1ea1f7bdf02da1348c44d837b32"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/__init__.py",
+      "sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/basetrack.py",
+      "sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/byte_tracker.py",
+      "sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/confirmation_counter.py",
+      "sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/kalman_filter.py",
+      "sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/matching.py",
+      "sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/stracks.py",
+      "sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/support.py",
+      "sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "tracker_input/source/cow_tracker/zone_counter.py",
+      "sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "file": "tracker_input/source/frame_pipeline.py",
+      "sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    },
+    {
+      "file": "tracker_input/workload_summary.json",
+      "sha256": "d2fb9472309aba8e311a1f8dc6d95768efb8d8b4ade7cb8569d6f20e6dae9fd7"
+    }
+  ]
+}

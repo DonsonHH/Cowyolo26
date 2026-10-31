@@ -1,0 +1,246 @@
+{
+  "status": "SAVED_ORIGINALS_COLLECTED_AFTER_ACCESS_INTERRUPTION_COMPLETION_REQUIRES_INDEPENDENT_VERIFICATION",
+  "created_host_untrusted_board_UTC": "2026-10-31T07:32:53.004959+00:00",
+  "collector_PID": 979,
+  "source_boot_id": "9ecd4ca1-edd1-45f8-aa09-dfac2a089f2f",
+  "collection_boot_id": "e7059099-ecb8-451e-a9aa-a66c8222196b",
+  "boot_changed_since_experiment": true,
+  "source_parent_terminal": {
+    "exists": true,
+    "sha256": "cc5f0758f836fa60f7eafc57008b5d71c3df48671a533c69ceac6af637587e8d",
+    "data": {
+      "status": "ALL4_ACTUAL_COUNT_TRIGGER_OLD_NEW_NEW_OLD_ASYNC_CAUSAL_IDENTITY_RUNS_COMPLETE",
+      "PID": 10099,
+      "actual_O8_forwards": 1464,
+      "record_sha256": "ac728325f9acbf6d77e807684b5373fb8ae09b4ea0d6356b426641a5859b452e",
+      "close_error": null
+    }
+  },
+  "source_parent_record_status": "ALL4_ACTUAL_COUNT_TRIGGER_OLD_NEW_NEW_OLD_ASYNC_CAUSAL_IDENTITY_RUNS_COMPLETE",
+  "source_parent_terminal_consistent_complete": true,
+  "case_inventory": [
+    {
+      "run": "r1_old",
+      "identity_model": "old",
+      "background_terminal": {
+        "exists": true,
+        "sha256": "f401626c032eb7b30d7e69ea56187863c73b71e53269d55a1c033668fd74c471",
+        "data": {
+          "status": "ALL_ACTUAL_TRIGGERED_IDENTITY_JOBS_COMPLETE",
+          "PID": 10203,
+          "model_forwards": 10,
+          "record_sha256": "ff6ed184cef4568ec26ecb1dc773c1deb16ada992e9f46db09e95511e923b971"
+        }
+      },
+      "background_status": "ALL_ACTUAL_TRIGGERED_IDENTITY_JOBS_COMPLETE",
+      "saved_background_jobs": 10,
+      "raw_exists": true,
+      "trace_exists": true,
+      "timing_exists": true
+    },
+    {
+      "run": "r1_new",
+      "identity_model": "new",
+      "background_terminal": {
+        "exists": true,
+        "sha256": "b01264d79fc04f28dcf6da0884d8d941c910ef4e02c45c4962ef81db9f358ca1",
+        "data": {
+          "status": "ALL_ACTUAL_TRIGGERED_IDENTITY_JOBS_COMPLETE",
+          "PID": 10373,
+          "model_forwards": 10,
+          "record_sha256": "35f4d145de8b4ba4478a940ba1cebb3b1c76a04b2de981943645b96cc89838da"
+        }
+      },
+      "background_status": "ALL_ACTUAL_TRIGGERED_IDENTITY_JOBS_COMPLETE",
+      "saved_background_jobs": 10,
+      "raw_exists": true,
+      "trace_exists": true,
+      "timing_exists": true
+    },
+    {
+      "run": "r2_new",
+      "identity_model": "new",
+      "background_terminal": {
+        "exists": true,
+        "sha256": "114a3e6a6974fe4407ef5fd203e912d0be7250843af2bd558358ec2489bbb359",
+        "data": {
+          "status": "ALL_ACTUAL_TRIGGERED_IDENTITY_JOBS_COMPLETE",
+          "PID": 10579,
+          "model_forwards": 8,
+          "record_sha256": "0398fb50bd117808518aed44efcac739b8bec65714635bf61586b25922b2a1ef"
+        }
+      },
+      "background_status": "ALL_ACTUAL_TRIGGERED_IDENTITY_JOBS_COMPLETE",
+      "saved_background_jobs": 8,
+      "raw_exists": true,
+      "trace_exists": true,
+      "timing_exists": true
+    },
+    {
+      "run": "r2_old",
+      "identity_model": "old",
+      "background_terminal": {
+        "exists": true,
+        "sha256": "5ea9872a1a2bbf07b33fdcf8601dcd049189539873e8162d87f30137ce91fa93",
+        "data": {
+          "status": "ALL_ACTUAL_TRIGGERED_IDENTITY_JOBS_COMPLETE",
+          "PID": 10764,
+          "model_forwards": 7,
+          "record_sha256": "5b251633cb258daf4975e1ccab4009147610b8bcd7b4ca5367aae583ff5075b2"
+        }
+      },
+      "background_status": "ALL_ACTUAL_TRIGGERED_IDENTITY_JOBS_COMPLETE",
+      "saved_background_jobs": 7,
+      "raw_exists": true,
+      "trace_exists": true,
+      "timing_exists": true
+    }
+  ],
+  "runtime_checks": [
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/libcow_encoder_v2.so",
+      "expected_sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731",
+      "exists": true,
+      "actual_sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.param",
+      "expected_sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7",
+      "exists": true,
+      "actual_sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/encoder.ncnn.bin",
+      "expected_sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b",
+      "exists": true,
+      "actual_sha256": "8a7ac92f1d25259412c86a9f5e4f66a3c74db71128410fc03383a8f935e6815b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/ncnn_encoder_v3.py",
+      "expected_sha256": "c7e83e2638b9cb80e4e0720b5338ac802d05b37241526226da1e482a3172027c",
+      "exists": true,
+      "actual_sha256": "c7e83e2638b9cb80e4e0720b5338ac802d05b37241526226da1e482a3172027c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/all_normalized_features.npz",
+      "expected_sha256": "a23bf0714a0d8ef12f23ea5198fc2ad82f209b61c058f692613114f0d1f05ac1",
+      "exists": true,
+      "actual_sha256": "a23bf0714a0d8ef12f23ea5198fc2ad82f209b61c058f692613114f0d1f05ac1"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/image_groups.json",
+      "expected_sha256": "f89a5f4501b0d8b896ada40431a1e58405117fe8593c512163aec130924bfad6",
+      "exists": true,
+      "actual_sha256": "f89a5f4501b0d8b896ada40431a1e58405117fe8593c512163aec130924bfad6"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_ncnn_identity_20261029/vectors_results_v3/record.json",
+      "expected_sha256": "f84a4de6797638a090f6514c1cd718f9e86e39019f191db41c9ece6ee3718d14",
+      "exists": true,
+      "actual_sha256": "f84a4de6797638a090f6514c1cd718f9e86e39019f191db41c9ece6ee3718d14"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/frame_pipeline.py",
+      "expected_sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b",
+      "exists": true,
+      "actual_sha256": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py",
+      "expected_sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed",
+      "exists": true,
+      "actual_sha256": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py",
+      "expected_sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8",
+      "exists": true,
+      "actual_sha256": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py",
+      "expected_sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c",
+      "exists": true,
+      "actual_sha256": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py",
+      "expected_sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e",
+      "exists": true,
+      "actual_sha256": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py",
+      "expected_sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa",
+      "exists": true,
+      "actual_sha256": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/matching.py",
+      "expected_sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33",
+      "exists": true,
+      "actual_sha256": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py",
+      "expected_sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba",
+      "exists": true,
+      "actual_sha256": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/support.py",
+      "expected_sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733",
+      "exists": true,
+      "actual_sha256": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py",
+      "expected_sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+      "exists": true,
+      "actual_sha256": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/program/graph.bin",
+      "expected_sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538",
+      "exists": true,
+      "actual_sha256": "e10ab1270394e93343b6082548039ef46d75028bdf0231e0474793f721ef7538"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_o8_mosaic192_qual_20261030/resident_plan/resident_plan.bin",
+      "expected_sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4",
+      "exists": true,
+      "actual_sha256": "79c685b1fe60cf9d2dc02ea9b0f616c5b60b016dbb936de72d9347065bd741d4"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/encoder.ncnn.param",
+      "expected_sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7",
+      "exists": true,
+      "actual_sha256": "dd1a5af7c7f33b273508665f8332d3b48e847898981fc55989b2278022a98fe7"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/encoder.ncnn.bin",
+      "expected_sha256": "2a587d0fe293d244eb5632feb0e3665cf6091243198612b59363a6a7bb173252",
+      "exists": true,
+      "actual_sha256": "2a587d0fe293d244eb5632feb0e3665cf6091243198612b59363a6a7bb173252"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_domain_arm_20261030/libcow_encoder_v2.so",
+      "expected_sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731",
+      "exists": true,
+      "actual_sha256": "61519ebcc96c1ca396db3b9e6da96cb2c4ef1303b94a974ed491459e5c4e0731"
+    },
+    {
+      "file": "/home/xilinx/jupyter_notebooks/cow_research_identity_joint_pair_20261030/results/identity_qualification/all_features.npz",
+      "expected_sha256": "0eb51bda110e1f2e1abb5d447db9db576f5e901a779c44cc187ed3f1bb8e351c",
+      "exists": true,
+      "actual_sha256": "0eb51bda110e1f2e1abb5d447db9db576f5e901a779c44cc187ed3f1bb8e351c"
+    }
+  ],
+  "all_bound_runtime_files_match_now": true,
+  "current_loaded_PL_observed": false,
+  "no_current_loaded_O8_invariant_inferred_after_reboot": true,
+  "models_or_PL_loaded_or_programmed": false,
+  "new_model_forwards": 0,
+  "new_training_updates": 0,
+  "whole_goal_complete": false
+}

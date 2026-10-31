@@ -1,0 +1,105 @@
+{
+  "status": "ANNOTATION_EDIT_PAUSE_BOUNDARIES_SCOPE_AND_DRAFT_REGRESSIONS_PASS",
+  "tests": [
+    {
+      "test": "edit_while_playing_pauses_and_preserves_frame",
+      "state": {
+        "active": "jump",
+        "error": null,
+        "jump": "10873",
+        "paused": true
+      }
+    },
+    {
+      "test": "last_frame_10873",
+      "state": {
+        "clock": "源帧 10873 / 14008 · 434.92秒",
+        "jump": "10873",
+        "paused": true,
+        "time": 434.9212
+      }
+    },
+    {
+      "test": "upper_scope_clamp",
+      "state": {
+        "jump": "10873",
+        "time": 434.9212
+      }
+    },
+    {
+      "test": "first_frame_and_lower_scope_clamp",
+      "state": {
+        "clock": "源帧 8912 / 14008 · 356.48秒",
+        "jump": "8912",
+        "time": 356.4812
+      }
+    },
+    {
+      "test": "one_source_frame_step",
+      "state": {
+        "jump": "8913",
+        "time": 356.5212
+      }
+    },
+    {
+      "test": "full_video_scope_available",
+      "state": {
+        "jump": "100",
+        "max": "14008",
+        "min": "0"
+      }
+    },
+    {
+      "test": "focus_scope_restore",
+      "state": {
+        "jump": "8912",
+        "max": "10873",
+        "min": "8912"
+      }
+    },
+    {
+      "test": "speed2_edit_pause_and_mark_source9420",
+      "state": {
+        "clock": "源帧 9420 / 14008 · 376.80秒",
+        "error": null,
+        "eventFrame": "9420",
+        "jump": "9420",
+        "paused": true,
+        "rate": 2
+      }
+    },
+    {
+      "test": "existing_QA_draft_unchanged",
+      "passed": true
+    }
+  ],
+  "QA_draft_before": {
+    "blinding": "prior_outputs_seen",
+    "count": "2",
+    "covered": "",
+    "events": "A->B · 帧 1200 · 48.00秒\n\n完整跨区 · QA-cow-a\n\nQA fixture only; not a scientific annotation\n\n查看删除\nA->B · 帧 1200 · 48.00秒\n\n完整跨区 · QA-cow-b\n\nQA fixture only; not a scientific annotation\n\n查看删除",
+    "reviewer": "QA-fixture-not-human-truth"
+  },
+  "QA_draft_after": {
+    "blinding": "prior_outputs_seen",
+    "count": "2",
+    "covered": "",
+    "events": "A->B · 帧 1200 · 48.00秒\n\n完整跨区 · QA-cow-a\n\nQA fixture only; not a scientific annotation\n\n查看删除\nA->B · 帧 1200 · 48.00秒\n\n完整跨区 · QA-cow-b\n\nQA fixture only; not a scientific annotation\n\n查看删除",
+    "reviewer": "QA-fixture-not-human-truth"
+  },
+  "final_view": {
+    "clock": "源帧 9420 / 14008 · 376.80秒",
+    "error": null,
+    "jump": "9420",
+    "paused": true,
+    "qaNotice": "QA测试视图：事件仅用于功能检查，不是科研参考。",
+    "qaNoticeHidden": false,
+    "rate": 1,
+    "ready": 4
+  },
+  "QA_mode_only": true,
+  "main_draft_opened_or_modified": false,
+  "no_events_added_or_deleted": true,
+  "screenshot": "annotation_jump_fixed.png",
+  "source_count_truth_certified": false
+}

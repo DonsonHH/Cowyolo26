@@ -1,0 +1,12 @@
+             JOBID|PARTITION|                    NAME|   STATE|      TIME|NODELIST(REASON)
+JobID|JobName|State|ExitCode|Elapsed|MaxRSS
+129975|idcoo-intref|FAILED|1:0|00:00:01|
+129975.batch|batch|FAILED|1:0|00:00:01|1176K
+129975.0|python|FAILED|1:0|00:00:01|800K
+129976|idcoo-intref-v2|COMPLETED|0:0|00:00:06|
+129976.batch|batch|COMPLETED|0:0|00:00:06|1176K
+129976.0|python|COMPLETED|0:0|00:00:06|800K
+129977|idcoo-intref-check|COMPLETED|0:0|00:00:04|
+129977.batch|batch|COMPLETED|0:0|00:00:04|1176K
+129977.0|python|COMPLETED|0:0|00:00:04|804K
+{"status": "ALL416_INTEGER_ACCUMULATIONS_RECONSTRUCTION_AND16_METRIC_CONDITIONS_INDEPENDENTLY_VERIFIED", "job_id": "129977", "protocol_sha256": "c3eb240486c637fe83aff5ea5718e3208a8c77c846f981cb5dc96793253c782e", "source_summary_sha256": "dff0f371384a375016ff81e503891ecb4c20e52ae7ef1fbce1804994545971a0", "candidate_sha256": "d5e5523600ef6b31f3ae2e33181754305251c6fffb7bdaf6443511797caeddf6", "independent_integer_layer_cases": 416, "accumulator_elements_recomputed": 11325248, "ORT_full_branch_exact_integer_cases": 416, "equivalent_INT8_weight_elements": 912008, "original_failure_index3_retained": true, "new_training_updates": 0, "new_gradient_or_all_seeds_verified": false, "old_QDQ_gate_fixed": false, "identity_accuracy_or_FPGA_execution_verified": false, "verification_process_peak_RSS_KiB": 560508, "elapsed_s": 1.9629485234618187, "whole_goal_complete": false}
