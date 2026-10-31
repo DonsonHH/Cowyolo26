@@ -1,0 +1,69 @@
+{
+  "status": "COMPLETED_UNSCORED",
+  "PID": 4179,
+  "started_at_UTC": "2026-10-31T19:03:25.079498+00:00",
+  "case_order": [
+    "aug18_idle_v2",
+    "aug16_partial_v1",
+    "aug15_positive_v2"
+  ],
+  "cases": [
+    {
+      "case_id": "aug18_idle_v2",
+      "command": [
+        "/usr/local/share/pynq-venv/bin/python",
+        "-u",
+        "-m",
+        "counting",
+        "--video",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_inputs/aug18_idle_v2.mp4",
+        "--config",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_configs/aug18_idle_v2.json",
+        "--output",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_runs_20261101/aug18_idle_v2"
+      ],
+      "status": "EXITED",
+      "PID": 4186,
+      "exit_code": 0
+    },
+    {
+      "case_id": "aug16_partial_v1",
+      "command": [
+        "/usr/local/share/pynq-venv/bin/python",
+        "-u",
+        "-m",
+        "counting",
+        "--video",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_inputs/aug16_partial_v1.mp4",
+        "--config",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_configs/aug16_partial_v1.json",
+        "--output",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_runs_20261101/aug16_partial_v1"
+      ],
+      "status": "EXITED",
+      "PID": 4277,
+      "exit_code": 0
+    },
+    {
+      "case_id": "aug15_positive_v2",
+      "command": [
+        "/usr/local/share/pynq-venv/bin/python",
+        "-u",
+        "-m",
+        "counting",
+        "--video",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_inputs/aug15_positive_v2.mp4",
+        "--config",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_configs/aug15_positive_v2.json",
+        "--output",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_runs_20261101/aug15_positive_v2"
+      ],
+      "status": "EXITED",
+      "PID": 4343,
+      "exit_code": 0
+    }
+  ],
+  "accuracy_verified": false,
+  "boot_id": "e7059099-ecb8-451e-a9aa-a66c8222196b",
+  "updated_at_UTC": "2026-10-31T19:32:51.196473+00:00"
+}
