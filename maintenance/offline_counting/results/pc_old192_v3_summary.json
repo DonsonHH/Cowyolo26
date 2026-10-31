@@ -1,0 +1,160 @@
+{
+  "status": "COMPLETED_UNSCORED",
+  "session_id": "camera1_aug14_development",
+  "video_id": "original_camera1_2023-08-14T12-54-48",
+  "PID": 46192,
+  "video_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\offline_counting_20261031\\input\\2023-08-14T12-54-48.mp4",
+  "video_sha256": "5d1d8c197abbebfd98d11b7900fe2655013acc43cf5e01bebc7c72a3bcde95a1",
+  "config": {
+    "video_id": "original_camera1_2023-08-14T12-54-48",
+    "session_id": "camera1_aug14_development",
+    "sample_hz": 5,
+    "decode_start_frame0": 8860,
+    "scope_start_frame0": 8912,
+    "end_frame0_exclusive": 10874,
+    "axis": "y",
+    "perpendicular_roi": [
+      0.34,
+      0.75
+    ],
+    "in_direction": "A->B",
+    "detection_roi_xyxy": [
+      870,
+      0,
+      1920,
+      1440
+    ],
+    "rotation_clockwise": 90,
+    "confidence": 0.2,
+    "cow_class_ids": [
+      0
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 3,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "onnx",
+      "model": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_rot192_compile_20261029\\delivery\\results\\qualification\\frozen_S192_rot90_seed26.onnx",
+      "threads": 1
+    },
+    "source_index_file": "C:\\Users\\Donson\\Documents\\Codex\\exports\\Cowyolo26-20261031\\repo\\maintenance\\offline_counting\\results\\source_frame_index.json.gz"
+  },
+  "nominal_fps": 25.0,
+  "source_size": [
+    2560,
+    1440
+  ],
+  "source_stride": 5,
+  "effective_nominal_sample_hz": 5,
+  "sampling": {
+    "mode": "source_pts",
+    "requested_hz": 5,
+    "unavailable_source_sample_slots": 0,
+    "anchor_time_s": 354.404,
+    "minimum_source_frame_gap": 5,
+    "maximum_source_frame_gap": 5
+  },
+  "decoded_frames": 2014,
+  "processed_frames": 403,
+  "wall_clock_skipped_frames": 0,
+  "sequential_lead_in_frames": 0,
+  "input_positioning_s": 0.09400000001187436,
+  "fast_seek_verified_by_source_pts": true,
+  "seek_verification": {
+    "expected_pts_s": 354.404,
+    "actual_pts_s": 354.404,
+    "index_file_sha256": "f993accb8aba1a3a3d5146198ec24ef34423808825156cb42c15d5cbf14f6bd7"
+  },
+  "time_source": "opencv source PTS",
+  "model_forwards": 403,
+  "counts": {
+    "IN": 10,
+    "OUT": 0,
+    "NET": 10
+  },
+  "uncertain_records": 22,
+  "accuracy_verified": false,
+  "software_fixture_only": false,
+  "runtime_versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.2.6",
+    "opencv": "4.12.0"
+  },
+  "startup_scope": "elapsed_s covers model/processed interval/close; overall_elapsed_s also includes open, exact sequential lead-in and input hashing",
+  "memory_before_model": {
+    "process_peak_rss_kib": null
+  },
+  "clock_contract": "PTS sampling; motion covariance and Lost expiry use elapsed source time; predictions never count as observations",
+  "latency_boundary": "decode selected source frame through event/log update; offline, no realtime deadline",
+  "model_sha256": "c21cae6a542b533d28e0de9469ac3f022322406c8e7ba2e5acfa4edeee9a2382",
+  "last_source_frame0": 10870,
+  "last_source_time_s": 434.805,
+  "elapsed_s": 18.077999999994063,
+  "overall_elapsed_s": 18.375,
+  "total_decoded_frames": 2014,
+  "timings": {
+    "decode": {
+      "count": 403,
+      "mean_ms": 5.801488833791384,
+      "maximum_ms": 16.00000000325963,
+      "p50_ms": 0.0,
+      "p95_ms": 16.00000000325963,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 403
+    },
+    "preprocess": {
+      "count": 403,
+      "mean_ms": 7.27295285340967,
+      "maximum_ms": 16.00000000325963,
+      "p50_ms": 0.0,
+      "p95_ms": 16.00000000325963,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 403
+    },
+    "inference": {
+      "count": 403,
+      "mean_ms": 6.183622828996729,
+      "maximum_ms": 16.00000000325963,
+      "p50_ms": 0.0,
+      "p95_ms": 16.00000000325963,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 403
+    },
+    "tracking": {
+      "count": 403,
+      "mean_ms": 0.7717121588487973,
+      "maximum_ms": 16.00000000325963,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 403
+    },
+    "frame": {
+      "count": 403,
+      "mean_ms": 20.14640198523501,
+      "maximum_ms": 32.00000000651926,
+      "p50_ms": 16.00000000325963,
+      "p95_ms": 31.899999993038342,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 403
+    }
+  },
+  "counter_after_finish": {
+    "IN": 10,
+    "OUT": 0,
+    "NET": 10,
+    "active_states": 0,
+    "pending": 0,
+    "confirmation_guards": 0,
+    "maximum_state_count": 18
+  },
+  "maximum_state_count": 18,
+  "state_eviction_ttl_s": 6.2,
+  "memory_after_close": {
+    "process_peak_rss_kib": null
+  }
+}

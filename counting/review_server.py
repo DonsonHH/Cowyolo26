@@ -2,18 +2,29 @@
 import argparse
 import hashlib
 import json
+import gzip
 import re
 import threading
 from collections import OrderedDict
 from urllib.parse import urlsplit, parse_qs
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from .protocol import canonical_gate
 
 
 def serve(video, template, host="127.0.0.1", port=8780, playback=None):
     video, template = Path(video), Path(template)
     playback = Path(playback) if playback else video
     metadata = json.loads(template.read_text(encoding="utf-8-sig"))
+    metadata["review_gate"] = canonical_gate(metadata["review_gate"])
+    if metadata.get("source_index_file"):
+        index_path = template.parent / metadata["source_index_file"]
+        data = index_path.read_bytes()
+        index = json.loads(gzip.decompress(data) if index_path.suffix == ".gz" else data)
+        if index["source_video_sha256"] != metadata["source_video_sha256"]:
+            raise ValueError("Source frame index belongs to another video")
+        metadata["source_frame_times_s"] = index["source_frame_times_s"]
+        metadata["source_seek_index"] = index["source_seek_index"]
     html = (Path(__file__).parent / "review.html").read_bytes()
     integrity = {"signature": None, "verified": False}
     lock = threading.Lock()
@@ -29,17 +40,42 @@ def serve(video, template, host="127.0.0.1", port=8780, playback=None):
                 return frame_cache[frame]
             if capture is None:
                 capture = cv2.VideoCapture(str(video))
-            if next_frame != frame:
-                if not capture.set(cv2.CAP_PROP_POS_FRAMES, frame):
-                    raise ValueError("Source decoder cannot seek")
-            ok, image = capture.read()
-            if not ok:
-                raise ValueError("Source frame cannot be decoded")
-            next_frame = frame + 1
+                next_frame = 0
+            if frame < next_frame:
+                capture.release()
+                capture = cv2.VideoCapture(str(video))
+                next_frame = 0
+            image = None
+            # Only use a random-seek landmark after checking its pixel hash and
+            # PTS against an independently sequentially decoded source index.
+            anchors = metadata.get("source_seek_index", {})
+            candidates = [int(k) for k, value in anchors.items() if next_frame < int(k) <= frame
+                          and value.get("seek_hash_matches") and value.get("seek_pts_matches")]
+            if candidates:
+                anchor = max(candidates)
+                expected = anchors[str(anchor)]
+                ok = capture.set(cv2.CAP_PROP_POS_FRAMES, anchor)
+                ok, image = capture.read() if ok else (False, None)
+                valid = ok and hashlib.sha256(image.tobytes()).hexdigest() == expected["bgr_sha256"]
+                valid = valid and abs(capture.get(cv2.CAP_PROP_POS_MSEC) / 1000 - expected["time_s"]) < 1e-7
+                if valid:
+                    next_frame = anchor + 1
+                else:
+                    capture.release()
+                    capture = cv2.VideoCapture(str(video))
+                    next_frame, image = 0, None
+            while next_frame <= frame:
+                ok, image = capture.read()
+                if not ok:
+                    raise ValueError("Source frame cannot be decoded")
+                next_frame += 1
+            if image is None:
+                raise ValueError("No exact source frame available")
+            time_s = capture.get(cv2.CAP_PROP_POS_MSEC) / 1000
             ok, encoded = cv2.imencode(".jpg", image, [cv2.IMWRITE_JPEG_QUALITY, 90])
             if not ok:
                 raise ValueError("JPEG encoding failed")
-            frame_cache[frame] = encoded.tobytes()
+            frame_cache[frame] = encoded.tobytes(), time_s
             while len(frame_cache) > 8:
                 frame_cache.popitem(last=False)
             return frame_cache[frame]
@@ -91,7 +127,9 @@ def serve(video, template, host="127.0.0.1", port=8780, playback=None):
                     interval = metadata["reviewed_interval"]
                     if not interval["start_frame0"] <= frame <= interval["end_frame0"] or not ready():
                         raise ValueError("Frame outside reviewed scope or unverified source")
-                    return self.send_bytes(frame_jpeg(frame), "image/jpeg", head)
+                    data, time_s = frame_jpeg(frame)
+                    return self.send_bytes(data, "image/jpeg", head,
+                                           {"X-Source-Time-S": f"{time_s:.12f}", "X-Source-Frame0": str(frame)})
                 except (ValueError, KeyError) as error:
                     self.send_error(400, str(error))
                     return
@@ -142,11 +180,13 @@ def serve(video, template, host="127.0.0.1", port=8780, playback=None):
             except (BrokenPipeError, ConnectionResetError):
                 pass
 
-        def send_bytes(self, data, kind, head):
+        def send_bytes(self, data, kind, head, headers=None):
             self.send_response(200)
             self.send_header("Content-Type", kind)
             self.send_header("Content-Length", str(len(data)))
             self.send_header("Cache-Control", "no-store")
+            for key, value in (headers or {}).items():
+                self.send_header(key, value)
             self.end_headers()
             if not head:
                 self.wfile.write(data)

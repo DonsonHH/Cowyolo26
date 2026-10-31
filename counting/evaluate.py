@@ -3,6 +3,7 @@ import argparse
 import json
 from pathlib import Path
 from maintenance.counting_r1.event_metrics_v2 import evaluate_events
+from .protocol import canonical_gate, gate_from_config
 
 
 def evaluate_run(run_folder, reference_file):
@@ -31,6 +32,8 @@ def evaluate_run(run_folder, reference_file):
             raise ValueError("Reference and run video/session identifiers differ")
         if row.get("entry_time_s") is None or row["entry_time_s"] >= row["time_s"]:
             raise ValueError("Complete passages require entry before completion")
+    if "review_gate" not in reference or canonical_gate(reference["review_gate"]) != gate_from_config(run["config"]):
+        raise ValueError("Reference counting gate differs from the run configuration")
     prediction = [json.loads(line) for line in (run_folder / "events.jsonl").read_text(encoding="utf-8").splitlines() if line]
     result = evaluate_events(events, prediction, float(reference.get("matching_tolerance_s", 2.)),
                              reference.get("physical_correspondence"))

@@ -23,6 +23,26 @@ class GreenPixelAdapter:
 
 
 class VideoIntegrationTests(unittest.TestCase):
+    def test_unmatched_seek_index_falls_back_to_exact_decode(self):
+        import cv2
+        from .runner import sha
+        with tempfile.TemporaryDirectory(prefix="cow-software-fixture-") as folder:
+            root = Path(folder)
+            video = root / "SEEK_SOFTWARE_FIXTURE.avi"
+            writer = cv2.VideoWriter(str(video), cv2.VideoWriter_fourcc(*"MJPG"), 10, (64, 64))
+            for _ in range(3):
+                writer.write(np.zeros((64, 64, 3), np.uint8))
+            writer.release()
+            index = root / "index.json"
+            index.write_text(json.dumps({"source_video_sha256": sha(video), "source_frame_times_s": [0., 1., 2.]}))
+            summary = run(video, {"detector": {}, "decode_start_frame0": 1, "source_index_file": str(index)},
+                          root / "output", detector_factory=lambda _: GreenPixelAdapter())
+            self.assertFalse(summary["fast_seek_verified_by_source_pts"])
+            self.assertEqual(summary["sequential_lead_in_frames"], 1)
+            first = json.loads((root / "output/frames.jsonl").read_text().splitlines()[0])
+            self.assertEqual(first["frame0"], 1)
+            self.assertAlmostEqual(first["time_s"], .1)
+
     def test_early_source_end_cannot_pass_declared_scope(self):
         import cv2
         with tempfile.TemporaryDirectory(prefix="cow-software-fixture-") as folder:

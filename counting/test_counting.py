@@ -140,7 +140,7 @@ class CounterTests(unittest.TestCase):
 
 
 class ContractTests(unittest.TestCase):
-    def test_source_gap_resets_observation_and_keeps_event_ids_unique(self):
+    def test_long_interval_expires_tracks_and_keeps_event_ids_unique(self):
         session = TrackingSession({"counter": {"stable_samples": 1}}, 100, 100, 5, "fixture")
         emitted = []
         for epoch, start in enumerate((0., 10.)):
@@ -150,7 +150,19 @@ class ContractTests(unittest.TestCase):
                 emitted.extend(events)
         self.assertEqual(len(emitted), 2)
         self.assertEqual(len({row["event_id"] for row in emitted}), 2)
-        self.assertEqual(session.epoch, 1)
+        self.assertEqual(session.epoch, 0)
+        self.assertNotEqual(emitted[0]["track_id"], emitted[1]["track_id"])
+
+    def test_retained_track_observation_gap_is_not_silent(self):
+        counter = PassageCounter("fixture", maximum_gap_s=2., ttl_s=6.2)
+        for i, pos in enumerate((.2, .2, .2, .5)):
+            counter.update(i * .2, i, {1: pos}, {}, {1}, {1})
+        # Decoder ticks continue while the cow is occluded; the tracker retains ID1.
+        for i in range(4, 22):
+            counter.update(i * .2, i, {}, {}, set(), {1})
+        events, uncertain = counter.update(4.4, 22, {1: .8}, {}, {1}, {1})
+        self.assertEqual(events, [])
+        self.assertIn("observation_gap", {row["reason"] for row in uncertain})
 
     def test_unreviewed_reference_cannot_become_accuracy_result(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -174,6 +186,25 @@ class ContractTests(unittest.TestCase):
             (path / "summary.json").write_text(json.dumps(summary))
             (path / "reference.json").write_text(json.dumps(reference))
             with self.assertRaisesRegex(ValueError, "position or local trajectory"):
+                evaluate_run(path, path / "reference.json")
+
+    def test_review_gate_must_match_the_run(self):
+        with tempfile.TemporaryDirectory(prefix="cow-software-fixture-") as folder:
+            path = Path(folder)
+            summary = {"status": "COMPLETED_UNSCORED", "video_sha256": "SOFTWARE_FIXTURE_HASH",
+                       "video_id": "fixture", "session_id": "fixture",
+                       "config": {"scope_start_frame0": 0, "end_frame0_exclusive": 21}}
+            event = {"status": "complete", "review_status": "reviewed", "video_id": "fixture",
+                     "session_id": "fixture", "entry_time_s": 0., "time_s": 1.,
+                     "key_source_frames0": [0, 10], "completion_source_frame0": 10,
+                     "passage_position_or_local_trajectory": {"x": 50, "y": 70}}
+            reference = {"review_status": "reviewed", "reviewer": "SOFTWARE_FIXTURE", "reviewed_at": "fixture",
+                         "source_video_sha256": "SOFTWARE_FIXTURE_HASH",
+                         "reviewed_interval": {"start_frame0": 0, "end_frame0": 20}, "events": [event],
+                         "review_gate": {"axis": "x", "perpendicular_roi": [0, 1], "lower": .4, "upper": .6}}
+            (path / "summary.json").write_text(json.dumps(summary))
+            (path / "reference.json").write_text(json.dumps(reference))
+            with self.assertRaisesRegex(ValueError, "gate differs"):
                 evaluate_run(path, path / "reference.json")
 
     def test_unbounded_timing_history_not_retained(self):

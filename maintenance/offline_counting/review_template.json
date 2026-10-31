@@ -48,5 +48,16 @@
   "matching_tolerance_s": 2.0,
   "playback_sha256": "4c7acb0f68ed5a127cc0848e5bacd6658994cfb03c71d788c376e90c3decdfe4",
   "playback_frame_mapping": "frame n is source frame n; all decoded frame hashes compared",
-  "playback_decoded_frames_verified": true
+  "playback_decoded_frames_verified": true,
+  "review_gate": {
+    "axis": "y",
+    "perpendicular_roi": [
+      0.34,
+      0.75
+    ],
+    "lower": 0.4,
+    "upper": 0.6
+  },
+  "source_index_file": "results/source_frame_index.json.gz",
+  "annotation_protocol_version": "torso-center-zones-source-pts-v1"
 }

@@ -1,17 +1,11 @@
 {
-  "overall_status": "IN_PROGRESS_NOT_ACCURACY_ACCEPTED",
+  "overall_status": "ORIGINAL_DEMO_USER_ACCEPTED_R5_PENDING",
   "R1_native_build": "PASS_CLEAN_BUILD_AND_LOAD",
   "PC_tests": {
-    "base_and_integration": 49,
-    "additional_guard_tests": 2,
-    "total_distinct": 51,
-    "logs": [
-      "tests_final_pc.log",
-      "reference_position_guard.log",
-      "early_end_guard.log"
-    ]
+    "review_fixed_python_tests": 62,
+    "log": "review_fixes_final_pc.log"
   },
-  "board_tests": 26,
+  "board_tests": 37,
   "board_complete_video_runs": [
     {
       "name": "v1",
@@ -24,10 +18,17 @@
       "frames": 403,
       "IN": 12,
       "OUT": 0
+    },
+    {
+      "name": "v3 reviewed code",
+      "frames": 403,
+      "IN": 12,
+      "OUT": 0,
+      "overall_elapsed_s": 740.4251998839973
     }
   ],
   "board_v2_wall_throughput_fps": 0.5593337824322309,
-  "board_peak_rss_mib": 257.3203125,
+  "board_peak_rss_mib": 262.3515625,
   "maximum_counter_state_count": 15,
   "camera_or_real_RFID_verified": false,
   "independent_new_video_accuracy_verified": false,
@@ -49,5 +50,21 @@
     "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
     "numpy": "2.2.6",
     "opencv": "4.12.0"
-  }
+  },
+  "UI_VM_tests": 5,
+  "user_accepted_output_video": true,
+  "original_clip_manual_JSON_required": false,
+  "original_demo_acceptance_record": "user_video_acceptance.json",
+  "board_v3_wall_throughput_fps": 0.5442818532690921,
+  "recorded_at_UTC": "2026-10-31T18:11:01.931901+00:00",
+  "current_reference_mode": "USER_ACCEPTED_ANNOTATED_VIDEO_FOR_ORIGINAL_SCOPE",
+  "independent_R5_status": "SOURCE_STAGING_BEFORE_PREDICTIONS",
+  "current_review_gate_metadata_bound": true,
+  "PTS_sampling_and_real_time_motion_verified": true,
+  "board_v3_counts": {
+    "IN": 12,
+    "OUT": 0,
+    "NET": 12
+  },
+  "board_v3_overall_elapsed_s": 740.4251998839973
 }

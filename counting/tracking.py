@@ -2,7 +2,7 @@
 import math
 from types import SimpleNamespace
 import numpy as np
-from maintenance.counting_r1.tracker import SecondStageIoUTracker
+from .source_clock import SourceTimeTracker
 from frame_pipeline import Boxes
 from .counter import PassageCounter
 
@@ -27,17 +27,14 @@ class TrackingSession:
         self._reset()
 
     def _reset(self):
-        self.tracker = SecondStageIoUTracker(SimpleNamespace(**self.tracker_config))
+        self.tracker = SourceTimeTracker(SimpleNamespace(**self.tracker_config), self.sample_hz,
+                                         float(self.config.get("lost_seconds", 6.)))
         self.counter = PassageCounter(self.session_id, **self.counter_config)
 
     def update(self, frame, time_s, detections):
         uncertain = []
-        if self.last_time is not None and time_s - self.last_time > 2.1 / self.sample_hz:
-            uncertain = [{**row, "reason": "source_timeline_gap"} for row in self.counter.finish()]
-            self.epoch += 1
-            self._reset()
         self.last_time = time_s
-        raw = self.tracker.update(Boxes(np.asarray(detections, np.float32).reshape(-1, 6)))
+        raw = self.tracker.update_at(time_s, Boxes(np.asarray(detections, np.float32).reshape(-1, 6)))
         positions, tentative, active, tracks = {}, {}, set(), []
         lo, hi = self.config.get("perpendicular_roi", [0., 1.])
         axis = self.config.get("axis", "y")

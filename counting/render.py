@@ -62,7 +62,9 @@ def render(video, run, output, width=960):
                     cv2.line(tile, (0, round(y * height)), (width - 1, round(y * height)), (0, 170, 255), 2)
                 for x in (lower, upper):
                     cv2.line(tile, (round(x * width), round(lo * height)), (round(x * width), round(hi * height)), (0, 170, 255), 1)
-            if observation and frame - observation["frame0"] <= summary["source_stride"]:
+            source_time = cap.get(cv2.CAP_PROP_POS_MSEC) / 1000
+            hold_seconds = 1.1 / summary["effective_nominal_sample_hz"]
+            if observation and 0 <= source_time - observation["time_s"] <= hold_seconds:
                 for track in observation["tracks"]:
                     x1, y1, x2, y2 = track["xyxy"]
                     a, b = (round(x1 / W * width), round(y1 / H * height)), (round(x2 / W * width), round(y2 / H * height))

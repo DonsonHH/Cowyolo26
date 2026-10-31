@@ -41,6 +41,7 @@ class PassageCounter:
         if time_s - state.last_seen > self.maximum_gap_s:
             state.origin, state.candidate, state.streak = None, None, 0
             state.origin_time, state.origin_frame = None, None
+            state.unanchored_start, state.unanchored_reported = None, False
         zone = self.zone(pos)
         if state.origin is None and zone is None and state.unanchored_start is None:
             state.unanchored_start = (time_s, frame)
@@ -66,7 +67,7 @@ class PassageCounter:
         if state.last_position is None:
             return None
         # Stable destination already reached: that complete event remains complete.
-        if state.origin is not None and self.zone(state.last_position) == state.origin:
+        if state.emitted and state.origin is not None and self.zone(state.last_position) == state.origin:
             return None
         return {"session_id": self.session_id, "track_id": tid, "time_s": time_s,
                 "last_seen_s": state.last_seen, "reason": reason,
@@ -85,6 +86,12 @@ class PassageCounter:
         previous_pending = self.pending
         for tid in list(self.states):
             state = self.states[tid]
+            if tid in confirmed and time_s - state.last_seen > self.maximum_gap_s:
+                uncertain.append({"session_id": self.session_id, "track_id": tid, "time_s": time_s,
+                                  "last_seen_s": state.last_seen, "previous_origin": state.origin,
+                                  "previous_axis_position": state.last_position, "axis_position": confirmed[tid],
+                                  "reason": "observation_gap", "status": "uncertain_or_truncated",
+                                  "counts_as_complete_passage": False})
             if tid not in retained_ids or time_s - state.last_seen > self.ttl_s:
                 record = self._censor(tid, state, "track_removed_or_expired", time_s)
                 if record:
