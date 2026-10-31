@@ -1,0 +1,19 @@
+{
+  "command": "/usr/local/share/pynq-venv/bin/python -u /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/run_holdout_batch.py --repo /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/repo --inputs /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_inputs --configs /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_configs --output /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_runs_20261101 --cases aug18_idle_v2 aug16_partial_v1 aug15_positive_v2",
+  "launcher_script": "set -e\ntest ! -e /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_runs_20261101\ncd /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/repo\nnohup env XILINX_XRT=/usr OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/repo:/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/source/lap-0.5.13 /usr/local/share/pynq-venv/bin/python -u /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/run_holdout_batch.py --repo /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/repo --inputs /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_inputs --configs /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_configs --output /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_runs_20261101 --cases aug18_idle_v2 aug16_partial_v1 aug15_positive_v2 > /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/r5_batch.log 2>&1 < /dev/null &\nprintf \"PID=%s\\n\" \"$!\"\n",
+  "stdout": "PID=4179\n",
+  "stderr": "",
+  "launch_exit": 0,
+  "board": "192.168.3.100",
+  "boot_id": "e7059099-ecb8-451e-a9aa-a66c8222196b",
+  "clip_sha256": {
+    "aug18_idle_v2": "fabfd3362a3c089976d70c4adeba39f0c935f598bd2807dbf8a8576962a323b1",
+    "aug16_partial_v1": "696761e6611a5a78cfd507d2c705a2c88ed3c4227cee7d013c57f462328d48be",
+    "aug15_positive_v2": "81f72eba00b660be984d43a4c970b01db7f978e7e0f9c7f79f502cc2eba721e8"
+  },
+  "accuracy_verified": false,
+  "supervisor_used_SHA256": "3aa1c7792dd14f880c09c80c042bc82d41c9eecb4dad7b338acb4dc85b6808ed",
+  "supervisor_used_source": "r5_batch_supervisor_used.py",
+  "wrapper_uses_absolute_paths": true,
+  "wrapper_runtime_interruption_observed": false
+}

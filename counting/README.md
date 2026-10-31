@@ -43,6 +43,8 @@ python -m counting.package_board --output NEW_SOURCE_PACKAGE.tar.gz
 
 ## 复核与评分
 
+原片8912–10873已由用户审阅标注视频并确认通过，不再要求8780页面或逐事件JSON。下面的源画面标注工具仍可用于建立独立事件评分参考；用户视频验收与独立事件P/R评分分别记录。新日期的冻结验证见[R5报告](../maintenance/offline_counting/R5_REPORT.md)。
+
 ```powershell
 python -m counting.review_server --video ORIGINAL_VIDEO --template REVIEW_TEMPLATE.json --playback OPTIONAL_REMUX.mp4 --port 8780
 python -m counting.evaluate --run RUN_DIRECTORY --reference REVIEWED_HUMAN.json --output NEW_SCORE.json
