@@ -1,0 +1,43 @@
+{
+  "status": "DIAGNOSTIC_EXCERPT_VERIFIED",
+  "parent_render_sha256": "edcb8413111dc58b98e982d6d5ea18bc353186bb1485a04a294a849566d9d036",
+  "rendered_source_frame0_inclusive": [
+    450,
+    564
+  ],
+  "actual_source_clip_time_s_approx": [
+    18,
+    22.56
+  ],
+  "frames": 115,
+  "clip_sha256": "764d4d6f15bc52aa59d8554b947a4e8c636f5e811f293f68acaa6361195d55d4",
+  "local_video": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\r5\\aug15_fast_passage_review_18s_22p6s.mp4",
+  "command": [
+    "ffmpeg",
+    "-nostdin",
+    "-hide_banner",
+    "-loglevel",
+    "warning",
+    "-i",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\r5\\aug15_passages_review.mp4",
+    "-vf",
+    "select=between(n\\,450\\,564),setpts=PTS-STARTPTS",
+    "-fps_mode",
+    "vfr",
+    "-an",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "fast",
+    "-crf",
+    "20",
+    "-pix_fmt",
+    "yuv420p",
+    "-movflags",
+    "+faststart",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\r5\\aug15_fast_passage_review_18s_22p6s.mp4"
+  ],
+  "new_model_forwards": 0,
+  "not_human_ground_truth": true,
+  "purpose": "Short excerpt of existing actual board result, to inspect the first rapid passage that did not yield three B-zone observations. No new inference or counting changes."
+}

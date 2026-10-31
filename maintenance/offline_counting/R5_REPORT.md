@@ -48,6 +48,8 @@
 
 本地结果位于`offline_counting_20261031/r5/aug15_passages_review.mp4`、`aug16_passages_review.mp4`、`aug18_idle_review.mp4`。每段由对应实际板端日志渲染，全部显示帧均重新解码核对，视频hash及帧数见[渲染校验](results/r5_render_verification.json)。渲染不运行新的检测前向。
 
+快速通行疑点另截为约4.6秒的`offline_counting_20261031/r5/aug15_fast_passage_review_18s_22p6s.mp4`，对应实际片段帧450–564，115帧均已解码核对。[短片清单](results/r5_fast_passage_excerpt.json)绑定父视频与短片hash；只从已有结果渲染中截取，新增模型前向为0。短片用于定位第一条快速通行疑点；待确认的总数仍指新增8月15日全片。
+
 ## 执行与审阅记录
 
 - 服务器仅做下载、来源检查和Slurm CPU解码/流复制，未进行新模型训练或服务器推理。作业及退出状态见[准备日志](results/r5_slurm_preparation.log)。最初两个流复制作业因ffmpeg不在PATH而退出1；纠正为已验证的缓存ffmpeg后完成，失败记录保留。源文件末尾H264解码警告保留，实际解码帧数已核对。

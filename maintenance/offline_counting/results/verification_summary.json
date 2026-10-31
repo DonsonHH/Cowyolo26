@@ -1,5 +1,5 @@
 {
-  "overall_status": "ORIGINAL_DEMO_USER_ACCEPTED_R5_PENDING",
+  "overall_status": "ORIGINAL_DEMO_USER_ACCEPTED_R5_ACCURACY_NOT_ACCEPTED",
   "R1_native_build": "PASS_CLEAN_BUILD_AND_LOAD",
   "PC_tests": {
     "review_fixed_python_tests": 62,
@@ -56,9 +56,9 @@
   "original_clip_manual_JSON_required": false,
   "original_demo_acceptance_record": "user_video_acceptance.json",
   "board_v3_wall_throughput_fps": 0.5442818532690921,
-  "recorded_at_UTC": "2026-10-31T18:11:01.931901+00:00",
+  "recorded_at_UTC": "2026-10-31T19:43:25.003440+00:00",
   "current_reference_mode": "USER_ACCEPTED_ANNOTATED_VIDEO_FOR_ORIGINAL_SCOPE",
-  "independent_R5_status": "SOURCE_STAGING_BEFORE_PREDICTIONS",
+  "independent_R5_status": "THREE_BOARD_CASES_COMPLETED_ACCURACY_NOT_ACCEPTED",
   "current_review_gate_metadata_bound": true,
   "PTS_sampling_and_real_time_motion_verified": true,
   "board_v3_counts": {
@@ -66,5 +66,50 @@
     "OUT": 0,
     "NET": 12
   },
-  "board_v3_overall_elapsed_s": 740.4251998839973
+  "board_v3_overall_elapsed_s": 740.4251998839973,
+  "independent_R5_summary": "r5_verification_summary.json",
+  "independent_R5_cases": {
+    "aug15_positive_v2": {
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "model_forwards": 649,
+      "decoded_frames": 3244
+    },
+    "aug16_partial_v1": {
+      "counts": {
+        "IN": 6,
+        "OUT": 0,
+        "NET": 6
+      },
+      "model_forwards": 171,
+      "decoded_frames": 851
+    },
+    "aug18_idle_v2": {
+      "counts": {
+        "IN": 0,
+        "OUT": 0,
+        "NET": 0
+      },
+      "model_forwards": 149,
+      "decoded_frames": 741
+    }
+  },
+  "independent_R5_totals": {
+    "decoded_frames": 4836,
+    "model_forwards": 969,
+    "IN": 17,
+    "OUT": 0,
+    "overall_elapsed_s_sum": 1726.3916969600032
+  },
+  "independent_R5_event_precision_recall_f1": null,
+  "new_session_human_confirmation_pending": true,
+  "original_review_page_required": false,
+  "board_tests_log": "review_fixes_board.log",
+  "supervisor_mock_tests": 4,
+  "supervisor_mock_tests_log": "r5_supervisor_regression.log",
+  "completion_audit": "../COMPLETION_AUDIT.md",
+  "fast_passage_excerpt": "r5_fast_passage_excerpt.json"
 }

@@ -54,11 +54,12 @@ v2模型执行均值约371ms。按整段运行wall time计算吞吐约0.559个�
 ## 证据入口
 
 - [验证总表](results/verification_summary.json)
+- [逐项完成审计与剩余验收](COMPLETION_AUDIT.md)
 - [新日期验证及差异](R5_REPORT.md)／[新日期终态核对](results/r5_verification_summary.json)／[快速轨迹证据](results/r5_aug15_fast_passage_trace.json)
 - [用户视频验收](results/user_video_acceptance.json)／[内容一致的公开审阅快照](results/review_snapshot_mapping.json)
 - [可复现干净编译及库加载](results/native_reproducible_build.json)；[重建脚本](rebuild_native.py)
 - [PC回归日志](results/tests_final_pc.log)、[位置参考门禁](results/reference_position_guard.log)、[提前EOF门禁](results/early_end_guard.log)
-- [最终板上26项软件检查](results/tests_final_board.log)
+- [审阅修正后37项板上软件检查](results/review_fixes_board.log)／[早期26项记录](results/tests_final_board.log)
 - [实机v1](results/board320_v1_summary.json)／[实机v2](results/board320_v2_summary.json)／[v2事件](results/board320_v2_events.jsonl)
 - [审阅修正后的实机v3](results/board320_v3_summary.json)／[v3事件](results/board320_v3_events.jsonl)
 - [两轴审阅及修正](REVIEW.md)
