@@ -10,7 +10,7 @@ MODEL_EXT={'.pt','.pth','.onnx','.bin','.npy','.npz','.safetensors','.pkl','.pic
            '.bit','.so','.dll','.pyd','.a','.o','.obj','.lib','.exe','.pyc','.whl'}
 TEXT_EXT={'.md','.txt','.json','.jsonl','.csv','.tsv','.yaml','.yml','.toml','.ini','.cfg','.conf',
           '.xml','.py','.sh','.ps1','.bat','.cmd','.slurm','.html','.htm','.js','.mjs','.ts','.tsx',
-          '.jsx','.css','.ipynb','.sql','.c','.cc','.cpp','.h','.hh','.hpp','.v','.vh','.sv','.svh',
+          '.jsx','.css','.ipynb','.sql','.c','.cc','.cpp','.h','.hh','.hpp','.inc','.v','.vh','.sv','.svh',
           '.tcl','.xdc','.xpr','.hwh','.hls','.param','.prototxt','.patch','.diff','.log','.out','.err',
           '.rst','.f','.f90','.mk','.cmake','.text','.drawio','.mmd','.mermaid','.tex','.bib','.rpt','.jou',
           '.vhd','.vhdl','.proto','.dts','.dtsi','.xci','.bd','.prj','.sdc','.lock'}
