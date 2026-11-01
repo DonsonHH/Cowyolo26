@@ -20,6 +20,7 @@ from .tracking import TrackingSession
 from .backends import OnnxDetector, O8Detector, decode
 from .source_clock import SourceSampler
 from .protocol import gate_from_config
+from .endpoint_recovery import EndpointRecovery
 
 
 def sha(path):
@@ -162,6 +163,7 @@ def run(video, config, output, detector_factory=None):
                "input_positioning_s": lead_elapsed_s, "fast_seek_verified_by_source_pts": seek_verified,
                "seek_verification": seek_details,
                "time_source": "opencv source PTS", "model_forwards": 0,
+               "base_model_forwards": 0, "endpoint_recovery_forwards": 0,
                "counts": {"IN": 0, "OUT": 0, "NET": 0}, "uncertain_records": 0,
                "accuracy_verified": False,
                "software_fixture_only": detector_factory is not None,
@@ -170,8 +172,9 @@ def run(video, config, output, detector_factory=None):
                "memory_before_model": memory_snapshot(),
                "clock_contract": "PTS sampling; motion covariance and Lost expiry use elapsed source time; predictions never count as observations",
                "latency_boundary": "decode selected source frame through event/log update; offline, no realtime deadline"}
-    timings = {name: Timing() for name in ("decode", "preprocess", "inference", "tracking", "frame")}
+    timings = {name: Timing() for name in ("decode", "preprocess", "inference", "endpoint_recovery", "tracking", "frame")}
     tracking = TrackingSession(config, width, height, actual_hz, session_id)
+    recovery = EndpointRecovery(config, width, height)
     counter_snapshot = None
     events_file = (output / "events.jsonl").open("w", encoding="utf-8", buffering=1)
     frames_file = (output / "frames.jsonl").open("w", encoding="utf-8", buffering=1)
@@ -233,8 +236,26 @@ def run(video, config, output, detector_factory=None):
             raw = detector.infer(tensor)
             inferred = time.monotonic()
             summary["model_forwards"] += 1
+            summary["base_model_forwards"] += 1
             detections = decode(raw, transform, config.get("confidence", .2), config.get("cow_class_ids", [0]))
+            base_detections = detections
+            refinements = []
+            for proposal in recovery.proposals(pts, detections, tracking.counter.states, tracking.counter.stable_samples):
+                local_transform = Transform.create(width, height, proposal["roi"], transform.rotation, detector.size)
+                local_raw = detector.infer(local_transform.preprocess(image))
+                summary["model_forwards"] += 1
+                summary["endpoint_recovery_forwards"] += 1
+                candidates = decode(local_raw, local_transform, config.get("confidence", .2), config.get("cow_class_ids", [0]))
+                selected = recovery.select(proposal, candidates, detections)
+                refinements.append({**proposal, "transform": asdict(local_transform),
+                                    "candidates": candidates.astype(float).tolist(),
+                                    "accepted_detection": None if selected is None else selected.astype(float).tolist()})
+                if selected is not None:
+                    detections = np.concatenate((detections, selected[None]), axis=0)
+            recovered = time.monotonic()
             tracks, events, uncertain = tracking.update(frame, pts, detections)
+            if recovery.enabled:
+                recovery.record(pts, tracks, tracking.counter.states)
             tracked = time.monotonic()
             for event in events:
                 event["run_id"] = run_id
@@ -251,11 +272,13 @@ def run(video, config, output, detector_factory=None):
             summary["counts"]["NET"] = summary["counts"]["IN"] - summary["counts"]["OUT"]
             write(frames_file, {"run_id": run_id, "frame0": frame, "time_s": pts, "in_statistical_scope": frame >= scope_start,
                                 "detections": detections.astype(float).tolist(), "tracks": tracks,
+                                "base_detections": base_detections.astype(float).tolist(), "endpoint_recovery": refinements,
                                 "counts": summary["counts"].copy(), "tracker_epoch": tracking.epoch})
             summary["processed_frames"] += 1
             summary["last_source_frame0"], summary["last_source_time_s"] = frame, pts
             for name, value in (("decode", decode_done - tick), ("preprocess", prepared - decode_done),
-                                ("inference", inferred - prepared), ("tracking", tracked - inferred),
+                                ("inference", inferred - prepared), ("endpoint_recovery", recovered - inferred),
+                                ("tracking", tracked - recovered),
                                 ("frame", time.monotonic() - tick)):
                 timings[name].add(value * 1000)
             if summary["processed_frames"] % 25 == 0:

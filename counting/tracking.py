@@ -5,7 +5,7 @@ import numpy as np
 from .source_clock import SourceTimeTracker
 from frame_pipeline import Boxes
 from .counter import PassageCounter
-from .channel import ChannelPolygon
+from .channel import ChannelPolygon, admitted_detection_mask
 from .protocol import gate_from_config
 
 DEFAULT_TRACKER = dict(tracker_type="bytetrack", track_high_thresh=.25, track_low_thresh=.1,
@@ -47,14 +47,8 @@ class TrackingSession:
         if self.track_only_in_channel:
             # Apply the physical channel before association: an outside false
             # detection must not acquire or steal an in-channel identity.
-            column, extent = (0, self.width) if axis == "y" else (1, self.height)
-            edges = values[:, [column, column + 2]].astype(np.float64).clip(0, extent)
-            across = edges.sum(axis=1) / (2 * extent)
-            values = values[(lo < across) & (across < hi)]
-            if self.channel_polygon is not None:
-                x = values[:, [0, 2]].astype(np.float64).clip(0, self.width).sum(axis=1) / (2 * self.width)
-                y = values[:, [1, 3]].astype(np.float64).clip(0, self.height).sum(axis=1) / (2 * self.height)
-                values = values[np.asarray([self.channel_polygon.contains(cx, cy) for cx, cy in zip(x, y)], dtype=bool)]
+            mask = admitted_detection_mask(values[:, :4], self.width, self.height, axis, (lo, hi), self.channel_polygon)
+            values = values[mask]
         raw = self.tracker.update_at(time_s, Boxes(values))
         positions, tentative, active, tracks = {}, {}, set(), []
         def position(box):

@@ -1,8 +1,22 @@
 """A simple original-coordinate channel polygon and its counting cross-sections."""
 import math
 from numbers import Real
+import numpy as np
 
 EPSILON = 1e-10
+
+
+def admitted_detection_mask(boxes, width, height, axis, perpendicular_roi, polygon=None):
+    """Use clipped source-box centres for the same physical admission everywhere."""
+    boxes = np.asarray(boxes, dtype=np.float64).reshape(-1, 4)
+    x = boxes[:, [0, 2]].clip(0, width).sum(axis=1) / (2 * width)
+    y = boxes[:, [1, 3]].clip(0, height).sum(axis=1) / (2 * height)
+    across = x if axis == "y" else y
+    lo, hi = perpendicular_roi
+    mask = (lo < across) & (across < hi)
+    if polygon is not None:
+        mask &= np.asarray([polygon.contains(cx, cy) for cx, cy in zip(x, y)], dtype=bool)
+    return mask
 
 
 def cross(a, b, c):

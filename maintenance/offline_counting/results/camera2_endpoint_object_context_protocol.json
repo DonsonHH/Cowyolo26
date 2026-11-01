@@ -1,0 +1,14 @@
+{
+  "status": "FIXED_BEFORE_FOUR_CPU_REFERENCE_CALLS",
+  "frame0_indices": [
+    840,
+    850,
+    855,
+    860
+  ],
+  "rule": "Use only last two recorded prior observations to linearly extrapolate center; preserve last box width/height, expand1.5, clip source image. No current/future frame detections for ROI proposal.",
+  "source_role": "Post-hoc diagnostic, not production algorithm or count validation",
+  "target_track_for_diagnostic_only": "0:4",
+  "new_CPU_reference_forwards_expected": 4,
+  "created_UTC": "2026-11-01T15:58:54.106492+00:00"
+}

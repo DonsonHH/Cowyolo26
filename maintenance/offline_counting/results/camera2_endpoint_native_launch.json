@@ -1,0 +1,13 @@
+{
+  "command": "env XILINX_XRT=/usr OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/runtime_v4:/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/source/lap-0.5.13 /usr/local/share/pynq-venv/bin/python -u /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/endpoint_probe_v1/run_endpoint_native.py --inputs /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/endpoint_probe_v1/inputs.npz --manifest /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/endpoint_probe_v1/inputs_manifest.json --config /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/endpoint_probe_v1/config.json --output /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/endpoint_probe_v1/outputs",
+  "stdout": "PID=6803\n",
+  "stderr": "",
+  "input_file_hashes": {
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/endpoint_probe_v1/inputs.npz": "dff1113f752c2eb2ff337784dfdad49bc34a1b6445da597ea4044718cc14ca03",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/endpoint_probe_v1/inputs_manifest.json": "55a30b17a0437b2369c010db38b5c778630f217eaf49c9c0c7a33fb906fac2b9",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/endpoint_probe_v1/config.json": "cd35ea7edab7274dd0e33c1780bcaf3629825e5fcd434841df1c5173b5d8dd01",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/endpoint_probe_v1/run_endpoint_native.py": "4bf2b5e6797cad193300d8475b25f38884ac3bc2570e0b5d34cfebc93f9f1339"
+  },
+  "planned_NPU_forwards": 20,
+  "scope": "Sparse paired shared-tensor diagnostic, not full video deployment/count validation"
+}
