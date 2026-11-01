@@ -1,0 +1,42 @@
+test_collinear_boundary_is_not_an_interior_gate (counting.test_polygon_channel.PolygonGeometryTests.test_collinear_boundary_is_not_an_interior_gate) ... FAIL
+test_collinear_notch_does_not_hide_real_side_intervals (counting.test_polygon_channel.PolygonGeometryTests.test_collinear_notch_does_not_hide_real_side_intervals) ... FAIL
+
+======================================================================
+FAIL: test_collinear_boundary_is_not_an_interior_gate (counting.test_polygon_channel.PolygonGeometryTests.test_collinear_boundary_is_not_an_interior_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_polygon_channel.py", line 117, in test_collinear_boundary_is_not_an_interior_gate
+    self.assertEqual(polygon.gate_segments("y", .2), [])
+AssertionError: Lists differ: [((0.2, 0.2), (0.8, 0.2))] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+((0.2, 0.2), (0.8, 0.2))
+
+- [((0.2, 0.2), (0.8, 0.2))]
++ []
+
+======================================================================
+FAIL: test_collinear_notch_does_not_hide_real_side_intervals (counting.test_polygon_channel.PolygonGeometryTests.test_collinear_notch_does_not_hide_real_side_intervals)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_polygon_channel.py", line 130, in test_collinear_notch_does_not_hide_real_side_intervals
+    np.testing.assert_allclose(polygon.gate_segments("y", .6), [((.1, .6), (.4, .6)), ((.6, .6), (.9, .6))])
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\offline_dependencies\numpy\testing\_private\utils.py", line 1715, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\offline_dependencies\numpy\testing\_private\utils.py", line 807, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError:
+Not equal to tolerance rtol=1e-07, atol=0
+
+(shapes (1, 2, 2), (2, 2, 2) mismatch)
+ ACTUAL: array([[[0.1, 0.6],
+        [0.9, 0.6]]])
+ DESIRED: array([[[0.1, 0.6],
+        [0.4, 0.6]],
+...
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.132s
+
+FAILED (failures=2)

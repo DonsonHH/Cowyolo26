@@ -1,0 +1,33 @@
+{
+  "status": "PLANNED_NOT_EXECUTED",
+  "source_role": "Camera2Aug19 now development after failed frozen validation",
+  "source_video_sha256": "fb0718865485fa195352c0e5957580895d843165adc0bddb5a38599bfe8ae064",
+  "unmodified_config_sha256": "cd35ea7edab7274dd0e33c1780bcaf3629825e5fcd434841df1c5173b5d8dd01",
+  "frame0_indices": [
+    810,
+    830,
+    833,
+    835,
+    838,
+    840,
+    843,
+    845,
+    848,
+    850,
+    853,
+    855,
+    858,
+    860,
+    863,
+    865,
+    868,
+    870,
+    873,
+    875
+  ],
+  "purpose": "Distinguish weak candidate removal, FP32/INT8 detection quality and intermediate-frame coverage around the uncounted left cow. Same original ROI first; no model/gate/counter tuning.",
+  "expected_new_NPU_forwards": 20,
+  "expected_new_CPU_FP32_forwards": 20,
+  "production_parameters_changed": false,
+  "test_count_result_not_claimed": true
+}

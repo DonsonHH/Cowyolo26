@@ -31,7 +31,7 @@ def replay(run, output, stable_samples=None, expected_in=None, postprocess_profi
             raise ValueError("Choose either a stability override or a postprocess profile")
         profile = json.loads(Path(postprocess_profile).read_text(encoding="utf-8"))
         allowed = {"axis", "perpendicular_roi", "in_direction", "counter", "tracker",
-                   "lost_seconds", "track_only_in_channel"}
+                   "lost_seconds", "track_only_in_channel", "channel_polygon"}
         for name, value in profile.items():
             if name in allowed:
                 config[name] = ({**config.get(name, {}), **value}

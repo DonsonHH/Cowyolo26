@@ -1,5 +1,7 @@
 # Cowyolo26：奶牛通道计数与研究归档
 
+2026-11-01最新：物理多边形通道v4已完成camera2连续原片实机，10次上行/人工11，仍未验收；用户指定的0:14–1:35回放已生成。源码、真值绑定与失败诊断见[当前状态](maintenance/offline_counting/STATUS.md)。
+
 本仓库保存本轮对话产生的研究报告、实现代码、实验配置、指标、图表和失败记录，供 Donson 自行分析后续方向。
 
 **原研究归档已冻结并核验。用户随后授权继续完成离线通道计数流程；当前入口为[counting](counting/README.md)，验收状态见[执行记录](maintenance/offline_counting/STATUS.md)。**

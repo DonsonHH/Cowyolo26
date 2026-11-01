@@ -1,5 +1,7 @@
 # 当前结果与交接说明
 
+2026-11-01最新：物理多边形通道v4已完成camera2连续原片实机，10次上行/人工11，仍未验收；用户指定的0:14–1:35回放已生成。源码、真值绑定与失败诊断见[当前状态](maintenance/offline_counting/STATUS.md)。
+
 2026-11-01更新：用户随后授权继续完成离线通道计数流程。当前入口为[counting](counting/README.md)，最新证据见[计数状态](maintenance/offline_counting/STATUS.md)与[新日期冻结验证](maintenance/offline_counting/R5_REPORT.md)。原片8912–10873已在PYNQ-Z2三轮完整链路中计12 IN / 0 OUT，用户确认结果视频标注正确，原片视频验收通过且免除8780/逐事件JSON。
 
 三段新日期的冻结基线全链结果为11 / 6 / 0次进入，记录保留。用户后续确认8月15日实际12次：首头快速通行漏计，其余11次正确。该片现转为开发材料；[确认次数3→2的修复](maintenance/offline_counting/FAST_PASSAGE_FIX.md)经PC和PYNQ缓存复算均为12次，只新增首头事件，原片/8月16日/空通道均无计数回归。替代Purdue源已完整取得，用户在预测前确认6月8日/9日各1次。6月8日转作相机校准，v3在ARM缓存计1；6月9日冻结完整实机仍0/人工1（342帧、57前向、约71.37秒），准确性未通过。冻结后不再据该片选参；代码、小结果和失败证据已整理，见[最终R5结果](maintenance/offline_counting/R5_REPORT.md)。

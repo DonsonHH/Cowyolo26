@@ -1,0 +1,32 @@
+test_off_channel_box_inside_old_sideband_is_excluded_before_association (counting.test_polygon_channel.PolygonAdmissionTests.test_off_channel_box_inside_old_sideband_is_excluded_before_association) ... FAIL
+test_reference_gate_retains_the_physical_polygon (counting.test_polygon_channel.PolygonAdmissionTests.test_reference_gate_retains_the_physical_polygon) ... FAIL
+
+======================================================================
+FAIL: test_off_channel_box_inside_old_sideband_is_excluded_before_association (counting.test_polygon_channel.PolygonAdmissionTests.test_off_channel_box_inside_old_sideband_is_excluded_before_association)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_polygon_channel.py", line 27, in test_off_channel_box_inside_old_sideband_is_excluded_before_association
+    self.assertEqual(tracks, [])
+AssertionError: Lists differ: [{'track_id': '0:1', 'xyxy': [60.0, 10.0, [42 chars]421}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'track_id': '0:1', 'xyxy': [60.0, 10.0, 70.0, 30.0], 'confidence': 0.8999999761581421}
+
++ []
+- [{'confidence': 0.8999999761581421,
+-   'track_id': '0:1',
+-   'xyxy': [60.0, 10.0, 70.0, 30.0]}]
+
+======================================================================
+FAIL: test_reference_gate_retains_the_physical_polygon (counting.test_polygon_channel.PolygonAdmissionTests.test_reference_gate_retains_the_physical_polygon)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_polygon_channel.py", line 32, in test_reference_gate_retains_the_physical_polygon
+    self.assertIn("channel_polygon", gate_from_config(config()))
+AssertionError: 'channel_polygon' not found in {'axis': 'y', 'perpendicular_roi': [0, 1], 'lower': 0.4, 'upper': 0.6}
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.003s
+
+FAILED (failures=2)

@@ -66,3 +66,9 @@ python -m unittest counting.test_counting counting.test_video_integration mainte
 ```
 
 视频集成用例使用明确标记的软件矩形和像素适配器，只检验15／30FPS、不同尺寸、旋转、完整文件输入输出等接口行为；真实模型效果另由真实视频运行和人工事件评价证明。
+
+### 透视通道边界
+
+可用`channel_polygon`给出原图归一化[x,y]顶点（3–64点、简单无孔多边形），此时`perpendicular_roi`设为[0,1]。`axis`及`counter.lower/upper`仍定义源坐标中的两条门线；两线都要穿过区域内部。点在边界上不纳入。设置`track_only_in_channel:true`可在关联前排除区域外检测，计数和复核使用同一区域。裁剪/旋转/letterbox后的框先还原到原图再判区域。
+
+例如透视变宽的竖向通道：`"channel_polygon":[[0.2,0],[0.4,0],[0.8,1],[0.2,1]]`。该数值仅演示格式，需要按实际无预测画面标定。旧配置不含该字段时继续使用原侧带；不能将多边形草稿用于另一形状的人工参考。

@@ -1,0 +1,97 @@
+{
+  "reviewed_commit": "4fbebfc5708ca145bc8d23a4ff31df2160a27569",
+  "review_html_sha256": "6a5b8bc5b2fae1e6ff1d21e73f41e0e7cce0c6a98a71138cd2862fbb0e159201",
+  "fixture_only": true,
+  "no_real_video_or_board_access": true,
+  "tests": 3,
+  "passed": 3,
+  "failed": 0,
+  "results": [
+    {
+      "name": "video_seek_blocks_annotation_before_seeked",
+      "status": "PASS",
+      "actual": null,
+      "expected": null,
+      "evidence": {
+        "frameLoading": true,
+        "entry": null,
+        "reportedFrame": 100,
+        "videoSeeking": true
+      }
+    },
+    {
+      "name": "review_overlay_uses_configured_gate",
+      "status": "PASS",
+      "actual": [
+        [
+          [
+            25,
+            20
+          ],
+          [
+            25,
+            80
+          ]
+        ],
+        [
+          [
+            75,
+            20
+          ],
+          [
+            75,
+            80
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          [
+            25,
+            20
+          ],
+          [
+            25,
+            80
+          ]
+        ],
+        [
+          [
+            75,
+            20
+          ],
+          [
+            75,
+            80
+          ]
+        ]
+      ],
+      "evidence": {
+        "configuredGate": {
+          "axis": "x",
+          "perpendicular_roi": [
+            0.2,
+            0.8
+          ],
+          "lower": 0.25,
+          "upper": 0.75
+        }
+      }
+    },
+    {
+      "name": "different_session_and_interval_do_not_auto_load_old_draft",
+      "status": "PASS",
+      "actual": [],
+      "expected": [],
+      "evidence": {
+        "storeKey": "cow-source-review-v2:[\"SAME_SOURCE_HASH\",\"sessionB\",100,200,\"y\",[0.34,0.75],0.4,0.6,\"torso-center-zones-source-pts-v1\"]",
+        "currentSession": "sessionB",
+        "currentScope": {
+          "start_frame0": 100,
+          "end_frame0": 200
+        },
+        "loadedEvents": []
+      }
+    }
+  ]
+}

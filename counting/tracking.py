@@ -5,6 +5,8 @@ import numpy as np
 from .source_clock import SourceTimeTracker
 from frame_pipeline import Boxes
 from .counter import PassageCounter
+from .channel import ChannelPolygon
+from .protocol import gate_from_config
 
 DEFAULT_TRACKER = dict(tracker_type="bytetrack", track_high_thresh=.25, track_low_thresh=.1,
                        new_track_thresh=.25, track_buffer=30, match_thresh=.8, fuse_score=True)
@@ -17,6 +19,8 @@ class TrackingSession:
         self.track_only_in_channel = config.get("track_only_in_channel", False)
         if not isinstance(self.track_only_in_channel, bool):
             raise ValueError("track_only_in_channel must be boolean")
+        self.channel_polygon = (ChannelPolygon(gate_from_config(config)["channel_polygon"])
+                                if config.get("channel_polygon") is not None else None)
         self.epoch = 0
         tracker = {**DEFAULT_TRACKER, **config.get("tracker", {})}
         lost_seconds = float(config.get("lost_seconds", 6.))
@@ -47,12 +51,22 @@ class TrackingSession:
             edges = values[:, [column, column + 2]].astype(np.float64).clip(0, extent)
             across = edges.sum(axis=1) / (2 * extent)
             values = values[(lo < across) & (across < hi)]
+            if self.channel_polygon is not None:
+                x = values[:, [0, 2]].astype(np.float64).clip(0, self.width).sum(axis=1) / (2 * self.width)
+                y = values[:, [1, 3]].astype(np.float64).clip(0, self.height).sum(axis=1) / (2 * self.height)
+                values = values[np.asarray([self.channel_polygon.contains(cx, cy) for cx, cy in zip(x, y)], dtype=bool)]
         raw = self.tracker.update_at(time_s, Boxes(values))
         positions, tentative, active, tracks = {}, {}, set(), []
         def position(box):
+            if self.channel_polygon is not None:
+                box = np.asarray(box, dtype=float).copy()
+                box[[0, 2]] = box[[0, 2]].clip(0, self.width)
+                box[[1, 3]] = box[[1, 3]].clip(0, self.height)
             x1, y1, x2, y2 = box
             cx, cy = (x1 + x2) / (2 * self.width), (y1 + y2) / (2 * self.height)
-            return (cy, cx) if axis == "y" else (cx, cy)
+            along, across = (cy, cx) if axis == "y" else (cx, cy)
+            admitted = lo < across < hi and (self.channel_polygon is None or self.channel_polygon.contains(cx, cy))
+            return along, admitted
         def identity(track_id):
             return f"{self.epoch}:{int(track_id)}"
         for row in raw:
@@ -61,15 +75,15 @@ class TrackingSession:
             box[[1, 3]] = box[[1, 3]].clip(0, self.height)
             tid = identity(row[4])
             active.add(tid)
-            along, across = position(box)
-            if lo < across < hi:
+            along, admitted = position(box)
+            if admitted:
                 positions[tid] = along
             tracks.append({"track_id": tid, "xyxy": box.tolist(), "confidence": float(row[5])})
         for track in self.tracker.tracked_stracks:
             if track.is_activated:
                 continue
-            along, across = position(track.xyxy)
-            if lo < across < hi:
+            along, admitted = position(track.xyxy)
+            if admitted:
                 tentative[identity(track.track_id)] = along
         retained = {identity(t.track_id) for t in self.tracker.tracked_stracks + self.tracker.lost_stracks}
         events, newly_uncertain = self.counter.update(time_s, frame, positions, tentative, active, retained)

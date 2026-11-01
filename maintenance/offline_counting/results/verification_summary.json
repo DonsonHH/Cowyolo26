@@ -1,12 +1,12 @@
 {
-  "overall_status": "FROZEN_PURDUE_DATE_VALIDATION_FAILED_DELIVERY_READY",
+  "overall_status": "PHYSICAL_CHANNEL_V4_NEW_CAMERA_COUNT10_VS_USER11_NOT_ACCEPTED",
   "R1_native_build": "PASS_CLEAN_BUILD_AND_LOAD",
   "PC_tests": {
     "review_fixed_python_tests": 62,
     "log": "review_fixes_final_pc.log",
     "latest_total": 87
   },
-  "board_tests": 57,
+  "board_tests": 72,
   "board_complete_video_runs": [
     {
       "name": "v1",
@@ -108,12 +108,12 @@
   "independent_R5_event_precision_recall_f1": null,
   "new_session_human_confirmation_pending": false,
   "original_review_page_required": false,
-  "board_tests_log": "channel_v3_arm_tests.log",
+  "board_tests_log": "polygon_v4_arm_tests.log",
   "supervisor_mock_tests": 4,
   "supervisor_mock_tests_log": "r5_supervisor_regression.log",
   "completion_audit": "../COMPLETION_AUDIT.md",
   "fast_passage_excerpt": "r5_fast_passage_excerpt.json",
-  "current_blocker": "Frozen Purdue June9 count0 versus user1 remains failed. A subsequent independent validation lacks verified raw-video/source-time mapping and complete passage reference; next experimental boundary question is unanswered.",
+  "current_blocker": "Current source count mismatch10/11; diagnosis identifies one endpoint observation. Reference supplied, no longer blocked on previous dataset-choice question.",
   "aug15_user_confirmation_received": true,
   "aug15_user_confirmed_IN": 12,
   "aug15_baseline_known_missed_passages": 1,
@@ -123,13 +123,14 @@
   "fast_passage_candidate_profile": "counter-confirmation-v2",
   "fast_passage_new_model_forwards": 0,
   "independent_v2_status": "PURDUE_INITIAL_FULL_BOARD_BOTH_ZERO",
-  "latest_PC_tests": 87,
-  "latest_ARM_tests": 57,
-  "latest_clean_package_tests": 17,
+  "latest_PC_tests": 102,
+  "latest_ARM_tests": 72,
+  "latest_clean_package_tests": 32,
   "latest_test_logs": {
-    "PC": "channel_v3_pc_tests.log",
-    "ARM": "channel_v3_arm_tests.log",
-    "package": "channel_v3_clean_package.log"
+    "PC": "polygon_v4_reviewed_pc_tests.log",
+    "ARM": "polygon_v4_arm_tests.log",
+    "package": "polygon_v4_clean_package.log",
+    "UI": "polygon_v4_reviewed_UI.log"
   },
   "camera24_v3": {
     "calibration_day1": {
@@ -182,5 +183,31 @@
       "full_passage_coverage_review",
       "training_and_development_exposure_check"
     ]
+  },
+  "latest_UI_polygon_tests": 7,
+  "camera2_v4": {
+    "native_frames": 2993,
+    "native_forwards": 599,
+    "counts_UP": 10,
+    "counts_DOWN": 0,
+    "human_UP": 11,
+    "overall_elapsed_s": 988.2514168120106,
+    "user_display_window_s": [
+      14,
+      95
+    ],
+    "displayed_original_frames": [
+      350,
+      2374
+    ],
+    "reference": "camera2_v4_user_reference.json",
+    "summary": "camera2_v4_summary.json",
+    "diagnosis": "camera2_v4_verification.json",
+    "full_case_status": "EXECUTION_COMPLETE_COUNT_NOT_ACCEPTED"
+  },
+  "historical_v3_test_logs": {
+    "PC": "channel_v3_pc_tests.log",
+    "ARM": "channel_v3_arm_tests.log",
+    "package": "channel_v3_clean_package.log"
   }
 }

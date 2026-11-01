@@ -3,6 +3,37 @@ import argparse
 import json
 import subprocess
 from pathlib import Path
+import numpy as np
+from .channel import ChannelPolygon
+from .protocol import gate_from_config
+
+
+def draw_channel(tile, config):
+    """Draw the same source-coordinate region and gates used by counting/review."""
+    import cv2
+    height, width = tile.shape[:2]
+    gate = gate_from_config(config)
+    lo, hi = gate["perpendicular_roi"]
+    axis, lower, upper = gate["axis"], gate["lower"], gate["upper"]
+    color = (0, 170, 255)
+    if "channel_polygon" in gate:
+        polygon = ChannelPolygon(gate["channel_polygon"])
+        points = np.rint(np.asarray(polygon.points) * [width, height]).astype(np.int32)
+        cv2.polylines(tile, [points], True, color, 2)
+        for bound in (lower, upper):
+            for a, b in polygon.gate_segments(axis, bound):
+                cv2.line(tile, (round(a[0] * width), round(a[1] * height)),
+                         (round(b[0] * width), round(b[1] * height)), color, 1)
+    elif axis == "y":
+        for x in (lo, hi):
+            cv2.line(tile, (round(x * width), 0), (round(x * width), height - 1), color, 2)
+        for y in (lower, upper):
+            cv2.line(tile, (round(lo * width), round(y * height)), (round(hi * width), round(y * height)), color, 1)
+    else:
+        for y in (lo, hi):
+            cv2.line(tile, (0, round(y * height)), (width - 1, round(y * height)), color, 2)
+        for x in (lower, upper):
+            cv2.line(tile, (round(x * width), round(lo * height)), (round(x * width), round(hi * height)), color, 1)
 
 
 def rows(path):
@@ -49,19 +80,7 @@ def render(video, run, output, width=960):
                 counts[next_event["kind"]] += 1
                 next_event = next(event_rows, None)
             tile = cv2.resize(image, (width, height))
-            lo, hi = config.get("perpendicular_roi", [0, 1])
-            axis = config.get("axis", "y")
-            lower, upper = config.get("counter", {}).get("lower", .4), config.get("counter", {}).get("upper", .6)
-            if axis == "y":
-                for x in (lo, hi):
-                    cv2.line(tile, (round(x * width), 0), (round(x * width), height - 1), (0, 170, 255), 2)
-                for y in (lower, upper):
-                    cv2.line(tile, (round(lo * width), round(y * height)), (round(hi * width), round(y * height)), (0, 170, 255), 1)
-            else:
-                for y in (lo, hi):
-                    cv2.line(tile, (0, round(y * height)), (width - 1, round(y * height)), (0, 170, 255), 2)
-                for x in (lower, upper):
-                    cv2.line(tile, (round(x * width), round(lo * height)), (round(x * width), round(hi * height)), (0, 170, 255), 1)
+            draw_channel(tile, config)
             source_time = cap.get(cv2.CAP_PROP_POS_MSEC) / 1000
             hold_seconds = 1.1 / summary["effective_nominal_sample_hz"]
             if observation and 0 <= source_time - observation["time_s"] <= hold_seconds:
