@@ -1,10 +1,10 @@
-# 当前状态：81秒已交付，补检机制11次，完整复测终态待取回
+# 当前状态：81秒已交付，补检机制11次，完整复测中断未完成
 
 2026-11-02。用户指定0:14–1:35已精确交付（源350–2374帧，共2025帧），旧完整实机10/11记录保留。新的端点局部补检经83项PC计数、83项干净包、83项ARM软件检查；33项基础/批处理与7项证据合同也通过，两轴复审无剩余阻断。默认关闭时旧四条真实缓存12/12/6/0保持，ID与框严格相同。
 
-**81秒缓存＋一次已有板端局部实测复算得到11次上行；这不是新完整板端11次。** 诊断实际新增板端24、CPU44。新的完整81秒板端任务已启动PID1019，随后ping/SSH/Jupyter失联、COM6无输出，终态/计数/实际前向/退出码未取回。用户确认未再操作板卡，路由器仍列出pynq/.101。先取回该次日志，不重复提交。目标仍未完成，不能把启动成功或缓存改善视为验收。
+**81秒缓存＋一次已有板端局部实测复算得到11次上行；这不是新完整板端11次。** 诊断实际新增板端24、CPU44。新的完整81秒任务启动PID1019后失联，用户确认当时未操作板卡；后为取日志而重新上电。现已在新地址.102取回中断证据：boot已改变，旧1019/1026不存在，只有旧RUNNING快照和空日志，本次输出目录/摘要/计数均未保存。实际前向数未知，未重复提交。目标仍未完成。
 
-[当前完整报告](ENDPOINT_RECOVERY.md)、[补检规格](ENDPOINT_RECOVERY_SPEC.md)、[严格绑定机制结果](results/endpoint_v5_final_81s_mechanism.json)、[81秒新实机冻结](CAMERA2_ENDPOINT_V5_FREEZE.json)、[启动记录](results/endpoint_v5_board_launch.json)、[审阅](REVIEW.md)。随后为恢复日志而重新上电，用户反馈DONE暂未亮；终态仍待取回，不再假定原PID在线。
+[当前完整报告](ENDPOINT_RECOVERY.md)、[补检规格](ENDPOINT_RECOVERY_SPEC.md)、[严格绑定机制结果](results/endpoint_v5_final_81s_mechanism.json)、[81秒新实机冻结](CAMERA2_ENDPOINT_V5_FREEZE.json)、[中断恢复](results/endpoint_v5_interrupted_recovery.json)、[审阅](REVIEW.md)。只读启动核查为bitfile登记None、FCLK0=100MHz，没有下载Overlay或执行模型；下一步先核对O8冷启动准备和供电信息。
 
 ## 此前v4记录（历史失败保留）
 
