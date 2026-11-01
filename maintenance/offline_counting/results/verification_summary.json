@@ -113,7 +113,7 @@
   "supervisor_mock_tests_log": "r5_supervisor_regression.log",
   "completion_audit": "../COMPLETION_AUDIT.md",
   "fast_passage_excerpt": "r5_fast_passage_excerpt.json",
-  "current_blocker": "Purdue June9 frozen v3 complete board count0 versus pre-prediction user count1; fragmented detections/tracks; no retuning after reserved outcome",
+  "current_blocker": "Frozen Purdue June9 count0 versus user1 remains failed. A subsequent independent validation lacks verified raw-video/source-time mapping and complete passage reference; next experimental boundary question is unanswered.",
   "aug15_user_confirmation_received": true,
   "aug15_user_confirmed_IN": 12,
   "aug15_baseline_known_missed_passages": 1,
@@ -171,5 +171,16 @@
     "parameter_changes": false,
     "independent_accuracy_retest": false,
     "source_files_still_match_37_file_freeze": true
+  },
+  "independent_reference_intake": {
+    "audit": "reference_availability_audit.json",
+    "new_model_forwards": 0,
+    "new_image_or_video_pixels_read": 0,
+    "new_independent_event_reference_ready": false,
+    "pending_requirements": [
+      "raw_video_to_tracklet_source_mapping",
+      "full_passage_coverage_review",
+      "training_and_development_exposure_check"
+    ]
   }
 }
