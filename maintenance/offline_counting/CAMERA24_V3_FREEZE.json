@@ -1,0 +1,102 @@
+{
+  "status": "FROZEN_BEFORE_RESERVED_JUNE9_V3_VALIDATION",
+  "frozen_at_UTC": "2026-11-01T10:37:14.822816+00:00",
+  "profile": {
+    "profile_version": "camera24-channel-association-v3",
+    "axis": "x",
+    "perpendicular_roi": [
+      0.4,
+      1.0
+    ],
+    "track_only_in_channel": true,
+    "in_direction": "A->B",
+    "confidence": 0.2,
+    "sample_hz": 5,
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 2,
+      "maximum_gap_s": 2
+    },
+    "tracker": {
+      "track_high_thresh": 0.2,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.25,
+      "match_thresh": 0.8,
+      "fuse_score": false
+    },
+    "selection_data": "Purdue June8 calibration only",
+    "channel_geometry_basis": "Lower walkway below upper fenced area; fixed from source camera layout. Vertical crossing gates x .4/.6 retained.",
+    "new_day2_complete_results_used_for_selection": false,
+    "no_source_frame_track_id_or_count_special_cases": true,
+    "detector_weights_and_firmware_unchanged": true
+  },
+  "profile_sha256": "4c452b415477e12d1e3211a060a605564e0dcec6940b6e3bb0633dfe3d1900d1",
+  "source_package_sha256": "4781b5badd6a26bc304e92d6d552f57b6bb0a2fac2706ac0b7b97f8e818b401b",
+  "source_files_SHA256": {
+    "counting/backends.py": "8356d3076b30c7e952681538c64636428296b84566877ddd55cd8858172056a5",
+    "counting/counter.py": "3a6ba6ae1aff0256786f7c6adb7021851571a0ad569c7a349360775124c77903",
+    "counting/evaluate.py": "fcafb483c09a500cdff4a75966537e347bef08e784da686fc7819c44e047f1d2",
+    "counting/geometry.py": "284250541bf86447344b21a5de64164cf0fcc4fc376e9fd894b90837ba55395a",
+    "counting/index_source.py": "bd626308eb56399ae062e445cc9691e384d370a03d3789774d7dae1a498939da",
+    "counting/package_board.py": "9ec46237258ac774d04ce01f1eb45106ed63ed4385f8e2f8d3aca59dfe572b0f",
+    "counting/protocol.py": "80409f60d1ee5d48886ee600610ba8a528aacccd2b0cc2359340d635520afbf8",
+    "counting/render.py": "b91b553d07776cc6e3a5622963dca558bc0af0ea642fd9670e00ee26c097221e",
+    "counting/review_server.py": "0da8b90c39e4b88b613945dbefc35e30caf53c548a2b319184c8da047ed37986",
+    "counting/runner.py": "7a7aa51b3db6728dc260ada4d70f9533f74a1965191647719f5bc9b4496c602a",
+    "counting/source_clock.py": "156ef891eabcc9c652fee156da5024965cb52a32250e57e25591f2d878bd9764",
+    "counting/test_channel_tracking_profile.py": "5374e9ed5bf77136b730cd5e8eec040710b1522a00029efc1611961e23e9c05a",
+    "counting/test_counting.py": "400af8516f275701e3cd0a7313997c923e001bdb22c06bb1678b2e7a135021e9",
+    "counting/test_fast_passage_profile.py": "3a302d32a70d36b4ef580fd95b33bc287c331bfd60bbc26cb0c800ecb53c9343",
+    "counting/test_source_clock.py": "5bd396c73df66f3bf503afa11f9fcf4f74affdc2c7b6b9402ff9834370bef95c",
+    "counting/test_video_integration.py": "004b3c8bc9dd77e1371337fab60942f915d89ecceb0b6730c398d26bccee2c51",
+    "counting/tracking.py": "e269b3e05b0985a9ee253d585793eba2abf0a54a65f354f048a71776775a9870",
+    "counting/__init__.py": "6839ba785c1a458126fff8567a957657b3ee8c2ee708a71d2228a6dd28f63c86",
+    "counting/__main__.py": "b72d6210c14303737821fbb3c2f6a4b0fd2ab11b4e77469141e2cd5a4a1e876e",
+    "counting/review.html": "1b76fbb2250f42a33e47befc17d5da2bb7fde1a3cdb2306f2b00d343710f91b9",
+    "maintenance/counting_r1/__init__.py": "d5a336d207059817c4c499b679d56a1f325f6f76dce74218a9652e9ffb9ccd47",
+    "maintenance/counting_r1/tracker.py": "f404d2be54183017459090ae7d794fd6950272e2dfd24745106460f61f22fd54",
+    "maintenance/counting_r1/event_metrics_v2.py": "95c69f80ba29465a17678674a2c559046f1071a2115b15c31ae39d40df2bffb8",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/matching.py": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/support.py": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed",
+    "pynq/cow_research_numpy_tracker_20261029/frame_pipeline.py": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b",
+    "maintenance/offline_counting/selected_counter_profile_v2.json": "bd3c61468237a7edae80f9f6416598f19fda6b423ea5c92c34fbcd064c647480",
+    "maintenance/offline_counting/results/r5_aug15_fast_passage_trace.json": "3beff248a173d0deb5cced109c10477d0a0b31bdad18b04091ea5ad390ae66d0",
+    "maintenance/offline_counting/selected_camera24_profile_v3.json": "4c452b415477e12d1e3211a060a605564e0dcec6940b6e3bb0633dfe3d1900d1",
+    "maintenance/offline_counting/results/purdue_day1_detection_fixture.json": "d8482345c400e127956ffb543960a5041a3a643d7b9f54a610a4eb0970199242"
+  },
+  "model_graph_SHA256": "3bc4934f4f54ade70bfbdc1f16808bbd5ded7bb7226643d5305604f148376e6d",
+  "resident_plan_SHA256": "a4f593d1685f052e95275a59753f097687e92fec6654a209fbc44eb5f9e80a24",
+  "runtime_asset_SHA256": {
+    "native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8"
+  },
+  "calibration_source_sha256": "ad8ccd95ca116f6a9dcc99605a3dfec4e5c54a76eea05f03aa3de94f03044cb4",
+  "reserved_source_sha256": "c67a675ca284da385c2bbb19300a2072ae20169ab1b78f7bd928437e65810b6e",
+  "calibration_evidence": [
+    "results/purdue_pretracking_channel_probe.json",
+    "results/channel_v3_arm_calibration_summary.json",
+    "results/channel_v3_arm_calibration_events.jsonl"
+  ],
+  "human_reference": "results/purdue_user_source_review.json",
+  "human_reference_sha256": "ef1af7d0445c481c98f76b6d207b136793522810eab26a3e5583ee74b26cb567",
+  "config_sha256": {
+    "1": "7673687dda7f91ed3276d8d32ad5ed7ddc182bce9c962caf0c879c149662cfcb",
+    "2": "0c4524ff23838af65387151bd5d79c49c98ccbbe6243e1f7a98b1f662d84ea3b"
+  },
+  "date2_complete_model_outcomes_or_detections_used_for_selection": false,
+  "prior_exposure_note": "Source-only layout/user counts known; early 4.8-second v2 progress count0 seen, but no completed date2 outcome or detection data inspected. Not claimed as never previously executed by any model.",
+  "no_parameter_changes_after_reserved_date_validation": true,
+  "reference_gate_alignment": "Human counted the same unique animal crossing x .4/.6. The calibrated y .4..1 band excludes upper rail, not that physical passage; original human reference retained, no invented pixel/time annotations.",
+  "formal_timed_event_scoring_claimed": false,
+  "new_training_or_firmware_change": false
+}

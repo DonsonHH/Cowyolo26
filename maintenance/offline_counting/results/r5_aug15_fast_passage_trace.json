@@ -1,5 +1,5 @@
 {
-  "status": "OBSERVED_MODEL_TRACE_NOT_HUMAN_EVENT_GT",
+  "status": "ACTUAL_MODEL_TRACE_WITH_USER_IDENTIFIED_FIRST_MISS",
   "case_id": "aug15_positive_v2",
   "run_id": "975e26c1-dcb2-4756-99f2-c2deba506da2",
   "clip_sha256": "81f72eba00b660be984d43a4c970b01db7f978e7e0f9c7f79f502cc2eba721e8",
@@ -179,6 +179,7 @@
     }
   ],
   "diagnosis": "This trajectory has only two observed B-zone positions, then disappears. It never satisfies the frozen three-observation destination confirmation and is later logged uncertain after expiry. Prediction-only positions are not counted.",
-  "physical_event_correspondence": "Candidate for early fast-passage discrepancy seen by assistant; no independent human per-event identity match supplied. Do not present as a scored false negative.",
-  "model_or_threshold_tuning_performed": false
+  "physical_event_correspondence": "User confirms first rapid complete passage near 20 seconds was missed, with the other 11 correct. Track 0:7 is the assistant mapping of that local trace; user did not supply exact event timestamps or a track ID.",
+  "model_or_threshold_tuning_performed": false,
+  "user_review": "r5_aug15_user_review.json"
 }

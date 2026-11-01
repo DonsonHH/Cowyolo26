@@ -4,6 +4,10 @@
 
 当前结果与验收边界见[执行状态](../maintenance/offline_counting/STATUS.md)。模型和数据集保留在用户已有存储中。
 
+当前示例使用两次连续真实观察确认，来源是[快速通行单因素对照](../maintenance/offline_counting/FAST_PASSAGE_FIX.md)：三次确认会漏掉出口区仅有两次观察的快速牛。原冻结配置和库的默认参数保留；这不是任意观察率下的准确性保证。新会话仍须单独验证，预测位置不构成真实观察。
+
+`track_only_in_channel:true`把原图坐标下、中心位于`perpendicular_roi`之外的检测框在跟踪关联前排除，避免栏杆等通道外误检争抢通道内轨迹。旧配置缺省为false以保留既有行为；计数仍会检查通道范围。相机标定所得的关联参数单独放在配置中，新建轨迹门限与已有轨迹关联门限分开。
+
 ## PC运行
 
 ```powershell

@@ -1,0 +1,31 @@
+{
+  "profile_version": "camera24-channel-association-v3",
+  "axis": "x",
+  "perpendicular_roi": [
+    0.4,
+    1.0
+  ],
+  "track_only_in_channel": true,
+  "in_direction": "A->B",
+  "confidence": 0.2,
+  "sample_hz": 5,
+  "lost_seconds": 6,
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 2,
+    "maximum_gap_s": 2
+  },
+  "tracker": {
+    "track_high_thresh": 0.2,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "match_thresh": 0.8,
+    "fuse_score": false
+  },
+  "selection_data": "Purdue June8 calibration only",
+  "channel_geometry_basis": "Lower walkway below upper fenced area; fixed from source camera layout. Vertical crossing gates x .4/.6 retained.",
+  "new_day2_complete_results_used_for_selection": false,
+  "no_source_frame_track_id_or_count_special_cases": true,
+  "detector_weights_and_firmware_unchanged": true
+}

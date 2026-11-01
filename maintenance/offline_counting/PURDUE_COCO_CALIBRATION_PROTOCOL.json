@@ -1,0 +1,33 @@
+{
+  "status": "EXISTING_MODEL_PROFILE_COMPARISON_BEFORE_DAY1_RUN",
+  "created_at_UTC": "2026-11-01T08:42:31.432318+00:00",
+  "candidate": "existing O8 generic COCO model r256, not newly trained",
+  "calibration_data": "June8 only",
+  "validation_data": "June9 complete outcome/detections not used for selection",
+  "class_mapping_source": "existing runtime_fast/board_runtime.py NAMES; cow index 19",
+  "assets": {
+    "program_sha256": "e47c9fba0206e1fc4ad6a0e588ab93e08633e6fbd3a511c6b98d29028e0461b2",
+    "plan_sha256": "c9f212d3f1816df856af89241fd9fcbffb9704cbb43703dbab284b518a283f45",
+    "size": 256,
+    "cow_class_id": 19
+  },
+  "system_profile_changes": [
+    "specialized single-class320 to existing generic multi-class256",
+    "class ID 0 to COCO cow 19"
+  ],
+  "not_a_pure_resolution_causal_comparison": true,
+  "unchanged": {
+    "confidence": 0.2,
+    "sample_hz": 5,
+    "rotation": 0,
+    "roi": null,
+    "tracker_defaults": true,
+    "counter_stable_samples": 2
+  },
+  "failed_probes_not_adopted": [
+    "tracker fuse_score False",
+    "rotation180 on fixed day1 frames",
+    "candidate confidence0.1"
+  ],
+  "new_training": false
+}

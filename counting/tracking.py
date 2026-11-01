@@ -14,6 +14,9 @@ class TrackingSession:
     def __init__(self, config, width, height, sample_hz, session_id):
         self.width, self.height, self.sample_hz = width, height, sample_hz
         self.session_id, self.config = session_id, config
+        self.track_only_in_channel = config.get("track_only_in_channel", False)
+        if not isinstance(self.track_only_in_channel, bool):
+            raise ValueError("track_only_in_channel must be boolean")
         self.epoch = 0
         tracker = {**DEFAULT_TRACKER, **config.get("tracker", {})}
         lost_seconds = float(config.get("lost_seconds", 6.))
@@ -34,10 +37,18 @@ class TrackingSession:
     def update(self, frame, time_s, detections):
         uncertain = []
         self.last_time = time_s
-        raw = self.tracker.update_at(time_s, Boxes(np.asarray(detections, np.float32).reshape(-1, 6)))
-        positions, tentative, active, tracks = {}, {}, set(), []
         lo, hi = self.config.get("perpendicular_roi", [0., 1.])
         axis = self.config.get("axis", "y")
+        values = np.asarray(detections, np.float32).reshape(-1, 6)
+        if self.track_only_in_channel:
+            # Apply the physical channel before association: an outside false
+            # detection must not acquire or steal an in-channel identity.
+            column, extent = (0, self.width) if axis == "y" else (1, self.height)
+            edges = values[:, [column, column + 2]].astype(np.float64).clip(0, extent)
+            across = edges.sum(axis=1) / (2 * extent)
+            values = values[(lo < across) & (across < hi)]
+        raw = self.tracker.update_at(time_s, Boxes(values))
+        positions, tentative, active, tracks = {}, {}, set(), []
         def position(box):
             x1, y1, x2, y2 = box
             cx, cy = (x1 + x2) / (2 * self.width), (y1 + y2) / (2 * self.height)

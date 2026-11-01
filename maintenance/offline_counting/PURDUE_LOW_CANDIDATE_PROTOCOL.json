@@ -1,0 +1,20 @@
+{
+  "status": "DAY1_SINGLE_FACTOR_CALIBRATION_FIXED_BEFORE_RUN",
+  "created_at_UTC": "2026-11-01T08:26:22.854733+00:00",
+  "single_factor": "decoder candidate confidence 0.2 -> 0.1, aligned with unchanged tracker low threshold 0.1",
+  "unchanged": {
+    "new_track_threshold": 0.25,
+    "high_threshold": 0.25,
+    "fuse_score": true,
+    "counter_stable_samples": 2,
+    "rotation": 0,
+    "source_sampling_hz": 5,
+    "model_weights_and_firmware": true
+  },
+  "selection_data": "Purdue June8 only, now development/calibration",
+  "day2_final_outputs_or_frame_detections_used_for_selection": false,
+  "prior_day2_exposure": "source-only layout/human count and early 4.8-second progress count 0; no completed outcome or detection data inspected",
+  "hypothesis": "Low-confidence real cow observations discarded before tracking may break the path; retaining them can continue an already activated track without admitting new low-score tracks",
+  "accept_only_if": "Complete source run produces exactly one physical-cow crossing, with an actual body trajectory across both zones; reject duplicated or background-to-cow fabricated transitions",
+  "rule_changes_after_day2_validation_forbidden": true
+}

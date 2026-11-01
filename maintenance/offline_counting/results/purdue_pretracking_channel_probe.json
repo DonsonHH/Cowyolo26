@@ -1,0 +1,67 @@
+{
+  "status": "DAY1_CALIBRATION_MECHANISM_PROBE",
+  "tracking_mask": "source-original bbox centre in physical walkway, y .4..1; before tracker association",
+  "cases": {
+    "pretrack_channel_only": {
+      "counts": {
+        "IN": 0,
+        "OUT": 0
+      },
+      "events": [],
+      "excluded_outside_channel_detections": 64,
+      "event_tracks": {}
+    },
+    "pretrack_channel_and_association": {
+      "counts": {
+        "IN": 1,
+        "OUT": 0
+      },
+      "events": [
+        {
+          "session_id": "purdue_camera24_20220608_v2",
+          "event_id": "purdue_camera24_20220608_v2:0:000001",
+          "track_id": "0:1",
+          "direction": "A->B",
+          "kind": "IN",
+          "entry_time_s": 8.2,
+          "entry_frame0": 246,
+          "time_s": 11.4,
+          "frame0": 342,
+          "axis_position": 0.8229787190755208
+        }
+      ],
+      "excluded_outside_channel_detections": 64,
+      "event_tracks": {
+        "0:1": {
+          "first": {
+            "frame0": 246,
+            "time_s": 8.2,
+            "track_id": "0:1",
+            "xyxy": [
+              43.72696304321289,
+              604.76708984375,
+              694.0617065429688,
+              1076.8458251953125
+            ],
+            "confidence": 0.2325453907251358
+          },
+          "last": {
+            "frame0": 342,
+            "time_s": 11.4,
+            "track_id": "0:1",
+            "xyxy": [
+              1240.23828125,
+              268.6885986328125,
+              1920.0,
+              725.7200927734375
+            ],
+            "confidence": 0.44058239459991455
+          },
+          "observations": 12
+        }
+      }
+    }
+  },
+  "day2_complete_outcomes_not_read_or_used": true,
+  "new_model_forwards": 0
+}

@@ -1,0 +1,63 @@
+{
+  "status": "USER_SOURCE_VIDEO_COUNTS_AND_DIRECTIONS_CONFIRMED_BEFORE_PREDICTION",
+  "reviewed_at_UTC": "2026-11-01T07:54:42.241539+00:00",
+  "user_statement": "1，从左到右，都是1",
+  "review_method": "User reviewed source-only previews with gate lines and no model predictions",
+  "independent_exact_timed_event_reference_supplied": false,
+  "cases": [
+    {
+      "case_id": "purdue_day1_s2",
+      "source_video_sha256": "ad8ccd95ca116f6a9dcc99605a3dfec4e5c54a76eea05f03aa3de94f03044cb4",
+      "preview_sha256": "ddb9a489af482593020ffbf95be29c0813f3788f148630402c315ea4057b3dd8",
+      "reviewed_source_frame0_interval": [
+        0,
+        440
+      ],
+      "user_confirmed_counts": {
+        "A->B": 1,
+        "B->A": 0,
+        "IN": 1,
+        "OUT": 0
+      },
+      "direction_definition": "A->B is left-to-right in original coordinates",
+      "review_gate": {
+        "axis": "x",
+        "perpendicular_roi": [
+          0.0,
+          1.0
+        ],
+        "lower": 0.4,
+        "upper": 0.6
+      },
+      "exact_entry_and_completion_times": null,
+      "partial_animal_count_not_supplied": true
+    },
+    {
+      "case_id": "purdue_day2_s2",
+      "source_video_sha256": "c67a675ca284da385c2bbb19300a2072ae20169ab1b78f7bd928437e65810b6e",
+      "preview_sha256": "70b38c3306bab8eca39107540cbd53a6faaa4906bf0125f1665941d4aed2c1de",
+      "reviewed_source_frame0_interval": [
+        0,
+        341
+      ],
+      "user_confirmed_counts": {
+        "A->B": 1,
+        "B->A": 0,
+        "IN": 1,
+        "OUT": 0
+      },
+      "direction_definition": "A->B is left-to-right in original coordinates",
+      "review_gate": {
+        "axis": "x",
+        "perpendicular_roi": [
+          0.0,
+          1.0
+        ],
+        "lower": 0.4,
+        "upper": 0.6
+      },
+      "exact_entry_and_completion_times": null,
+      "partial_animal_count_not_supplied": true
+    }
+  ]
+}

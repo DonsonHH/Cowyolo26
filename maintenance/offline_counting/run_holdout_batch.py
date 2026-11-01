@@ -18,6 +18,9 @@ def main(args):
     # The child changes cwd to repo; resolve all user paths in the launch cwd first.
     for name in ("repo", "inputs", "configs", "output"):
         setattr(args, name, getattr(args, name).resolve())
+    suffix = getattr(args, "video_suffix", ".mp4")
+    if not isinstance(suffix, str) or len(suffix) < 2 or not suffix.startswith(".") or any(c in suffix for c in "/\\"):
+        raise ValueError("video_suffix must be a file extension")
     args.output.mkdir(parents=True, exist_ok=False)
     record = {"status": "RUNNING", "PID": os.getpid(),
               "started_at_UTC": datetime.now(timezone.utc).isoformat(),
@@ -32,7 +35,7 @@ def main(args):
             if Path(case).name != case or case in (".", ".."):
                 raise ValueError("Case must be a simple name")
             command = [sys.executable, "-u", "-m", "counting", "--video",
-                       str(args.inputs / (case + ".mp4")), "--config",
+                       str(args.inputs / (case + suffix)), "--config",
                        str(args.configs / (case + ".json")), "--output", str(args.output / case)]
             row = {"case_id": case, "command": command, "status": "RUNNING"}
             record["cases"].append(row)
@@ -71,4 +74,5 @@ if __name__ == "__main__":
     for name in ("repo", "inputs", "configs", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--cases", nargs="+", required=True)
+    parser.add_argument("--video-suffix", default=".mp4")
     main(parser.parse_args())

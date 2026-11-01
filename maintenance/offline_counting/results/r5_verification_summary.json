@@ -77,9 +77,14 @@
     "model_IN": 11,
     "assistant_source_only_provisional_IN": 12,
     "absolute_total_count_difference_against_provisional_only": 1,
-    "not_an_event_false_negative_score": true
+    "not_an_event_false_negative_score": true,
+    "user_confirmed_IN": 12
   },
   "event_precision_recall_f1": null,
-  "reason_for_no_accuracy_score": "No independent reviewed event reference for new sessions; original user acceptance applies to Aug14 only.",
-  "additional_inference_from_this_check": 0
+  "reason_for_no_accuracy_score": "Aug15 user confirms first missing passage and all 11 shown passages correct; exact independent timestamps absent. No formal timed-event scoring fabricated. V2 needs new unseen-source validation.",
+  "additional_inference_from_this_check": 0,
+  "aug15_user_review": "r5_aug15_user_review.json",
+  "baseline_aug15_known_miss_confirmed": true,
+  "candidate_v2_fix": "fast_passage_board_replay_summary.json",
+  "aug15_current_data_role": "DEVELOPMENT_AFTER_RULE_SELECTION"
 }

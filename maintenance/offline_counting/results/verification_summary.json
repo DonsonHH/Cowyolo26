@@ -1,11 +1,12 @@
 {
-  "overall_status": "ORIGINAL_DEMO_USER_ACCEPTED_R5_ACCURACY_NOT_ACCEPTED",
+  "overall_status": "FROZEN_PURDUE_DATE_VALIDATION_FAILED_DELIVERY_READY",
   "R1_native_build": "PASS_CLEAN_BUILD_AND_LOAD",
   "PC_tests": {
     "review_fixed_python_tests": 62,
-    "log": "review_fixes_final_pc.log"
+    "log": "review_fixes_final_pc.log",
+    "latest_total": 87
   },
-  "board_tests": 37,
+  "board_tests": 57,
   "board_complete_video_runs": [
     {
       "name": "v1",
@@ -56,9 +57,9 @@
   "original_clip_manual_JSON_required": false,
   "original_demo_acceptance_record": "user_video_acceptance.json",
   "board_v3_wall_throughput_fps": 0.5442818532690921,
-  "recorded_at_UTC": "2026-10-31T19:43:25.003440+00:00",
+  "recorded_at_UTC": "2026-11-01T06:35:04.781369+00:00",
   "current_reference_mode": "USER_ACCEPTED_ANNOTATED_VIDEO_FOR_ORIGINAL_SCOPE",
-  "independent_R5_status": "THREE_BOARD_CASES_COMPLETED_ACCURACY_NOT_ACCEPTED",
+  "independent_R5_status": "BASELINE_FAST_PASSAGE_REPAIRED_FINAL_CAMERA24_DATE_VALIDATION_FAILED",
   "current_review_gate_metadata_bound": true,
   "PTS_sampling_and_real_time_motion_verified": true,
   "board_v3_counts": {
@@ -105,11 +106,60 @@
     "overall_elapsed_s_sum": 1726.3916969600032
   },
   "independent_R5_event_precision_recall_f1": null,
-  "new_session_human_confirmation_pending": true,
+  "new_session_human_confirmation_pending": false,
   "original_review_page_required": false,
-  "board_tests_log": "review_fixes_board.log",
+  "board_tests_log": "channel_v3_arm_tests.log",
   "supervisor_mock_tests": 4,
   "supervisor_mock_tests_log": "r5_supervisor_regression.log",
   "completion_audit": "../COMPLETION_AUDIT.md",
-  "fast_passage_excerpt": "r5_fast_passage_excerpt.json"
+  "fast_passage_excerpt": "r5_fast_passage_excerpt.json",
+  "current_blocker": "Purdue June9 frozen v3 complete board count0 versus pre-prediction user count1; fragmented detections/tracks; no retuning after reserved outcome",
+  "aug15_user_confirmation_received": true,
+  "aug15_user_confirmed_IN": 12,
+  "aug15_baseline_known_missed_passages": 1,
+  "fast_passage_repair_report": "../FAST_PASSAGE_FIX.md",
+  "fast_passage_pc_tests": 71,
+  "fast_passage_arm_tests": 46,
+  "fast_passage_candidate_profile": "counter-confirmation-v2",
+  "fast_passage_new_model_forwards": 0,
+  "independent_v2_status": "PURDUE_INITIAL_FULL_BOARD_BOTH_ZERO",
+  "latest_PC_tests": 87,
+  "latest_ARM_tests": 57,
+  "latest_clean_package_tests": 17,
+  "latest_test_logs": {
+    "PC": "channel_v3_pc_tests.log",
+    "ARM": "channel_v3_arm_tests.log",
+    "package": "channel_v3_clean_package.log"
+  },
+  "camera24_v3": {
+    "calibration_day1": {
+      "human_IN": 1,
+      "actual_IN": 1,
+      "execution_mode": "ARM_DETECTION_CACHE_REPLAY",
+      "new_model_forwards": 0
+    },
+    "reserved_day2": {
+      "human_IN": 1,
+      "actual_IN": 0,
+      "OUT": 0,
+      "decoded_frames": 342,
+      "model_forwards": 57,
+      "overall_elapsed_s": 71.36830510999425,
+      "status": "COUNT_VALIDATION_FAILED"
+    },
+    "freeze": "../CAMERA24_V3_FREEZE.json",
+    "no_retuning_after_reserved_result": true,
+    "reference": "purdue_user_source_review.json",
+    "reserved_summary": "channel_v3_reserved_summary.json",
+    "failure_trace": "channel_v3_reserved_failure_trace.json"
+  },
+  "all_current_board_processes_exited": true,
+  "current_goal_accuracy_completed": false,
+  "current_round_new_board_model_forwards": 344,
+  "current_round_new_FP32_reference_forwards": 77,
+  "formal_timed_event_precision_recall_f1": null,
+  "historical_board_tests": {
+    "tests": 37,
+    "log": "review_fixes_board.log"
+  }
 }

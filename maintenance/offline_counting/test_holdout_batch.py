@@ -56,6 +56,18 @@ class BatchContracts(unittest.TestCase):
     def test_interrupt_terminates_and_reaps_child(self):
         self.check_interruption()
 
+    def test_native_avi_input_keeps_its_extension(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary).resolve()
+            args = self.setup_paths(root)
+            args.video_suffix = ".avi"
+            child = Mock(pid=104)
+            child.wait.return_value = 0
+            with patch("subprocess.Popen", return_value=child) as popen:
+                main(args)
+            command = popen.call_args_list[0].args[0]
+            self.assertEqual(command[command.index("--video") + 1], str(root / "inputs/one.avi"))
+
     def test_interrupt_kills_child_after_grace_period(self):
         self.check_interruption(timeout=True)
 

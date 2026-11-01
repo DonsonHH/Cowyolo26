@@ -1,0 +1,105 @@
+{
+  "single_factor": "counter.stable_samples: 3 -> 2",
+  "cases": {
+    "original_aug14": {
+      "input_actual_run": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\runs\\board320_v3",
+      "output_replay_run": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\fast_passage_fix\\candidate_original_aug14_s2",
+      "original_counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "candidate_counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "count_check": {
+        "expected_IN": 12,
+        "passed": true
+      },
+      "tracks_match": true,
+      "maximum_track_box_difference_px": 1.52587890625e-05,
+      "added_event_track_ids": [],
+      "removed_event_track_ids": [],
+      "model_forwards": 0
+    },
+    "aug15": {
+      "input_actual_run": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\r5\\runs\\aug15_positive_v2",
+      "output_replay_run": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\fast_passage_fix\\candidate_aug15_s2",
+      "original_counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "candidate_counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "count_check": {
+        "expected_IN": 12,
+        "passed": true
+      },
+      "tracks_match": true,
+      "maximum_track_box_difference_px": 0.0,
+      "added_event_track_ids": [
+        [
+          "0:7",
+          "IN"
+        ]
+      ],
+      "removed_event_track_ids": [],
+      "model_forwards": 0
+    },
+    "aug16": {
+      "input_actual_run": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\r5\\runs\\aug16_partial_v1",
+      "output_replay_run": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\fast_passage_fix\\candidate_aug16_s2",
+      "original_counts": {
+        "IN": 6,
+        "OUT": 0,
+        "NET": 6
+      },
+      "candidate_counts": {
+        "IN": 6,
+        "OUT": 0,
+        "NET": 6
+      },
+      "count_check": {
+        "expected_IN": 6,
+        "passed": true
+      },
+      "tracks_match": true,
+      "maximum_track_box_difference_px": 0.0,
+      "added_event_track_ids": [],
+      "removed_event_track_ids": [],
+      "model_forwards": 0
+    },
+    "aug18_idle": {
+      "input_actual_run": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\r5\\runs\\aug18_idle_v2",
+      "output_replay_run": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\fast_passage_fix\\candidate_aug18_idle_s2",
+      "original_counts": {
+        "IN": 0,
+        "OUT": 0,
+        "NET": 0
+      },
+      "candidate_counts": {
+        "IN": 0,
+        "OUT": 0,
+        "NET": 0
+      },
+      "count_check": {
+        "expected_IN": 0,
+        "passed": true
+      },
+      "tracks_match": true,
+      "maximum_track_box_difference_px": 0.0,
+      "added_event_track_ids": [],
+      "removed_event_track_ids": [],
+      "model_forwards": 0
+    }
+  },
+  "all_from_actual_board_detections": true,
+  "new_model_forwards": 0,
+  "development_analysis_not_independent_validation": true
+}
