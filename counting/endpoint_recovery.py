@@ -17,6 +17,22 @@ def iou(a, b):
     return intersection / (area_a + area_b - intersection) if area_a + area_b > intersection else 0.
 
 
+def select_local_detection(predicted, candidates, existing, confidence, reacquire):
+    """Select a real local measurement while rejecting a neighboring cow."""
+    area = max(0., predicted[2] - predicted[0]) * max(0., predicted[3] - predicted[1])
+    accepted = []
+    for row in candidates:
+        candidate_area = (row[2] - row[0]) * (row[3] - row[1])
+        target_overlap = iou(predicted, row[:4])
+        if row[4] < confidence or not .25 * area <= candidate_area <= 4 * area or target_overlap < (.35 if reacquire else .2):
+            continue
+        if any(iou(row[:4], other[:4]) >= min(.5, target_overlap) for other in existing):
+            continue
+        accepted.append(row)
+    key = (lambda row: (iou(predicted, row[:4]), row[4])) if reacquire else (lambda row: (row[4], iou(predicted, row[:4])))
+    return max(accepted, key=key, default=None)
+
+
 class EndpointRecovery:
     def __init__(self, config, width, height):
         options = config.get("endpoint_recovery", {})
@@ -115,17 +131,5 @@ class EndpointRecovery:
         return result
 
     def select(self, proposal, candidates, existing):
-        predicted = proposal["predicted_box"]
-        existing = self._in_channel(existing)
-        area = max(0., predicted[2] - predicted[0]) * max(0., predicted[3] - predicted[1])
-        accepted = []
-        for row in self._in_channel(candidates):
-            candidate_area = (row[2] - row[0]) * (row[3] - row[1])
-            if row[4] < self.confidence or not .25 * area <= candidate_area <= 4 * area or iou(predicted, row[:4]) < (.35 if self.reacquire else .2):
-                continue
-            target_overlap = iou(predicted, row[:4])
-            if any(iou(row[:4], other[:4]) >= min(.5, target_overlap) for other in existing):
-                continue
-            accepted.append(row)
-        key = (lambda row: (iou(predicted, row[:4]), row[4])) if self.reacquire else (lambda row: (row[4], iou(predicted, row[:4])))
-        return max(accepted, key=key, default=None)
+        return select_local_detection(proposal["predicted_box"], self._in_channel(candidates),
+                                      self._in_channel(existing), self.confidence, self.reacquire)

@@ -14,6 +14,7 @@ import numpy as np
 
 from .backends import O8Detector, OnnxDetector, decode
 from .endpoint_recovery import EndpointRecovery
+from .birth_refinement import BirthRefinement
 from .geometry import Transform
 from .runner import Timing, memory_snapshot, save, sha, validate_config
 from .source_clock import SourceSampler
@@ -187,8 +188,10 @@ class LatestCapture:
         self.cap.release()
 
 
-def fast_history_needed(tracking, axis, threshold):
+def fast_history_needed(tracking, axis, threshold, policy='velocity'):
     """Select only already-arrived history when measured motion is fast."""
+    if policy not in ('velocity', 'gate_phase'):
+        raise ValueError('Unknown fast history policy')
     if threshold is None:
         return False
     coordinate = 1 if axis == 'y' else 0
@@ -202,6 +205,15 @@ def fast_history_needed(tracking, axis, threshold):
             continue
         distance = ((b1[coordinate]+b1[coordinate+2])-(b0[coordinate]+b0[coordinate+2]))/2
         if abs(distance) / (extent * (t1-t0)) >= threshold:
+            if policy == 'gate_phase':
+                state = tracking.counter.states.get(f'{tracking.epoch}:{int(track.track_id)}')
+                if state is None or state.origin not in ('A','B'):
+                    continue
+                heading = 1 if state.origin == 'A' else -1
+                position = np.clip([b1[coordinate], b1[coordinate+2]],0,extent).sum() / (2*extent)
+                midpoint = (tracking.counter.lower + tracking.counter.upper) / 2
+                if distance * heading <= 0 or (position - midpoint) * heading < 0:
+                    continue
             return True
     return False
 
@@ -211,6 +223,12 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
     started = time.monotonic()
     validate_config(config)
     history_velocity = config.get('fast_history_velocity')
+    history_policy = config.get('fast_history_policy', 'velocity')
+    history_after_birth = config.get('history_after_birth', False)
+    if not isinstance(history_after_birth,bool) or history_after_birth and config.get('capture',{}).get('buffer_frames') != 2:
+        raise ValueError('Post-birth history requires boolean option and buffer_frames2')
+    if history_policy not in ('velocity', 'gate_phase') or history_policy == 'gate_phase' and history_velocity is None:
+        raise ValueError('Gate-phase history needs a measured fast-history velocity')
     if history_velocity is not None and (isinstance(history_velocity,bool) or not math.isfinite(history_velocity) or history_velocity <= 0
         or config.get('tracker',{}).get('motion_box') != 'observed_velocity' or config.get('capture',{}).get('buffer_frames') != 2):
         raise ValueError('Fast history needs positive finite velocity, observed motion and buffer_frames2')
@@ -240,6 +258,7 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
     session_id = config.get("session_id") or str(uuid.uuid4())
     tracking = TrackingSession(config, capture.width, capture.height, target_hz, session_id)
     recovery = EndpointRecovery(config, capture.width, capture.height)
+    birth = BirthRefinement(config, capture.width, capture.height)
     sampler = SourceSampler(target_hz)
     summary = {"status": "STARTING", "session_id": session_id, "run_id": str(uuid.uuid4()),
                "video_id": config.get("video_id", Path(str(source)).stem),
@@ -248,7 +267,8 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
                "target_detector_hz": target_hz, "effective_nominal_sample_hz": target_hz,
                "model_forwards": 0, "base_model_forwards": 0,
                "warmup_model_forwards": 0,
-               "endpoint_recovery_forwards": 0, "processed_frames": 0, "sampler_rejected_frames": 0,
+               "endpoint_recovery_forwards": 0, "birth_refinement_forwards": 0,
+               "processed_frames": 0, "sampler_rejected_frames": 0,
                "future_frame_violations": 0, "counts": {"IN": 0, "OUT": 0, "NET": 0},
                "uncertain_records": 0, "accuracy_verified": False, "software_fixture_only": detector_factory is not None,
                "clock_contract": "CFR read/decode starts at arrival with verified PTS; bounded latest capture buffer; causal fast history selection; predictions never count",
@@ -264,6 +284,7 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
     frames_file, events_file, uncertain_file = files
     write = lambda file, row: file.write(json.dumps(row, allow_nan=False) + "\n")
     last_progress, sequence = -1e30, -1
+    birth_history_pending = False
     try:
         model = config["detector"]
         if detector_factory is not None:
@@ -298,12 +319,16 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
         save(output / "progress.json", summary)
         capture.start()
         while True:
-            preserve_history = fast_history_needed(tracking, config.get('axis','y'), history_velocity)
+            birth_history_requested = birth_history_pending
+            speed_history_requested = fast_history_needed(tracking, config.get('axis','y'), history_velocity, history_policy)
+            preserve_history = birth_history_requested or speed_history_requested
+            birth_history_pending = False
             packet = capture.take_after(sequence, prefer_history=preserve_history)
             if packet is None:
                 break
             sequence, pts, due, image = packet
             if not sampler.select(pts):
+                birth_history_pending = birth_history_requested
                 summary["sampler_rejected_frames"] += 1
                 continue
             tick = time.monotonic()
@@ -316,22 +341,41 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
             summary["base_model_forwards"] += 1
             detections = decode(raw, transform, config.get("confidence", .2), config.get("cow_class_ids", [0]))
             base_detections, refinements = detections, []
-            for proposal in recovery.proposals(pts, detections, tracking.counter.states, tracking.counter.stable_samples):
+            recovery_existing = detections[detections[:, 4] >= birth.high_threshold] if birth.enabled else detections
+            for proposal in recovery.proposals(pts, recovery_existing, tracking.counter.states, tracking.counter.stable_samples):
                 local = Transform.create(capture.width, capture.height, proposal["roi"], transform.rotation, detector.size)
                 local_tensor = getattr(local, prepare_method)(image)
                 local_raw = infer(local_tensor)
                 summary["model_forwards"] += 1
                 summary["endpoint_recovery_forwards"] += 1
                 candidates = decode(local_raw, local, config.get("confidence", .2), config.get("cow_class_ids", [0]))
-                selected = recovery.select(proposal, candidates, detections)
+                if birth.enabled:
+                    candidates = candidates[candidates[:, 4] >= birth.low_threshold]
+                selected = recovery.select(proposal, candidates, recovery_existing if birth.enabled else detections)
                 refinements.append({**proposal, "transform": asdict(local), "candidates": candidates.tolist(),
                                     "accepted_detection": None if selected is None else selected.tolist()})
                 if selected is not None:
                     detections = np.concatenate((detections, selected[None]))
+            birth_records = []
+            proposal = None if refinements else birth.proposal(pts, detections, tracking.tracker.tracked_stracks)
+            if proposal is not None:
+                local = Transform.create(capture.width, capture.height, proposal["roi"], transform.rotation, detector.size)
+                local_raw = infer(getattr(local, prepare_method)(image))
+                summary["model_forwards"] += 1
+                summary["birth_refinement_forwards"] += 1
+                candidates = decode(local_raw, local, config.get("confidence", .2), config.get("cow_class_ids", [0]))
+                selected = birth.select(proposal, candidates, detections)
+                birth_records.append({**proposal, "transform": asdict(local), "candidates": candidates.tolist(),
+                                      "accepted_detection": None if selected is None else selected.tolist()})
+                if selected is not None:
+                    detections = detections.copy()
+                    detections[proposal["seed_index"]] = selected
             recovered = time.monotonic()
             tracks, events, uncertain = tracking.update(sequence, pts, detections)
             if recovery.enabled:
                 recovery.record(pts, tracks, tracking.counter.states)
+            birth.record(pts, base_detections)
+            birth_history_pending = history_after_birth and any(row['accepted_detection'] is not None for row in birth_records)
             tracked = time.monotonic()
             event_publication_age = None
             for event in events:
@@ -349,9 +393,12 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
             write(frames_file, {"run_id": summary["run_id"], "frame0": sequence, "time_s": pts,
                                 "wall_since_stream_start_s": before_frame_log - capture.started,
                                 "age_before_frame_log_ms": (before_frame_log - due) * 1000, "event_publication_age_ms": event_publication_age,
-                                "fast_history_requested": preserve_history, "history_frame_selected": capture.last_take_history,
+                                "fast_history_requested": speed_history_requested, "history_frame_selected": capture.last_take_history,
+                                "history_selection_requested": preserve_history,
+                                "birth_history_requested": birth_history_requested,
                                 "base_detections": base_detections.tolist(), "detections": detections.tolist(),
-                                "endpoint_recovery": refinements, "tracks": tracks, "counts": summary["counts"].copy()})
+                                "endpoint_recovery": refinements, "birth_refinement": birth_records,
+                                "tracks": tracks, "counts": summary["counts"].copy()})
             summary["processed_frames"] += 1
             for name, seconds in (("preprocess", prepared - tick), ("base_inference", inferred - prepared),
                                   ("recovery", recovered - inferred), ("tracking", tracked - recovered)):

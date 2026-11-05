@@ -1,0 +1,83 @@
+{
+  "review_type": "AI visual self-inspection of real recorded entry/completion image pairs",
+  "checked_UTC": "2026-11-05T19:15:06.013224+00:00",
+  "run_id": "f1ef8fe0-f5e1-432c-be29-6ab03f2c067c",
+  "reviewed_event_ids": [
+    "rt_aug19_hd_s256_birth_v14:0:000001",
+    "rt_aug19_hd_s256_birth_v14:0:000002",
+    "rt_aug19_hd_s256_birth_v14:0:000003",
+    "rt_aug19_hd_s256_birth_v14:0:000004",
+    "rt_aug19_hd_s256_birth_v14:0:000005",
+    "rt_aug19_hd_s256_birth_v14:0:000006",
+    "rt_aug19_hd_s256_birth_v14:0:000007",
+    "rt_aug19_hd_s256_birth_v14:0:000008",
+    "rt_aug19_hd_s256_birth_v14:0:000009",
+    "rt_aug19_hd_s256_birth_v14:0:000010",
+    "rt_aug19_hd_s256_birth_v14:0:000011"
+  ],
+  "entry_completion_frames": [
+    [
+      15,
+      27
+    ],
+    [
+      74,
+      87
+    ],
+    [
+      84,
+      100
+    ],
+    [
+      90,
+      105
+    ],
+    [
+      140,
+      155
+    ],
+    [
+      155,
+      164
+    ],
+    [
+      170,
+      182
+    ],
+    [
+      192,
+      209
+    ],
+    [
+      219,
+      240
+    ],
+    [
+      272,
+      284
+    ],
+    [
+      370,
+      387
+    ]
+  ],
+  "source_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+  "source_matches_summary": true,
+  "run_evidence_sha256": {
+    "summary.json": "86e755afa3d05b3984145ef19c45cce8114054f3e2185b97361efee9302d57dd",
+    "events.jsonl": "fa3375305e231a70a317402ff685f80b3e55f7ba9439bbfddf5fa439429e2e73",
+    "frames.jsonl": "84f5d2da62320324e13ae9297d252c0e3af2610ce035e0e0f63bec33e6220d49",
+    "status.json": "0c406f5af849ff98ee5343b9cc0601c5094e1a3d55ec378d4f26f261506088c1"
+  },
+  "panel_sha256": {
+    "panel_01.jpg": "5cb348b63cff3914843d176aabf6ae0df03033422f3f1574980f4075e36e0d5c",
+    "panel_02.jpg": "ac00e8619dbf9ef94dc4f2357a22ce0a8f27302f5d0ef5e8052d7ae6194ca21a",
+    "panel_03.jpg": "e3d6d2f92e33035b7f2b571440d8a17da4776803a3b04f299f82953be175b27f"
+  },
+  "observations": "Viewed three panels covering11 upward events. The left cow of event3 remains distinct from the right white cow of event4 during overlap. Other black/white dorsal patterns and entry/completion positions are consistent; no obvious duplicate or switch. Entry snapshots can be tentative and unboxed. AI pair self-check only; reverse-direction GT remains unknown.",
+  "pair_review_passed": true,
+  "formal_event_precision_recall_claimed": false,
+  "independent_human_timed_ground_truth": false,
+  "new_user_acceptance": false,
+  "new_model_forwards": 0
+}

@@ -1,0 +1,44 @@
+"""Freeze one bounded Camera2 recovery retest; exact qualified source is reused."""
+from copy import deepcopy
+from datetime import datetime, timezone
+import json
+from pathlib import Path
+
+ROOT=Path(__file__).parent
+M=Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+load=lambda p:json.loads(p.read_text())
+def save(path,value):
+    assert not path.exists(),str(path)
+    path.write_bytes((json.dumps(value,indent=2,ensure_ascii=False)+'\n').encode())
+
+protocol=deepcopy(load(M/'REALTIME_BIRTH_V15_PROTOCOL.json'))
+common=deepcopy(protocol['profiles']['unified'])
+common['endpoint_recovery'].update(roi_scale=2.0,maximum_age_s=2.0)
+protocol.update(version='bounded-count-publication-1s-recovery-v16',
+                status='FROZEN_BEFORE_CAMERA2_RECOVERY_DEVELOPMENT_RETEST',
+                created_UTC=datetime.now(timezone.utc).isoformat(),profiles={'camera2_recovery':common},
+                clock_selection_rationale='The numerical service contract is unchanged from prior V14/V15; V16 is frozen before its own full runs. Original historical flags and assessments remain untouched. Aug20 is already exposed development data.',
+                selection_data='V15 Camera2 Aug19 UP10/11 and Aug20 UP12/12. Missing Aug19 track shows shifted local search and 1.5s recovery expiry. Enlarge only Camera2 ROI1.5->2 and age1.5->2. No GT in runtime.',
+                scope_note='Camera1 keeps original measured V14 fast preset, Camera2 uses the shared recovery preset on both dates. Same exact qualified V13R1 source and O8 model. This is installation-specific development replay verification, not independent generalization.')
+save(M/'REALTIME_BIRTH_V16_PROTOCOL.json',protocol)
+prior=sum(load(M/'results'/(f'aug20_hd_s256_birth_{r}_summary.json'))['model_forwards'] for r in ['v14','v15'])
+for prefix in ['aug19','aug20']:
+    old=prefix+'_hd_s256_birth_v15'
+    tag=prefix+'_hd_s256_birth_v16'
+    cfg=deepcopy(load(M/'realtime_configs'/(old+'.json')))
+    cfg['endpoint_recovery'].update(roi_scale=2.0,maximum_age_s=2.0)
+    cfg['session_id']='rt_'+tag
+    save(M/'realtime_configs'/(tag+'.json'),cfg)
+    profile=deepcopy(load(ROOT/(old+'_profile.json')))
+    profile.update(tag=tag,service_protocol='REALTIME_BIRTH_V16_PROTOCOL.json',service_profile='camera2_recovery',
+                   Aug20_model_forwards_before_freeze=prior,
+                   role='Camera2 development recovery retest after first Aug20 V14 failure and V15 exposure; no independent validation',
+                   changes='Only Camera2 recovery roi_scale1.5->2.0 and maximum_age_s1.5->2.0; other V15 settings and qualified V13R1 source unchanged.')
+    save(ROOT/(tag+'_profile.json'),profile)
+selection=deepcopy(load(M/'REALTIME_SELECTION_V15.json'))
+selection.update(revision='v16',
+                 configuration_description='Camera1保留原V14实测fast预设；Camera2两段使用相同V16恢复预设，只将局部搜索范围从1.5倍扩大为2倍、最大历史窗口从1.5秒增至2秒。其他共享算法参数相同，安装几何和方向按摄像头配置。Camera1复用原协议/评价；Camera2执行新的完整实机。')
+for prefix in ['aug19','aug20']:
+    selection['cases'][prefix].update(case=prefix+'_hd_s256_birth_v16',role='Camera2恢复预设开发回归')
+save(M/'REALTIME_SELECTION_V16.json',selection)
+print(json.dumps({'new_cases':2,'source_or_model_changed':False,'Aug20_prior_model_forwards':prior}))

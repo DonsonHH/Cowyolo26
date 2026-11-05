@@ -1,0 +1,81 @@
+"""New isolated current-source package and ARM tests; no detector inference."""
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import re
+import shlex
+import sys
+import tarfile
+
+from realtime_board import connect_target, run, REMOTE as RT, PY, LAP, M
+
+ROOT = Path(__file__).parent
+REVISION = sys.argv[2] if len(sys.argv) > 2 else 'v9r1'
+assert REVISION in ('v9', 'v9r1', 'v10', 'v11', 'v12', 'v13', 'v13r1')
+JOB = RT + '/birth_refinement_' + REVISION
+PKG = ROOT / ('counting_realtime_birth_' + REVISION + '_source.tar.gz')
+PREFIX = 'BIRTH_' + REVISION.upper()
+sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
+def stage(client):
+    with tarfile.open(ROOT / 'counting_realtime_fast_history_v7_source.tar.gz') as archive:
+        names = list(json.load(archive.extractfile('COUNTING_SOURCE_MANIFEST.json'))['source_sha256'])
+    names = sorted(set(names + ['counting/birth_refinement.py', 'counting/test_birth_refinement.py']))
+    manifest = {'source_sha256': {p: sha(M.parents[1] / p) for p in names},
+                'models_or_videos_included': False}
+    path = ROOT / (PREFIX + '_SOURCE_MANIFEST.json')
+    path.write_text(json.dumps(manifest, indent=2) + '\n')
+    assert not PKG.exists()
+    with tarfile.open(PKG, 'w:gz') as archive:
+        for name in names:
+            archive.add(M.parents[1] / name, arcname=name)
+        archive.add(path, arcname='COUNTING_SOURCE_MANIFEST.json')
+    command = 'cd ' + shlex.quote(JOB + '/runtime') + ' && ' + shlex.join([
+        'env', 'PYTHONPATH=' + JOB + '/runtime:' + LAP,
+        PY, '-m', 'unittest', 'discover', '-s', 'counting', '-t', '.', '-v'])
+    script = command + ' >' + JOB + '/software_tests.log 2>&1\ncode=$?\nprintf "%s\\n" "$code" >' + JOB + '/software_tests.exit\n'
+    local = ROOT / ('birth_' + REVISION + '_tests.sh')
+    local.write_bytes(script.encode())
+    sftp = client.open_sftp()
+    try:
+        sftp.mkdir(JOB)
+        sftp.put(str(PKG), JOB + '/source.tar.gz')
+        sftp.put(str(local), JOB + '/tests.sh')
+    finally:
+        sftp.close()
+    code = 'from pathlib import Path,PurePosixPath\nimport hashlib,tarfile\np=Path(' + repr(JOB) + ')\n'
+    code += "assert hashlib.sha256((p/'source.tar.gz').read_bytes()).hexdigest()==" + repr(sha(PKG)) + '\n'
+    code += "with tarfile.open(p/'source.tar.gz') as t:\n for m in t.getmembers():assert m.isfile() and not PurePosixPath(m.name).is_absolute() and '..' not in PurePosixPath(m.name).parts\n t.extractall(p/'runtime')\n"
+    run(client, PY + " - <<'PY'\n" + code + '\nPY')
+    out, _ = run(client, 'nohup sh ' + JOB + '/tests.sh </dev/null >' + JOB + '/tests_supervisor.log 2>&1 &\necho PID=$!')
+    record = {'package_sha256': sha(PKG), 'source_entries': len(names), 'stdout': out,
+              'started_UTC': datetime.now(timezone.utc).isoformat(), 'new_model_forwards': 0}
+    (ROOT / (PREFIX + '_TEST_LAUNCH.json')).write_text(json.dumps(record, indent=2) + '\n')
+    print(json.dumps(record))
+
+
+def collect(client):
+    sftp = client.open_sftp()
+    try:
+        with sftp.open(JOB + '/software_tests.exit') as file:
+            code = int(file.read())
+        sftp.get(JOB + '/software_tests.log', str(M / ('results/birth_' + REVISION + '_arm_tests.log')))
+    finally:
+        sftp.close()
+    data = (M / ('results/birth_' + REVISION + '_arm_tests.log')).read_text()
+    count = int(re.search(r'Ran (\d+) tests', data)[1])
+    assert code == 0 and count == {'v9': 120, 'v9r1': 121, 'v10': 122, 'v11':123, 'v12':125, 'v13':127, 'v13r1':127}[REVISION] and '\nOK' in data
+    proof = {'passed': True, 'exit_code': code, 'ARM_tests': count,
+             'new_model_forwards': 0, 'package_sha256': sha(PKG)}
+    (ROOT / (PREFIX + '_TESTS.json')).write_text(json.dumps(proof, indent=2) + '\n')
+    print(json.dumps(proof))
+
+
+if __name__ == '__main__':
+    client = connect_target()
+    try:
+        {'stage': stage, 'collect': collect}[sys.argv[1]](client)
+    finally:
+        client.close()

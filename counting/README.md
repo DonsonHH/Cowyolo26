@@ -1,4 +1,8 @@
-# 离线奶牛通道计数
+# 奶牛通道计数：离线与板端实时
+
+2026-11-06：当前板上实时结果、选择的安装配置与证据边界见[实机交付报告](../maintenance/offline_counting/REALTIME_DELIVERY_20261106.md)。实时入口为 `python -m counting.realtime --source INPUT --config CONFIG --output NEW_DIRECTORY`；本轮测试为按1倍墙钟到达的视频回放，全部在线处理在PYNQ-Z2执行。实体摄像头输入尚未验证。
+
+实时候选使用已确认的同一轨迹在相隔端区各一次真实位置，至少两张不同源图像，预测不能计数。下文两次/三次确认示例和旧离线成绩属于历史策略，未改写为新的实时成绩。源码精确版本见[恢复说明](../maintenance/offline_counting/qualified_birth_sources/README.md)，使用当前文件前应对齐案例源指纹。
 
 输入视频和通道配置，输出原图坐标下的检测、短期轨迹、IN／OUT／NET、逐事件记录及不确定片段。支持PC ONNX参考和PYNQ-Z2 O8后端。分辨率来自已导出的模型；采样频率可配置或处理所有帧，没有固定FPS验收要求。
 
@@ -19,7 +23,7 @@ python -m counting --video ABSOLUTE_VIDEO_PATH --config counting/config.example.
 
 `detection_roi_xyxy`是原视频像素坐标；`rotation_clockwise`支持0／90／180／270。`axis`为通行轴，`perpendicular_roi`为另一坐标的归一化范围。计数A／B区域由`counter.lower/upper`指定；A→中间→A不算完整通行，A→B→A算两个方向的两次通行。单类cow模型用`cow_class_ids:[0]`；通用COCO头应明确改为相应类别编号。
 
-源时间来自解码器PTS，时钟不递增时直接报错。运动矩阵、过程噪声和Lost过期均按实际源时间处理；单位步长保留冻结Kalman行为，非单位间隔的噪声扩展见source_clock.py。`lost_seconds`是真实源秒，计数状态也按源秒检查间隔和回收。预测位置不构成通行观察；实时采集与调度仍是后续范围。
+源时间来自解码器PTS，时钟不递增时直接报错。运动矩阵、过程噪声和Lost过期均按实际源时间处理；单位步长保留冻结Kalman行为，非单位间隔的噪声扩展见source_clock.py。`lost_seconds`是真实源秒，计数状态也按源秒检查间隔和回收。预测位置不构成通行观察；本节描述离线处理，实时采集与调度由独立 `counting.realtime` 入口负责。
 
 非零解码起点默认从文件头顺序定位，避免VFR的名义FPS跳转误标帧。可选`source_index_file`为同一原视频顺序解码生成的唯一PTS索引：先核对原文件hash，再核对跳转后实际PTS，匹配才使用快速定位；不匹配回退顺序解码。该索引没有检测／跟踪结果，不恢复旧实验状态。
 

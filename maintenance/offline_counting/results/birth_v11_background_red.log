@@ -1,0 +1,14 @@
+test_sub_low_background_needs_prior_track_and_unconfirmed_uses_own_stage (counting.test_birth_refinement.BirthRefinementTests.test_sub_low_background_needs_prior_track_and_unconfirmed_uses_own_stage) ... FAIL
+
+======================================================================
+FAIL: test_sub_low_background_needs_prior_track_and_unconfirmed_uses_own_stage (counting.test_birth_refinement.BirthRefinementTests.test_sub_low_background_needs_prior_track_and_unconfirmed_uses_own_stage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_birth_refinement.py", line 118, in test_sub_low_background_needs_prior_track_and_unconfirmed_uses_own_stage
+    self.assertIsNone(policy.proposal(21.8, [background], []))
+AssertionError: {'seed_index': 0, 'seed_detection': [434.0, 473.0, 526.0, 681.0, 0.037, 0.0], 'roi': [411, 421, 549, 720], 'predicted_box': [434.0, 473.0, 526.0, 681.0], 'reason': 'weak_origin_detection'} is not None
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

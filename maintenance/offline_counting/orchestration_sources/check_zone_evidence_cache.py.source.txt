@@ -1,0 +1,23 @@
+"""Compare actual confirmed-track two-line evidence; no counts are prescribed."""
+from copy import deepcopy
+import json
+from pathlib import Path
+from counting.tracking import TrackingSession
+
+M=Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+result={'new_model_forwards':0,'scope':'fixed actual image detections, config-only evidence comparison; not full realtime success','cases':[]}
+for tag in ['aug14_hd_s256_fast_v8','aug14_hd_s256_birth_v13r1','aug15_hd_s256_history_v7',
+            'aug15_hd_s256_birth_v12','aug19_hd_s256_birth_v11']:
+    summary=json.loads((M/'results'/(tag+'_summary.json')).read_text())
+    rows=[json.loads(line) for line in (M/'results'/(tag+'_frames.jsonl')).read_text().splitlines()]
+    for stable in [2,1]:
+        config=deepcopy(summary['config'])
+        config['counter']['stable_samples']=stable
+        session=TrackingSession(config,*summary['source_size'],config['sample_hz'],'zone-evidence-control')
+        events=[]
+        for row in rows:
+            _,found,_=session.update(row['frame0'],row['time_s'],row['detections'])
+            events.extend(found)
+        result['cases'].append({'tag':tag,'stable_samples_per_zone':stable,'counts':session.counter.summary(),'events':events})
+        print(tag,stable,session.counter.summary()['IN'])
+(M/'results/zone_evidence_cache_control_20261106.json').write_text(json.dumps(result,indent=2)+'\n')

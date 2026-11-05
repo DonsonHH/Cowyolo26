@@ -23,6 +23,8 @@ class TrackingSession:
                                 if config.get("channel_polygon") is not None else None)
         self.epoch = 0
         tracker = {**DEFAULT_TRACKER, **config.get("tracker", {})}
+        if tracker.get('prediction_axis') not in (None, config.get('axis', 'y')):
+            raise ValueError('prediction_axis must match the counting axis')
         lost_seconds = float(config.get("lost_seconds", 6.))
         tracker["track_buffer"] = max(1, math.ceil(sample_hz * lost_seconds))
         self.tracker_config = tracker

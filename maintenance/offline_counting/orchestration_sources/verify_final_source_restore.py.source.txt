@@ -1,0 +1,38 @@
+"""Restore every claimed runtime to a new directory and verify actual written bytes."""
+import hashlib
+import json
+from pathlib import Path
+
+ROOT=Path(__file__).parent
+REPO=Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo')
+M=REPO/'maintenance/offline_counting'
+destination=ROOT/'final_source_restore_check_20261106'
+destination.mkdir(exist_ok=False)
+sha=lambda data:hashlib.sha256(data).hexdigest()
+report={'new_model_forwards':0,'models_or_videos_included':False,'versions':{}}
+paths=[M/'qualified_v7_source/binding.json']+sorted((M/'qualified_birth_sources').glob('*/binding.json'))
+for path in paths:
+    value=json.loads(path.read_text())
+    version=path.parent.name
+    target=destination/version
+    target.mkdir()
+    entries=value['files'] if 'files' in value else value['source_sha256']
+    count=0
+    for name,entry in entries.items():
+        if isinstance(entry,dict):
+            digest=entry['sha256']
+            source=REPO/entry['path']
+        else:
+            digest=entry
+            source=M/value['overrides'][name] if name in value['overrides'] else REPO/name
+        data=source.read_bytes()
+        assert sha(data)==digest,name
+        output=target/name
+        assert output.resolve().is_relative_to(target.resolve())
+        output.parent.mkdir(parents=True,exist_ok=True)
+        output.write_bytes(data)
+        assert sha(output.read_bytes())==digest
+        count+=1
+    report['versions'][version]={'restored_and_verified_files':count,'binding_sha256':sha(path.read_bytes())}
+(M/'results/qualified_source_restore_final_20261106.json').write_bytes((json.dumps(report,indent=2)+'\n').encode())
+print(json.dumps(report))

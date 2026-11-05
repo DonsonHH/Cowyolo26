@@ -1,0 +1,174 @@
+"""Write a source-backed current report; missing or failed cases remain incomplete."""
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).parent
+REPO = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo')
+M = REPO/'maintenance/offline_counting'
+revision = sys.argv[1]
+load = lambda path: json.loads(path.read_text(encoding='utf-8-sig'))
+sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+write = lambda path, value: path.write_bytes(value.encode('utf-8'))
+selected=[]
+lines=[]
+selection_file=M/f'REALTIME_SELECTION_{revision.upper()}.json'
+selection=load(selection_file) if selection_file.exists() else None
+local_videos=[]
+for prefix, label, direction, role in [('aug14','Camera1 2023-08-14','DOWN','开发回归'),
+                                     ('aug15','Camera1 2023-08-15','DOWN','快牛回归'),
+                                     ('aug19','Camera2 2023-08-19','UP','安装配置回归'),
+                                     ('aug20','Camera2 2023-08-20','UP','本轮调参后新日期')]:
+    chosen=selection['cases'][prefix] if selection else {}
+    tag=chosen.get('case',prefix+'_hd_s256_birth_'+revision)
+    role=chosen.get('role',role)
+    local_videos.append(tag+'_review.mp4')
+    summary=M/'results'/(tag+'_summary.json')
+    assessment=M/'results'/(tag+'_assessment.json')
+    visual=M/'results'/(tag+'_visual_review.json')
+    if not summary.exists() or not assessment.exists():
+        selected.append({'case':tag,'status':'NOT_YET_TERMINALLY_ASSESSED'})
+        lines.append(f'| {label} | {role} | 未完成 | — | — | — |')
+        continue
+    s,a=load(summary),load(assessment)
+    count=a['actual_directional_counts'][direction]
+    reference=a['user_directional_reference'][direction]
+    review=load(visual) if visual.exists() else None
+    reviewed=bool(review and review.get('pair_review_passed') and review['run_id']==s['run_id'] and
+                  review['source_matches_summary'] and review['source_sha256']==s['video_sha256'] and
+                  review['reviewed_event_ids']==[row['event_id'] for row in
+                      [json.loads(line) for line in (M/'results'/(tag+'_events.jsonl')).read_text().splitlines() if line]] and
+                  all(review['run_evidence_sha256'][name]==sha(M/'results'/(tag+'_'+name))
+                      for name in ('summary.json','events.jsonl','frames.jsonl','status.json')))
+    row={'case':tag,'role':role,'run_id':s['run_id'],'counts':s['counts'],'actual_direction':direction,
+         'actual':count,'reference':reference,'source_duration_s':s['source_duration_s'],
+         'stream_wall_s':s['stream_wall_elapsed_s'],'base_observations':s['base_model_forwards'],
+         'total_model_forwards':s['model_forwards'],'birth_model_forwards':s.get('birth_refinement_forwards',0),
+         'endpoint_model_forwards':s['endpoint_recovery_forwards'],
+         'observations_per_wall_second':s['base_model_forwards']/s['stream_wall_elapsed_s'],
+         'counts_and_service_pass':a['counts_and_service_pass'],'AI_pair_reviewed':reviewed,
+         'assessment_path':str(assessment.relative_to(M)).replace('\\','/'),
+         'summary_sha256':sha(summary),'assessment_sha256':sha(assessment),
+         'event_p95_ms':a['event_publication_age'].get('p95_ms'),
+         'event_max_ms':a['event_publication_age']['maximum_ms'],
+         'observation_p95_upper_ms':a['observation_latency']['p95_upper_bound_ms']}
+    # User required accurate wall-paced counting, not the agent-added 1s
+    # event-publication limit. Preserve the original frozen-contract failure.
+    row['posthoc_engineering_delivery_checks_pass']=bool(a['integrity_pass'] and a['count_reference_pass'] and
+        all(value for key,value in a['clock_checks'].items() if key!='event_publication_deadline'))
+    row['original_frozen_service_contract_pass']=a['service_clock_pass']
+    selected.append(row)
+    verdict='通过' if a['counts_and_service_pass'] else '失败'
+    lines.append(f"| {label} | {role} | {direction} {count}/{reference} | {s['source_duration_s']:.1f} / {s['stream_wall_elapsed_s']:.2f}秒 | {row['observations_per_wall_second']:.2f}Hz | {verdict} |")
+complete=len(selected)==4 and all(row.get('posthoc_engineering_delivery_checks_pass') and row.get('AI_pair_reviewed') for row in selected)
+strict_service_complete=len(selected)==4 and all(row.get('original_frozen_service_contract_pass') for row in selected)
+title=('现有四段视频数齐并跟上实时输入' if complete else '实时计数与图像核查尚未全部完成')
+if complete and not strict_service_complete:
+    title+='；原1秒事件上限仍有超时'
+configuration_text=selection.get('configuration_description') if selection else None
+configuration_text=configuration_text or (
+    '四段使用同一算法预设：观测运动沿通道轴关联，按未完成目的端的阶段选择真实历史图像；弱候选须有近期轨迹或真实运动支持才触发当前图局部推理，成功补检后优先保留一张已到达图像。安装几何、方向及源范围随摄像头配置。Camera1复用原V14实测，逐项共享参数一致，原协议和评价保持原样，未按新协议重评；Camera2执行新的完整实机。'
+    if selection else
+    'Camera1使用观测运动并沿通道轴关联，按未完成目的端的阶段选择真实历史图像；弱候选须有近期轨迹或真实运动支持才触发当前图局部推理，成功补检后优先保留一张已到达图像。Camera2使用3Hz/Kalman安装配置，高分关联0.15、局部恢复最大年龄2秒。')
+exposure_text=('**首次新日期冻结验证已经失败：Aug20 V14为9/12，361次真实模型调用，服务通过、数量未通过。** 后续关联诊断和统一配置选择使用了该结果，Aug20此后的测试全部属于开发回归，当前没有独立日期验证通过的证据。'
+               if selection else
+               'Aug20用于冻结后的新日期检验；首轮结果必须保留，若失败后继续调参则转为开发材料。')
+erratum_text='V15冻结协议有一处继承文案，详见[SHA绑定勘误](REALTIME_BIRTH_V15_PROTOCOL_ERRATUM.json)：其中“untouched Aug20”是历史服务合同理由，V15的Aug20已暴露。原协议/冻结字节均保留，参数和评分未修改。' if (M/'REALTIME_BIRTH_V15_PROTOCOL_ERRATUM.json').exists() else ''
+table='| 视频 | 用途 | 实测/人工参考 | 输入末PTS / 流水线时间 | 实际模型观察率 | 原冻结计数及1秒事件合同 |\n|---|---|---|---|---|---|\n'+'\n'.join(lines)
+report=f'''# PYNQ-Z2：{title}
+
+实验日期：2026-11-06。当前候选 `{revision}`。以下结果直接读取各运行的终态、摘要和外部协议评价；实时准确计数以现有材料的已知方向总数为验收范围。
+
+用户要求是在板端实时完成计数，没有规定1秒事件上限。该上限由助手作为工程比较指标添加。本文将“数齐并跟上1倍输入”与“原冻结服务合同全部通过”分开：前者检查数量、完整性、采集、两帧队列、观察延迟及清空；后者仍保留原1秒事件判定，不能把超时改写为通过。全部逐事件AI图像核查完成才标记有界回放交付完成。
+
+此为[事后工程交付范围解释](COMPLETION_SCOPE_20261106.md)，不冒充新的预注册严格合同成功。
+
+{table}
+
+视频按1倍墙钟到达。PYNQ-Z2实际执行解码、通道裁剪/旋转、YOLO26n O8、跟踪、计数和事件日志；电脑仅提前适配完整视野的MJPEG采集格式，事后绘制核查视频。神经网络输入S256，采集1280×720/5Hz；实际模型观察率见表，5Hz并非强制验收目标。
+
+表中流水线时间从开始接收视频到处理结束，不包含进程导入和模型启动；运行摘要另记录startup_s及其边界。事件延迟包括本次板上解码到日志发布，实体摄像头传输尚未测试。
+
+## 当前配置与依据
+
+{configuration_text} 共用程序、模型和固件；完整配置及原始案例映射见当前实验索引。
+
+这是当前已有材料下选定的S256方案，不是所有摄像头的全局最优值。Camera2的2秒年龄参数同时用于端点恢复和起点补检的近期轨迹/弱运动支持；其起点ROI仍1.5倍，效果不能单独归因于端点。
+
+V14采用已确认轨迹在两个相隔端区各一次真实位置，事件至少来自两张不同源图像；两线间隔0.2画幅作为迟滞，最大观察间隔2秒。预测不计数，同图全局/局部检测只更新一次跟踪；起点和端点共享每帧最多一次额外模型调用。此前每端两帧的失败仍保留，没有事后改评为通过。来源总数只在外部冻结/评分文件内，未传入运行配置或用来改写结果。
+
+服务合同在运行前冻结：事件发布最多1秒，观察p95上界最多1秒、单次最多1.5秒，采集延后最多0.5秒，流尾清空最多1秒，图像队列最多两帧。旧运行内置500ms标志保持原值，不能与外部1秒协议混读。所有调用包括全局、热身、端点及起点计入摘要。
+
+原冻结服务合同是否全部通过：**{strict_service_complete}**。逐案最慢事件发布毫秒：{', '.join(row['case']+'='+str(round(row.get('event_max_ms',0),3)) for row in selected if 'event_max_ms' in row)}。如有超时，说明与实际值一起保留；不重评原始assessment，也不追加运行直到随机通过。
+
+## 失败、源码与复核
+
+保留V9R1的10/12、V10的12/11/10、V11的12/10/11、V12两段11/12、V13R1原片11/12等全部原始记录。关键问题包括弱起点、补检后丢图、框尺度变化的关联偏差、恢复时间及每端两帧条件与低观察率不匹配。V14只改现有样本数配置，复用相同已合格源码/模型；[计数证据对照](results/zone_evidence_cache_control_20261106.json)为零新增模型调用。各次失败没有被替换为后来的成绩。
+
+127项PC与127项ARM软件检查、两轴独立源码审阅另列，软件通过不作为模型精度。初版V13的一个ARM夹具固定序号断言失败已保留，修正版改核对当时实际最早保留帧，生产代码未变。各版精确50文件源码及覆盖文件见 [源码恢复](qualified_birth_sources/README.md)，模型、数据、视频和张量不上传。
+
+{exposure_text}
+
+{erratum_text}
+
+逐事件进入/完成图片有单独AI自查和指纹绑定，不是独立人工时刻GT，也不是用户重新验收。同牧场同相机，不主张与所有训练材料独立或跨牧场泛化。未知反向参考保持null，当前材料不足以报告正式事件Precision/Recall/F1、同机双向混流或实体摄像头传输的验证结论。
+
+当前四段全部AI源事件对核查是否完成：**{all(row.get('AI_pair_reviewed') for row in selected)}**，已记录事件合计{sum(row.get('actual',0) for row in selected)}次。当前有界开发回放交付是否完成：**{complete}**；原严格服务合同状态仍以表和上文False/True为准。
+
+## 证据入口
+
+- [当前实验索引](results/realtime_delivery_{revision}_index.json)：本表逐项结果、摘要/评价指纹。
+- [选定配置与运行方式](SELECTED_PRESETS_20261106.md)：板端入口、两套安装预设及新视频校准边界。
+- [运行前服务协议](REALTIME_BIRTH_{revision.upper()}_PROTOCOL.json)、各案例 `*_FREEZE.json`：配置、资产、源码和启动身份。
+- [审阅与修正](REVIEW.md)、[此前十次完整结果](results/realtime_results_index_20261106.json)：旧成功及失败。
+- 索引合计28份完成运行摘要/历史结果。早期部分记录缺少独立supervisor状态或run_id，不能与当前四案的配置、启动身份和输出强绑定证据等同。
+- 本机核查视频位于原工作区 `straight_channel_validation`：{', '.join('`'+name+'`' for name in local_videos)}。只在实际生成后可打开，视频不上传GitHub。
+'''
+write(M/'REALTIME_DELIVERY_20261106.md',report)
+index={'created_UTC':datetime.now(timezone.utc).isoformat(),'revision':revision,
+       'bounded_development_replay_delivery_complete':complete,'physical_camera_verified':False,
+       'original_frozen_service_contract_complete':strict_service_complete,
+       'completion_scope_is_post_hoc':True,
+       'completion_scope':'Post-hoc engineering delivery interpretation, after Aug19 V16 exceeded1s: existing development clips, known directional totals + source-pair AI self-check + wall-paced board keep-up; not all original1s service checks or independent accuracy verification',
+       'event_precision_recall_verified':False,'selected':selected,
+       'selection_manifest':selection,
+       'independent_generalization_verified':False,
+       'prior_ten_trial_index':'results/realtime_results_index_20261106.json'}
+additional=[]
+for summary in sorted((M/'results').glob('*_hd_s256_birth_v*_summary.json')):
+    tag=summary.name[:-len('_summary.json')]
+    terminal=M/'results'/(tag+'_status.json')
+    score=M/'results'/(tag+'_assessment.json')
+    if not terminal.exists():
+        continue
+    state=load(terminal)
+    s=load(summary)
+    a=load(score) if score.exists() else {}
+    additional.append({'case':tag,'terminal_status':state['status'],'exit_code':state.get('exit_code'),
+                       'run_id':s['run_id'],'counts':s['counts'],'model_forwards':s['model_forwards'],
+                       'stream_wall_s':s['stream_wall_elapsed_s'],
+                       'count_reference_pass':a.get('count_reference_pass'),
+                       'service_clock_pass':a.get('service_clock_pass'),
+                       'summary_sha256':sha(summary),'status_sha256':sha(terminal)})
+index['additional_terminal_trials']=additional
+index['total_terminal_trials_including_prior_index']=10+len(additional)
+index['prepared_without_recorded_launch']=[load(path)['tag'] for path in sorted(ROOT.glob('*_birth_v*_profile.json'))
+                                          if not (ROOT/load(path)['tag']/'launch.json').exists()]
+write(M/'results'/f'realtime_delivery_{revision}_index.json',json.dumps(index,ensure_ascii=False,indent=2)+'\n')
+if '--update-current' in sys.argv:
+    prefix=f'# 当前：{title}\n\n2026-11-06，候选 `{revision}`。完整结果、配置及证据边界见[实时交付](REALTIME_DELIVERY_20261106.md)。\n\n{table}\n\n模型/数据/视频留本机；所有历史失败保留。\n\n<!-- REALTIME_CURRENT_END -->\n'
+    old=(M/'STATUS.md').read_text(encoding='utf-8-sig')
+    history=old.split('<!-- REALTIME_CURRENT_END -->',1)[-1]
+    write(M/'STATUS.md',prefix+history)
+    root=(REPO/'README.md').read_text(encoding='utf-8-sig')
+    rest=root[root.index('## 从这里开始'):]
+    write(REPO/'README.md',f'# Cowyolo26：奶牛通道计数与研究归档\n\n2026-11-06 当前：**{title}**。最新[实机报告](maintenance/offline_counting/REALTIME_DELIVERY_20261106.md)与[状态](maintenance/offline_counting/STATUS.md)。\n\n本仓库保存课程与科研报告、实现、配置、实验、失败和源码恢复证据。当前目标是板上实时通道计数；模型、数据集、视频和张量保留本机。以下旧阶段导航中的日期属于历史记录。\n\n'+rest)
+    for path in [REPO/'HANDOFF.md', M/'REALTIME_PROGRESS_20261106.md']:
+        old=path.read_text(encoding='utf-8-sig')
+        marker='<!-- REALTIME_DELIVERY_CURRENT_END -->'
+        historical=old.split(marker,1)[-1] if marker in old else '\n## 此前交接与定位（历史）\n\n'+old
+        link='maintenance/offline_counting/REALTIME_DELIVERY_20261106.md' if path.parent==REPO else 'REALTIME_DELIVERY_20261106.md'
+        write(path,f'# 2026-11-06：{title}\n\n以[当前完整实机报告]({link})为准。以下保留此前阶段，不代表当前运行状态。\n\n{marker}\n'+historical)
+print(json.dumps({'report':str(M/'REALTIME_DELIVERY_20261106.md'),'complete':complete,'cases':len(selected)}))

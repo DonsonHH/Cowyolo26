@@ -29,6 +29,46 @@ class SlowPixelAdapter(GreenPixelAdapter):
 
 
 class RealtimeTests(unittest.TestCase):
+    def test_successful_slow_birth_keeps_the_next_arrived_real_frame(self):
+        class SlowLocalAdapter(GreenPixelAdapter):
+            def infer(self,tensor):
+                values=super().infer(tensor)
+                if values.shape[1]:
+                    box=values[0,0]
+                    if box[2]-box[0] < 40:
+                        box[4]=.12
+                    else:
+                        time.sleep(.12)
+                        box[4]=.9
+                return values
+        with tempfile.TemporaryDirectory(prefix='rt-post-birth-software-fixture-') as directory:
+            root=Path(directory)
+            source=root/'SOFTWARE_FIXTURE.avi'
+            video(source,[.22]*7,20)
+            config={'detector':{},'sample_hz':20.,'confidence':.02,'capture':{'buffer_frames':2},
+                    'history_after_birth':True,'birth_refinement':{'enabled':True},
+                    'tracker':{'motion_box':'observed_velocity','track_high_thresh':.15,'fuse_score':False},
+                    'counter':{'stable_samples':2}}
+            selections=[]
+            original=LatestCapture.take_after
+            def observed_take(capture,sequence,prefer_history=False):
+                with capture.condition:
+                    available=[packet[0] for packet in capture.pending if packet[0]>sequence]
+                    packet=original(capture,sequence,prefer_history)
+                    if prefer_history and available and packet is not None:
+                        selections.append((available,packet[0]))
+                    return packet
+            with patch.object(LatestCapture,'take_after',observed_take):
+                result=run(source,config,root/'output',detector_factory=lambda _:SlowLocalAdapter())
+            rows=[json.loads(line) for line in (root/'output/frames.jsonl').read_text().splitlines()]
+            self.assertEqual(result['birth_refinement_forwards'],1)
+            self.assertTrue(rows[1]['birth_history_requested'])
+            self.assertTrue(rows[1]['history_frame_selected'])
+            self.assertTrue(selections)
+            self.assertEqual(rows[1]['frame0'],min(selections[0][0]))
+            self.assertEqual(result['future_frame_violations'],0)
+            self.assertEqual(result['counts']['IN'],0)
+
     def log_wrapper(self, target_name, wrapper):
         original = Path.open
         def opened(path, *args, **kwargs):

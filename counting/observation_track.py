@@ -15,6 +15,7 @@ class ObservationTrack(STrack):
         self.observed_at = None
         self.query_time = None
         self.observations = []
+        self.prediction_axis = None
 
     def _record(self, detection):
         box = detection._tlwh.copy()
@@ -39,16 +40,22 @@ class ObservationTrack(STrack):
 
     @property
     def xyxy(self):
+        return self.box_at(self.query_time)
+
+    def box_at(self, time_s):
+        """Query association geometry without modifying observation history."""
         if not self.observations:
             return super().xyxy
         stamp, box = self.observations[-1]
-        if self.query_time is None or self.query_time <= stamp or len(self.observations) < 2:
+        if time_s is None or time_s <= stamp or len(self.observations) < 2:
             return box.copy()
         previous_time, previous_box = self.observations[-2]
         # Prediction is bounded in time and affects association only. Keep size
         # independent of entrance truncation and avoid aspect-ratio expansion.
-        elapsed = min(self.query_time - stamp, 1.5)
+        elapsed = min(time_s - stamp, 1.5)
         if stamp - previous_time > 1.5:
             return box.copy()
         velocity = ((box[:2] + box[2:]) - (previous_box[:2] + previous_box[2:])) / (2 * (stamp - previous_time))
+        if self.prediction_axis is not None:
+            velocity[0 if self.prediction_axis == 'y' else 1] = 0.
         return box + np.tile(velocity * elapsed, 2)

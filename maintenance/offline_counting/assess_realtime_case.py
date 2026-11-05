@@ -65,7 +65,7 @@ def assess(summary, events, frames, supervisor, freeze, protocol, protocol_sha25
         'event_counts_match_summary': all(event_counts[k] == summary['counts'][k] for k in event_counts),
         'publication_count_matches': summary['timings']['event_publication']['count'] == len(events),
         'capture_clean_eof': summary['capture']['capture_done'] and summary['capture']['capture_error'] is None,
-        'all_forward_calls_accounted': summary['model_forwards'] == summary['base_model_forwards'] + summary['warmup_model_forwards'] + summary['endpoint_recovery_forwards']
+        'all_forward_calls_accounted': summary['model_forwards'] == summary['base_model_forwards'] + summary['warmup_model_forwards'] + summary['endpoint_recovery_forwards'] + summary.get('birth_refinement_forwards', 0)
     }
     latency = summary['latency_entire_stream']
     publication = summary['timings']['event_publication']

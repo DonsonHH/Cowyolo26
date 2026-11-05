@@ -1,3 +1,12 @@
+# 2026-11-06：现有四段视频数齐并跟上实时输入；原1秒事件上限仍有超时
+
+以[当前完整实机报告](maintenance/offline_counting/REALTIME_DELIVERY_20261106.md)为准。以下保留此前阶段，不代表当前运行状态。
+
+<!-- REALTIME_DELIVERY_CURRENT_END -->
+
+
+## 此前交接与定位（历史）
+
 # 当前结果与交接说明
 
 2026-11-01最新：物理多边形通道v4已完成camera2连续原片实机，10次上行/人工11，仍未验收；用户指定的0:14–1:35回放已生成。源码、真值绑定与失败诊断见[当前状态](maintenance/offline_counting/STATUS.md)。

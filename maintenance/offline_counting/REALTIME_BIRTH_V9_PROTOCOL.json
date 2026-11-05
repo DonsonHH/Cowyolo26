@@ -1,0 +1,87 @@
+{
+  "version": "bounded-count-publication-1s-birth-v9",
+  "status": "FROZEN_BEFORE_V9_FULL_DEVELOPMENT_RUNS_AND_AUG20_INFERENCE",
+  "user_objective": "Accurate realtime passage counting on PYNQ-Z2; agent chooses resolution and FPS; use existing datasets without further questions.",
+  "selection_data": "Aug14 weak-origin and Aug19 weak-reacquisition diagnostics only; same generic profile on all cameras, geometry configured per installation.",
+  "clock_selection_rationale": "The earlier 500ms observation p95 and 250ms capture limits were agent-selected engineering targets, not user requirements. Preserve every historical realtime_clock_pass result. This practical service contract is fixed before subsequent complete regression runs and the untouched Aug20 inference; it does not relabel any old run.",
+  "maximum_event_publication_age_ms": 1000,
+  "maximum_observation_p95_upper_bound_ms": 1000,
+  "maximum_observation_age_ms": 1500,
+  "maximum_capture_lateness_ms": 500,
+  "maximum_end_of_stream_drain_s": 1,
+  "maximum_application_queue_frames": 2,
+  "future_frame_violations": 0,
+  "accuracy": "Each available user-confirmed directional total must match. Reference totals are not supplied to the counting process. Recorded trajectories and event videos must be inspected for obvious duplicate/canceling errors; no timed-event precision/recall is claimed without independent timed GT.",
+  "input_scope": "Prepared full-FOV camera-format MJPEG input arrives at 1x wall time; all online decode, crop, rotation, model input prep, O8, tracking, counting and JSONL publication run on PYNQ. Dataset adaptation to a selected capture format occurs offline on PC and is not an online board operation.",
+  "hardware_scope": "Existing O8 at 100MHz on PYNQ-Z2. No physical camera is attached. This is live-paced video replay, not a physical camera transport qualification.",
+  "held_out": "Camera2 Aug20: user UP12 before any Aug20 inference. Same farm/camera as Aug19, new date; not cross-farm. No parameter selection from Aug20 predictions. DOWN reference remains null.",
+  "created_UTC": "2026-11-05T17:19:27.045345+00:00",
+  "allowed_camera_specific_fields": [
+    "video_id",
+    "session_id",
+    "axis",
+    "in_direction",
+    "perpendicular_roi",
+    "channel_polygon",
+    "detection_roi_xyxy",
+    "expected_capture_frames",
+    "end_frame0_exclusive"
+  ],
+  "profiles": {
+    "birth_v9": {
+      "sample_hz": 5,
+      "detector": {
+        "backend": "o8",
+        "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+        "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+        "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+        "size": 256
+      },
+      "preprocess_mode": "resize_first_v1",
+      "detector_input": "native_bgr",
+      "warmup_model_forwards": 1,
+      "confidence": 0.02,
+      "counter": {
+        "lower": 0.4,
+        "upper": 0.6,
+        "stable_samples": 2,
+        "maximum_gap_s": 2
+      },
+      "tracker": {
+        "track_high_thresh": 0.15,
+        "track_low_thresh": 0.1,
+        "new_track_thresh": 0.25,
+        "match_thresh": 0.8,
+        "fuse_score": false,
+        "motion_box": "observed_velocity"
+      },
+      "endpoint_recovery": {
+        "enabled": true,
+        "roi_scale": 1.5,
+        "maximum_age_s": 1.5,
+        "maximum_per_frame": 1,
+        "maximum_extra_forwards": null,
+        "reacquire_missing_tracks": true,
+        "maximum_reacquisitions_per_origin": 8
+      },
+      "capture": {
+        "width": 1280,
+        "height": 720,
+        "fps": 5,
+        "fourcc": "MJPG",
+        "buffer_frames": 2
+      },
+      "expected_capture_size": [
+        1280,
+        720
+      ],
+      "track_only_in_channel": true,
+      "fast_history_velocity": 0.35,
+      "birth_refinement": {
+        "enabled": true,
+        "roi_scale": 1.5
+      }
+    }
+  },
+  "scope_note": "One generic candidate; existing development clips are regressions. Aug20 has had zero recorded model calls before this freeze."
+}

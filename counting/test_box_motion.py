@@ -5,6 +5,22 @@ from .tracking import TrackingSession
 
 
 class BoxMotionTests(unittest.TestCase):
+    def test_axis_prediction_keeps_real_crop_to_global_identity(self):
+        config = {'tracker': {'motion_box':'observed_velocity','prediction_axis':'y',
+                             'track_high_thresh':.15,'fuse_score':False},
+                  'counter': {'stable_samples':2}}
+        session = TrackingSession(config,1280,720,5,'real-crop-transition')
+        data = [(22., [[819.4847,2.7537,934.8971,232.4489,.7470348,0]]),
+                (22.4, [[809.7517,31.6125,897.9445,216.6084,.6569464,0]]),
+                (23., [[801.0188,102.2974,931.8194,367.4489,.5539324,0],
+                        [799.1862,106.9221,933.0646,364.3658,.4460676,0]])]
+        identities = []
+        for index, (stamp, boxes) in enumerate(data):
+            tracks, _, _ = session.update(index,stamp,np.asarray(boxes,np.float32))
+            self.assertEqual(len(tracks),1)
+            identities.append(tracks[0]['track_id'])
+        self.assertEqual(len(set(identities)),1)
+
     def test_measured_fast_entrance_keeps_one_identity_with_observed_velocity(self):
         # Actual S256 board detections, Aug15 realtime regression. These rows
         # test identity continuity only: they do not contain a full passage.

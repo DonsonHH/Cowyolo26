@@ -1,0 +1,36 @@
+"""Preserve the independently found old skip failure and corrected behavior."""
+import json
+from pathlib import Path
+import subprocess
+from types import ModuleType, SimpleNamespace
+import numpy as np
+
+from counting.birth_refinement import BirthRefinement
+
+REPO = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo')
+old_source = subprocess.check_output(['git', 'show', 'e2493ec6:counting/birth_refinement.py'], cwd=REPO).decode()
+module = ModuleType('counting._original_birth_v9')
+module.__package__ = 'counting'
+exec(compile(old_source, 'e2493ec6:counting/birth_refinement.py', 'exec'), module.__dict__)
+config = {'confidence': .02, 'birth_refinement': {'enabled': True},
+          'tracker': {'track_high_thresh': .15, 'track_low_thresh': .1,
+                      'new_track_thresh': .25, 'fuse_score': False}}
+box = np.array([400., 50., 600., 250.])
+seed = [400., 158., 600., 358., .12, 0]
+track = SimpleNamespace(is_activated=True, observations=[(.8, box)], box_at=lambda _: box)
+before = module.BirthRefinement(config, 1280, 1000).proposal(1., [seed], [track])
+after = BirthRefinement(config, 1280, 1000).proposal(1., [seed], [track])
+assert before is None and after is not None
+record = {'fixed_point': 'f3635b5cbd815614eac33b05b7fd96151c163509',
+          'initial_commit': 'e2493ec6', 'corrected_commit': 'b8b8788d',
+          'spec_initial_P2': 'Low-stage-ineligible seed incorrectly skipped local refinement; stale rather than current prediction used.',
+          'before_proposal': before, 'after_proposal': after,
+          'spec_P2_closed': True, 'spec_new_blockers': 0,
+          'standards_hard_violations': 0,
+          'standards_nonblocking_P3': 'Possible duplicate local measurement pipeline in realtime.py; deferred to avoid unrelated refactor.',
+          'independent_review_source': 'review_spec_nov06 and review_standards_nov06 agents; read-only software review',
+          'real_model_forwards': 0, 'hardware_accuracy_proven_by_review': False,
+          'initial_v9_prepared_only': True,
+          'pc_tests_corrected': 121, 'arm_tests_corrected': 121}
+(REPO / 'maintenance/offline_counting/results/birth_v9_review.json').write_text(json.dumps(record, indent=2)+'\n')
+print(json.dumps(record))

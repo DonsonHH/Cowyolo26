@@ -1,0 +1,29 @@
+{
+  "revision": "v16",
+  "source_revision": "v13r1",
+  "independent_generalization_verified": false,
+  "first_new_date_frozen_failure": {
+    "case": "aug20_hd_s256_birth_v14",
+    "actual_UP": 9,
+    "reference_UP": 12
+  },
+  "cases": {
+    "aug14": {
+      "case": "aug14_hd_s256_birth_v14",
+      "role": "复用已实测V14（共享参数一致）"
+    },
+    "aug15": {
+      "case": "aug15_hd_s256_birth_v14",
+      "role": "复用已实测V14（共享参数一致）"
+    },
+    "aug19": {
+      "case": "aug19_hd_s256_birth_v16",
+      "role": "Camera2恢复预设开发回归"
+    },
+    "aug20": {
+      "case": "aug20_hd_s256_birth_v16",
+      "role": "Camera2恢复预设开发回归"
+    }
+  },
+  "configuration_description": "Camera1保留原V14实测fast预设；Camera2两段使用相同V16恢复预设，只将局部搜索范围从1.5倍扩大为2倍、最大历史窗口从1.5秒增至2秒。其他共享算法参数相同，安装几何和方向按摄像头配置。Camera1复用原协议/评价；Camera2执行新的完整实机。"
+}

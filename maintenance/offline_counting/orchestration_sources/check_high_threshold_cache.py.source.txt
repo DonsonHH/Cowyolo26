@@ -1,0 +1,27 @@
+"""Association-only control on unchanged existing real measurements, zero inference."""
+from copy import deepcopy
+import json
+from pathlib import Path
+import sys
+from counting.tracking import TrackingSession
+
+M = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+result = {'scope': 'Existing real detections only; does not reproduce changed wall scheduling or new crops',
+          'new_model_forwards': 0, 'cases': []}
+tags = sys.argv[1:] or ['aug14_hd_s256_fast_v8', 'aug15_hd_s256_history_v7', 'aug19_hd_s256_history_v7']
+for tag in tags:
+    summary = json.loads((M / 'results' / (tag + '_summary.json')).read_text())
+    rows = [json.loads(line) for line in (M / 'results' / (tag + '_frames.jsonl')).read_text().splitlines()]
+    for high in [.2, .15]:
+        config = deepcopy(summary['config'])
+        config['tracker']['track_high_thresh'] = high
+        session = TrackingSession(config, *summary['source_size'], config['sample_hz'], 'control')
+        events = []
+        for row in rows:
+            _, found, _ = session.update(row['frame0'], row['time_s'], row['detections'])
+            events.extend(found)
+        result['cases'].append({'tag':tag,'high':high,'counts':session.counter.summary(),
+                                'events':[{k:e[k] for k in ('track_id','entry_time_s','time_s','direction')} for e in events]})
+        print(tag, high, session.counter.summary()['IN'])
+name = tags[0] + '_threshold_control.json' if len(tags) == 1 else 'high_threshold_cache_control_20261106.json'
+(M / 'results' / name).write_text(json.dumps(result,indent=2)+'\n')

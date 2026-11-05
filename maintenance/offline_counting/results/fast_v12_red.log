@@ -1,0 +1,24 @@
+test_axis_prediction_keeps_real_crop_to_global_identity (counting.test_box_motion.BoxMotionTests.test_axis_prediction_keeps_real_crop_to_global_identity) ... FAIL
+test_gate_phase_keeps_freshness_before_middle_and_stops_after_passage (counting.test_capture_history.CaptureHistoryTests.test_gate_phase_keeps_freshness_before_middle_and_stops_after_passage) ... ERROR
+
+======================================================================
+ERROR: test_gate_phase_keeps_freshness_before_middle_and_stops_after_passage (counting.test_capture_history.CaptureHistoryTests.test_gate_phase_keeps_freshness_before_middle_and_stops_after_passage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_capture_history.py", line 18, in test_gate_phase_keeps_freshness_before_middle_and_stops_after_passage
+    self.assertFalse(fast_history_needed(session,'y',.35,'gate_phase'))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: fast_history_needed() takes 3 positional arguments but 4 were given
+
+======================================================================
+FAIL: test_axis_prediction_keeps_real_crop_to_global_identity (counting.test_box_motion.BoxMotionTests.test_axis_prediction_keeps_real_crop_to_global_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_box_motion.py", line 20, in test_axis_prediction_keeps_real_crop_to_global_identity
+    self.assertEqual(len(tracks),1)
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+FAILED (failures=1, errors=1)

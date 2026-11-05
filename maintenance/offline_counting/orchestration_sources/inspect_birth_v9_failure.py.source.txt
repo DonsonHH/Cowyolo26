@@ -1,0 +1,36 @@
+"""Zero-inference comparison of the terminal V9R1 failure with its prior run."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+M = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+load = lambda path: json.loads(path.read_text())
+rows = lambda path: [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
+run = ROOT / 'aug14_hd_s256_birth_v9r1/result'
+summary = load(run / 'summary.json')
+frames = rows(run / 'frames.jsonl')
+result = {"model_forwards": summary['model_forwards'],
+          "base": summary['base_model_forwards'], 'birth': summary['birth_refinement_forwards'],
+          'endpoint': summary['endpoint_recovery_forwards'], 'timings': summary['timings'],
+          'prior_events': [{k:r[k] for k in ('track_id','entry_time_s','time_s')} for r in rows(M/'results/aug14_hd_s256_fast_v8_events.jsonl')],
+          'new_events': [{k:r[k] for k in ('track_id','entry_time_s','time_s')} for r in rows(run/'events.jsonl')],
+          'birth_proposals': [], 'missing_origin_window': [], 'uncertain': rows(run/'uncertain.jsonl'),
+          'new_model_forwards': 0}
+for frame in frames:
+    for proposal in frame.get('birth_refinement', []):
+        result['birth_proposals'].append({'frame0':frame['frame0'],'time_s':frame['time_s'],
+            'seed':proposal['seed_detection'], 'roi':proposal['roi'],
+            'local_max_score':max([d[4] for d in proposal['candidates']],default=None),
+            'accepted':proposal['accepted_detection']})
+    if 25 <= frame['time_s'] <= 32:
+        result['missing_origin_window'].append({k:frame[k] for k in
+            ('frame0','time_s','detections','tracks','endpoint_recovery','birth_refinement')})
+result['birth_accepted'] = sum(x['accepted'] is not None for x in result['birth_proposals'])
+(M/'results/aug14_birth_v9r1_failure_diagnosis.json').write_text(json.dumps(result,indent=2)+'\n')
+for key in ('base','birth','endpoint','birth_accepted','prior_events','new_events'):
+    print(key, json.dumps(result[key]))
+print('birth_times_scores', json.dumps([(x['time_s'],round(x['seed'][4],3),x['accepted'] is not None,
+                                       tuple(round(v) for v in x['seed'][:4])) for x in result['birth_proposals']]))
+for frame in result['missing_origin_window']:
+    print('window',frame['time_s'],[(t['track_id'],[round(v) for v in t['xyxy']]) for t in frame['tracks']],
+          [(round(d[4],3),[round(v) for v in d[:4]]) for d in frame['detections'] if d[0]>650])

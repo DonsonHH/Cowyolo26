@@ -62,6 +62,9 @@ class SourceTimeTracker(SecondStageIoUTracker):
         self.motion_box = getattr(args, 'motion_box', 'kalman')
         if self.motion_box not in ('kalman', 'observed_velocity'):
             raise ValueError('motion_box must be kalman or observed_velocity')
+        self.prediction_axis = getattr(args, 'prediction_axis', None)
+        if self.prediction_axis not in (None, 'x', 'y') or self.prediction_axis is not None and self.motion_box != 'observed_velocity':
+            raise ValueError('prediction_axis requires observed_velocity and axis x or y')
         if self.motion_box == 'observed_velocity':
             self.track_class = ObservationTrack
         super().__init__(args)
@@ -71,6 +74,7 @@ class SourceTimeTracker(SecondStageIoUTracker):
         if self.motion_box == 'observed_velocity':
             for track in tracks:
                 track.observed_at = self.source_time
+                track.prediction_axis = self.prediction_axis
         return tracks
 
     def _pre_first_associate(self, strack_pool, unconfirmed, img, results_high):

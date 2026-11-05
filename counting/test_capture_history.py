@@ -9,6 +9,19 @@ from .tracking import TrackingSession
 
 
 class CaptureHistoryTests(unittest.TestCase):
+    def test_gate_phase_keeps_freshness_before_middle_and_stops_after_passage(self):
+        session=TrackingSession({'tracker':{'motion_box':'observed_velocity'},
+                                 'counter':{'stable_samples':2}},1000,720,5,'gate-fixture')
+        for i,y in enumerate([.15,.25,.406]):
+            session.update(i,i*.4,np.array([[800,y*720-100,940,y*720+100,.9,0]],np.float32))
+        self.assertTrue(fast_history_needed(session,'y',.35))
+        self.assertFalse(fast_history_needed(session,'y',.35,'gate_phase'))
+        session.update(3,1.2,np.array([[800,.69*720-100,940,.69*720+100,.9,0]],np.float32))
+        self.assertTrue(fast_history_needed(session,'y',.35,'gate_phase'))
+        session.update(4,1.4,np.array([[800,.8*720-100,940,.8*720+100,.9,0]],np.float32))
+        self.assertEqual(session.counter.summary()['IN'],1)
+        self.assertFalse(fast_history_needed(session,'y',.35,'gate_phase'))
+
     def test_waiting_for_future_sequence_does_not_return_an_older_frame(self):
         with tempfile.TemporaryDirectory() as folder:
             source=Path(folder)/'SOFTWARE_FIXTURE.avi'
