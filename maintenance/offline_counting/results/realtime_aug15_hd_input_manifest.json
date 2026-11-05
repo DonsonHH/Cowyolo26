@@ -1,0 +1,43 @@
+{
+  "status": "PC_OFFLINE_CAMERA_FORMAT_ADAPTATION",
+  "created_UTC": "2026-11-02T04:41:04.738727+00:00",
+  "source_sha256": "81f72eba00b660be984d43a4c970b01db7f978e7e0f9c7f79f502cc2eba721e8",
+  "source_frame0_scope": [
+    0,
+    3244
+  ],
+  "input_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+  "input_frames_decoded": 649,
+  "input_size": [
+    1280,
+    720
+  ],
+  "input_fps": 5,
+  "last_input_PTS_s": 129.6,
+  "input_codec": "MJPEG",
+  "command": [
+    "ffmpeg",
+    "-nostdin",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-i",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\r5\\clips\\aug15_positive_v2\\input.mp4",
+    "-an",
+    "-vf",
+    "trim=start_frame=0:end_frame=3244,setpts=PTS-STARTPTS,fps=5,scale=1280:720:flags=bilinear",
+    "-c:v",
+    "mjpeg",
+    "-q:v",
+    "2",
+    "-pix_fmt",
+    "yuvj422p",
+    "-threads",
+    "2",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\realtime_inputs\\aug15_1280x720_5fps_mjpeg.avi"
+  ],
+  "input_bytes": 165126362,
+  "new_model_forwards": 0,
+  "source_scope_note": "Entire previously user-confirmed 12-passage clip, including first fast passage.",
+  "scope": "Full FOV. No ROI, rotation or model resize upstream; online decode/preprocessing/model/tracking/count on PYNQ. No physical camera test claimed."
+}

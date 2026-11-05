@@ -1,0 +1,16 @@
+test_local_video_cannot_be_mislabeled_as_unpaced_live_input (counting.test_realtime.RealtimeTests.test_local_video_cannot_be_mislabeled_as_unpaced_live_input) ... ok
+test_slow_consumer_keeps_latest_frame_and_bounded_drain (counting.test_realtime.RealtimeTests.test_slow_consumer_keeps_latest_frame_and_bounded_drain) ... ok
+test_wall_pacing_no_future_frames_and_real_counter (counting.test_realtime.RealtimeTests.test_wall_pacing_no_future_frames_and_real_counter) ... FAIL
+
+======================================================================
+FAIL: test_wall_pacing_no_future_frames_and_real_counter (counting.test_realtime.RealtimeTests.test_wall_pacing_no_future_frames_and_real_counter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_realtime.py", line 43, in test_wall_pacing_no_future_frames_and_real_counter
+    self.assertEqual(result["future_frame_violations"], 0)
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.857s
+
+FAILED (failures=1)

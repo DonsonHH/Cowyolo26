@@ -2,6 +2,7 @@
 import math
 import numpy as np
 from maintenance.counting_r1.tracker import SecondStageIoUTracker, TrackState
+from .observation_track import ObservationTrack
 
 
 class SourceSampler:
@@ -58,7 +59,25 @@ class SourceTimeTracker(SecondStageIoUTracker):
         self.nominal_hz, self.lost_seconds = nominal_hz, lost_seconds
         self.source_time = None
         self.delta = 1.
+        self.motion_box = getattr(args, 'motion_box', 'kalman')
+        if self.motion_box not in ('kalman', 'observed_velocity'):
+            raise ValueError('motion_box must be kalman or observed_velocity')
+        if self.motion_box == 'observed_velocity':
+            self.track_class = ObservationTrack
         super().__init__(args)
+
+    def init_track(self, results, img=None):
+        tracks = super().init_track(results, img)
+        if self.motion_box == 'observed_velocity':
+            for track in tracks:
+                track.observed_at = self.source_time
+        return tracks
+
+    def _pre_first_associate(self, strack_pool, unconfirmed, img, results_high):
+        if self.motion_box == 'observed_velocity':
+            for track in strack_pool + unconfirmed:
+                track.query_time = self.source_time
+        return super()._pre_first_associate(strack_pool, unconfirmed, img, results_high)
 
     def update_at(self, time_s, detections):
         if not math.isfinite(time_s) or self.source_time is not None and time_s <= self.source_time:

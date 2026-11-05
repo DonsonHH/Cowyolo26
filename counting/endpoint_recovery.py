@@ -27,9 +27,14 @@ class EndpointRecovery:
         self.max_age = float(options.get("maximum_age_s", 1.))
         self.max_per_frame = options.get("maximum_per_frame", 2)
         self.budget = options.get("maximum_extra_forwards", 32)
+        self.reacquire = options.get("reacquire_missing_tracks", False)
+        self.max_reacquisitions = options.get("maximum_reacquisitions_per_origin", 8)
+        if not isinstance(self.reacquire, bool):
+            raise ValueError("reacquire_missing_tracks must be boolean")
         if not math.isfinite(self.scale) or not 1 < self.scale <= 3 or not math.isfinite(self.max_age) or not 0 < self.max_age <= 2:
             raise ValueError("Invalid endpoint recovery scale or age")
-        if any(isinstance(v, bool) or not isinstance(v, int) or v < 1 for v in (self.max_per_frame, self.budget)) or self.max_per_frame > 8:
+        limits = [self.max_per_frame, self.max_reacquisitions] + ([] if self.budget is None else [self.budget])
+        if any(isinstance(v, bool) or not isinstance(v, int) or v < 1 for v in limits) or self.max_per_frame > 8:
             raise ValueError("Endpoint recovery needs positive bounded integer budgets")
         self.width, self.height = width, height
         self.gate = gate_from_config(config)
@@ -54,24 +59,41 @@ class EndpointRecovery:
                 self.history.setdefault(tid, deque(maxlen=2)).append((time_s, np.asarray(track["xyxy"], dtype=float)))
 
     def proposals(self, time_s, detections, states, stable_samples):
-        if not self.enabled or self.reserved_forwards >= self.budget:
+        if not self.enabled or self.budget is not None and self.reserved_forwards >= self.budget:
             return []
         detections = self._in_channel(detections)
         result = []
-        for tid in sorted(states):
+        def priority(tid):
+            state = states[tid]
+            destination = "A" if state.origin == "B" else "B"
+            pending = state.candidate == destination and 0 < state.streak < stable_samples
+            gate = self.gate["lower"] if destination == "A" else self.gate["upper"]
+            distance = abs(state.last_position - gate) if state.last_position is not None else float("inf")
+            return (not pending, distance, state.last_seen, tid)
+        identities = sorted(states, key=priority) if self.reacquire else sorted(states)
+        for tid in identities:
             state, history = states[tid], self.history.get(tid, ())
-            if state.origin not in ("A", "B") or state.candidate not in ("A", "B") or state.candidate == state.origin:
+            if state.origin not in ("A", "B") or len(history) < 2:
                 continue
-            if not 0 < state.streak < stable_samples or len(history) < 2:
+            destination = "A" if state.origin == "B" else "B"
+            pending = state.candidate == destination and 0 < state.streak < stable_samples
+            if not pending and not self.reacquire:
                 continue
             (t0, box0), (t1, box1) = history
             age = time_s - t1
             if not 0 < age <= self.max_age or t1 <= t0:
                 continue
-            key = (tid, state.origin_time, state.candidate)
-            if self.attempts.get(key, 0) >= 2:
-                continue
             center0, center1 = (box0[:2] + box0[2:]) / 2, (box1[:2] + box1[2:]) / 2
+            if not pending and time_s - t0 > self.max_age:
+                continue
+            dimension = 1 if self.gate["axis"] == "y" else 0
+            heading = -1 if destination == "A" else 1
+            if not pending and (center1[dimension] - center0[dimension]) * heading <= 0:
+                continue
+            key = (tid, state.origin_time, destination) if pending else (tid, state.origin_time, destination, "reacquire")
+            limit = 2 if pending else self.max_reacquisitions
+            if self.attempts.get(key, 0) >= limit:
+                continue
             center = center1 + (center1 - center0) * age / (t1 - t0)
             size = box1[2:] - box1[:2]
             predicted = np.r_[center - size / 2, center + size / 2]
@@ -84,8 +106,11 @@ class EndpointRecovery:
                 continue
             self.attempts[key] = self.attempts.get(key, 0) + 1
             self.reserved_forwards += 1
-            result.append({"track_id": tid, "roi": roi.tolist(), "predicted_box": predicted.tolist()})
-            if len(result) >= self.max_per_frame or self.reserved_forwards >= self.budget:
+            proposal = {"track_id": tid, "roi": roi.tolist(), "predicted_box": predicted.tolist()}
+            if self.reacquire:
+                proposal["reason"] = "endpoint_confirmation" if pending else "anchored_track_reacquisition"
+            result.append(proposal)
+            if len(result) >= self.max_per_frame or self.budget is not None and self.reserved_forwards >= self.budget:
                 break
         return result
 
@@ -96,10 +121,11 @@ class EndpointRecovery:
         accepted = []
         for row in self._in_channel(candidates):
             candidate_area = (row[2] - row[0]) * (row[3] - row[1])
-            if row[4] < self.confidence or not .25 * area <= candidate_area <= 4 * area or iou(predicted, row[:4]) < .2:
+            if row[4] < self.confidence or not .25 * area <= candidate_area <= 4 * area or iou(predicted, row[:4]) < (.35 if self.reacquire else .2):
                 continue
             target_overlap = iou(predicted, row[:4])
             if any(iou(row[:4], other[:4]) >= min(.5, target_overlap) for other in existing):
                 continue
             accepted.append(row)
-        return max(accepted, key=lambda row: (row[4], iou(predicted, row[:4])), default=None)
+        key = (lambda row: (iou(predicted, row[:4]), row[4])) if self.reacquire else (lambda row: (row[4], iou(predicted, row[:4])))
+        return max(accepted, key=key, default=None)

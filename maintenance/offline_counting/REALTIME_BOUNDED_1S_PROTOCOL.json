@@ -1,0 +1,33 @@
+{
+  "version": "bounded-count-publication-1s-v1",
+  "status": "FROZEN_AFTER_AUG19_DEVELOPMENT_BEFORE_AUG14_AUG15_REALTIME_REGRESSION_AND_AUG20_MODEL_INFERENCE",
+  "user_objective": "Accurate realtime passage counting on PYNQ-Z2; agent chooses resolution and FPS; use existing datasets without further questions.",
+  "selection_data": "Aug19 is development, including all prior resolution and capture-detail probes.",
+  "clock_selection_rationale": "The earlier 500ms observation p95 and 250ms capture limits were agent-selected engineering targets, not user requirements. Preserve every historical realtime_clock_pass result. This practical service contract is fixed before subsequent complete regression runs and the untouched Aug20 inference; it does not relabel any old run.",
+  "maximum_event_publication_age_ms": 1000,
+  "maximum_observation_p95_upper_bound_ms": 1000,
+  "maximum_observation_age_ms": 1500,
+  "maximum_capture_lateness_ms": 500,
+  "maximum_end_of_stream_drain_s": 1,
+  "maximum_application_queue_frames": 1,
+  "future_frame_violations": 0,
+  "accuracy": "Each available user-confirmed directional total must match. Reference totals are not supplied to the counting process. Recorded trajectories and event videos must be inspected for obvious duplicate/canceling errors; no timed-event precision/recall is claimed without independent timed GT.",
+  "input_scope": "Prepared full-FOV camera-format MJPEG input arrives at 1x wall time; all online decode, crop, rotation, model input prep, O8, tracking, counting and JSONL publication run on PYNQ. Dataset adaptation to a selected capture format occurs offline on PC and is not an online board operation.",
+  "hardware_scope": "Existing O8 at 100MHz on PYNQ-Z2. No physical camera is attached. This is live-paced video replay, not a physical camera transport qualification.",
+  "candidate": {
+    "capture": "1280x720 MJPEG 5 FPS",
+    "model": "qualified YOLO26n S256 INT8 O8",
+    "target_model_hz": 3,
+    "preprocess_mode": "resize_first_v1",
+    "detector_input": "native_bgr",
+    "warmup_model_forwards": 1,
+    "confidence": 0.1,
+    "track_high_thresh": 0.2,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "fuse_score": false,
+    "stable_samples": 2,
+    "endpoint_recovery": "causal actual-image reacquisition, max1 extra call per processed frame, max8 attempts per origin, max age1.5s"
+  },
+  "held_out": "Camera2 Aug20: user UP12 before any Aug20 inference. Same farm/camera as Aug19, new date; not cross-farm. No parameter selection from Aug20 predictions. DOWN reference remains null."
+}

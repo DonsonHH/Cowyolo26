@@ -77,7 +77,8 @@ class Transform:
             result[:, [1, 3]] = result[:, [1, 3]].clip(0, self.source_height)
         return result
 
-    def preprocess(self, image):
+    def prepare_bgr(self, image):
+        """Return the legacy letterboxed BGR bytes for the native engine input."""
         import cv2
         if image.shape[:2] != (self.source_height, self.source_width):
             raise ValueError("Source dimensions changed; start a new session")
@@ -89,4 +90,34 @@ class Transform:
         canvas = np.full((self.size, self.size, 3), 114, np.uint8)
         canvas[self.pad_top:self.pad_top + self.resized_height,
                self.pad_left:self.pad_left + self.resized_width] = resized
+        return canvas
+
+    def preprocess(self, image):
+        canvas = self.prepare_bgr(image)
         return np.ascontiguousarray(canvas[..., ::-1].transpose(2, 0, 1)[None], np.float32) / np.float32(255)
+
+    def prepare_bgr_resize_first(self, image):
+        """Same coordinate transform; resize before quarter-turn to avoid a large strided copy.
+
+        OpenCV integer interpolation order can differ by a pixel intensity level.
+        This is an explicit candidate preprocessing version, not bitwise parity.
+        """
+        import cv2
+        if image.shape[:2] != (self.source_height, self.source_width):
+            raise ValueError("Source dimensions changed; start a new session")
+        x1, y1, x2, y2 = self.roi
+        shape = ((self.resized_height, self.resized_width) if self.rotation in (90, 270)
+                 else (self.resized_width, self.resized_height))
+        resized = cv2.resize(image[y1:y2, x1:x2], shape, interpolation=cv2.INTER_LINEAR)
+        if self.rotation:
+            rotation = {90: cv2.ROTATE_90_CLOCKWISE, 180: cv2.ROTATE_180, 270: cv2.ROTATE_90_COUNTERCLOCKWISE}[self.rotation]
+            resized = cv2.rotate(resized, rotation)
+        canvas = cv2.copyMakeBorder(resized, self.pad_top, self.size - self.pad_top - self.resized_height,
+                                   self.pad_left, self.size - self.pad_left - self.resized_width,
+                                   cv2.BORDER_CONSTANT, value=(114, 114, 114))
+        return canvas
+
+    def preprocess_resize_first(self, image):
+        import cv2
+        canvas = self.prepare_bgr_resize_first(image)
+        return cv2.dnn.blobFromImage(canvas, scalefactor=1. / 255, swapRB=True, crop=False, ddepth=cv2.CV_32F)

@@ -1,0 +1,33 @@
+test_event_publication_delay_cannot_pass_the_realtime_clock_gate (counting.test_realtime.RealtimeTests.test_event_publication_delay_cannot_pass_the_realtime_clock_gate) ... FAIL
+test_log_close_failure_does_not_skip_detector_cleanup_or_summary (counting.test_realtime.RealtimeTests.test_log_close_failure_does_not_skip_detector_cleanup_or_summary) ... C:\Users\Donson\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\traceback.py:241: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Donson\\AppData\\Local\\Temp\\rt-close-software-fixture-z_1rwgtp\\output\\events.jsonl' mode='w' encoding='utf-8'>
+  tb.tb_frame.clear()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\Donson\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\traceback.py:241: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\Donson\\AppData\\Local\\Temp\\rt-close-software-fixture-z_1rwgtp\\output\\uncertain.jsonl' mode='w' encoding='utf-8'>
+  tb.tb_frame.clear()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ERROR
+
+======================================================================
+ERROR: test_log_close_failure_does_not_skip_detector_cleanup_or_summary (counting.test_realtime.RealtimeTests.test_log_close_failure_does_not_skip_detector_cleanup_or_summary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\AppData\Local\Temp\rt-historical-source-pyrtnwds\counting\test_realtime.py", line 134, in test_log_close_failure_does_not_skip_detector_cleanup_or_summary
+    run(source, {"detector": {}, "sample_hz": 10.}, root / "output", detector_factory=lambda _: adapter)
+  File "C:\Users\Donson\AppData\Local\Temp\rt-historical-source-pyrtnwds\counting\realtime.py", line 266, in run
+    file.close()
+  File "C:\Users\Donson\AppData\Local\Temp\rt-historical-source-pyrtnwds\counting\test_realtime.py", line 123, in close
+    raise OSError("SOFTWARE_FIXTURE_LOG_CLOSE_FAILURE")
+OSError: SOFTWARE_FIXTURE_LOG_CLOSE_FAILURE
+
+======================================================================
+FAIL: test_event_publication_delay_cannot_pass_the_realtime_clock_gate (counting.test_realtime.RealtimeTests.test_event_publication_delay_cannot_pass_the_realtime_clock_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\AppData\Local\Temp\rt-historical-source-pyrtnwds\counting\test_realtime.py", line 111, in test_event_publication_delay_cannot_pass_the_realtime_clock_gate
+    self.assertFalse(result["realtime_clock_pass"])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.498s
+
+FAILED (failures=1, errors=1)

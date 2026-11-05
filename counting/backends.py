@@ -43,6 +43,14 @@ class O8Detector:
     def infer(self, tensor):
         return self.graph.run(tensor).copy()
 
+    def infer_bgr(self, canvas):
+        canvas = np.asarray(canvas)
+        if canvas.dtype != np.uint8 or canvas.shape != (self.size, self.size, 3) or not canvas.flags.c_contiguous:
+            raise ValueError("Native BGR input requires contiguous uint8 letterboxed HWC bytes")
+        if not getattr(self.graph, "has_bgr", False):
+            raise ValueError("Registered native engine has no BGR entry")
+        return self.graph.run_image(canvas).copy()
+
     def close(self):
         import fcntl
         try:

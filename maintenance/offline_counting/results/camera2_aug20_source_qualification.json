@@ -1,0 +1,49 @@
+{
+  "status": "SOURCE_QUALIFIED_BEFORE_HUMAN_COUNT_AND_ANY_MODEL_PREDICTION",
+  "source_URL": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/videos/camera2/2023Aug20/2023-08-20T12-58-12.mp4",
+  "source_full_file_sha256": "b9628cdb7fb2ebabd4dc6878d7f7d7cb873a3ebb2accd1d8e553e840887c0ab1",
+  "native_excerpt_sha256": "f44c30c2bb84e043e81e46d34ae3994a4a5d02b38443f222dbce3a5ecd0a67f9",
+  "preview_sha256": "82c3e172c14c7dc31af0bd28110f9806282b8d820d01d312fdc40b3276eb05e5",
+  "requested_source_window_s": [
+    920,
+    1040
+  ],
+  "decoded_excerpt_frames": 2994,
+  "source_size": [
+    2560,
+    1440
+  ],
+  "nominal_fps": 24.999791250908057,
+  "first_decoded_PTS_s": 0.0,
+  "last_decoded_PTS_s": 119.721,
+  "expected_base_observations": 599,
+  "streamcopy_command": [
+    "ffmpeg",
+    "-nostdin",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-ss",
+    "920",
+    "-i",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\camera2_aug20_inputs\\full_native_2023-08-20T12-58-12.mp4",
+    "-t",
+    "120",
+    "-map",
+    "0:v:0",
+    "-an",
+    "-c:v",
+    "copy",
+    "-avoid_negative_ts",
+    "make_zero",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\camera2_aug20_inputs\\camera2_aug20_920s1040s_native.mp4"
+  ],
+  "config_sha256": "4d3d6d440ff0872c3d8b2a586f67082f36497e31a452aff76b1b4f6c54db330c",
+  "new_model_forwards": 0,
+  "human_reference": "PENDING",
+  "source_selection": "First file: sparse300/600/900/1200s samples empty; source-only10s pixel-change scan, humans180s excluded as no cows; visible multi-cow cohort940-1000s, continuous920-1040s chosen with context. No model outcomes used.",
+  "source_clock_note": "File naming and burnt-in CCTV wall clock differ; all evaluation uses decoded excerpt PTS, not inferred wall-time offsets",
+  "domain": "Same public MultiCamCows2024 farm/camera, new date; no cross-farm claim",
+  "frozen_detector_counter_and_geometry_unchanged_from_aug19_v5": true,
+  "created_UTC": "2026-11-01T18:12:04.386544+00:00"
+}

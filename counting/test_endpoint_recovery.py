@@ -109,20 +109,21 @@ class ScaleSensitivePixelAdapter(GreenPixelAdapter):
     """Test pixels disappear from a wide view but remain detectable after a crop."""
     def __init__(self, local_detection=True):
         self.local_detection = local_detection
+    cutoff = .35
 
     def infer(self, tensor):
         result = super().infer(tensor)
         if result.shape[1]:
             box = result[0, 0]
             local = box[2] - box[0] > 25
-            too_far = (box[1] + box[3]) / (2 * self.size) < .35
+            too_far = (box[1] + box[3]) / (2 * self.size) < self.cutoff
             if local and not self.local_detection or not local and too_far:
                 return np.zeros((1, 0, 6), np.float32)
         return result
 
 
 class EndpointRunnerTests(unittest.TestCase):
-    def trial(self, enabled, local_detection=True):
+    def trial(self, enabled, local_detection=True, reacquire=False, drop_before_gate=False):
         import cv2
         with tempfile.TemporaryDirectory(prefix="endpoint-software-fixture-") as folder:
             root = Path(folder)
@@ -138,9 +139,13 @@ class EndpointRunnerTests(unittest.TestCase):
             writer.release()
             config = {**CONFIG, "session_id": "SOFTWARE_FIXTURE", "in_direction": "B->A",
                       "detector": {"backend": "software_fixture"},
-                      "endpoint_recovery": {"enabled": enabled, "maximum_extra_forwards": 3}}
+                      "endpoint_recovery": {"enabled": enabled, "maximum_extra_forwards": None if reacquire else 3,
+                                            "reacquire_missing_tracks": reacquire}}
+            class BeforeGatePixelAdapter(ScaleSensitivePixelAdapter):
+                cutoff = .43
+            adapter = BeforeGatePixelAdapter if drop_before_gate else ScaleSensitivePixelAdapter
             summary = run(video, config, root / "output",
-                          detector_factory=lambda _: ScaleSensitivePixelAdapter(local_detection))
+                          detector_factory=lambda _: adapter(local_detection))
             rows = [json.loads(line) for line in (root / "output/frames.jsonl").read_text().splitlines()]
             return summary, rows
 
@@ -164,6 +169,54 @@ class EndpointRunnerTests(unittest.TestCase):
         self.assertEqual(summary["counts"]["IN"], 0)
         self.assertGreater(summary["endpoint_recovery_forwards"], 0)
         self.assertTrue(all(item["accepted_detection"] is None for row in rows for item in row["endpoint_recovery"]))
+
+    def test_measured_reacquisition_can_recover_loss_before_the_first_endpoint_sample(self):
+        baseline, _ = self.trial(True, drop_before_gate=True)
+        recovered, rows = self.trial(True, reacquire=True, drop_before_gate=True)
+        self.assertEqual(baseline["counts"]["IN"], 0)
+        self.assertEqual(recovered["counts"]["IN"], 1)
+        self.assertEqual(recovered["config"]["counter"]["stable_samples"], 2)
+        self.assertTrue(any(item["reason"] == "anchored_track_reacquisition" for row in rows for item in row["endpoint_recovery"]))
+
+    def test_missing_local_image_evidence_never_turns_reacquisition_into_a_passage(self):
+        result, rows = self.trial(True, local_detection=False, reacquire=True, drop_before_gate=True)
+        self.assertEqual(result["counts"]["IN"], 0)
+        self.assertTrue(all(item["accepted_detection"] is None for row in rows for item in row["endpoint_recovery"]))
+
+
+class ReacquisitionPolicyTests(unittest.TestCase):
+    policy = EndpointPolicyTests.policy
+    def test_middle_gap_requires_an_existing_origin_and_correct_motion(self):
+        policy = self.policy(reacquire_missing_tracks=True)
+        self.states["a"].candidate, self.states["a"].streak = None, 0
+        self.assertEqual(len(policy.proposals(1.4, [], self.states, 2)), 1)
+        policy = self.policy(reacquire_missing_tracks=True)
+        self.states["a"].candidate, self.states["a"].streak, self.states["a"].origin = None, 0, "A"
+        self.assertEqual(policy.proposals(1.4, [], self.states, 2), [])
+
+    def test_geometry_association_precedes_a_higher_score_on_a_worse_box(self):
+        policy = self.policy(reacquire_missing_tracks=True)
+        proposal, = policy.proposals(1.4, [], self.states, 2)
+        close = [300, 260, 500, 560, .3, 0]
+        displaced = [340, 260, 540, 560, .95, 0]
+        np.testing.assert_array_equal(policy.select(proposal, [displaced, close], []), close)
+
+    def test_continuous_mode_keeps_per_origin_and_frame_limits(self):
+        policy = self.policy(reacquire_missing_tracks=True, maximum_extra_forwards=None,
+                             maximum_reacquisitions_per_origin=1, maximum_per_frame=1)
+        self.states["a"].candidate, self.states["a"].streak = None, 0
+        self.assertEqual(len(policy.proposals(1.4, [], self.states, 2)), 1)
+        self.assertEqual(policy.proposals(1.6, [], self.states, 2), [])
+
+    def test_both_reacquisition_observations_must_be_within_the_age_window(self):
+        policy = self.policy(reacquire_missing_tracks=True)
+        self.states["a"].candidate, self.states["a"].streak = None, 0
+        history = policy.history["a"]
+        history[0] = (.4, history[0][1])
+        history[1] = (1.3, history[1][1])
+        self.assertEqual(policy.proposals(1.5, [], self.states, 2), [])
+        history[0] = (.5, history[0][1])
+        self.assertEqual(len(policy.proposals(1.5, [], self.states, 2)), 1)
 
 
 class EndpointNeighborTests(unittest.TestCase):

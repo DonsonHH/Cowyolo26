@@ -1,0 +1,36 @@
+"""Same-checkpoint FP32 diagnostic on seven selected development frames, no training."""
+import hashlib,json
+from pathlib import Path
+import cv2
+import numpy as np
+from counting.backends import OnnxDetector,decode
+from counting.geometry import Transform
+
+ROOT=Path(__file__).parent
+W=ROOT.parents[1]
+M=Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+model=W/'pynq_o8_sizes_20261030/delivery/s256/results/qualification/frozen_S256_rot90_seed26.onnx'
+assert hashlib.sha256(model.read_bytes()).hexdigest()=='b9e4cdbf74ad0e401b00bf39db079062a2115377120537be443026f79a880b15'
+source=ROOT/'realtime_inputs/aug14_1280x720_5fps_mjpeg.avi'
+config=json.loads((M/'realtime_configs/aug14_hd_s256_fast_v8.json').read_text())
+detector=OnnxDetector(model,threads=1)
+transform=Transform.create(1280,720,config['detection_roi_xyxy'],90,256)
+cap=cv2.VideoCapture(str(source));rows=[]
+try:
+    for frame in [134,135,136,137,138,139,140]:
+        assert cap.set(cv2.CAP_PROP_POS_FRAMES,frame)
+        ok,image=cap.read();assert ok
+        canvas=transform.prepare_bgr_resize_first(image)
+        tensor=np.ascontiguousarray(canvas[...,::-1].transpose(2,0,1)[None],np.float32)/np.float32(255)
+        raw=detector.infer(tensor)
+        rows.append({'frame0':frame,'time_s':frame/5,'tensor_sha256':hashlib.sha256(tensor.tobytes()).hexdigest(),
+                     'candidates':decode(raw,transform,.01,[0]).tolist()})
+finally:
+    detector.close();cap.release()
+report={'status':'COMPLETED_SAME_CHECKPOINT_FP32_DIAGNOSTIC','FP32_model_forwards':len(rows),'new_board_model_forwards':0,
+        'model_sha256':hashlib.sha256(model.read_bytes()).hexdigest(),'video_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
+        'scope':'Aug14 development only; same preprocessing and selected frames as new sparse INT8 board probe. Not realtime or independent accuracy evaluation.', 'rows':rows}
+(M/'results/origin_fp32_reference_20261106.json').write_text(json.dumps(report,indent=2)+'\n')
+for row in rows:
+    candidates=[b for b in row['candidates'] if 675<(b[0]+b[2])/2<920 and (b[1]+b[3])/2<370]
+    print(json.dumps({'frame':row['frame0'],'time':row['time_s'],'candidates':candidates[:12]}))
