@@ -1,0 +1,23 @@
+import json,os
+from pathlib import Path
+import cv2,numpy as np
+from counting.backends import O8Detector,decode
+from counting.geometry import Transform
+from prepare_o8_boot import durable_json
+p=Path(__file__).parent
+r={'status':'RUNNING','PID':os.getpid(),'model_forwards_completed':0,'rows':[],'scope':'Seven Aug14 development origin frames, reporting floor.01; no counting or realtime claim'}
+save=lambda:durable_json(p/'result.json',r)
+save()
+cfg=json.loads(Path('/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug14_hd_s256_fast_v8/config.json').read_text())
+cap=cv2.VideoCapture('/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug14_hd_s256_fast_v8/input.avi')
+detector=O8Detector(**{k:cfg['detector'][k] for k in ('root','program','plan','size')})
+try:
+ for f in (134, 135, 136, 137, 138, 139, 140):
+  cap.set(cv2.CAP_PROP_POS_FRAMES,f);ok,img=cap.read();assert ok
+  t=Transform.create(1280,720,cfg['detection_roi_xyxy'],90,256)
+  r['inflight_frame0']=f;save()
+  raw=detector.infer_bgr(t.prepare_bgr_resize_first(img));r['model_forwards_completed']+=1;r['inflight_frame0']=None
+  r['rows'].append({'frame0':f,'time_s':f/5,'candidates':decode(raw,t,0.01,[0]).tolist()});save()
+ r['status']='COMPLETED'
+finally:
+ cap.release();detector.close();save()

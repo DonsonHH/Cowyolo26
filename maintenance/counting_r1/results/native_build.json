@@ -1,0 +1,84 @@
+{
+  "status": "NOT_COMPILED_LOCAL_TOOLCHAIN_BLOCKED",
+  "attempts": [
+    {
+      "attempt": 0,
+      "directory": "C:\\Users\\Donson\\Documents\\Codex\\exports\\Cowyolo26-20261031\\r1_native_build",
+      "exit": 1,
+      "failure": "initial build before source restoration: missing resident_methods.inc",
+      "active_library_replaced": false
+    },
+    {
+      "attempt": 1,
+      "directory": "C:\\Users\\Donson\\Documents\\Codex\\exports\\Cowyolo26-20261031\\r1_native_build_restored",
+      "command": [
+        "C:\\Greenapps\\mingw64\\bin\\g++.exe",
+        "-O3",
+        "-std=c++17",
+        "-shared",
+        "-fopenmp",
+        "-ffp-contract=off",
+        "-static-libgcc",
+        "-static-libstdc++",
+        "queue_runtime.cpp",
+        "-Wl,-Bstatic",
+        "-lgomp",
+        "-Wl,-Bdynamic",
+        "-o",
+        "native_queue_pc.dll"
+      ],
+      "exit": 1,
+      "sources_SHA256": {
+        "queue_runtime.cpp": "f6e059b7bbcab05403e679ee2c1882b7f447b2b0f63bcbe2726143592b99557c",
+        "native_runtime.cpp": "b66a7a8af5764b6c2e04171cae3dc6d563adb39f6bfcd8bd5f78c2546c36e3b9",
+        "graph_executor.cpp": "f9438e47b48c16bdcad66bc76dcd1fc1eb22069fedcf94701257cc09494bfcf3",
+        "resident_methods.inc": "60ea2c12dac852b681ccb811a2eb7f6940e00c1b3abb4ccf6f57c4e7b54afe39",
+        "software_fusion.inc": "8a692eed81a97c42e643acdfb49407eb1eb35c4cafb514849730dd3d69f9183a"
+      },
+      "library": "C:\\Users\\Donson\\Documents\\Codex\\exports\\Cowyolo26-20261031\\r1_native_build_restored\\native_queue_pc.dll",
+      "SHA256": null,
+      "active_library_replaced": false,
+      "compiler_log_bytes": 0,
+      "path_bin_prepended": false
+    },
+    {
+      "attempt": 2,
+      "directory": "C:\\Users\\Donson\\Documents\\Codex\\exports\\Cowyolo26-20261031\\r1_native_build_pathfixed",
+      "command": [
+        "C:\\Greenapps\\mingw64\\bin\\g++.exe",
+        "-O3",
+        "-std=c++17",
+        "-shared",
+        "-fopenmp",
+        "-ffp-contract=off",
+        "-static-libgcc",
+        "-static-libstdc++",
+        "queue_runtime.cpp",
+        "-Wl,-Bstatic",
+        "-lgomp",
+        "-Wl,-Bdynamic",
+        "-o",
+        "native_queue_pc.dll"
+      ],
+      "exit": 1,
+      "sources_SHA256": {
+        "queue_runtime.cpp": "f6e059b7bbcab05403e679ee2c1882b7f447b2b0f63bcbe2726143592b99557c",
+        "native_runtime.cpp": "b66a7a8af5764b6c2e04171cae3dc6d563adb39f6bfcd8bd5f78c2546c36e3b9",
+        "graph_executor.cpp": "f9438e47b48c16bdcad66bc76dcd1fc1eb22069fedcf94701257cc09494bfcf3",
+        "resident_methods.inc": "60ea2c12dac852b681ccb811a2eb7f6940e00c1b3abb4ccf6f57c4e7b54afe39",
+        "software_fusion.inc": "8a692eed81a97c42e643acdfb49407eb1eb35c4cafb514849730dd3d69f9183a"
+      },
+      "library": "C:\\Users\\Donson\\Documents\\Codex\\exports\\Cowyolo26-20261031\\r1_native_build_pathfixed\\native_queue_pc.dll",
+      "SHA256": null,
+      "active_library_replaced": false,
+      "compiler_log_bytes": 0,
+      "path_bin_prepended": true
+    }
+  ],
+  "compiler_version": "MinGW-W64 GCC 13.2.0 x86_64-posix-seh-rev0",
+  "two_post_restoration_attempts_exit_1_without_diagnostics": true,
+  "compatible_compiler_not_established": true,
+  "native_runtime_correctness_proven": false,
+  "source_hash_recovery_proven_separately": true,
+  "followup": "Rebuild in a compatible existing PC/ARM environment in a later authorized task; no new hardware toolchain installed in R1."
+}

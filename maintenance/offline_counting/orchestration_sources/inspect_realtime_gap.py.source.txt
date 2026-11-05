@@ -1,0 +1,16 @@
+"""Read-only inspection of recorded model measurements around a source interval."""
+import json
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).parent
+tag, lo, hi = sys.argv[1], float(sys.argv[2]), float(sys.argv[3])
+rows = [json.loads(line) for line in (ROOT/tag/'result/frames.jsonl').read_text().splitlines()]
+for row in rows:
+    if lo <= row['time_s'] <= hi:
+        def brief(box):
+            return [round((box[0]+box[2])/2), round((box[1]+box[3])/2), round(box[2]-box[0]), round(box[3]-box[1])]
+        print(json.dumps({'t':row['time_s'], 'frame':row['frame0'],
+                          'detections':[[brief(d), round(d[4],3)] for d in row['detections']],
+                          'tracks':[[t['track_id'],brief(t['xyxy'])] for t in row['tracks']],
+                          'recovery':row.get('endpoint_recovery'), 'birth':row.get('birth_refinement')}, ensure_ascii=False))

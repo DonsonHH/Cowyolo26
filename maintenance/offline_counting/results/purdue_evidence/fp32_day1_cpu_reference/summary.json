@@ -1,0 +1,151 @@
+{
+  "status": "COMPLETED_UNSCORED",
+  "run_id": "5b89cbb4-6fa3-4013-91ce-4d115c3f9e2c",
+  "session_id": "purdue_camera24_day1_fp32_reference",
+  "video_id": "cam24_2022-06-08_08-29-23_2234_53550_53991",
+  "PID": 80556,
+  "video_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\offline_counting_20261031\\fast_passage_fix\\external_purdue\\sample1\\cam24_2022-06-08_08-29-23_2234_53550_53991.avi",
+  "video_sha256": "ad8ccd95ca116f6a9dcc99605a3dfec4e5c54a76eea05f03aa3de94f03044cb4",
+  "config": {
+    "video_id": "cam24_2022-06-08_08-29-23_2234_53550_53991",
+    "session_id": "purdue_camera24_day1_fp32_reference",
+    "sample_hz": 5,
+    "decode_start_frame0": 0,
+    "scope_start_frame0": 0,
+    "end_frame0_exclusive": 441,
+    "axis": "x",
+    "perpendicular_roi": [
+      0.0,
+      1.0
+    ],
+    "in_direction": "A->B",
+    "detection_roi_xyxy": null,
+    "rotation_clockwise": 0,
+    "confidence": 0.2,
+    "cow_class_ids": [
+      0
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 2,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "onnx",
+      "model": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_o8_sizes_20261030\\delivery\\s320\\results\\qualification\\frozen_S320_rot90_seed26.onnx",
+      "threads": 1
+    }
+  },
+  "nominal_fps": 30.0,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "source_stride": 6,
+  "effective_nominal_sample_hz": 5,
+  "sampling": {
+    "mode": "source_pts",
+    "requested_hz": 5,
+    "unavailable_source_sample_slots": 0,
+    "anchor_time_s": 0.0,
+    "minimum_source_frame_gap": 6,
+    "maximum_source_frame_gap": 6
+  },
+  "decoded_frames": 441,
+  "processed_frames": 74,
+  "wall_clock_skipped_frames": 0,
+  "sequential_lead_in_frames": 0,
+  "input_positioning_s": 0.0,
+  "fast_seek_verified_by_source_pts": false,
+  "seek_verification": {},
+  "time_source": "opencv source PTS",
+  "model_forwards": 74,
+  "counts": {
+    "IN": 1,
+    "OUT": 0,
+    "NET": 1
+  },
+  "uncertain_records": 3,
+  "accuracy_verified": false,
+  "software_fixture_only": false,
+  "runtime_versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.2.6",
+    "opencv": "4.12.0"
+  },
+  "startup_scope": "elapsed_s covers model/processed interval/close; overall_elapsed_s also includes open, exact sequential lead-in and input hashing",
+  "memory_before_model": {
+    "process_peak_rss_kib": null
+  },
+  "clock_contract": "PTS sampling; motion covariance and Lost expiry use elapsed source time; predictions never count as observations",
+  "latency_boundary": "decode selected source frame through event/log update; offline, no realtime deadline",
+  "model_sha256": "b7dd0db3c9fb80f0249c4821634c4ff9c65d95a503e609ef50ef3617fa512799",
+  "last_source_frame0": 438,
+  "last_source_time_s": 14.6,
+  "elapsed_s": 2.8439999999827705,
+  "overall_elapsed_s": 2.875,
+  "total_decoded_frames": 441,
+  "timings": {
+    "decode": {
+      "count": 74,
+      "mean_ms": 3.3918918917471594,
+      "maximum_ms": 46.999999991385266,
+      "p50_ms": 0.0,
+      "p95_ms": 16.00000000325963,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    },
+    "preprocess": {
+      "count": 74,
+      "mean_ms": 0.4054054053896736,
+      "maximum_ms": 15.000000013969839,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    },
+    "inference": {
+      "count": 74,
+      "mean_ms": 17.729729729802095,
+      "maximum_ms": 32.00000000651926,
+      "p50_ms": 16.00000000325963,
+      "p95_ms": 31.000000017229468,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    },
+    "tracking": {
+      "count": 74,
+      "mean_ms": 0.20270270289148432,
+      "maximum_ms": 15.000000013969839,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    },
+    "frame": {
+      "count": 74,
+      "mean_ms": 21.94594594569738,
+      "maximum_ms": 78.99999999790452,
+      "p50_ms": 16.00000000325963,
+      "p95_ms": 32.00000000651926,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    }
+  },
+  "counter_after_finish": {
+    "IN": 1,
+    "OUT": 0,
+    "NET": 1,
+    "active_states": 0,
+    "pending": 0,
+    "confirmation_guards": 0,
+    "maximum_state_count": 8
+  },
+  "maximum_state_count": 8,
+  "state_eviction_ttl_s": 6.2,
+  "memory_after_close": {
+    "process_peak_rss_kib": null
+  }
+}

@@ -1,0 +1,37 @@
+"""Config-only two-line candidate on the already qualified unchanged V13R1 source."""
+from copy import deepcopy
+from datetime import datetime, timezone
+import json
+from pathlib import Path
+
+ROOT=Path(__file__).parent
+M=Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+load=lambda path:json.loads(path.read_text())
+def save(path,value):
+    assert not path.exists(),str(path)
+    path.write_bytes((json.dumps(value,indent=2)+'\n').encode())
+protocol=load(M/'REALTIME_BIRTH_V13R1_PROTOCOL.json')
+fast=deepcopy(protocol['profiles']['birth_v13r1'])
+normal=deepcopy(protocol['profiles']['normal'])
+fast['counter']['stable_samples']=normal['counter']['stable_samples']=1
+protocol.update(version='bounded-count-publication-1s-two-line-v14',
+                status='FROZEN_BEFORE_V14_FULL_DEVELOPMENT_RUNS_AND_AUG20_INFERENCE',
+                created_UTC=datetime.now(timezone.utc).isoformat(),profiles={'birth_v14':fast,'normal':normal},
+                selection_data='Fixed real-detection controls of2 vs1 samples/zone:11to12,11to12,12to12,11to12,11to11. Source/model unchanged. Exact physical two-line evidence, not output correction; Aug20 untouched.',
+                candidate_counter_contract={'samples_per_zone':1,'minimum_distinct_actual_images_per_event':2,
+                                            'confirmed_track_required':True,'gate_separation':.2,
+                                            'predictions_count':False})
+save(M/'REALTIME_BIRTH_V14_PROTOCOL.json',protocol)
+for prefix in ['aug14','aug15','aug19']:
+    prior=prefix+'_hd_s256_birth_v13r1'
+    tag=prefix+'_hd_s256_birth_v14'
+    config=load(M/'realtime_configs'/(prior+'.json'))
+    config['session_id']='rt_'+tag
+    config['counter']['stable_samples']=1
+    save(M/'realtime_configs'/(tag+'.json'),config)
+    profile=load(ROOT/(prior+'_profile.json'))
+    profile.update(tag=tag,service_protocol='REALTIME_BIRTH_V14_PROTOCOL.json',
+                   service_profile='normal' if prefix=='aug19' else 'birth_v14',
+                   changes='Config-only: one real position per separated gate zone on a confirmed track; existing source/model/input geometry and all observed-count outputs untouched.')
+    save(ROOT/(tag+'_profile.json'),profile)
+print(json.dumps({'cases_prepared':3,'qualified_source_revision':'v13r1','new_model_forwards':0,'Aug20_model_calls':0}))

@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "fixture_only": true,
+  "cli_correct_simultaneous_opposite": {
+    "evaluation_version": "directional-event-set-v2.0",
+    "reference_events": 2,
+    "predicted_events": 2,
+    "TP": 2,
+    "FP": 0,
+    "FN": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "count_error": 0,
+    "absolute_count_error": 0,
+    "matching_tolerance_s": 2.0,
+    "assignment_objective": "same scope and direction; maximum cardinality then minimum absolute time error",
+    "total_time_error_s": 0.0,
+    "counts": {
+      "A->B": {
+        "reference_events": 1,
+        "predicted_events": 1,
+        "TP": 1,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "count_error": 0,
+        "absolute_count_error": 0
+      },
+      "B->A": {
+        "reference_events": 1,
+        "predicted_events": 1,
+        "TP": 1,
+        "FP": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "count_error": 0,
+        "absolute_count_error": 0
+      }
+    },
+    "pairs": [
+      {
+        "reference_index": 0,
+        "prediction_index": 1,
+        "reference_event_id": "SOFTWARE_r1",
+        "prediction_event_id": "SOFTWARE_p1",
+        "video_id": "",
+        "session_id": "",
+        "direction": "A->B",
+        "reference_time_s": 1.0,
+        "prediction_time_s": 1.0,
+        "time_error_s": 0.0,
+        "ambiguous_temporal_candidates": true
+      },
+      {
+        "reference_index": 1,
+        "prediction_index": 0,
+        "reference_event_id": "SOFTWARE_r2",
+        "prediction_event_id": "SOFTWARE_p2",
+        "video_id": "",
+        "session_id": "",
+        "direction": "B->A",
+        "reference_time_s": 1.0,
+        "prediction_time_s": 1.0,
+        "time_error_s": 0.0,
+        "ambiguous_temporal_candidates": true
+      }
+    ],
+    "unmatched_reference_indices": [],
+    "unmatched_prediction_indices": [],
+    "ambiguity": {
+      "policy": "flag temporal candidate competition; retain all events in set metrics",
+      "reference_indices": [
+        0,
+        1
+      ],
+      "prediction_indices": [
+        0,
+        1
+      ],
+      "does_not_certify_unique_physical_correspondence": true
+    },
+    "physical_direction": {
+      "status": "UNDETERMINED_WITHOUT_INDEPENDENT_CORRESPONDENCE",
+      "evaluated_pairs": 0,
+      "correct_direction_pairs": null,
+      "wrong_direction_pairs": null,
+      "unpaired_reference_events": 2,
+      "unpaired_prediction_events": 2,
+      "pairs": []
+    }
+  },
+  "pending_template_rejected": true,
+  "real_event_accuracy_verified": false
+}

@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETED_UNSCORED",
+  "PID": 6540,
+  "started_at_UTC": "2026-11-01T14:16:55.504131+00:00",
+  "case_order": [
+    "camera2_aug19_straight_120s"
+  ],
+  "cases": [
+    {
+      "case_id": "camera2_aug19_straight_120s",
+      "command": [
+        "/usr/local/share/pynq-venv/bin/python",
+        "-u",
+        "-m",
+        "counting",
+        "--video",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/inputs/camera2_aug19_straight_120s.mp4",
+        "--config",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/configs/camera2_aug19_straight_120s.json",
+        "--output",
+        "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/board_runs/camera2_aug19_straight_120s"
+      ],
+      "status": "EXITED",
+      "PID": 6547,
+      "exit_code": 0
+    }
+  ],
+  "accuracy_verified": false,
+  "boot_id": "e7059099-ecb8-451e-a9aa-a66c8222196b",
+  "updated_at_UTC": "2026-11-01T14:33:34.174678+00:00"
+}

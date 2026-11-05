@@ -1,0 +1,29 @@
+{
+  "status": "PRESPECIFIED_BEFORE_HOLDOUT_PREDICTIONS",
+  "created_at_UTC": "2026-10-31T18:11:01.931901+00:00",
+  "frozen_candidate_file": "FROZEN_CANDIDATE.json",
+  "dates": [
+    "2023Aug15",
+    "2023Aug16",
+    "2023Aug18"
+  ],
+  "camera": "camera1",
+  "source_files": [
+    "2023-08-15T12-50-59.mp4",
+    "2023-08-16T12-52-13.mp4",
+    "2023-08-18T12-53-40.mp4"
+  ],
+  "selection_rule": "First chronological daytime source on each prespecified new date; Aug14 and previously developed Aug17 excluded. No new-source model results used in selection.",
+  "before_prediction_actions": [
+    "verify raw source bytes and provenance",
+    "inspect source-only camera layout",
+    "predeclare contiguous passage windows with empty-channel context and censoring; do not choose windows by model results"
+  ],
+  "model_or_threshold_tuning_on_holdout": false,
+  "source_kind": "public raw monitor footage; no independent per-event labels claimed",
+  "reference_plan": "publisher annotations where obtainable; original-scope user video acceptance does not automatically certify these new sessions",
+  "no_dataset_model_or_video_publication": true,
+  "remote_download_PID": 2985875,
+  "remote_stage": "/share/home/renly/projects/idcoo_research_20261026/offline_counting_r5_20261101",
+  "minimum_event_volume": "3-5 sessions/~100 passages is a suggested starting scale, not an achieved count or certification"
+}

@@ -1,0 +1,35 @@
+test_actual_calibration_does_not_inherit_empty_scene_origin (counting.test_channel_tracking_profile.ChannelTrackingProfileTests.test_actual_calibration_does_not_inherit_empty_scene_origin) ... FAIL
+test_legacy_default_keeps_outside_tracking_behavior (counting.test_channel_tracking_profile.ChannelTrackingProfileTests.test_legacy_default_keeps_outside_tracking_behavior) ... ok
+test_outside_detections_do_not_enter_association (counting.test_channel_tracking_profile.ChannelTrackingProfileTests.test_outside_detections_do_not_enter_association) ... FAIL
+test_weak_association_reactivates_an_existing_strong_identity (counting.test_channel_tracking_profile.ChannelTrackingProfileTests.test_weak_association_reactivates_an_existing_strong_identity) ... ok
+test_weak_only_detections_cannot_create_an_identity (counting.test_channel_tracking_profile.ChannelTrackingProfileTests.test_weak_only_detections_cannot_create_an_identity) ... ok
+
+======================================================================
+FAIL: test_actual_calibration_does_not_inherit_empty_scene_origin (counting.test_channel_tracking_profile.ChannelTrackingProfileTests.test_actual_calibration_does_not_inherit_empty_scene_origin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_channel_tracking_profile.py", line 63, in test_actual_calibration_does_not_inherit_empty_scene_origin
+    self.assertEqual(len(events), 1)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_outside_detections_do_not_enter_association (counting.test_channel_tracking_profile.ChannelTrackingProfileTests.test_outside_detections_do_not_enter_association)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\counting\test_channel_tracking_profile.py", line 26, in test_outside_detections_do_not_enter_association
+    self.assertEqual(tracks, [])
+AssertionError: Lists differ: [{'track_id': '0:1', 'xyxy': [10.0, 5.0, 3[41 chars]421}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'track_id': '0:1', 'xyxy': [10.0, 5.0, 30.0, 35.0], 'confidence': 0.8999999761581421}
+
++ []
+- [{'confidence': 0.8999999761581421,
+-   'track_id': '0:1',
+-   'xyxy': [10.0, 5.0, 30.0, 35.0]}]
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.023s
+
+FAILED (failures=2)

@@ -1,0 +1,332 @@
+{
+  "created_UTC": "2026-11-05T19:12:42.582564+00:00",
+  "revision": "v14",
+  "bounded_replay_verification_complete": false,
+  "physical_camera_verified": false,
+  "event_precision_recall_verified": false,
+  "selected": [
+    {
+      "case": "aug14_hd_s256_birth_v14",
+      "run_id": "76669817-055b-439f-84b0-f94abb033001",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "actual_direction": "DOWN",
+      "actual": 12,
+      "reference": 12,
+      "source_duration_s": 80.4,
+      "stream_wall_s": 80.94034056000055,
+      "base_observations": 232,
+      "total_model_forwards": 239,
+      "birth_model_forwards": 6,
+      "endpoint_model_forwards": 0,
+      "observations_per_wall_second": 2.866308671236933,
+      "counts_and_service_pass": true,
+      "AI_pair_reviewed": true,
+      "assessment_path": "results/aug14_hd_s256_birth_v14_assessment.json",
+      "summary_sha256": "0b6672942449f3599f6b2f650eb6128c3a82fbd9f87ec4cd6acdc75f45ca660f",
+      "assessment_sha256": "ae78d6415abc9786b558dd8974e5e02e1f9d7b0331e45fce078eb227f63afb3c",
+      "event_p95_ms": 604.8007930015956,
+      "event_max_ms": 633.2143320014438,
+      "observation_p95_upper_ms": 657.45
+    },
+    {
+      "case": "aug15_hd_s256_birth_v14",
+      "run_id": "548d08cf-a332-4483-9543-92d2c7d1d470",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "actual_direction": "DOWN",
+      "actual": 12,
+      "reference": 12,
+      "source_duration_s": 129.6,
+      "stream_wall_s": 130.1736023509984,
+      "base_observations": 384,
+      "total_model_forwards": 393,
+      "birth_model_forwards": 1,
+      "endpoint_model_forwards": 7,
+      "observations_per_wall_second": 2.949906840286922,
+      "counts_and_service_pass": true,
+      "AI_pair_reviewed": true,
+      "assessment_path": "results/aug15_hd_s256_birth_v14_assessment.json",
+      "summary_sha256": "5191d0c75a37b810e6055f1c14eccb32613cb05f29d150b28e424c37016970a0",
+      "assessment_sha256": "ae33ef39e53ef132c92e14f385560dd6904a8ae6ebaf62272791e444d778f83e",
+      "event_p95_ms": 691.7968986988852,
+      "event_max_ms": 744.3338699995365,
+      "observation_p95_upper_ms": 653.3999999999999
+    },
+    {
+      "case": "aug19_hd_s256_birth_v14",
+      "run_id": "f1ef8fe0-f5e1-432c-be29-6ab03f2c067c",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "actual_direction": "UP",
+      "actual": 11,
+      "reference": 11,
+      "source_duration_s": 80.80000000000001,
+      "stream_wall_s": 81.24550593300046,
+      "base_observations": 238,
+      "total_model_forwards": 246,
+      "birth_model_forwards": 0,
+      "endpoint_model_forwards": 7,
+      "observations_per_wall_second": 2.9293927986154458,
+      "counts_and_service_pass": true,
+      "AI_pair_reviewed": false,
+      "assessment_path": "results/aug19_hd_s256_birth_v14_assessment.json",
+      "summary_sha256": "86e755afa3d05b3984145ef19c45cce8114054f3e2185b97361efee9302d57dd",
+      "assessment_sha256": "bfa50f220038389d0d9e84f3e001defa1555e05c1511e2aa2825b5ba1169d0ee",
+      "event_p95_ms": 803.8960255007623,
+      "event_max_ms": 863.6908730004507,
+      "observation_p95_upper_ms": 558.4999999999998
+    },
+    {
+      "case": "aug20_hd_s256_birth_v14",
+      "status": "NOT_YET_TERMINALLY_ASSESSED"
+    }
+  ],
+  "prior_ten_trial_index": "results/realtime_results_index_20261106.json",
+  "additional_terminal_trials": [
+    {
+      "case": "aug14_hd_s256_birth_v10",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "7a5af5b4-409b-4527-af3e-e46a77716f70",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "model_forwards": 229,
+      "stream_wall_s": 81.04331205400013,
+      "count_reference_pass": true,
+      "service_clock_pass": true,
+      "summary_sha256": "4e5ad5dfa8dc390e0df2cff01dedb5301fd2ae4876de0f72b70d0b43734679a5",
+      "status_sha256": "ee3316de9cd8ee2a4b4c28595c46e7179f329789be27a49fe2c6e3d0a29e18ec"
+    },
+    {
+      "case": "aug14_hd_s256_birth_v11",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "8313a654-8563-4131-bbd6-ff7eb45b3ebe",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "model_forwards": 236,
+      "stream_wall_s": 80.89609153899983,
+      "count_reference_pass": true,
+      "service_clock_pass": true,
+      "summary_sha256": "ed23e1fd97c93d503d13a6c399d395a4834c6a844b05103bea279c60b4e2303b",
+      "status_sha256": "301b3518650f37df168022ccd40cd1894f1959ae90c9c89a5710f2ba41e75558"
+    },
+    {
+      "case": "aug14_hd_s256_birth_v12",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "76ebe01a-2d38-4921-83f0-f103645700a6",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "model_forwards": 241,
+      "stream_wall_s": 81.00850356800038,
+      "count_reference_pass": false,
+      "service_clock_pass": true,
+      "summary_sha256": "d85f604bc69f1a68466218bfa96e43591d1e8acdd285a2fbca769a789e965232",
+      "status_sha256": "731fe420086e2446c11ca1f21f3551bc942ea20d6b5c167d1da742f5f335a6d7"
+    },
+    {
+      "case": "aug14_hd_s256_birth_v13r1",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "95dee681-4bee-46b7-9e18-ec1a5c4d9385",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "model_forwards": 238,
+      "stream_wall_s": 80.87318988400148,
+      "count_reference_pass": false,
+      "service_clock_pass": true,
+      "summary_sha256": "cc064e46ce2f031db68f32c7edadfe6f584487fd8b3f7d43d2d2d53f8059c606",
+      "status_sha256": "33a548f4677ef24549547f70fe2a94b34b8f798fddd7f597f93b16a69b3f9264"
+    },
+    {
+      "case": "aug14_hd_s256_birth_v14",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "76669817-055b-439f-84b0-f94abb033001",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "model_forwards": 239,
+      "stream_wall_s": 80.94034056000055,
+      "count_reference_pass": true,
+      "service_clock_pass": true,
+      "summary_sha256": "0b6672942449f3599f6b2f650eb6128c3a82fbd9f87ec4cd6acdc75f45ca660f",
+      "status_sha256": "8a2471485f6476c48ba9e48a6beb34a23b0376897053bfb29aacddca702234bd"
+    },
+    {
+      "case": "aug14_hd_s256_birth_v9r1",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "02c4e12f-e2e2-4640-a597-1b5ddda0d3a3",
+      "counts": {
+        "IN": 10,
+        "OUT": 0,
+        "NET": 10
+      },
+      "model_forwards": 238,
+      "stream_wall_s": 80.93099188999986,
+      "count_reference_pass": false,
+      "service_clock_pass": true,
+      "summary_sha256": "35bdeb3174342af32de869ba19950eaf74db955ef9c9c51bc143395811b75f0a",
+      "status_sha256": "91208b5d8c1076662ca36831f65e30fc537706c5962898c41be6db2272c12448"
+    },
+    {
+      "case": "aug15_hd_s256_birth_v10",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "7edfa75b-5e4b-469d-bb66-0ff02fc88a9c",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "model_forwards": 394,
+      "stream_wall_s": 130.204935922,
+      "count_reference_pass": false,
+      "service_clock_pass": true,
+      "summary_sha256": "815ded9f8d34f360f3e375000edc0f890246724664fce37a409c67f3fcf521ce",
+      "status_sha256": "80046add4b886a6e3c7df52bcb5e5ee5371d55d6146ab985f976819ed7ab6853"
+    },
+    {
+      "case": "aug15_hd_s256_birth_v11",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "bf2ac867-83c7-485a-a817-2cd65a073264",
+      "counts": {
+        "IN": 10,
+        "OUT": 0,
+        "NET": 10
+      },
+      "model_forwards": 398,
+      "stream_wall_s": 130.34211247999974,
+      "count_reference_pass": false,
+      "service_clock_pass": true,
+      "summary_sha256": "5d37742b9951b295cdd47f3c46681833557d12075a541df4ab72c5b08949722e",
+      "status_sha256": "ff97c6cb4ffad3358ee939ac7f1e0a226db6bcf2245bb26171350fcbebf3dff5"
+    },
+    {
+      "case": "aug15_hd_s256_birth_v12",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "b916f938-96a1-4d4c-8653-6ce4cf51784c",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "model_forwards": 393,
+      "stream_wall_s": 130.31631378699967,
+      "count_reference_pass": false,
+      "service_clock_pass": true,
+      "summary_sha256": "d920d32ed1c8db037d72adaf9cc48a13890db410ce1516bf3e3a3e6df7671b56",
+      "status_sha256": "6129b8e022166d4cc873d437c1a4f0b569f99be2f12c015c08760fad4788e40b"
+    },
+    {
+      "case": "aug15_hd_s256_birth_v14",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "548d08cf-a332-4483-9543-92d2c7d1d470",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "model_forwards": 393,
+      "stream_wall_s": 130.1736023509984,
+      "count_reference_pass": true,
+      "service_clock_pass": true,
+      "summary_sha256": "5191d0c75a37b810e6055f1c14eccb32613cb05f29d150b28e424c37016970a0",
+      "status_sha256": "4268d9535046b17c25bd31c08b3e8fe4930283ca14875ba9e05e1bb609fad93f"
+    },
+    {
+      "case": "aug19_hd_s256_birth_v10",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "071fa458-e765-41c0-b46e-90cb3a79fa7e",
+      "counts": {
+        "IN": 10,
+        "OUT": 0,
+        "NET": 10
+      },
+      "model_forwards": 243,
+      "stream_wall_s": 81.46339220199934,
+      "count_reference_pass": false,
+      "service_clock_pass": true,
+      "summary_sha256": "f77b8f802a0f61396a3e81725085356bccdd769dcd615d4b139fa11348cc1e88",
+      "status_sha256": "4973e1839c1a70e970ca4c45b3646b57c9ada0cc4d2f0c7c8b819d9b9829acc4"
+    },
+    {
+      "case": "aug19_hd_s256_birth_v11",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "8ad8a4df-146a-4776-a0f0-4d02d27321d5",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "model_forwards": 246,
+      "stream_wall_s": 81.23721767500047,
+      "count_reference_pass": true,
+      "service_clock_pass": true,
+      "summary_sha256": "430902a7f048c9442075114507fece4bdeb9c62d7cceabd09cece7ee1eefde6b",
+      "status_sha256": "f4f24506fbcc75aae8a0bd31c2068a149e5afa0d98c2b40ea05ec5210d838d04"
+    },
+    {
+      "case": "aug19_hd_s256_birth_v14",
+      "terminal_status": "EXITED",
+      "exit_code": 0,
+      "run_id": "f1ef8fe0-f5e1-432c-be29-6ab03f2c067c",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "model_forwards": 246,
+      "stream_wall_s": 81.24550593300046,
+      "count_reference_pass": true,
+      "service_clock_pass": true,
+      "summary_sha256": "86e755afa3d05b3984145ef19c45cce8114054f3e2185b97361efee9302d57dd",
+      "status_sha256": "0c406f5af849ff98ee5343b9cc0601c5094e1a3d55ec378d4f26f261506088c1"
+    }
+  ],
+  "total_terminal_trials_including_prior_index": 23,
+  "prepared_without_recorded_launch": [
+    "aug14_hd_s256_birth_v13",
+    "aug14_hd_s256_birth_v9",
+    "aug15_hd_s256_birth_v13",
+    "aug15_hd_s256_birth_v13r1",
+    "aug15_hd_s256_birth_v9",
+    "aug15_hd_s256_birth_v9r1",
+    "aug19_hd_s256_birth_v12",
+    "aug19_hd_s256_birth_v13",
+    "aug19_hd_s256_birth_v13r1",
+    "aug19_hd_s256_birth_v9",
+    "aug19_hd_s256_birth_v9r1"
+  ]
+}

@@ -1,0 +1,30 @@
+import json,os,hashlib,traceback
+from pathlib import Path
+import cv2
+from counting.backends import O8Detector,decode
+from counting.geometry import Transform
+from prepare_o8_boot import durable_json
+p=Path(__file__).parent
+r={'status':'RUNNING','PID':os.getpid(),'model_forwards_completed':0,'rows':[],'scope':'Two weak-proposal zoom diagnostics; no counting or realtime claim'}
+save=lambda:durable_json(p/'result.json',r)
+save();detector=None;cap=None
+try:
+ cfg=json.loads(Path('/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug14_hd_s256_fast_v8/config.json').read_text());cap=cv2.VideoCapture('/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug14_hd_s256_fast_v8/input.avi')
+ r['phase']='initialize';save();detector=O8Detector(**{k:cfg['detector'][k] for k in ('root','program','plan','size')})
+ for request in [{'frame0': 134, 'roi': [702, 0, 887, 255], 'seed': [732.7228393554688, 2.7537059783935547, 855.8292846679688, 204.70053100585938, 0.06921156495809555, 0.0]}, {'frame0': 136, 'roi': [697, 0, 875, 313], 'seed': [726.5675048828125, 33.87947463989258, 845.0574951171875, 257.4084167480469, 0.12464626878499985, 0.0]}]:
+  f=request['frame0'];assert cap.set(cv2.CAP_PROP_POS_FRAMES,f)
+  ok,img=cap.read();assert ok and abs(cap.get(cv2.CAP_PROP_POS_MSEC)/1000-f/5)<.0001
+  t=Transform.create(1280,720,request['roi'],90,256);canvas=t.prepare_bgr_resize_first(img)
+  r['inflight_frame0']=f;r['phase']='before_call';save()
+  raw=detector.infer_bgr(canvas);r['model_forwards_completed']+=1;r['inflight_frame0']=None
+  r['rows'].append({**request,'canvas_sha256':hashlib.sha256(canvas.tobytes()).hexdigest(),'candidates':decode(raw,t,.01,[0]).tolist()});save()
+ r['status']='COMPLETED'
+except BaseException as e:
+ r.update(status='FAILED',error=repr(e),traceback=traceback.format_exc());raise
+finally:
+ if cap is not None:cap.release()
+ if detector is not None:
+  closing,detector=detector,None
+  try:closing.close()
+  except Exception as e:r.update(status='CLOSE_FAILED',close_error=repr(e))
+ save()

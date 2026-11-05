@@ -1,0 +1,139 @@
+{
+  "status": "FIXED_FROM_SOURCE_ONLY_BEFORE_ANY_PURDUE_PREDICTION",
+  "created_at_UTC": "2026-11-01T07:47:16.512412+00:00",
+  "candidate": "FROZEN_CANDIDATE_V2.json",
+  "publisher_data_readme": "https://github.com/VADL-Purdue/AutoCattlogger/blob/main/data/readme.md",
+  "data_description": "Two first media members, one per published daily sample archive; temporal single-cow cuts with possible partial additional animals. Not continuous multi-cow video and never concatenated.",
+  "cases": [
+    {
+      "case_id": "purdue_day1_s2",
+      "source": {
+        "source_url": "https://app.box.com/shared/static/rih8q2jc7dtgi9yge17wfz84y15rqkez",
+        "archive_bytes": 207682560,
+        "member": "sampleVideos1/cam24_2022-06-08_08-29-23_2234_53550_53991.avi",
+        "member_bytes": 32346316,
+        "data_offset": 1024,
+        "selection": "first regular video in publisher tar order; before model predictions",
+        "new_model_forwards": 0,
+        "status": "COMPLETE_MEDIA_MEMBER_EXTRACTED",
+        "sha256": "ad8ccd95ca116f6a9dcc99605a3dfec4e5c54a76eea05f03aa3de94f03044cb4",
+        "local_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\fast_passage_fix\\external_purdue\\sample1\\cam24_2022-06-08_08-29-23_2234_53550_53991.avi"
+      },
+      "decoded_source": {
+        "status": "COMPLETE_SOURCE_DECODED_NO_PREDICTIONS",
+        "width": 1920,
+        "height": 1080,
+        "nominal_fps": 30.0,
+        "declared_frames": 441,
+        "decoded_frames": 441,
+        "first_pts_s": 0.0,
+        "last_pts_s": 14.666666666666666,
+        "sha256": "ad8ccd95ca116f6a9dcc99605a3dfec4e5c54a76eea05f03aa3de94f03044cb4",
+        "new_model_forwards": 0
+      },
+      "config": {
+        "video_id": "cam24_2022-06-08_08-29-23_2234_53550_53991",
+        "session_id": "purdue_camera24_20220608_v2",
+        "sample_hz": 5,
+        "decode_start_frame0": 0,
+        "scope_start_frame0": 0,
+        "end_frame0_exclusive": 441,
+        "axis": "x",
+        "perpendicular_roi": [
+          0.0,
+          1.0
+        ],
+        "in_direction": "A->B",
+        "detection_roi_xyxy": null,
+        "rotation_clockwise": 0,
+        "confidence": 0.2,
+        "cow_class_ids": [
+          0
+        ],
+        "lost_seconds": 6,
+        "counter": {
+          "lower": 0.4,
+          "upper": 0.6,
+          "stable_samples": 2,
+          "maximum_gap_s": 2
+        },
+        "detector": {
+          "backend": "o8",
+          "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+          "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/program",
+          "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/resident_plan/resident_plan.bin",
+          "size": 320
+        }
+      },
+      "source_only_layout_basis": "Static overhead lane runs left to right across image. Native full-frame input, no crop/rotation. Complete crossings use x-centre zones; marginal starts/ends remain censored."
+    },
+    {
+      "case_id": "purdue_day2_s2",
+      "source": {
+        "source_url": "https://app.box.com/shared/static/aagwjs8b42q11xc6b6l75ccgk47s8tl4",
+        "archive_bytes": 234457088,
+        "member": "sampleVideos2/cam24_2022-06-09_08-29-52_6079_75231_75573.avi",
+        "member_bytes": 27376386,
+        "data_offset": 1024,
+        "selection": "first regular video in publisher tar order; before model predictions",
+        "new_model_forwards": 0,
+        "status": "COMPLETE_MEDIA_MEMBER_EXTRACTED",
+        "sha256": "c67a675ca284da385c2bbb19300a2072ae20169ab1b78f7bd928437e65810b6e",
+        "local_file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\fast_passage_fix\\external_purdue\\sample2\\cam24_2022-06-09_08-29-52_6079_75231_75573.avi"
+      },
+      "decoded_source": {
+        "status": "COMPLETE_SOURCE_DECODED_NO_PREDICTIONS",
+        "width": 1920,
+        "height": 1080,
+        "nominal_fps": 30.0,
+        "declared_frames": 342,
+        "decoded_frames": 342,
+        "first_pts_s": 0.0,
+        "last_pts_s": 11.366666666666667,
+        "sha256": "c67a675ca284da385c2bbb19300a2072ae20169ab1b78f7bd928437e65810b6e",
+        "new_model_forwards": 0
+      },
+      "config": {
+        "video_id": "cam24_2022-06-09_08-29-52_6079_75231_75573",
+        "session_id": "purdue_camera24_20220609_v2",
+        "sample_hz": 5,
+        "decode_start_frame0": 0,
+        "scope_start_frame0": 0,
+        "end_frame0_exclusive": 342,
+        "axis": "x",
+        "perpendicular_roi": [
+          0.0,
+          1.0
+        ],
+        "in_direction": "A->B",
+        "detection_roi_xyxy": null,
+        "rotation_clockwise": 0,
+        "confidence": 0.2,
+        "cow_class_ids": [
+          0
+        ],
+        "lost_seconds": 6,
+        "counter": {
+          "lower": 0.4,
+          "upper": 0.6,
+          "stable_samples": 2,
+          "maximum_gap_s": 2
+        },
+        "detector": {
+          "backend": "o8",
+          "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+          "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/program",
+          "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/resident_plan/resident_plan.bin",
+          "size": 320
+        }
+      },
+      "source_only_layout_basis": "Static overhead lane runs left to right across image. Native full-frame input, no crop/rotation. Complete crossings use x-centre zones; marginal starts/ends remain censored."
+    }
+  ],
+  "new_to_current_counting_rule_selection": true,
+  "detector_training_disjointness_not_newly_certified": true,
+  "model_forwards_before_admission": 0,
+  "rule_or_threshold_tuning_after_admission": false,
+  "raw_native_AVI_inputs_used_on_board": true,
+  "source_preview_is_resized_for_human_review_only": true
+}

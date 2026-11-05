@@ -1,0 +1,102 @@
+{
+  "status": "DAY1_CALIBRATION_ONLY",
+  "channel_basis": "Lower walkway below upper fenced region, based on source camera layout; y-normalized .4 to 1.0. Gate x .4/.6 unchanged.",
+  "cases": {
+    "channel_only": {
+      "counts": {
+        "IN": 0,
+        "OUT": 0
+      },
+      "events": [],
+      "event_in_lane_observations": {},
+      "config": {
+        "video_id": "cam24_2022-06-08_08-29-23_2234_53550_53991",
+        "session_id": "purdue_camera24_20220608_v2",
+        "sample_hz": 5,
+        "decode_start_frame0": 0,
+        "scope_start_frame0": 0,
+        "end_frame0_exclusive": 441,
+        "axis": "x",
+        "perpendicular_roi": [
+          0.4,
+          1.0
+        ],
+        "in_direction": "A->B",
+        "detection_roi_xyxy": null,
+        "rotation_clockwise": 0,
+        "confidence": 0.2,
+        "cow_class_ids": [
+          0
+        ],
+        "lost_seconds": 6,
+        "counter": {
+          "lower": 0.4,
+          "upper": 0.6,
+          "stable_samples": 2,
+          "maximum_gap_s": 2
+        },
+        "detector": {
+          "backend": "o8",
+          "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+          "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/program",
+          "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/resident_plan/resident_plan.bin",
+          "size": 320
+        },
+        "tracker": {
+          "track_high_thresh": 0.25,
+          "new_track_thresh": 0.25,
+          "fuse_score": true
+        }
+      }
+    },
+    "channel_and_association": {
+      "counts": {
+        "IN": 0,
+        "OUT": 0
+      },
+      "events": [],
+      "event_in_lane_observations": {},
+      "config": {
+        "video_id": "cam24_2022-06-08_08-29-23_2234_53550_53991",
+        "session_id": "purdue_camera24_20220608_v2",
+        "sample_hz": 5,
+        "decode_start_frame0": 0,
+        "scope_start_frame0": 0,
+        "end_frame0_exclusive": 441,
+        "axis": "x",
+        "perpendicular_roi": [
+          0.4,
+          1.0
+        ],
+        "in_direction": "A->B",
+        "detection_roi_xyxy": null,
+        "rotation_clockwise": 0,
+        "confidence": 0.2,
+        "cow_class_ids": [
+          0
+        ],
+        "lost_seconds": 6,
+        "counter": {
+          "lower": 0.4,
+          "upper": 0.6,
+          "stable_samples": 2,
+          "maximum_gap_s": 2
+        },
+        "detector": {
+          "backend": "o8",
+          "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+          "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/program",
+          "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/resident_plan/resident_plan.bin",
+          "size": 320
+        },
+        "tracker": {
+          "track_high_thresh": 0.2,
+          "new_track_thresh": 0.25,
+          "fuse_score": false
+        }
+      }
+    }
+  },
+  "day2_final_results_not_read_or_used": true,
+  "new_model_forwards": 0
+}

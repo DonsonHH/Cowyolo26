@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN_BEFORE_NATIVE_BGR_PAIRED_MODEL_CALLS",
+  "created_UTC": "2026-11-02T05:10:18.292596+00:00",
+  "expected_file_sha256": {
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_rot192_qual_20261029/program/graph.bin": "5c05590f1c16f23f8e920447cdb6dd92e0d58a10104689bbc069ceb9fae1b00c",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_rot192_qual_20261029/resident_plan/resident_plan.bin": "cd5702cfca84e38ab75e8251ca5a15ff66be16fccc9d87ef3a0e4577079e40fa",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_rot192_qual_20261029/protocol.json": "60b96d83d9355fc5572b651d9f701c45e6aa26ad0d6bf76b0bc5dd1be763c84b",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program/graph.bin": "c083b7e307ac4233f73f3b5e7ded6a041982e42d366c70c5c65fb71edf446216",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin": "adf50c9fdf4a24ee00ebc0921e1d5c09e782346765f80428a5227501c22aa9f0",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/protocol.json": "44115dd48410635fe9eebc48a672ec0388ac3f0cef452c665b2baa1819422ca2",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/capture_detail_v5_s192/inputs.npz": "d108484332f8b272d93a33e8c51df4cd08bb8ab21821d2a4f5226b7042df54b0",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/native_bgr_parity_192/bgr_backend.py": "6bd9310d7e4dca0cdb57051f579cdc7c5a5e7e61367ed14a964d79a247088682",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/native_bgr_parity_192/prepare_o8_boot.py": "1530e44fad573e5b375b5559abcf3e5d3ef6b8df3af1a74142a702b86b4a11a9",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/native_bgr_parity_192/native_bgr_parity.py": "c278f74360058c913925764fbe4aff46b3e7d15406f172188d524ed82e5004ea"
+  },
+  "expected_boot_id": "74725b6d-1f11-4cec-bb3f-f4fe8e08df77",
+  "detector": {
+    "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+    "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_rot192_qual_20261029/program",
+    "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_rot192_qual_20261029/resident_plan/resident_plan.bin",
+    "size": 192
+  },
+  "inputs": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/capture_detail_v5_s192/inputs.npz",
+  "input_keys": [
+    "f485_low640_area_q3",
+    "f485_capture1280_linear_q2",
+    "f1260_low640_area_q3",
+    "f1260_capture1280_linear_q2"
+  ],
+  "expected_maximum_model_forward_calls": 10,
+  "scope": "Four old Aug19 fixed tensors, two warmup+eight formal calls; Aug20 remains unpredicted"
+}

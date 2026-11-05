@@ -1,0 +1,98 @@
+"""Independent read-only artifact checks; optional small JSON result, zero inference."""
+import hashlib
+import json
+from pathlib import Path
+import re
+import subprocess
+import sys
+
+ROOT=Path(__file__).parent
+REPO=Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo')
+M=REPO/'maintenance/offline_counting'
+load=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+index=load(M/'results/realtime_delivery_v16_index.json')
+assert index['bounded_development_replay_delivery_complete'] is True
+assert index['original_frozen_service_contract_complete'] is False
+assert index['completion_scope_is_post_hoc'] is True
+assert not index['physical_camera_verified'] and not index['independent_generalization_verified']
+assert index['total_terminal_trials_including_prior_index']==28
+assert len(index['selected'])==4
+events_checked=0
+strict_failures=[]
+for case in index['selected']:
+    tag=case['case']
+    s=load(M/'results'/(tag+'_summary.json'))
+    a=load(M/'results'/(tag+'_assessment.json'))
+    state=load(M/'results'/(tag+'_status.json'))
+    review=load(M/'results'/(tag+'_visual_review.json'))
+    freeze=load(M/(tag.upper()+'_FREEZE.json'))
+    events=[json.loads(x) for x in (M/'results'/(tag+'_events.jsonl')).read_text().splitlines() if x]
+    assert state['status']=='EXITED' and state['exit_code']==0
+    assert s['run_id']==a['run_id']==state['run_id']==review['run_id']
+    assert a['integrity_pass'] and a['count_reference_pass']
+    assert case['actual']==case['reference']==len(events)
+    assert case['posthoc_engineering_delivery_checks_pass'] and case['AI_pair_reviewed']
+    assert freeze['config']==s['config']
+    assert sha(M/'results'/(tag+'_summary.json'))==case['summary_sha256']
+    assert sha(M/'results'/(tag+'_assessment.json'))==case['assessment_sha256']
+    for name,digest in state['output_sha256'].items():
+        assert sha(M/'results'/(tag+'_'+name))==digest
+    for name,digest in review['run_evidence_sha256'].items():
+        assert sha(M/'results'/(tag+'_'+name))==digest
+    assert review['reviewed_event_ids']==[event['event_id'] for event in events]
+    assert review['pair_review_passed'] and not review['independent_human_timed_ground_truth']
+    for event in events:
+        assert event['entry_frame0']<event['frame0'] and event['entry_time_s']<event['time_s']
+    for name,digest in review['panel_sha256'].items():
+        assert sha(ROOT/tag/'event_panels'/name)==digest
+    assert (ROOT/(tag+'_review.mp4')).is_file()
+    if not a['service_clock_pass']:
+        strict_failures.append({'case':tag,'failed_clock_checks':[k for k,v in a['clock_checks'].items() if not v],
+                                'max_event_ms':a['event_publication_age']['maximum_ms']})
+    events_checked+=len(events)
+assert events_checked==47
+assert len(strict_failures)==1 and strict_failures[0]['case']=='aug19_hd_s256_birth_v16'
+assert strict_failures[0]['failed_clock_checks']==['event_publication_deadline']
+first=load(M/'results/aug20_hd_s256_birth_v14_assessment.json')
+assert first['actual_directional_counts']['UP']==9 and not first['count_reference_pass']
+assert first['user_directional_reference']=={'UP':12,'DOWN':None}
+source_entries=0
+for path in [M/'qualified_v7_source/binding.json']+sorted((M/'qualified_birth_sources').glob('*/binding.json')):
+    value=load(path)
+    entries=value.get('files',value.get('source_sha256'))
+    for name,entry in entries.items():
+        if isinstance(entry,dict):
+            source=REPO/entry['path']
+            digest=entry['sha256']
+        else:
+            source=M/value['overrides'][name] if name in value['overrides'] else REPO/name
+            digest=entry
+        assert sha(source)==digest, name
+        source_entries+=1
+assert source_entries==398
+manifest=load(M/'orchestration_sources/manifest.json')
+for name,digest in manifest['source_sha256'].items():
+    assert sha(M/'orchestration_sources'/(name+'.source.txt'))==sha(ROOT/name)==digest
+for target in re.findall(r'\]\(([^)]+)\)',(M/'REALTIME_DELIVERY_20261106.md').read_text(encoding='utf-8')):
+    assert (M/target).exists(),target
+untracked=subprocess.check_output(['git','ls-files','--others','--exclude-standard','-z'],cwd=REPO).decode().split('\0')
+for name in filter(None,untracked):
+    path=REPO/name
+    assert path.suffix.lower() in {'.json','.jsonl','.py','.md','.txt','.log','.sh','.ps1'},name
+    assert path.stat().st_size<2_000_000,name
+    assert b'\0' not in path.read_bytes(),name
+    path.read_text(encoding='utf-8-sig')
+result={'new_model_forwards':0,'selected_cases':4,'source_event_pairs_checked':events_checked,
+        'restorable_source_entries_verified':source_entries,
+        'host_orchestration_sources_verified':len(manifest['source_sha256']),
+        'original_service_failures_preserved':strict_failures,
+        'first_new_date_failure_preserved':True,'completion_scope_is_post_hoc':True,
+        'models_datasets_or_media_added':False,
+        'main_report_sha256':sha(M/'REALTIME_DELIVERY_20261106.md'),
+        'selected_index_sha256':sha(M/'results/realtime_delivery_v16_index.json')}
+if '--write' in sys.argv:
+    target=M/'results/final_delivery_artifact_check_20261106.json'
+    assert not target.exists()
+    target.write_bytes((json.dumps(result,indent=2)+'\n').encode())
+print(json.dumps(result))

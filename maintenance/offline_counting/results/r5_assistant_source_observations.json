@@ -1,0 +1,39 @@
+{
+  "status": "ASSISTANT_SOURCE_ONLY_PROVISIONAL_NOT_HUMAN_GT",
+  "created_at_UTC": "2026-10-31T19:08:00.227849+00:00",
+  "method": "Assistant inspected unannotated source contact sheets at 1 s and 2 s intervals, following distinct coat patterns across successive frames. No new positive-case model output inspected before these observations.",
+  "not_a_blind_human_reference": true,
+  "not_for_event_precision_recall_scoring": true,
+  "cases": {
+    "aug15_positive_v2": {
+      "clip_sha256": "81f72eba00b660be984d43a4c970b01db7f978e7e0f9c7f79f502cc2eba721e8",
+      "provisional_IN": 12,
+      "provisional_OUT": 0,
+      "notes": [
+        "Two closely following dark cows occur at clip seconds 20-24; sparse 2 s sheets alone can merge them.",
+        "A white patterned cow pauses beyond the lower gate around seconds 58-78.",
+        "Last black cow pauses near the lower edge while a spotted cow overtakes around seconds 92-96.",
+        "Empty context follows the last visible cow; contact sheets are source-only, not model predictions."
+      ]
+    },
+    "aug16_partial_v1": {
+      "clip_sha256": "696761e6611a5a78cfd507d2c705a2c88ed3c4227cee7d013c57f462328d48be",
+      "provisional_IN": 6,
+      "provisional_OUT": 0,
+      "right_censored_visible_instances": 1,
+      "notes": [
+        "Six distinct cows visibly traverse the two gate levels during the late burst.",
+        "Seventh cow still in upper channel at clip EOF near 34 s; do not count it as completed."
+      ]
+    },
+    "aug18_idle_v2": {
+      "clip_sha256": "fabfd3362a3c089976d70c4adeba39f0c935f598bd2807dbf8a8576962a323b1",
+      "provisional_IN": 0,
+      "provisional_OUT": 0,
+      "notes": [
+        "Empty counting channel; adjacent-pen animals outside ROI."
+      ]
+    }
+  },
+  "acceptance": "Original Aug14 already accepted by user. These new observations are provisional; user can accept rendered results without creating a review JSON."
+}

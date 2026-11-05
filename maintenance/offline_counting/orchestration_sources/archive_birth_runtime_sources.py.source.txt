@@ -1,0 +1,39 @@
+"""Archive only byte-exact source overrides needed to reproduce past trials."""
+import hashlib
+import json
+from pathlib import Path
+import tarfile
+import sys
+
+ROOT = Path(__file__).parent
+REPO = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo')
+M = REPO / 'maintenance/offline_counting'
+sha = lambda data: hashlib.sha256(data).hexdigest()
+base = M / 'qualified_birth_sources'
+base.mkdir(exist_ok=True)
+report = {}
+for revision in (sys.argv[1:] or ['v9r1', 'v10', 'v11']):
+    package = ROOT / ('counting_realtime_birth_' + revision + '_source.tar.gz')
+    folder = base / revision
+    folder.mkdir(exist_ok=True)
+    with tarfile.open(package) as archive:
+        manifest = json.load(archive.extractfile('COUNTING_SOURCE_MANIFEST.json'))['source_sha256']
+        overrides = {}
+        for name, digest in manifest.items():
+            original = archive.extractfile(name).read()
+            assert sha(original) == digest
+            if sha((REPO/name).read_bytes()) != digest:
+                target = folder / (name.replace('/', '__') + '.source.txt')
+                target.write_bytes(original)
+                overrides[name] = str(target.relative_to(M)).replace('\\', '/')
+        for name, digest in manifest.items():
+            restored = (M/overrides[name]).read_bytes() if name in overrides else (REPO/name).read_bytes()
+            assert sha(restored) == digest, name
+    binding = {'revision':revision,'source_package_sha256':sha(package.read_bytes()),
+               'source_sha256':manifest,'overrides':overrides,'all_entries_verified':True,
+               'new_model_forwards':0,'models_or_media_included':False,
+               'restore':'Copy current repository source files listed by source_sha256, overwrite listed overrides with their .source.txt bytes, verify every SHA256. This binds source only, not model accuracy.'}
+    (folder/'binding.json').write_bytes((json.dumps(binding,indent=2)+'\n').encode())
+    report[revision] = {'verified_sources':len(manifest),'archived_overrides':len(overrides),
+                        'source_package_sha256':binding['source_package_sha256']}
+print(json.dumps(report))

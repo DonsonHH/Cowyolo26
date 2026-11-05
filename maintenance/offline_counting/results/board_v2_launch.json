@@ -1,0 +1,42 @@
+{
+  "source_files_SHA256": {
+    "counting/backends.py": "8356d3076b30c7e952681538c64636428296b84566877ddd55cd8858172056a5",
+    "counting/counter.py": "764d53a103d50228c83adb63e1862539def8a5e9ae7c9fb86e4e85ef4eef3fb1",
+    "counting/evaluate.py": "9979eddae5ff94a470bfca3c0a9a379271ac740f344bdcbae2318531442d52bb",
+    "counting/geometry.py": "284250541bf86447344b21a5de64164cf0fcc4fc376e9fd894b90837ba55395a",
+    "counting/package_board.py": "2ad511f86e96a7f2b38b6da3d3186d1849a38373f97cbf2b89f40182f9841b47",
+    "counting/render.py": "e62264e424ecceb7b02b60ba7c7acce5fbca541b7e947d12103093c2c3025d11",
+    "counting/review_server.py": "d6aad16cf05a9b37b8a95adc1e595a724987fd3d198f3f343c2567e01106b6af",
+    "counting/runner.py": "bc5d43eedf72905ac54b00af945edb7573c1a9ee87242a39f3d5db30ed0390e1",
+    "counting/test_counting.py": "4736a58851f24a624c01648777fb384d3ff4eae7f82cd1c782ebbc5d462467c6",
+    "counting/test_video_integration.py": "91de648e449edcd559faa660a2f1793d40ad16a8dc5be8d10237dff384af6fb1",
+    "counting/tracking.py": "d11fec35eede892192f1d534bd5277330fb6eae0104d5e829c8eb59f4f83c3b9",
+    "counting/__init__.py": "6839ba785c1a458126fff8567a957657b3ee8c2ee708a71d2228a6dd28f63c86",
+    "counting/__main__.py": "b72d6210c14303737821fbb3c2f6a4b0fd2ab11b4e77469141e2cd5a4a1e876e",
+    "counting/review.html": "49ad24ed2f5a5b5172a29f81a3fb251c2b754ea227c93f7eae9c5325a218f6e2",
+    "maintenance/counting_r1/__init__.py": "d5a336d207059817c4c499b679d56a1f325f6f76dce74218a9652e9ffb9ccd47",
+    "maintenance/counting_r1/tracker.py": "f404d2be54183017459090ae7d794fd6950272e2dfd24745106460f61f22fd54",
+    "maintenance/counting_r1/event_metrics_v2.py": "95c69f80ba29465a17678674a2c559046f1071a2115b15c31ae39d40df2bffb8",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/matching.py": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/support.py": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed",
+    "pynq/cow_research_numpy_tracker_20261029/frame_pipeline.py": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+  },
+  "archive_SHA256": "f5123f20cc70566eb4e5d2c9689fd0f8f8007af79b7eb0e259389e5a0d73affe",
+  "clean_directory_import_pass_with_declared_lap_dependency": true,
+  "board_unit_tests_exit": 0,
+  "command": "cd /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/repo\nnohup env XILINX_XRT=/usr OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/repo:/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/source/lap-0.5.13 /usr/local/share/pynq-venv/bin/python -u -m counting --video /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/input/source.mp4 --config /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/config_320.json --output /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/run_320_v2 > /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/run_320_v2.log 2>&1 < /dev/null &\necho PID=$!",
+  "stdout": "PID=3661\n",
+  "stderr": "",
+  "launch_exit": 0,
+  "earlier_attempts": [
+    "incomplete bundle missing event_metrics_v2; no inference launched",
+    "clean import probe lacked declared LAP dependency; no board write performed; corrected environment"
+  ]
+}

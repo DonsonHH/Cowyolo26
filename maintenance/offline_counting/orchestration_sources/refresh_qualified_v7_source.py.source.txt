@@ -1,0 +1,34 @@
+"""Keep historical V7 byte-exact after optional current-source development."""
+import hashlib
+import json
+from pathlib import Path
+import tarfile
+
+ROOT=Path(__file__).parent
+REPO=Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo')
+M=REPO/'maintenance/offline_counting'
+folder=M/'qualified_v7_source'
+path=folder/'binding.json'
+binding=json.loads(path.read_text())
+package=ROOT/'counting_realtime_fast_history_v7_source.tar.gz'
+sha=lambda data:hashlib.sha256(data).hexdigest()
+assert sha(package.read_bytes())==binding['package_sha256']
+with tarfile.open(package) as archive:
+    manifest=json.load(archive.extractfile('COUNTING_SOURCE_MANIFEST.json'))['source_sha256']
+    assert set(manifest)==set(binding['files'])
+    for name,digest in manifest.items():
+        original=archive.extractfile(name).read()
+        assert sha(original)==digest==binding['files'][name]['sha256']
+        if sha((REPO/name).read_bytes())==digest:
+            source='repository'
+            target=name
+        else:
+            output=folder/(name.replace('/','__')+'.source.txt')
+            output.write_bytes(original)
+            source='archived_override'
+            target=str(output.relative_to(REPO)).replace('\\','/')
+        binding['files'][name].update(source=source,path=target)
+        assert sha((REPO/target).read_bytes())==digest
+binding['verified_restored_file_count']=len(manifest)
+path.write_bytes((json.dumps(binding,indent=2)+'\n').encode())
+print(json.dumps({'verified_files':len(manifest),'overrides':sum(x['source']=='archived_override' for x in binding['files'].values()),'new_model_forwards':0}))

@@ -1,0 +1,114 @@
+{
+  "status": "RUNNING",
+  "run_id": "572bbb54-bab4-43a8-87b6-8a542a24d697",
+  "session_id": "purdue_camera24_20220609_channel_v3",
+  "video_id": "cam24_2022-06-09_08-29-52_6079_75231_75573",
+  "PID": 6084,
+  "video_path": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/fast_passage_fix_v2/purdue_inputs/purdue_day2_s2.avi",
+  "video_sha256": "c67a675ca284da385c2bbb19300a2072ae20169ab1b78f7bd928437e65810b6e",
+  "config": {
+    "video_id": "cam24_2022-06-09_08-29-52_6079_75231_75573",
+    "session_id": "purdue_camera24_20220609_channel_v3",
+    "sample_hz": 5,
+    "decode_start_frame0": 0,
+    "scope_start_frame0": 0,
+    "end_frame0_exclusive": 342,
+    "axis": "x",
+    "perpendicular_roi": [
+      0.4,
+      1.0
+    ],
+    "in_direction": "A->B",
+    "detection_roi_xyxy": null,
+    "rotation_clockwise": 0,
+    "confidence": 0.2,
+    "cow_class_ids": [
+      0
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 2,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "o8",
+      "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+      "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/program",
+      "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/resident_plan/resident_plan.bin",
+      "size": 320
+    },
+    "track_only_in_channel": true,
+    "tracker": {
+      "track_high_thresh": 0.2,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.25,
+      "match_thresh": 0.8,
+      "fuse_score": false
+    }
+  },
+  "nominal_fps": 30.0,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "source_stride": 6,
+  "effective_nominal_sample_hz": 5,
+  "sampling": {
+    "mode": "source_pts",
+    "requested_hz": 5,
+    "unavailable_source_sample_slots": 0,
+    "anchor_time_s": 0.0,
+    "minimum_source_frame_gap": 6,
+    "maximum_source_frame_gap": 6
+  },
+  "decoded_frames": 295,
+  "processed_frames": 50,
+  "wall_clock_skipped_frames": 0,
+  "sequential_lead_in_frames": 0,
+  "input_positioning_s": 1.001299824565649e-05,
+  "fast_seek_verified_by_source_pts": false,
+  "seek_verification": {},
+  "time_source": "opencv source PTS",
+  "model_forwards": 50,
+  "counts": {
+    "IN": 0,
+    "OUT": 0,
+    "NET": 0
+  },
+  "uncertain_records": 1,
+  "accuracy_verified": false,
+  "software_fixture_only": false,
+  "runtime_versions": {
+    "python": "3.10.4 (main, Apr  2 2022, 09:04:19) [GCC 11.2.0]",
+    "numpy": "1.21.5",
+    "opencv": "4.5.4"
+  },
+  "startup_scope": "elapsed_s covers model/processed interval/close; overall_elapsed_s also includes open, exact sequential lead-in and input hashing",
+  "memory_before_model": {
+    "process_peak_rss_kib": 93168,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 429812,
+      "SwapTotal": 524284,
+      "SwapFree": 448764
+    }
+  },
+  "clock_contract": "PTS sampling; motion covariance and Lost expiry use elapsed source time; predictions never count as observations",
+  "latency_boundary": "decode selected source frame through event/log update; offline, no realtime deadline",
+  "model_sha256": "3bc4934f4f54ade70bfbdc1f16808bbd5ded7bb7226643d5305604f148376e6d",
+  "resident_plan_sha256": "a4f593d1685f052e95275a59753f097687e92fec6654a209fbc44eb5f9e80a24",
+  "device_initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "runtime_asset_sha256": {
+    "native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8"
+  },
+  "last_source_frame0": 294,
+  "last_source_time_s": 9.8
+}

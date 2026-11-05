@@ -1,0 +1,69 @@
+{
+  "files": {
+    "batch_status.json": {
+      "bytes": 1023,
+      "sha256": "936fa0f539dd28b835e1eeb52e3b47d27ee9dbeec97138010ecf723b6cbe436a"
+    },
+    "events.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "frames.jsonl": {
+      "bytes": 15133,
+      "sha256": "a5aa445f5676f35efc952df1a5567c7d6236cadf8167bbe8f4f0e1262ef52ae4"
+    },
+    "progress.json": {
+      "bytes": 3833,
+      "sha256": "c805912cce885ba931d0387d34b6418bba2ba47873cfe8f059a2b506212b4cc9"
+    },
+    "purdue_day2_s2.log": {
+      "bytes": 130,
+      "sha256": "e3fe9d35692d90df8428a765db9a6f003d6a52125d830a808afcba04a6dc102f"
+    },
+    "summary.json": {
+      "bytes": 5790,
+      "sha256": "64529feebadd62dc6d35304522e91d26181540756128910fdc83361675382439"
+    },
+    "transform.json": {
+      "bytes": 216,
+      "sha256": "6d696dad49f0c18d725e86f072eb63130435d91edbe8820f2e248f125e5b8df0"
+    },
+    "uncertain.jsonl": {
+      "bytes": 1442,
+      "sha256": "a353436e0cef7d6edcad01c5576b19c14f1c652f4af59f5f70a5b2d1b1291f16"
+    }
+  },
+  "collected_at_UTC": "2026-11-01T10:46:38.157163+00:00",
+  "local_path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\offline_counting_20261031\\fast_passage_fix\\purdue_day2_channel_v3_board",
+  "batch": {
+    "status": "COMPLETED_UNSCORED",
+    "PID": 6077,
+    "started_at_UTC": "2026-11-01T10:44:48.896517+00:00",
+    "case_order": [
+      "purdue_day2_s2"
+    ],
+    "cases": [
+      {
+        "case_id": "purdue_day2_s2",
+        "command": [
+          "/usr/local/share/pynq-venv/bin/python",
+          "-u",
+          "-m",
+          "counting",
+          "--video",
+          "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/fast_passage_fix_v2/purdue_inputs/purdue_day2_s2.avi",
+          "--config",
+          "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/fast_passage_fix_v2/purdue_v3_configs/purdue_day2_s2.json",
+          "--output",
+          "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/fast_passage_fix_v2/purdue_channel_v3_validation/purdue_day2_s2"
+        ],
+        "status": "EXITED",
+        "PID": 6084,
+        "exit_code": 0
+      }
+    ],
+    "accuracy_verified": false,
+    "boot_id": "e7059099-ecb8-451e-a9aa-a66c8222196b",
+    "updated_at_UTC": "2026-11-01T10:46:08.318264+00:00"
+  }
+}

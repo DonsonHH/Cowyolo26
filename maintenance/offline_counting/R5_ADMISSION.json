@@ -1,0 +1,44 @@
+{
+  "status": "WINDOWS_FIXED_BEFORE_ANY_R5_MODEL_PREDICTION",
+  "protocol": "R5_PROTOCOL.json",
+  "frozen_candidate": "FROZEN_CANDIDATE.json",
+  "selection_evidence": "Source-only sequential decode and contact sheets every two seconds; no detections or predicted counts used.",
+  "cases": [
+    {
+      "case_id": "aug15_positive_v2",
+      "source_file": "2023-08-15T12-50-59.mp4",
+      "source_sha256": "e02b725e236170c2ce40fbc8c9d0c7a64a92b0c1ad708d75030b820b7c06f528",
+      "requested_source_time_window_s": [540, 670],
+      "role": "passages with empty-channel context on both sides",
+      "boundary_note": "Visible passage burst starts around 556 s and ends around 648 s; exact events not labelled from these sparse sheets."
+    },
+    {
+      "case_id": "aug16_partial_v1",
+      "source_file": "2023-08-16T12-52-13.mp4",
+      "source_sha256": "92eca11ad61c0d1a2797fc3a87d85942bb893ba4f30592968a6e52629920bc12",
+      "requested_source_time_window_s": [650, 684.28],
+      "role": "late passage burst ending at raw source EOF",
+      "boundary_note": "Channel empty through about 664 s, cows visible from about 666 s. Cow still visible near EOF: record incomplete fragments as right-censored; do not treat end-of-file as passage completion."
+    },
+    {
+      "case_id": "aug18_idle_v2",
+      "source_file": "2023-08-18T12-53-40.mp4",
+      "source_sha256": "a31cb079cd2423ccaa0265d599d6d6201cb14f7646aadd4c1ce17dafbd0cda9d",
+      "requested_source_time_window_s": [100, 130],
+      "role": "empty-channel false-alarm control",
+      "boundary_note": "No cows visible inside the counting channel in source contact sheets; animals in adjacent pen are outside ROI. Negative-only case does not measure recall."
+    }
+  ],
+  "spatial_configuration": {
+    "basis": "Same fixed camera and physical channel as development video, confirmed on source-only layout images.",
+    "detection_roi_xyxy": [870, 0, 1920, 1440],
+    "rotation_clockwise": 90,
+    "axis": "y",
+    "perpendicular_roi": [0.34, 0.75],
+    "in_direction": "A->B"
+  },
+  "clip_policy": "Native-resolution stream copy only; validate full excerpt decode and SHA256. Exact original frame offset is not assumed. Evaluate actual clip frame 0 through decoded frame count.",
+  "model_or_threshold_tuning_on_holdout": false,
+  "independent_blind_human_event_reference_available": false,
+  "acceptance_note": "Original Aug14 video is user-accepted. This does not certify these new sessions; new source-only assistant observations remain provisional."
+}

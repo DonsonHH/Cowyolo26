@@ -1,0 +1,9 @@
+{
+  "command": "cd /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/repo\nnohup env XILINX_XRT=/usr OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/repo:/home/xilinx/jupyter_notebooks/cow_research_numpy_tracker_20261029/source/lap-0.5.13 /usr/local/share/pynq-venv/bin/python -u -m counting --video /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/input/source.mp4 --config /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/config_320.json --output /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/run_320_v1 > /home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/run_320_v1.log 2>&1 < /dev/null &\necho PID=$!",
+  "stdout": "PID=3459\n",
+  "stderr": "",
+  "exit": 0,
+  "new_training": false,
+  "run_kind": "actual_board_complete_video_decode_and_O8_counter",
+  "reference_event_GT_present": false
+}

@@ -1,0 +1,120 @@
+"""Private fixed-case orchestration; the public counting entry receives no count reference."""
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import shlex
+import sys
+import tarfile
+import uuid
+
+ROOT = Path(__file__).parent
+sys.path.insert(0, str(ROOT))
+from realtime_board import connect_target, run, REMOTE as RT, PY, LAP, M
+
+PROFILE = Path(sys.argv[2])
+profile = json.loads(PROFILE.read_text())
+TAG = profile['tag']
+assert TAG.replace('_', '').isalnum()
+REMOTE = RT + '/' + TAG
+HERE = ROOT / TAG
+PKG = ROOT / profile.get('source_package', 'counting_realtime_native_bgr_v4_reviewed_source.tar.gz')
+CFG = M / 'realtime_configs' / (TAG + '.json')
+INPUT = Path(profile['input'])
+FREEZE = M / (TAG.upper() + '_FREEZE.json')
+sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
+def stage(c):
+    assert not HERE.exists() and not FREEZE.exists()
+    HERE.mkdir()
+    with tarfile.open(PKG) as archive:
+        sources = json.load(archive.extractfile('COUNTING_SOURCE_MANIFEST.json'))['source_sha256']
+    assert all(sha(M.parents[1] / p) == h for p, h in sources.items())
+    assert json.loads((ROOT / profile.get('test_proof','NATIVE_BGR_V4_TESTS.json')).read_text())['passed']
+    baseline = json.loads((M / profile['assets_baseline']).read_text())['expected_file_sha256']
+    expected = {p: h for p, h in baseline.items() if not p.startswith(RT + '/')}
+    config = json.loads(CFG.read_text())
+    assert config['detector']['program'] + '/graph.bin' in expected
+    assert config['detector']['plan'] in expected
+    runtime = profile.get('runtime', RT + '/native_bgr_v4/runtime')
+    expected.update({runtime + '/' + p: h for p, h in sources.items()})
+    command = ['env', 'XILINX_XRT=/usr', 'OMP_NUM_THREADS=1', 'OPENBLAS_NUM_THREADS=1',
+               'PYTHONPATH=' + runtime + ':' + LAP, PY, '-u', '-m', 'counting.realtime',
+               '--source', REMOTE + '/input.avi', '--config', REMOTE + '/config.json', '--output', REMOTE + '/output']
+    identity = str(uuid.uuid4())
+    supervisor = "import json,os,subprocess,hashlib\nfrom pathlib import Path\np=Path(__file__).parent\nr={'status':'RUNNING','PID':os.getpid(),'launch_identity':"+repr(identity)+"}\ndef save():\n q=p/'status.partial';q.write_text(json.dumps(r,indent=2)+'\\n');q.replace(p/'status.json')\nsave()\n"
+    supervisor += "with (p/'run.log').open('wb') as log:\n child=subprocess.Popen(" + repr(command) + ",cwd=" + repr(runtime) + ",stdout=log,stderr=subprocess.STDOUT);r['child_PID']=child.pid;save();r['exit_code']=child.wait()\nif r['exit_code']==0:\n s=json.loads((p/'output/summary.json').read_text());r['run_id']=s['run_id'];r['output_dir']=str(p/'output');r['output_sha256']={n:hashlib.sha256((p/'output'/n).read_bytes()).hexdigest() for n in ('summary.json','events.jsonl','frames.jsonl','transform.json')}\nr['status']='EXITED';save()\n"
+    (HERE / 'supervisor.py').write_text(supervisor)
+    sftp = c.open_sftp()
+    try:
+        sftp.mkdir(REMOTE)
+        if profile.get('existing_remote_input'):
+            sftp.symlink(profile['existing_remote_input'],REMOTE+'/input.avi')
+        else:
+            sftp.put(str(INPUT),REMOTE+'/input.avi')
+        for local, target in [(CFG, 'config.json'), (HERE / 'supervisor.py', 'supervisor.py')]:
+            sftp.put(str(local), REMOTE + '/' + target)
+    finally:
+        sftp.close()
+    expected.update({REMOTE + '/input.avi': sha(INPUT), REMOTE + '/config.json': sha(CFG), REMOTE + '/supervisor.py': sha(HERE / 'supervisor.py')})
+    record = {'status': 'FROZEN_BEFORE_THIS_REALTIME_CASE', 'created_UTC': datetime.now(timezone.utc).isoformat(),
+              'config': config, 'config_sha256': sha(CFG), 'expected_file_sha256': expected,
+              'source_package_sha256': sha(PKG), 'source_files_SHA256': sources,
+              'source_role': profile['role'], 'external_reference': profile.get('reference'),
+              'reference_is_not_a_runtime_input': True, 'changes_from_prior_trial': profile.get('changes'),
+              'service_protocol_sha256': sha(M / profile.get('service_protocol','REALTIME_BOUNDED_1S_PROTOCOL.json')),
+              'service_profile':profile.get('service_profile'),
+              'launch_identity':identity,'expected_output_dir':REMOTE+'/output',
+              'Aug20_model_forwards_before_freeze': profile.get('Aug20_model_forwards_before_freeze', 0)}
+    FREEZE.write_text(json.dumps(record, indent=2) + '\n')
+    print(json.dumps({'staged': TAG, 'files': len(expected), 'new_model_forwards': 0}))
+
+
+def launch(c):
+    receipt = HERE / 'launch.json'
+    assert not receipt.exists()
+    expected = json.loads(FREEZE.read_text())['expected_file_sha256']
+    code = "import hashlib,fcntl\nexpected=" + repr(expected) + "\nfor p,v in expected.items():\n h=hashlib.sha256()\n with open(p,'rb') as f:\n  for b in iter(lambda:f.read(1048576),b''):h.update(b)\n assert h.hexdigest()==v,p\nwith open('/home/xilinx/jupyter_notebooks/yolo26_stage_d/reports/accelerator_job.lock','a') as f:fcntl.flock(f,fcntl.LOCK_EX|fcntl.LOCK_NB)\n"
+    run(c, PY + " - <<'PY'\n" + code + '\nPY', sudo=True)
+    out, err = run(c, 'set -eu\ntest ! -e ' + shlex.quote(REMOTE + '/status.json') + '\nnohup ' + shlex.join([PY, '-u', REMOTE + '/supervisor.py']) + ' </dev/null >' + shlex.quote(REMOTE + '/supervisor.log') + ' 2>&1 &\necho PID=$!', sudo=True)
+    record = {'started_UTC': datetime.now(timezone.utc).isoformat(), 'stdout': out, 'stderr': err,
+              'freeze_sha256': sha(FREEZE), 'profile_sha256': sha(PROFILE)}
+    receipt.write_text(json.dumps(record, indent=2) + '\n')
+    (M / 'results' / (TAG + '_launch.json')).write_text(json.dumps(record, indent=2) + '\n')
+    print(json.dumps(record))
+
+
+def status(c):
+    code = "from pathlib import Path\nimport json\np=Path(" + repr(REMOTE) + ")\nr={}\nfor n in ('status.json','output/progress.json','output/summary.json'):\n f=p/n\n if f.exists():\n  v=json.loads(f.read_text());r[n]={k:v[k] for k in ('status','PID','child_PID','exit_code','counts','processed_frames','model_forwards','endpoint_recovery_forwards','last_source_time_s','realtime_clock_pass','stream_wall_elapsed_s','latency_entire_stream') if k in v}\nprint(json.dumps(r))\n"
+    out, _ = run(c, PY + " - <<'PY'\n" + code + '\nPY')
+    print(out)
+
+
+def collect(c):
+    target = HERE / 'result'
+    assert not target.exists()
+    sftp = c.open_sftp()
+    try:
+        with sftp.open(REMOTE + '/status.json') as f:
+            state = json.load(f)
+        assert state['status'] == 'EXITED'
+        target.mkdir()
+        for item in sftp.listdir_attr(REMOTE + '/output'):
+            assert item.st_size < 10_000_000
+            sftp.get(REMOTE + '/output/' + item.filename, str(target / item.filename))
+        for name in ['status.json', 'run.log']:
+            sftp.get(REMOTE + '/' + name, str(target / name))
+    finally:
+        sftp.close()
+    for path in target.iterdir():
+        (M / 'results' / (TAG + '_' + path.name)).write_bytes(path.read_bytes())
+    print(json.dumps(state))
+
+
+if __name__ == '__main__':
+    connection = connect_target()
+    try:
+        {'stage': stage, 'launch': launch, 'status': status, 'collect': collect}[sys.argv[1]](connection)
+    finally:
+        connection.close()

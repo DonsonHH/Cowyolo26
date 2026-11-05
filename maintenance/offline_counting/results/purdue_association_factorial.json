@@ -1,0 +1,133 @@
+{
+  "status": "DAY1_CALIBRATION_MECHANISM_PROBE",
+  "factors": [
+    "association high threshold .25/.2",
+    "score fusion True/False"
+  ],
+  "fixed_new_track_threshold": 0.25,
+  "fixed_counter_stability": 2,
+  "fixed_candidate_threshold": 0.2,
+  "cases": {
+    "original": {
+      "high_0.2_fuse_False": {
+        "counts": {
+          "IN": 12,
+          "OUT": 0
+        },
+        "events": [],
+        "new_model_forwards": 0
+      }
+    },
+    "aug15": {
+      "high_0.2_fuse_False": {
+        "counts": {
+          "IN": 12,
+          "OUT": 0
+        },
+        "events": [],
+        "new_model_forwards": 0
+      }
+    },
+    "aug16": {
+      "high_0.2_fuse_False": {
+        "counts": {
+          "IN": 6,
+          "OUT": 0
+        },
+        "events": [],
+        "new_model_forwards": 0
+      }
+    },
+    "idle": {
+      "high_0.2_fuse_False": {
+        "counts": {
+          "IN": 0,
+          "OUT": 0
+        },
+        "events": [],
+        "new_model_forwards": 0
+      }
+    },
+    "purdue_day1": {
+      "high_0.25_fuse_True": {
+        "counts": {
+          "IN": 0,
+          "OUT": 0
+        },
+        "events": [],
+        "new_model_forwards": 0,
+        "counted_tracks": {}
+      },
+      "high_0.25_fuse_False": {
+        "counts": {
+          "IN": 0,
+          "OUT": 0
+        },
+        "events": [],
+        "new_model_forwards": 0,
+        "counted_tracks": {}
+      },
+      "high_0.2_fuse_True": {
+        "counts": {
+          "IN": 0,
+          "OUT": 0
+        },
+        "events": [],
+        "new_model_forwards": 0,
+        "counted_tracks": {}
+      },
+      "high_0.2_fuse_False": {
+        "counts": {
+          "IN": 1,
+          "OUT": 0
+        },
+        "events": [
+          {
+            "session_id": "purdue_camera24_20220608_v2",
+            "event_id": "purdue_camera24_20220608_v2:0:000001",
+            "track_id": "0:1",
+            "direction": "A->B",
+            "kind": "IN",
+            "entry_time_s": 0.4,
+            "entry_frame0": 12,
+            "time_s": 11.4,
+            "frame0": 342,
+            "axis_position": 0.8211350440979004
+          }
+        ],
+        "new_model_forwards": 0,
+        "counted_tracks": {
+          "0:1": {
+            "first": {
+              "frame0": 12,
+              "time_s": 0.4,
+              "track_id": "0:1",
+              "xyxy": [
+                12.31205940246582,
+                57.2860221862793,
+                736.3988037109375,
+                600.3585205078125
+              ],
+              "confidence": 0.38281959295272827
+            },
+            "last": {
+              "frame0": 342,
+              "time_s": 11.4,
+              "track_id": "0:1",
+              "xyxy": [
+                1233.1585693359375,
+                275.8979797363281,
+                1920.0,
+                732.9013061523438
+              ],
+              "confidence": 0.44058239459991455
+            },
+            "observations": 47
+          }
+        }
+      }
+    }
+  },
+  "day2_complete_results_not_used": true,
+  "new_model_forwards": 0
+}
