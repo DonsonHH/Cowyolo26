@@ -1,6 +1,12 @@
+# 当前交接：2026-11-09 V4
+
+[本轮成果与复审](docs/research/20261109_成果与复审.md)记录4段开发视频各2轮在PYNQ-Z2上的总数、原时限和局限；[投稿差距与文章架构](docs/research/20261109_投稿差距与文章架构.md)说明当前离IEEE Sensors Journal投稿还差哪些证据。源视频、模型和标注回放不上传公开仓库。
+
+以下2026-11-06及更早内容为历史交接，保留当时失败和待办，不代表V4当前状态。
+
 # 2026-11-06：现有四段视频数齐并跟上实时输入；原1秒事件上限仍有超时
 
-以[当前完整实机报告](maintenance/offline_counting/REALTIME_DELIVERY_20261106.md)为准。以下保留此前阶段，不代表当前运行状态。
+当时的完整实机报告见[历史实机报告](maintenance/offline_counting/REALTIME_DELIVERY_20261106.md)。
 
 <!-- REALTIME_DELIVERY_CURRENT_END -->
 

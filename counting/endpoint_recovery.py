@@ -133,3 +133,36 @@ class EndpointRecovery:
     def select(self, proposal, candidates, existing):
         return select_local_detection(proposal["predicted_box"], self._in_channel(candidates),
                                       self._in_channel(existing), self.confidence, self.reacquire)
+
+    def superseded_global_indices(self, proposal, selected, existing, time_s, high_threshold,
+                                  association_predictions=None):
+        """Replace a weak view only when the target beats competing real histories.
+
+        Overlap alone cannot identify a cow: another overlapping weak cow must
+        remain available to ordinary one-to-one association. Predictions decide
+        measurement ownership here; they never become counter observations.
+        """
+        competitors={}
+        for tid,history in self.history.items():
+            if tid==proposal['track_id'] or len(history)<2:continue
+            (t0,b0),(t1,b1)=history
+            age=time_s-t1
+            if not 0<age<=self.max_age or t1<=t0:continue
+            c0,c1=(b0[:2]+b0[2:])/2,(b1[:2]+b1[2:])/2
+            center=c1+(c1-c0)*age/(t1-t0)
+            size=b1[2:]-b1[:2]
+            competitors[tid]=np.r_[center-size/2,center+size/2]
+        # The tracker also retains tentative observations. A just-confirmed
+        # neighbor can already have two real measurements while record() has
+        # seen only its first confirmed output. Use its actual association
+        # prediction instead of silently omitting that competing identity.
+        competitors.update(association_predictions or {})
+        competitors.pop(proposal['track_id'],None)
+        removed=[]
+        for index,row in enumerate(existing):
+            if row[5]!=selected[5] or row[4]>=high_threshold or iou(row,selected)<.5:continue
+            target_overlap=iou(row,proposal['predicted_box'])
+            other_overlap=max((iou(row,box) for box in competitors.values()),default=0.)
+            if target_overlap>=.5 and target_overlap>other_overlap+.05:
+                removed.append(index)
+        return removed

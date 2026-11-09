@@ -1,0 +1,145 @@
+% Working manuscript, 2026-11-09. Not submitted.
+% New manuscript derived from the official IEEE journal starter;
+% original Michael Shell / LPPL source is retained unchanged in vendor/.
+\documentclass[journal]{IEEEtran}
+\usepackage{amsmath,amssymb,graphicx,booktabs,url}
+\title{Resource-Aware Cattle Passage Counting with YOLO26n on a PYNQ-Z2 Vision Sensor}
+\author{Author and affiliation details to be completed by the authors}
+\markboth{IEEE Sensors Journal: Working Research Manuscript, November 2026}{Working manuscript}
+\begin{document}
+\maketitle
+\begin{abstract}
+Reliable cattle passage counting on a constrained edge device depends on which observations reach the tracker, as well as on detector accuracy. Fast passages, weak detections and verification calls can remove the temporal evidence required to complete a passage even when average inference throughput appears adequate. This study develops a resource-aware pipeline using a quantized YOLO26n program and the existing O8 backend on PYNQ-Z2. A bounded capture queue provides causal image selection, while conditional local measurements verify weak detections without converting predicted positions into counting evidence. Global and local measurements are consolidated against competing observed histories before association. Events retain video, session, run and source-time identities. Development evidence comprises four wall-paced streams with 47 user-confirmed passages. The selected 256-pixel detector configuration, using prepared 1280$\times$720 acquisition at 5 Hz, matches the known directional totals in both board replays of each clip. All eight selected-version runs satisfy the original timing and queue limits, with a maximum event-publication age of 915.546~ms. Earlier versions retain timing failures, and a joint 640$\times$360 candidate fails count agreement. The evaluation separates count agreement, independently matched events, actual model-call budgets and end-to-end timing. Independent event references and matched-budget comparisons remain necessary to establish the proposed reliability contribution beyond this engineering prototype.
+\end{abstract}
+\begin{IEEEkeywords}
+Cattle passage counting, visual sensing, edge computing, FPGA, PYNQ-Z2, YOLO26.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{C}{attle} passage records connect animal movement with farm operations. A fixed camera observing a controlled passage can provide a visual count without requiring every passage to yield a successful electronic identification read. The immediate sensing objective is to recognize a complete traversal and its direction. Assigning a temporary tracking identifier supports this objective; identifying a persistent individual animal is a separate recognition task.
+
+Top-view cattle detection and tracking already support counting and identification research. CattleEyeView provides a multitask top-view dataset and tracking/counting baselines \cite{cattleeyeview}. Other studies combine cattle detection, tracking and visual identification across environments or multiple cameras \cite{cattle_id_2024,black_cattle_2025}. Consequently, using a newer detector in this setting does not establish a research contribution by itself. The systems question considered here is how to preserve sufficient passage evidence when sensing and computation operate at different rates.
+
+PYNQ-Z2 combines an embedded processor with programmable logic \cite{pynqz2}. Zynq-based YOLO acceleration is also an established research direction \cite{zynq_yolo_2024}. In a complete counting system, however, additional work occurs around neural inference: decoding, crop/rotation, input preparation, short-term association, local verification and event publication. A verification call can improve a weak detection while delaying the next global observation. The resulting loss of passage evidence is not characterized by a detector-only FPS measurement.
+
+This work investigates three connected mechanisms: bounded causal image selection, conditional current-image verification, and source-bound event evidence. The implementation reuses YOLO26n, a ByteTrack-derived association pipeline and the existing O8 backend. The study's proposed contribution is the allocation and auditing of sensing evidence under a restricted computational budget. Its effect must be assessed with matched-budget controls and event-level references.
+
+\section{Related Work}
+Top-view observations expose body appearance and reduce some side-view occlusions, but closely spaced animals and changing detection confidence remain relevant. Existing cattle studies address detection, temporary tracking and persistent visual identity with different labels and evaluation units \cite{cattleeyeview,cattle_id_2024,black_cattle_2025}. We retain these distinctions when defining the output of the present system.
+
+ByteTrack uses both high- and low-confidence detections for association \cite{bytetrack}. A weak detection may therefore be useful for maintaining an existing track even when it is unsuitable for initiating a new track. Combining a global weak measurement and a strong local measurement introduces a further requirement: two views of the same animal must not become observations of two different tracks in one image. At the same time, a genuine weak neighboring animal must remain available for association.
+
+YOLO26 supports the one-to-one export path used by this implementation \cite{yolo26}. The deployed compiler explicitly selects this path and checks a single-class output layout. This describes the present artifact, rather than every default prediction mode of the model family. Comparisons with other edge systems must also account for weight versions, input fields of view, quantization and timing boundaries.
+
+\section{System and Passage Definition}
+The data path comprises capture, source-coordinate geometry, global detection, optional local verification, short-term tracking and passage publication. The processing system performs acquisition and control operations around the existing programmable-logic execution backend. The final manuscript will report the measured workload division and hardware resources from the actual execution and build records.
+
+\begin{figure}[!t]
+\centering
+\fbox{\parbox{0.91\columnwidth}{\centering
+Wall-paced camera-format frames\\$\downarrow$\\
+Bounded queue and causal image selection\\$\downarrow$\\
+Global YOLO26n measurement + conditional local verification\\$\downarrow$\\
+Source-time tracking and two-zone passage state\\$\downarrow$\\
+Directional events and source-bound evidence}}
+\caption{Prototype sensing pipeline. Current development experiments replay archived frames at wall-clock speed. Physical camera transport is a separate qualification step.}
+\label{fig:pipeline}
+\end{figure}
+
+Let $p_t$ denote the measured detection-box center, used as a torso-center proxy, along the calibrated passage axis. Two separated endpoint zones are defined by $a<b$: $A=\{p<a\}$ and $B=\{p>b\}$. A complete event requires a confirmed short-term track with actual positions in both zones on different source images, in temporal order. A track first observed in the middle has no established origin. A passage ending before the second zone is reached remains censored or uncertain. Predicted positions support association and scheduling, but do not satisfy the event condition.
+
+The development preset uses $a=0.4$, $b=0.6$ and a maximum real-observation gap of two source seconds. A spatial polygon further restricts admitted detections. Camera-specific geometry, orientation and directional labels are configuration inputs; expected animal totals are absent from the runtime configuration.
+
+\section{Resource-Aware Observation and Verification}
+\subsection{Causal Frame Selection}
+Capture publishes frames into a queue bounded to two images. Selection can use the latest available image or retain an already-arrived earlier image when measured motion and the unfinished passage phase indicate that an endpoint observation could otherwise be lost. This policy uses past measurements and current arrival state. It does not access future video images or interpolate a counting observation.
+
+The configured acquisition rate and the actual global-model observation rate are reported separately. The latter depends on processing time and local verification work. The model-call ledger includes global, local and warm-up calls, allowing computationally fair comparisons rather than comparisons of nominal target rates alone.
+
+An explicit history-age option can override the history preference when a newer image has already arrived. Before dequeueing, the consumer compares the oldest candidate's age, measured from its expected arrival, with the configured limit. If that candidate is over-age and a newer alternative is available, the latest image is selected. Otherwise the original selection remains. The original candidate age and override are logged. The option is disabled by default; the new original-format qualification preset declares 0.3~s before replay. This limits an older-frame preference, rather than guaranteeing a 0.3-s age for every selected image or a final event deadline. An already-old latest image and all processed late observations remain in the timing ledger.
+
+\subsection{Conditional Local Measurements}
+Local verification is triggered by bounded recent evidence for a weak origin or an unfinished destination. The selected current image is cropped and passed through the real detector. Candidate detections remain subject to class, geometry, area, overlap and neighboring-animal checks. Origin and endpoint verification share at most one additional model call per selected image.
+
+The reliability review introduced a consolidation check for global/local views. A weak global box is superseded only when it overlaps the accepted local box and is geometrically owned by the target more strongly than by competing recent measured histories. Competitor geometry includes the tracker's actual tentative and confirmed observations, because the recovery log alone omits a newly confirmed neighbor's tentative observation. Both the original global detections and superseded rows are logged. The tracking and counting update occurs once per selected source image.
+
+The currently implemented ownership check uses overlap of at least 0.5 and a target-versus-competitor overlap margin greater than 0.05. These values and their selection status are retained in the experimental record. Their robustness remains a subject for the budget-matched experiments.
+
+The combined birth/endpoint-verification path requires the observation-based motion mode, which retains the real tentative history used in competitor geometry. Unsupported combined configurations are rejected before capture or model initialization; a Kalman-only tracking configuration does not provide the same qualification.
+
+\subsection{Event Scope and Failure States}
+An event records its video, session, run, entry/completion source times and source-frame indices. The evaluation adapter rejects conflicting scope and run identities. Legacy records can be normalized only through an explicit option that records the original file hashes and each added scope field; raw historical logs remain unchanged.
+
+A failed live-camera read is reported as a capture fault, rather than a successful end of file. Without a verified sensor exposure timestamp, live timing starts at host frame-retrieval completion, and blocking retrieval duration is reported separately. Archived CFR replay uses verified relative source PTS and known wall-clock release times. These boundaries are kept distinct when interpreting latency.
+
+Capture publication is timestamped after the frame enters the locked queue. Waiting for that lock is included in capture lateness and is also recorded separately. Statistical snapshots detach their samples while holding the lock and compute percentiles afterward, so numerical reporting does not retain the publication lock. Controlled software fixtures verify both the timestamp boundary and lock release.
+
+\section{Implementation and Provenance}
+The selected deployment uses a 256-pixel square detector input and prepared 1280$\times$720 MJPEG acquisition at 5 Hz. The registered one-to-one output has shape $[1,300,6]$, containing box coordinates, confidence and class. The archived S256 program and resident plan identify the actual quantized computation. Earlier 192/256/320 experiments use different trained checkpoints and therefore do not constitute a controlled same-weight resolution ablation.
+
+Reproducibility requires more than a neural graph hash. The execution record binds the counting package, selected configuration, input, wrapper modules, program/plan metadata, native library and accepted firmware artifacts. Python/PYNQ and numerical-library versions are recorded with the board boot identity. Model files and full experiment payloads are retained in the private server archive, while source and compact evidence remain available for inspection.
+
+\section{Experimental Protocol}
+\subsection{Data Roles and References}
+The four archived clips are derived from the monitor-footage component of MultiCamCows2024 \cite{multicamcows2024}: camera~1 on August 14 and 15, 2023, and camera~2 on August 19 and 20, 2023. The repository publishes the source under the Non-Commercial Government Licence for public sector information. These clips are development material, with user-confirmed known-direction totals of 12, 12, 11 and 12. The first new-date test on August 20 yielded 9/12; subsequent use of that result for diagnosis makes later trials development retests. Independent testing requires a source/provenance and split audit before a new test block is exposed to model-based tuning.
+
+Event references must identify complete traversals, direction, entry/completion times, relevant source frames and censoring/ambiguity. A directional total alone cannot identify a missed event canceled by a duplicate. AI source-image inspection is recorded as such and is not substituted for independent human event references.
+
+\subsection{Acquisition Preparation}
+Historical preparation converted the selected source intervals to 1280$\times$720 MJPEG at 5 Hz while retaining the full field of view. Region cropping, rotation, detector preparation, inference, association and counting run online on the board. The replay measurement excludes the earlier format conversion and does not qualify native high-resolution H.264 decoding or physical camera transport.
+
+The prepared streams contain 403, 649, 405 and 599 frames. Camera~2 August~19 uses the requested 14--95-s window. Camera~1 August~14 includes 52 source frames of existing preroll before the user-reviewed 8912--10873 interval; completed preroll events are excluded from its reference. Source hashes, conversion commands and source-frame mappings are retained with the experiment manifests.
+
+\subsection{Metrics and Controls}
+For reference event set $G$ and prediction set $P$, matching requires the same video, session and direction within a predeclared time tolerance. The assignment first maximizes one-to-one match cardinality and then minimizes absolute timing error. With match set $M$,
+\begin{equation}
+\mathrm{TP}=|M|,\quad \mathrm{FN}=|G|-|M|,\quad \mathrm{FP}=|P|-|M|.
+\end{equation}
+Precision, recall and F1 follow these event counts; undefined empty denominators remain explicit. Temporal candidate ambiguity and independent physical-direction correspondence are reported separately.
+
+The planned comparison fixes the detector/checkpoint, source stream, passage geometry and counting rule. Uniform sampling, latest-frame selection, causal phase selection, local verification alone and their combination will be compared under reported model-call budgets. Per-session count errors, event misses/duplicates, latency distributions, queue bounds, stream completion and startup time are required. Repeated playback estimates runtime variability and does not increase the number of independent animals or sessions.
+
+\section{Current Development Evidence}
+\input{age_replay_table.tex}
+\input{development_replay_table.tex}
+\begin{table}[!t]
+\caption{Historical Development Replay Before the 2026-11-09 Reliability Revision}
+\label{tab:development}
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+Clip & \shortstack{Count/\\reference} & \shortstack{Wall time\\(s)} & \shortstack{Max lag\\(ms)}\\
+\midrule
+Camera1 Aug14 & 12/12 & 80.94 & 633.21\\
+Camera1 Aug15 & 12/12 & 130.17 & 744.33\\
+Camera2 Aug19 & 11/11 & 81.42 & 1026.63\\
+Camera2 Aug20 & 12/12 & 120.18 & 861.55\\
+\bottomrule
+\end{tabular}
+\end{table}
+Table~\ref{tab:development} records the previous source version's aggregate evidence. The actual global observation rate was approximately 2.86--2.95 Hz. The August 19 event exceeded the original 1000-ms publication limit; its frozen service result remains a failure. The historical engineering delivery interpretation is recorded separately and is not used to relabel that contract.
+
+Table~\ref{tab:hdreplay} reports eight further 1280$\times$720 replays, two per clip, with the measurement-ownership and scope revisions. All known directional totals agree. The first August~15 replay nevertheless reached 1541.132~ms observation age and 538.753~ms capture lateness, exceeding the frozen 1500-ms and 500-ms limits. The second August~19 replay reached 1059.061~ms event-publication age against the original 1000-ms limit. These runs remain timing failures. The worst per-run observation p95 upper bound was 809.5~ms, and stream drain stayed below 0.673~s.
+
+The capture-lateness implementation in those historical runs sampled time before taking the publication lock; it therefore did not include lock waiting. A controlled fixture exposed this gap by imposing a 250-ms wait: the old meter reported 100~ms for a frame enqueued after 350~ms. A second fixture exposed percentile calculation under the same lock. The corrected revision passed 139 cloud tests and the same 139 tests on the target ARM environment. These software controls establish implementation behavior, rather than cattle accuracy or an explanation for every timing outlier.
+
+A separately frozen joint candidate reduced full-field acquisition to 640$\times$360 while retaining the 256-pixel detector, weights, normalized channel and counting rules. Every derived frame retained the relative CFR timeline, and integer crop coordinates were rescaled with explicit rounding. Both camera~1 clips still yielded 12 in each repeat. Camera~2 August~19 yielded 10 and 10 against 11; August~20 yielded 7 and 9 against 12. This candidate is rejected on count agreement. Its acquisition and runtime changes do not establish a single-factor explanation for the losses.
+
+The selected revision restores the exact 1280$\times$720 inputs and pixel geometry, with the explicit history-age preference in the corrected runtime. Its two controlled selection fixtures and all prior checks passed 141 cloud tests and 141 ARM tests. A persistent SFTP connection provided passive status reads, avoiding fresh board Python or SSH probe processes during inference. Table~\ref{tab:selectedreplay} reports the entire predeclared block of eight runs: each known directional total agrees, with no reported complete event in the opposite direction. The actual global observation rate is 2.80--2.92~Hz. All runs meet the original limits: event-publication age at most 1000~ms, observation p95 at most 1000~ms and maximum at most 1500~ms, capture lateness at most 500~ms, drain at most 1~s and a queue bounded to two images without future-frame access. The observed maxima are 915.546~ms event-publication age, 979.776~ms observation age, 253.119~ms capture lateness and 0.731~s drain; the largest per-run observation p95 upper bound is 841.6~ms. Publication age starts at the completing source image's scheduled arrival, rather than an independently annotated physical crossing time.
+
+All source, configuration, input and execution-asset fingerprints were verified before and after each run and rechecked with the raw ledgers on the private server. Source-image panels for all 47 first-repeat events were inspected by AI reviewers without an obvious visual counterexample. Three images per event cannot establish continuous identity or exclude missed passages. The raw runtime status remains unscored without formal event references, and its older 500-ms timing flag is retained as false. These records coexist with the externally checked original 1000-ms contract; neither is rewritten. The selected block supports engineering feasibility on the four development clips. Changes in selection, capture metering and monitoring do not constitute a matched single-factor ablation. Independent event scores, power measurements and FPGA resource reports remain pending their actual records.
+
+\section{Discussion and Next Experimental Decisions}
+The proposed mechanism addresses evidence loss and measurement reuse around a constrained detector. Its value depends on whether the same computational budget produces fewer passage errors. If matched-budget ablation does not support this explanation, the contribution must be revised accordingly. Dense overlap, weak detections and camera-specific geometry remain relevant conditions for evaluation.
+
+A live sensing claim requires the actual camera acquisition chain and a sustained-run fault/latency record. The present development replay establishes a controlled arrival process and board processing path. The revised implementation has completed the present board replay qualification. The next research decisions are to establish independently reviewed event references, test the proposed mechanism under matched budgets, and freeze an unused test block before further tuning.
+
+\section{Conclusion}
+This study defines a resource-aware cattle passage counting pipeline on PYNQ-Z2 with YOLO26n and an auditable separation between measurements, predictions, events and runtime evidence. The selected revision completes eight wall-paced board replays with directional total agreement and the original timing limits satisfied on four development clips. Comparative and independent experimental results will determine whether the proposed mechanism supports a broader reliability and efficiency contribution.
+
+\section*{Author-Completion Items}
+Author details, contributions, funding, animal-data/ethics applicability, dataset permissions and the final generative-AI disclosure require confirmation by the actual authors before submission. AI assistance has been used for literature organization, manuscript drafting and software review; the project retains these activity records. No editorial submission or publication payment has been made.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}

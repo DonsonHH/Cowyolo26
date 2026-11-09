@@ -1,12 +1,13 @@
 """Score a completed offline run against a reviewed, hash-bound human record."""
 import argparse
 import json
+import hashlib
 from pathlib import Path
 from maintenance.counting_r1.event_metrics_v2 import evaluate_events
 from .protocol import canonical_gate, gate_from_config
 
 
-def evaluate_run(run_folder, reference_file):
+def evaluate_run(run_folder, reference_file, normalize_legacy_scope=False):
     run_folder, reference_file = Path(run_folder), Path(reference_file)
     run = json.loads((run_folder / "summary.json").read_text(encoding="utf-8"))
     reference = json.loads(reference_file.read_text(encoding="utf-8-sig"))
@@ -35,9 +36,34 @@ def evaluate_run(run_folder, reference_file):
     if "review_gate" not in reference or canonical_gate(reference["review_gate"]) != gate_from_config(run["config"]):
         raise ValueError("Reference counting gate differs from the run configuration")
     prediction = [json.loads(line) for line in (run_folder / "events.jsonl").read_text(encoding="utf-8").splitlines() if line]
+    normalization=[]
+    if not run.get('run_id'):
+        raise ValueError('Run summary requires a bound run_id')
+    for row in prediction:
+        if row.get('run_id')!=run['run_id']:
+            raise ValueError('Prediction run_id differs from summary or is missing')
+        added={}
+        for key in ('video_id','session_id'):
+            if key not in row:
+                if not normalize_legacy_scope:
+                    raise ValueError('Prediction scope is missing '+key+'; explicit legacy normalization is required')
+                row[key]=run[key]
+                added[key]=run[key]
+            elif row[key]!=run[key]:
+                raise ValueError('Prediction '+key+' conflicts with summary scope')
+        if added:normalization.append({'event_id':row.get('event_id'),'added_fields':added})
     result = evaluate_events(events, prediction, float(reference.get("matching_tolerance_s", 2.)),
                              reference.get("physical_correspondence"))
+    def digest(path):
+        value=hashlib.sha256()
+        with path.open('rb') as stream:
+            for block in iter(lambda:stream.read(1024*1024),b''):value.update(block)
+        return value.hexdigest()
     return {"status": "SCORED_AGAINST_SUPPLIED_HUMAN_REFERENCE", "reference_file": str(reference_file.resolve()),
+            'scope_adapter_version':'explicit-legacy-scope-20261109',
+            'normalization_used':bool(normalization),'prediction_scope_normalizations':normalization,
+            'input_file_sha256':{'summary.json':digest(run_folder/'summary.json'),
+                                 'events.jsonl':digest(run_folder/'events.jsonl'),'reference':digest(reference_file)},
             "reviewer": reference["reviewer"], "reviewed_at": reference["reviewed_at"],
             "source_sha256": run["video_sha256"], "run_folder": str(run_folder.resolve()),
             "reference_uncertain_or_truncated": len(reference.get("uncertain_or_truncated_records", [])),
@@ -50,9 +76,11 @@ if __name__ == "__main__":
     parser.add_argument("--run", type=Path, required=True)
     parser.add_argument("--reference", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument('--normalize-legacy-scope',action='store_true',
+                        help='Explicitly add absent video/session fields from a verified summary; never rewrite raw logs')
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
-    result = evaluate_run(args.run, args.reference)
+    result = evaluate_run(args.run, args.reference, args.normalize_legacy_scope)
     args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps(result["metrics"]))

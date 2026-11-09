@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 from .channel import ChannelPolygon
 from .protocol import gate_from_config
+from .runner import sha
 
 
 def draw_channel(tile, config):
@@ -51,9 +52,16 @@ def render(video, run, output, width=960):
     summary = json.loads((run / "summary.json").read_text(encoding="utf-8"))
     if summary["status"] != "COMPLETED_UNSCORED":
         raise ValueError("Completed run required")
+    if not summary.get('video_sha256') or sha(video)!=summary['video_sha256']:
+        raise ValueError('Review video source SHA256 differs from the recorded run')
+    provenance=output.with_suffix(output.suffix+'.provenance.json')
+    if provenance.exists():raise FileExistsError(provenance)
     config = summary["config"]
     cap = cv2.VideoCapture(str(video))
     W, H = int(cap.get(3)), int(cap.get(4))
+    if not cap.isOpened() or [W,H]!=summary['source_size']:
+        cap.release()
+        raise ValueError('Review source dimensions differ from recorded run')
     height = round(H * width / W / 2) * 2
     start = config.get("scope_start_frame0", 0)
     end = config.get("end_frame0_exclusive", int(cap.get(7)))
@@ -100,8 +108,13 @@ def render(video, run, output, width=960):
         encoder.stdin.close()
     if encoder.wait() != 0 or decoded != end - start:
         raise RuntimeError("Review rendering failed or source ended early")
-    return {"rendered_frames": decoded, "counts_from_event_log": counts,
-            "source_interval_frame0": [start, end - 1], "new_model_forwards": 0}
+    result={"rendered_frames": decoded, "counts_from_event_log": counts,
+            "source_interval_frame0": [start, end - 1], "new_model_forwards": 0,
+            'source_video_sha256':summary['video_sha256'],'run_id':summary['run_id'],
+            'run_evidence_sha256':{name:sha(run/name) for name in ('summary.json','frames.jsonl','events.jsonl')},
+            'rendered_video_sha256':sha(output)}
+    provenance.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+    return result
 
 
 if __name__ == "__main__":

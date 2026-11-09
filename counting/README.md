@@ -1,12 +1,12 @@
 # 奶牛通道计数：离线与板端实时
 
-2026-11-06：当前板上实时结果、选择的安装配置与证据边界见[实机交付报告](../maintenance/offline_counting/REALTIME_DELIVERY_20261106.md)。实时入口为 `python -m counting.realtime --source INPUT --config CONFIG --output NEW_DIRECTORY`；本轮测试为按1倍墙钟到达的视频回放，全部在线处理在PYNQ-Z2执行。实体摄像头输入尚未验证。
+2026-11-09：当前V4源码及板上回放结果见[本轮成果与复审](../docs/research/20261109_成果与复审.md)；2026-11-06[实机交付报告](../maintenance/offline_counting/REALTIME_DELIVERY_20261106.md)保留为历史。实时入口为 `python -m counting.realtime --source INPUT --config CONFIG --output NEW_DIRECTORY`；V4测试为按1倍墙钟到达的预转换视频回放，在线处理在PYNQ-Z2执行。实体摄像头输入尚未验证。
 
 实时候选使用已确认的同一轨迹在相隔端区各一次真实位置，至少两张不同源图像，预测不能计数。下文两次/三次确认示例和旧离线成绩属于历史策略，未改写为新的实时成绩。源码精确版本见[恢复说明](../maintenance/offline_counting/qualified_birth_sources/README.md)，使用当前文件前应对齐案例源指纹。
 
 输入视频和通道配置，输出原图坐标下的检测、短期轨迹、IN／OUT／NET、逐事件记录及不确定片段。支持PC ONNX参考和PYNQ-Z2 O8后端。分辨率来自已导出的模型；采样频率可配置或处理所有帧，没有固定FPS验收要求。
 
-当前结果与验收边界见[执行状态](../maintenance/offline_counting/STATUS.md)。模型和数据集保留在用户已有存储中。
+历史过程与验收边界见[原执行状态](../maintenance/offline_counting/STATUS.md)，当前结果以V4成果报告为准。模型和数据集保留在已有私有存储中。
 
 当前示例使用两次连续真实观察确认，来源是[快速通行单因素对照](../maintenance/offline_counting/FAST_PASSAGE_FIX.md)：三次确认会漏掉出口区仅有两次观察的快速牛。原冻结配置和库的默认参数保留；这不是任意观察率下的准确性保证。新会话仍须单独验证，预测位置不构成真实观察。
 

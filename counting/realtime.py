@@ -2,6 +2,7 @@
 import argparse
 from dataclasses import asdict
 from collections import deque
+from copy import copy
 import json
 import math
 from pathlib import Path
@@ -62,6 +63,10 @@ class LatestCapture:
         self.buffer_frames = options.get('buffer_frames', 1)
         if isinstance(self.buffer_frames, bool) or self.buffer_frames not in (1, 2) or not isinstance(self.buffer_frames, int):
             raise ValueError('buffer_frames must be integer1 or2')
+        self.history_maximum_age_s=options.get('history_maximum_age_s')
+        limit=self.history_maximum_age_s
+        if limit is not None and (isinstance(limit,bool) or not isinstance(limit,(int,float)) or not math.isfinite(limit) or not 0<limit<=2):
+            raise ValueError('history_maximum_age_s must be a finite number in (0,2] or omitted')
         if kind not in ("paced-file", "live"):
             raise ValueError("Unknown realtime capture kind")
         if kind == "live" and Path(str(source)).is_file():
@@ -89,10 +94,15 @@ class LatestCapture:
         self.latest, self.last_taken, self.thread = None, -1, None
         self.pending = deque(maxlen=self.buffer_frames)
         self.last_take_history, self.history_reads = False, 0
+        self.history_age_guard_overrides=0
+        self.last_history_age_override=False
+        self.last_history_candidate_age_ms=None
         self.done, self.error, self.started = False, None, None
         self.frames, self.overwritten = 0, 0
         self.last_pts, self.first_input_pts = None, None
         self.lateness = Timing()
+        self.read_latency = Timing()
+        self.enqueue_wait = Timing()
 
     def start(self):
         self.thread = threading.Thread(target=self._produce, name="latest-video-capture", daemon=True)
@@ -111,10 +121,15 @@ class LatestCapture:
                     remaining = due - time.monotonic()
                 if self.stop_event.is_set():
                     break
+                read_started = time.monotonic()
                 ok, image = self.cap.read()
-                if not ok:
-                    break
                 now = time.monotonic()
+                if not ok:
+                    with self.condition:
+                        self.read_latency.add((now-read_started)*1000)
+                    if self.kind == 'live' and not self.stop_event.is_set():
+                        raise RuntimeError('Live capture read failed; camera disconnect is not a clean EOF')
+                    break
                 if self.kind == "paced-file":
                     source_pts = float(self.cap.get(cv2.CAP_PROP_POS_MSEC)) / 1000
                     if not math.isfinite(source_pts):
@@ -127,16 +142,21 @@ class LatestCapture:
                     if abs(pts - self.frames / self.nominal_fps) > .0001:
                         raise ValueError("Paced input is not CFR; prepare the selected camera format first")
                 else:
-                    pts = request_time - self.started
-                published = time.monotonic()
+                    pts = now - self.started
+                    due = now
+                ready = time.monotonic()
                 with self.condition:
+                    locked = time.monotonic()
+                    self.read_latency.add((now-read_started)*1000)
                     if len(self.pending) == self.buffer_frames:
                         self.overwritten += 1
                     self.latest = (self.frames, pts, due, image)
                     self.pending.append(self.latest)
                     self.frames += 1
                     self.last_pts = pts
+                    published = time.monotonic()
                     self.lateness.add((published - due) * 1000)
+                    self.enqueue_wait.add((locked-ready)*1000)
                     self.condition.notify_all()
         except BaseException as error:
             self.error = repr(error)
@@ -157,7 +177,14 @@ class LatestCapture:
                 raise RuntimeError(self.error)
             if not self.pending:
                 return None
-            if prefer_history:
+            self.last_history_age_override=False
+            self.last_history_candidate_age_ms=(time.monotonic()-self.pending[0][2])*1000 if prefer_history else None
+            limit=getattr(self,'history_maximum_age_s',None)
+            if (prefer_history and len(self.pending)>1 and limit is not None
+                    and self.last_history_candidate_age_ms>limit*1000):
+                self.last_history_age_override=True
+                self.history_age_guard_overrides=getattr(self,'history_age_guard_overrides',0)+1
+            if prefer_history and not self.last_history_age_override:
                 packet = self.pending.popleft()
             else:
                 packet = self.pending.pop()
@@ -170,12 +197,21 @@ class LatestCapture:
 
     def snapshot(self):
         with self.condition:
-            return {"captured_frames": self.frames, "overwritten_before_read": self.overwritten,
+            lateness,read_latency,enqueue_wait=(copy(timer) for timer in (self.lateness,self.read_latency,self.enqueue_wait))
+            for original,detached in ((self.lateness,lateness),(self.read_latency,read_latency),(self.enqueue_wait,enqueue_wait)):
+                detached.last=original.last.copy()
+            value={"captured_frames": self.frames, "overwritten_before_read": self.overwritten,
                     "maximum_application_queue_frames": self.buffer_frames, "history_frames_processed": self.history_reads,
                     "last_source_time_s": self.last_pts,
                     "source_time_origin_s": self.first_input_pts,
-                    "capture_lateness_ms": self.lateness.summary(), "capture_done": self.done,
+                    'history_maximum_age_s':getattr(self,'history_maximum_age_s',None),
+                    'history_age_guard_overrides':getattr(self,'history_age_guard_overrides',0),
+                    "capture_done": self.done,
                     "capture_error": self.error}
+        # Numerical percentile work must not hold the frame-publication lock.
+        return {**value,'capture_lateness_ms':lateness.summary(),
+                'frame_retrieval_duration_ms':read_latency.summary(),
+                'frame_enqueue_lock_wait_ms':enqueue_wait.summary()}
 
     def close(self):
         self.stop_event.set()
@@ -222,6 +258,10 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
     import cv2
     started = time.monotonic()
     validate_config(config)
+    if (config.get('birth_refinement', {}).get('enabled', False)
+            and config.get('endpoint_recovery', {}).get('enabled', False)
+            and config.get('tracker', {}).get('motion_box') != 'observed_velocity'):
+        raise ValueError('Combined birth and endpoint recovery requires observed_velocity for competing measurement ownership')
     history_velocity = config.get('fast_history_velocity')
     history_policy = config.get('fast_history_policy', 'velocity')
     history_after_birth = config.get('history_after_birth', False)
@@ -275,6 +315,12 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
                "startup_scope": "startup_s includes source open/hash and model initialization inside run; Python imports excluded",
                "latency_boundary": "Expected source-frame arrival through detector/recovery/tracking/event log; source camera transport before decoder excluded",
                "memory_before_model": memory_snapshot()}
+    if source_kind == 'live':
+        summary.update(time_source='host monotonic frame retrieval completion, not sensor exposure PTS',
+                       clock_contract='Host retrieval completion; bounded capture buffer and causal history; predictions never count',
+                       latency_boundary='Host frame retrieval completion through detector/recovery/tracking/event log; preceding blocking read, camera transport and exposure excluded; retrieval duration recorded separately')
+    else:
+        summary['time_source']='verified relative CFR source PTS'
     if source_kind == "paced-file":
         summary["video_sha256"] = sha(source)
     timings = {name: Timing() for name in ("preprocess", "base_inference", "recovery", "tracking", "event_publication", "observation_age")}
@@ -342,6 +388,12 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
             detections = decode(raw, transform, config.get("confidence", .2), config.get("cow_class_ids", [0]))
             base_detections, refinements = detections, []
             recovery_existing = detections[detections[:, 4] >= birth.high_threshold] if birth.enabled else detections
+            association_predictions = {}
+            if birth.enabled and recovery.enabled:
+                for track in tracking.tracker.tracked_stracks + tracking.tracker.lost_stracks:
+                    observations = getattr(track, 'observations', ())
+                    if observations and 0 < pts - observations[-1][0] <= recovery.max_age:
+                        association_predictions[f'{tracking.epoch}:{track.track_id}'] = track.box_at(pts)
             for proposal in recovery.proposals(pts, recovery_existing, tracking.counter.states, tracking.counter.stable_samples):
                 local = Transform.create(capture.width, capture.height, proposal["roi"], transform.rotation, detector.size)
                 local_tensor = getattr(local, prepare_method)(image)
@@ -355,6 +407,13 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
                 refinements.append({**proposal, "transform": asdict(local), "candidates": candidates.tolist(),
                                     "accepted_detection": None if selected is None else selected.tolist()})
                 if selected is not None:
+                    removed = recovery.superseded_global_indices(proposal, selected, detections, pts,
+                                                                birth.high_threshold, association_predictions) if birth.enabled else []
+                    refinements[-1]['superseded_global_detections'] = detections[removed].tolist()
+                    if removed:
+                        keep = np.ones(len(detections), dtype=bool)
+                        keep[removed] = False
+                        detections = detections[keep]
                     detections = np.concatenate((detections, selected[None]))
             birth_records = []
             proposal = None if refinements else birth.proposal(pts, detections, tracking.tracker.tracked_stracks)
@@ -380,21 +439,25 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
             event_publication_age = None
             for event in events:
                 summary["counts"][event["kind"]] += 1
-                write(events_file, {**event, "run_id": summary["run_id"], "wall_decision_s": tracked - capture.started,
+                write(events_file, {**event, "run_id": summary["run_id"], "video_id": summary['video_id'],
+                                    "session_id": session_id, "wall_decision_s": tracked - capture.started,
                                     "decision_age_ms": (tracked - due) * 1000})
                 events_file.flush()
                 event_publication_age = (time.monotonic() - due) * 1000
                 timings["event_publication"].add(event_publication_age)
             for row in uncertain:
-                write(uncertain_file, row)
+                write(uncertain_file, {**row,'run_id':summary['run_id'],'video_id':summary['video_id'],'session_id':session_id})
                 summary["uncertain_records"] += 1
             summary["counts"]["NET"] = summary["counts"]["IN"] - summary["counts"]["OUT"]
             before_frame_log = time.monotonic()
-            write(frames_file, {"run_id": summary["run_id"], "frame0": sequence, "time_s": pts,
+            write(frames_file, {"run_id": summary["run_id"], "video_id": summary['video_id'],
+                                "session_id": session_id, "frame0": sequence, "time_s": pts,
                                 "wall_since_stream_start_s": before_frame_log - capture.started,
                                 "age_before_frame_log_ms": (before_frame_log - due) * 1000, "event_publication_age_ms": event_publication_age,
                                 "fast_history_requested": speed_history_requested, "history_frame_selected": capture.last_take_history,
                                 "history_selection_requested": preserve_history,
+                                'history_age_guard_overridden':getattr(capture,'last_history_age_override',False),
+                                'history_candidate_age_ms':getattr(capture,'last_history_candidate_age_ms',None),
                                 "birth_history_requested": birth_history_requested,
                                 "base_detections": base_detections.tolist(), "detections": detections.tolist(),
                                 "endpoint_recovery": refinements, "birth_refinement": birth_records,
@@ -411,7 +474,7 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
             timings["observation_age"].add(age_ms)
             global_latency.add(age_ms)
         for row in tracking.finish():
-            write(uncertain_file, row)
+            write(uncertain_file, {**row,'run_id':summary['run_id'],'video_id':summary['video_id'],'session_id':session_id})
             summary["uncertain_records"] += 1
         expected = config.get("expected_capture_frames")
         if expected is not None and capture.frames != expected:

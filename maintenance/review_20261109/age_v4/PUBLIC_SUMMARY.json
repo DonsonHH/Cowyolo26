@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "status": "VERIFIED_DEVELOPMENT_REPLAY_BLOCK",
+  "checked_date": "2026-11-09",
+  "platform": "PYNQ-Z2",
+  "detector": "YOLO26n, quantized S256 program, O8 backend",
+  "detector_input_px": 256,
+  "acquisition": {
+    "width_px": 1280,
+    "height_px": 720,
+    "format": "MJPEG prepared CFR replay",
+    "arrival_hz": 5,
+    "replay_rate": "1x wall paced",
+    "actual_global_observation_hz_range": [2.804490, 2.919635]
+  },
+  "source_package_sha256": "33f2a9572394638fc442da608795bc2f1f5156b387f5e62605ca8136f268c380",
+  "predeclared_repeats_per_clip": 2,
+  "clips_are_development_data": true,
+  "unique_user_confirmed_passages": 47,
+  "repeat_runs_are_independent_animals": false,
+  "clips": [
+    {
+      "id": "camera1_aug14",
+      "direction": "down",
+      "reference_total": 12,
+      "repeat_counts": [12, 12],
+      "worst_event_publication_age_ms": 608.118,
+      "worst_observation_age_ms": 979.776,
+      "worst_observation_p95_upper_ms": 667.650,
+      "actual_global_observation_hz_range": [2.812336, 2.823372]
+    },
+    {
+      "id": "camera1_aug15",
+      "direction": "down",
+      "reference_total": 12,
+      "repeat_counts": [12, 12],
+      "worst_event_publication_age_ms": 627.578,
+      "worst_observation_age_ms": 971.830,
+      "worst_observation_p95_upper_ms": 647.000,
+      "actual_global_observation_hz_range": [2.888801, 2.919635]
+    },
+    {
+      "id": "camera2_aug19",
+      "direction": "up",
+      "reference_total": 11,
+      "repeat_counts": [11, 11],
+      "worst_event_publication_age_ms": 915.546,
+      "worst_observation_age_ms": 942.813,
+      "worst_observation_p95_upper_ms": 635.000,
+      "actual_global_observation_hz_range": [2.902661, 2.906903]
+    },
+    {
+      "id": "camera2_aug20",
+      "direction": "up",
+      "reference_total": 12,
+      "repeat_counts": [12, 12],
+      "worst_event_publication_age_ms": 890.991,
+      "worst_observation_age_ms": 958.041,
+      "worst_observation_p95_upper_ms": 841.600,
+      "actual_global_observation_hz_range": [2.804490, 2.898754]
+    }
+  ],
+  "original_contract_limits": {
+    "event_publication_age_max_ms": 1000,
+    "observation_age_p95_max_ms": 1000,
+    "observation_age_max_ms": 1500,
+    "capture_lateness_max_ms": 500,
+    "tail_drain_max_s": 1,
+    "application_queue_frames_max": 2,
+    "future_frame_access_allowed": false
+  },
+  "block_checks": {
+    "all_eight_integrity_checks_pass": true,
+    "all_eight_known_direction_totals_agree": true,
+    "all_eight_original_contract_checks_pass": true,
+    "maximum_capture_lateness_ms": 253.119,
+    "maximum_tail_drain_s": 0.730082,
+    "event_f1": null,
+    "formal_timed_event_reference_available": false,
+    "raw_runtime_status_rewritten": false,
+    "raw_accuracy_verified_flag_rewritten": false,
+    "raw_legacy_500ms_flag_rewritten": false
+  },
+  "historical_failure_summary": {
+    "v2_aug15_observation_max_ms": 1541.132,
+    "v2_aug15_capture_lateness_max_ms": 538.753,
+    "v2_aug19_event_publication_max_ms": 1059.061,
+    "v3_acquisition_px": [640, 360],
+    "v3_camera2_aug19_repeat_counts_vs_reference": [[10, 10], 11],
+    "v3_camera2_aug20_repeat_counts_vs_reference": [[7, 9], 12],
+    "v3_selected_for_deployment": false
+  },
+  "scope": {
+    "source_videos_preconverted_before_board_replay": true,
+    "physical_camera_transport_verified": false,
+    "native_high_resolution_h264_verified": false,
+    "independent_event_precision_recall_f1_verified": false,
+    "power_or_fpga_resource_advantage_measured": false,
+    "causal_single_factor_ablation_completed": false,
+    "interpretation": "Board engineering feasibility on four development clips; not an independent test or an any-video zero-miss guarantee."
+  },
+  "provenance": {
+    "protocol_sha256": "ff7c0b21e864d843e432e1052862bddec63846abd498ea552bd44701a66752c5",
+    "raw_evidence_archive_sha256": "f19e99f27f86fd19885509d9653eededafb29da261248a444a7827303166fa24",
+    "raw_model_media_and_private_restore_index_published_here": false,
+    "new_model_forwards_for_this_summary": 0
+  }
+}
