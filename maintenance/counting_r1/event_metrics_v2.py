@@ -11,17 +11,23 @@ import math
 from collections import defaultdict
 from pathlib import Path
 
-VERSION = "directional-event-set-v2.0"
+VERSION = "directional-event-set-v2.1"
 DIRECTIONS = ("A->B", "B->A")
 
 
 def _prepare(events):
     rows = []
+    identified = set()
     for index, event in enumerate(events):
         time = float(event["time_s"])
         if not math.isfinite(time) or event["direction"] not in DIRECTIONS:
             raise ValueError("Events need finite time_s and direction A->B or B->A")
         scope = (str(event.get("video_id", "")), str(event.get("session_id", "")))
+        event_id = event.get('event_id')
+        if event_id is not None:
+            if not isinstance(event_id, str) or not event_id.strip() or (scope, event_id) in identified:
+                raise ValueError('Explicit event_id must be nonempty and unique within video/session scope')
+            identified.add((scope, event_id))
         # Canonical ordering is independent of input order. Byte-identical duplicates
         # are indistinguishable; indices still refer to their original input rows.
         key = json.dumps(event, sort_keys=True, ensure_ascii=False, allow_nan=False)

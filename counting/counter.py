@@ -42,6 +42,7 @@ class PassageCounter:
             state.origin, state.candidate, state.streak = None, None, 0
             state.origin_time, state.origin_frame = None, None
             state.unanchored_start, state.unanchored_reported = None, False
+            state.emitted = False
         zone = self.zone(pos)
         if state.origin is None and zone is None and state.unanchored_start is None:
             state.unanchored_start = (time_s, frame)

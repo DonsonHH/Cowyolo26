@@ -1,0 +1,22 @@
+\subsection{Geometry-Preserving Birth Verification}
+The closed-loop board executions of the new variant used 1,030 normal calls per repeat, with four separate warm-ups. They counted 12, 12, 11, and 12 in each repeat, giving MAE 0.00 and 0.00. The selected input and raw outputs, actual fusion use, call slots, and per-frame cumulative counts were verified. These are further executions of the same four exposed videos; the change was selected after inspecting their results.
+
+The worst event-publication age was 1153.863~ms and the observation-completion maximum was 1163.683~ms. The largest per-run observation p95 was 959.845~ms, capture lateness was at most 255.643~ms, and drain was at most 0.481703~s. 7 of eight runs met all original references. The 1-s publication overrun is retained rather than relabeled, even though its directional total agreed.
+
+\begin{table}[!t]
+\caption{Geometry-Preserving Birth Variant: Actual Board Counts}
+\label{tab:fusion}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Clip & Reference & Repeat 1 & Repeat 2 & Calls / repeat\\
+\midrule
+Aug 14 & 12 & 12 & 12 & 202\\
+Aug 15 & 12 & 12 & 12 & 325\\
+Aug 19 & 11 & 11 & 11 & 203\\
+Aug 20 & 12 & 12 & 12 & 300\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+An additional fixed camera~2 August~17 input, without an accepted human total, did not finish its SD-backed replay: planned frame 404 was unavailable and frame 410 was observed. Its partial zero is unscored. The frame-retrieval maximum exceeded 1~s while the detector API maximum was 338.3~ms. This separates an observed input/logging jitter issue from count agreement on completed positive clips. The nine-case parent batch remains failed, with eight completed positive runs; it is not an all-case deployment pass.

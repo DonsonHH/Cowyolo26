@@ -1,0 +1,16 @@
+{
+  "created_UTC": "2026-11-10T11:23:24.808411+00:00",
+  "source_sha256": "dfe74b833295f9665efe0c06836bbe004530688ef5d6fc12df453a3b42b04f16",
+  "original_window_retained_s": [
+    0,
+    120
+  ],
+  "purpose": "One source-content-selected window from the SAME downloaded video; not a metadata-blind random holdout.",
+  "selection": "Earliest complete120s grid block starting>=120 with three consecutive1Hz source key-frame samples whose foreground fraction exceeds0.03.",
+  "foreground": "Within the frozen camera2 polygon, max RGB deviation>60 from median of first120 source samples; key-frame decode then1Hz resampling.",
+  "no_neural_predictions_read": true,
+  "thresholds_retuned": false,
+  "model_and_geometry": "Already fixed budget-v4 graph and camera2 Aug20 geometry; no adjustment after source viewing.",
+  "new_model_forwards": 0,
+  "stop_rule": "Use first qualifying block, keep all outcomes; if no full block qualifies, record not found, do not loosen threshold."
+}

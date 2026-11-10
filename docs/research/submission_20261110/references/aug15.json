@@ -1,0 +1,32 @@
+{
+  "reference_type": "REVIEWED_VIDEO_DIRECTIONAL_TOTALS",
+  "review_status": "reviewed",
+  "video_id": "camera1_aug15",
+  "source_video_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+  "reviewed_interval": {
+    "start_frame0": 0,
+    "end_frame0": 648
+  },
+  "review_gate": {
+    "axis": "y",
+    "perpendicular_roi": [
+      0.34,
+      0.75
+    ],
+    "lower": 0.4,
+    "upper": 0.6
+  },
+  "directional_totals": {
+    "A->B": 12,
+    "B->A": null
+  },
+  "review": {
+    "reviewer": "project user (historical conversation)",
+    "statement": "确实是12次，在第一次大概是20s的时候有一头牛比较快速的通过了漏了一次，后面的11次都是正确的",
+    "evidence": "historical user review of Aug15 result video",
+    "view": "prediction_overlay"
+  },
+  "data_role": "development, repeatedly exposed before this score",
+  "prepared_source_binding": "The known directional total is reused for the corresponding frozen prepared replay of the accepted passage window. It is not a fresh human review of this encoding.",
+  "record_created_UTC": "2026-11-10T07:03:41.353807+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "created_UTC": "2026-11-10T12:22:26.034524+00:00",
+  "protocol_sha256": "a45c0db707232b8103629284b571cb878d8618a76bfee54124d570251f92d4ec",
+  "collector_sha256": "1347bf5743d819b3143a60225d2e52c67a9dbee671346a559090733d8fc52d35",
+  "reason": "Legacy EntireStreamLatency has an overflow bin above1000ms and returns null if its p95 enters that bin. The already recorded Timing summary retains every observation in these short cases, so its exact p95 is valid for the predeclared1500ms reference.",
+  "required_check": "timings.observation_age.count == retained_samples == len(frames) <10000",
+  "preserved": "Raw summary and stricter legacy flag unchanged; no replacement of V5/two-packet outcomes.",
+  "new_model_forwards": 0,
+  "runtime_modified": false
+}

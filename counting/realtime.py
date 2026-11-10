@@ -61,8 +61,15 @@ class LatestCapture:
         import cv2
         options = capture_options or {}
         self.buffer_frames = options.get('buffer_frames', 1)
-        if isinstance(self.buffer_frames, bool) or self.buffer_frames not in (1, 2) or not isinstance(self.buffer_frames, int):
-            raise ValueError('buffer_frames must be integer1 or2')
+        if (isinstance(self.buffer_frames, bool) or not isinstance(self.buffer_frames, int)
+                or not 1<=self.buffer_frames<=4):
+            raise ValueError('buffer_frames must be an integer from1 to4')
+        self.publication_stride_frames=options.get('publication_stride_frames',1)
+        stride=self.publication_stride_frames
+        if isinstance(stride,bool) or not isinstance(stride,int) or stride not in (1,2):
+            raise ValueError('publication_stride_frames must be integer1 or2')
+        if stride!=1 and kind!='paced-file':
+            raise ValueError('Scheduled publication is qualified only for paced-file capture')
         self.history_maximum_age_s=options.get('history_maximum_age_s')
         limit=self.history_maximum_age_s
         if limit is not None and (isinstance(limit,bool) or not isinstance(limit,(int,float)) or not math.isfinite(limit) or not 0<limit<=2):
@@ -99,6 +106,7 @@ class LatestCapture:
         self.last_history_candidate_age_ms=None
         self.done, self.error, self.started = False, None, None
         self.frames, self.overwritten = 0, 0
+        self.published_frames,self.not_admitted_frames=0,0
         self.last_pts, self.first_input_pts = None, None
         self.lateness = Timing()
         self.read_latency = Timing()
@@ -148,10 +156,14 @@ class LatestCapture:
                 with self.condition:
                     locked = time.monotonic()
                     self.read_latency.add((now-read_started)*1000)
-                    if len(self.pending) == self.buffer_frames:
-                        self.overwritten += 1
-                    self.latest = (self.frames, pts, due, image)
-                    self.pending.append(self.latest)
+                    if self.frames % self.publication_stride_frames==0:
+                        if len(self.pending) == self.buffer_frames:
+                            self.overwritten += 1
+                        self.latest = (self.frames, pts, due, image)
+                        self.pending.append(self.latest)
+                        self.published_frames+=1
+                    else:
+                        self.not_admitted_frames+=1
                     self.frames += 1
                     self.last_pts = pts
                     published = time.monotonic()
@@ -201,6 +213,9 @@ class LatestCapture:
             for original,detached in ((self.lateness,lateness),(self.read_latency,read_latency),(self.enqueue_wait,enqueue_wait)):
                 detached.last=original.last.copy()
             value={"captured_frames": self.frames, "overwritten_before_read": self.overwritten,
+                    "publication_stride_frames":getattr(self,'publication_stride_frames',1),
+                    "published_frames":getattr(self,'published_frames',self.frames),
+                    "not_admitted_frames":getattr(self,'not_admitted_frames',0),
                     "maximum_application_queue_frames": self.buffer_frames, "history_frames_processed": self.history_reads,
                     "last_source_time_s": self.last_pts,
                     "source_time_origin_s": self.first_input_pts,
@@ -258,6 +273,17 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
     import cv2
     started = time.monotonic()
     validate_config(config)
+    source_selection=config.get('source_selection','latest')
+    if source_selection not in ('latest','scheduled_global'):
+        raise ValueError('source_selection must be latest or scheduled_global')
+    scheduled=source_selection=='scheduled_global'
+    capture_options=config.get('capture',{})
+    if scheduled and (source_kind!='paced-file' or
+            capture_options.get('publication_stride_frames')!=2 or
+            capture_options.get('history_maximum_age_s') is not None or
+            config.get('fast_history_velocity') is not None or
+            config.get('history_after_birth',False)):
+        raise ValueError('scheduled_global requires paced-file, stride2, no age override or adaptive history')
     if (config.get('birth_refinement', {}).get('enabled', False)
             and config.get('endpoint_recovery', {}).get('enabled', False)
             and config.get('tracker', {}).get('motion_box') != 'observed_velocity'):
@@ -295,16 +321,22 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
     if config.get("expected_capture_size") is not None and [capture.width, capture.height] != config["expected_capture_size"]:
         capture.close()
         raise ValueError("Actual capture size differs from the configured physical geometry")
+    if scheduled and abs(capture.nominal_fps-target_hz)>1e-8:
+        capture.close()
+        raise ValueError('scheduled_global keeps the tracker nominal clock equal to input FPS')
     session_id = config.get("session_id") or str(uuid.uuid4())
     tracking = TrackingSession(config, capture.width, capture.height, target_hz, session_id)
     recovery = EndpointRecovery(config, capture.width, capture.height)
     birth = BirthRefinement(config, capture.width, capture.height)
-    sampler = SourceSampler(target_hz)
+    global_target_hz=capture.nominal_fps/2 if scheduled else target_hz
+    sampler = SourceSampler(global_target_hz)
+    next_scheduled_frame0=0
     summary = {"status": "STARTING", "session_id": session_id, "run_id": str(uuid.uuid4()),
                "video_id": config.get("video_id", Path(str(source)).stem),
                "source": str(source), "source_kind": source_kind, "config": config,
                "source_size": [capture.width, capture.height], "nominal_fps": capture.nominal_fps,
-               "target_detector_hz": target_hz, "effective_nominal_sample_hz": target_hz,
+               "target_detector_hz": global_target_hz, "effective_nominal_sample_hz": global_target_hz,
+               "tracker_nominal_hz":target_hz,"source_selection":source_selection,
                "model_forwards": 0, "base_model_forwards": 0,
                "warmup_model_forwards": 0,
                "endpoint_recovery_forwards": 0, "birth_refinement_forwards": 0,
@@ -367,12 +399,16 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
         while True:
             birth_history_requested = birth_history_pending
             speed_history_requested = fast_history_needed(tracking, config.get('axis','y'), history_velocity, history_policy)
-            preserve_history = birth_history_requested or speed_history_requested
+            preserve_history = scheduled or birth_history_requested or speed_history_requested
             birth_history_pending = False
             packet = capture.take_after(sequence, prefer_history=preserve_history)
             if packet is None:
                 break
             sequence, pts, due, image = packet
+            if scheduled:
+                if sequence!=next_scheduled_frame0:
+                    raise ValueError(f'Scheduled global frame {next_scheduled_frame0} unavailable; observed {sequence}')
+                next_scheduled_frame0+=2
             if not sampler.select(pts):
                 birth_history_pending = birth_history_requested
                 summary["sampler_rejected_frames"] += 1
@@ -424,11 +460,14 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
                 summary["birth_refinement_forwards"] += 1
                 candidates = decode(local_raw, local, config.get("confidence", .2), config.get("cow_class_ids", [0]))
                 selected = birth.select(proposal, candidates, detections)
+                fused=None if selected is None else birth.fuse(base_detections[proposal["seed_index"]],selected)
                 birth_records.append({**proposal, "transform": asdict(local), "candidates": candidates.tolist(),
-                                      "accepted_detection": None if selected is None else selected.tolist()})
+                                      "accepted_detection": None if selected is None else selected.tolist(),
+                                      "fused_detection":None if fused is None else fused.tolist(),
+                                      "fusion_mode":"global_geometry_local_score" if birth.preserve_global_geometry else "local_geometry"})
                 if selected is not None:
                     detections = detections.copy()
-                    detections[proposal["seed_index"]] = selected
+                    detections[proposal["seed_index"]] = fused
             recovered = time.monotonic()
             tracks, events, uncertain = tracking.update(sequence, pts, detections)
             if recovery.enabled:
@@ -479,6 +518,8 @@ def run(source, config, output, source_kind="paced-file", detector_factory=None)
         expected = config.get("expected_capture_frames")
         if expected is not None and capture.frames != expected:
             raise ValueError("Capture EOF does not cover the declared input")
+        if scheduled and summary['base_model_forwards']!=(capture.frames+1)//2:
+            raise ValueError('Scheduled globals did not cover every admitted frame')
         if not summary["processed_frames"]:
             raise ValueError("No frame reached the detector")
         summary["status"] = "COMPLETED_UNSCORED"

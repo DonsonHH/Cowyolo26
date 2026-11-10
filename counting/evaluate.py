@@ -2,9 +2,28 @@
 import argparse
 import json
 import hashlib
+import math
 from pathlib import Path
 from maintenance.counting_r1.event_metrics_v2 import evaluate_events
 from .protocol import canonical_gate, gate_from_config
+
+
+def _frame_index(value, start, end):
+    if isinstance(value, bool) or not isinstance(value, int) or not start <= value <= end:
+        raise ValueError('Source frame must be an integer inside the reviewed interval')
+    return value
+
+
+def _validate_times(row, completion, entry, source_time, frame_slack):
+    for key in ('entry_time_s', 'time_s'):
+        value = row.get(key)
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
+            raise ValueError('Entry and completion times must be finite source timestamps')
+    if row['entry_time_s'] >= row['time_s'] or entry >= completion:
+        raise ValueError('Entry must precede completion in source time and source frame')
+    for key, frame in (('entry_time_s', entry), ('time_s', completion)):
+        if abs(row[key] - source_time(frame)) > frame_slack(frame) + 1e-8:
+            raise ValueError('Event time is not bound to its declared source frame')
 
 
 def evaluate_run(run_folder, reference_file, normalize_legacy_scope=False):
@@ -35,6 +54,38 @@ def evaluate_run(run_folder, reference_file, normalize_legacy_scope=False):
             raise ValueError("Complete passages require entry before completion")
     if "review_gate" not in reference or canonical_gate(reference["review_gate"]) != gate_from_config(run["config"]):
         raise ValueError("Reference counting gate differs from the run configuration")
+    start = _frame_index(start, 0, end)
+    end = _frame_index(end, start, end)
+    source_times = reference.get('source_frame_times_s')
+    if source_times is not None:
+        if (not isinstance(source_times, list) or len(source_times) <= end
+                or any(isinstance(t, bool) or not isinstance(t, (int, float)) or not math.isfinite(t) for t in source_times)
+                or any(b <= a for a, b in zip(source_times, source_times[1:]))):
+            raise ValueError('A verified increasing source-frame time index is required')
+        source_time = lambda frame: source_times[frame]
+        def frame_slack(frame):
+            neighbors = [abs(source_times[frame]-source_times[j]) for j in (frame-1, frame+1)
+                         if 0 <= j < len(source_times)]
+            return max(neighbors, default=0.)
+    elif run.get('time_source') == 'verified relative CFR source PTS':
+        fps = run.get('nominal_fps')
+        if isinstance(fps, bool) or not isinstance(fps, (int, float)) or not math.isfinite(fps) or fps <= 0:
+            raise ValueError('CFR source frames require a finite positive nominal_fps')
+        source_time = lambda frame: frame / fps
+        frame_slack = lambda frame: 1. / fps
+    else:
+        raise ValueError('Timed references require a source-frame time index or verified CFR timing')
+    for row in events:
+        keys = row['key_source_frames0']
+        if not isinstance(keys, list) or not keys:
+            raise ValueError('A list of independent source keyframes is required')
+        for keyframe in keys:
+            _frame_index(keyframe, start, end)
+        completion = _frame_index(row['completion_source_frame0'], start, end)
+        entry = _frame_index(row.get('entry_source_frame0', min(keys)), start, end)
+        if completion not in keys:
+            raise ValueError('Completion frame must occur in the independent keyframe record')
+        _validate_times(row, completion, entry, source_time, frame_slack)
     prediction = [json.loads(line) for line in (run_folder / "events.jsonl").read_text(encoding="utf-8").splitlines() if line]
     normalization=[]
     if not run.get('run_id'):
@@ -52,6 +103,12 @@ def evaluate_run(run_folder, reference_file, normalize_legacy_scope=False):
             elif row[key]!=run[key]:
                 raise ValueError('Prediction '+key+' conflicts with summary scope')
         if added:normalization.append({'event_id':row.get('event_id'),'added_fields':added})
+        completion = _frame_index(row.get('frame0'), start, end)
+        entry = _frame_index(row.get('entry_frame0'), start, end)
+        _validate_times(row, completion, entry, source_time, frame_slack)
+    if any(not isinstance(row.get('event_id'), str) or not row['event_id'].strip()
+           for row in events + prediction):
+        raise ValueError('File-based event evaluation requires explicit nonempty event identifiers')
     result = evaluate_events(events, prediction, float(reference.get("matching_tolerance_s", 2.)),
                              reference.get("physical_correspondence"))
     def digest(path):

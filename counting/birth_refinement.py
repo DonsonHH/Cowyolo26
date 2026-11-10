@@ -15,6 +15,9 @@ class BirthRefinement:
         if not isinstance(options, dict) or not isinstance(options.get("enabled", False), bool):
             raise ValueError("birth_refinement needs boolean enabled")
         self.enabled = options.get("enabled", False)
+        self.preserve_global_geometry=options.get('preserve_global_geometry',False)
+        if not isinstance(self.preserve_global_geometry,bool):
+            raise ValueError('preserve_global_geometry must be boolean')
         self.scale = float(options.get("roi_scale", 1.5))
         if not math.isfinite(self.scale) or not 1 < self.scale <= 3:
             raise ValueError("Invalid birth refinement crop scale")
@@ -45,6 +48,13 @@ class BirthRefinement:
         if not isinstance(self.weak_motion,bool) or not math.isfinite(self.minimum_motion) or not 0 < self.minimum_motion <= 2:
             raise ValueError('Invalid weak motion support configuration')
         self.weak_history = deque(maxlen=2)
+
+    def fuse(self, global_seed, selected_local):
+        """Verify the measured global box without a crop-induced position shift."""
+        fused=np.asarray(selected_local,dtype=np.float32).copy()
+        if self.preserve_global_geometry:
+            fused[:4]=np.asarray(global_seed,dtype=np.float32)[:4]
+        return fused
 
     def record(self, time_s, detections):
         """Keep only bounded prior detector measurements; these never count."""

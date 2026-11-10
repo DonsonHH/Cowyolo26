@@ -1,0 +1,733 @@
+{
+  "created_UTC": "2026-11-10T12:01:20.398905+00:00",
+  "source_runtime": "/home/xilinx/jupyter_notebooks/cow_submission_budget_20261110_v5/runtime",
+  "source_archive_sha256": "07a1b3b5028101c98b5e6ecee399df19f73b9e3110bfe096a182b914c46cec60",
+  "source_file_sha256": {
+    "counting/__init__.py": "6839ba785c1a458126fff8567a957657b3ee8c2ee708a71d2228a6dd28f63c86",
+    "counting/__main__.py": "b72d6210c14303737821fbb3c2f6a4b0fd2ab11b4e77469141e2cd5a4a1e876e",
+    "counting/backends.py": "6bd9310d7e4dca0cdb57051f579cdc7c5a5e7e61367ed14a964d79a247088682",
+    "counting/birth_refinement.py": "334e69d5dd15316d66089163720c31d3401b6e69a93d283d40f90650476fa915",
+    "counting/budget_runner.py": "087c343aaf6d368c2ff05cba4d70b848d34f37e0a9e2b1da2c96b7ccea1a3c71",
+    "counting/budget_schedule.py": "61cd683869db9f02d88fc53e0080fec1401c5fba81eb91b29bcba8dd32baedd8",
+    "counting/channel.py": "a58c5d6b2baddfb1f69333351eadfb47606bcfa723a0e217d1f04b41b32f8a97",
+    "counting/count_metrics.py": "fe3ff48f4e1dd781a84bede2e05301edad7565bc27e68967be728538f95e9148",
+    "counting/counter.py": "4372781ae99c284512553179b3c33f99979d688880ec631ba27d83f4df8fea35",
+    "counting/endpoint_recovery.py": "babd36f4bf318c7f729abf4c982cb50e4fe5c6daa23fbc590c4c18a7484a1138",
+    "counting/evaluate.py": "c434b2f5f68cc417ac7ecf59bbf0c467c4b33ac849af351de19039a412318412",
+    "counting/geometry.py": "ee973666c3fbb281688cf4a91ccf0812dd031e4913d6ff266b9bdf3d7b9df177",
+    "counting/index_source.py": "bd626308eb56399ae062e445cc9691e384d370a03d3789774d7dae1a498939da",
+    "counting/observation_track.py": "012566afc9954d4562a8b2f226012528818868852e9effbe2ec8d8ac1948b989",
+    "counting/package_board.py": "9ec46237258ac774d04ce01f1eb45106ed63ed4385f8e2f8d3aca59dfe572b0f",
+    "counting/protocol.py": "515f74f6589bc3f4a74d8b390736efe153edfcd1161eb36b4d95eefb45a049ff",
+    "counting/realtime.py": "62f7869d569f414ec3f36bbc3ce2d4f0baf383a9292da1ba1ba11c4e17b64a56",
+    "counting/render.py": "ec2c35cda9c8159e6ced19facde568a07fdd52bcb8d59d5f8a6cc54602f6b65a",
+    "counting/review.html": "82f7ffe1dfcbefb790851ceb30d7ee91a44924417139a140b85a4638aa6d67f2",
+    "counting/review_server.py": "0da8b90c39e4b88b613945dbefc35e30caf53c548a2b319184c8da047ed37986",
+    "counting/runner.py": "c07b68ed027bb9a8af251ba1e31f39a080e697cac635f452b56d9032b3842363",
+    "counting/source_clock.py": "7c9b5b9c86bc3e860984e2ea60337bcd816976234fe18e00c3182d1fb4a2bf9a",
+    "counting/test_birth_refinement.py": "4fc749d0c639ae5b94948872b067fa4b39cc4279b20446fc05912b3ea050ef26",
+    "counting/test_box_motion.py": "16fcc4b99584683a0cd5123bb4986552abfd348ccb122431821c3e6695ee6cd5",
+    "counting/test_budget_runner.py": "b823a5a393ccf717d98785cede669d3caac306d6432dc81b20bd1b0062c5ae69",
+    "counting/test_budget_schedule.py": "ee878c22d08df6edc8433771d8c0d6bd4fc3f0d930925179b8a8601ab2431a0e",
+    "counting/test_capture_history.py": "dcebeb0de0b48b99ccca2e9e1918a3675159742c7dc1f3c272cbc2dc693fc481",
+    "counting/test_channel_tracking_profile.py": "5374e9ed5bf77136b730cd5e8eec040710b1522a00029efc1611961e23e9c05a",
+    "counting/test_count_metrics.py": "884c6020592f5b6bd707aec3a0ba38895622edcb393226bf071d53532a3528ab",
+    "counting/test_counting.py": "400af8516f275701e3cd0a7313997c923e001bdb22c06bb1678b2e7a135021e9",
+    "counting/test_endpoint_recovery.py": "60e1e7acac01b00d43f0a49b4ac880ed082f198b820f87028e164e10ce4e558b",
+    "counting/test_evaluation_integrity.py": "c4eb745dbe4f036d874a2e6ee638683de8bfab89ddfa17f4040452f0846467bd",
+    "counting/test_fast_passage_profile.py": "3a302d32a70d36b4ef580fd95b33bc287c331bfd60bbc26cb0c800ecb53c9343",
+    "counting/test_fast_preprocess.py": "12307cec30c58eb137320ffdb26b66257630ffb0011b50f44b6b76a8d19f949f",
+    "counting/test_native_bgr.py": "74b98196134b3a0b0b5349f647e136129348c9d7aab611aabdf54ffb43af48e2",
+    "counting/test_polygon_channel.py": "6d002f90d112cc5e4e19fabf6b95986518807f99389cec7e9292375faff3f291",
+    "counting/test_realtime.py": "4e789ef1889ceca4643f5836e706c999d80b3e63e128b57f324c3f2c2391d8b7",
+    "counting/test_review_regressions.py": "ba322a1fded8dbe0ce16a5128faadecdb1832aee2d995bae14655801c78465df",
+    "counting/test_scheduled_realtime.py": "f5b93ee8ec52b380084e354ce56423e9bbc93e1cf33d76e14d4ffc54b00ffc4e",
+    "counting/test_source_clock.py": "5bd396c73df66f3bf503afa11f9fcf4f74affdc2c7b6b9402ff9834370bef95c",
+    "counting/test_video_integration.py": "004b3c8bc9dd77e1371337fab60942f915d89ecceb0b6730c398d26bccee2c51",
+    "counting/tracking.py": "d10ed38e0bd4b5899ac1621fa2dcfc9c560708d228dd6fce538c32dc147bb882",
+    "maintenance/counting_r1/__init__.py": "d5a336d207059817c4c499b679d56a1f325f6f76dce74218a9652e9ffb9ccd47",
+    "maintenance/counting_r1/event_metrics_v2.py": "3d93aa65b514333a4e0042a2d1cf38c4d22e572a20d640ec5a6c5c5f29120c91",
+    "maintenance/counting_r1/tracker.py": "f404d2be54183017459090ae7d794fd6950272e2dfd24745106460f61f22fd54",
+    "maintenance/offline_counting/results/purdue_day1_detection_fixture.json": "d8482345c400e127956ffb543960a5041a3a643d7b9f54a610a4eb0970199242",
+    "maintenance/offline_counting/results/r5_aug15_fast_passage_trace.json": "3beff248a173d0deb5cced109c10477d0a0b31bdad18b04091ea5ad390ae66d0",
+    "maintenance/offline_counting/selected_camera24_profile_v3.json": "4c452b415477e12d1e3211a060a605564e0dcec6940b6e3bb0633dfe3d1900d1",
+    "maintenance/offline_counting/selected_counter_profile_v2.json": "bd3c61468237a7edae80f9f6416598f19fda6b423ea5c92c34fbcd064c647480",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/matching.py": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/support.py": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+    "pynq/cow_research_numpy_tracker_20261029/frame_pipeline.py": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+  },
+  "hardware_model_assets_sha256": {
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program/graph.bin": "c083b7e307ac4233f73f3b5e7ded6a041982e42d366c70c5c65fb71edf446216",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program/program.json": "bb1710fffa0eff6279ab04bdbbe68121d9a57ffeff36e988dc17438aa0fccdbe",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin": "adf50c9fdf4a24ee00ebc0921e1d5c09e782346765f80428a5227501c22aa9f0",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.json": "e8ab731b0d22cb11ac4bb61a44ddbb6160f25d3896100044b474e8b2fc03a6df",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/device_initialize.py": "c87f8671cb6d27af790928618a1d8cb7e20127cb09e9f7378a417a54fa85ac98",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.hwh": "d6cf7f228c93f06523ad8e71efa9c280ba924ecc93d13f8ecdf90351238b4a6a",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/native_graph.py": "84bd2d829f4b70408585eaabcb742176b04703ac1777f1e8a8d7f65801b9b01e",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/recompile_native.py": "09e6331beae54e43d2f11a9b42be7f6ee4981b6504a28be3ad744e7a8542a686",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/run_board.py": "e307923e2c9640cf3f88e01a62265274c028e9edbe9f8d1845db5f100a497bb8",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/run_detector.py": "742e4587ec197068dd87ba2ec78b8e82dbbf02a7f5e8023802a88baf6a8625b4",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/runtime_fast/board_runtime.py": "2affc0f270a4c2f04f8ceb800934248b8c35483b02b284d77215dba38adb64b3",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/verify_release.py": "d7533c0f3849fecebadfc12340df532b3a375a473ce149b88cb8c18a032c3908"
+  },
+  "clips": {
+    "aug14": {
+      "source": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug14_hd_s256_birth_v14/input.avi",
+      "source_sha256": "7b2bcce4f700e4c72ff588f04f8254dd88f77c7dbbec327b917cf4c9db402fa9",
+      "config": {
+        "video_id": "camera1_aug14",
+        "session_id": "p0p1_ablation_20261109_aug14_l1",
+        "sample_hz": 5,
+        "decode_start_frame0": 0,
+        "scope_start_frame0": 0,
+        "end_frame0_exclusive": 403,
+        "axis": "y",
+        "perpendicular_roi": [
+          0.34,
+          0.75
+        ],
+        "in_direction": "A->B",
+        "detection_roi_xyxy": [
+          435,
+          0,
+          960,
+          720
+        ],
+        "rotation_clockwise": 90,
+        "confidence": 0.01,
+        "cow_class_ids": [
+          0
+        ],
+        "lost_seconds": 6,
+        "counter": {
+          "lower": 0.4,
+          "upper": 0.6,
+          "stable_samples": 1,
+          "maximum_gap_s": 2
+        },
+        "detector": {
+          "backend": "o8",
+          "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+          "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+          "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+          "size": 256
+        },
+        "track_only_in_channel": true,
+        "tracker": {
+          "track_high_thresh": 0.15,
+          "track_low_thresh": 0.1,
+          "new_track_thresh": 0.25,
+          "match_thresh": 0.8,
+          "fuse_score": false,
+          "motion_box": "observed_velocity",
+          "prediction_axis": "y"
+        },
+        "endpoint_recovery": {
+          "enabled": true,
+          "roi_scale": 1.5,
+          "maximum_age_s": 1.5,
+          "maximum_per_frame": 1,
+          "maximum_extra_forwards": null,
+          "reacquire_missing_tracks": true,
+          "maximum_reacquisitions_per_origin": 8
+        },
+        "expected_capture_frames": 403,
+        "expected_capture_size": [
+          1280,
+          720
+        ],
+        "capture": {
+          "width": 1280,
+          "height": 720,
+          "fps": 5,
+          "fourcc": "MJPG",
+          "buffer_frames": 2,
+          "history_maximum_age_s": null,
+          "publication_stride_frames": 2
+        },
+        "preprocess_mode": "resize_first_v1",
+        "detector_input": "native_bgr",
+        "warmup_model_forwards": 1,
+        "fast_history_velocity": null,
+        "birth_refinement": {
+          "enabled": true,
+          "roi_scale": 1.5,
+          "minimum_border_fraction": 0.02,
+          "weak_motion_support": true,
+          "minimum_motion_per_s": 0.05
+        },
+        "fast_history_policy": "velocity",
+        "history_after_birth": false,
+        "source_selection": "scheduled_global"
+      },
+      "role": "already exposed development video",
+      "review_reference": "existing accepted directional total",
+      "planned_global_calls": 202
+    },
+    "aug15": {
+      "source": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug15_hd_s256_birth_v14/input.avi",
+      "source_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+      "config": {
+        "video_id": "camera1_aug15",
+        "session_id": "p0p1_ablation_20261109_aug15_l1",
+        "sample_hz": 5,
+        "decode_start_frame0": 0,
+        "scope_start_frame0": 0,
+        "end_frame0_exclusive": 649,
+        "axis": "y",
+        "perpendicular_roi": [
+          0.34,
+          0.75
+        ],
+        "in_direction": "A->B",
+        "detection_roi_xyxy": [
+          435,
+          0,
+          960,
+          720
+        ],
+        "rotation_clockwise": 90,
+        "confidence": 0.01,
+        "cow_class_ids": [
+          0
+        ],
+        "lost_seconds": 6,
+        "counter": {
+          "lower": 0.4,
+          "upper": 0.6,
+          "stable_samples": 1,
+          "maximum_gap_s": 2
+        },
+        "detector": {
+          "backend": "o8",
+          "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+          "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+          "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+          "size": 256
+        },
+        "track_only_in_channel": true,
+        "tracker": {
+          "track_high_thresh": 0.15,
+          "track_low_thresh": 0.1,
+          "new_track_thresh": 0.25,
+          "match_thresh": 0.8,
+          "fuse_score": false,
+          "motion_box": "observed_velocity",
+          "prediction_axis": "y"
+        },
+        "endpoint_recovery": {
+          "enabled": true,
+          "roi_scale": 1.5,
+          "maximum_age_s": 1.5,
+          "maximum_per_frame": 1,
+          "maximum_extra_forwards": null,
+          "reacquire_missing_tracks": true,
+          "maximum_reacquisitions_per_origin": 8
+        },
+        "expected_capture_frames": 649,
+        "expected_capture_size": [
+          1280,
+          720
+        ],
+        "capture": {
+          "width": 1280,
+          "height": 720,
+          "fps": 5,
+          "fourcc": "MJPG",
+          "buffer_frames": 2,
+          "history_maximum_age_s": null,
+          "publication_stride_frames": 2
+        },
+        "preprocess_mode": "resize_first_v1",
+        "detector_input": "native_bgr",
+        "warmup_model_forwards": 1,
+        "fast_history_velocity": null,
+        "birth_refinement": {
+          "enabled": true,
+          "roi_scale": 1.5,
+          "minimum_border_fraction": 0.02,
+          "weak_motion_support": true,
+          "minimum_motion_per_s": 0.05
+        },
+        "fast_history_policy": "velocity",
+        "history_after_birth": false,
+        "source_selection": "scheduled_global"
+      },
+      "role": "already exposed development video",
+      "review_reference": "existing accepted directional total",
+      "planned_global_calls": 325
+    },
+    "aug19": {
+      "source": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug19_hd_s256_birth_v16/input.avi",
+      "source_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+      "config": {
+        "video_id": "camera2_aug19",
+        "session_id": "p0p1_ablation_20261109_aug19_l1",
+        "sample_hz": 5,
+        "decode_start_frame0": 0,
+        "scope_start_frame0": 0,
+        "end_frame0_exclusive": 405,
+        "axis": "y",
+        "perpendicular_roi": [
+          0.0,
+          1.0
+        ],
+        "in_direction": "B->A",
+        "detection_roi_xyxy": [
+          300,
+          70,
+          850,
+          685
+        ],
+        "rotation_clockwise": 90,
+        "confidence": 0.01,
+        "cow_class_ids": [
+          0
+        ],
+        "lost_seconds": 6,
+        "counter": {
+          "lower": 0.4,
+          "upper": 0.6,
+          "stable_samples": 1,
+          "maximum_gap_s": 2
+        },
+        "detector": {
+          "backend": "o8",
+          "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+          "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+          "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+          "size": 256
+        },
+        "track_only_in_channel": true,
+        "tracker": {
+          "track_high_thresh": 0.15,
+          "track_low_thresh": 0.1,
+          "new_track_thresh": 0.25,
+          "match_thresh": 0.8,
+          "fuse_score": false,
+          "motion_box": "observed_velocity",
+          "prediction_axis": "y"
+        },
+        "channel_polygon": [
+          [
+            0.24,
+            0.65
+          ],
+          [
+            0.25,
+            0.35
+          ],
+          [
+            0.28,
+            0.12
+          ],
+          [
+            0.5,
+            0.12
+          ],
+          [
+            0.55,
+            0.35
+          ],
+          [
+            0.59,
+            0.65
+          ],
+          [
+            0.63,
+            0.94
+          ],
+          [
+            0.24,
+            0.94
+          ]
+        ],
+        "endpoint_recovery": {
+          "enabled": true,
+          "roi_scale": 2.0,
+          "maximum_age_s": 2.0,
+          "maximum_per_frame": 1,
+          "maximum_extra_forwards": null,
+          "reacquire_missing_tracks": true,
+          "maximum_reacquisitions_per_origin": 8
+        },
+        "expected_capture_frames": 405,
+        "expected_capture_size": [
+          1280,
+          720
+        ],
+        "capture": {
+          "width": 1280,
+          "height": 720,
+          "fps": 5,
+          "fourcc": "MJPG",
+          "buffer_frames": 2,
+          "history_maximum_age_s": null,
+          "publication_stride_frames": 2
+        },
+        "preprocess_mode": "resize_first_v1",
+        "detector_input": "native_bgr",
+        "warmup_model_forwards": 1,
+        "fast_history_velocity": null,
+        "birth_refinement": {
+          "enabled": true,
+          "roi_scale": 1.5,
+          "minimum_border_fraction": 0.02,
+          "weak_motion_support": true,
+          "minimum_motion_per_s": 0.05
+        },
+        "fast_history_policy": "velocity",
+        "history_after_birth": false,
+        "source_selection": "scheduled_global"
+      },
+      "role": "already exposed development video",
+      "review_reference": "existing accepted directional total",
+      "planned_global_calls": 203
+    },
+    "aug20": {
+      "source": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug20_hd_s256_birth_v16/input.avi",
+      "source_sha256": "3b68eae39d9e936e68e7c4d78bd8d18142623825c8aa3594fe273cbb36234f74",
+      "config": {
+        "video_id": "camera2_aug20",
+        "session_id": "p0p1_ablation_20261109_aug20_l1",
+        "sample_hz": 5,
+        "decode_start_frame0": 0,
+        "scope_start_frame0": 0,
+        "end_frame0_exclusive": 599,
+        "axis": "y",
+        "perpendicular_roi": [
+          0.0,
+          1.0
+        ],
+        "in_direction": "B->A",
+        "detection_roi_xyxy": [
+          300,
+          70,
+          850,
+          685
+        ],
+        "rotation_clockwise": 90,
+        "confidence": 0.01,
+        "cow_class_ids": [
+          0
+        ],
+        "lost_seconds": 6,
+        "counter": {
+          "lower": 0.4,
+          "upper": 0.6,
+          "stable_samples": 1,
+          "maximum_gap_s": 2
+        },
+        "detector": {
+          "backend": "o8",
+          "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+          "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+          "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+          "size": 256
+        },
+        "track_only_in_channel": true,
+        "tracker": {
+          "track_high_thresh": 0.15,
+          "track_low_thresh": 0.1,
+          "new_track_thresh": 0.25,
+          "match_thresh": 0.8,
+          "fuse_score": false,
+          "motion_box": "observed_velocity",
+          "prediction_axis": "y"
+        },
+        "channel_polygon": [
+          [
+            0.24,
+            0.65
+          ],
+          [
+            0.25,
+            0.35
+          ],
+          [
+            0.28,
+            0.12
+          ],
+          [
+            0.5,
+            0.12
+          ],
+          [
+            0.55,
+            0.35
+          ],
+          [
+            0.59,
+            0.65
+          ],
+          [
+            0.63,
+            0.94
+          ],
+          [
+            0.24,
+            0.94
+          ]
+        ],
+        "endpoint_recovery": {
+          "enabled": true,
+          "roi_scale": 2.0,
+          "maximum_age_s": 2.0,
+          "maximum_per_frame": 1,
+          "maximum_extra_forwards": null,
+          "reacquire_missing_tracks": true,
+          "maximum_reacquisitions_per_origin": 8
+        },
+        "expected_capture_frames": 599,
+        "expected_capture_size": [
+          1280,
+          720
+        ],
+        "capture": {
+          "width": 1280,
+          "height": 720,
+          "fps": 5,
+          "fourcc": "MJPG",
+          "buffer_frames": 2,
+          "history_maximum_age_s": null,
+          "publication_stride_frames": 2
+        },
+        "preprocess_mode": "resize_first_v1",
+        "detector_input": "native_bgr",
+        "warmup_model_forwards": 1,
+        "fast_history_velocity": null,
+        "fast_history_policy": "velocity",
+        "history_after_birth": false,
+        "birth_refinement": {
+          "enabled": true,
+          "roi_scale": 1.5,
+          "minimum_border_fraction": 0.02,
+          "weak_motion_support": true,
+          "minimum_motion_per_s": 0.05
+        },
+        "source_selection": "scheduled_global"
+      },
+      "role": "already exposed development video",
+      "review_reference": "existing accepted directional total",
+      "planned_global_calls": 300
+    },
+    "aug17_negative": {
+      "source": "/home/xilinx/jupyter_notebooks/cow_submission_budget_20261110_v4_r2/new_aug17_first120_input.avi",
+      "source_sha256": "a860e58201c4467f6287191f93aa7d6bee3457f913bab5d0e61601448964dc04",
+      "config": {
+        "video_id": "camera2_aug17_first120_negative_candidate",
+        "session_id": "production_negative",
+        "sample_hz": 5,
+        "decode_start_frame0": 0,
+        "scope_start_frame0": 0,
+        "end_frame0_exclusive": 600,
+        "axis": "y",
+        "perpendicular_roi": [
+          0.0,
+          1.0
+        ],
+        "in_direction": "B->A",
+        "detection_roi_xyxy": [
+          300,
+          70,
+          850,
+          685
+        ],
+        "rotation_clockwise": 90,
+        "confidence": 0.01,
+        "cow_class_ids": [
+          0
+        ],
+        "lost_seconds": 6,
+        "counter": {
+          "lower": 0.4,
+          "upper": 0.6,
+          "stable_samples": 1,
+          "maximum_gap_s": 2
+        },
+        "detector": {
+          "backend": "o8",
+          "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+          "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+          "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+          "size": 256
+        },
+        "track_only_in_channel": true,
+        "tracker": {
+          "track_high_thresh": 0.15,
+          "track_low_thresh": 0.1,
+          "new_track_thresh": 0.25,
+          "match_thresh": 0.8,
+          "fuse_score": false,
+          "motion_box": "observed_velocity",
+          "prediction_axis": "y"
+        },
+        "channel_polygon": [
+          [
+            0.24,
+            0.65
+          ],
+          [
+            0.25,
+            0.35
+          ],
+          [
+            0.28,
+            0.12
+          ],
+          [
+            0.5,
+            0.12
+          ],
+          [
+            0.55,
+            0.35
+          ],
+          [
+            0.59,
+            0.65
+          ],
+          [
+            0.63,
+            0.94
+          ],
+          [
+            0.24,
+            0.94
+          ]
+        ],
+        "endpoint_recovery": {
+          "enabled": true,
+          "roi_scale": 2.0,
+          "maximum_age_s": 2.0,
+          "maximum_per_frame": 1,
+          "maximum_extra_forwards": null,
+          "reacquire_missing_tracks": true,
+          "maximum_reacquisitions_per_origin": 8
+        },
+        "expected_capture_frames": 600,
+        "expected_capture_size": [
+          1280,
+          720
+        ],
+        "capture": {
+          "width": 1280,
+          "height": 720,
+          "fps": 5,
+          "fourcc": "MJPG",
+          "buffer_frames": 2,
+          "history_maximum_age_s": null,
+          "publication_stride_frames": 2
+        },
+        "preprocess_mode": "resize_first_v1",
+        "detector_input": "native_bgr",
+        "warmup_model_forwards": 1,
+        "fast_history_velocity": null,
+        "fast_history_policy": "velocity",
+        "history_after_birth": false,
+        "birth_refinement": {
+          "enabled": true,
+          "roi_scale": 1.5,
+          "minimum_border_fraction": 0.02,
+          "weak_motion_support": true,
+          "minimum_motion_per_s": 0.05
+        },
+        "source_selection": "scheduled_global"
+      },
+      "role": "metadata-selected first120s; source-only samples appear empty; not new positive accuracy evidence",
+      "review_reference": null,
+      "planned_global_calls": 300
+    }
+  },
+  "cases": [
+    {
+      "tag": "scheduled_aug14_r1",
+      "clip": "aug14",
+      "policy": "scheduled_globals_plus_local",
+      "repeat": 1
+    },
+    {
+      "tag": "scheduled_aug15_r1",
+      "clip": "aug15",
+      "policy": "scheduled_globals_plus_local",
+      "repeat": 1
+    },
+    {
+      "tag": "scheduled_aug19_r1",
+      "clip": "aug19",
+      "policy": "scheduled_globals_plus_local",
+      "repeat": 1
+    },
+    {
+      "tag": "scheduled_aug20_r1",
+      "clip": "aug20",
+      "policy": "scheduled_globals_plus_local",
+      "repeat": 1
+    },
+    {
+      "tag": "scheduled_aug20_r2",
+      "clip": "aug20",
+      "policy": "scheduled_globals_plus_local",
+      "repeat": 2
+    },
+    {
+      "tag": "scheduled_aug19_r2",
+      "clip": "aug19",
+      "policy": "scheduled_globals_plus_local",
+      "repeat": 2
+    },
+    {
+      "tag": "scheduled_aug15_r2",
+      "clip": "aug15",
+      "policy": "scheduled_globals_plus_local",
+      "repeat": 2
+    },
+    {
+      "tag": "scheduled_aug14_r2",
+      "clip": "aug14",
+      "policy": "scheduled_globals_plus_local",
+      "repeat": 2
+    },
+    {
+      "tag": "scheduled_aug17_negative",
+      "clip": "aug17_negative",
+      "policy": "scheduled_globals_plus_local",
+      "repeat": 1
+    }
+  ],
+  "purpose": "Preserve every fixed global observation and add conditional local measurements. A deployment choice after the retained strict-budget and greedy findings.",
+  "predecessor_protocol_sha256": "beb7b9a43142d20534d112fa2ce3a396961c56358c95f9b5d5b617a33111d8b0",
+  "prior_success_scope": "Historical selected implementation8replays and L1development4clips; current source includes reviewed counter/geometry/score fixes.",
+  "no_fixed_call_quota": true,
+  "normal_model_calls": "Count actual global+birth+endpoint work; do not equate sample_hz5 with detector5FPS.",
+  "comparison_role": "Variable total neural calls; not an equal-budget superiority claim.",
+  "model_and_threshold_selection": "No changes after this protocol; no count-based retries.",
+  "replay_reference_clock_gates": {
+    "event_publication_max_ms": 1000,
+    "observation_max_ms": 1500,
+    "observation_p95_ms": 1000,
+    "capture_lateness_max_ms": 500,
+    "drain_s": 1,
+    "queue_packets": 2
+  },
+  "gate_scope": "Engineering replay reference; sensor exposure/transport excluded. Raw stricter legacy flag remains unchanged.",
+  "failure_rule": "Stop on process/hardware/hash or planned-global loss; retain failed and inaccurate runs, no retries or per-video threshold changes.",
+  "source_timeout_s": 300,
+  "expected_totals_in_runtime": false,
+  "USB_serial_JTAG_used": false,
+  "no_additional_source_search": true,
+  "selection_status": "All four positive videos are development material; this mode was chosen after observing their prior outcomes.",
+  "hypothesis": "Fixed global coverage avoids the temporal-replacement loss; additional local calls may recover weak spatial evidence. Test all predeclared outcomes without changing parameters.",
+  "source_selection": "scheduled_global",
+  "repeats_per_existing_clip": 2
+}

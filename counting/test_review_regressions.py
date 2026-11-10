@@ -106,6 +106,7 @@ class ReviewRegressions(unittest.TestCase):
         capture.stop_event=threading.Event();capture.frames=0;capture.error=None;capture.done=False
         capture.nominal_fps=5;capture.first_input_pts=None;capture.last_pts=None
         capture.buffer_frames=2;capture.pending=deque(maxlen=2);capture.latest=None
+        capture.publication_stride_frames=1;capture.published_frames=0;capture.not_admitted_frames=0
         capture.overwritten=0;capture.history_reads=0
         capture.lateness=realtime.Timing();capture.read_latency=realtime.Timing()
         capture.enqueue_wait=realtime.Timing()

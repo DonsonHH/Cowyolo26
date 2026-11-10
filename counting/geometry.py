@@ -73,8 +73,9 @@ class Transform:
         points = self._points(corners, inverse).reshape(-1, 4, 2)
         result = np.concatenate((points.min(1), points.max(1)), axis=1)
         if inverse:
-            result[:, [0, 2]] = result[:, [0, 2]].clip(0, self.source_width)
-            result[:, [1, 3]] = result[:, [1, 3]].clip(0, self.source_height)
+            x1, y1, x2, y2 = self.roi
+            result[:, [0, 2]] = result[:, [0, 2]].clip(x1, x2)
+            result[:, [1, 3]] = result[:, [1, 3]].clip(y1, y2)
         return result
 
     def prepare_bgr(self, image):

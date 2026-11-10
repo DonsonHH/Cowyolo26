@@ -1,0 +1,139 @@
+% Count-primary working manuscript; all outcomes must come from bound run ledgers.
+\documentclass[journal]{IEEEtran}
+\usepackage{amsmath,amssymb,graphicx,booktabs,url}
+\renewcommand{\ttdefault}{cmtt}
+\title{Allocating a Fixed Detection Budget Between Global Observations and Local Verification for Embedded Cattle Passage Counting}
+\author{Authors, affiliations, and correspondence: to be determined}
+\markboth{Working Research Manuscript, November 2026}{Fixed-Budget Cattle Passage Counting}
+\begin{document}
+\maketitle
+\begin{abstract}
+A local detector call can reinforce a weak cattle observation while displacing a newer global observation. We investigate this trade-off for complete passage counting on a PYNQ-Z2. A fixed quantized YOLO26n graph serves either a global image or a crop, and a causal policy allocates the second of two actual calls in each 0.8-s source-time block. Global and local detections from one image are consolidated before one tracking update; only measured positions can complete a passage. Evaluation uses wall-paced replay and reviewed directional video totals. The four development clips contain 47 accepted passages, and repeated executions assess scheduling variability rather than additional animals.
+\input{abstract_result.tex}
+\input{fusion_abstract.tex}
+The study separates directional count agreement, actual detector work, and publication age; it does not infer event precision or recall from aggregate totals.
+\end{abstract}
+\begin{IEEEkeywords}
+Cattle passage counting, visual sensing, conditional inference, edge computing, PYNQ-Z2.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{A}{complete} passage count requires observations of an animal on both sides of a channel. A weak measurement near either end can prevent a count even when the animal appears elsewhere in the video. Local verification can improve the spatial evidence, but its computation occupies time that could otherwise observe another global image. The relevant design question is therefore how to allocate observations while a source stream continues to advance.
+
+Top-view cattle detection, tracking, and counting already have dedicated datasets and methods. CattleEyeView reports both tracking and counting, including counting mean absolute error (MAE) and difficulties caused by returns \cite{cattleeyeview}. Cattle identification systems further distinguish temporary tracking from persistent individual identity \cite{cattle_id_2024}. Our output is a directional passage record; a tracking identifier does not identify a specific cow in the farm database.
+
+Coarse-to-fine detection and conditional zooming also precede this work. Dynamic Zoom-in chooses image regions according to expected detection gain and computation \cite{dynamic_zoom_2018}; AutoFocus restricts finer-scale processing to selected image chips \cite{autofocus_2019}. Streaming Perception shows that runtime and the age of available observations change the meaning of real-time performance \cite{streaming_2020}. A newer detector or a successful board port alone would not establish a contribution.
+
+We study a narrower systems comparison: with the same static detector graph and actual call quota, should the second call inspect a new global image or verify a crop from the preceding image? The implementation makes this exchange explicit and logs the real inputs, outputs, source times, and call allocation. The evaluation pairs count error with publication age on the target board. The comparison controls neural work, while retaining CPU and queue effects as measured system costs.
+
+\section{Passage Definition and Measurement Pipeline}
+The pipeline combines paced acquisition, source-coordinate geometry, detection, conditional verification, short-term tracking, and count publication. PYNQ-Z2 supplies an embedded processor and programmable logic \cite{pynqz2}; the existing O8 backend executes the frozen detector graph. We do not propose a new accelerator architecture.
+
+Let $p_t$ be the normalized center of a measured detection box along the channel axis. It is a torso-center proxy. With two thresholds $a<b$, the endpoint zones are
+\begin{equation}
+ A=\{p<a\},\qquad B=\{p>b\}.
+\end{equation}
+A complete traversal requires a confirmed temporary track with real positions in both zones on distinct source images, in temporal order. Retained tentative measurements may establish the origin once the track is confirmed. Predicted boxes support association and crop proposals; they cannot satisfy an endpoint observation. A track first seen in the middle, a sequence ending before the second zone, or an observation gap exceeding the bound remains censored or uncertain.
+
+The frozen presets use $a=0.4$, $b=0.6$, one stable sample, and a maximum real-observation gap of 2~s. Camera-specific regions and a polygon for camera~2 restrict admission before association. The tracker uses a NumPy adaptation of Ultralytics 8.4.63's ByteTrack-derived implementation, with a second-stage IoU association change and source-time observation histories \cite{bytetrack}. The software's AGPL provenance is recorded separately from the algorithm citation. The nominal tracker rate is 5~Hz in both compared policies, while actual source timestamps govern elapsed time.
+
+\section{Fixed-Budget Observation Allocation}
+\subsection{Call Schedule}
+The admitted source has $F$ frames at 5~Hz. Every full four-frame block $k$ has calls released at frames $4k$ and $4k+2$, corresponding to $t_k=0.8k$ and $t_k+0.4$~s. The non-warm-up quota is
+\begin{equation}
+ Q(F)=\left\lceil F/2\right\rceil .
+\end{equation}
+The terminal partial block uses only slots whose release frame exists; it receives no additional crop call.
+
+Policy A uses both slots for global detection. Policy B first detects the global image at $t_k$. A proposal based on that image and prior measured state determines the second slot: either a local crop of the same image or the global image at $t_k+0.4$. The second image's content is not used to select the crop. Eligibility need not precede that image's physical arrival when the first inference is late; the causal condition concerns the information used. Both policies wait until the second release before executing its call.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.98\textwidth]{figures/budget_schematic.pdf}
+\caption{Fixed actual-call allocation. The illustrated local branch replaces the second global call. When no crop is eligible, B follows the same two-global schedule as A. Arrival rate, inference-call rate, and tracking-update rate are distinct.}
+\label{fig:allocation}
+\end{figure*}
+
+Capture decodes every prepared source image. In the selected queue revision, only even frame indices admitted by the fixed release schedule enter the same two-packet queue for both policies. Odd images cannot evict an admitted observation. The queue remains bounded; a sufficiently long backlog can still lose a planned frame. A missing planned frame, rather than a replacement by a future image, causes an explicit execution failure.
+
+\subsection{Conditional Verification and Consolidation}
+Verification targets a weak origin or an unfinished destination supported by recent measured motion. Endpoint proposals have priority; otherwise birth refinement can use the slot. Birth crop scale is 1.5; endpoint scale is 1.5 for camera~1 and 2.0 for camera~2, as fixed in the corresponding presets. Both paths invoke the same real detector graph used globally.
+
+Local candidates pass class, visible-region, area, overlap, and neighboring-track checks. A weak global box is superseded only when it overlaps an accepted local measurement and belongs more strongly to the target than to a competitor's recent measured history. The deployed ownership check uses overlap of at least 0.5 and a margin exceeding 0.05. Tentative histories are included because a newly confirmed neighbor may not yet be present in a separate recovery log. Original global detections, local candidates, accepted measurements, and superseded rows remain recorded.
+
+When verification is selected, the global and crop measurements for the first image are fused before one tracker update. The second image is not additionally observed by the tracker. The possible gain in detail therefore has two explicit costs: one fewer new global observation and a later update for the first image. Without verification, each global image produces its own update.
+
+\subsection{Birth Verification With Consistent Global Geometry}
+A crop changes the spatial context used to regress a box. Replacing a weak full-view box with that crop's box can change subsequent association even if both observations lie in the same endpoint zone. We therefore evaluate a second B variant after the original development comparison. It retains the selected global seed's measured coordinates and takes the score and class of the accepted local detection when creating a track. The local box still undergoes the same matching and admission checks; it is logged separately from the fused measurement. Endpoint recovery, which may supply a missing measurement, continues to use its real local geometry.
+
+This switch defaults to off for compatibility and is explicitly enabled in the new frozen candidate. It does not promote a prediction to a measurement: the seed comes from the same actual global image, and its new score comes from a real accepted local call. Global and local observations of that image still cause one update. The rule was selected using the same four development clips; its evaluation is not an independent test.
+
+\subsection{Computational and Timing Scope}
+Every normal slot produces an actual graph invocation and a raw-output record bound to its input and output hashes. Warm-up, initialization, returned calls, and failed or unknown-work attempts are distinguished. An equal graph-call count constrains the dominant neural work; it does not assert equal CPU time, energy, or complete system cost. Preprocessing, proposal generation, fusion, association, and logging remain part of the measured processing chain.
+
+For completing observation $i$, the publication age is
+\begin{equation}
+ L_i=t_{\mathrm{event\ flush},i}-t_{\mathrm{scheduled\ arrival},i}.
+\end{equation}
+It starts from the completing image's known replay release, not an independently labeled physical crossing time. Observation-completion ages additionally include the frame-ledger flush and progress save in the selected revision. Detector API time is timed around \texttt{infer\_bgr}; attempt-to-return time includes the initial receipt flush. Startup, stream wall duration, drain after the last source frame, capture lateness, and queue occupancy are reported separately.
+
+\section{Implementation and Experimental Design}
+\subsection{Detector and Execution Identity}
+The detector was fitted on 6,809 Cows2021 images, with 1,571 images used for development validation \cite{cows2021_data}. The deployed weight is the recovered final \emph{last} checkpoint, rather than a selected \emph{best} checkpoint. The study evaluates that fixed artifact. The 128 calibration images are drawn from training. Recorded dates and exact JPEG digests do not overlap across the training and validation lists; the source folders are 100-index bins, not session identities. These audits do not establish different herds or exclude visual near duplicates.
+
+The deployed YOLO26n path \cite{yolo26} has a 256-pixel square input and a one-to-one output of shape $[1,300,6]$. The normalized quantized graph, resident execution plan, native library, wrapper, accepted bitstream, and HWH are frozen by hash. The accepted accelerator runs at 100~MHz. A current-boot hardware probe recorded DMA transfers, a finite raw output, and the accelerator's cycle timer. The available hardware export binds the bitstream and HWH but does not contain a routed utilization report; board power was not measured.
+
+The prepared acquisition is full-field 1280$\times$720 MJPEG at 5~Hz. Crop, rotation, model preparation, detection, tracking, and counting occur online on the board. The earlier format conversion is excluded. Consequently, replay qualifies neither native high-resolution H.264 decoding nor camera exposure and transport latency. Earlier 192/256/320 trials used different trained checkpoints and are not a controlled same-weight resolution study; 256 is a selected working configuration rather than a proven optimum.
+
+\subsection{Video Units and Human References}
+The counting material consists of four MultiCamCows2024 intervals \cite{multicamcows2024}: camera~1 on August~14 and 15, and camera~2 on August~19 and 20, 2023. The prepared streams contain 403, 649, 405, and 599 frames. Their accepted directional totals are 12, 12, 11, and 12, respectively. Camera~1 passages are downward and camera~2 passages upward. Opposite-direction totals were not independently confirmed and remain unknown.
+
+All four intervals have been used in development. In particular, the initial 9/12 result for August~20 was used for diagnosis, so a later replay of that interval cannot become an independent test. Camera~2 August~19 retains the requested 14--95-s interval. The August~14 source mapping includes existing preroll before the reviewed native-frame interval; reference reuse follows the recorded passage window. Viewing modes and the original human statements are retained with the reference records.
+
+The unit of count evaluation is a reviewed video direction. The reference asks how many complete traversals occurred, without requiring event timestamps or frame-by-frame annotations. For policy $p$, repeat $r$, and the four videos,
+\begin{equation}
+ \mathrm{MAE}_{p,r}=\frac{1}{4}\sum_{v=1}^{4}|\hat n_{v,p,r}-n_v|.
+\end{equation}
+Per-video signed and absolute errors, both predicted directions, and exact agreement are retained. An unknown direction is not converted into a zero reference. Agreement of totals can contain canceling misses and duplicates; it is not event F1 or evidence of zero missed passages.
+
+\subsection{Controls, Selection History, and Failure Rules}
+The main repeated comparison fixes detector graph, input size, source frames, geometry, thresholds, association, nominal tracker clock, and actual neural quota. Each video has two repeats per policy, with opposite A/B order across repeats and a fixed ordering seed. Four video units remain four units; repeated replay does not add animals or establish statistical significance.
+
+Before the main comparison, an exploratory five-policy block ran once per video. It varied target rate, history preference, and local verification, but actual calls and selected frames differed. All 15 history requests were overridden by the age guard, yielding no historical-frame reads. That block motivates the controlled allocation question without demonstrating an independent history benefit.
+
+A fixed-budget functional pair on the exposed August~20 interval used 300 normal calls per policy. Policy A counted 9 and B counted 12 against the accepted 12. The 287 global observations shared by both policies had identical input and raw-output hashes. A subsequent strict-queue batch completed the August~14 pair, with A=11 and B=12 against 12, before August~15 failed because planned frame 588 had been evicted. The partial 11 count in that failed run is not a full-clip result.
+
+The failed batch and its original source remain preserved. The selected queue revision admits planned images before queuing and is frozen as a new comparison, rather than continuing or relabeling the failed one. Any subsequent execution failure terminates the block and remains reported. Software controls cover source clocks, causal slots, queue admission, crop visibility, scoped scoring, and failure accounting; their pass count is not cattle-accuracy evidence.
+
+\section{Results}
+\input{results_summary.tex}
+\input{results_table.tex}
+
+\subsection{Same-Stream Measurement Controls}
+A CPU shadow replay made no detector calls and did not alter the real scheduler. It reproduced every original per-frame cumulative total in all eight B runs when using the recorded fused measurements. Masking local measurements while retaining B's actual observation images and timestamps produced 11, 12, 9, and 9 in each repeat. Using local measurements therefore improved the August~14, 19, and 20 totals, but changed August~15 from the accepted 12 to 11. The August~15 discrepancy cannot be attributed solely to replacement of a newer global image. These controls show the effect of recorded measurements on the fixed B observation stream, rather than a counterfactual rerun of B's proposal policy or a new timing run.
+
+\input{fusion_result.tex}
+\input{ram_io_result.tex}
+
+\section{Discussion}
+The comparison concerns the allocation of observations under one fixed graph budget. An accepted local measurement can change downstream association and endpoint evidence, while replacing a newer image. Same-stream shadow replay can isolate whether using the recorded local measurements changes the count, but its state does not feed back into real crop scheduling and it is not a new deployment timing run.
+
+The study's strongest available accuracy evidence is the directional total confirmed for each development interval. A selected earlier implementation matched all four totals in two paced replays and met its original timing checks. Subsequent variants produced discrepancies or execution failures. These outcomes should be assessed together rather than presenting an accepted configuration as a guarantee for arbitrary videos.
+
+A fresh greedy replay of that selected system counted 11, 12, 11, and 12. Preserving every scheduled global while making additional verification calls then overflowed a two-packet queue; a four-packet variant also stopped during the third clip. Its partial count is not a complete-video score, and its separate 2-s reference is not used to relabel the original 1-s results. These failures show why an extra verification path requires a computation budget, and why a successful earlier replay cannot establish stable accuracy.
+
+New source selection and a new model execution are different from an independent positive accuracy test. A camera~2 August~17 source was selected by publisher metadata before pixel or prediction access, with the first 120~s fixed. The object matches publisher hashes; the source is actually an MPEG program stream despite its filename suffix and has nonzero native PTS. Prepared relative CFR timestamps are checked. The sampled interval appears to be an empty channel and is retained rather than replaced according to predictions. It supplies no new positive human-reference passages. The same site, animals, and camera also limit external generalization.
+
+The current quota is one controlled resource point. It does not establish the fastest feasible setting, an optimal resolution, a power benefit, or dominance over every global-only configuration. Broader accuracy claims require a source interval excluded from policy selection with an accepted count, while broader timing claims require the relevant acquisition chain. Persistent cow identity, missing-ear-tag recovery, and synchronized RFID association remain separate future tasks.
+
+\section{Conclusion}
+The system compares new global observations and local verification under a fixed number of real detector calls. On the four development videos, the global-only and local-box policies had MAE 1.50 and 0.25 in each repeat; retaining global birth geometry with verified local scores gave MAE 0.00 at the same quota. One of its eight publication-age results exceeded 1~s, and the additional SD-backed input interrupted before completion. The RAM IO control retained identical shared outputs with a different storage boundary. These records support a bounded development study, rather than independent event accuracy or universal deployment reliability.
+
+\section*{Data, Software, and Author Completion}
+Source data remain available from the cited publishers under their own terms. The project repository is \url{https://github.com/DonsonHH/Cowyolo26}. A compact companion release contains fixed configurations, source identities, count references, ledgers, and recomputation scripts. Exact hardware rerunning is not self-contained: executable model/backend assets remain private, and two recovered O8 source files still require copyright/provenance resolution. The release does not relabel third-party code or data under the root MIT license.
+
+Author order, affiliations, correspondence, contributions, funding, competing interests, and the applicable ethics statement are to be confirmed by the actual authors. Generative AI assisted literature organization, software implementation and review, experiment-record checking, analysis, and manuscript drafting; its role was not limited to language polishing. Authors remain responsible for verifying sources, results, permissions, and the final disclosure. No manuscript submission or payment has been performed.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}

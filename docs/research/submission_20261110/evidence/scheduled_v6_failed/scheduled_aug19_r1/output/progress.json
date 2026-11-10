@@ -1,0 +1,224 @@
+{
+  "status": "RUNNING",
+  "session_id": "equal_budget_v4_scheduled_aug19_r1",
+  "run_id": "14f458ae-912d-4104-808b-9dda41578f03",
+  "video_id": "camera2_aug19",
+  "source": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug19_hd_s256_birth_v16/input.avi",
+  "source_kind": "paced-file",
+  "config": {
+    "video_id": "camera2_aug19",
+    "session_id": "equal_budget_v4_scheduled_aug19_r1",
+    "sample_hz": 5,
+    "decode_start_frame0": 0,
+    "scope_start_frame0": 0,
+    "end_frame0_exclusive": 405,
+    "axis": "y",
+    "perpendicular_roi": [
+      0.0,
+      1.0
+    ],
+    "in_direction": "B->A",
+    "detection_roi_xyxy": [
+      300,
+      70,
+      850,
+      685
+    ],
+    "rotation_clockwise": 90,
+    "confidence": 0.01,
+    "cow_class_ids": [
+      0
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 1,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "o8",
+      "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+      "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+      "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+      "size": 256
+    },
+    "track_only_in_channel": true,
+    "tracker": {
+      "track_high_thresh": 0.15,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.25,
+      "match_thresh": 0.8,
+      "fuse_score": false,
+      "motion_box": "observed_velocity",
+      "prediction_axis": "y"
+    },
+    "channel_polygon": [
+      [
+        0.24,
+        0.65
+      ],
+      [
+        0.25,
+        0.35
+      ],
+      [
+        0.28,
+        0.12
+      ],
+      [
+        0.5,
+        0.12
+      ],
+      [
+        0.55,
+        0.35
+      ],
+      [
+        0.59,
+        0.65
+      ],
+      [
+        0.63,
+        0.94
+      ],
+      [
+        0.24,
+        0.94
+      ]
+    ],
+    "endpoint_recovery": {
+      "enabled": true,
+      "roi_scale": 2.0,
+      "maximum_age_s": 2.0,
+      "maximum_per_frame": 1,
+      "maximum_extra_forwards": null,
+      "reacquire_missing_tracks": true,
+      "maximum_reacquisitions_per_origin": 8
+    },
+    "expected_capture_frames": 405,
+    "expected_capture_size": [
+      1280,
+      720
+    ],
+    "capture": {
+      "width": 1280,
+      "height": 720,
+      "fps": 5,
+      "fourcc": "MJPG",
+      "buffer_frames": 4,
+      "history_maximum_age_s": null,
+      "publication_stride_frames": 2
+    },
+    "preprocess_mode": "resize_first_v1",
+    "detector_input": "native_bgr",
+    "warmup_model_forwards": 1,
+    "fast_history_velocity": null,
+    "birth_refinement": {
+      "enabled": true,
+      "roi_scale": 1.5,
+      "minimum_border_fraction": 0.02,
+      "weak_motion_support": true,
+      "minimum_motion_per_s": 0.05
+    },
+    "fast_history_policy": "velocity",
+    "history_after_birth": false,
+    "source_selection": "scheduled_global"
+  },
+  "source_size": [
+    1280,
+    720
+  ],
+  "nominal_fps": 5.0,
+  "target_detector_hz": 2.5,
+  "effective_nominal_sample_hz": 2.5,
+  "tracker_nominal_hz": 5.0,
+  "source_selection": "scheduled_global",
+  "model_forwards": 61,
+  "base_model_forwards": 53,
+  "warmup_model_forwards": 1,
+  "endpoint_recovery_forwards": 4,
+  "birth_refinement_forwards": 3,
+  "processed_frames": 53,
+  "sampler_rejected_frames": 0,
+  "future_frame_violations": 0,
+  "counts": {
+    "IN": 4,
+    "OUT": 0,
+    "NET": 4
+  },
+  "uncertain_records": 0,
+  "accuracy_verified": false,
+  "software_fixture_only": false,
+  "clock_contract": "CFR read/decode starts at arrival with verified PTS; bounded latest capture buffer; causal fast history selection; predictions never count",
+  "startup_scope": "startup_s includes source open/hash and model initialization inside run; Python imports excluded",
+  "latency_boundary": "Expected source-frame arrival through detector/recovery/tracking/event log; source camera transport before decoder excluded",
+  "memory_before_model": {
+    "process_peak_rss_kib": 88544,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 431036,
+      "SwapTotal": 524284,
+      "SwapFree": 417020
+    }
+  },
+  "time_source": "verified relative CFR source PTS",
+  "video_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+  "model_sha256": "c083b7e307ac4233f73f3b5e7ded6a041982e42d366c70c5c65fb71edf446216",
+  "resident_plan_sha256": "adf50c9fdf4a24ee00ebc0921e1d5c09e782346765f80428a5227501c22aa9f0",
+  "device_initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "runtime_asset_sha256": {
+    "native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8"
+  },
+  "startup_s": 19.029752233998806,
+  "capture": {
+    "captured_frames": 114,
+    "overwritten_before_read": 0,
+    "publication_stride_frames": 2,
+    "published_frames": 57,
+    "not_admitted_frames": 57,
+    "maximum_application_queue_frames": 4,
+    "history_frames_processed": 4,
+    "last_source_time_s": 22.6,
+    "source_time_origin_s": 0.0,
+    "history_maximum_age_s": null,
+    "history_age_guard_overrides": 0,
+    "capture_done": false,
+    "capture_error": null,
+    "capture_lateness_ms": {
+      "count": 114,
+      "mean_ms": 91.42792257032278,
+      "maximum_ms": 167.50619199956418,
+      "p50_ms": 89.96361550089205,
+      "p95_ms": 102.61628755088168,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 114
+    },
+    "frame_retrieval_duration_ms": {
+      "count": 114,
+      "mean_ms": 89.56795492109418,
+      "maximum_ms": 167.1185390005121,
+      "p50_ms": 88.01731400035351,
+      "p95_ms": 99.70659414893817,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 114
+    },
+    "frame_enqueue_lock_wait_ms": {
+      "count": 114,
+      "mean_ms": 0.03764502610449614,
+      "maximum_ms": 0.16346699885616545,
+      "p50_ms": 0.03371700040588621,
+      "p95_ms": 0.057290749919047805,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 114
+    }
+  },
+  "last_source_time_s": 20.8,
+  "last_frame0": 104
+}

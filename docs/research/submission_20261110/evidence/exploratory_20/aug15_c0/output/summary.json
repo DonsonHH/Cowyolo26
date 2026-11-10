@@ -1,0 +1,264 @@
+{
+  "status": "COMPLETED_UNSCORED",
+  "session_id": "p0p1_ablation_20261109_aug15_c0",
+  "run_id": "d2ede467-6b61-47fc-9d63-7e0a1ad7b050",
+  "video_id": "camera1_aug15",
+  "source": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug15_hd_s256_birth_v14/input.avi",
+  "source_kind": "paced-file",
+  "config": {
+    "video_id": "camera1_aug15",
+    "session_id": "p0p1_ablation_20261109_aug15_c0",
+    "sample_hz": 5,
+    "decode_start_frame0": 0,
+    "scope_start_frame0": 0,
+    "end_frame0_exclusive": 649,
+    "axis": "y",
+    "perpendicular_roi": [
+      0.34,
+      0.75
+    ],
+    "in_direction": "A->B",
+    "detection_roi_xyxy": [
+      435,
+      0,
+      960,
+      720
+    ],
+    "rotation_clockwise": 90,
+    "confidence": 0.01,
+    "cow_class_ids": [
+      0
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 1,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "o8",
+      "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+      "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+      "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+      "size": 256
+    },
+    "track_only_in_channel": true,
+    "tracker": {
+      "track_high_thresh": 0.15,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.25,
+      "match_thresh": 0.8,
+      "fuse_score": false,
+      "motion_box": "observed_velocity",
+      "prediction_axis": "y"
+    },
+    "endpoint_recovery": {
+      "enabled": false,
+      "roi_scale": 1.5,
+      "maximum_age_s": 1.5,
+      "maximum_per_frame": 1,
+      "maximum_extra_forwards": null,
+      "reacquire_missing_tracks": true,
+      "maximum_reacquisitions_per_origin": 8
+    },
+    "expected_capture_frames": 649,
+    "expected_capture_size": [
+      1280,
+      720
+    ],
+    "capture": {
+      "width": 1280,
+      "height": 720,
+      "fps": 5,
+      "fourcc": "MJPG",
+      "buffer_frames": 2,
+      "history_maximum_age_s": 0.3
+    },
+    "preprocess_mode": "resize_first_v1",
+    "detector_input": "native_bgr",
+    "warmup_model_forwards": 1,
+    "fast_history_velocity": 0.35,
+    "birth_refinement": {
+      "enabled": false,
+      "roi_scale": 1.5,
+      "minimum_border_fraction": 0.02,
+      "weak_motion_support": true,
+      "minimum_motion_per_s": 0.05
+    },
+    "fast_history_policy": "gate_phase",
+    "history_after_birth": false
+  },
+  "source_size": [
+    1280,
+    720
+  ],
+  "nominal_fps": 5.0,
+  "target_detector_hz": 5.0,
+  "effective_nominal_sample_hz": 5.0,
+  "model_forwards": 393,
+  "base_model_forwards": 392,
+  "warmup_model_forwards": 1,
+  "endpoint_recovery_forwards": 0,
+  "birth_refinement_forwards": 0,
+  "processed_frames": 392,
+  "sampler_rejected_frames": 0,
+  "future_frame_violations": 0,
+  "counts": {
+    "IN": 12,
+    "OUT": 0,
+    "NET": 12
+  },
+  "uncertain_records": 1,
+  "accuracy_verified": false,
+  "software_fixture_only": false,
+  "clock_contract": "CFR read/decode starts at arrival with verified PTS; bounded latest capture buffer; causal fast history selection; predictions never count",
+  "startup_scope": "startup_s includes source open/hash and model initialization inside run; Python imports excluded",
+  "latency_boundary": "Expected source-frame arrival through detector/recovery/tracking/event log; source camera transport before decoder excluded",
+  "memory_before_model": {
+    "process_peak_rss_kib": 89668,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 433856,
+      "SwapTotal": 524284,
+      "SwapFree": 439548
+    }
+  },
+  "time_source": "verified relative CFR source PTS",
+  "video_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+  "model_sha256": "c083b7e307ac4233f73f3b5e7ded6a041982e42d366c70c5c65fb71edf446216",
+  "resident_plan_sha256": "adf50c9fdf4a24ee00ebc0921e1d5c09e782346765f80428a5227501c22aa9f0",
+  "device_initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "runtime_asset_sha256": {
+    "native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8"
+  },
+  "startup_s": 20.966933001000143,
+  "capture": {
+    "captured_frames": 649,
+    "overwritten_before_read": 257,
+    "maximum_application_queue_frames": 2,
+    "history_frames_processed": 0,
+    "last_source_time_s": 129.6,
+    "source_time_origin_s": 0.0,
+    "history_maximum_age_s": 0.3,
+    "history_age_guard_overrides": 1,
+    "capture_done": true,
+    "capture_error": null,
+    "capture_lateness_ms": {
+      "count": 649,
+      "mean_ms": 109.6500309698735,
+      "maximum_ms": 165.06894200574607,
+      "p50_ms": 107.64209400076652,
+      "p95_ms": 121.83300879842136,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 649
+    },
+    "frame_retrieval_duration_ms": {
+      "count": 650,
+      "mean_ms": 107.67593668926006,
+      "maximum_ms": 164.57119299593614,
+      "p50_ms": 105.82027299824404,
+      "p95_ms": 119.2867367491999,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 650
+    },
+    "frame_enqueue_lock_wait_ms": {
+      "count": 649,
+      "mean_ms": 0.03765269363747812,
+      "maximum_ms": 0.2430870008538477,
+      "p50_ms": 0.03432000085012987,
+      "p95_ms": 0.056700001005083385,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 649
+    }
+  },
+  "last_source_time_s": 129.6,
+  "last_frame0": 648,
+  "elapsed_s": 151.15283700000145,
+  "timings": {
+    "preprocess": {
+      "count": 392,
+      "mean_ms": 10.526850260229905,
+      "maximum_ms": 35.66217800107552,
+      "p50_ms": 10.382406504504615,
+      "p95_ms": 11.31068060240068,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 392
+    },
+    "base_inference": {
+      "count": 392,
+      "mean_ms": 290.68193687260424,
+      "maximum_ms": 342.29922499798704,
+      "p50_ms": 291.6354405024322,
+      "p95_ms": 313.7330926463619,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 392
+    },
+    "recovery": {
+      "count": 392,
+      "mean_ms": 2.887912104486123,
+      "maximum_ms": 6.4765140050440095,
+      "p50_ms": 3.0124105032882653,
+      "p95_ms": 3.863728301075753,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 392
+    },
+    "tracking": {
+      "count": 392,
+      "mean_ms": 9.444050456648034,
+      "maximum_ms": 51.67559999972582,
+      "p50_ms": 9.777855499123689,
+      "p95_ms": 17.459856697678333,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 392
+    },
+    "event_publication": {
+      "count": 12,
+      "mean_ms": 511.9826943367419,
+      "maximum_ms": 622.9897440061904,
+      "p50_ms": 496.46936650242424,
+      "p95_ms": 595.5546038527245,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 12
+    },
+    "observation_age": {
+      "count": 392,
+      "mean_ms": 535.1753176551307,
+      "maximum_ms": 656.5250560015556,
+      "p50_ms": 539.4215995002014,
+      "p95_ms": 633.6436679030157,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 392
+    }
+  },
+  "unavailable_source_sample_slots": 257,
+  "memory_after_close": {
+    "process_peak_rss_kib": 207728,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 357840,
+      "SwapTotal": 524284,
+      "SwapFree": 435964
+    }
+  },
+  "maximum_state_count": 8,
+  "latency_entire_stream": {
+    "count": 392,
+    "maximum_ms": 656.5250560015556,
+    "p95_upper_bound_ms": 634.0,
+    "over_1000ms": 0,
+    "over_500ms": 289,
+    "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+    "retained_bin_count": 1002
+  },
+  "stream_wall_elapsed_s": 130.18013457900088,
+  "source_duration_s": 129.6,
+  "drain_after_last_source_frame_s": 0.5801345790008838,
+  "realtime_clock_pass": false
+}

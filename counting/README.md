@@ -1,12 +1,20 @@
 # 奶牛通道计数：离线与板端实时
 
+2026-11-10：新的已测候选采用固定调用预算入口，而非省略配置后直接使用旧greedy模式：
+
+```powershell
+python -m counting.budget_runner --source PREPARED_VIDEO --config MATCHED_CAMERA_CONFIG.json --policy conditional_local_pair --output NEW_DIRECTORY
+```
+
+相应配置显式开启 `birth_refinement.preserve_global_geometry:true`，出生阶段使用真实全局框坐标与被接受的真实局部分数；Endpoint几何不变。四片各两次总数一致，原1秒发布参考7/8通过，全部正例仍是开发材料。已定的额外空通道SD回放有丢帧失败，RAM输入／日志对照完整完成；读[本轮审查与I/O边界](../docs/research/submission_20261110/项目全流程与科研审查.md)，不要把不同存储模式的时延混成一个全通过结果。模型、帧数、源几何和实际输入必须与配置相符，配置不包含期望牛数。
+
 2026-11-09：当前V4源码及板上回放结果见[本轮成果与复审](../docs/research/20261109_成果与复审.md)；2026-11-06[实机交付报告](../maintenance/offline_counting/REALTIME_DELIVERY_20261106.md)保留为历史。实时入口为 `python -m counting.realtime --source INPUT --config CONFIG --output NEW_DIRECTORY`；V4测试为按1倍墙钟到达的预转换视频回放，在线处理在PYNQ-Z2执行。实体摄像头输入尚未验证。
 
 实时候选使用已确认的同一轨迹在相隔端区各一次真实位置，至少两张不同源图像，预测不能计数。下文两次/三次确认示例和旧离线成绩属于历史策略，未改写为新的实时成绩。源码精确版本见[恢复说明](../maintenance/offline_counting/qualified_birth_sources/README.md)，使用当前文件前应对齐案例源指纹。
 
 输入视频和通道配置，输出原图坐标下的检测、短期轨迹、IN／OUT／NET、逐事件记录及不确定片段。支持PC ONNX参考和PYNQ-Z2 O8后端。分辨率来自已导出的模型；采样频率可配置或处理所有帧，没有固定FPS验收要求。
 
-历史过程与验收边界见[原执行状态](../maintenance/offline_counting/STATUS.md)，当前结果以V4成果报告为准。模型和数据集保留在已有私有存储中。
+历史过程与验收边界见[原执行状态](../maintenance/offline_counting/STATUS.md)；最新结果以[2026-11-10完整审查](../docs/research/submission_20261110/项目全流程与科研审查.md)为准。模型和数据集保留在已有私有存储中。
 
 当前示例使用两次连续真实观察确认，来源是[快速通行单因素对照](../maintenance/offline_counting/FAST_PASSAGE_FIX.md)：三次确认会漏掉出口区仅有两次观察的快速牛。原冻结配置和库的默认参数保留；这不是任意观察率下的准确性保证。新会话仍须单独验证，预测位置不构成真实观察。
 
@@ -51,6 +59,14 @@ python -m counting.package_board --output NEW_SOURCE_PACKAGE.tar.gz
 
 ## 复核与评分
 
+本轮主终点采用每段视频的方向总数。用户只需确认“上行N次／下行M次”及结果是否一致；已确认的四片总数直接保留。代理将这些确认、实际查看方式、源文件hash、时窗及通道整理成结构化参考，不要求用户提交JSON或逐事件时间戳。未确认的方向写为未知，不擅自填零。
+
+```powershell
+python -m counting.count_metrics --run RUN_DIRECTORY --reference AGENT_CREATED_TOTAL_REFERENCE.json --output NEW_TOTAL_SCORE.json
+```
+
+该入口给出绝对计数误差、逐视频MAE汇总及总数吻合情况；事件precision/recall/F1保持空值。一次漏计和一次重计可能相互抵消，不能从总数相等推断逐事件都正确。下面的事件标注工具仍作为单独可选工具，不能将它的更强参考要求重新施加到本轮总数验收。
+
 原片8912–10873已由用户审阅标注视频并确认通过，不再要求8780页面或逐事件JSON。下面的源画面标注工具仍可用于建立独立事件评分参考；用户视频验收与独立事件P/R评分分别记录。新日期的冻结验证见[R5报告](../maintenance/offline_counting/R5_REPORT.md)。
 
 ```powershell
@@ -69,7 +85,11 @@ python -m counting.render --video ORIGINAL_VIDEO --run RUN_DIRECTORY --output NE
 python -m unittest counting.test_counting counting.test_video_integration maintenance.counting_r1.test_r1 -v
 ```
 
-视频集成用例使用明确标记的软件矩形和像素适配器，只检验15／30FPS、不同尺寸、旋转、完整文件输入输出等接口行为；真实模型效果另由真实视频运行和人工事件评价证明。
+视频集成用例使用明确标记的软件矩形和像素适配器，只检验15／30FPS、不同尺寸、旋转、完整文件输入输出等接口行为；真实模型效果另由实机视频和对应的人工总数参考验证。更强的逐事件评价另需相应事件参考。
+
+### 固定全局观测的部署候选
+
+实验模式 `source_selection:"scheduled_global"` 要求paced-file输入、`capture.publication_stride_frames:2`、无history年龄覆盖及无自适应history切换，跟踪名义时钟与输入FPS相同。采集仍读取全部源帧，仅预定偶数帧进入两包队列，按先到先用处理；丢失计划全局帧会失败而不是悄悄换未来图。当前5Hz输入对应2.5Hz计划全局检测，局部核验额外执行并如实计数，不替代预定全局观察。该候选的实机资格结果须单独核对，不能把配置值当作处理帧率或准确性证明。
 
 ### 透视通道边界
 
