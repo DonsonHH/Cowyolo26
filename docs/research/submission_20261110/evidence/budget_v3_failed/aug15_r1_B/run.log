@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/xilinx/jupyter_notebooks/cow_submission_budget_20261110_v3/runtime/counting/budget_runner.py", line 309, in <module>
+    s=run(a.source,json.loads(a.config.read_bytes()),a.policy,a.output)
+  File "/home/xilinx/jupyter_notebooks/cow_submission_budget_20261110_v3/runtime/counting/budget_runner.py", line 262, in run
+    return _execute(source,config,policy,output,detector_factory,capture_factory,summary,resources)
+  File "/home/xilinx/jupyter_notebooks/cow_submission_budget_20261110_v3/runtime/counting/budget_runner.py", line 211, in _execute
+    primary=next_frame(block.first_frame0)
+  File "/home/xilinx/jupyter_notebooks/cow_submission_budget_20261110_v3/runtime/counting/budget_runner.py", line 122, in next_frame
+    if sequence>expected:raise ValueError(f'Planned frame {expected} unavailable; observed {sequence}')
+ValueError: Planned frame 588 unavailable; observed 590

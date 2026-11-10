@@ -1,0 +1,15 @@
+{
+  "profile_version": "counter-confirmation-v2",
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 2,
+    "maximum_gap_s": 2
+  },
+  "rule": "At least two consecutive real confirmed observations in each endpoint zone; missing or out-of-lane observation breaks streak. Predictions never provide observations.",
+  "selected_single_factor": "stable_samples: 3 -> 2",
+  "selection_source": "User-confirmed first fast passage in Aug15; actual cached detections from four sessions",
+  "old_frozen_profile_preserved": "FROZEN_CANDIDATE.json",
+  "new_validation_required": true,
+  "no_source_frame_or_track_id_special_cases": true
+}

@@ -1,0 +1,1649 @@
+{
+  "status": "VERIFIED_EXPLORATORY_DEVELOPMENT_ABLATION",
+  "verified_cases": 20,
+  "clip_order": [
+    "aug14",
+    "aug15",
+    "aug19",
+    "aug20"
+  ],
+  "known_direction_reference_totals": [
+    12,
+    12,
+    11,
+    12
+  ],
+  "original_replay_clock_limits": {
+    "event_publication_age_ms": 1000,
+    "observation_p95_upper_ms": 1000,
+    "observation_max_ms": 1500,
+    "capture_lateness_max_ms": 500,
+    "drain_s": 1,
+    "queue_capacity_frames": 2,
+    "future_frame_violations": 0
+  },
+  "groups": {
+    "U0": {
+      "counts_by_clip": [
+        11,
+        12,
+        9,
+        9
+      ],
+      "total_absolute_error": 6,
+      "exact_total_agreement_clips": 1,
+      "original_replay_clock_pass_cases": 4,
+      "legacy_clock_flag_true_cases": 3,
+      "total_calls": 1034,
+      "global_calls": 1030,
+      "local_calls": 0,
+      "warmup_calls": 4,
+      "history_requests": 0,
+      "history_selections": 0,
+      "history_overrides": 0,
+      "actual_global_hz": {
+        "min": 2.49915697354419,
+        "median": 2.499466793027648,
+        "max": 2.499672684898216
+      },
+      "maximum_timing": {
+        "event_publication_age_ms": 432.4130029999651,
+        "observation_p95_upper_ms": 463.9,
+        "observation_max_ms": 803.7772160023451,
+        "capture_lateness_max_ms": 356.97119700489566,
+        "drain_s": 0.42789125599519195,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      }
+    },
+    "L0": {
+      "counts_by_clip": [
+        12,
+        11,
+        9,
+        10
+      ],
+      "total_absolute_error": 5,
+      "exact_total_agreement_clips": 1,
+      "original_replay_clock_pass_cases": 4,
+      "legacy_clock_flag_true_cases": 0,
+      "total_calls": 1260,
+      "global_calls": 1256,
+      "local_calls": 0,
+      "warmup_calls": 4,
+      "history_requests": 0,
+      "history_selections": 0,
+      "history_overrides": 0,
+      "actual_global_hz": {
+        "min": 2.9297824820514546,
+        "median": 3.0521527291091415,
+        "max": 3.1262552981617913
+      },
+      "maximum_timing": {
+        "event_publication_age_ms": 627.8829150032834,
+        "observation_p95_upper_ms": 646.2,
+        "observation_max_ms": 693.7132090024534,
+        "capture_lateness_max_ms": 222.73585900256876,
+        "drain_s": 0.6716874149991696,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      }
+    },
+    "C0": {
+      "counts_by_clip": [
+        11,
+        12,
+        10,
+        10
+      ],
+      "total_absolute_error": 4,
+      "exact_total_agreement_clips": 1,
+      "original_replay_clock_pass_cases": 4,
+      "legacy_clock_flag_true_cases": 0,
+      "total_calls": 1265,
+      "global_calls": 1261,
+      "local_calls": 0,
+      "warmup_calls": 4,
+      "history_requests": 2,
+      "history_selections": 0,
+      "history_overrides": 2,
+      "actual_global_hz": {
+        "min": 2.949083381944358,
+        "median": 3.0618048302270306,
+        "max": 3.1359101044757844
+      },
+      "maximum_timing": {
+        "event_publication_age_ms": 631.358161001117,
+        "observation_p95_upper_ms": 634.0,
+        "observation_max_ms": 674.0458709973609,
+        "capture_lateness_max_ms": 190.33433600270655,
+        "drain_s": 0.6421303999973986,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      }
+    },
+    "L1": {
+      "counts_by_clip": [
+        12,
+        12,
+        11,
+        12
+      ],
+      "total_absolute_error": 0,
+      "exact_total_agreement_clips": 4,
+      "original_replay_clock_pass_cases": 4,
+      "legacy_clock_flag_true_cases": 0,
+      "total_calls": 1234,
+      "global_calls": 1178,
+      "local_calls": 52,
+      "warmup_calls": 4,
+      "history_requests": 0,
+      "history_selections": 0,
+      "history_overrides": 0,
+      "actual_global_hz": {
+        "min": 2.791940939647072,
+        "median": 2.8653859783443085,
+        "max": 2.882711737888866
+      },
+      "maximum_timing": {
+        "event_publication_age_ms": 870.9468040033244,
+        "observation_p95_upper_ms": 778.8499999999999,
+        "observation_max_ms": 993.0303400033154,
+        "capture_lateness_max_ms": 210.85516899620416,
+        "drain_s": 0.5472710510017293,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      }
+    },
+    "C1": {
+      "counts_by_clip": [
+        12,
+        12,
+        11,
+        11
+      ],
+      "total_absolute_error": 1,
+      "exact_total_agreement_clips": 3,
+      "original_replay_clock_pass_cases": 4,
+      "legacy_clock_flag_true_cases": 0,
+      "total_calls": 1239,
+      "global_calls": 1187,
+      "local_calls": 48,
+      "warmup_calls": 4,
+      "history_requests": 13,
+      "history_selections": 0,
+      "history_overrides": 13,
+      "actual_global_hz": {
+        "min": 2.8488899607060363,
+        "median": 2.8714869489456047,
+        "max": 2.9020491714625365
+      },
+      "maximum_timing": {
+        "event_publication_age_ms": 929.5457860062015,
+        "observation_p95_upper_ms": 775.7999999999997,
+        "observation_max_ms": 963.6942750003072,
+        "capture_lateness_max_ms": 240.968496997084,
+        "drain_s": 0.6842128639997043,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      }
+    }
+  },
+  "pairs": [
+    {
+      "clip": "aug14",
+      "control": "L0",
+      "candidate": "C0",
+      "total_call_delta": 2,
+      "global_call_delta": 2,
+      "local_call_delta": 0,
+      "absolute_total_error_delta": 1
+    },
+    {
+      "clip": "aug14",
+      "control": "L0",
+      "candidate": "L1",
+      "total_call_delta": -4,
+      "global_call_delta": -11,
+      "local_call_delta": 7,
+      "absolute_total_error_delta": 0
+    },
+    {
+      "clip": "aug14",
+      "control": "C0",
+      "candidate": "C1",
+      "total_call_delta": -4,
+      "global_call_delta": -8,
+      "local_call_delta": 4,
+      "absolute_total_error_delta": -1
+    },
+    {
+      "clip": "aug14",
+      "control": "L1",
+      "candidate": "C1",
+      "total_call_delta": 2,
+      "global_call_delta": 5,
+      "local_call_delta": -3,
+      "absolute_total_error_delta": 0
+    },
+    {
+      "clip": "aug15",
+      "control": "L0",
+      "candidate": "C0",
+      "total_call_delta": 2,
+      "global_call_delta": 2,
+      "local_call_delta": 0,
+      "absolute_total_error_delta": -1
+    },
+    {
+      "clip": "aug15",
+      "control": "L0",
+      "candidate": "L1",
+      "total_call_delta": -7,
+      "global_call_delta": -15,
+      "local_call_delta": 8,
+      "absolute_total_error_delta": -1
+    },
+    {
+      "clip": "aug15",
+      "control": "C0",
+      "candidate": "C1",
+      "total_call_delta": -8,
+      "global_call_delta": -19,
+      "local_call_delta": 11,
+      "absolute_total_error_delta": 0
+    },
+    {
+      "clip": "aug15",
+      "control": "L1",
+      "candidate": "C1",
+      "total_call_delta": 1,
+      "global_call_delta": -2,
+      "local_call_delta": 3,
+      "absolute_total_error_delta": 0
+    },
+    {
+      "clip": "aug19",
+      "control": "L0",
+      "candidate": "C0",
+      "total_call_delta": 0,
+      "global_call_delta": 0,
+      "local_call_delta": 0,
+      "absolute_total_error_delta": -1
+    },
+    {
+      "clip": "aug19",
+      "control": "L0",
+      "candidate": "L1",
+      "total_call_delta": -6,
+      "global_call_delta": -20,
+      "local_call_delta": 14,
+      "absolute_total_error_delta": -2
+    },
+    {
+      "clip": "aug19",
+      "control": "C0",
+      "candidate": "C1",
+      "total_call_delta": -6,
+      "global_call_delta": -19,
+      "local_call_delta": 13,
+      "absolute_total_error_delta": -1
+    },
+    {
+      "clip": "aug19",
+      "control": "L1",
+      "candidate": "C1",
+      "total_call_delta": 0,
+      "global_call_delta": 1,
+      "local_call_delta": -1,
+      "absolute_total_error_delta": 0
+    },
+    {
+      "clip": "aug20",
+      "control": "L0",
+      "candidate": "C0",
+      "total_call_delta": 1,
+      "global_call_delta": 1,
+      "local_call_delta": 0,
+      "absolute_total_error_delta": 0
+    },
+    {
+      "clip": "aug20",
+      "control": "L0",
+      "candidate": "L1",
+      "total_call_delta": -9,
+      "global_call_delta": -32,
+      "local_call_delta": 23,
+      "absolute_total_error_delta": -2
+    },
+    {
+      "clip": "aug20",
+      "control": "C0",
+      "candidate": "C1",
+      "total_call_delta": -8,
+      "global_call_delta": -28,
+      "local_call_delta": 20,
+      "absolute_total_error_delta": -1
+    },
+    {
+      "clip": "aug20",
+      "control": "L1",
+      "candidate": "C1",
+      "total_call_delta": 2,
+      "global_call_delta": 5,
+      "local_call_delta": -3,
+      "absolute_total_error_delta": 1
+    }
+  ],
+  "cases": [
+    {
+      "case": "aug14_u0",
+      "clip": "aug14",
+      "condition": "U0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 11,
+        "UP": 0
+      },
+      "known_total": 11,
+      "opposite_total": 0,
+      "absolute_total_error": 1,
+      "calls": {
+        "global": 202,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 203,
+        "total_per_input_second": 2.5186104218362284
+      },
+      "captured_frames": 403,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 2.5,
+      "replay_input_duration_s": 80.6,
+      "source_pts_span_s": 80.4,
+      "stream_wall_s": 80.82725580599799,
+      "elapsed_with_startup_s": 99.5838350319973,
+      "startup_s": 18.751088402997993,
+      "actual_global_hz": 2.49915697354419,
+      "overwritten_before_read": 0,
+      "sampler_rejected_frames": 201,
+      "unavailable_sampler_slots": 0,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.4,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.3999999999999915,
+        "median": 0.3999999999999986,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 8,
+      "timing": {
+        "event_publication_age_ms": 432.4130029999651,
+        "observation_p95_upper_ms": 463.9,
+        "observation_max_ms": 518.0393919945345,
+        "capture_lateness_max_ms": 171.92024299583863,
+        "drain_s": 0.4272558059979872,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": true,
+      "event_publication_p95_reported_ms": 431.96509200060973,
+      "process_peak_rss_kib": 210880,
+      "frame_ledger_sha256": "034447ff373db278e6e0b44a5a16fdf014ebba933d1163d4899410487109c083"
+    },
+    {
+      "case": "aug15_l0",
+      "clip": "aug15",
+      "condition": "L0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 11,
+        "UP": 0
+      },
+      "known_total": 11,
+      "opposite_total": 0,
+      "absolute_total_error": 1,
+      "calls": {
+        "global": 390,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 391,
+        "total_per_input_second": 3.012326656394453
+      },
+      "captured_frames": 649,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 129.8,
+      "source_pts_span_s": 129.6,
+      "stream_wall_s": 130.0762868890015,
+      "elapsed_with_startup_s": 157.32887580399984,
+      "startup_s": 27.247191413996916,
+      "actual_global_hz": 2.99824056580582,
+      "overwritten_before_read": 259,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 259,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 129.6,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 6,
+      "timing": {
+        "event_publication_age_ms": 573.2692860037787,
+        "observation_p95_upper_ms": 632.1999999999998,
+        "observation_max_ms": 686.3500659965212,
+        "capture_lateness_max_ms": 222.73585900256876,
+        "drain_s": 0.47628688900149996,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 571.2733940017642,
+      "process_peak_rss_kib": 206704,
+      "frame_ledger_sha256": "b5be7df2ed1800f9ae1ca940edc21efcca9bdc10c8ec2ebc6119fdeb1d36c0af"
+    },
+    {
+      "case": "aug19_c0",
+      "clip": "aug19",
+      "condition": "C0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 11,
+      "direction_counts": {
+        "UP": 10,
+        "DOWN": 0
+      },
+      "known_total": 10,
+      "opposite_total": 0,
+      "absolute_total_error": 1,
+      "calls": {
+        "global": 253,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 254,
+        "total_per_input_second": 3.1358024691358026
+      },
+      "captured_frames": 405,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 81.0,
+      "source_pts_span_s": 80.8,
+      "stream_wall_s": 81.28781664900453,
+      "elapsed_with_startup_s": 97.92889825699967,
+      "startup_s": 16.63462908499787,
+      "actual_global_hz": 3.1123975329837856,
+      "overwritten_before_read": 152,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 152,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.80000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 1,
+      "timing": {
+        "event_publication_age_ms": 575.5174930018256,
+        "observation_p95_upper_ms": 589.0,
+        "observation_max_ms": 626.1713130006683,
+        "capture_lateness_max_ms": 190.33433600270655,
+        "drain_s": 0.4878166490045146,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 567.2041552028531,
+      "process_peak_rss_kib": 209224,
+      "frame_ledger_sha256": "3735ada2b25c94bc57c4ee6b47f6593addd74fc87001946c8cca948f49342423"
+    },
+    {
+      "case": "aug20_l1",
+      "clip": "aug20",
+      "condition": "L1",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 12,
+      "direction_counts": {
+        "UP": 12,
+        "DOWN": 0
+      },
+      "known_total": 12,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 344,
+        "endpoint": 15,
+        "birth": 8,
+        "local": 23,
+        "warmup": 1,
+        "total": 368,
+        "total_per_input_second": 3.0717863105175294
+      },
+      "captured_frames": 599,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 119.8,
+      "source_pts_span_s": 119.6,
+      "stream_wall_s": 120.07206083700294,
+      "elapsed_with_startup_s": 137.6649134199979,
+      "startup_s": 17.586214283997833,
+      "actual_global_hz": 2.864946246462596,
+      "overwritten_before_read": 255,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 255,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 119.60000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.7999999999999972
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 6,
+      "timing": {
+        "event_publication_age_ms": 851.7404580052244,
+        "observation_p95_upper_ms": 778.8499999999999,
+        "observation_max_ms": 934.9818780028727,
+        "capture_lateness_max_ms": 133.8969080024981,
+        "drain_s": 0.4720608370029282,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 845.251357804591,
+      "process_peak_rss_kib": 214480,
+      "frame_ledger_sha256": "cea5c2427d820ff379559cd56226f5f6a120b9aafdf493f6a4f7847e1e0898be"
+    },
+    {
+      "case": "aug14_l0",
+      "clip": "aug14",
+      "condition": "L0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "known_total": 12,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 237,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 238,
+        "total_per_input_second": 2.9528535980148884
+      },
+      "captured_frames": 403,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 80.6,
+      "source_pts_span_s": 80.4,
+      "stream_wall_s": 80.8933773930039,
+      "elapsed_with_startup_s": 98.77503103799972,
+      "startup_s": 17.87554686099611,
+      "actual_global_hz": 2.9297824820514546,
+      "overwritten_before_read": 166,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 166,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.4,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999999574,
+        "median": 0.3999999999999986,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 4,
+      "timing": {
+        "event_publication_age_ms": 579.6851120030624,
+        "observation_p95_upper_ms": 646.2,
+        "observation_max_ms": 693.7132090024534,
+        "capture_lateness_max_ms": 136.3560200043139,
+        "drain_s": 0.4933773930038967,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 573.478980753498,
+      "process_peak_rss_kib": 209340,
+      "frame_ledger_sha256": "ac555de86760bdb0d8db64b8764e8c5e84f54daf219eb7c236718b2db9ef046c"
+    },
+    {
+      "case": "aug15_c0",
+      "clip": "aug15",
+      "condition": "C0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "known_total": 12,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 392,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 393,
+        "total_per_input_second": 3.027734976887519
+      },
+      "captured_frames": 649,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 129.8,
+      "source_pts_span_s": 129.6,
+      "stream_wall_s": 130.18013457900088,
+      "elapsed_with_startup_s": 151.15283700000145,
+      "startup_s": 20.966933001000143,
+      "actual_global_hz": 3.0112121274702752,
+      "overwritten_before_read": 257,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 257,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 129.6,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 1,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 1,
+        "guard_overrides_all_dequeues": 1
+      },
+      "uncertain_records": 1,
+      "timing": {
+        "event_publication_age_ms": 622.9897440061904,
+        "observation_p95_upper_ms": 634.0,
+        "observation_max_ms": 656.5250560015556,
+        "capture_lateness_max_ms": 165.06894200574607,
+        "drain_s": 0.5801345790008838,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 595.5546038527245,
+      "process_peak_rss_kib": 207728,
+      "frame_ledger_sha256": "ee81a5f8f6f8b56a2ee706e9e2bd530e0f35638b4419c62bdd28056dcda5c739"
+    },
+    {
+      "case": "aug19_l1",
+      "clip": "aug19",
+      "condition": "L1",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 11,
+      "direction_counts": {
+        "UP": 11,
+        "DOWN": 0
+      },
+      "known_total": 11,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 233,
+        "endpoint": 10,
+        "birth": 4,
+        "local": 14,
+        "warmup": 1,
+        "total": 248,
+        "total_per_input_second": 3.0617283950617282
+      },
+      "captured_frames": 405,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 81.0,
+      "source_pts_span_s": 80.8,
+      "stream_wall_s": 81.30292054000165,
+      "elapsed_with_startup_s": 99.18062320200261,
+      "startup_s": 17.871047243999783,
+      "actual_global_hz": 2.865825710226021,
+      "overwritten_before_read": 172,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 172,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.80000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.7999999999999972
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 0,
+      "timing": {
+        "event_publication_age_ms": 870.9468040033244,
+        "observation_p95_upper_ms": 749.5999999999997,
+        "observation_max_ms": 946.3833300033002,
+        "capture_lateness_max_ms": 210.85516899620416,
+        "drain_s": 0.5029205400016394,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 866.859296002076,
+      "process_peak_rss_kib": 203232,
+      "frame_ledger_sha256": "e1f304d401892ae2d99fda5c73d034ab9e110e1c4105da405060189f029464bb"
+    },
+    {
+      "case": "aug20_c1",
+      "clip": "aug20",
+      "condition": "C1",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 12,
+      "direction_counts": {
+        "UP": 11,
+        "DOWN": 0
+      },
+      "known_total": 11,
+      "opposite_total": 0,
+      "absolute_total_error": 1,
+      "calls": {
+        "global": 349,
+        "endpoint": 16,
+        "birth": 4,
+        "local": 20,
+        "warmup": 1,
+        "total": 370,
+        "total_per_input_second": 3.0884808013355594
+      },
+      "captured_frames": 599,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 119.8,
+      "source_pts_span_s": 119.6,
+      "stream_wall_s": 120.25985067100555,
+      "elapsed_with_startup_s": 138.46211496300384,
+      "startup_s": 18.19602171600127,
+      "actual_global_hz": 2.9020491714625365,
+      "overwritten_before_read": 250,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 250,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 119.60000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.8000000000000043
+      },
+      "history": {
+        "requests_on_processed_frames": 3,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 3,
+        "guard_overrides_all_dequeues": 3
+      },
+      "uncertain_records": 7,
+      "timing": {
+        "event_publication_age_ms": 929.5457860062015,
+        "observation_p95_upper_ms": 775.7999999999997,
+        "observation_max_ms": 946.6657400043914,
+        "capture_lateness_max_ms": 118.88720100250794,
+        "drain_s": 0.6598506710055432,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 896.5583945064282,
+      "process_peak_rss_kib": 210052,
+      "frame_ledger_sha256": "cc651d9a7f2d30c72c761bdd58a078849d1a00bca1a4ee6e0e4ebc78de193859"
+    },
+    {
+      "case": "aug14_c0",
+      "clip": "aug14",
+      "condition": "C0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 11,
+        "UP": 0
+      },
+      "known_total": 11,
+      "opposite_total": 0,
+      "absolute_total_error": 1,
+      "calls": {
+        "global": 239,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 240,
+        "total_per_input_second": 2.977667493796526
+      },
+      "captured_frames": 403,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 80.6,
+      "source_pts_span_s": 80.4,
+      "stream_wall_s": 81.0421303999974,
+      "elapsed_with_startup_s": 98.75443728699611,
+      "startup_s": 17.706604446997517,
+      "actual_global_hz": 2.949083381944358,
+      "overwritten_before_read": 164,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 164,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.4,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 1,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 1,
+        "guard_overrides_all_dequeues": 1
+      },
+      "uncertain_records": 5,
+      "timing": {
+        "event_publication_age_ms": 631.358161001117,
+        "observation_p95_upper_ms": 631.1,
+        "observation_max_ms": 674.0458709973609,
+        "capture_lateness_max_ms": 143.98760000040056,
+        "drain_s": 0.6421303999973986,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 626.7316325029242,
+      "process_peak_rss_kib": 207024,
+      "frame_ledger_sha256": "b3af2437ba702cde7cda1fd0fcc34857b9537a85f06beafd788b0d232aec4b20"
+    },
+    {
+      "case": "aug15_l1",
+      "clip": "aug15",
+      "condition": "L1",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "known_total": 12,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 375,
+        "endpoint": 5,
+        "birth": 3,
+        "local": 8,
+        "warmup": 1,
+        "total": 384,
+        "total_per_input_second": 2.958397534668721
+      },
+      "captured_frames": 649,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 129.8,
+      "source_pts_span_s": 129.6,
+      "stream_wall_s": 130.0858476659996,
+      "elapsed_with_startup_s": 150.5200557289936,
+      "startup_s": 20.42838940799993,
+      "actual_global_hz": 2.882711737888866,
+      "overwritten_before_read": 274,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 274,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 129.6,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.8000000000000043
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 1,
+      "timing": {
+        "event_publication_age_ms": 563.6605890031205,
+        "observation_p95_upper_ms": 647.9000000000001,
+        "observation_max_ms": 976.6983350054943,
+        "capture_lateness_max_ms": 166.88621699722717,
+        "drain_s": 0.48584766599961426,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 555.6890034044045,
+      "process_peak_rss_kib": 207104,
+      "frame_ledger_sha256": "c4e02791f157885ef801bec8361b34bd992e5f7cf3ce4ab5ce15a138e3a222db"
+    },
+    {
+      "case": "aug19_c1",
+      "clip": "aug19",
+      "condition": "C1",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 11,
+      "direction_counts": {
+        "UP": 11,
+        "DOWN": 0
+      },
+      "known_total": 11,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 234,
+        "endpoint": 8,
+        "birth": 5,
+        "local": 13,
+        "warmup": 1,
+        "total": 248,
+        "total_per_input_second": 3.0617283950617282
+      },
+      "captured_frames": 405,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 81.0,
+      "source_pts_span_s": 80.8,
+      "stream_wall_s": 81.26025253199623,
+      "elapsed_with_startup_s": 98.80071029399551,
+      "startup_s": 17.533917512999324,
+      "actual_global_hz": 2.8796366330250143,
+      "overwritten_before_read": 171,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 171,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.80000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.8000000000000007
+      },
+      "history": {
+        "requests_on_processed_frames": 3,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 3,
+        "guard_overrides_all_dequeues": 3
+      },
+      "uncertain_records": 0,
+      "timing": {
+        "event_publication_age_ms": 919.0197389980312,
+        "observation_p95_upper_ms": 757.9499999999999,
+        "observation_max_ms": 936.2442880010349,
+        "capture_lateness_max_ms": 240.968496997084,
+        "drain_s": 0.4602525319962183,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 911.0067775000061,
+      "process_peak_rss_kib": 204296,
+      "frame_ledger_sha256": "1e53ace2ba489aa089c53380bd778898c2c643a765ff49414873cfd59b39f9d1"
+    },
+    {
+      "case": "aug20_u0",
+      "clip": "aug20",
+      "condition": "U0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 12,
+      "direction_counts": {
+        "UP": 9,
+        "DOWN": 0
+      },
+      "known_total": 9,
+      "opposite_total": 0,
+      "absolute_total_error": 3,
+      "calls": {
+        "global": 300,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 301,
+        "total_per_input_second": 2.5125208681135227
+      },
+      "captured_frames": 599,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 2.5,
+      "replay_input_duration_s": 119.8,
+      "source_pts_span_s": 119.6,
+      "stream_wall_s": 120.0278912559952,
+      "elapsed_with_startup_s": 138.45684460899793,
+      "startup_s": 18.42264508399967,
+      "actual_global_hz": 2.499419067191314,
+      "overwritten_before_read": 4,
+      "sampler_rejected_frames": 295,
+      "unavailable_sampler_slots": 0,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 119.60000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.20000000000000018,
+        "median": 0.39999999999999947,
+        "max": 0.6000000000000001
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 7,
+      "timing": {
+        "event_publication_age_ms": 394.7503460003645,
+        "observation_p95_upper_ms": 404.0,
+        "observation_max_ms": 803.7772160023451,
+        "capture_lateness_max_ms": 356.97119700489566,
+        "drain_s": 0.42789125599519195,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 392.19315759983147,
+      "process_peak_rss_kib": 209592,
+      "frame_ledger_sha256": "ea06bc00e86d0143b378f28662851d0f30527c9a871728758fc77d16e2e06bc9"
+    },
+    {
+      "case": "aug14_l1",
+      "clip": "aug14",
+      "condition": "L1",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "known_total": 12,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 226,
+        "endpoint": 1,
+        "birth": 6,
+        "local": 7,
+        "warmup": 1,
+        "total": 234,
+        "total_per_input_second": 2.903225806451613
+      },
+      "captured_frames": 403,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 80.6,
+      "source_pts_span_s": 80.4,
+      "stream_wall_s": 80.94727105100174,
+      "elapsed_with_startup_s": 98.55620687099872,
+      "startup_s": 17.602863339998294,
+      "actual_global_hz": 2.791940939647072,
+      "overwritten_before_read": 177,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 177,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.4,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.8000000000000043
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 2,
+      "timing": {
+        "event_publication_age_ms": 651.0970050076139,
+        "observation_p95_upper_ms": 666.75,
+        "observation_max_ms": 993.0303400033154,
+        "capture_lateness_max_ms": 153.00314600608544,
+        "drain_s": 0.5472710510017293,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 615.7832980054081,
+      "process_peak_rss_kib": 213228,
+      "frame_ledger_sha256": "9b443b07837117597b6e78d545e2f6f1181daf833922e254296ca4406feb733b"
+    },
+    {
+      "case": "aug15_c1",
+      "clip": "aug15",
+      "condition": "C1",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "known_total": 12,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 373,
+        "endpoint": 7,
+        "birth": 4,
+        "local": 11,
+        "warmup": 1,
+        "total": 385,
+        "total_per_input_second": 2.966101694915254
+      },
+      "captured_frames": 649,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 129.8,
+      "source_pts_span_s": 129.6,
+      "stream_wall_s": 130.26757433600142,
+      "elapsed_with_startup_s": 150.62989897499938,
+      "startup_s": 20.356538223000825,
+      "actual_global_hz": 2.8633372648661948,
+      "overwritten_before_read": 276,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 276,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 129.6,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.7999999999999972
+      },
+      "history": {
+        "requests_on_processed_frames": 4,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 4,
+        "guard_overrides_all_dequeues": 4
+      },
+      "uncertain_records": 1,
+      "timing": {
+        "event_publication_age_ms": 628.0405990037252,
+        "observation_p95_upper_ms": 657.0,
+        "observation_max_ms": 957.373020995874,
+        "capture_lateness_max_ms": 168.30555500200717,
+        "drain_s": 0.6675743360014224,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 627.6421740531077,
+      "process_peak_rss_kib": 213976,
+      "frame_ledger_sha256": "fd7b447bbf8c7fd8d1b9841642a06de86834b643640bd8ec6fca0c14b2018b45"
+    },
+    {
+      "case": "aug19_u0",
+      "clip": "aug19",
+      "condition": "U0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 11,
+      "direction_counts": {
+        "UP": 9,
+        "DOWN": 0
+      },
+      "known_total": 9,
+      "opposite_total": 0,
+      "absolute_total_error": 2,
+      "calls": {
+        "global": 203,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 204,
+        "total_per_input_second": 2.5185185185185186
+      },
+      "captured_frames": 405,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 2.5,
+      "replay_input_duration_s": 81.0,
+      "source_pts_span_s": 80.8,
+      "stream_wall_s": 81.21577149000223,
+      "elapsed_with_startup_s": 98.99000133800291,
+      "startup_s": 17.76719537500321,
+      "actual_global_hz": 2.4995145188639816,
+      "overwritten_before_read": 1,
+      "sampler_rejected_frames": 201,
+      "unavailable_sampler_slots": 0,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.80000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.3999999999999915,
+        "median": 0.3999999999999986,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 3,
+      "timing": {
+        "event_publication_age_ms": 403.29567099979613,
+        "observation_p95_upper_ms": 427.0,
+        "observation_max_ms": 548.8047050021123,
+        "capture_lateness_max_ms": 155.08101299928967,
+        "drain_s": 0.41577149000221425,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": true,
+      "event_publication_p95_reported_ms": 398.4887662023539,
+      "process_peak_rss_kib": 208044,
+      "frame_ledger_sha256": "5e736a8965753cd30d747751986071262264a970430c30fd4b77402410c4970c"
+    },
+    {
+      "case": "aug20_l0",
+      "clip": "aug20",
+      "condition": "L0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 12,
+      "direction_counts": {
+        "UP": 10,
+        "DOWN": 0
+      },
+      "known_total": 10,
+      "opposite_total": 0,
+      "absolute_total_error": 2,
+      "calls": {
+        "global": 376,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 377,
+        "total_per_input_second": 3.1469115191986643
+      },
+      "captured_frames": 599,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 119.8,
+      "source_pts_span_s": 119.6,
+      "stream_wall_s": 120.27168741499918,
+      "elapsed_with_startup_s": 137.73954503000277,
+      "startup_s": 17.461430798000947,
+      "actual_global_hz": 3.1262552981617913,
+      "overwritten_before_read": 223,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 223,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 119.60000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999915,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 7,
+      "timing": {
+        "event_publication_age_ms": 599.1397119942121,
+        "observation_p95_upper_ms": 594.75,
+        "observation_max_ms": 640.7509259952349,
+        "capture_lateness_max_ms": 118.79901499924017,
+        "drain_s": 0.6716874149991696,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 574.7348709970538,
+      "process_peak_rss_kib": 211344,
+      "frame_ledger_sha256": "1078c13449e6f8f613ddeeb609e16b981ec6323f061614233f49727b7a35d39a"
+    },
+    {
+      "case": "aug14_c1",
+      "clip": "aug14",
+      "condition": "C1",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "known_total": 12,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 231,
+        "endpoint": 0,
+        "birth": 4,
+        "local": 4,
+        "warmup": 1,
+        "total": 236,
+        "total_per_input_second": 2.9280397022332507
+      },
+      "captured_frames": 403,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 80.6,
+      "source_pts_span_s": 80.4,
+      "stream_wall_s": 81.08421286399971,
+      "elapsed_with_startup_s": 98.28394504499738,
+      "startup_s": 17.194121676999202,
+      "actual_global_hz": 2.8488899607060363,
+      "overwritten_before_read": 172,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 172,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.4,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.8000000000000007
+      },
+      "history": {
+        "requests_on_processed_frames": 3,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 3,
+        "guard_overrides_all_dequeues": 3
+      },
+      "uncertain_records": 2,
+      "timing": {
+        "event_publication_age_ms": 637.8516469994793,
+        "observation_p95_upper_ms": 649.0,
+        "observation_max_ms": 963.6942750003072,
+        "capture_lateness_max_ms": 144.29996700346237,
+        "drain_s": 0.6842128639997043,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 610.7514744511718,
+      "process_peak_rss_kib": 213744,
+      "frame_ledger_sha256": "aa2131bef892324d97c87d75e2c21e8bc5284f6f4e45b6dedb65fca023aaa5bf"
+    },
+    {
+      "case": "aug15_u0",
+      "clip": "aug15",
+      "condition": "U0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "DOWN",
+      "reference_total": 12,
+      "direction_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "known_total": 12,
+      "opposite_total": 0,
+      "absolute_total_error": 0,
+      "calls": {
+        "global": 325,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 326,
+        "total_per_input_second": 2.5115562403697993
+      },
+      "captured_frames": 649,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 2.5,
+      "replay_input_duration_s": 129.8,
+      "source_pts_span_s": 129.6,
+      "stream_wall_s": 130.01702261399623,
+      "elapsed_with_startup_s": 150.19448276899493,
+      "startup_s": 20.171706178000022,
+      "actual_global_hz": 2.499672684898216,
+      "overwritten_before_read": 1,
+      "sampler_rejected_frames": 323,
+      "unavailable_sampler_slots": 0,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 129.6,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.39999999999997726,
+        "median": 0.3999999999999999,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 3,
+      "timing": {
+        "event_publication_age_ms": 418.4528699988732,
+        "observation_p95_upper_ms": 439.8,
+        "observation_max_ms": 529.3524910011911,
+        "capture_lateness_max_ms": 158.72783699887805,
+        "drain_s": 0.4170226139962381,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": true,
+      "event_publication_p95_reported_ms": 415.48063039954286,
+      "process_peak_rss_kib": 209872,
+      "frame_ledger_sha256": "c3cbe23af7012587935aa9c308d098473b3c9c963abd9d3be0e509dc7750362b"
+    },
+    {
+      "case": "aug19_l0",
+      "clip": "aug19",
+      "condition": "L0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 11,
+      "direction_counts": {
+        "UP": 9,
+        "DOWN": 0
+      },
+      "known_total": 9,
+      "opposite_total": 0,
+      "absolute_total_error": 2,
+      "calls": {
+        "global": 253,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 254,
+        "total_per_input_second": 3.1358024691358026
+      },
+      "captured_frames": 405,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 81.0,
+      "source_pts_span_s": 80.8,
+      "stream_wall_s": 81.45354613100062,
+      "elapsed_with_startup_s": 98.85936191899964,
+      "startup_s": 17.399334137997357,
+      "actual_global_hz": 3.1060648924124625,
+      "overwritten_before_read": 152,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 152,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 80.80000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999986,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 2,
+      "timing": {
+        "event_publication_age_ms": 627.8829150032834,
+        "observation_p95_upper_ms": 599.0,
+        "observation_max_ms": 646.59867699811,
+        "capture_lateness_max_ms": 191.31343199842377,
+        "drain_s": 0.6535461310006099,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 620.4439634006121,
+      "process_peak_rss_kib": 209804,
+      "frame_ledger_sha256": "25b6923fdc22c0bd38bc743582d383a949c8ff40bee673c4d09e287a5ca28692"
+    },
+    {
+      "case": "aug20_c0",
+      "clip": "aug20",
+      "condition": "C0",
+      "runtime_status": "COMPLETED_UNSCORED",
+      "known_direction": "UP",
+      "reference_total": 12,
+      "direction_counts": {
+        "UP": 10,
+        "DOWN": 0
+      },
+      "known_total": 10,
+      "opposite_total": 0,
+      "absolute_total_error": 2,
+      "calls": {
+        "global": 377,
+        "endpoint": 0,
+        "birth": 0,
+        "local": 0,
+        "warmup": 1,
+        "total": 378,
+        "total_per_input_second": 3.1552587646076797
+      },
+      "captured_frames": 599,
+      "nominal_capture_hz": 5.0,
+      "target_detector_hz": 5.0,
+      "replay_input_duration_s": 119.8,
+      "source_pts_span_s": 119.6,
+      "stream_wall_s": 120.22028292900359,
+      "elapsed_with_startup_s": 137.5903549240029,
+      "startup_s": 17.36363517100108,
+      "actual_global_hz": 3.1359101044757844,
+      "overwritten_before_read": 222,
+      "sampler_rejected_frames": 0,
+      "unavailable_sampler_slots": 222,
+      "first_selected_source_s": 0.0,
+      "last_selected_source_s": 119.60000000000001,
+      "unprocessed_trailing_source_s": 0.0,
+      "realized_selected_frame_interval_s": {
+        "min": 0.19999999999998863,
+        "median": 0.3999999999999915,
+        "max": 0.4000000000000057
+      },
+      "history": {
+        "requests_on_processed_frames": 0,
+        "selected_history_frames": 0,
+        "guard_overrides_on_processed_frames": 0,
+        "guard_overrides_all_dequeues": 0
+      },
+      "uncertain_records": 4,
+      "timing": {
+        "event_publication_age_ms": 574.4011589995353,
+        "observation_p95_upper_ms": 579.2,
+        "observation_max_ms": 622.9259760075365,
+        "capture_lateness_max_ms": 125.1012940047076,
+        "drain_s": 0.6202829290035794,
+        "queue_capacity_frames": 2,
+        "future_frame_violations": 0
+      },
+      "original_replay_clock_pass": true,
+      "legacy_runtime_clock_flag": false,
+      "event_publication_p95_reported_ms": 569.0364515976398,
+      "process_peak_rss_kib": 211092,
+      "frame_ledger_sha256": "247a80da98c4ba9f6dc0a3ecb46bfb09b29dfef4575bed3f1ad1718d57bb044b"
+    }
+  ],
+  "evidence_sha256": {
+    "COLLECTION.json": "4f36abe582362e57421f8f26ecae53a4fb217e368d051f01e51d4cbf5a098249",
+    "batch_protocol.json": "607c09d52c62422a0d87608654abb13fffbda8c6baa703d41db029aa2d1e3d1f",
+    "BATCH_FREEZE_INDEX.json": "9ad049bc5f2d87c7554bbfbcb55a3712c6d63da157ad861b3d696c01e237b05d"
+  },
+  "event_f1": null,
+  "independent_timed_event_reference": false,
+  "budget_matched_control": false,
+  "new_model_forwards_during_review": 0
+}

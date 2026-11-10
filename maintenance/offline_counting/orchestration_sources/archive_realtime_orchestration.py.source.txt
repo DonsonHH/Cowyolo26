@@ -1,0 +1,31 @@
+"""Archive small host experiment sources without credentials or binary assets."""
+import hashlib
+import json
+from pathlib import Path
+
+ROOT=Path(__file__).parent
+M=Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+folder=M/'orchestration_sources'
+folder.mkdir(exist_ok=True)
+names=['realtime_case_board.py','prepare_birth_v9_runtime.py','prepare_birth_v9_cases.py',
+       'prepare_two_line_v14.py','prepare_aug20_final_case.py','build_realtime_delivery.py',
+       'make_realtime_event_panels.py','record_realtime_pair_review.py','archive_birth_runtime_sources.py',
+       'refresh_qualified_v7_source.py','verify_final_source_restore.py','check_high_threshold_cache.py',
+       'check_association_cache.py','check_axis_prediction_cache.py','check_zone_evidence_cache.py',
+       'inspect_birth_v9_failure.py','record_birth_v9_review.py',
+       'prepare_unified_v15.py','clarify_v15_protocol.py','inspect_realtime_gap.py',
+       'prepare_recovery_v16.py','verify_realtime_delivery.py','archive_realtime_orchestration.py']
+manifest={'scope':'Host orchestration and diagnostic source archive; not a standalone credential/asset package',
+          'models_datasets_media_or_credentials_included':False,'source_sha256':{}}
+for name in names:
+    data=(ROOT/name).read_bytes()
+    (folder/(name+'.source.txt')).write_bytes(data)
+    manifest['source_sha256'][name]=hashlib.sha256(data).hexdigest()
+(folder/'manifest.json').write_bytes((json.dumps(manifest,indent=2)+'\n').encode())
+(folder/'README.md').write_bytes(('''# 本机执行脚本原文
+
+此处保留本次准备、冻结、运行、取回、诊断、绘图与报告脚本的原始文本，便于审阅工作流。模型、数据、视频、二进制源码包和连接凭据未包含。
+
+`.source.txt` 是执行脚本存档，部分导入原工作区的连接适配器，不能直接当作通用安装包。公开运行入口为仓库 `counting.realtime`；模型/固件按案例冻结清单使用本机资产，历史源码按 `qualified_birth_sources` 恢复。manifest记录每份原文SHA256。
+''').encode())
+print(json.dumps({'archived_host_scripts':len(names),'binary_assets':0}))

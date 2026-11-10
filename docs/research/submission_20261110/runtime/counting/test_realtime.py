@@ -1,0 +1,268 @@
+"""Actual codec/clock fixtures; fake detector results never count as cow accuracy."""
+import json
+from pathlib import Path
+import tempfile
+import time
+import unittest
+from unittest.mock import patch
+import numpy as np
+from .realtime import EntireStreamLatency, LatestCapture, run
+from .test_video_integration import GreenPixelAdapter
+
+
+def video(path, positions, fps):
+    import cv2
+    writer = cv2.VideoWriter(str(path), cv2.VideoWriter_fourcc(*"MJPG"), fps, (160, 96))
+    assert writer.isOpened()
+    for position in positions:
+        frame = np.zeros((96, 160, 3), np.uint8)
+        cy = round(position * 96)
+        cv2.rectangle(frame, (64, cy - 12), (96, cy + 12), (0, 255, 0), -1)
+        writer.write(frame)
+    writer.release()
+
+
+class SlowPixelAdapter(GreenPixelAdapter):
+    def infer(self, tensor):
+        time.sleep(.16)
+        return super().infer(tensor)
+
+
+class RealtimeTests(unittest.TestCase):
+    def test_successful_slow_birth_keeps_the_next_arrived_real_frame(self):
+        class SlowLocalAdapter(GreenPixelAdapter):
+            def infer(self,tensor):
+                values=super().infer(tensor)
+                if values.shape[1]:
+                    box=values[0,0]
+                    if box[2]-box[0] < 40:
+                        box[4]=.12
+                    else:
+                        time.sleep(.12)
+                        box[4]=.9
+                return values
+        with tempfile.TemporaryDirectory(prefix='rt-post-birth-software-fixture-') as directory:
+            root=Path(directory)
+            source=root/'SOFTWARE_FIXTURE.avi'
+            video(source,[.22]*7,20)
+            config={'detector':{},'sample_hz':20.,'confidence':.02,'capture':{'buffer_frames':2},
+                    'history_after_birth':True,'birth_refinement':{'enabled':True},
+                    'tracker':{'motion_box':'observed_velocity','track_high_thresh':.15,'fuse_score':False},
+                    'counter':{'stable_samples':2}}
+            selections=[]
+            original=LatestCapture.take_after
+            def observed_take(capture,sequence,prefer_history=False):
+                with capture.condition:
+                    available=[packet[0] for packet in capture.pending if packet[0]>sequence]
+                    packet=original(capture,sequence,prefer_history)
+                    if prefer_history and available and packet is not None:
+                        selections.append((available,packet[0]))
+                    return packet
+            with patch.object(LatestCapture,'take_after',observed_take):
+                result=run(source,config,root/'output',detector_factory=lambda _:SlowLocalAdapter())
+            rows=[json.loads(line) for line in (root/'output/frames.jsonl').read_text().splitlines()]
+            self.assertEqual(result['birth_refinement_forwards'],1)
+            self.assertTrue(rows[1]['birth_history_requested'])
+            self.assertTrue(rows[1]['history_frame_selected'])
+            self.assertTrue(selections)
+            self.assertEqual(rows[1]['frame0'],min(selections[0][0]))
+            self.assertEqual(result['future_frame_violations'],0)
+            self.assertEqual(result['counts']['IN'],0)
+
+    def log_wrapper(self, target_name, wrapper):
+        original = Path.open
+        def opened(path, *args, **kwargs):
+            stream = original(path, *args, **kwargs)
+            return wrapper(stream) if path.name == target_name and args and args[0] == "w" else stream
+        return patch.object(Path, "open", opened)
+
+    def test_wall_pacing_no_future_frames_and_real_counter(self):
+        with tempfile.TemporaryDirectory(prefix="rt-software-fixture-") as folder:
+            root = Path(folder)
+            source = root / "SOFTWARE_FIXTURE.avi"
+            positions = [.78] * 3 + [.74, .68, .62, .56, .5, .44, .38, .32, .26] + [.22] * 3
+            video(source, positions, 10)
+            config = {"detector": {}, "sample_hz": 10., "expected_capture_frames": len(positions),
+                      "in_direction": "B->A", "counter": {"lower": .4, "upper": .6, "stable_samples": 2}}
+            result = run(source, config, root / "output", detector_factory=lambda _: GreenPixelAdapter())
+            rows = [json.loads(line) for line in (root / "output/frames.jsonl").read_text().splitlines()]
+            self.assertEqual(result["counts"]["IN"], 1)
+            self.assertEqual(result["capture"]["captured_frames"], len(positions))
+            self.assertEqual(result["future_frame_violations"], 0)
+            self.assertGreaterEqual(result["stream_wall_elapsed_s"], (len(positions) - 1) / 10 - .01)
+            self.assertTrue(all(row["wall_since_stream_start_s"] + .001 >= row["time_s"] for row in rows))
+            self.assertTrue(result["realtime_clock_pass"])
+            self.assertTrue(result["software_fixture_only"])
+            self.assertFalse(result["accuracy_verified"])
+
+    def test_slow_consumer_keeps_latest_frame_and_bounded_drain(self):
+        with tempfile.TemporaryDirectory(prefix="rt-overload-software-fixture-") as folder:
+            root = Path(folder)
+            source = root / "SOFTWARE_FIXTURE.avi"
+            video(source, [.5] * 21, 20)
+            result = run(source, {"detector": {}, "sample_hz": 20., "expected_capture_frames": 21},
+                         root / "output", detector_factory=lambda _: SlowPixelAdapter())
+            self.assertEqual(result["capture"]["captured_frames"], 21)
+            self.assertLess(result["processed_frames"], 21)
+            self.assertGreater(result["capture"]["overwritten_before_read"], 0)
+            self.assertEqual(result["capture"]["maximum_application_queue_frames"], 1)
+            self.assertLess(result["drain_after_last_source_frame_s"], .6)
+            self.assertEqual(result["future_frame_violations"], 0)
+
+    def test_local_video_cannot_be_mislabeled_as_unpaced_live_input(self):
+        with tempfile.TemporaryDirectory(prefix="rt-source-software-fixture-") as folder:
+            source = Path(folder) / "SOFTWARE_FIXTURE.avi"
+            video(source, [.5] * 3, 10)
+            with self.assertRaisesRegex(ValueError, "paced-file"):
+                LatestCapture(source, "live")
+
+    def test_wrong_capture_dimensions_rejected_before_detector(self):
+        with tempfile.TemporaryDirectory(prefix="rt-size-software-fixture-") as folder:
+            root = Path(folder)
+            source = root / "SOFTWARE_FIXTURE.avi"
+            video(source, [.5] * 3, 10)
+            attempts = []
+            with self.assertRaisesRegex(ValueError, "capture size"):
+                run(source, {"detector": {}, "expected_capture_size": [640, 360]}, root / "output",
+                    detector_factory=lambda _: attempts.append("not_allowed"))
+            self.assertEqual(attempts, [])
+
+    def test_event_publication_delay_cannot_pass_the_realtime_clock_gate(self):
+        class DelayedEventLog:
+            def __init__(self, stream):
+                self.stream, self.delayed = stream, False
+            def __getattr__(self, name):
+                return getattr(self.stream, name)
+            def write(self, text):
+                if not self.delayed:
+                    self.delayed = True
+                    time.sleep(1.15)
+                return self.stream.write(text)
+        with tempfile.TemporaryDirectory(prefix="rt-publication-software-fixture-") as folder:
+            root = Path(folder)
+            source = root / "SOFTWARE_FIXTURE.avi"
+            positions = [.78] * 3 + [.74, .68, .62, .56, .5, .44, .38, .32, .26] + [.22] * 3
+            video(source, positions, 10)
+            with self.log_wrapper("events.jsonl", DelayedEventLog):
+                result = run(source, {"detector": {}, "sample_hz": 10., "in_direction": "B->A",
+                                     "counter": {"lower": .4, "upper": .6, "stable_samples": 2}},
+                             root / "output", detector_factory=lambda _: GreenPixelAdapter())
+            self.assertEqual(result["counts"]["IN"], 1)
+            self.assertFalse(result["realtime_clock_pass"])
+            self.assertGreater(result["timings"]["event_publication"]["maximum_ms"], 1000)
+            self.assertGreater(result["timings"]["observation_age"]["maximum_ms"], 1000)
+
+    def test_log_close_failure_does_not_skip_detector_cleanup_or_summary(self):
+        class CloseErrorLog:
+            def __init__(self, stream):
+                self.stream = stream
+            def __getattr__(self, name):
+                return getattr(self.stream, name)
+            def close(self):
+                self.stream.close()
+                raise OSError("SOFTWARE_FIXTURE_LOG_CLOSE_FAILURE")
+        class CountedCloseAdapter(GreenPixelAdapter):
+            close_calls = 0
+            def close(self):
+                self.close_calls += 1
+        with tempfile.TemporaryDirectory(prefix="rt-close-software-fixture-") as folder:
+            root = Path(folder)
+            source = root / "SOFTWARE_FIXTURE.avi"
+            video(source, [.5] * 3, 10)
+            adapter = CountedCloseAdapter()
+            with self.log_wrapper("frames.jsonl", CloseErrorLog), self.assertRaisesRegex(RuntimeError, "CLEANUP_FAILED"):
+                run(source, {"detector": {}, "sample_hz": 10.}, root / "output", detector_factory=lambda _: adapter)
+            summary = json.loads((root / "output/summary.json").read_text())
+            self.assertEqual(adapter.close_calls, 1)
+            self.assertEqual(summary["status"], "CLEANUP_FAILED")
+            self.assertTrue(summary["cleanup_errors"])
+            self.assertFalse(summary["realtime_clock_pass"])
+
+    def test_entire_stream_p95_does_not_hide_early_slow_observations(self):
+        ages = EntireStreamLatency()
+        for value in [600.] * 1000 + [100.] * 10000:
+            ages.add(value)
+        summary = ages.summary()
+        self.assertEqual(summary["count"], 11000)
+        self.assertEqual(summary["p95_upper_bound_ms"], 600.)
+        self.assertEqual(summary["retained_bin_count"], 1002)
+
+    def test_global_latency_boundaries_and_overflow_are_explicit(self):
+        ages = EntireStreamLatency()
+        ages.add(500.)
+        self.assertEqual(ages.summary()["p95_upper_bound_ms"], 500.)
+        ages.add(1000.01)
+        self.assertIsNone(ages.summary()["p95_upper_bound_ms"])
+        self.assertEqual(ages.summary()["over_1000ms"], 1)
+
+    def test_decoder_cannot_work_on_a_future_frame_before_its_arrival(self):
+        class TimedReads:
+            def __init__(self, cap):
+                self.cap, self.calls = cap, []
+            def __getattr__(self, name):
+                return getattr(self.cap, name)
+            def read(self):
+                self.calls.append(time.monotonic())
+                return self.cap.read()
+        with tempfile.TemporaryDirectory(prefix="rt-decode-clock-software-fixture-") as folder:
+            source = Path(folder) / "SOFTWARE_FIXTURE.avi"
+            video(source, [.5] * 4, 10)
+            capture = LatestCapture(source)
+            wrapped = TimedReads(capture.cap)
+            capture.cap = wrapped
+            capture.start()
+            sequence = -1
+            try:
+                while True:
+                    packet = capture.take_after(sequence)
+                    if packet is None:
+                        break
+                    sequence = packet[0]
+            finally:
+                capture.close()
+            for index, started in enumerate(wrapped.calls[:4]):
+                self.assertGreaterEqual(started - capture.started + .00001, index / 10)
+
+    def test_native_bgr_mode_routes_global_and_local_calls_without_float_entry(self):
+        import cv2
+        class BgrPixelAdapter(GreenPixelAdapter):
+            bgr_calls = 0
+            def infer(self, tensor):
+                raise AssertionError("Float entry must not be used in native BGR mode")
+            def infer_bgr(self, canvas):
+                self.bgr_calls += 1
+                assert canvas.dtype == np.uint8 and canvas.shape == (128, 128, 3)
+                tensor = np.ascontiguousarray(canvas[..., ::-1].transpose(2, 0, 1)[None], np.float32) / np.float32(255)
+                result = GreenPixelAdapter.infer(self, tensor)
+                if result.shape[1]:
+                    box = result[0, 0]
+                    if box[2] - box[0] <= 25 and (box[1] + box[3]) / 256 < .43:
+                        return np.zeros((1, 0, 6), np.float32)
+                return result
+        with tempfile.TemporaryDirectory(prefix="rt-bgr-software-fixture-") as folder:
+            root = Path(folder)
+            source = root / "SOFTWARE_FIXTURE.avi"
+            positions = [.78] * 3 + [round(.74 - .04 * i, 2) for i in range(13)]
+            writer = cv2.VideoWriter(str(source), cv2.VideoWriter_fourcc(*"MJPG"), 5, (256, 256))
+            for position in positions:
+                frame = np.zeros((256, 256, 3), np.uint8)
+                cy = round(position * 256)
+                cv2.rectangle(frame, (116, cy - 30), (140, cy + 30), (0, 255, 0), -1)
+                writer.write(frame)
+            writer.release()
+            adapter = BgrPixelAdapter()
+            config = {"detector": {}, "sample_hz": 5., "in_direction": "B->A", "detector_input": "native_bgr",
+                      "preprocess_mode": "resize_first_v1", "warmup_model_forwards": 1,
+                      "counter": {"lower": .4, "upper": .6, "stable_samples": 2},
+                      "endpoint_recovery": {"enabled": True, "reacquire_missing_tracks": True, "maximum_extra_forwards": None}}
+            result = run(source, config, root / "output", detector_factory=lambda _: adapter)
+            self.assertEqual(result["counts"]["IN"], 1)
+            self.assertGreater(result["endpoint_recovery_forwards"], 0)
+            self.assertEqual(result["model_forwards"], adapter.bgr_calls)
+            self.assertEqual(result["warmup_model_forwards"], 1)
+            self.assertEqual(result["model_forwards"], 1 + result["base_model_forwards"] + result["endpoint_recovery_forwards"])
+            self.assertTrue(result["software_fixture_only"])
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

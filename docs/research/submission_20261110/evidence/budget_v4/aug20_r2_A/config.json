@@ -1,0 +1,119 @@
+{
+  "video_id": "camera2_aug20",
+  "session_id": "equal_budget_v4_aug20_r2_A",
+  "sample_hz": 5,
+  "decode_start_frame0": 0,
+  "scope_start_frame0": 0,
+  "end_frame0_exclusive": 599,
+  "axis": "y",
+  "perpendicular_roi": [
+    0.0,
+    1.0
+  ],
+  "in_direction": "B->A",
+  "detection_roi_xyxy": [
+    300,
+    70,
+    850,
+    685
+  ],
+  "rotation_clockwise": 90,
+  "confidence": 0.01,
+  "cow_class_ids": [
+    0
+  ],
+  "lost_seconds": 6,
+  "counter": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 1,
+    "maximum_gap_s": 2
+  },
+  "detector": {
+    "backend": "o8",
+    "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+    "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+    "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+    "size": 256
+  },
+  "track_only_in_channel": true,
+  "tracker": {
+    "track_high_thresh": 0.15,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "match_thresh": 0.8,
+    "fuse_score": false,
+    "motion_box": "observed_velocity",
+    "prediction_axis": "y"
+  },
+  "channel_polygon": [
+    [
+      0.24,
+      0.65
+    ],
+    [
+      0.25,
+      0.35
+    ],
+    [
+      0.28,
+      0.12
+    ],
+    [
+      0.5,
+      0.12
+    ],
+    [
+      0.55,
+      0.35
+    ],
+    [
+      0.59,
+      0.65
+    ],
+    [
+      0.63,
+      0.94
+    ],
+    [
+      0.24,
+      0.94
+    ]
+  ],
+  "endpoint_recovery": {
+    "enabled": true,
+    "roi_scale": 2.0,
+    "maximum_age_s": 2.0,
+    "maximum_per_frame": 1,
+    "maximum_extra_forwards": null,
+    "reacquire_missing_tracks": true,
+    "maximum_reacquisitions_per_origin": 8
+  },
+  "expected_capture_frames": 599,
+  "expected_capture_size": [
+    1280,
+    720
+  ],
+  "capture": {
+    "width": 1280,
+    "height": 720,
+    "fps": 5,
+    "fourcc": "MJPG",
+    "buffer_frames": 2,
+    "history_maximum_age_s": null,
+    "publication_stride_frames": 2
+  },
+  "preprocess_mode": "resize_first_v1",
+  "detector_input": "native_bgr",
+  "warmup_model_forwards": 1,
+  "fast_history_velocity": null,
+  "fast_history_policy": "velocity",
+  "history_after_birth": false,
+  "birth_refinement": {
+    "enabled": true,
+    "roi_scale": 1.5,
+    "minimum_border_fraction": 0.02,
+    "weak_motion_support": true,
+    "minimum_motion_per_s": 0.05
+  }
+}

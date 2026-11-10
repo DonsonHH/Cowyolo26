@@ -1,0 +1,454 @@
+{
+  "status": "PASS_BASELINE_REPRODUCED",
+  "scope": "one existing original-video detection cache; CPU tracker replay only",
+  "input_files": [
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_rot192_eval_20261029\\board_delivery\\results_v2\\original\\raw_predictions.json.gz",
+      "sha256": "b28f42fc71fb50ab83f208fca07356f0e27b9eadfc5d11c9e603cda3d39c5226"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_rot192_eval_20261029\\board_delivery\\board_protocol.json",
+      "sha256": "b80cc4b46742adcd9102969cdc490f85531483eede5b45e146ecf086e6eeba6b"
+    },
+    {
+      "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\pynq_rot192_eval_20261029\\board_delivery\\results_v2\\original\\stride5_counter_trace.json.gz",
+      "sha256": "d4825539b7a84e06be71d00d4c8e9146bd0fe4cd7f09867a27afe3045737ca26"
+    }
+  ],
+  "source_ticks": 2175,
+  "source_first_frame0": 0,
+  "source_last_frame0": 10870,
+  "source_stride": 5,
+  "scope_start_frame0": 8912,
+  "scope_end_exclusive": 10874,
+  "same_video_prehistory_ticks": 1783,
+  "tracker_config": {
+    "tracker_type": "bytetrack",
+    "track_high_thresh": 0.25,
+    "track_low_thresh": 0.1,
+    "new_track_thresh": 0.25,
+    "track_buffer": 30,
+    "match_thresh": 0.8,
+    "fuse_score": true
+  },
+  "counter_kwargs": {
+    "lower": 0.4,
+    "upper": 0.6,
+    "stable_samples": 3,
+    "maximum_gap_s": 2.0
+  },
+  "method_scope": {
+    "removed_score_fusion_blocks": 1,
+    "all_other_secondstage_AST_identical": true,
+    "firststage_unconfirmed_thresholds_lost_rules_inherited": true
+  },
+  "baseline_reference": {
+    "event_dicts_identical": true,
+    "confirmed_only_event_dicts_identical": true,
+    "frame_and_ID_rows_identical": true,
+    "max_box_difference_px": 2.9802322387695312e-08,
+    "box_tolerance_px": 0.002
+  },
+  "baseline": {
+    "handoff_events": [
+      {
+        "time_s": 359.8,
+        "track_id": 3,
+        "direction": "A->B",
+        "frame0": 8995
+      },
+      {
+        "time_s": 365.4,
+        "track_id": 6,
+        "direction": "A->B",
+        "frame0": 9135
+      },
+      {
+        "time_s": 370.6,
+        "track_id": 12,
+        "direction": "A->B",
+        "frame0": 9265
+      },
+      {
+        "time_s": 373.6,
+        "track_id": 17,
+        "direction": "A->B",
+        "frame0": 9340
+      },
+      {
+        "time_s": 373.8,
+        "track_id": 24,
+        "direction": "A->B",
+        "frame0": 9345
+      },
+      {
+        "time_s": 378.8,
+        "track_id": 38,
+        "direction": "A->B",
+        "frame0": 9470
+      },
+      {
+        "time_s": 384.4,
+        "track_id": 31,
+        "direction": "A->B",
+        "frame0": 9610
+      },
+      {
+        "time_s": 387.8,
+        "track_id": 35,
+        "direction": "A->B",
+        "frame0": 9695
+      },
+      {
+        "time_s": 391.6,
+        "track_id": 45,
+        "direction": "A->B",
+        "frame0": 9790
+      },
+      {
+        "time_s": 396.2,
+        "track_id": 51,
+        "direction": "A->B",
+        "frame0": 9905
+      },
+      {
+        "time_s": 433.2,
+        "track_id": 83,
+        "direction": "A->B",
+        "frame0": 10830
+      }
+    ],
+    "post_tracker_rows": 597,
+    "confirmed_only_events": [
+      {
+        "time_s": 359.8,
+        "track_id": 3,
+        "direction": "A->B",
+        "frame0": 8995
+      },
+      {
+        "time_s": 365.4,
+        "track_id": 6,
+        "direction": "A->B",
+        "frame0": 9135
+      },
+      {
+        "time_s": 370.6,
+        "track_id": 12,
+        "direction": "A->B",
+        "frame0": 9265
+      },
+      {
+        "time_s": 373.6,
+        "track_id": 17,
+        "direction": "A->B",
+        "frame0": 9340
+      },
+      {
+        "time_s": 373.8,
+        "track_id": 24,
+        "direction": "A->B",
+        "frame0": 9345
+      },
+      {
+        "time_s": 384.4,
+        "track_id": 31,
+        "direction": "A->B",
+        "frame0": 9610
+      },
+      {
+        "time_s": 387.8,
+        "track_id": 35,
+        "direction": "A->B",
+        "frame0": 9695
+      },
+      {
+        "time_s": 391.6,
+        "track_id": 45,
+        "direction": "A->B",
+        "frame0": 9790
+      },
+      {
+        "time_s": 396.2,
+        "track_id": 51,
+        "direction": "A->B",
+        "frame0": 9905
+      },
+      {
+        "time_s": 433.2,
+        "track_id": 83,
+        "direction": "A->B",
+        "frame0": 10830
+      }
+    ]
+  },
+  "candidate": {
+    "handoff_events": [
+      {
+        "time_s": 359.8,
+        "track_id": 3,
+        "direction": "A->B",
+        "frame0": 8995
+      },
+      {
+        "time_s": 365.4,
+        "track_id": 6,
+        "direction": "A->B",
+        "frame0": 9135
+      },
+      {
+        "time_s": 370.6,
+        "track_id": 12,
+        "direction": "A->B",
+        "frame0": 9265
+      },
+      {
+        "time_s": 373.6,
+        "track_id": 17,
+        "direction": "A->B",
+        "frame0": 9340
+      },
+      {
+        "time_s": 373.8,
+        "track_id": 24,
+        "direction": "A->B",
+        "frame0": 9345
+      },
+      {
+        "time_s": 378.8,
+        "track_id": 38,
+        "direction": "A->B",
+        "frame0": 9470
+      },
+      {
+        "time_s": 384.4,
+        "track_id": 31,
+        "direction": "A->B",
+        "frame0": 9610
+      },
+      {
+        "time_s": 387.8,
+        "track_id": 35,
+        "direction": "A->B",
+        "frame0": 9695
+      },
+      {
+        "time_s": 391.6,
+        "track_id": 45,
+        "direction": "A->B",
+        "frame0": 9790
+      },
+      {
+        "time_s": 396.2,
+        "track_id": 51,
+        "direction": "A->B",
+        "frame0": 9905
+      },
+      {
+        "time_s": 433.2,
+        "track_id": 83,
+        "direction": "A->B",
+        "frame0": 10830
+      }
+    ],
+    "post_tracker_rows": 598,
+    "confirmed_only_events": [
+      {
+        "time_s": 359.8,
+        "track_id": 3,
+        "direction": "A->B",
+        "frame0": 8995
+      },
+      {
+        "time_s": 365.4,
+        "track_id": 6,
+        "direction": "A->B",
+        "frame0": 9135
+      },
+      {
+        "time_s": 370.6,
+        "track_id": 12,
+        "direction": "A->B",
+        "frame0": 9265
+      },
+      {
+        "time_s": 373.6,
+        "track_id": 17,
+        "direction": "A->B",
+        "frame0": 9340
+      },
+      {
+        "time_s": 373.8,
+        "track_id": 24,
+        "direction": "A->B",
+        "frame0": 9345
+      },
+      {
+        "time_s": 384.4,
+        "track_id": 31,
+        "direction": "A->B",
+        "frame0": 9610
+      },
+      {
+        "time_s": 387.8,
+        "track_id": 35,
+        "direction": "A->B",
+        "frame0": 9695
+      },
+      {
+        "time_s": 391.6,
+        "track_id": 45,
+        "direction": "A->B",
+        "frame0": 9790
+      },
+      {
+        "time_s": 396.2,
+        "track_id": 51,
+        "direction": "A->B",
+        "frame0": 9905
+      },
+      {
+        "time_s": 433.2,
+        "track_id": 83,
+        "direction": "A->B",
+        "frame0": 10830
+      }
+    ]
+  },
+  "same_event_times_and_directions_without_ids": true,
+  "same_full_event_dicts_with_ids": true,
+  "changed_post_tracker_frame_count": 125,
+  "changed_post_tracker_frames0": [
+    9350,
+    9355,
+    9365,
+    9515,
+    9520,
+    9525,
+    9530,
+    9535,
+    9540,
+    9545,
+    9550,
+    9555,
+    9565,
+    9570,
+    9585,
+    9590,
+    9595,
+    9600,
+    9605,
+    9610,
+    9615,
+    9620,
+    9625,
+    9630,
+    9635,
+    9640,
+    9645,
+    9650,
+    9655,
+    9660,
+    9665,
+    9670,
+    9675,
+    9680,
+    9685,
+    9690,
+    9695,
+    9700,
+    9705,
+    9710,
+    9715,
+    10185,
+    10190,
+    10200,
+    10205,
+    10210,
+    10215,
+    10220,
+    10225,
+    10230,
+    10235,
+    10240,
+    10245,
+    10250,
+    10255,
+    10260,
+    10265,
+    10270,
+    10275,
+    10280,
+    10285,
+    10290,
+    10295,
+    10300,
+    10305,
+    10310,
+    10315,
+    10320,
+    10325,
+    10330,
+    10335,
+    10340,
+    10345,
+    10350,
+    10360,
+    10370,
+    10375,
+    10380,
+    10385,
+    10390,
+    10395,
+    10410,
+    10415,
+    10420,
+    10425,
+    10430,
+    10435,
+    10440,
+    10445,
+    10450,
+    10455,
+    10460,
+    10465,
+    10470,
+    10475,
+    10480,
+    10485,
+    10490,
+    10495,
+    10500,
+    10505,
+    10510,
+    10515,
+    10520,
+    10525,
+    10530,
+    10535,
+    10540,
+    10545,
+    10550,
+    10555,
+    10560,
+    10565,
+    10570,
+    10575,
+    10580,
+    10585,
+    10590,
+    10595,
+    10600,
+    10605,
+    10610,
+    10615,
+    10620,
+    10625
+  ],
+  "user_confirmed_total": 12,
+  "human_event_reference_received": false,
+  "event_precision_recall_available": false,
+  "accuracy_improvement_proven": false,
+  "new_model_forwards": 0,
+  "board_connections": 0
+}

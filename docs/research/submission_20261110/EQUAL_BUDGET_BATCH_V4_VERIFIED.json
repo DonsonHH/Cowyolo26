@@ -1,0 +1,1447 @@
+{
+  "status": "ALL_STARTED_RUNS_RAW_SCOPE_AND_COUNTS_VERIFIED",
+  "batch_status": "COMPLETED",
+  "archive_sha256": "43710d9baf08fcd110cddac8d9c410aa8f092b772acd7947f5565a7aa7922b83",
+  "files_bound_to_archive": 196,
+  "raw_arrays_verified": 4120,
+  "cases": [
+    {
+      "tag": "aug14_r1_B",
+      "clip": "aug14",
+      "repeat": 1,
+      "policy": "conditional_local_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "planned_real_calls": 202,
+      "real_calls": 202,
+      "global_calls": 199,
+      "local_calls": 3,
+      "warmup_calls": 1,
+      "absolute_count_error": 0,
+      "summary_sha256": "b544f434bcb0618f1896f8d98c16daed87e58404e5dfd9e578c752ed20041c13",
+      "event_publication_max_ms": 449.57734499985236,
+      "observation_age_max_ms": 850.3620739993494,
+      "observation_age_p95_ms": 476.9713423014764,
+      "stream_wall_s": 80.87708541600114,
+      "drain_s": 0.47709463400096297,
+      "capture_lateness_max_ms": 214.5304240002588,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 201,
+      "error": null,
+      "reference_totals": {
+        "A->B": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug14",
+        "run_id": "d12fbef9-ce17-46b6-8eb3-b550965f3ed1",
+        "session_id": "equal_budget_v4_aug14_r1_B",
+        "source_video_sha256": "7b2bcce4f700e4c72ff588f04f8254dd88f77c7dbbec327b917cf4c9db402fa9",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 402
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 12,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": 0
+        },
+        "absolute_errors": {
+          "A->B": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u6211\u7ecf\u8fc7\u4eba\u5de5\u5ba1\u6838\uff0c\u6e90\u72478912\u201310873\u5e27\u90a3\u4e2a\u89c6\u9891\u5c31\u662f12\u5934\u725b\uff0c\u5df2\u7ecf\u786e\u8ba4\u65e0\u8bef\u4e86\u3002",
+          "evidence": "historical user confirmation of native excerpt and accepted result replay",
+          "view": "unspecified"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug14_r1_A",
+      "clip": "aug14",
+      "repeat": 1,
+      "policy": "global_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "planned_real_calls": 202,
+      "real_calls": 202,
+      "global_calls": 202,
+      "local_calls": 0,
+      "warmup_calls": 1,
+      "absolute_count_error": 1,
+      "summary_sha256": "8f91f8e07fb88074f709373892b1f4463906cb08edfb60187b22b24063632805",
+      "event_publication_max_ms": 457.335149998471,
+      "observation_age_max_ms": 548.3338180001738,
+      "observation_age_p95_ms": 454.46514230034154,
+      "stream_wall_s": 80.87244005299908,
+      "drain_s": 0.4724506439993945,
+      "capture_lateness_max_ms": 167.37742699842784,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 201,
+      "error": null,
+      "reference_totals": {
+        "A->B": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug14",
+        "run_id": "2f32d564-9f2a-4190-baf1-10e7774d8022",
+        "session_id": "equal_budget_v4_aug14_r1_A",
+        "source_video_sha256": "7b2bcce4f700e4c72ff588f04f8254dd88f77c7dbbec327b917cf4c9db402fa9",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 402
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 11,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": -1
+        },
+        "absolute_errors": {
+          "A->B": 1
+        },
+        "absolute_error_over_reviewed_directions": 1,
+        "all_reviewed_totals_agree": false,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u6211\u7ecf\u8fc7\u4eba\u5de5\u5ba1\u6838\uff0c\u6e90\u72478912\u201310873\u5e27\u90a3\u4e2a\u89c6\u9891\u5c31\u662f12\u5934\u725b\uff0c\u5df2\u7ecf\u786e\u8ba4\u65e0\u8bef\u4e86\u3002",
+          "evidence": "historical user confirmation of native excerpt and accepted result replay",
+          "view": "unspecified"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug15_r1_B",
+      "clip": "aug15",
+      "repeat": 1,
+      "policy": "conditional_local_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "planned_real_calls": 325,
+      "real_calls": 325,
+      "global_calls": 317,
+      "local_calls": 8,
+      "warmup_calls": 1,
+      "absolute_count_error": 1,
+      "summary_sha256": "f9adfb2d45173c4e8b294c7e3a254e4c9078afd69d60a2e547e6e1e521372fad",
+      "event_publication_max_ms": 460.5811410001479,
+      "observation_age_max_ms": 856.0446510018664,
+      "observation_age_p95_ms": 470.67380320077064,
+      "stream_wall_s": 130.1051397500014,
+      "drain_s": 0.5051509990011311,
+      "capture_lateness_max_ms": 250.31463700179302,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 324,
+      "error": null,
+      "reference_totals": {
+        "A->B": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug15",
+        "run_id": "5bbb3c2d-4e98-4da0-a1c1-d78e10dfb2d1",
+        "session_id": "equal_budget_v4_aug15_r1_B",
+        "source_video_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 648
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 11,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": -1
+        },
+        "absolute_errors": {
+          "A->B": 1
+        },
+        "absolute_error_over_reviewed_directions": 1,
+        "all_reviewed_totals_agree": false,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u786e\u5b9e\u662f12\u6b21\uff0c\u5728\u7b2c\u4e00\u6b21\u5927\u6982\u662f20s\u7684\u65f6\u5019\u6709\u4e00\u5934\u725b\u6bd4\u8f83\u5feb\u901f\u7684\u901a\u8fc7\u4e86\u6f0f\u4e86\u4e00\u6b21\uff0c\u540e\u9762\u768411\u6b21\u90fd\u662f\u6b63\u786e\u7684",
+          "evidence": "historical user review of Aug15 result video",
+          "view": "prediction_overlay"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug15_r1_A",
+      "clip": "aug15",
+      "repeat": 1,
+      "policy": "global_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "planned_real_calls": 325,
+      "real_calls": 325,
+      "global_calls": 325,
+      "local_calls": 0,
+      "warmup_calls": 1,
+      "absolute_count_error": 0,
+      "summary_sha256": "4e873eccc4de85e3ae5723e6e2a40543600ea774a2d8e25b1f54d3b63ce257c1",
+      "event_publication_max_ms": 559.4209509981738,
+      "observation_age_max_ms": 597.8081329994893,
+      "observation_age_p95_ms": 489.60807559960836,
+      "stream_wall_s": 130.21574062199943,
+      "drain_s": 0.6157517300001984,
+      "capture_lateness_max_ms": 236.59269399831828,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 324,
+      "error": null,
+      "reference_totals": {
+        "A->B": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug15",
+        "run_id": "341b176a-0a50-4311-a420-cb9c6de6ebd9",
+        "session_id": "equal_budget_v4_aug15_r1_A",
+        "source_video_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 648
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 12,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": 0
+        },
+        "absolute_errors": {
+          "A->B": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u786e\u5b9e\u662f12\u6b21\uff0c\u5728\u7b2c\u4e00\u6b21\u5927\u6982\u662f20s\u7684\u65f6\u5019\u6709\u4e00\u5934\u725b\u6bd4\u8f83\u5feb\u901f\u7684\u901a\u8fc7\u4e86\u6f0f\u4e86\u4e00\u6b21\uff0c\u540e\u9762\u768411\u6b21\u90fd\u662f\u6b63\u786e\u7684",
+          "evidence": "historical user review of Aug15 result video",
+          "view": "prediction_overlay"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug20_r1_B",
+      "clip": "aug20",
+      "repeat": 1,
+      "policy": "conditional_local_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "planned_real_calls": 300,
+      "real_calls": 300,
+      "global_calls": 287,
+      "local_calls": 13,
+      "warmup_calls": 1,
+      "absolute_count_error": 0,
+      "summary_sha256": "b673e762ab203f3db0bae441d0fc0038ebf06a8a65cc37cd9a62d08f73ed0535",
+      "event_publication_max_ms": 837.5280350010144,
+      "observation_age_max_ms": 843.6295250012336,
+      "observation_age_p95_ms": 488.7717753013928,
+      "stream_wall_s": 120.04269592000128,
+      "drain_s": 0.4427060310012081,
+      "capture_lateness_max_ms": 166.5678730005311,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 299,
+      "error": null,
+      "reference_totals": {
+        "B->A": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug20",
+        "run_id": "cc7f4996-3915-4fe3-b39f-78d2ae18f19e",
+        "session_id": "equal_budget_v4_aug20_r1_B",
+        "source_video_sha256": "3b68eae39d9e936e68e7c4d78bd8d18142623825c8aa3594fe273cbb36234f74",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 598
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 12
+        },
+        "predicted_directional_totals": {
+          "B->A": 12,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": 0
+        },
+        "absolute_errors": {
+          "B->A": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u4e0a\u884c12",
+          "evidence": "historical user confirmation of camera2 Aug20 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug20_r1_A",
+      "clip": "aug20",
+      "repeat": 1,
+      "policy": "global_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 9,
+        "OUT": 0,
+        "NET": 9
+      },
+      "planned_real_calls": 300,
+      "real_calls": 300,
+      "global_calls": 300,
+      "local_calls": 0,
+      "warmup_calls": 1,
+      "absolute_count_error": 3,
+      "summary_sha256": "c0396fe8ccc902376d4a962720721cc23c3faab08d810e3c29e0677d5db9500c",
+      "event_publication_max_ms": 444.6294350000244,
+      "observation_age_max_ms": 506.32635100009793,
+      "observation_age_p95_ms": 438.0673202986145,
+      "stream_wall_s": 120.03008105899971,
+      "drain_s": 0.43009219799968434,
+      "capture_lateness_max_ms": 136.32632900043973,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 299,
+      "error": null,
+      "reference_totals": {
+        "B->A": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug20",
+        "run_id": "e8a2f0cf-18fb-47d5-8300-01952e5110fa",
+        "session_id": "equal_budget_v4_aug20_r1_A",
+        "source_video_sha256": "3b68eae39d9e936e68e7c4d78bd8d18142623825c8aa3594fe273cbb36234f74",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 598
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 12
+        },
+        "predicted_directional_totals": {
+          "B->A": 9,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": -3
+        },
+        "absolute_errors": {
+          "B->A": 3
+        },
+        "absolute_error_over_reviewed_directions": 3,
+        "all_reviewed_totals_agree": false,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u4e0a\u884c12",
+          "evidence": "historical user confirmation of camera2 Aug20 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug19_r1_B",
+      "clip": "aug19",
+      "repeat": 1,
+      "policy": "conditional_local_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "planned_real_calls": 203,
+      "real_calls": 203,
+      "global_calls": 194,
+      "local_calls": 9,
+      "warmup_calls": 1,
+      "absolute_count_error": 0,
+      "summary_sha256": "8765a8de4b00f227b311417c4cab86bb9d702947625465c266b8746ad572f03c",
+      "event_publication_max_ms": 836.0747260012431,
+      "observation_age_max_ms": 842.4332920021698,
+      "observation_age_p95_ms": 439.0847477508032,
+      "stream_wall_s": 81.23739017900152,
+      "drain_s": 0.43740125699986265,
+      "capture_lateness_max_ms": 115.90799700024945,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 202,
+      "error": null,
+      "reference_totals": {
+        "B->A": 11
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug19",
+        "run_id": "03ec25d7-07ad-4e78-adbf-963852dd32f5",
+        "session_id": "equal_budget_v4_aug19_r1_B",
+        "source_video_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 404
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 11
+        },
+        "predicted_directional_totals": {
+          "B->A": 11,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": 0
+        },
+        "absolute_errors": {
+          "B->A": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "11 \u4e0b\u5f80\u4e0a",
+          "evidence": "historical user confirmation of camera2 Aug19 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug19_r1_A",
+      "clip": "aug19",
+      "repeat": 1,
+      "policy": "global_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 9,
+        "OUT": 0,
+        "NET": 9
+      },
+      "planned_real_calls": 203,
+      "real_calls": 203,
+      "global_calls": 203,
+      "local_calls": 0,
+      "warmup_calls": 1,
+      "absolute_count_error": 2,
+      "summary_sha256": "ac3ec7e720c7301daf4bd8ce1df1fe159d16e25facd9da31801fe6fa9d4a52be",
+      "event_publication_max_ms": 428.0862210016494,
+      "observation_age_max_ms": 451.73828300175956,
+      "observation_age_p95_ms": 423.0603880010676,
+      "stream_wall_s": 81.23071216400058,
+      "drain_s": 0.4307224720006957,
+      "capture_lateness_max_ms": 125.2768130016193,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 202,
+      "error": null,
+      "reference_totals": {
+        "B->A": 11
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug19",
+        "run_id": "aaae8ec2-c3cb-43ba-8d95-d70b8ccb3206",
+        "session_id": "equal_budget_v4_aug19_r1_A",
+        "source_video_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 404
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 11
+        },
+        "predicted_directional_totals": {
+          "B->A": 9,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": -2
+        },
+        "absolute_errors": {
+          "B->A": 2
+        },
+        "absolute_error_over_reviewed_directions": 2,
+        "all_reviewed_totals_agree": false,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "11 \u4e0b\u5f80\u4e0a",
+          "evidence": "historical user confirmation of camera2 Aug19 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug14_r2_A",
+      "clip": "aug14",
+      "repeat": 2,
+      "policy": "global_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "planned_real_calls": 202,
+      "real_calls": 202,
+      "global_calls": 202,
+      "local_calls": 0,
+      "warmup_calls": 1,
+      "absolute_count_error": 1,
+      "summary_sha256": "575e37de87953463ce28e25bc73567e4a5b017cf85303aad39c73b4a06890547",
+      "event_publication_max_ms": 441.4418190008291,
+      "observation_age_max_ms": 485.2099569998245,
+      "observation_age_p95_ms": 453.58221085061814,
+      "stream_wall_s": 80.85696801300037,
+      "drain_s": 0.4569783140010202,
+      "capture_lateness_max_ms": 139.2697480005154,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 201,
+      "error": null,
+      "reference_totals": {
+        "A->B": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug14",
+        "run_id": "8aa66313-1e64-417f-bd8f-73bf3ab5ef63",
+        "session_id": "equal_budget_v4_aug14_r2_A",
+        "source_video_sha256": "7b2bcce4f700e4c72ff588f04f8254dd88f77c7dbbec327b917cf4c9db402fa9",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 402
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 11,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": -1
+        },
+        "absolute_errors": {
+          "A->B": 1
+        },
+        "absolute_error_over_reviewed_directions": 1,
+        "all_reviewed_totals_agree": false,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u6211\u7ecf\u8fc7\u4eba\u5de5\u5ba1\u6838\uff0c\u6e90\u72478912\u201310873\u5e27\u90a3\u4e2a\u89c6\u9891\u5c31\u662f12\u5934\u725b\uff0c\u5df2\u7ecf\u786e\u8ba4\u65e0\u8bef\u4e86\u3002",
+          "evidence": "historical user confirmation of native excerpt and accepted result replay",
+          "view": "unspecified"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug14_r2_B",
+      "clip": "aug14",
+      "repeat": 2,
+      "policy": "conditional_local_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "planned_real_calls": 202,
+      "real_calls": 202,
+      "global_calls": 199,
+      "local_calls": 3,
+      "warmup_calls": 1,
+      "absolute_count_error": 0,
+      "summary_sha256": "187ee6cf936988b04fca82f3190870c062388e4df097ca8f11ff8457729c4afd",
+      "event_publication_max_ms": 450.9197129991662,
+      "observation_age_max_ms": 1105.0051490001351,
+      "observation_age_p95_ms": 927.8717807997962,
+      "stream_wall_s": 80.84732598899973,
+      "drain_s": 0.4473368140002947,
+      "capture_lateness_max_ms": 227.61458300010418,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 201,
+      "error": null,
+      "reference_totals": {
+        "A->B": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug14",
+        "run_id": "fff56cd5-e4ac-4fe9-9e3b-4b5bec014155",
+        "session_id": "equal_budget_v4_aug14_r2_B",
+        "source_video_sha256": "7b2bcce4f700e4c72ff588f04f8254dd88f77c7dbbec327b917cf4c9db402fa9",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 402
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 12,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": 0
+        },
+        "absolute_errors": {
+          "A->B": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u6211\u7ecf\u8fc7\u4eba\u5de5\u5ba1\u6838\uff0c\u6e90\u72478912\u201310873\u5e27\u90a3\u4e2a\u89c6\u9891\u5c31\u662f12\u5934\u725b\uff0c\u5df2\u7ecf\u786e\u8ba4\u65e0\u8bef\u4e86\u3002",
+          "evidence": "historical user confirmation of native excerpt and accepted result replay",
+          "view": "unspecified"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug19_r2_A",
+      "clip": "aug19",
+      "repeat": 2,
+      "policy": "global_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 9,
+        "OUT": 0,
+        "NET": 9
+      },
+      "planned_real_calls": 203,
+      "real_calls": 203,
+      "global_calls": 203,
+      "local_calls": 0,
+      "warmup_calls": 1,
+      "absolute_count_error": 2,
+      "summary_sha256": "93e36ca74890380f1872e7e8d6f652fe3c2510914edb944414bd33ce4b15a62d",
+      "event_publication_max_ms": 408.47278399996867,
+      "observation_age_max_ms": 469.37936399990576,
+      "observation_age_p95_ms": 419.190931698722,
+      "stream_wall_s": 81.26209891299914,
+      "drain_s": 0.46211015599982375,
+      "capture_lateness_max_ms": 122.03123199833499,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 202,
+      "error": null,
+      "reference_totals": {
+        "B->A": 11
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug19",
+        "run_id": "cbcab82b-e4c3-4f17-8fa9-76b130fce68f",
+        "session_id": "equal_budget_v4_aug19_r2_A",
+        "source_video_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 404
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 11
+        },
+        "predicted_directional_totals": {
+          "B->A": 9,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": -2
+        },
+        "absolute_errors": {
+          "B->A": 2
+        },
+        "absolute_error_over_reviewed_directions": 2,
+        "all_reviewed_totals_agree": false,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "11 \u4e0b\u5f80\u4e0a",
+          "evidence": "historical user confirmation of camera2 Aug19 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug19_r2_B",
+      "clip": "aug19",
+      "repeat": 2,
+      "policy": "conditional_local_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "planned_real_calls": 203,
+      "real_calls": 203,
+      "global_calls": 194,
+      "local_calls": 9,
+      "warmup_calls": 1,
+      "absolute_count_error": 0,
+      "summary_sha256": "2f501c37981dd86a41a6209e77fd7dfdfe7dc14bdb09b9e36ea0aec169fea6cc",
+      "event_publication_max_ms": 812.364883000555,
+      "observation_age_max_ms": 818.8552669998899,
+      "observation_age_p95_ms": 454.8255918001813,
+      "stream_wall_s": 81.2348476520001,
+      "drain_s": 0.4348576519998346,
+      "capture_lateness_max_ms": 131.55771700076002,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 202,
+      "error": null,
+      "reference_totals": {
+        "B->A": 11
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug19",
+        "run_id": "d89cb919-641d-4a88-9334-5d5f8c435ac6",
+        "session_id": "equal_budget_v4_aug19_r2_B",
+        "source_video_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 404
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 11
+        },
+        "predicted_directional_totals": {
+          "B->A": 11,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": 0
+        },
+        "absolute_errors": {
+          "B->A": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "11 \u4e0b\u5f80\u4e0a",
+          "evidence": "historical user confirmation of camera2 Aug19 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug20_r2_A",
+      "clip": "aug20",
+      "repeat": 2,
+      "policy": "global_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 9,
+        "OUT": 0,
+        "NET": 9
+      },
+      "planned_real_calls": 300,
+      "real_calls": 300,
+      "global_calls": 300,
+      "local_calls": 0,
+      "warmup_calls": 1,
+      "absolute_count_error": 3,
+      "summary_sha256": "ad32e52b808cb77962b7e56127c035a66b3fc074f38a8419f16bf4f71be1d2a4",
+      "event_publication_max_ms": 442.62849199913035,
+      "observation_age_max_ms": 453.00037000015436,
+      "observation_age_p95_ms": 433.9661387018168,
+      "stream_wall_s": 120.02789527300047,
+      "drain_s": 0.427906152999995,
+      "capture_lateness_max_ms": 114.41114600165747,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 299,
+      "error": null,
+      "reference_totals": {
+        "B->A": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug20",
+        "run_id": "c93096a2-195c-4700-bb7a-47d2794d3fc6",
+        "session_id": "equal_budget_v4_aug20_r2_A",
+        "source_video_sha256": "3b68eae39d9e936e68e7c4d78bd8d18142623825c8aa3594fe273cbb36234f74",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 598
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 12
+        },
+        "predicted_directional_totals": {
+          "B->A": 9,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": -3
+        },
+        "absolute_errors": {
+          "B->A": 3
+        },
+        "absolute_error_over_reviewed_directions": 3,
+        "all_reviewed_totals_agree": false,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u4e0a\u884c12",
+          "evidence": "historical user confirmation of camera2 Aug20 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug20_r2_B",
+      "clip": "aug20",
+      "repeat": 2,
+      "policy": "conditional_local_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "planned_real_calls": 300,
+      "real_calls": 300,
+      "global_calls": 287,
+      "local_calls": 13,
+      "warmup_calls": 1,
+      "absolute_count_error": 0,
+      "summary_sha256": "2c8b8a594dbe92b225308e5cf0b8ebedbc6c35f55e45ed1c6747ee4c13471b53",
+      "event_publication_max_ms": 806.9728880000184,
+      "observation_age_max_ms": 844.0141339979164,
+      "observation_age_p95_ms": 454.16810369933955,
+      "stream_wall_s": 120.02620468799978,
+      "drain_s": 0.42621564199943407,
+      "capture_lateness_max_ms": 117.62460399950214,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 299,
+      "error": null,
+      "reference_totals": {
+        "B->A": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug20",
+        "run_id": "460d5cbe-3d95-481e-b12e-549cb02600bb",
+        "session_id": "equal_budget_v4_aug20_r2_B",
+        "source_video_sha256": "3b68eae39d9e936e68e7c4d78bd8d18142623825c8aa3594fe273cbb36234f74",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 598
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 12
+        },
+        "predicted_directional_totals": {
+          "B->A": 12,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": 0
+        },
+        "absolute_errors": {
+          "B->A": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u4e0a\u884c12",
+          "evidence": "historical user confirmation of camera2 Aug20 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug15_r2_A",
+      "clip": "aug15",
+      "repeat": 2,
+      "policy": "global_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "planned_real_calls": 325,
+      "real_calls": 325,
+      "global_calls": 325,
+      "local_calls": 0,
+      "warmup_calls": 1,
+      "absolute_count_error": 0,
+      "summary_sha256": "91d9eb72de782648946ed8876946d941fa0768fed3814acfd106e5c2656b5f9d",
+      "event_publication_max_ms": 453.7275820002833,
+      "observation_age_max_ms": 490.32073200032755,
+      "observation_age_p95_ms": 454.6765556002356,
+      "stream_wall_s": 130.09159936600008,
+      "drain_s": 0.491609668001189,
+      "capture_lateness_max_ms": 146.00656899892783,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 324,
+      "error": null,
+      "reference_totals": {
+        "A->B": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug15",
+        "run_id": "c7f30037-b25e-4f31-bce5-c68067261d30",
+        "session_id": "equal_budget_v4_aug15_r2_A",
+        "source_video_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 648
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 12,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": 0
+        },
+        "absolute_errors": {
+          "A->B": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u786e\u5b9e\u662f12\u6b21\uff0c\u5728\u7b2c\u4e00\u6b21\u5927\u6982\u662f20s\u7684\u65f6\u5019\u6709\u4e00\u5934\u725b\u6bd4\u8f83\u5feb\u901f\u7684\u901a\u8fc7\u4e86\u6f0f\u4e86\u4e00\u6b21\uff0c\u540e\u9762\u768411\u6b21\u90fd\u662f\u6b63\u786e\u7684",
+          "evidence": "historical user review of Aug15 result video",
+          "view": "prediction_overlay"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "aug15_r2_B",
+      "clip": "aug15",
+      "repeat": 2,
+      "policy": "conditional_local_pair",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "planned_real_calls": 325,
+      "real_calls": 325,
+      "global_calls": 317,
+      "local_calls": 8,
+      "warmup_calls": 1,
+      "absolute_count_error": 1,
+      "summary_sha256": "eb68592954c47bede20967630dc080ef811e3aa705f1a28cf81596dd3f1d6a5f",
+      "event_publication_max_ms": 986.2857940006506,
+      "observation_age_max_ms": 1141.2553480004135,
+      "observation_age_p95_ms": 854.3047996005043,
+      "stream_wall_s": 130.15879186200073,
+      "drain_s": 0.5588014810004154,
+      "capture_lateness_max_ms": 233.63846400025068,
+      "overwritten_frames": 0,
+      "not_admitted_frames": 324,
+      "error": null,
+      "reference_totals": {
+        "A->B": 12
+      },
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug15",
+        "run_id": "11d431c0-eb93-4f2a-a1f3-2ef0e50d5571",
+        "session_id": "equal_budget_v4_aug15_r2_B",
+        "source_video_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 648
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 11,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": -1
+        },
+        "absolute_errors": {
+          "A->B": 1
+        },
+        "absolute_error_over_reviewed_directions": 1,
+        "all_reviewed_totals_agree": false,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u786e\u5b9e\u662f12\u6b21\uff0c\u5728\u7b2c\u4e00\u6b21\u5927\u6982\u662f20s\u7684\u65f6\u5019\u6709\u4e00\u5934\u725b\u6bd4\u8f83\u5feb\u901f\u7684\u901a\u8fc7\u4e86\u6f0f\u4e86\u4e00\u6b21\uff0c\u540e\u9762\u768411\u6b21\u90fd\u662f\u6b63\u786e\u7684",
+          "evidence": "historical user review of Aug15 result video",
+          "view": "prediction_overlay"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    }
+  ],
+  "per_repeat_full_four_video_aggregates": {
+    "conditional_local_pair_r1": {
+      "metric_version": "reviewed-directional-video-totals-v1",
+      "video_units": 4,
+      "sum_absolute_error_over_reviewed_directions": 1,
+      "mean_absolute_error_over_reviewed_directions_per_video": 0.25,
+      "exact_agreement_video_units": 3,
+      "exact_agreement_fraction": 0.75,
+      "viewing_modes": [
+        "prediction_overlay",
+        "source_only",
+        "unspecified"
+      ],
+      "source_session_independence_verified": false,
+      "event_precision": null,
+      "event_recall": null,
+      "event_f1": null
+    },
+    "global_pair_r1": {
+      "metric_version": "reviewed-directional-video-totals-v1",
+      "video_units": 4,
+      "sum_absolute_error_over_reviewed_directions": 6,
+      "mean_absolute_error_over_reviewed_directions_per_video": 1.5,
+      "exact_agreement_video_units": 1,
+      "exact_agreement_fraction": 0.25,
+      "viewing_modes": [
+        "prediction_overlay",
+        "source_only",
+        "unspecified"
+      ],
+      "source_session_independence_verified": false,
+      "event_precision": null,
+      "event_recall": null,
+      "event_f1": null
+    },
+    "global_pair_r2": {
+      "metric_version": "reviewed-directional-video-totals-v1",
+      "video_units": 4,
+      "sum_absolute_error_over_reviewed_directions": 6,
+      "mean_absolute_error_over_reviewed_directions_per_video": 1.5,
+      "exact_agreement_video_units": 1,
+      "exact_agreement_fraction": 0.25,
+      "viewing_modes": [
+        "prediction_overlay",
+        "source_only",
+        "unspecified"
+      ],
+      "source_session_independence_verified": false,
+      "event_precision": null,
+      "event_recall": null,
+      "event_f1": null
+    },
+    "conditional_local_pair_r2": {
+      "metric_version": "reviewed-directional-video-totals-v1",
+      "video_units": 4,
+      "sum_absolute_error_over_reviewed_directions": 1,
+      "mean_absolute_error_over_reviewed_directions_per_video": 0.25,
+      "exact_agreement_video_units": 3,
+      "exact_agreement_fraction": 0.75,
+      "viewing_modes": [
+        "prediction_overlay",
+        "source_only",
+        "unspecified"
+      ],
+      "source_session_independence_verified": false,
+      "event_precision": null,
+      "event_recall": null,
+      "event_f1": null
+    }
+  },
+  "shared_global_comparisons": [
+    {
+      "left": "aug14_r1_B",
+      "right": "aug14_r1_A",
+      "shared_global_frames": 199,
+      "identical_input_and_raw_hashes": 199
+    },
+    {
+      "left": "aug14_r1_B",
+      "right": "aug14_r2_A",
+      "shared_global_frames": 199,
+      "identical_input_and_raw_hashes": 199
+    },
+    {
+      "left": "aug14_r1_B",
+      "right": "aug14_r2_B",
+      "shared_global_frames": 199,
+      "identical_input_and_raw_hashes": 199
+    },
+    {
+      "left": "aug14_r1_A",
+      "right": "aug14_r2_A",
+      "shared_global_frames": 202,
+      "identical_input_and_raw_hashes": 202
+    },
+    {
+      "left": "aug14_r1_A",
+      "right": "aug14_r2_B",
+      "shared_global_frames": 199,
+      "identical_input_and_raw_hashes": 199
+    },
+    {
+      "left": "aug14_r2_A",
+      "right": "aug14_r2_B",
+      "shared_global_frames": 199,
+      "identical_input_and_raw_hashes": 199
+    },
+    {
+      "left": "aug15_r1_B",
+      "right": "aug15_r1_A",
+      "shared_global_frames": 317,
+      "identical_input_and_raw_hashes": 317
+    },
+    {
+      "left": "aug15_r1_B",
+      "right": "aug15_r2_A",
+      "shared_global_frames": 317,
+      "identical_input_and_raw_hashes": 317
+    },
+    {
+      "left": "aug15_r1_B",
+      "right": "aug15_r2_B",
+      "shared_global_frames": 317,
+      "identical_input_and_raw_hashes": 317
+    },
+    {
+      "left": "aug15_r1_A",
+      "right": "aug15_r2_A",
+      "shared_global_frames": 325,
+      "identical_input_and_raw_hashes": 325
+    },
+    {
+      "left": "aug15_r1_A",
+      "right": "aug15_r2_B",
+      "shared_global_frames": 317,
+      "identical_input_and_raw_hashes": 317
+    },
+    {
+      "left": "aug15_r2_A",
+      "right": "aug15_r2_B",
+      "shared_global_frames": 317,
+      "identical_input_and_raw_hashes": 317
+    },
+    {
+      "left": "aug19_r1_B",
+      "right": "aug19_r1_A",
+      "shared_global_frames": 194,
+      "identical_input_and_raw_hashes": 194
+    },
+    {
+      "left": "aug19_r1_B",
+      "right": "aug19_r2_A",
+      "shared_global_frames": 194,
+      "identical_input_and_raw_hashes": 194
+    },
+    {
+      "left": "aug19_r1_B",
+      "right": "aug19_r2_B",
+      "shared_global_frames": 194,
+      "identical_input_and_raw_hashes": 194
+    },
+    {
+      "left": "aug19_r1_A",
+      "right": "aug19_r2_A",
+      "shared_global_frames": 203,
+      "identical_input_and_raw_hashes": 203
+    },
+    {
+      "left": "aug19_r1_A",
+      "right": "aug19_r2_B",
+      "shared_global_frames": 194,
+      "identical_input_and_raw_hashes": 194
+    },
+    {
+      "left": "aug19_r2_A",
+      "right": "aug19_r2_B",
+      "shared_global_frames": 194,
+      "identical_input_and_raw_hashes": 194
+    },
+    {
+      "left": "aug20_r1_B",
+      "right": "aug20_r1_A",
+      "shared_global_frames": 287,
+      "identical_input_and_raw_hashes": 287
+    },
+    {
+      "left": "aug20_r1_B",
+      "right": "aug20_r2_A",
+      "shared_global_frames": 287,
+      "identical_input_and_raw_hashes": 287
+    },
+    {
+      "left": "aug20_r1_B",
+      "right": "aug20_r2_B",
+      "shared_global_frames": 287,
+      "identical_input_and_raw_hashes": 287
+    },
+    {
+      "left": "aug20_r1_A",
+      "right": "aug20_r2_A",
+      "shared_global_frames": 300,
+      "identical_input_and_raw_hashes": 300
+    },
+    {
+      "left": "aug20_r1_A",
+      "right": "aug20_r2_B",
+      "shared_global_frames": 287,
+      "identical_input_and_raw_hashes": 287
+    },
+    {
+      "left": "aug20_r2_A",
+      "right": "aug20_r2_B",
+      "shared_global_frames": 287,
+      "identical_input_and_raw_hashes": 287
+    }
+  ],
+  "independent_test": false,
+  "unique_reviewed_video_units": 4,
+  "known_reference_passages": 47,
+  "timed_event_ground_truth": false,
+  "new_model_forwards": 0,
+  "not_started_cases_are_results": false
+}

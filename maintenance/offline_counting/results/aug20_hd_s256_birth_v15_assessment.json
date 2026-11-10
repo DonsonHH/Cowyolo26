@@ -1,0 +1,81 @@
+{
+  "status": "COMPLETED_EXTERNAL_PROTOCOL_ASSESSMENT",
+  "run_id": "d2780c1b-78b1-46ad-be7d-d27dd86726c3",
+  "protocol_version": "bounded-count-publication-1s-unified-v15",
+  "integrity_checks": {
+    "terminal_success": true,
+    "terminal_bound_to_run": true,
+    "runtime_completed": true,
+    "config_matches_freeze": true,
+    "config_matches_protocol_candidate": true,
+    "service_protocol_matches_freeze": true,
+    "source_matches_freeze": true,
+    "model_matches_freeze": true,
+    "plan_matches_freeze": true,
+    "runtime_assets_match_freeze": true,
+    "captured_all_declared_frames": true,
+    "processed_frame_rows_match": true,
+    "global_latency_covers_all_observations": true,
+    "row_run_ids_match": true,
+    "unique_event_ids": true,
+    "event_counts_match_summary": true,
+    "publication_count_matches": true,
+    "capture_clean_eof": true,
+    "all_forward_calls_accounted": true
+  },
+  "clock_checks": {
+    "no_future_frames": true,
+    "bounded_application_queue": true,
+    "capture_deadline": true,
+    "observation_p95_deadline": true,
+    "observation_max_deadline": true,
+    "event_publication_deadline": true,
+    "drain_deadline": true
+  },
+  "integrity_pass": true,
+  "service_clock_pass": true,
+  "user_directional_reference": {
+    "UP": 12,
+    "DOWN": null
+  },
+  "actual_directional_counts": {
+    "UP": 12,
+    "DOWN": 0
+  },
+  "count_reference_checks": {
+    "UP": true
+  },
+  "count_reference_pass": true,
+  "counts_and_service_pass": true,
+  "historical_runtime_500ms_clock_pass": false,
+  "event_precision_recall_verified": false,
+  "physical_camera_transport_verified": false,
+  "event_visual_review": "pending separate recorded-source inspection",
+  "stream_wall_elapsed_s": 120.24416212699907,
+  "observation_latency": {
+    "count": 352,
+    "maximum_ms": 1392.6115810008923,
+    "p95_upper_bound_ms": 753.0999999999998,
+    "over_1000ms": 2,
+    "over_500ms": 217,
+    "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+    "retained_bin_count": 1002
+  },
+  "event_publication_age": {
+    "count": 12,
+    "mean_ms": 662.9885700828405,
+    "maximum_ms": 889.18806699985,
+    "p50_ms": 646.3875850004115,
+    "p95_ms": 888.9484880988675,
+    "percentile_scope": "last 10000 processed frames",
+    "retained_samples": 12
+  },
+  "evidence_file_sha256": {
+    "aug20_hd_s256_birth_v15\\result\\summary.json": "fa96be42f8bbb6bde50d63b3c8482f603b1b746d3363665bf8e4ec5e730ea87f",
+    "aug20_hd_s256_birth_v15\\result\\events.jsonl": "7080398852b6e83fd87cce65060ae2f6e2c6136b952539ada81b0436bf382c59",
+    "aug20_hd_s256_birth_v15\\result\\frames.jsonl": "474e63539a2cc29e781a82034dbfd25875700972e1f70e647f8aa945ef8821c8",
+    "aug20_hd_s256_birth_v15\\result\\status.json": "5ef2c6d9e49c651df1fd71947cbc10236e2667bb65e6d136a035a63cd49c7b0f",
+    "C:\\Users\\Donson\\Documents\\Codex\\exports\\Cowyolo26-20261031\\repo\\maintenance\\offline_counting\\AUG20_HD_S256_BIRTH_V15_FREEZE.json": "53f012d25453003b227e0545354e4737ffb2fb6a6d160ac3cac2cfad9966861a",
+    "C:\\Users\\Donson\\Documents\\Codex\\exports\\Cowyolo26-20261031\\repo\\maintenance\\offline_counting\\REALTIME_BIRTH_V15_PROTOCOL.json": "ec9d96b60f564a85cea8e1e5af9668eecd89507cce1fbf2deaa17de833ae8601"
+  }
+}

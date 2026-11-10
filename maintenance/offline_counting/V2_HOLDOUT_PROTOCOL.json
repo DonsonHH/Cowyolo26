@@ -1,0 +1,22 @@
+{
+  "status": "REPLACEMENT_SOURCE_ONLY_ADMISSION_IN_PROGRESS_BEFORE_ANY_NEW_INFERENCE",
+  "candidate": "FROZEN_CANDIDATE_V2.json",
+  "camera": "camera1",
+  "date": "2023Aug19",
+  "source_file": "2023-08-19T12-50-45.mp4",
+  "source_url": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/videos/camera1/2023Aug19/2023-08-19T12-50-45.mp4",
+  "selection": "First chronological file listed by publisher for this date, before any new-source predictions.",
+  "window_rule": "Inspect source-only frames. Start about four seconds before first visible cow in the channel and retain at most 45 seconds or EOF. Keep censored fragments explicit. If source-only inspection is entirely empty, retain negative control and inspect next chronological source before predictions.",
+  "no_threshold_or_model_tuning_on_new_source": true,
+  "new_to_counting_rule_selection": true,
+  "detector_training_disjointness_not_newly_certified": true,
+  "new_model_forwards": 0,
+  "if_user_provides_other_source": "Record source and source-only admission before predictions; do not silently substitute a previously tuned session.",
+  "replacement_requested_by_user": true,
+  "original_input_blocker_preserved": "Automatic approval rejected both cluster-background and local-foreground download before execution, returning only blocked by policy. Await user-provided local video path.",
+  "replacement_candidates_before_predictions": [
+    "2023-08-19T13-00-26.mp4",
+    "2023-08-20T12-56-58.mp4"
+  ],
+  "transport_policy": "HTTP Range excerpts may be used at native resolution, with exact byte ranges, source total length, excerpt hashes, complete decoded-clip validation and explicit censoring; never claim a partial transfer is the complete raw source."
+}

@@ -1,0 +1,302 @@
+{
+  "status": "COMPLETED_UNSCORED",
+  "session_id": "equal_budget_v4_production_aug19",
+  "run_id": "701bcf42-7247-4cf5-80d7-ba60611ba87e",
+  "video_id": "camera2_aug19",
+  "source": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug19_hd_s256_birth_v16/input.avi",
+  "source_kind": "paced-file",
+  "config": {
+    "video_id": "camera2_aug19",
+    "session_id": "equal_budget_v4_production_aug19",
+    "sample_hz": 5,
+    "decode_start_frame0": 0,
+    "scope_start_frame0": 0,
+    "end_frame0_exclusive": 405,
+    "axis": "y",
+    "perpendicular_roi": [
+      0.0,
+      1.0
+    ],
+    "in_direction": "B->A",
+    "detection_roi_xyxy": [
+      300,
+      70,
+      850,
+      685
+    ],
+    "rotation_clockwise": 90,
+    "confidence": 0.01,
+    "cow_class_ids": [
+      0
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 1,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "o8",
+      "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+      "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+      "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+      "size": 256
+    },
+    "track_only_in_channel": true,
+    "tracker": {
+      "track_high_thresh": 0.15,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.25,
+      "match_thresh": 0.8,
+      "fuse_score": false,
+      "motion_box": "observed_velocity",
+      "prediction_axis": "y"
+    },
+    "channel_polygon": [
+      [
+        0.24,
+        0.65
+      ],
+      [
+        0.25,
+        0.35
+      ],
+      [
+        0.28,
+        0.12
+      ],
+      [
+        0.5,
+        0.12
+      ],
+      [
+        0.55,
+        0.35
+      ],
+      [
+        0.59,
+        0.65
+      ],
+      [
+        0.63,
+        0.94
+      ],
+      [
+        0.24,
+        0.94
+      ]
+    ],
+    "endpoint_recovery": {
+      "enabled": true,
+      "roi_scale": 2.0,
+      "maximum_age_s": 2.0,
+      "maximum_per_frame": 1,
+      "maximum_extra_forwards": null,
+      "reacquire_missing_tracks": true,
+      "maximum_reacquisitions_per_origin": 8
+    },
+    "expected_capture_frames": 405,
+    "expected_capture_size": [
+      1280,
+      720
+    ],
+    "capture": {
+      "width": 1280,
+      "height": 720,
+      "fps": 5,
+      "fourcc": "MJPG",
+      "buffer_frames": 2,
+      "history_maximum_age_s": 0.3,
+      "publication_stride_frames": 1
+    },
+    "preprocess_mode": "resize_first_v1",
+    "detector_input": "native_bgr",
+    "warmup_model_forwards": 1,
+    "fast_history_velocity": null,
+    "birth_refinement": {
+      "enabled": true,
+      "roi_scale": 1.5,
+      "minimum_border_fraction": 0.02,
+      "weak_motion_support": true,
+      "minimum_motion_per_s": 0.05
+    },
+    "fast_history_policy": "velocity",
+    "history_after_birth": false
+  },
+  "source_size": [
+    1280,
+    720
+  ],
+  "nominal_fps": 5.0,
+  "target_detector_hz": 5.0,
+  "effective_nominal_sample_hz": 5.0,
+  "model_forwards": 247,
+  "base_model_forwards": 233,
+  "warmup_model_forwards": 1,
+  "endpoint_recovery_forwards": 9,
+  "birth_refinement_forwards": 4,
+  "processed_frames": 233,
+  "sampler_rejected_frames": 0,
+  "future_frame_violations": 0,
+  "counts": {
+    "IN": 11,
+    "OUT": 0,
+    "NET": 11
+  },
+  "uncertain_records": 0,
+  "accuracy_verified": false,
+  "software_fixture_only": false,
+  "clock_contract": "CFR read/decode starts at arrival with verified PTS; bounded latest capture buffer; causal fast history selection; predictions never count",
+  "startup_scope": "startup_s includes source open/hash and model initialization inside run; Python imports excluded",
+  "latency_boundary": "Expected source-frame arrival through detector/recovery/tracking/event log; source camera transport before decoder excluded",
+  "memory_before_model": {
+    "process_peak_rss_kib": 90460,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 428832,
+      "SwapTotal": 524284,
+      "SwapFree": 418556
+    }
+  },
+  "time_source": "verified relative CFR source PTS",
+  "video_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+  "model_sha256": "c083b7e307ac4233f73f3b5e7ded6a041982e42d366c70c5c65fb71edf446216",
+  "resident_plan_sha256": "adf50c9fdf4a24ee00ebc0921e1d5c09e782346765f80428a5227501c22aa9f0",
+  "device_initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "runtime_asset_sha256": {
+    "native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8"
+  },
+  "startup_s": 20.89341178399991,
+  "capture": {
+    "captured_frames": 405,
+    "overwritten_before_read": 172,
+    "publication_stride_frames": 1,
+    "published_frames": 405,
+    "not_admitted_frames": 0,
+    "maximum_application_queue_frames": 2,
+    "history_frames_processed": 0,
+    "last_source_time_s": 80.80000000000001,
+    "source_time_origin_s": 0.0,
+    "history_maximum_age_s": 0.3,
+    "history_age_guard_overrides": 0,
+    "capture_done": true,
+    "capture_error": null,
+    "capture_lateness_ms": {
+      "count": 405,
+      "mean_ms": 92.87451386241437,
+      "maximum_ms": 172.66574499990384,
+      "p50_ms": 91.49852100199496,
+      "p95_ms": 104.88173020166866,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 405
+    },
+    "frame_retrieval_duration_ms": {
+      "count": 406,
+      "mean_ms": 90.27437556649718,
+      "maximum_ms": 108.7163239990332,
+      "p50_ms": 88.9713805008796,
+      "p95_ms": 98.43282574956902,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 406
+    },
+    "frame_enqueue_lock_wait_ms": {
+      "count": 405,
+      "mean_ms": 0.03525260742466299,
+      "maximum_ms": 0.07519000064348802,
+      "p50_ms": 0.03356399975018576,
+      "p95_ms": 0.04509899990807751,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 405
+    }
+  },
+  "last_source_time_s": 80.80000000000001,
+  "last_frame0": 404,
+  "elapsed_s": 102.308013201,
+  "timings": {
+    "preprocess": {
+      "count": 233,
+      "mean_ms": 12.638210103006886,
+      "maximum_ms": 21.541504000197165,
+      "p50_ms": 12.358059999314719,
+      "p95_ms": 13.721149800039711,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 233
+    },
+    "base_inference": {
+      "count": 233,
+      "mean_ms": 279.8151927424867,
+      "maximum_ms": 320.2130270001362,
+      "p50_ms": 277.50723300050595,
+      "p95_ms": 308.7399018008,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 233
+    },
+    "recovery": {
+      "count": 233,
+      "mean_ms": 25.102936733869313,
+      "maximum_ms": 324.3176539999695,
+      "p50_ms": 8.34409900016908,
+      "p95_ms": 290.24954000014986,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 233
+    },
+    "tracking": {
+      "count": 233,
+      "mean_ms": 14.04510782406881,
+      "maximum_ms": 148.2777260007424,
+      "p50_ms": 13.627293001263752,
+      "p95_ms": 24.92255359975386,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 233
+    },
+    "event_publication": {
+      "count": 11,
+      "mean_ms": 595.7093864551346,
+      "maximum_ms": 917.6206749998528,
+      "p50_ms": 553.8207280005736,
+      "p95_ms": 891.2578505005513,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 11
+    },
+    "observation_age": {
+      "count": 233,
+      "mean_ms": 540.670042399806,
+      "maximum_ms": 935.4496680007287,
+      "p50_ms": 536.0912209998787,
+      "p95_ms": 763.9140868002862,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 233
+    }
+  },
+  "unavailable_source_sample_slots": 172,
+  "memory_after_close": {
+    "process_peak_rss_kib": 212852,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 350484,
+      "SwapTotal": 524284,
+      "SwapFree": 418044
+    }
+  },
+  "maximum_state_count": 7,
+  "latency_entire_stream": {
+    "count": 233,
+    "maximum_ms": 935.4496680007287,
+    "p95_upper_bound_ms": 763.9999999999993,
+    "over_1000ms": 0,
+    "over_500ms": 152,
+    "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+    "retained_bin_count": 1002
+  },
+  "stream_wall_elapsed_s": 81.40783016800015,
+  "source_duration_s": 80.80000000000001,
+  "drain_after_last_source_frame_s": 0.6078301680001346,
+  "realtime_clock_pass": false
+}

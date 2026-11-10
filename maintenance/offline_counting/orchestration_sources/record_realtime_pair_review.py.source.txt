@@ -1,0 +1,38 @@
+"""Record an explicit AI source-pair inspection after the images were viewed."""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).parent
+M = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('tag')
+parser.add_argument('--note', required=True)
+parser.add_argument('--verdict', required=True, choices=['no_obvious_mismatch','mismatch'])
+args = parser.parse_args()
+sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+run = ROOT / args.tag / 'result'
+summary = json.loads((run / 'summary.json').read_text())
+profile = json.loads((ROOT / (args.tag + '_profile.json')).read_text(encoding='utf-8'))
+events = [json.loads(line) for line in (run / 'events.jsonl').read_text().splitlines() if line]
+panels = sorted((run.parent / 'event_panels').glob('panel_*.jpg'))
+assert panels and len(panels) == (len(events) + 3) // 4
+record = {'review_type': 'AI visual self-inspection of real recorded entry/completion image pairs',
+          'checked_UTC': datetime.now(timezone.utc).isoformat(), 'run_id': summary['run_id'],
+          'reviewed_event_ids': [row['event_id'] for row in events],
+          'entry_completion_frames': [[row['entry_frame0'], row['frame0']] for row in events],
+          'source_sha256': sha(Path(profile['input'])),
+          'source_matches_summary': sha(Path(profile['input'])) == summary['video_sha256'],
+          'run_evidence_sha256': {name: sha(run/name) for name in ('summary.json','events.jsonl','frames.jsonl','status.json')},
+          'panel_sha256': {path.name: sha(path) for path in panels},
+          'observations': args.note,
+          'pair_review_passed': args.verdict == 'no_obvious_mismatch',
+          'formal_event_precision_recall_claimed': False,
+          'independent_human_timed_ground_truth': False,
+          'new_user_acceptance': False, 'new_model_forwards': 0}
+target = M / 'results' / (args.tag + '_visual_review.json')
+assert not target.exists()
+target.write_bytes((json.dumps(record,ensure_ascii=False,indent=2)+'\n').encode('utf-8'))
+print(json.dumps({'recorded': str(target), 'events_inspected':len(events), 'source_matches':record['source_matches_summary']}))

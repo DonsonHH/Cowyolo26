@@ -1,0 +1,88 @@
+{
+  "review_type": "AI visual self-inspection of real recorded entry/completion image pairs",
+  "checked_UTC": "2026-11-05T19:47:49.032462+00:00",
+  "run_id": "e7798da0-1e74-40d1-9a61-d113c79d6b63",
+  "reviewed_event_ids": [
+    "rt_aug20_hd_s256_birth_v16:0:000001",
+    "rt_aug20_hd_s256_birth_v16:0:000002",
+    "rt_aug20_hd_s256_birth_v16:0:000003",
+    "rt_aug20_hd_s256_birth_v16:0:000004",
+    "rt_aug20_hd_s256_birth_v16:0:000005",
+    "rt_aug20_hd_s256_birth_v16:0:000006",
+    "rt_aug20_hd_s256_birth_v16:0:000007",
+    "rt_aug20_hd_s256_birth_v16:0:000008",
+    "rt_aug20_hd_s256_birth_v16:0:000009",
+    "rt_aug20_hd_s256_birth_v16:0:000010",
+    "rt_aug20_hd_s256_birth_v16:0:000011",
+    "rt_aug20_hd_s256_birth_v16:0:000012"
+  ],
+  "entry_completion_frames": [
+    [
+      96,
+      109
+    ],
+    [
+      117,
+      129
+    ],
+    [
+      134,
+      151
+    ],
+    [
+      151,
+      168
+    ],
+    [
+      173,
+      209
+    ],
+    [
+      215,
+      226
+    ],
+    [
+      224,
+      238
+    ],
+    [
+      243,
+      256
+    ],
+    [
+      261,
+      280
+    ],
+    [
+      215,
+      292
+    ],
+    [
+      386,
+      394
+    ],
+    [
+      378,
+      397
+    ]
+  ],
+  "source_sha256": "3b68eae39d9e936e68e7c4d78bd8d18142623825c8aa3594fe273cbb36234f74",
+  "source_matches_summary": true,
+  "run_evidence_sha256": {
+    "summary.json": "cfde247293a0d6b74d99370b758ea3e6f3a5962091bc432af36154b7c0b2f910",
+    "events.jsonl": "851b8e1ba600c8cc6742e8d1a10ae76ed9a77472f41651bc57b79d2cbd33ef1a",
+    "frames.jsonl": "557fef50195bbac29fe7f87c224a28b86998c65307fdbcb297ef619ea80071f0",
+    "status.json": "54ff6c587ae2c100533d54f714cd46a294ad6aa073ac3b0cae0238122131a61b"
+  },
+  "panel_sha256": {
+    "panel_01.jpg": "469347e6e3142bc536c80006ce23eaf4c17bb70e3931fad7b804638871a43b72",
+    "panel_02.jpg": "2c697591f99dfb833f14c2ea1a90fb3513350c3eaf9ea5c2d3087849ee43e911",
+    "panel_03.jpg": "e0d3ff24a78aa18c259f52c640e68b82c25729958913940973374a2cd95b9cb7"
+  },
+  "observations": "Viewed all three entry/completion panels covering12 recorded events. Coat patterns and spatial order show no obvious duplication or identity swap. During overlap, left-side event10 remains distinct from right-side events6-9; final two side-by-side dark cows events11/12 remain separate by location and visible white markings. Entry images can be tentative/unboxed and are not claimed as confirmed outputs at capture time. AI source-pair self-inspection only, not independent timed GT or new user acceptance.",
+  "pair_review_passed": true,
+  "formal_event_precision_recall_claimed": false,
+  "independent_human_timed_ground_truth": false,
+  "new_user_acceptance": false,
+  "new_model_forwards": 0
+}

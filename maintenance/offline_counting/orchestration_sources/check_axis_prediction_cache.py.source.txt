@@ -1,0 +1,30 @@
+"""Axis-only association prediction control; actual detections/count rules unchanged."""
+import json
+from pathlib import Path
+from counting.observation_track import ObservationTrack
+from counting.tracking import TrackingSession
+
+M = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+original = ObservationTrack.box_at
+result = {'new_model_forwards':0,'scope':'Association-only cached control; no claim of new realtime success','cases':[]}
+for tag in ['aug14_hd_s256_birth_v11','aug15_hd_s256_history_v7','aug15_hd_s256_birth_v11']:
+    summary = json.loads((M/'results'/(tag+'_summary.json')).read_text())
+    rows = [json.loads(line) for line in (M/'results'/(tag+'_frames.jsonl')).read_text().splitlines()]
+    for axis_only in [False,True]:
+        def box_at(track, stamp):
+            box = original(track,stamp)
+            if axis_only and track.observations:
+                box[[0,2]] = track.observations[-1][1][[0,2]]
+            return box
+        ObservationTrack.box_at = box_at
+        try:
+            session = TrackingSession(summary['config'],*summary['source_size'],summary['config']['sample_hz'],'axis-control')
+            events=[]
+            for row in rows:
+                _,found,_=session.update(row['frame0'],row['time_s'],row['detections'])
+                events.extend(found)
+            result['cases'].append({'tag':tag,'axis_only':axis_only,'counts':session.counter.summary(),'events':events})
+            print(tag,axis_only,session.counter.summary()['IN'])
+        finally:
+            ObservationTrack.box_at = original
+(M/'results/axis_prediction_cache_control_20261106.json').write_text(json.dumps(result,indent=2)+'\n')

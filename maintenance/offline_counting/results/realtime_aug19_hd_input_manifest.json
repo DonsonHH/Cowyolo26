@@ -1,0 +1,42 @@
+{
+  "status": "PC_OFFLINE_CAMERA_FORMAT_ADAPTATION",
+  "created_UTC": "2026-11-02T04:36:13.882345+00:00",
+  "source_sha256": "fb0718865485fa195352c0e5957580895d843165adc0bddb5a38599bfe8ae064",
+  "source_frame0_scope": [
+    350,
+    2375
+  ],
+  "input_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+  "input_frames_decoded": 405,
+  "input_size": [
+    1280,
+    720
+  ],
+  "input_fps": 5,
+  "last_input_PTS_s": 80.80000000000001,
+  "input_codec": "MJPEG",
+  "command": [
+    "ffmpeg",
+    "-nostdin",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-i",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\camera2_inputs\\camera2_aug19_120s_native.mp4",
+    "-an",
+    "-vf",
+    "trim=start_frame=350:end_frame=2375,setpts=PTS-STARTPTS,fps=5,scale=1280:720:flags=bilinear",
+    "-c:v",
+    "mjpeg",
+    "-q:v",
+    "2",
+    "-pix_fmt",
+    "yuvj422p",
+    "-threads",
+    "2",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\realtime_inputs\\camera2_aug19_1280x720_5fps_mjpeg.avi"
+  ],
+  "input_bytes": 56919424,
+  "new_model_forwards": 0,
+  "scope": "Full field of view retained; no ROI, rotation or model resize performed upstream. Online decode, ROI crop, rotation, tensor prep, NN, tracking and counting remain on PYNQ. Camera transport and native2K H264 realtime transcoding are not measured."
+}

@@ -1,0 +1,90 @@
+{
+  "status": "THREE_BOARD_CASES_COMPLETED_ACCURACY_NOT_ACCEPTED",
+  "cases": {
+    "aug15_positive_v2": {
+      "execution_status": "COMPLETED_UNSCORED",
+      "source_clip_sha256": "81f72eba00b660be984d43a4c970b01db7f978e7e0f9c7f79f502cc2eba721e8",
+      "decoded_frames": 3244,
+      "processed_frames": 649,
+      "model_forwards": 649,
+      "counts_from_verified_event_log": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "uncertain_records": 3,
+      "overall_elapsed_s": 1137.1813602640032,
+      "elapsed_s": 1132.9546250450003,
+      "process_peak_rss_kib": 280564,
+      "overall_processed_observations_per_second": 0.5707093192675361,
+      "model_inference_mean_ms": 371.00239649477527,
+      "all_frozen_assets_match": true,
+      "all_expected_source_frames_decoded": true,
+      "human_accuracy_verified": false
+    },
+    "aug16_partial_v1": {
+      "execution_status": "COMPLETED_UNSCORED",
+      "source_clip_sha256": "696761e6611a5a78cfd507d2c705a2c88ed3c4227cee7d013c57f462328d48be",
+      "decoded_frames": 851,
+      "processed_frames": 171,
+      "model_forwards": 171,
+      "counts_from_verified_event_log": {
+        "IN": 6,
+        "OUT": 0,
+        "NET": 6
+      },
+      "uncertain_records": 1,
+      "overall_elapsed_s": 312.0810212180004,
+      "elapsed_s": 310.3585144539975,
+      "process_peak_rss_kib": 281296,
+      "overall_processed_observations_per_second": 0.5479346335532209,
+      "model_inference_mean_ms": 372.81553635089654,
+      "all_frozen_assets_match": true,
+      "all_expected_source_frames_decoded": true,
+      "human_accuracy_verified": false
+    },
+    "aug18_idle_v2": {
+      "execution_status": "COMPLETED_UNSCORED",
+      "source_clip_sha256": "fabfd3362a3c089976d70c4adeba39f0c935f598bd2807dbf8a8576962a323b1",
+      "decoded_frames": 741,
+      "processed_frames": 149,
+      "model_forwards": 149,
+      "counts_from_verified_event_log": {
+        "IN": 0,
+        "OUT": 0,
+        "NET": 0
+      },
+      "uncertain_records": 0,
+      "overall_elapsed_s": 277.1293154779996,
+      "elapsed_s": 275.09601187799854,
+      "process_peak_rss_kib": 276504,
+      "overall_processed_observations_per_second": 0.5376551367111814,
+      "model_inference_mean_ms": 374.4964573555587,
+      "all_frozen_assets_match": true,
+      "all_expected_source_frames_decoded": true,
+      "human_accuracy_verified": false
+    }
+  },
+  "totals": {
+    "decoded_frames": 4836,
+    "model_forwards": 969,
+    "IN": 17,
+    "OUT": 0,
+    "overall_elapsed_s_sum": 1726.3916969600032
+  },
+  "provisional_source_count_discrepancy": {
+    "case_id": "aug15_positive_v2",
+    "model_IN": 11,
+    "assistant_source_only_provisional_IN": 12,
+    "absolute_total_count_difference_against_provisional_only": 1,
+    "not_an_event_false_negative_score": true,
+    "user_confirmed_IN": 12
+  },
+  "event_precision_recall_f1": null,
+  "reason_for_no_accuracy_score": "Aug15 user confirms first missing passage and all 11 shown passages correct; exact independent timestamps absent. No formal timed-event scoring fabricated. V2 needs new unseen-source validation.",
+  "additional_inference_from_this_check": 0,
+  "aug15_user_review": "r5_aug15_user_review.json",
+  "baseline_aug15_known_miss_confirmed": true,
+  "candidate_v2_fix": "fast_passage_board_replay_summary.json",
+  "aug15_current_data_role": "DEVELOPMENT_AFTER_RULE_SELECTION"
+}

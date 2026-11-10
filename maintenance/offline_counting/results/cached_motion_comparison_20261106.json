@@ -1,0 +1,138 @@
+{
+  "status": "BOUNDED_THREE_EXISTING_DEVELOPMENT_CACHES_ONLY",
+  "new_model_forwards": 0,
+  "rows": [
+    {
+      "case": "aug14_hd_s256_fast_v8",
+      "motion_mode": "observed_velocity",
+      "counts": {
+        "IN": 11,
+        "OUT": 0
+      },
+      "event_times_s": [
+        5.6000000000000005,
+        10.8,
+        15.8,
+        19.0,
+        19.200000000000003,
+        20.200000000000003,
+        24.400000000000002,
+        33.0,
+        37.2,
+        41.6,
+        79.0
+      ],
+      "input_frames_sha256": "fc85e943a8a9aeb070e62cb7c7207136e5ac7e06ed283da06561501ee8a147c7"
+    },
+    {
+      "case": "aug14_hd_s256_fast_v8",
+      "motion_mode": "kalman",
+      "counts": {
+        "IN": 11,
+        "OUT": 0
+      },
+      "event_times_s": [
+        5.6000000000000005,
+        10.8,
+        16.2,
+        19.0,
+        19.200000000000003,
+        20.200000000000003,
+        24.0,
+        33.0,
+        37.2,
+        41.6,
+        79.0
+      ],
+      "input_frames_sha256": "fc85e943a8a9aeb070e62cb7c7207136e5ac7e06ed283da06561501ee8a147c7"
+    },
+    {
+      "case": "aug19_hd_s256_history_v7",
+      "motion_mode": "observed_velocity",
+      "counts": {
+        "IN": 10,
+        "OUT": 0
+      },
+      "event_times_s": [
+        5.4,
+        17.400000000000002,
+        20.8,
+        31.0,
+        33.2,
+        36.6,
+        41.800000000000004,
+        47.2,
+        57.0,
+        77.60000000000001
+      ],
+      "input_frames_sha256": "dd20c7022109dbf2fd9410e92791fbe42a75fc45e348c4b507cbdf9768b3c56f"
+    },
+    {
+      "case": "aug19_hd_s256_history_v7",
+      "motion_mode": "kalman",
+      "counts": {
+        "IN": 9,
+        "OUT": 0
+      },
+      "event_times_s": [
+        5.4,
+        17.400000000000002,
+        31.0,
+        33.2,
+        36.6,
+        41.800000000000004,
+        47.800000000000004,
+        57.0,
+        77.60000000000001
+      ],
+      "input_frames_sha256": "dd20c7022109dbf2fd9410e92791fbe42a75fc45e348c4b507cbdf9768b3c56f"
+    },
+    {
+      "case": "aug15_hd_s256_history_v7",
+      "motion_mode": "observed_velocity",
+      "counts": {
+        "IN": 12,
+        "OUT": 0
+      },
+      "event_times_s": [
+        21.0,
+        24.6,
+        28.8,
+        32.800000000000004,
+        37.2,
+        43.800000000000004,
+        46.800000000000004,
+        57.0,
+        84.4,
+        87.4,
+        92.0,
+        94.4
+      ],
+      "input_frames_sha256": "85b3bba642d825eb8cf3740cf6cf107c17b49ab12d0f38887e0c5686c99320fd"
+    },
+    {
+      "case": "aug15_hd_s256_history_v7",
+      "motion_mode": "kalman",
+      "counts": {
+        "IN": 12,
+        "OUT": 0
+      },
+      "event_times_s": [
+        21.0,
+        24.6,
+        28.8,
+        32.800000000000004,
+        37.6,
+        43.800000000000004,
+        46.800000000000004,
+        57.0,
+        84.4,
+        87.4,
+        92.0,
+        94.4
+      ],
+      "input_frames_sha256": "85b3bba642d825eb8cf3740cf6cf107c17b49ab12d0f38887e0c5686c99320fd"
+    }
+  ],
+  "interpretation": "Changing only measured-box motion to Kalman did not repair the original missing passage and made Camera2 worse on the same sampled detections. No new NN or heldout inference."
+}

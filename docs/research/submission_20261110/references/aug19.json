@@ -1,0 +1,66 @@
+{
+  "reference_type": "REVIEWED_VIDEO_DIRECTIONAL_TOTALS",
+  "review_status": "reviewed",
+  "video_id": "camera2_aug19",
+  "source_video_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+  "reviewed_interval": {
+    "start_frame0": 0,
+    "end_frame0": 404
+  },
+  "review_gate": {
+    "axis": "y",
+    "perpendicular_roi": [
+      0.0,
+      1.0
+    ],
+    "lower": 0.4,
+    "upper": 0.6,
+    "channel_polygon": [
+      [
+        0.24,
+        0.65
+      ],
+      [
+        0.25,
+        0.35
+      ],
+      [
+        0.28,
+        0.12
+      ],
+      [
+        0.5,
+        0.12
+      ],
+      [
+        0.55,
+        0.35
+      ],
+      [
+        0.59,
+        0.65
+      ],
+      [
+        0.63,
+        0.94
+      ],
+      [
+        0.24,
+        0.94
+      ]
+    ]
+  },
+  "directional_totals": {
+    "A->B": null,
+    "B->A": 11
+  },
+  "review": {
+    "reviewer": "project user (historical conversation)",
+    "statement": "11 下往上",
+    "evidence": "historical user confirmation of camera2 Aug19 source-only preview",
+    "view": "source_only"
+  },
+  "data_role": "development, repeatedly exposed before this score",
+  "prepared_source_binding": "The known directional total is reused for the corresponding frozen prepared replay of the accepted passage window. It is not a fresh human review of this encoding.",
+  "record_created_UTC": "2026-11-10T07:03:41.356859+00:00"
+}

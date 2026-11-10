@@ -1,0 +1,271 @@
+{
+  "status": "COMPLETED_UNSCORED",
+  "session_id": "equal_budget_v4_scheduled_aug15_r1",
+  "run_id": "d3f60fc3-f6be-49ea-bc5c-cd42f1a89101",
+  "video_id": "camera1_aug15",
+  "source": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug15_hd_s256_birth_v14/input.avi",
+  "source_kind": "paced-file",
+  "config": {
+    "video_id": "camera1_aug15",
+    "session_id": "equal_budget_v4_scheduled_aug15_r1",
+    "sample_hz": 5,
+    "decode_start_frame0": 0,
+    "scope_start_frame0": 0,
+    "end_frame0_exclusive": 649,
+    "axis": "y",
+    "perpendicular_roi": [
+      0.34,
+      0.75
+    ],
+    "in_direction": "A->B",
+    "detection_roi_xyxy": [
+      435,
+      0,
+      960,
+      720
+    ],
+    "rotation_clockwise": 90,
+    "confidence": 0.01,
+    "cow_class_ids": [
+      0
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 1,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "o8",
+      "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+      "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+      "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+      "size": 256
+    },
+    "track_only_in_channel": true,
+    "tracker": {
+      "track_high_thresh": 0.15,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.25,
+      "match_thresh": 0.8,
+      "fuse_score": false,
+      "motion_box": "observed_velocity",
+      "prediction_axis": "y"
+    },
+    "endpoint_recovery": {
+      "enabled": true,
+      "roi_scale": 1.5,
+      "maximum_age_s": 1.5,
+      "maximum_per_frame": 1,
+      "maximum_extra_forwards": null,
+      "reacquire_missing_tracks": true,
+      "maximum_reacquisitions_per_origin": 8
+    },
+    "expected_capture_frames": 649,
+    "expected_capture_size": [
+      1280,
+      720
+    ],
+    "capture": {
+      "width": 1280,
+      "height": 720,
+      "fps": 5,
+      "fourcc": "MJPG",
+      "buffer_frames": 4,
+      "history_maximum_age_s": null,
+      "publication_stride_frames": 2
+    },
+    "preprocess_mode": "resize_first_v1",
+    "detector_input": "native_bgr",
+    "warmup_model_forwards": 1,
+    "fast_history_velocity": null,
+    "birth_refinement": {
+      "enabled": true,
+      "roi_scale": 1.5,
+      "minimum_border_fraction": 0.02,
+      "weak_motion_support": true,
+      "minimum_motion_per_s": 0.05
+    },
+    "fast_history_policy": "velocity",
+    "history_after_birth": false,
+    "source_selection": "scheduled_global"
+  },
+  "source_size": [
+    1280,
+    720
+  ],
+  "nominal_fps": 5.0,
+  "target_detector_hz": 2.5,
+  "effective_nominal_sample_hz": 2.5,
+  "tracker_nominal_hz": 5.0,
+  "source_selection": "scheduled_global",
+  "model_forwards": 338,
+  "base_model_forwards": 325,
+  "warmup_model_forwards": 1,
+  "endpoint_recovery_forwards": 8,
+  "birth_refinement_forwards": 4,
+  "processed_frames": 325,
+  "sampler_rejected_frames": 0,
+  "future_frame_violations": 0,
+  "counts": {
+    "IN": 12,
+    "OUT": 0,
+    "NET": 12
+  },
+  "uncertain_records": 2,
+  "accuracy_verified": false,
+  "software_fixture_only": false,
+  "clock_contract": "CFR read/decode starts at arrival with verified PTS; bounded latest capture buffer; causal fast history selection; predictions never count",
+  "startup_scope": "startup_s includes source open/hash and model initialization inside run; Python imports excluded",
+  "latency_boundary": "Expected source-frame arrival through detector/recovery/tracking/event log; source camera transport before decoder excluded",
+  "memory_before_model": {
+    "process_peak_rss_kib": 89312,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 418888,
+      "SwapTotal": 524284,
+      "SwapFree": 429052
+    }
+  },
+  "time_source": "verified relative CFR source PTS",
+  "video_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+  "model_sha256": "c083b7e307ac4233f73f3b5e7ded6a041982e42d366c70c5c65fb71edf446216",
+  "resident_plan_sha256": "adf50c9fdf4a24ee00ebc0921e1d5c09e782346765f80428a5227501c22aa9f0",
+  "device_initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "runtime_asset_sha256": {
+    "native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8"
+  },
+  "startup_s": 33.72260630799974,
+  "capture": {
+    "captured_frames": 649,
+    "overwritten_before_read": 0,
+    "publication_stride_frames": 2,
+    "published_frames": 325,
+    "not_admitted_frames": 324,
+    "maximum_application_queue_frames": 4,
+    "history_frames_processed": 41,
+    "last_source_time_s": 129.6,
+    "source_time_origin_s": 0.0,
+    "history_maximum_age_s": null,
+    "history_age_guard_overrides": 0,
+    "capture_done": true,
+    "capture_error": null,
+    "capture_lateness_ms": {
+      "count": 649,
+      "mean_ms": 112.48638093617294,
+      "maximum_ms": 229.6523149980203,
+      "p50_ms": 109.32928199872549,
+      "p95_ms": 125.25608399955672,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 649
+    },
+    "frame_retrieval_duration_ms": {
+      "count": 650,
+      "mean_ms": 109.45362149075383,
+      "maximum_ms": 221.45001199896797,
+      "p50_ms": 106.62530399986281,
+      "p95_ms": 122.68893485015724,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 650
+    },
+    "frame_enqueue_lock_wait_ms": {
+      "count": 649,
+      "mean_ms": 0.035794661008144435,
+      "maximum_ms": 0.524646000485518,
+      "p50_ms": 0.03316299989819527,
+      "p95_ms": 0.04588279989548028,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 649
+    }
+  },
+  "last_source_time_s": 129.6,
+  "last_frame0": 648,
+  "elapsed_s": 163.76954673799992,
+  "timings": {
+    "preprocess": {
+      "count": 325,
+      "mean_ms": 10.456338852337257,
+      "maximum_ms": 37.63586300010502,
+      "p50_ms": 10.202814999502152,
+      "p95_ms": 11.060716201245668,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 325
+    },
+    "base_inference": {
+      "count": 325,
+      "mean_ms": 284.8380745538788,
+      "maximum_ms": 493.9918210002361,
+      "p50_ms": 282.77484599857416,
+      "p95_ms": 316.83744540059706,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 325
+    },
+    "recovery": {
+      "count": 325,
+      "mean_ms": 18.99454916920289,
+      "maximum_ms": 345.93827099888586,
+      "p50_ms": 7.138638000469655,
+      "p95_ms": 14.79780999979995,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 325
+    },
+    "tracking": {
+      "count": 325,
+      "mean_ms": 11.815269006138596,
+      "maximum_ms": 89.26408099978289,
+      "p50_ms": 12.117396001485758,
+      "p95_ms": 20.644507200267984,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 325
+    },
+    "event_publication": {
+      "count": 12,
+      "mean_ms": 724.2876624162212,
+      "maximum_ms": 1550.49534599857,
+      "p50_ms": 504.1096969989667,
+      "p95_ms": 1393.3310205496125,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 12
+    },
+    "observation_age": {
+      "count": 325,
+      "mean_ms": 582.327001060873,
+      "maximum_ms": 2063.8789249987894,
+      "p50_ms": 437.99583799955144,
+      "p95_ms": 1281.6828546001489,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 325
+    }
+  },
+  "unavailable_source_sample_slots": 0,
+  "memory_after_close": {
+    "process_peak_rss_kib": 203472,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 350296,
+      "SwapTotal": 524284,
+      "SwapFree": 417020
+    }
+  },
+  "maximum_state_count": 8,
+  "latency_entire_stream": {
+    "count": 325,
+    "maximum_ms": 2063.8789249987894,
+    "p95_upper_bound_ms": null,
+    "over_1000ms": 34,
+    "over_500ms": 86,
+    "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+    "retained_bin_count": 1002
+  },
+  "stream_wall_elapsed_s": 130.04105509799956,
+  "source_duration_s": 129.6,
+  "drain_after_last_source_frame_s": 0.4410550979995662,
+  "realtime_clock_pass": false
+}

@@ -1,0 +1,46 @@
+{
+  "status": "OFFLINE_CAMERA_FORMAT_ADAPTATION_BEFORE_REALTIME_DEV_EVALUATION",
+  "source_sha256": "fb0718865485fa195352c0e5957580895d843165adc0bddb5a38599bfe8ae064",
+  "source_frame0_scope": [
+    350,
+    2375
+  ],
+  "requested_original_PTS_scope_s": [
+    14,
+    95
+  ],
+  "input_sha256": "71d31628fd8d97bba6fc1c34df1ee1817b6814e5bf1f724972ebdb729503d715",
+  "input_frames_decoded": 810,
+  "input_size": [
+    640,
+    360
+  ],
+  "input_fps": 10,
+  "input_codec": "MJPEG",
+  "last_input_PTS_s": 80.9,
+  "config_sha256": "cf949b41b3a42d99b4a03786c74f5fd375e76459f7076071f4024327d9aba40b",
+  "command": [
+    "ffmpeg",
+    "-nostdin",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-i",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\camera2_inputs\\camera2_aug19_120s_native.mp4",
+    "-an",
+    "-vf",
+    "trim=start_frame=350:end_frame=2375,setpts=PTS-STARTPTS,fps=10,scale=640:360:flags=area",
+    "-c:v",
+    "mjpeg",
+    "-q:v",
+    "3",
+    "-pix_fmt",
+    "yuvj420p",
+    "-threads",
+    "2",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\realtime_inputs\\camera2_aug19_640x360_10fps_mjpeg.avi"
+  ],
+  "new_model_forwards": 0,
+  "scope": "Equivalent selected camera capture format. Adaptation is offline on PC; online decode/preprocess/O8/tracking/counting must all run on PYNQ. Does not claim realtime native2K H264 transcoding.",
+  "created_UTC": "2026-11-02T00:43:50.498694+00:00"
+}

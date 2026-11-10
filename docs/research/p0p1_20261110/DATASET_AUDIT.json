@@ -1,0 +1,154 @@
+{
+  "status": "AUDIT_CHECKS_PASS_WITH_SPLIT_PROVENANCE_WARNING",
+  "job_id": "133415",
+  "inputs": {
+    "prepared_manifest_sha256": "fd664b040229d249fc0fd4135466696141f95e3449fad5bb98aeb2f3062f5423",
+    "roles_manifest_sha256": "73a29d1ba42409d0a7bef68a7600c0aed8d6b8199d1396ffa3cc4ccb753b0f39",
+    "calibration_manifest_sha256": "1288761f83584af077e9dab1adfc346157dc3bc11b2893aa9f9b51b02a7498b3",
+    "qualification_summary_sha256": "9851c2db51a455c88a0df50fa59c8baffb79a8a424f02b80892fd889b1dce817",
+    "completion_record_sha256": "351e038ff7fe7ed76e8f788f775a8df5d998d219f5d6e50289e46d8a0d20add1",
+    "data_yaml_sha256": "04e2a3d3dfd625116c4237896e5f07e15eff4356d92ba2916fdf1bc3c7c4b215"
+  },
+  "manifest_records": 8380,
+  "split_counts": {
+    "train": 6809,
+    "files_checked": 16760,
+    "val": 1571
+  },
+  "roles_all_records": 10402,
+  "all_source_role_counts": {
+    "train_candidate": 6809,
+    "validation_development_candidate": 1571,
+    "development_reserve": 1400,
+    "candidate_final_date_holdout": 622
+  },
+  "actual_file_counts": {
+    "train": {
+      "images": 6809,
+      "labels": 6809
+    },
+    "val": {
+      "images": 1571,
+      "labels": 1571
+    }
+  },
+  "train_dates": [
+    "2020-02-05",
+    "2020-02-10",
+    "2020-02-11",
+    "2020-02-12",
+    "2020-02-13",
+    "2020-02-14",
+    "2020-02-15",
+    "2020-02-16",
+    "2020-02-18",
+    "2020-02-19",
+    "2020-02-20",
+    "2020-02-21",
+    "2020-02-22",
+    "2020-02-23",
+    "2020-02-24",
+    "2020-02-25",
+    "2020-02-26",
+    "2020-02-27"
+  ],
+  "validation_dates": [
+    "2020-02-28",
+    "2020-02-29",
+    "2020-03-01",
+    "2020-03-02",
+    "2020-03-03",
+    "2020-03-04"
+  ],
+  "train_validation_date_intersection": [],
+  "train_validation_source_block_intersection": [
+    "block_154"
+  ],
+  "train_validation_source_block_overlap_details": {
+    "block_154": {
+      "role_record_count": 31,
+      "split_details": {
+        "train": {
+          "records": 7,
+          "capture_dates": [
+            "2020-02-27"
+          ],
+          "original_frame_index_min": 15302,
+          "original_frame_index_max": 15318
+        },
+        "val": {
+          "records": 24,
+          "capture_dates": [
+            "2020-02-28"
+          ],
+          "original_frame_index_min": 15359,
+          "original_frame_index_max": 15396
+        }
+      },
+      "semantics_documented": false,
+      "interpretation": "UNRESOLVED_METADATA_GROUP_OVERLAP"
+    }
+  },
+  "train_validation_original_filename_overlap_count": 0,
+  "train_validation_image_name_overlap_count": 0,
+  "train_validation_jpeg_sha_overlap_count": 0,
+  "train_validation_recorded_rgb_sha_overlap_count": 0,
+  "calibration_records": 128,
+  "calibration_unique_images": 128,
+  "calibration_split_counts": {
+    "train": 128
+  },
+  "calibration_hash_matches": 128,
+  "calibration_error_count": 0,
+  "file_error_count": 0,
+  "duplicate_manifest_name_count": 0,
+  "checks": {
+    "manifest_bytes_match_training_freeze": true,
+    "all_images_and_labels_match_manifest": true,
+    "no_duplicate_image_names_in_manifest": true,
+    "actual_image_names_equal_manifest": true,
+    "actual_label_names_equal_manifest": true,
+    "train_validation_exact_jpeg_sha_overlap_zero": true,
+    "train_validation_previously_recorded_decoded_rgb_sha_overlap_zero": true,
+    "train_validation_capture_date_overlap_zero": true,
+    "all_calibration_records_match_training_manifest": true,
+    "calibration_manifest_contains_no_duplicate_image_names": true,
+    "qualification_pt_matches_recorded_training_last": true,
+    "training_best_differs_from_deployed_last": true,
+    "onnx_matches_qualification_record": true,
+    "qdq_matches_qualification_record": true,
+    "normalization_source_matches_compiler_qdq": true,
+    "normalization_output_matches_accepted_qdq": true,
+    "normalization_output_parity_all_byte_exact": true
+  },
+  "checkpoint_sha256": {
+    "training_last_pt": "d218615b6a29e98e0464cbba29dc22deb95b932e3ce2d94125ca79d2167fa4a0",
+    "training_best_pt": "87fb2e471b21b6b479d620e4ef0b3d1be3b86597fdb4efa74fe47babbf989d95",
+    "qualification_pt": "d218615b6a29e98e0464cbba29dc22deb95b932e3ce2d94125ca79d2167fa4a0",
+    "qualification_fp32_onnx": "b9e4cdbf74ad0e401b00bf39db079062a2115377120537be443026f79a880b15",
+    "compiler_qdq_source_onnx": "86b7a8ff1ee222b97ca18f7fa6190dbfbbcd5191444db4dc355b4a89af2a22f7",
+    "qualification_qdq_onnx": "ef0967c90899f0bd2bf7f90f72079f207713d516bf29b5d12891645386188d99"
+  },
+  "normalization": {
+    "source_sha256": "86b7a8ff1ee222b97ca18f7fa6190dbfbbcd5191444db4dc355b4a89af2a22f7",
+    "normalized_sha256": "ef0967c90899f0bd2bf7f90f72079f207713d516bf29b5d12891645386188d99",
+    "parity_image_count": 8,
+    "parity_all_byte_exact": true
+  },
+  "source_training_failure_preserved": {
+    "original_job": "130518_9",
+    "original_state": "FAILED|1:0",
+    "recovery_status": "FIXED10_EPOCH_WEIGHTS_RECOVERED_AFTER_NEWLINE_ONLY_POSTTRAIN_ASSERTION",
+    "rotation_schedule_status": "RECONSTRUCTED_FROM_FROZEN_SEPARATE_CPU_GENERATOR_AND_OBSERVED_BATCH_COUNTS_NOT_OBSERVED_FILE",
+    "per_update_gradient_audit_array_recovered": false
+  },
+  "limits": [
+    "Recorded RGB SHA overlap is from pre-existing manifest; it was not recomputed here.",
+    "Capture dates, names and blocks do not establish cow-identity independence.",
+    "A source_block overlaps train and validation; its grouping semantics are undocumented, so this audit neither proves nor rules out session-level leakage.",
+    "Different dates and datasets do not establish distinct farm or cow identity.",
+    "The four 2023 video clips were already exposed as development data.",
+    "No video-frame near-duplicate, cow-identity, independent-test or event-GT audit is claimed.",
+    "No model inference, new training, data alteration or source-data export was performed."
+  ]
+}

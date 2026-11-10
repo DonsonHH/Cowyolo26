@@ -1,0 +1,244 @@
+{
+  "status": "FROZEN_BEFORE_THIS_REALTIME_CASE",
+  "created_UTC": "2026-11-05T17:56:02.831618+00:00",
+  "config": {
+    "video_id": "camera2_aug19",
+    "session_id": "rt_aug19_hd_s256_birth_v11",
+    "sample_hz": 3.0,
+    "decode_start_frame0": 0,
+    "scope_start_frame0": 0,
+    "end_frame0_exclusive": 405,
+    "axis": "y",
+    "perpendicular_roi": [
+      0.0,
+      1.0
+    ],
+    "in_direction": "B->A",
+    "detection_roi_xyxy": [
+      300,
+      70,
+      850,
+      685
+    ],
+    "rotation_clockwise": 90,
+    "confidence": 0.1,
+    "cow_class_ids": [
+      0
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 2,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "o8",
+      "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+      "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program",
+      "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin",
+      "size": 256
+    },
+    "track_only_in_channel": true,
+    "tracker": {
+      "track_high_thresh": 0.15,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.25,
+      "match_thresh": 0.8,
+      "fuse_score": false,
+      "motion_box": "kalman"
+    },
+    "channel_polygon": [
+      [
+        0.24,
+        0.65
+      ],
+      [
+        0.25,
+        0.35
+      ],
+      [
+        0.28,
+        0.12
+      ],
+      [
+        0.5,
+        0.12
+      ],
+      [
+        0.55,
+        0.35
+      ],
+      [
+        0.59,
+        0.65
+      ],
+      [
+        0.63,
+        0.94
+      ],
+      [
+        0.24,
+        0.94
+      ]
+    ],
+    "endpoint_recovery": {
+      "enabled": true,
+      "roi_scale": 1.5,
+      "maximum_age_s": 2.0,
+      "maximum_per_frame": 1,
+      "maximum_extra_forwards": null,
+      "reacquire_missing_tracks": true,
+      "maximum_reacquisitions_per_origin": 8
+    },
+    "expected_capture_frames": 405,
+    "expected_capture_size": [
+      1280,
+      720
+    ],
+    "capture": {
+      "width": 1280,
+      "height": 720,
+      "fps": 5,
+      "fourcc": "MJPG",
+      "buffer_frames": 1
+    },
+    "preprocess_mode": "resize_first_v1",
+    "detector_input": "native_bgr",
+    "warmup_model_forwards": 1,
+    "fast_history_velocity": null,
+    "birth_refinement": {
+      "enabled": false
+    }
+  },
+  "config_sha256": "c61fd628188d4581963d64c19b7da2a287fa852e5caa7aed317bd3ebae572e70",
+  "expected_file_sha256": {
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_rot192_qual_20261029/program/graph.bin": "5c05590f1c16f23f8e920447cdb6dd92e0d58a10104689bbc069ceb9fae1b00c",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_rot192_qual_20261029/resident_plan/resident_plan.bin": "cd5702cfca84e38ab75e8251ca5a15ff66be16fccc9d87ef3a0e4577079e40fa",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_rot192_qual_20261029/protocol.json": "60b96d83d9355fc5572b651d9f701c45e6aa26ad0d6bf76b0bc5dd1be763c84b",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/program/graph.bin": "c083b7e307ac4233f73f3b5e7ded6a041982e42d366c70c5c65fb71edf446216",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/resident_plan/resident_plan.bin": "adf50c9fdf4a24ee00ebc0921e1d5c09e782346765f80428a5227501c22aa9f0",
+    "/home/xilinx/jupyter_notebooks/cow_research_o8_s256_qual_20261030/protocol.json": "44115dd48410635fe9eebc48a672ec0388ac3f0cef452c665b2baa1819422ca2",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/__init__.py": "6839ba785c1a458126fff8567a957657b3ee8c2ee708a71d2228a6dd28f63c86",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/__main__.py": "b72d6210c14303737821fbb3c2f6a4b0fd2ab11b4e77469141e2cd5a4a1e876e",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/backends.py": "6bd9310d7e4dca0cdb57051f579cdc7c5a5e7e61367ed14a964d79a247088682",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/birth_refinement.py": "2d1c7331fd13682f5add27037806c5d407bce34ea816b71efeb179576d36561d",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/channel.py": "a58c5d6b2baddfb1f69333351eadfb47606bcfa723a0e217d1f04b41b32f8a97",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/counter.py": "3a6ba6ae1aff0256786f7c6adb7021851571a0ad569c7a349360775124c77903",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/endpoint_recovery.py": "e1538a48a84ae0ba3c704989595eb59571868afb8da9bc1a6d2183213075ab5d",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/evaluate.py": "fcafb483c09a500cdff4a75966537e347bef08e784da686fc7819c44e047f1d2",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/geometry.py": "d7c95f18c7e5943f10baa63c291ff0c8af5e378b3b416469eb7f01d23b24b09e",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/index_source.py": "bd626308eb56399ae062e445cc9691e384d370a03d3789774d7dae1a498939da",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/observation_track.py": "7b3ea1a7c04386699da373aa9118edb83251d4a304cff539266b4b8cbe26fb2e",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/package_board.py": "9ec46237258ac774d04ce01f1eb45106ed63ed4385f8e2f8d3aca59dfe572b0f",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/protocol.py": "515f74f6589bc3f4a74d8b390736efe153edfcd1161eb36b4d95eefb45a049ff",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/realtime.py": "0e40d6356d0bc31ea335c01b24d4bae69e7ebeaac559ed039b2cfe9249321aba",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/render.py": "2e5f69b3caf388f512a13614487473a7a132d3c5b8c672e5fdc5e978357d9a28",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/review.html": "82f7ffe1dfcbefb790851ceb30d7ee91a44924417139a140b85a4638aa6d67f2",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/review_server.py": "0da8b90c39e4b88b613945dbefc35e30caf53c548a2b319184c8da047ed37986",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/runner.py": "c07b68ed027bb9a8af251ba1e31f39a080e697cac635f452b56d9032b3842363",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/source_clock.py": "8fcd281588251bb835aac4028c2001be1cc4c8f09e44e4978e84361415030dc3",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_birth_refinement.py": "c0c7f5d996ac9de7aaacabd337b6c4b772eec43660da2368fbc64ff5584804c8",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_box_motion.py": "b9ef4c30baa82f33199a53ad39a518b2952cada08da45cd0634539cf4589177c",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_capture_history.py": "d7a0e2077552f557e1514ed30de6ac8c14403c35c2e8ffb13e1139544623be97",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_channel_tracking_profile.py": "5374e9ed5bf77136b730cd5e8eec040710b1522a00029efc1611961e23e9c05a",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_counting.py": "400af8516f275701e3cd0a7313997c923e001bdb22c06bb1678b2e7a135021e9",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_endpoint_recovery.py": "60e1e7acac01b00d43f0a49b4ac880ed082f198b820f87028e164e10ce4e558b",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_fast_passage_profile.py": "3a302d32a70d36b4ef580fd95b33bc287c331bfd60bbc26cb0c800ecb53c9343",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_fast_preprocess.py": "12307cec30c58eb137320ffdb26b66257630ffb0011b50f44b6b76a8d19f949f",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_native_bgr.py": "74b98196134b3a0b0b5349f647e136129348c9d7aab611aabdf54ffb43af48e2",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_polygon_channel.py": "6d002f90d112cc5e4e19fabf6b95986518807f99389cec7e9292375faff3f291",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_realtime.py": "44674f24dbde0ff72a23371c765a986c0779067f4e8afc6c9fcb8bf8318c51ff",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_source_clock.py": "5bd396c73df66f3bf503afa11f9fcf4f74affdc2c7b6b9402ff9834370bef95c",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/test_video_integration.py": "004b3c8bc9dd77e1371337fab60942f915d89ecceb0b6730c398d26bccee2c51",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/counting/tracking.py": "c8b516d8dacdc5effe57793dd13048eb78c827650b5205bf0417b3b1fa8ea7e3",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/maintenance/counting_r1/__init__.py": "d5a336d207059817c4c499b679d56a1f325f6f76dce74218a9652e9ffb9ccd47",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/maintenance/counting_r1/event_metrics_v2.py": "95c69f80ba29465a17678674a2c559046f1071a2115b15c31ae39d40df2bffb8",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/maintenance/counting_r1/tracker.py": "f404d2be54183017459090ae7d794fd6950272e2dfd24745106460f61f22fd54",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/maintenance/offline_counting/results/purdue_day1_detection_fixture.json": "d8482345c400e127956ffb543960a5041a3a643d7b9f54a610a4eb0970199242",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/maintenance/offline_counting/results/r5_aug15_fast_passage_trace.json": "3beff248a173d0deb5cced109c10477d0a0b31bdad18b04091ea5ad390ae66d0",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/maintenance/offline_counting/selected_camera24_profile_v3.json": "4c452b415477e12d1e3211a060a605564e0dcec6940b6e3bb0633dfe3d1900d1",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/maintenance/offline_counting/selected_counter_profile_v2.json": "bd3c61468237a7edae80f9f6416598f19fda6b423ea5c92c34fbcd064c647480",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/cow_tracker/matching.py": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/cow_tracker/support.py": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/birth_refinement_v11/runtime/pynq/cow_research_numpy_tracker_20261029/frame_pipeline.py": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug19_hd_s256_birth_v11/input.avi": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug19_hd_s256_birth_v11/config.json": "c61fd628188d4581963d64c19b7da2a287fa852e5caa7aed317bd3ebae572e70",
+    "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug19_hd_s256_birth_v11/supervisor.py": "90072803b3f2bbaf0ef5cf4cc57d2834577d45017e356df6fe41cb31a8510fcc"
+  },
+  "source_package_sha256": "d587a283bd7354adff728d644db82d02cc2f7a3a2054e8c2a80f3c0d441e9c34",
+  "source_files_SHA256": {
+    "counting/__init__.py": "6839ba785c1a458126fff8567a957657b3ee8c2ee708a71d2228a6dd28f63c86",
+    "counting/__main__.py": "b72d6210c14303737821fbb3c2f6a4b0fd2ab11b4e77469141e2cd5a4a1e876e",
+    "counting/backends.py": "6bd9310d7e4dca0cdb57051f579cdc7c5a5e7e61367ed14a964d79a247088682",
+    "counting/birth_refinement.py": "2d1c7331fd13682f5add27037806c5d407bce34ea816b71efeb179576d36561d",
+    "counting/channel.py": "a58c5d6b2baddfb1f69333351eadfb47606bcfa723a0e217d1f04b41b32f8a97",
+    "counting/counter.py": "3a6ba6ae1aff0256786f7c6adb7021851571a0ad569c7a349360775124c77903",
+    "counting/endpoint_recovery.py": "e1538a48a84ae0ba3c704989595eb59571868afb8da9bc1a6d2183213075ab5d",
+    "counting/evaluate.py": "fcafb483c09a500cdff4a75966537e347bef08e784da686fc7819c44e047f1d2",
+    "counting/geometry.py": "d7c95f18c7e5943f10baa63c291ff0c8af5e378b3b416469eb7f01d23b24b09e",
+    "counting/index_source.py": "bd626308eb56399ae062e445cc9691e384d370a03d3789774d7dae1a498939da",
+    "counting/observation_track.py": "7b3ea1a7c04386699da373aa9118edb83251d4a304cff539266b4b8cbe26fb2e",
+    "counting/package_board.py": "9ec46237258ac774d04ce01f1eb45106ed63ed4385f8e2f8d3aca59dfe572b0f",
+    "counting/protocol.py": "515f74f6589bc3f4a74d8b390736efe153edfcd1161eb36b4d95eefb45a049ff",
+    "counting/realtime.py": "0e40d6356d0bc31ea335c01b24d4bae69e7ebeaac559ed039b2cfe9249321aba",
+    "counting/render.py": "2e5f69b3caf388f512a13614487473a7a132d3c5b8c672e5fdc5e978357d9a28",
+    "counting/review.html": "82f7ffe1dfcbefb790851ceb30d7ee91a44924417139a140b85a4638aa6d67f2",
+    "counting/review_server.py": "0da8b90c39e4b88b613945dbefc35e30caf53c548a2b319184c8da047ed37986",
+    "counting/runner.py": "c07b68ed027bb9a8af251ba1e31f39a080e697cac635f452b56d9032b3842363",
+    "counting/source_clock.py": "8fcd281588251bb835aac4028c2001be1cc4c8f09e44e4978e84361415030dc3",
+    "counting/test_birth_refinement.py": "c0c7f5d996ac9de7aaacabd337b6c4b772eec43660da2368fbc64ff5584804c8",
+    "counting/test_box_motion.py": "b9ef4c30baa82f33199a53ad39a518b2952cada08da45cd0634539cf4589177c",
+    "counting/test_capture_history.py": "d7a0e2077552f557e1514ed30de6ac8c14403c35c2e8ffb13e1139544623be97",
+    "counting/test_channel_tracking_profile.py": "5374e9ed5bf77136b730cd5e8eec040710b1522a00029efc1611961e23e9c05a",
+    "counting/test_counting.py": "400af8516f275701e3cd0a7313997c923e001bdb22c06bb1678b2e7a135021e9",
+    "counting/test_endpoint_recovery.py": "60e1e7acac01b00d43f0a49b4ac880ed082f198b820f87028e164e10ce4e558b",
+    "counting/test_fast_passage_profile.py": "3a302d32a70d36b4ef580fd95b33bc287c331bfd60bbc26cb0c800ecb53c9343",
+    "counting/test_fast_preprocess.py": "12307cec30c58eb137320ffdb26b66257630ffb0011b50f44b6b76a8d19f949f",
+    "counting/test_native_bgr.py": "74b98196134b3a0b0b5349f647e136129348c9d7aab611aabdf54ffb43af48e2",
+    "counting/test_polygon_channel.py": "6d002f90d112cc5e4e19fabf6b95986518807f99389cec7e9292375faff3f291",
+    "counting/test_realtime.py": "44674f24dbde0ff72a23371c765a986c0779067f4e8afc6c9fcb8bf8318c51ff",
+    "counting/test_source_clock.py": "5bd396c73df66f3bf503afa11f9fcf4f74affdc2c7b6b9402ff9834370bef95c",
+    "counting/test_video_integration.py": "004b3c8bc9dd77e1371337fab60942f915d89ecceb0b6730c398d26bccee2c51",
+    "counting/tracking.py": "c8b516d8dacdc5effe57793dd13048eb78c827650b5205bf0417b3b1fa8ea7e3",
+    "maintenance/counting_r1/__init__.py": "d5a336d207059817c4c499b679d56a1f325f6f76dce74218a9652e9ffb9ccd47",
+    "maintenance/counting_r1/event_metrics_v2.py": "95c69f80ba29465a17678674a2c559046f1071a2115b15c31ae39d40df2bffb8",
+    "maintenance/counting_r1/tracker.py": "f404d2be54183017459090ae7d794fd6950272e2dfd24745106460f61f22fd54",
+    "maintenance/offline_counting/results/purdue_day1_detection_fixture.json": "d8482345c400e127956ffb543960a5041a3a643d7b9f54a610a4eb0970199242",
+    "maintenance/offline_counting/results/r5_aug15_fast_passage_trace.json": "3beff248a173d0deb5cced109c10477d0a0b31bdad18b04091ea5ad390ae66d0",
+    "maintenance/offline_counting/selected_camera24_profile_v3.json": "4c452b415477e12d1e3211a060a605564e0dcec6940b6e3bb0633dfe3d1900d1",
+    "maintenance/offline_counting/selected_counter_profile_v2.json": "bd3c61468237a7edae80f9f6416598f19fda6b423ea5c92c34fbcd064c647480",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/__init__.py": "14f0c6d1a561491ff1ec33f1b635e3a6610bfbf85a34778d349a9f89ad910eed",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/basetrack.py": "9ef094b9a54ff2f52c9118b5bd1a2f84ba331aa557277f54186de11728c2f7e8",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/byte_tracker.py": "9c05e1a5c85d321aa45b08fef09dceec4f25ddbfdb09a94c999974eb44e1360c",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/confirmation_counter.py": "ba41815982a698d8ce14bdb420cf32d310a46ca4babf3b82b50ac0cc20bd8c5e",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/kalman_filter.py": "7fdfb06bcf256879c88d569cd3e68b1ebb52a1603ee00c3e57bf32d581e885fa",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/matching.py": "c07ea22cac2dfcd48304b0f7f03cbc71556ce9065dce2a7317d8ea76259f0e33",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/stracks.py": "1f8dba2dd8ca647da05c2d5ef9493e4a6a4fc9ef957134100d42e31d53742aba",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/support.py": "abd3adbc8d2327b0a7d7a74850f4002be61d5b6ced75cdb15280ec8124980733",
+    "pynq/cow_research_numpy_tracker_20261029/cow_tracker/zone_counter.py": "5e194af0481178f2e884b42309ad87c3110efe6472e655a1c90a80c20d48ccb5",
+    "pynq/cow_research_numpy_tracker_20261029/frame_pipeline.py": "422ee73910a741b39e18199ee50d7a8ca75007e274bea67332a63437b2ccdf6b"
+  },
+  "source_role": "Known inspected development regression; new complete wall-paced board run",
+  "external_reference": {
+    "UP": 11,
+    "DOWN": null
+  },
+  "reference_is_not_a_runtime_input": true,
+  "changes_from_prior_trial": "Normal3Hz/Kalman: recovery maximum age2.0 (counter gap remains2.0), high .15 allows actual weak Lost reacquisition; birth disabled. No GT input or video/frame branch.",
+  "service_protocol_sha256": "259ee6aff22e70245e5e406d6437be7693fb43f7724058e9987482b1b2fc7e30",
+  "service_profile": "normal",
+  "launch_identity": "9a081237-093b-42e0-843c-62ec819c5a59",
+  "expected_output_dir": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102/aug19_hd_s256_birth_v11/output",
+  "Aug20_model_forwards_before_freeze": 0
+}

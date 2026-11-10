@@ -1,0 +1,83 @@
+{
+  "review_type": "AI visual self-inspection of real recorded entry/completion image pairs",
+  "checked_UTC": "2026-11-05T19:45:28.675420+00:00",
+  "run_id": "f59a0f11-da6c-4469-9aad-d98ae0a2fc62",
+  "reviewed_event_ids": [
+    "rt_aug19_hd_s256_birth_v16:0:000001",
+    "rt_aug19_hd_s256_birth_v16:0:000002",
+    "rt_aug19_hd_s256_birth_v16:0:000003",
+    "rt_aug19_hd_s256_birth_v16:0:000004",
+    "rt_aug19_hd_s256_birth_v16:0:000005",
+    "rt_aug19_hd_s256_birth_v16:0:000006",
+    "rt_aug19_hd_s256_birth_v16:0:000007",
+    "rt_aug19_hd_s256_birth_v16:0:000008",
+    "rt_aug19_hd_s256_birth_v16:0:000009",
+    "rt_aug19_hd_s256_birth_v16:0:000010",
+    "rt_aug19_hd_s256_birth_v16:0:000011"
+  ],
+  "entry_completion_frames": [
+    [
+      16,
+      27
+    ],
+    [
+      75,
+      86
+    ],
+    [
+      84,
+      101
+    ],
+    [
+      86,
+      103
+    ],
+    [
+      140,
+      155
+    ],
+    [
+      155,
+      165
+    ],
+    [
+      170,
+      181
+    ],
+    [
+      191,
+      207
+    ],
+    [
+      219,
+      235
+    ],
+    [
+      271,
+      284
+    ],
+    [
+      370,
+      387
+    ]
+  ],
+  "source_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+  "source_matches_summary": true,
+  "run_evidence_sha256": {
+    "summary.json": "3036a7ed707b19976040f4360eb59afd3b384789a6c4ce283d1054d35fc2ea9b",
+    "events.jsonl": "7917ec9239834f3f9f941058bd8c7efcc98273d8e537ad1d0e6fd78c7bb15368",
+    "frames.jsonl": "2abd350e0364d40c585b4a452429a3af87cd327eb6d094b653053e52a8339bbe",
+    "status.json": "016750624bb9bae53ae473c315c12a9c14954fa54ef60e74ef0068a5232453b5"
+  },
+  "panel_sha256": {
+    "panel_01.jpg": "fc68791c3ccc50490c7412f55dd82d503cdf6fc58bfbb95bebce3f5e64d96ec8",
+    "panel_02.jpg": "5065400540215385e527a23e674e7f1904f4a08e845a49799d1fbf85d8e63f18",
+    "panel_03.jpg": "fe7356e80a40b790d31b7629a28e0087501386e1a370ea436c5c056e30427794"
+  },
+  "observations": "Viewed all three recorded entry/completion panels (11 event pairs). Coat patterns and spatial order show no obvious duplicate or identity swap; left-side event3 remains distinct from simultaneous right-side event4. Tentative entry images can be unboxed; they are not claimed as confirmed tracker outputs at capture time. This is AI self-inspection, not independent human timed GT or new user acceptance. Original 1s service failure remains unchanged.",
+  "pair_review_passed": true,
+  "formal_event_precision_recall_claimed": false,
+  "independent_human_timed_ground_truth": false,
+  "new_user_acceptance": false,
+  "new_model_forwards": 0
+}

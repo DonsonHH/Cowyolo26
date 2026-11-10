@@ -1,0 +1,43 @@
+{
+  "status": "PC_OFFLINE_CAMERA_FORMAT_ADAPTATION",
+  "created_UTC": "2026-11-02T04:47:21.071260+00:00",
+  "source_sha256": "f44c30c2bb84e043e81e46d34ae3994a4a5d02b38443f222dbce3a5ecd0a67f9",
+  "source_frame0_scope": [
+    0,
+    2994
+  ],
+  "input_sha256": "3b68eae39d9e936e68e7c4d78bd8d18142623825c8aa3594fe273cbb36234f74",
+  "input_frames_decoded": 599,
+  "input_size": [
+    1280,
+    720
+  ],
+  "input_fps": 5,
+  "last_input_PTS_s": 119.60000000000001,
+  "input_codec": "MJPEG",
+  "command": [
+    "ffmpeg",
+    "-nostdin",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-i",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\camera2_aug20_inputs\\camera2_aug20_920s1040s_native.mp4",
+    "-an",
+    "-vf",
+    "trim=start_frame=0:end_frame=2994,setpts=PTS-STARTPTS,fps=5,scale=1280:720:flags=bilinear",
+    "-c:v",
+    "mjpeg",
+    "-q:v",
+    "2",
+    "-pix_fmt",
+    "yuvj422p",
+    "-threads",
+    "2",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\realtime_inputs\\aug20_1280x720_5fps_mjpeg.avi"
+  ],
+  "input_bytes": 87399802,
+  "new_model_forwards": 0,
+  "source_scope_note": "Entire independently user-confirmed Aug20 continuous 920..1040s source window, UP12; no model inference during adaptation.",
+  "scope": "Full FOV. No ROI, rotation or model resize upstream; online decode/preprocessing/model/tracking/count on PYNQ. No physical camera test claimed."
+}

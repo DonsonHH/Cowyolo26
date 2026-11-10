@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/xilinx/jupyter_notebooks/cow_submission_budget_20261110_v6/runtime/counting/realtime.py", line 581, in <module>
+    main()
+  File "/home/xilinx/jupyter_notebooks/cow_submission_budget_20261110_v6/runtime/counting/realtime.py", line 576, in main
+    result = run(args.source, json.loads(args.config.read_text(encoding="utf-8-sig")), args.output, args.source_kind)
+  File "/home/xilinx/jupyter_notebooks/cow_submission_budget_20261110_v6/runtime/counting/realtime.py", line 410, in run
+    raise ValueError(f'Scheduled global frame {next_scheduled_frame0} unavailable; observed {sequence}')
+ValueError: Scheduled global frame 108 unavailable; observed 110

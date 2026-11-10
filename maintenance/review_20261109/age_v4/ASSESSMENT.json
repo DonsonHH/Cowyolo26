@@ -1,0 +1,758 @@
+{
+  "status": "COMPLETED_CLOUD_EVIDENCE_REVIEW",
+  "source_package_sha256": "33f2a9572394638fc442da608795bc2f1f5156b387f5e62605ca8136f268c380",
+  "archive_sha256": "f19e99f27f86fd19885509d9653eededafb29da261248a444a7827303166fa24",
+  "batch_protocol_sha256": "ff7c0b21e864d843e432e1052862bddec63846abd498ea552bd44701a66752c5",
+  "cases": [
+    {
+      "case": "aug14_age_v4_r1",
+      "run_id": "0a759005-65da-4129-ac66-c481f65842f5",
+      "directional_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "user_known_direction_reference": {
+        "known_direction": "DOWN",
+        "expected_known_direction_total": 12,
+        "source_reference": "previous user-confirmed total; no new timed GT",
+        "repeat_is_not_an_independent_animal_sample": true
+      },
+      "output_directory_binding": "direct terminal receipt",
+      "known_direction_total_agrees": true,
+      "integrity_checks": {
+        "terminal_exit_zero": true,
+        "pre_post_dependencies_verified": true,
+        "run_and_launch_identity": true,
+        "actual_output_path": true,
+        "output_dir_if_recorded_matches": true,
+        "unchanged_batch_protocol": true,
+        "source_package_matches": true,
+        "config_matches": true,
+        "input_and_model_match": true,
+        "completed_runtime": true,
+        "captured_all_frames": true,
+        "clean_eof": true,
+        "all_scopes_present": true,
+        "unique_event_ids": true,
+        "event_ledger_matches": true,
+        "frame_ledger_matches": true,
+        "source_order_increases": true,
+        "forward_ledger_matches": true,
+        "publication_ledger_matches": true,
+        "aug14_no_completed_preroll_events": true
+      },
+      "integrity_pass": true,
+      "original_clock_checks": {
+        "no_future_images": true,
+        "queue_at_most_two": true,
+        "capture_max_500ms": true,
+        "observation_p95_1000ms": true,
+        "observation_max_1500ms": true,
+        "event_publication_max_1000ms": true,
+        "drain_max_1s": true
+      },
+      "original_clock_pass": true,
+      "event_publication_max_ms": 608.1183700007387,
+      "observation_p95_upper_ms": 667.65,
+      "observation_max_ms": 979.7757720007212,
+      "capture_lateness_max_ms": 209.40689999952156,
+      "drain_s": 0.6714054750005687,
+      "stream_wall_s": 81.07140547500057,
+      "actual_global_observation_hz": 2.812335602968013,
+      "model_forwards": 232,
+      "global_forwards": 228,
+      "local_forwards": 3,
+      "historical_runtime_500ms_flag": false,
+      "history_selection_switch_threshold_s": 0.3,
+      "history_age_guard_overrides": 3,
+      "capture_enqueue_lock_wait_ms": {
+        "count": 403,
+        "mean_ms": 0.035592153851548326,
+        "maximum_ms": 0.07510399882448837,
+        "p50_ms": 0.03382300019438844,
+        "p95_ms": 0.046634499631181825,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 403
+      },
+      "formal_event_precision_recall_verified": false,
+      "new_sensor_transport_verified": false,
+      "raw_summary_sha256": "42188dc01521eb2648cafe147ca3b18d45cdff7f2594ac742ef9f381e90a265b",
+      "output_sha256": {
+        "summary.json": "42188dc01521eb2648cafe147ca3b18d45cdff7f2594ac742ef9f381e90a265b",
+        "events.jsonl": "b166579b57836013a26e4982feef9b2371ee430b30377cd50ea577806e3b25a6",
+        "frames.jsonl": "8ac7dcc90b1c28809f306c90e94c64bfdc6ab4d58a412e918d638fcb1b1bf36a",
+        "uncertain.jsonl": "e96759f2a75ec361b8d0694067350de5e4b67230f34bb1e3b7aae85ff65a6e3b",
+        "transform.json": "a265743a373e76287b2ddbc39414e41c531149f64a6d3c83ca3ec45308b16f9f"
+      }
+    },
+    {
+      "case": "aug15_age_v4_r1",
+      "run_id": "428b58d3-ecfd-4a1c-bfbb-995895ebf518",
+      "directional_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "user_known_direction_reference": {
+        "known_direction": "DOWN",
+        "expected_known_direction_total": 12,
+        "source_reference": "previous user-confirmed total; no new timed GT",
+        "repeat_is_not_an_independent_animal_sample": true
+      },
+      "output_directory_binding": "direct terminal receipt",
+      "known_direction_total_agrees": true,
+      "integrity_checks": {
+        "terminal_exit_zero": true,
+        "pre_post_dependencies_verified": true,
+        "run_and_launch_identity": true,
+        "actual_output_path": true,
+        "output_dir_if_recorded_matches": true,
+        "unchanged_batch_protocol": true,
+        "source_package_matches": true,
+        "config_matches": true,
+        "input_and_model_match": true,
+        "completed_runtime": true,
+        "captured_all_frames": true,
+        "clean_eof": true,
+        "all_scopes_present": true,
+        "unique_event_ids": true,
+        "event_ledger_matches": true,
+        "frame_ledger_matches": true,
+        "source_order_increases": true,
+        "forward_ledger_matches": true,
+        "publication_ledger_matches": true,
+        "aug14_no_completed_preroll_events": true
+      },
+      "integrity_pass": true,
+      "original_clock_checks": {
+        "no_future_images": true,
+        "queue_at_most_two": true,
+        "capture_max_500ms": true,
+        "observation_p95_1000ms": true,
+        "observation_max_1500ms": true,
+        "event_publication_max_1000ms": true,
+        "drain_max_1s": true
+      },
+      "original_clock_pass": true,
+      "event_publication_max_ms": 621.1126779999177,
+      "observation_p95_upper_ms": 647.0,
+      "observation_max_ms": 971.8300210006419,
+      "capture_lateness_max_ms": 253.11929899908137,
+      "drain_s": 0.5578089300001068,
+      "stream_wall_s": 130.1578089300001,
+      "actual_global_observation_hz": 2.8888009339663654,
+      "model_forwards": 384,
+      "global_forwards": 376,
+      "local_forwards": 7,
+      "historical_runtime_500ms_flag": false,
+      "history_selection_switch_threshold_s": 0.3,
+      "history_age_guard_overrides": 3,
+      "capture_enqueue_lock_wait_ms": {
+        "count": 649,
+        "mean_ms": 0.036347853635094816,
+        "maximum_ms": 0.07873499998822808,
+        "p50_ms": 0.03417300104047172,
+        "p95_ms": 0.048719198821345344,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 649
+      },
+      "formal_event_precision_recall_verified": false,
+      "new_sensor_transport_verified": false,
+      "raw_summary_sha256": "db254f5f9d6ed4f1dde8518e1f94cd0b6d82052b19af386a0866c1f449a46f06",
+      "output_sha256": {
+        "summary.json": "db254f5f9d6ed4f1dde8518e1f94cd0b6d82052b19af386a0866c1f449a46f06",
+        "events.jsonl": "aa12daba75b7a9f917d58bd16b2d4a22b52e21ee49b2634de4821e0c16c2ca77",
+        "frames.jsonl": "f0d5bee321d6a16c3659632565a50f80be1357115064706925ae1273bec3bd7c",
+        "uncertain.jsonl": "4fe43866485226c913853b55491e7b34cb6f47ca138cdc1a463c1240cf542bb9",
+        "transform.json": "a265743a373e76287b2ddbc39414e41c531149f64a6d3c83ca3ec45308b16f9f"
+      }
+    },
+    {
+      "case": "aug19_age_v4_r1",
+      "run_id": "28043c0e-5260-4a4e-b5a8-d3d450abecb2",
+      "directional_counts": {
+        "UP": 11,
+        "DOWN": 0
+      },
+      "user_known_direction_reference": {
+        "known_direction": "UP",
+        "expected_known_direction_total": 11,
+        "source_reference": "previous user-confirmed total; no new timed GT",
+        "repeat_is_not_an_independent_animal_sample": true
+      },
+      "output_directory_binding": "direct terminal receipt",
+      "known_direction_total_agrees": true,
+      "integrity_checks": {
+        "terminal_exit_zero": true,
+        "pre_post_dependencies_verified": true,
+        "run_and_launch_identity": true,
+        "actual_output_path": true,
+        "output_dir_if_recorded_matches": true,
+        "unchanged_batch_protocol": true,
+        "source_package_matches": true,
+        "config_matches": true,
+        "input_and_model_match": true,
+        "completed_runtime": true,
+        "captured_all_frames": true,
+        "clean_eof": true,
+        "all_scopes_present": true,
+        "unique_event_ids": true,
+        "event_ledger_matches": true,
+        "frame_ledger_matches": true,
+        "source_order_increases": true,
+        "forward_ledger_matches": true,
+        "publication_ledger_matches": true,
+        "aug14_no_completed_preroll_events": true
+      },
+      "integrity_pass": true,
+      "original_clock_checks": {
+        "no_future_images": true,
+        "queue_at_most_two": true,
+        "capture_max_500ms": true,
+        "observation_p95_1000ms": true,
+        "observation_max_1500ms": true,
+        "event_publication_max_1000ms": true,
+        "drain_max_1s": true
+      },
+      "original_clock_pass": true,
+      "event_publication_max_ms": 889.6980249992339,
+      "observation_p95_upper_ms": 628.5999999999999,
+      "observation_max_ms": 921.9657249996089,
+      "capture_lateness_max_ms": 148.92045999840775,
+      "drain_s": 0.7300817489987708,
+      "stream_wall_s": 81.53008174899878,
+      "actual_global_observation_hz": 2.9069025188719433,
+      "model_forwards": 247,
+      "global_forwards": 237,
+      "local_forwards": 9,
+      "historical_runtime_500ms_flag": false,
+      "history_selection_switch_threshold_s": 0.3,
+      "history_age_guard_overrides": 2,
+      "capture_enqueue_lock_wait_ms": {
+        "count": 405,
+        "mean_ms": 0.03621793334730929,
+        "maximum_ms": 0.2968990011140704,
+        "p50_ms": 0.03375500091351569,
+        "p95_ms": 0.045848998706787804,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 405
+      },
+      "formal_event_precision_recall_verified": false,
+      "new_sensor_transport_verified": false,
+      "raw_summary_sha256": "6cb0ec47bd0c464646e1cc9f86942001516b796d57c6a62ef15ba02397a5bb48",
+      "output_sha256": {
+        "summary.json": "6cb0ec47bd0c464646e1cc9f86942001516b796d57c6a62ef15ba02397a5bb48",
+        "events.jsonl": "03232e3dad9fe60c846e0135f95b758c387092704ead37470d7513b0c7feb525",
+        "frames.jsonl": "f8a808ba9bd64253e5adac7ffba5f2df414eb6ec1aa81d619218695d1a143ea7",
+        "uncertain.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "transform.json": "81846daa0560469551e5ef7a778f4115434613e2603c57176df746fb334baf8e"
+      }
+    },
+    {
+      "case": "aug20_age_v4_r1",
+      "run_id": "ac6905a4-20f6-4200-b64b-3f5086d6950f",
+      "directional_counts": {
+        "UP": 12,
+        "DOWN": 0
+      },
+      "user_known_direction_reference": {
+        "known_direction": "UP",
+        "expected_known_direction_total": 12,
+        "source_reference": "previous user-confirmed total; no new timed GT",
+        "repeat_is_not_an_independent_animal_sample": true
+      },
+      "output_directory_binding": "direct terminal receipt",
+      "known_direction_total_agrees": true,
+      "integrity_checks": {
+        "terminal_exit_zero": true,
+        "pre_post_dependencies_verified": true,
+        "run_and_launch_identity": true,
+        "actual_output_path": true,
+        "output_dir_if_recorded_matches": true,
+        "unchanged_batch_protocol": true,
+        "source_package_matches": true,
+        "config_matches": true,
+        "input_and_model_match": true,
+        "completed_runtime": true,
+        "captured_all_frames": true,
+        "clean_eof": true,
+        "all_scopes_present": true,
+        "unique_event_ids": true,
+        "event_ledger_matches": true,
+        "frame_ledger_matches": true,
+        "source_order_increases": true,
+        "forward_ledger_matches": true,
+        "publication_ledger_matches": true,
+        "aug14_no_completed_preroll_events": true
+      },
+      "integrity_pass": true,
+      "original_clock_checks": {
+        "no_future_images": true,
+        "queue_at_most_two": true,
+        "capture_max_500ms": true,
+        "observation_p95_1000ms": true,
+        "observation_max_1500ms": true,
+        "event_publication_max_1000ms": true,
+        "drain_max_1s": true
+      },
+      "original_clock_pass": true,
+      "event_publication_max_ms": 890.9911890004878,
+      "observation_p95_upper_ms": 782.9499999999999,
+      "observation_max_ms": 958.041197998682,
+      "capture_lateness_max_ms": 133.69593099923804,
+      "drain_s": 0.45157151399907036,
+      "stream_wall_s": 120.05157151399908,
+      "actual_global_observation_hz": 2.8987542237997284,
+      "model_forwards": 369,
+      "global_forwards": 348,
+      "local_forwards": 20,
+      "historical_runtime_500ms_flag": false,
+      "history_selection_switch_threshold_s": 0.3,
+      "history_age_guard_overrides": 5,
+      "capture_enqueue_lock_wait_ms": {
+        "count": 599,
+        "mean_ms": 0.03596415519620582,
+        "maximum_ms": 0.11339299999235664,
+        "p50_ms": 0.03352000021550339,
+        "p95_ms": 0.047049399654497406,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 599
+      },
+      "formal_event_precision_recall_verified": false,
+      "new_sensor_transport_verified": false,
+      "raw_summary_sha256": "e9f082311b2e87502340feedf5cb4a8dc264b7b8c47e89479bf943a60695c22c",
+      "output_sha256": {
+        "summary.json": "e9f082311b2e87502340feedf5cb4a8dc264b7b8c47e89479bf943a60695c22c",
+        "events.jsonl": "dd4400c30f020381b8a7a31fd2246edd658a93b096ff9d9b76aa8517a2b2bdab",
+        "frames.jsonl": "a964cddd49514425e0988837eacf13cef66d4f0784e20fe0172da359e15aca17",
+        "uncertain.jsonl": "d47415d9d8139254c5b2b6d6be3ffda0106410bd7f1fee53e1e7af2e8253c9bd",
+        "transform.json": "81846daa0560469551e5ef7a778f4115434613e2603c57176df746fb334baf8e"
+      }
+    },
+    {
+      "case": "aug14_age_v4_r2",
+      "run_id": "5029245c-d0dd-4f3c-870d-9c889461f7d6",
+      "directional_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "user_known_direction_reference": {
+        "known_direction": "DOWN",
+        "expected_known_direction_total": 12,
+        "source_reference": "previous user-confirmed total; no new timed GT",
+        "repeat_is_not_an_independent_animal_sample": true
+      },
+      "output_directory_binding": "direct terminal receipt",
+      "known_direction_total_agrees": true,
+      "integrity_checks": {
+        "terminal_exit_zero": true,
+        "pre_post_dependencies_verified": true,
+        "run_and_launch_identity": true,
+        "actual_output_path": true,
+        "output_dir_if_recorded_matches": true,
+        "unchanged_batch_protocol": true,
+        "source_package_matches": true,
+        "config_matches": true,
+        "input_and_model_match": true,
+        "completed_runtime": true,
+        "captured_all_frames": true,
+        "clean_eof": true,
+        "all_scopes_present": true,
+        "unique_event_ids": true,
+        "event_ledger_matches": true,
+        "frame_ledger_matches": true,
+        "source_order_increases": true,
+        "forward_ledger_matches": true,
+        "publication_ledger_matches": true,
+        "aug14_no_completed_preroll_events": true
+      },
+      "integrity_pass": true,
+      "original_clock_checks": {
+        "no_future_images": true,
+        "queue_at_most_two": true,
+        "capture_max_500ms": true,
+        "observation_p95_1000ms": true,
+        "observation_max_1500ms": true,
+        "event_publication_max_1000ms": true,
+        "drain_max_1s": true
+      },
+      "original_clock_pass": true,
+      "event_publication_max_ms": 594.3135299985443,
+      "observation_p95_upper_ms": 645.0,
+      "observation_max_ms": 925.9762769997906,
+      "capture_lateness_max_ms": 144.94489800017618,
+      "drain_s": 0.7087027409994278,
+      "stream_wall_s": 81.10870274099943,
+      "actual_global_observation_hz": 2.8233715034409417,
+      "model_forwards": 234,
+      "global_forwards": 229,
+      "local_forwards": 4,
+      "historical_runtime_500ms_flag": false,
+      "history_selection_switch_threshold_s": 0.3,
+      "history_age_guard_overrides": 4,
+      "capture_enqueue_lock_wait_ms": {
+        "count": 403,
+        "mean_ms": 0.03575418607850915,
+        "maximum_ms": 0.1624710002943175,
+        "p50_ms": 0.03340399962326046,
+        "p95_ms": 0.04875370013905922,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 403
+      },
+      "formal_event_precision_recall_verified": false,
+      "new_sensor_transport_verified": false,
+      "raw_summary_sha256": "ab78567dc5f087d62856a9b00488a45a91c251f1341bee20b1321d00ea20f1cc",
+      "output_sha256": {
+        "summary.json": "ab78567dc5f087d62856a9b00488a45a91c251f1341bee20b1321d00ea20f1cc",
+        "events.jsonl": "9c663b813addb8034ec865076169a15a8f11b42991a6c235da634d9380d35546",
+        "frames.jsonl": "c39a9f10f7c81f8a6bcf6ab30fbaf783fb84cd855482794af9185b6b0fb7dc5c",
+        "uncertain.jsonl": "decafd100d6010360c3d35c0e6e285e0fe80bac9a8d3d40b916fb90f078ce4eb",
+        "transform.json": "a265743a373e76287b2ddbc39414e41c531149f64a6d3c83ca3ec45308b16f9f"
+      }
+    },
+    {
+      "case": "aug15_age_v4_r2",
+      "run_id": "03c0ad26-c7db-4275-8b8c-1be5f18e0092",
+      "directional_counts": {
+        "DOWN": 12,
+        "UP": 0
+      },
+      "user_known_direction_reference": {
+        "known_direction": "DOWN",
+        "expected_known_direction_total": 12,
+        "source_reference": "previous user-confirmed total; no new timed GT",
+        "repeat_is_not_an_independent_animal_sample": true
+      },
+      "output_directory_binding": "direct terminal receipt",
+      "known_direction_total_agrees": true,
+      "integrity_checks": {
+        "terminal_exit_zero": true,
+        "pre_post_dependencies_verified": true,
+        "run_and_launch_identity": true,
+        "actual_output_path": true,
+        "output_dir_if_recorded_matches": true,
+        "unchanged_batch_protocol": true,
+        "source_package_matches": true,
+        "config_matches": true,
+        "input_and_model_match": true,
+        "completed_runtime": true,
+        "captured_all_frames": true,
+        "clean_eof": true,
+        "all_scopes_present": true,
+        "unique_event_ids": true,
+        "event_ledger_matches": true,
+        "frame_ledger_matches": true,
+        "source_order_increases": true,
+        "forward_ledger_matches": true,
+        "publication_ledger_matches": true,
+        "aug14_no_completed_preroll_events": true
+      },
+      "integrity_pass": true,
+      "original_clock_checks": {
+        "no_future_images": true,
+        "queue_at_most_two": true,
+        "capture_max_500ms": true,
+        "observation_p95_1000ms": true,
+        "observation_max_1500ms": true,
+        "event_publication_max_1000ms": true,
+        "drain_max_1s": true
+      },
+      "original_clock_pass": true,
+      "event_publication_max_ms": 627.5778370018088,
+      "observation_p95_upper_ms": 641.1500000000001,
+      "observation_max_ms": 893.5200559990335,
+      "capture_lateness_max_ms": 228.30183299993223,
+      "drain_s": 0.5532667120009194,
+      "stream_wall_s": 130.1532667120009,
+      "actual_global_observation_hz": 2.919634747553837,
+      "model_forwards": 385,
+      "global_forwards": 380,
+      "local_forwards": 4,
+      "historical_runtime_500ms_flag": false,
+      "history_selection_switch_threshold_s": 0.3,
+      "history_age_guard_overrides": 1,
+      "capture_enqueue_lock_wait_ms": {
+        "count": 649,
+        "mean_ms": 0.0365943297542806,
+        "maximum_ms": 0.17506800031696912,
+        "p50_ms": 0.03369299884070642,
+        "p95_ms": 0.05004319973522798,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 649
+      },
+      "formal_event_precision_recall_verified": false,
+      "new_sensor_transport_verified": false,
+      "raw_summary_sha256": "f291b6f953568dec5e5aa4e7e62a62e81197b34ceb0fc1de6872fce5782f17ad",
+      "output_sha256": {
+        "summary.json": "f291b6f953568dec5e5aa4e7e62a62e81197b34ceb0fc1de6872fce5782f17ad",
+        "events.jsonl": "1c7be30e16480e420ecaa735ead4dde7cd55e86e31eac51c8c06a4922aa53789",
+        "frames.jsonl": "57b07156eb1755d9a2f5454f76f0e9902f55cbc3d15f5aa9727a1b9914cc9890",
+        "uncertain.jsonl": "fa681ffc22aa97896997159f1dee7155c83a892d0b56d6db65ab0d3b4fb03c2a",
+        "transform.json": "a265743a373e76287b2ddbc39414e41c531149f64a6d3c83ca3ec45308b16f9f"
+      }
+    },
+    {
+      "case": "aug19_age_v4_r2",
+      "run_id": "91f88b8c-b3eb-488e-a916-e3f0a60f1562",
+      "directional_counts": {
+        "UP": 11,
+        "DOWN": 0
+      },
+      "user_known_direction_reference": {
+        "known_direction": "UP",
+        "expected_known_direction_total": 11,
+        "source_reference": "previous user-confirmed total; no new timed GT",
+        "repeat_is_not_an_independent_animal_sample": true
+      },
+      "output_directory_binding": "direct terminal receipt",
+      "known_direction_total_agrees": true,
+      "integrity_checks": {
+        "terminal_exit_zero": true,
+        "pre_post_dependencies_verified": true,
+        "run_and_launch_identity": true,
+        "actual_output_path": true,
+        "output_dir_if_recorded_matches": true,
+        "unchanged_batch_protocol": true,
+        "source_package_matches": true,
+        "config_matches": true,
+        "input_and_model_match": true,
+        "completed_runtime": true,
+        "captured_all_frames": true,
+        "clean_eof": true,
+        "all_scopes_present": true,
+        "unique_event_ids": true,
+        "event_ledger_matches": true,
+        "frame_ledger_matches": true,
+        "source_order_increases": true,
+        "forward_ledger_matches": true,
+        "publication_ledger_matches": true,
+        "aug14_no_completed_preroll_events": true
+      },
+      "integrity_pass": true,
+      "original_clock_checks": {
+        "no_future_images": true,
+        "queue_at_most_two": true,
+        "capture_max_500ms": true,
+        "observation_p95_1000ms": true,
+        "observation_max_1500ms": true,
+        "event_publication_max_1000ms": true,
+        "drain_max_1s": true
+      },
+      "original_clock_pass": true,
+      "event_publication_max_ms": 915.5459939993307,
+      "observation_p95_upper_ms": 635.0,
+      "observation_max_ms": 942.812777000654,
+      "capture_lateness_max_ms": 194.76844599921606,
+      "drain_s": 0.5047171960006267,
+      "stream_wall_s": 81.30471719600064,
+      "actual_global_observation_hz": 2.9026606098521524,
+      "model_forwards": 247,
+      "global_forwards": 236,
+      "local_forwards": 10,
+      "historical_runtime_500ms_flag": false,
+      "history_selection_switch_threshold_s": 0.3,
+      "history_age_guard_overrides": 2,
+      "capture_enqueue_lock_wait_ms": {
+        "count": 405,
+        "mean_ms": 0.03602990871985202,
+        "maximum_ms": 0.10412400115455966,
+        "p50_ms": 0.03373000072315335,
+        "p95_ms": 0.05073719985375633,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 405
+      },
+      "formal_event_precision_recall_verified": false,
+      "new_sensor_transport_verified": false,
+      "raw_summary_sha256": "06f9f7bb8bf52da34b2f8d0ffdf5403963ba74b88043a3c5dfc6d8124ef88a50",
+      "output_sha256": {
+        "summary.json": "06f9f7bb8bf52da34b2f8d0ffdf5403963ba74b88043a3c5dfc6d8124ef88a50",
+        "events.jsonl": "55b2431659f83782d015907f6bc19299ddadd1193daedc1a6ecc83c03d5ae964",
+        "frames.jsonl": "cf506e275a3988dc6e550ac867e447bf7d8a476af23d1976848abfb9895d868d",
+        "uncertain.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "transform.json": "81846daa0560469551e5ef7a778f4115434613e2603c57176df746fb334baf8e"
+      }
+    },
+    {
+      "case": "aug20_age_v4_r2",
+      "run_id": "94cb0682-842f-4677-a3c3-b0a54e35d791",
+      "directional_counts": {
+        "UP": 12,
+        "DOWN": 0
+      },
+      "user_known_direction_reference": {
+        "known_direction": "UP",
+        "expected_known_direction_total": 12,
+        "source_reference": "previous user-confirmed total; no new timed GT",
+        "repeat_is_not_an_independent_animal_sample": true
+      },
+      "output_directory_binding": "direct terminal receipt",
+      "known_direction_total_agrees": true,
+      "integrity_checks": {
+        "terminal_exit_zero": true,
+        "pre_post_dependencies_verified": true,
+        "run_and_launch_identity": true,
+        "actual_output_path": true,
+        "output_dir_if_recorded_matches": true,
+        "unchanged_batch_protocol": true,
+        "source_package_matches": true,
+        "config_matches": true,
+        "input_and_model_match": true,
+        "completed_runtime": true,
+        "captured_all_frames": true,
+        "clean_eof": true,
+        "all_scopes_present": true,
+        "unique_event_ids": true,
+        "event_ledger_matches": true,
+        "frame_ledger_matches": true,
+        "source_order_increases": true,
+        "forward_ledger_matches": true,
+        "publication_ledger_matches": true,
+        "aug14_no_completed_preroll_events": true
+      },
+      "integrity_pass": true,
+      "original_clock_checks": {
+        "no_future_images": true,
+        "queue_at_most_two": true,
+        "capture_max_500ms": true,
+        "observation_p95_1000ms": true,
+        "observation_max_1500ms": true,
+        "event_publication_max_1000ms": true,
+        "drain_max_1s": true
+      },
+      "original_clock_pass": true,
+      "event_publication_max_ms": 847.4183210000774,
+      "observation_p95_upper_ms": 841.5999999999999,
+      "observation_max_ms": 940.4833800017514,
+      "capture_lateness_max_ms": 125.10087900045619,
+      "drain_s": 0.5644384590017495,
+      "stream_wall_s": 120.16443845900176,
+      "actual_global_observation_hz": 2.80449028283005,
+      "model_forwards": 370,
+      "global_forwards": 337,
+      "local_forwards": 32,
+      "historical_runtime_500ms_flag": false,
+      "history_selection_switch_threshold_s": 0.3,
+      "history_age_guard_overrides": 6,
+      "capture_enqueue_lock_wait_ms": {
+        "count": 599,
+        "mean_ms": 0.03620975294993111,
+        "maximum_ms": 0.11267199988651555,
+        "p50_ms": 0.03402500078664161,
+        "p95_ms": 0.04686180109274574,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 599
+      },
+      "formal_event_precision_recall_verified": false,
+      "new_sensor_transport_verified": false,
+      "raw_summary_sha256": "ef3fb5a41f8899ffc9ea63b26a860c3396f13d7174923cfce36b7bb60d83b33a",
+      "output_sha256": {
+        "summary.json": "ef3fb5a41f8899ffc9ea63b26a860c3396f13d7174923cfce36b7bb60d83b33a",
+        "events.jsonl": "b32b8140aadbdce418002bbad9a9f7399f1765b57cebc7d3c97d503abdb1e597",
+        "frames.jsonl": "d51c2e6700e825d269992c66ac404e05e2c71ecdf4037322ba1ad3c697d5b5a3",
+        "uncertain.jsonl": "6e4168230792ebf82e2436a91d748baa23b8842489b68784b5e4007d6df5b088",
+        "transform.json": "81846daa0560469551e5ef7a778f4115434613e2603c57176df746fb334baf8e"
+      }
+    }
+  ],
+  "source_locator_probes": [
+    {
+      "case": "aug14",
+      "sha256": "7b2bcce4f700e4c72ff588f04f8254dd88f77c7dbbec327b917cf4c9db402fa9",
+      "frames": 403,
+      "fps": 5.0,
+      "first_and_last_frame_readable": true
+    },
+    {
+      "case": "aug15",
+      "sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+      "frames": 649,
+      "fps": 5.0,
+      "first_and_last_frame_readable": true
+    },
+    {
+      "case": "aug19",
+      "sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+      "frames": 405,
+      "fps": 5.0,
+      "first_and_last_frame_readable": true
+    },
+    {
+      "case": "aug20",
+      "sha256": "3b68eae39d9e936e68e7c4d78bd8d18142623825c8aa3594fe273cbb36234f74",
+      "frames": 599,
+      "fps": 5.0,
+      "first_and_last_frame_readable": true
+    }
+  ],
+  "source_locator_pass": true,
+  "all_integrity_pass": true,
+  "all_known_direction_totals_agree": true,
+  "all_original_clock_pass": true,
+  "distinct_development_clips": 4,
+  "user_confirmed_passages_per_four_clips": 47,
+  "repeated_playbacks_are_not_new_animals": true,
+  "event_F1": null,
+  "formal_event_reference_status": "not available; totals only",
+  "new_model_forwards": 0,
+  "by_clip": {
+    "aug14": {
+      "known_direction": "DOWN",
+      "user_total": 12,
+      "repeat_counts": [
+        12,
+        12
+      ],
+      "worst_event_publication_ms": 608.1183700007387,
+      "worst_observation_p95_upper_ms": 667.65,
+      "worst_observation_ms": 979.7757720007212,
+      "actual_global_observation_hz_min_max": [
+        2.812335602968013,
+        2.8233715034409417
+      ]
+    },
+    "aug15": {
+      "known_direction": "DOWN",
+      "user_total": 12,
+      "repeat_counts": [
+        12,
+        12
+      ],
+      "worst_event_publication_ms": 627.5778370018088,
+      "worst_observation_p95_upper_ms": 647.0,
+      "worst_observation_ms": 971.8300210006419,
+      "actual_global_observation_hz_min_max": [
+        2.8888009339663654,
+        2.919634747553837
+      ]
+    },
+    "aug19": {
+      "known_direction": "UP",
+      "user_total": 11,
+      "repeat_counts": [
+        11,
+        11
+      ],
+      "worst_event_publication_ms": 915.5459939993307,
+      "worst_observation_p95_upper_ms": 635.0,
+      "worst_observation_ms": 942.812777000654,
+      "actual_global_observation_hz_min_max": [
+        2.9026606098521524,
+        2.9069025188719433
+      ]
+    },
+    "aug20": {
+      "known_direction": "UP",
+      "user_total": 12,
+      "repeat_counts": [
+        12,
+        12
+      ],
+      "worst_event_publication_ms": 890.9911890004878,
+      "worst_observation_p95_upper_ms": 841.5999999999999,
+      "worst_observation_ms": 958.041197998682,
+      "actual_global_observation_hz_min_max": [
+        2.80449028283005,
+        2.8987542237997284
+      ]
+    }
+  }
+}

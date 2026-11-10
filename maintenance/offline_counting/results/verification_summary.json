@@ -1,0 +1,213 @@
+{
+  "overall_status": "PHYSICAL_CHANNEL_V4_NEW_CAMERA_COUNT10_VS_USER11_NOT_ACCEPTED",
+  "R1_native_build": "PASS_CLEAN_BUILD_AND_LOAD",
+  "PC_tests": {
+    "review_fixed_python_tests": 62,
+    "log": "review_fixes_final_pc.log",
+    "latest_total": 87
+  },
+  "board_tests": 72,
+  "board_complete_video_runs": [
+    {
+      "name": "v1",
+      "frames": 403,
+      "IN": 12,
+      "OUT": 0
+    },
+    {
+      "name": "v2",
+      "frames": 403,
+      "IN": 12,
+      "OUT": 0
+    },
+    {
+      "name": "v3 reviewed code",
+      "frames": 403,
+      "IN": 12,
+      "OUT": 0,
+      "overall_elapsed_s": 740.4251998839973
+    }
+  ],
+  "board_v2_wall_throughput_fps": 0.5593337824322309,
+  "board_peak_rss_mib": 262.3515625,
+  "maximum_counter_state_count": 15,
+  "camera_or_real_RFID_verified": false,
+  "independent_new_video_accuracy_verified": false,
+  "reviewed_human_events_received": false,
+  "review_source_frame0_interval": [
+    8912,
+    10873
+  ],
+  "review_url": "http://127.0.0.1:8780/",
+  "no_models_datasets_or_videos_uploaded": true,
+  "source_window_video_render": {
+    "frames": 1962,
+    "duration_s": 78.48,
+    "model_forwards": 0,
+    "path": "C:\\Users\\Donson\\Documents\\ChatGPT\\奶牛\\offline_counting_20261031\\board320_count12_review.mp4",
+    "sha256": "d03901081fbd0bc131e9b37a4f82dddde4d17a3f1856d19b728a3e4917d1efb7"
+  },
+  "pc_runtime_versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.2.6",
+    "opencv": "4.12.0"
+  },
+  "UI_VM_tests": 5,
+  "user_accepted_output_video": true,
+  "original_clip_manual_JSON_required": false,
+  "original_demo_acceptance_record": "user_video_acceptance.json",
+  "board_v3_wall_throughput_fps": 0.5442818532690921,
+  "recorded_at_UTC": "2026-11-01T06:35:04.781369+00:00",
+  "current_reference_mode": "USER_ACCEPTED_ANNOTATED_VIDEO_FOR_ORIGINAL_SCOPE",
+  "independent_R5_status": "BASELINE_FAST_PASSAGE_REPAIRED_FINAL_CAMERA24_DATE_VALIDATION_FAILED",
+  "current_review_gate_metadata_bound": true,
+  "PTS_sampling_and_real_time_motion_verified": true,
+  "board_v3_counts": {
+    "IN": 12,
+    "OUT": 0,
+    "NET": 12
+  },
+  "board_v3_overall_elapsed_s": 740.4251998839973,
+  "independent_R5_summary": "r5_verification_summary.json",
+  "independent_R5_cases": {
+    "aug15_positive_v2": {
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "model_forwards": 649,
+      "decoded_frames": 3244
+    },
+    "aug16_partial_v1": {
+      "counts": {
+        "IN": 6,
+        "OUT": 0,
+        "NET": 6
+      },
+      "model_forwards": 171,
+      "decoded_frames": 851
+    },
+    "aug18_idle_v2": {
+      "counts": {
+        "IN": 0,
+        "OUT": 0,
+        "NET": 0
+      },
+      "model_forwards": 149,
+      "decoded_frames": 741
+    }
+  },
+  "independent_R5_totals": {
+    "decoded_frames": 4836,
+    "model_forwards": 969,
+    "IN": 17,
+    "OUT": 0,
+    "overall_elapsed_s_sum": 1726.3916969600032
+  },
+  "independent_R5_event_precision_recall_f1": null,
+  "new_session_human_confirmation_pending": false,
+  "original_review_page_required": false,
+  "board_tests_log": "polygon_v4_arm_tests.log",
+  "supervisor_mock_tests": 4,
+  "supervisor_mock_tests_log": "r5_supervisor_regression.log",
+  "completion_audit": "../COMPLETION_AUDIT.md",
+  "fast_passage_excerpt": "r5_fast_passage_excerpt.json",
+  "current_blocker": "Current source count mismatch10/11; diagnosis identifies one endpoint observation. Reference supplied, no longer blocked on previous dataset-choice question.",
+  "aug15_user_confirmation_received": true,
+  "aug15_user_confirmed_IN": 12,
+  "aug15_baseline_known_missed_passages": 1,
+  "fast_passage_repair_report": "../FAST_PASSAGE_FIX.md",
+  "fast_passage_pc_tests": 71,
+  "fast_passage_arm_tests": 46,
+  "fast_passage_candidate_profile": "counter-confirmation-v2",
+  "fast_passage_new_model_forwards": 0,
+  "independent_v2_status": "PURDUE_INITIAL_FULL_BOARD_BOTH_ZERO",
+  "latest_PC_tests": 102,
+  "latest_ARM_tests": 72,
+  "latest_clean_package_tests": 32,
+  "latest_test_logs": {
+    "PC": "polygon_v4_reviewed_pc_tests.log",
+    "ARM": "polygon_v4_arm_tests.log",
+    "package": "polygon_v4_clean_package.log",
+    "UI": "polygon_v4_reviewed_UI.log"
+  },
+  "camera24_v3": {
+    "calibration_day1": {
+      "human_IN": 1,
+      "actual_IN": 1,
+      "execution_mode": "ARM_DETECTION_CACHE_REPLAY",
+      "new_model_forwards": 0
+    },
+    "reserved_day2": {
+      "human_IN": 1,
+      "actual_IN": 0,
+      "OUT": 0,
+      "decoded_frames": 342,
+      "model_forwards": 57,
+      "overall_elapsed_s": 71.36830510999425,
+      "status": "COUNT_VALIDATION_FAILED"
+    },
+    "freeze": "../CAMERA24_V3_FREEZE.json",
+    "no_retuning_after_reserved_result": true,
+    "reference": "purdue_user_source_review.json",
+    "reserved_summary": "channel_v3_reserved_summary.json",
+    "failure_trace": "channel_v3_reserved_failure_trace.json"
+  },
+  "all_current_board_processes_exited": true,
+  "current_goal_accuracy_completed": false,
+  "current_round_new_board_model_forwards": 344,
+  "current_round_new_FP32_reference_forwards": 77,
+  "formal_timed_event_precision_recall_f1": null,
+  "historical_board_tests": {
+    "tests": 37,
+    "log": "review_fixes_board.log"
+  },
+  "frozen_failure_association_audit": {
+    "path": "channel_v3_association_audit.json",
+    "observations": 57,
+    "new_model_forwards": 0,
+    "new_video_decodes": 0,
+    "max_board_box_difference_px": 0,
+    "parameter_changes": false,
+    "independent_accuracy_retest": false,
+    "source_files_still_match_37_file_freeze": true
+  },
+  "independent_reference_intake": {
+    "audit": "reference_availability_audit.json",
+    "new_model_forwards": 0,
+    "new_image_or_video_pixels_read": 0,
+    "new_independent_event_reference_ready": false,
+    "pending_requirements": [
+      "raw_video_to_tracklet_source_mapping",
+      "full_passage_coverage_review",
+      "training_and_development_exposure_check"
+    ]
+  },
+  "latest_UI_polygon_tests": 7,
+  "camera2_v4": {
+    "native_frames": 2993,
+    "native_forwards": 599,
+    "counts_UP": 10,
+    "counts_DOWN": 0,
+    "human_UP": 11,
+    "overall_elapsed_s": 988.2514168120106,
+    "user_display_window_s": [
+      14,
+      95
+    ],
+    "displayed_original_frames": [
+      350,
+      2374
+    ],
+    "reference": "camera2_v4_user_reference.json",
+    "summary": "camera2_v4_summary.json",
+    "diagnosis": "camera2_v4_verification.json",
+    "full_case_status": "EXECUTION_COMPLETE_COUNT_NOT_ACCEPTED"
+  },
+  "historical_v3_test_logs": {
+    "PC": "channel_v3_pc_tests.log",
+    "ARM": "channel_v3_arm_tests.log",
+    "package": "channel_v3_clean_package.log"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "status": "PASS_FOUR_FIXED_PAIRS_NOT_VIDEO_COUNT_ACCURACY",
+  "started_UTC": "2026-11-02T03:33:04.977357+00:00",
+  "boot_id": "74725b6d-1f11-4cec-bb3f-f4fe8e08df77",
+  "model_forwards_completed": 10,
+  "video_decodes": 0,
+  "counting_performed": false,
+  "planned_warmup_forwards": 2,
+  "planned_formal_forward_calls": 8,
+  "completed_warmup_forwards": 2,
+  "completed_formal_forward_calls": 8,
+  "rows": [
+    {
+      "key": "frame_000840",
+      "input_tensor_sha256": "74f64cd9e91070f43b9c94dd7cfc751835214145a7133e266e32f256fa610649",
+      "complete_raw_bitwise_equal": true,
+      "max_absolute_difference": 0.0,
+      "tensor_to_raw_ms": 370.75762400036183,
+      "bgr_canvas_to_raw_ms": 362.75180200027535
+    },
+    {
+      "key": "frame_000850",
+      "input_tensor_sha256": "d040c85aa22ced1bdefce63a65a1539a28a1ad08760493d399883b356efc41a3",
+      "complete_raw_bitwise_equal": true,
+      "max_absolute_difference": 0.0,
+      "tensor_to_raw_ms": 370.78510700030165,
+      "bgr_canvas_to_raw_ms": 362.45218999920326
+    },
+    {
+      "key": "frame_000855",
+      "input_tensor_sha256": "ee2160801580f684f5761c2746573120b7b976bc5c868d2b0dd2972833dcae1e",
+      "complete_raw_bitwise_equal": true,
+      "max_absolute_difference": 0.0,
+      "tensor_to_raw_ms": 370.7476609997684,
+      "bgr_canvas_to_raw_ms": 364.4326519997776
+    },
+    {
+      "key": "frame_000860",
+      "input_tensor_sha256": "72b1a1b0924d049f2d552e7a036d784f9f20d9b440f624498992b2a6c72d1c5e",
+      "complete_raw_bitwise_equal": true,
+      "max_absolute_difference": 0.0,
+      "tensor_to_raw_ms": 371.79358799949114,
+      "bgr_canvas_to_raw_ms": 362.9113350007174
+    }
+  ],
+  "calls": [
+    {
+      "ordinal": 1,
+      "kind": "warmup_float32",
+      "elapsed_ms": 673.2810209996387
+    },
+    {
+      "ordinal": 2,
+      "kind": "warmup_bgr",
+      "elapsed_ms": 11531.340395999905
+    },
+    {
+      "ordinal": 3,
+      "kind": "formal_float32",
+      "elapsed_ms": 370.75762400036183
+    },
+    {
+      "ordinal": 4,
+      "kind": "formal_bgr",
+      "elapsed_ms": 362.75180200027535
+    },
+    {
+      "ordinal": 5,
+      "kind": "formal_float32",
+      "elapsed_ms": 370.78510700030165
+    },
+    {
+      "ordinal": 6,
+      "kind": "formal_bgr",
+      "elapsed_ms": 362.45218999920326
+    },
+    {
+      "ordinal": 7,
+      "kind": "formal_float32",
+      "elapsed_ms": 370.7476609997684
+    },
+    {
+      "ordinal": 8,
+      "kind": "formal_bgr",
+      "elapsed_ms": 364.4326519997776
+    },
+    {
+      "ordinal": 9,
+      "kind": "formal_float32",
+      "elapsed_ms": 371.79358799949114
+    },
+    {
+      "ordinal": 10,
+      "kind": "formal_bgr",
+      "elapsed_ms": 362.9113350007174
+    }
+  ],
+  "inflight_call": null,
+  "protocol_sha256": "bb2091e9263cade5441aff852606893de4e73fcdced7625dd32195aec934460d",
+  "phase": "COMPLETE"
+}

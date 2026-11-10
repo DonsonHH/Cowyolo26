@@ -1,0 +1,115 @@
+{
+  "reviewed_commit": "WORKTREE",
+  "review_html_sha256": "1b76fbb2250f42a33e47befc17d5da2bb7fde1a3cdb2306f2b00d343710f91b9",
+  "fixture_only": true,
+  "no_real_video_or_board_access": true,
+  "tests": 5,
+  "passed": 5,
+  "failed": 0,
+  "results": [
+    {
+      "name": "native_video_controls_lock_until_seeked",
+      "status": "PASS",
+      "actual": null,
+      "expected": null
+    },
+    {
+      "name": "annotation_uses_actual_source_pts_not_frame_div_fps",
+      "status": "PASS",
+      "actual": [
+        7.321,
+        7.9
+      ],
+      "expected": [
+        7.321,
+        7.9
+      ]
+    },
+    {
+      "name": "video_seek_blocks_annotation_before_seeked",
+      "status": "PASS",
+      "actual": null,
+      "expected": null,
+      "evidence": {
+        "frameLoading": true,
+        "entry": null,
+        "reportedFrame": 100,
+        "videoSeeking": true
+      }
+    },
+    {
+      "name": "review_overlay_uses_configured_gate",
+      "status": "PASS",
+      "actual": [
+        [
+          [
+            25,
+            20
+          ],
+          [
+            25,
+            80
+          ]
+        ],
+        [
+          [
+            75,
+            20
+          ],
+          [
+            75,
+            80
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          [
+            25,
+            20
+          ],
+          [
+            25,
+            80
+          ]
+        ],
+        [
+          [
+            75,
+            20
+          ],
+          [
+            75,
+            80
+          ]
+        ]
+      ],
+      "evidence": {
+        "configuredGate": {
+          "axis": "x",
+          "perpendicular_roi": [
+            0.2,
+            0.8
+          ],
+          "lower": 0.25,
+          "upper": 0.75
+        }
+      }
+    },
+    {
+      "name": "different_session_and_interval_do_not_auto_load_old_draft",
+      "status": "PASS",
+      "actual": [],
+      "expected": [],
+      "evidence": {
+        "storeKey": "cow-source-review-v2:[\"SAME_SOURCE_HASH\",\"sessionB\",100,200,\"y\",[0.34,0.75],0.4,0.6,\"torso-center-zones-source-pts-v1\"]",
+        "currentSession": "sessionB",
+        "currentScope": {
+          "start_frame0": 100,
+          "end_frame0": 200
+        },
+        "loadedEvents": []
+      }
+    }
+  ]
+}

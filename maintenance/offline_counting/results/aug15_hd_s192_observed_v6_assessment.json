@@ -1,0 +1,81 @@
+{
+  "status": "COMPLETED_EXTERNAL_PROTOCOL_ASSESSMENT",
+  "run_id": "b04d5596-9918-4cd5-ac61-9a037fedb45a",
+  "protocol_version": "bounded-count-publication-1s-v2",
+  "integrity_checks": {
+    "terminal_success": true,
+    "terminal_bound_to_run": true,
+    "runtime_completed": true,
+    "config_matches_freeze": true,
+    "config_matches_protocol_candidate": true,
+    "service_protocol_matches_freeze": true,
+    "source_matches_freeze": true,
+    "model_matches_freeze": true,
+    "plan_matches_freeze": true,
+    "runtime_assets_match_freeze": true,
+    "captured_all_declared_frames": true,
+    "processed_frame_rows_match": true,
+    "global_latency_covers_all_observations": true,
+    "row_run_ids_match": true,
+    "unique_event_ids": true,
+    "event_counts_match_summary": true,
+    "publication_count_matches": true,
+    "capture_clean_eof": true,
+    "all_forward_calls_accounted": true
+  },
+  "clock_checks": {
+    "no_future_frames": true,
+    "bounded_application_queue": true,
+    "capture_deadline": true,
+    "observation_p95_deadline": true,
+    "observation_max_deadline": true,
+    "event_publication_deadline": true,
+    "drain_deadline": true
+  },
+  "integrity_pass": true,
+  "service_clock_pass": true,
+  "user_directional_reference": {
+    "UP": null,
+    "DOWN": 12
+  },
+  "actual_directional_counts": {
+    "DOWN": 10,
+    "UP": 0
+  },
+  "count_reference_checks": {
+    "DOWN": false
+  },
+  "count_reference_pass": false,
+  "counts_and_service_pass": false,
+  "historical_runtime_500ms_clock_pass": false,
+  "event_precision_recall_verified": false,
+  "physical_camera_transport_verified": false,
+  "event_visual_review": "pending separate recorded-source inspection",
+  "stream_wall_elapsed_s": 129.95785602199976,
+  "observation_latency": {
+    "count": 605,
+    "maximum_ms": 805.5364179999742,
+    "p95_upper_bound_ms": 558.8,
+    "over_1000ms": 0,
+    "over_500ms": 63,
+    "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+    "retained_bin_count": 1002
+  },
+  "event_publication_age": {
+    "count": 10,
+    "mean_ms": 401.37515740061644,
+    "maximum_ms": 428.87171100119303,
+    "p50_ms": 398.46553600000334,
+    "p95_ms": 425.1516141013781,
+    "percentile_scope": "last 10000 processed frames",
+    "retained_samples": 10
+  },
+  "evidence_file_sha256": {
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\aug15_hd_s192_observed_v6\\result\\summary.json": "cc8fdd04920553c870ba15a5e89f420d0b6ba1bdd97d6f8ce876881937d0878b",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\aug15_hd_s192_observed_v6\\result\\events.jsonl": "d971151be4f2e527b839cf6979847baaadf3199083abf5ecf50ef695f94d7ace",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\aug15_hd_s192_observed_v6\\result\\frames.jsonl": "d27fe02ee76639a0ff94d0245972a3926b5fbce26f9d5163886b5415d4e9e4fc",
+    "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\aug15_hd_s192_observed_v6\\result\\status.json": "ba568ae55c9162ffe0743681b92b070fd81806fae794011057a6bfa309afe606",
+    "maintenance\\offline_counting\\AUG15_HD_S192_OBSERVED_V6_FREEZE.json": "2dfa2d709e1f78853dd586ee7be4b7eca9f64865716a728b6edb884de2077a9b",
+    "maintenance\\offline_counting\\REALTIME_BOUNDED_1S_V2_PROTOCOL.json": "b16e825228fc7b098f70926285150dbd32e1c220e05409c0c0f4e8c06fcf44d5"
+  }
+}

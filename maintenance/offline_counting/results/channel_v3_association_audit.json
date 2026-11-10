@@ -1,0 +1,2157 @@
+{
+  "debug_tag": "ASSOCIATION_AUDIT_20261101",
+  "purpose": "POST_HOC_FROZEN_FAILURE_ANALYSIS",
+  "source_summary_sha256": "64529feebadd62dc6d35304522e91d26181540756128910fdc83361675382439",
+  "source_frames_sha256": "a5aa445f5676f35efc952df1a5567c7d6236cadf8167bbe8f4f0e1262ef52ae4",
+  "source_video_sha256": "c67a675ca284da385c2bbb19300a2072ae20169ab1b78f7bd928437e65810b6e",
+  "source_run_id": "572bbb54-bab4-43a8-87b6-8a542a24d697",
+  "unchanged_config": {
+    "video_id": "cam24_2022-06-09_08-29-52_6079_75231_75573",
+    "session_id": "purdue_camera24_20220609_channel_v3",
+    "sample_hz": 5,
+    "decode_start_frame0": 0,
+    "scope_start_frame0": 0,
+    "end_frame0_exclusive": 342,
+    "axis": "x",
+    "perpendicular_roi": [
+      0.4,
+      1.0
+    ],
+    "in_direction": "A->B",
+    "detection_roi_xyxy": null,
+    "rotation_clockwise": 0,
+    "confidence": 0.2,
+    "cow_class_ids": [
+      0
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 2,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "o8",
+      "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+      "program": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/program",
+      "plan": "/home/xilinx/jupyter_notebooks/cow_research_o8_s320_qual_20261030/resident_plan/resident_plan.bin",
+      "size": 320
+    },
+    "track_only_in_channel": true,
+    "tracker": {
+      "track_high_thresh": 0.2,
+      "track_low_thresh": 0.1,
+      "new_track_thresh": 0.25,
+      "match_thresh": 0.8,
+      "fuse_score": false
+    }
+  },
+  "parameter_search_or_overrides": false,
+  "new_model_forwards": 0,
+  "new_video_decodes": 0,
+  "replayed_observations": 57,
+  "candidate_observations": 16,
+  "count_result": {
+    "IN": 0,
+    "OUT": 0
+  },
+  "actual_board_track_ids_match": true,
+  "maximum_board_box_difference_px": 0.0,
+  "original_solver_restored": true,
+  "counterfactual_matching_or_counting_performed": false,
+  "terminal_diagnostics": [
+    {
+      "session_id": "purdue_camera24_20220609_channel_v3",
+      "track_id": "0:1",
+      "time_s": 11.2,
+      "last_seen_s": 5.2,
+      "reason": "video_end",
+      "origin": "A",
+      "last_axis_position": 0.2989990472793579,
+      "status": "uncertain_or_truncated",
+      "counts_as_complete_passage": false
+    },
+    {
+      "session_id": "purdue_camera24_20220609_channel_v3",
+      "track_id": "0:3",
+      "time_s": 11.2,
+      "last_seen_s": 7.2,
+      "reason": "video_end",
+      "origin": "B",
+      "last_axis_position": 0.9020129203796386,
+      "status": "uncertain_or_truncated",
+      "counts_as_complete_passage": false
+    },
+    {
+      "session_id": "purdue_camera24_20220609_channel_v3",
+      "track_id": "0:4",
+      "time_s": 11.2,
+      "last_seen_s": 7.2,
+      "reason": "video_end",
+      "origin": "B",
+      "last_axis_position": 0.8600499471028645,
+      "status": "uncertain_or_truncated",
+      "counts_as_complete_passage": false
+    }
+  ],
+  "candidate_observation_trace": [
+    {
+      "source_frame0": 96,
+      "time_s": 3.2,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [],
+          "detections": [],
+          "cost_matrix": []
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            0,
+            0
+          ],
+          "matches": [],
+          "unmatched_tracks": [],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          250.82723999023438,
+          37.1341552734375,
+          815.1373291015625,
+          340.5266418457031,
+          0.2325453907251358,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {}
+    },
+    {
+      "source_frame0": 114,
+      "time_s": 3.8,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [],
+          "detections": [
+            {
+              "xyxy": [
+                0.0,
+                759.6253662109375,
+                425.06939697265625,
+                1078.1875
+              ],
+              "score": 0.3281870186328888,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": []
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            0,
+            1
+          ],
+          "matches": [],
+          "unmatched_tracks": [],
+          "unmatched_detections": [
+            0
+          ]
+        }
+      ],
+      "raw_candidates": [
+        [
+          0.0,
+          759.6253051757812,
+          425.06939697265625,
+          1078.1873779296875,
+          0.3281870186328888,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {}
+    },
+    {
+      "source_frame0": 120,
+      "time_s": 4.0,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [],
+          "detections": [
+            {
+              "xyxy": [
+                0.0,
+                759.6253662109375,
+                338.17120361328125,
+                1078.1875
+              ],
+              "score": 0.38281959295272827,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": []
+        },
+        {
+          "stage": "_unconfirmed_association",
+          "tracks": [
+            {
+              "id": 1,
+              "state": 1,
+              "activated": false,
+              "predicted_xyxy": [
+                0.0,
+                759.6253662109375,
+                425.06939697265625,
+                1078.1875
+              ],
+              "last_observed_s": 3.8,
+              "age_s": 0.20000000000000018,
+              "score": 0.3281870186328888
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                0.0,
+                759.6253662109375,
+                338.17120361328125,
+                1078.1875
+              ],
+              "score": 0.38281959295272827,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.20443308353424072
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            0,
+            1
+          ],
+          "matches": [],
+          "unmatched_tracks": [],
+          "unmatched_detections": [
+            0
+          ]
+        },
+        {
+          "stage": "_unconfirmed_association",
+          "threshold": 0.7,
+          "matrix_shape": [
+            1,
+            1
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ]
+          ],
+          "unmatched_tracks": [],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          0.0,
+          759.6253051757812,
+          338.17120361328125,
+          1078.1873779296875,
+          0.38281959295272827,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:1",
+          "xyxy": [
+            0.0,
+            759.6253662109375,
+            389.8799133300781,
+            1078.1873779296875
+          ],
+          "confidence": 0.38281959295272827
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": "A",
+          "streak": 2,
+          "last_seen": 4.0,
+          "last_position": 0.10153122742970784,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    },
+    {
+      "source_frame0": 126,
+      "time_s": 4.2,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 1,
+              "state": 1,
+              "activated": true,
+              "predicted_xyxy": [
+                -34.32908339038676,
+                759.6253356933594,
+                389.879925675543,
+                1078.1874084472656
+              ],
+              "last_observed_s": 4.0,
+              "age_s": 0.20000000000000018,
+              "score": 0.38281959295272827
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                0.0,
+                615.08251953125,
+                425.06939697265625,
+                1073.205078125
+              ],
+              "score": 0.5,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.4111214876174927
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            1,
+            1
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ]
+          ],
+          "unmatched_tracks": [],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          0.0,
+          615.08251953125,
+          425.06939697265625,
+          1073.205078125,
+          0.5,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:1",
+          "xyxy": [
+            0.0,
+            648.2155151367188,
+            486.614501953125,
+            1074.34716796875
+          ],
+          "confidence": 0.5
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": "A",
+          "streak": 3,
+          "last_seen": 4.2,
+          "last_position": 0.12672252655029298,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    },
+    {
+      "source_frame0": 144,
+      "time_s": 4.8,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                -73.21638555504086,
+                542.8903414553315,
+                557.0478848855225,
+                1019.0078051790957
+              ],
+              "last_observed_s": 4.2,
+              "age_s": 0.5999999999999996,
+              "score": 0.5
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                235.6575927734375,
+                417.0146484375,
+                1036.61376953125,
+                887.27294921875
+              ],
+              "score": 0.38281959295272827,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.8044690489768982
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            1,
+            1
+          ],
+          "matches": [],
+          "unmatched_tracks": [
+            0
+          ],
+          "unmatched_detections": [
+            0
+          ]
+        }
+      ],
+      "raw_candidates": [
+        [
+          235.65760803222656,
+          417.0146484375,
+          1036.61376953125,
+          887.27294921875,
+          0.38281959295272827,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 4.2,
+          "last_position": 0.12672252655029298,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    },
+    {
+      "source_frame0": 156,
+      "time_s": 5.2,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                -48.31718775572517,
+                489.33548932744037,
+                581.9470789148726,
+                965.4529530512045
+              ],
+              "last_observed_s": 4.2,
+              "age_s": 1.0,
+              "score": 0.5
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                162.84341430664062,
+                564.59130859375,
+                1018.4102783203125,
+                1062.155029296875
+              ],
+              "score": 0.6171804070472717,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.6987993717193604
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            1,
+            1
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ]
+          ],
+          "unmatched_tracks": [],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          162.8434295654297,
+          564.59130859375,
+          1018.4102783203125,
+          1062.155029296875,
+          0.6171804070472717,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:1",
+          "xyxy": [
+            239.09152221679688,
+            560.7453002929688,
+            909.0648193359375,
+            1057.2130126953125
+          ],
+          "confidence": 0.6171804070472717
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": "A",
+          "streak": 1,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    },
+    {
+      "source_frame0": 168,
+      "time_s": 5.6,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                347.6000787063607,
+                528.4818899613213,
+                1021.395227708808,
+                1027.7816132543599
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 0.39999999999999947,
+              "score": 0.6171804070472717
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                549.8773193359375,
+                240.1842041015625,
+                1441.851318359375,
+                749.8836669921875
+              ],
+              "score": 0.7674546241760254,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.8479691743850708
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            1,
+            1
+          ],
+          "matches": [],
+          "unmatched_tracks": [
+            0
+          ],
+          "unmatched_detections": [
+            0
+          ]
+        }
+      ],
+      "raw_candidates": [
+        [
+          549.8773193359375,
+          240.1842041015625,
+          1441.851318359375,
+          749.8836669921875,
+          0.7674546241760254,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    },
+    {
+      "source_frame0": 174,
+      "time_s": 5.8,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                402.80979817038383,
+                513.0581911674528,
+                1076.6049839589539,
+                1012.3579144604914
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 0.5999999999999996,
+              "score": 0.6171804070472717
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                570.0291748046875,
+                240.1842041015625,
+                1507.5120849609375,
+                762.019287109375
+              ],
+              "score": 0.38281959295272827,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.8197081089019775
+            ]
+          ]
+        },
+        {
+          "stage": "_unconfirmed_association",
+          "tracks": [
+            {
+              "id": 3,
+              "state": 1,
+              "activated": false,
+              "predicted_xyxy": [
+                549.8773193359375,
+                240.1842041015625,
+                1441.851318359375,
+                749.8836669921875
+              ],
+              "last_observed_s": 5.6,
+              "age_s": 0.20000000000000018,
+              "score": 0.7674546241760254
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                570.0291748046875,
+                240.1842041015625,
+                1507.5120849609375,
+                762.019287109375
+              ],
+              "score": 0.38281959295272827,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.11034524440765381
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            1,
+            1
+          ],
+          "matches": [],
+          "unmatched_tracks": [
+            0
+          ],
+          "unmatched_detections": [
+            0
+          ]
+        },
+        {
+          "stage": "_unconfirmed_association",
+          "threshold": 0.7,
+          "matrix_shape": [
+            1,
+            1
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ]
+          ],
+          "unmatched_tracks": [],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          570.0291748046875,
+          240.1842041015625,
+          1507.5120849609375,
+          762.019287109375,
+          0.38281959295272827,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:3",
+          "xyxy": [
+            575.5878295898438,
+            240.1842041015625,
+            1484.7908935546875,
+            759.5921630859375
+          ],
+          "confidence": 0.38281959295272827
+        }
+      ],
+      "events": [],
+      "uncertain": [
+        {
+          "session_id": "purdue_camera24_20220609_channel_v3",
+          "track_id": "0:3",
+          "time_s": 5.6,
+          "frame0": 168,
+          "reason": "track_first_observed_between_zones",
+          "status": "uncertain_or_truncated",
+          "counts_as_complete_passage": false
+        }
+      ],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        },
+        "0:3": {
+          "origin": null,
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.8,
+          "last_position": 0.5365569591522217,
+          "origin_time": null,
+          "origin_frame": null,
+          "emitted": false,
+          "unanchored_start": [
+            5.6,
+            168
+          ],
+          "unanchored_reported": true
+        }
+      }
+    },
+    {
+      "source_frame0": 180,
+      "time_s": 6.0,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 3,
+              "state": 1,
+              "activated": true,
+              "predicted_xyxy": [
+                575.5878369642007,
+                240.1842041015625,
+                1484.7908983873622,
+                759.5921630859375
+              ],
+              "last_observed_s": 5.8,
+              "age_s": 0.20000000000000018,
+              "score": 0.38281959295272827
+            },
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                458.01951763440695,
+                497.6344923735844,
+                1131.8147402091,
+                996.934215666623
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 0.7999999999999998,
+              "score": 0.6171804070472717
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                754.0130004882812,
+                294.79486083984375,
+                1627.783447265625,
+                667.9676513671875
+              ],
+              "score": 0.3281870186328888,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.4811602234840393
+            ],
+            [
+              0.8924130201339722
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            2,
+            1
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ]
+          ],
+          "unmatched_tracks": [
+            1
+          ],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          754.0130615234375,
+          294.79486083984375,
+          1627.783447265625,
+          667.9676513671875,
+          0.3281870186328888,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:3",
+          "xyxy": [
+            794.405517578125,
+            282.0204772949219,
+            1512.20556640625,
+            689.4002685546875
+          ],
+          "confidence": 0.3281870186328888
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        },
+        "0:3": {
+          "origin": null,
+          "candidate": "B",
+          "streak": 1,
+          "last_seen": 6.0,
+          "last_position": 0.6006799697875976,
+          "origin_time": null,
+          "origin_frame": null,
+          "emitted": false,
+          "unanchored_start": [
+            5.6,
+            168
+          ],
+          "unanchored_reported": true
+        }
+      }
+    },
+    {
+      "source_frame0": 186,
+      "time_s": 6.2,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 3,
+              "state": 1,
+              "activated": true,
+              "predicted_xyxy": [
+                896.3127332778297,
+                301.2412699339941,
+                1523.4247769239025,
+                657.1520135252642
+              ],
+              "last_observed_s": 6.0,
+              "age_s": 0.20000000000000018,
+              "score": 0.3281870186328888
+            },
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                513.2292370984301,
+                482.210793579716,
+                1187.0244964592457,
+                981.5105168727546
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 1.0,
+              "score": 0.6171804070472717
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                1060.216552734375,
+                300.8626708984375,
+                1879.376220703125,
+                664.9337158203125
+              ],
+              "score": 0.3281870186328888,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.5376448631286621
+            ],
+            [
+              0.9621075987815857
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            2,
+            1
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ]
+          ],
+          "unmatched_tracks": [
+            1
+          ],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          1060.216552734375,
+          300.8627014160156,
+          1879.376220703125,
+          664.9337158203125,
+          0.3281870186328888,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:3",
+          "xyxy": [
+            1113.040771484375,
+            300.9128112792969,
+            1757.7049560546875,
+            663.9031372070312
+          ],
+          "confidence": 0.3281870186328888
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        },
+        "0:3": {
+          "origin": "B",
+          "candidate": "B",
+          "streak": 2,
+          "last_seen": 6.2,
+          "last_position": 0.7475900332132975,
+          "origin_time": 6.2,
+          "origin_frame": 186,
+          "emitted": false,
+          "unanchored_start": [
+            5.6,
+            168
+          ],
+          "unanchored_reported": true
+        }
+      }
+    },
+    {
+      "source_frame0": 192,
+      "time_s": 6.4,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 3,
+              "state": 1,
+              "activated": true,
+              "predicted_xyxy": [
+                1310.9994865159802,
+                319.9902596679971,
+                1869.744032909391,
+                634.6018598331177
+              ],
+              "last_observed_s": 6.2,
+              "age_s": 0.20000000000000018,
+              "score": 0.3281870186328888
+            },
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                568.4389565624532,
+                466.78709478584756,
+                1242.2342527093915,
+                966.0868180788862
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 1.2000000000000002,
+              "score": 0.6171804070472717
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                1264.352294921875,
+                331.20196533203125,
+                1919.68017578125,
+                655.8319091796875
+              ],
+              "score": 0.2778412401676178,
+              "index_in_gated_input": 0
+            },
+            {
+              "xyxy": [
+                1283.641357421875,
+                577.8126220703125,
+                1802.4425048828125,
+                805.3569946289062
+              ],
+              "score": 0.2778412401676178,
+              "index_in_gated_input": 1
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.2259346842765808,
+              0.8950521945953369
+            ],
+            [
+              1.0,
+              1.0
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            2,
+            2
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ]
+          ],
+          "unmatched_tracks": [
+            1
+          ],
+          "unmatched_detections": [
+            1
+          ]
+        }
+      ],
+      "raw_candidates": [
+        [
+          1264.352294921875,
+          331.2019958496094,
+          1919.68017578125,
+          655.8319702148438,
+          0.2778412401676178,
+          0.0
+        ],
+        [
+          1283.6414794921875,
+          577.8126220703125,
+          1802.442626953125,
+          805.3569946289062,
+          0.2778412401676178,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:3",
+          "xyxy": [
+            1303.5499267578125,
+            329.2525634765625,
+            1879.9107666015625,
+            652.140625
+          ],
+          "confidence": 0.2778412401676178
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        },
+        "0:3": {
+          "origin": "B",
+          "candidate": "B",
+          "streak": 3,
+          "last_seen": 6.4,
+          "last_position": 0.8290262222290039,
+          "origin_time": 6.2,
+          "origin_frame": 186,
+          "emitted": false,
+          "unanchored_start": [
+            5.6,
+            168
+          ],
+          "unanchored_reported": true
+        }
+      }
+    },
+    {
+      "source_frame0": 198,
+      "time_s": 6.6,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 3,
+              "state": 1,
+              "activated": true,
+              "predicted_xyxy": [
+                1499.4114784372641,
+                351.8880913176438,
+                1995.090696229254,
+                629.5768090106922
+              ],
+              "last_observed_s": 6.4,
+              "age_s": 0.1999999999999993,
+              "score": 0.2778412401676178
+            },
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                623.6486760264763,
+                451.36339599197913,
+                1297.4440089595375,
+                950.6631192850177
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 1.3999999999999995,
+              "score": 0.6171804070472717
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                1451.3701171875,
+                532.3037109375,
+                1920.0001220703125,
+                799.2891845703125
+              ],
+              "score": 0.2778412401676178,
+              "index_in_gated_input": 0
+            },
+            {
+              "xyxy": [
+                1189.5897216796875,
+                319.0662841796875,
+                1911.6639404296875,
+                586.0516357421875
+              ],
+              "score": 0.2325453907251358,
+              "index_in_gated_input": 1
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.8155873417854309,
+              0.5872711539268494
+            ],
+            [
+              1.0,
+              0.9717754125595093
+            ]
+          ]
+        },
+        {
+          "stage": "_unconfirmed_association",
+          "tracks": [
+            {
+              "id": 4,
+              "state": 1,
+              "activated": false,
+              "predicted_xyxy": [
+                1283.641357421875,
+                577.8126220703125,
+                1802.4425048828125,
+                805.3569946289062
+              ],
+              "last_observed_s": 6.4,
+              "age_s": 0.1999999999999993,
+              "score": 0.2778412401676178
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                1451.3701171875,
+                532.3037109375,
+                1920.0001220703125,
+                799.2891845703125
+              ],
+              "score": 0.2778412401676178,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.5299394130706787
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            2,
+            2
+          ],
+          "matches": [
+            [
+              0,
+              1
+            ]
+          ],
+          "unmatched_tracks": [
+            1
+          ],
+          "unmatched_detections": [
+            0
+          ]
+        },
+        {
+          "stage": "_unconfirmed_association",
+          "threshold": 0.7,
+          "matrix_shape": [
+            1,
+            1
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ]
+          ],
+          "unmatched_tracks": [],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          1451.3699951171875,
+          532.3037109375,
+          1920.0,
+          799.2891845703125,
+          0.2778412401676178,
+          0.0
+        ],
+        [
+          1189.5897216796875,
+          319.0662841796875,
+          1911.6639404296875,
+          586.0516357421875,
+          0.2325453907251358,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:3",
+          "xyxy": [
+            1342.523193359375,
+            325.34063720703125,
+            1833.9053955078125,
+            594.3720703125
+          ],
+          "confidence": 0.2325453907251358
+        },
+        {
+          "track_id": "0:4",
+          "xyxy": [
+            1362.4586181640625,
+            541.405517578125,
+            1920.0,
+            800.5027465820312
+          ],
+          "confidence": 0.2778412401676178
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        },
+        "0:3": {
+          "origin": "B",
+          "candidate": "B",
+          "streak": 4,
+          "last_seen": 6.6,
+          "last_position": 0.8271949450174968,
+          "origin_time": 6.2,
+          "origin_frame": 186,
+          "emitted": false,
+          "unanchored_start": [
+            5.6,
+            168
+          ],
+          "unanchored_reported": true
+        },
+        "0:4": {
+          "origin": "B",
+          "candidate": "B",
+          "streak": 2,
+          "last_seen": 6.6,
+          "last_position": 0.8548069318135579,
+          "origin_time": 6.6,
+          "origin_frame": 198,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    },
+    {
+      "source_frame0": 204,
+      "time_s": 6.8,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 3,
+              "state": 1,
+              "activated": true,
+              "predicted_xyxy": [
+                1488.9121338286786,
+                339.12120752823125,
+                1892.4641471085897,
+                560.0656749661177
+              ],
+              "last_observed_s": 6.6,
+              "age_s": 0.20000000000000018,
+              "score": 0.2325453907251358
+            },
+            {
+              "id": 4,
+              "state": 1,
+              "activated": true,
+              "predicted_xyxy": [
+                1362.4586377343433,
+                541.4054992675781,
+                1951.8542528906569,
+                800.5027526855469
+              ],
+              "last_observed_s": 6.6,
+              "age_s": 0.20000000000000018,
+              "score": 0.2778412401676178
+            },
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                678.8583954904994,
+                435.9396971981107,
+                1352.6537652096836,
+                935.2394204911493
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 1.5999999999999996,
+              "score": 0.6171804070472717
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                1309.861083984375,
+                468.59130859375,
+                1916.6461181640625,
+                787.1534423828125
+              ],
+              "score": 0.6718129515647888,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.8496633768081665
+            ],
+            [
+              0.35091495513916016
+            ],
+            [
+              0.973585844039917
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            3,
+            1
+          ],
+          "matches": [
+            [
+              1,
+              0
+            ]
+          ],
+          "unmatched_tracks": [
+            0,
+            2
+          ],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          1309.8612060546875,
+          468.5913391113281,
+          1916.646240234375,
+          787.1534423828125,
+          0.6718129515647888,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:4",
+          "xyxy": [
+            1281.196533203125,
+            487.64202880859375,
+            1920.0,
+            790.6460571289062
+          ],
+          "confidence": 0.6718129515647888
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        },
+        "0:3": {
+          "origin": "B",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 6.6,
+          "last_position": 0.8271949450174968,
+          "origin_time": 6.2,
+          "origin_frame": 186,
+          "emitted": false,
+          "unanchored_start": [
+            5.6,
+            168
+          ],
+          "unanchored_reported": true
+        },
+        "0:4": {
+          "origin": "B",
+          "candidate": "B",
+          "streak": 3,
+          "last_seen": 6.8,
+          "last_position": 0.8336449305216471,
+          "origin_time": 6.6,
+          "origin_frame": 198,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    },
+    {
+      "source_frame0": 210,
+      "time_s": 7.0,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 4,
+              "state": 1,
+              "activated": true,
+              "predicted_xyxy": [
+                1246.0964470655458,
+                464.68383926526263,
+                1975.6988977143951,
+                786.4370517261718
+              ],
+              "last_observed_s": 6.8,
+              "age_s": 0.20000000000000018,
+              "score": 0.6718129515647888
+            },
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                734.0681149545226,
+                420.5159984042423,
+                1407.8635214598294,
+                919.8157216972809
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 1.7999999999999998,
+              "score": 0.6171804070472717
+            },
+            {
+              "id": 3,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                1591.3859529630895,
+                328.8582921518009,
+                1994.9379924592665,
+                549.8027595896874
+              ],
+              "last_observed_s": 6.6,
+              "age_s": 0.40000000000000036,
+              "score": 0.2325453907251358
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                1466.53955078125,
+                495.89666748046875,
+                1919.9998779296875,
+                796.2551879882812
+              ],
+              "score": 0.6718129515647888,
+              "index_in_gated_input": 0
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.449221134185791
+            ],
+            [
+              1.0
+            ],
+            [
+              0.9146912097930908
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            3,
+            1
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ]
+          ],
+          "unmatched_tracks": [
+            1,
+            2
+          ],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          1466.5396728515625,
+          495.89666748046875,
+          1920.0,
+          796.2551879882812,
+          0.6718129515647888,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:4",
+          "xyxy": [
+            1323.9388427734375,
+            486.4945373535156,
+            1920.0,
+            793.2977294921875
+          ],
+          "confidence": 0.6718129515647888
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        },
+        "0:3": {
+          "origin": "B",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 6.6,
+          "last_position": 0.8271949450174968,
+          "origin_time": 6.2,
+          "origin_frame": 186,
+          "emitted": false,
+          "unanchored_start": [
+            5.6,
+            168
+          ],
+          "unanchored_reported": true
+        },
+        "0:4": {
+          "origin": "B",
+          "candidate": "B",
+          "streak": 4,
+          "last_seen": 7.0,
+          "last_position": 0.8447757403055827,
+          "origin_time": 6.6,
+          "origin_frame": 198,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    },
+    {
+      "source_frame0": 216,
+      "time_s": 7.2,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 4,
+              "state": 1,
+              "activated": true,
+              "predicted_xyxy": [
+                1313.0684631789463,
+                470.58471097765096,
+                2033.3627153929956,
+                791.3057789087927
+              ],
+              "last_observed_s": 7.0,
+              "age_s": 0.20000000000000018,
+              "score": 0.6718129515647888
+            },
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                789.2778344185457,
+                405.09229961037386,
+                1463.0732777099752,
+                904.3920229034125
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 2.0,
+              "score": 0.6171804070472717
+            },
+            {
+              "id": 3,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                1693.8597720975006,
+                318.5953767753706,
+                2097.411837809944,
+                539.5398442132571
+              ],
+              "last_observed_s": 6.6,
+              "age_s": 0.6000000000000005,
+              "score": 0.2325453907251358
+            }
+          ],
+          "detections": [
+            {
+              "xyxy": [
+                1565.573486328125,
+                501.96453857421875,
+                1920.0,
+                805.3570556640625
+              ],
+              "score": 0.5,
+              "index_in_gated_input": 0
+            },
+            {
+              "xyxy": [
+                1565.573486328125,
+                367.6090087890625,
+                1920.0,
+                598.1873779296875
+              ],
+              "score": 0.2778412401676178,
+              "index_in_gated_input": 1
+            }
+          ],
+          "cost_matrix": [
+            [
+              0.5654535293579102,
+              0.8309385776519775
+            ],
+            [
+              1.0,
+              1.0
+            ],
+            [
+              0.9548486471176147,
+              0.7054625153541565
+            ]
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            3,
+            2
+          ],
+          "matches": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "unmatched_tracks": [
+            1
+          ],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          1565.573486328125,
+          501.9645080566406,
+          1920.0,
+          805.3569946289062,
+          0.5,
+          0.0
+        ],
+        [
+          1565.573486328125,
+          367.6090393066406,
+          1920.0,
+          598.1873779296875,
+          0.2778412401676178,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [
+        {
+          "track_id": "0:4",
+          "xyxy": [
+            1382.591796875,
+            492.9088134765625,
+            1920.0,
+            801.3020629882812
+          ],
+          "confidence": 0.5
+        },
+        {
+          "track_id": "0:3",
+          "xyxy": [
+            1543.7296142578125,
+            364.82183837890625,
+            1920.0,
+            594.8523559570312
+          ],
+          "confidence": 0.2778412401676178
+        }
+      ],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        },
+        "0:3": {
+          "origin": "B",
+          "candidate": "B",
+          "streak": 1,
+          "last_seen": 7.2,
+          "last_position": 0.9020129203796386,
+          "origin_time": 6.2,
+          "origin_frame": 186,
+          "emitted": false,
+          "unanchored_start": [
+            5.6,
+            168
+          ],
+          "unanchored_reported": true
+        },
+        "0:4": {
+          "origin": "B",
+          "candidate": "B",
+          "streak": 5,
+          "last_seen": 7.2,
+          "last_position": 0.8600499471028645,
+          "origin_time": 6.6,
+          "origin_frame": 198,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    },
+    {
+      "source_frame0": 240,
+      "time_s": 8.0,
+      "cost_calls": [
+        {
+          "stage": "_first_association",
+          "tracks": [
+            {
+              "id": 1,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                1010.1167122746381,
+                343.39750443490016,
+                1683.9123027105588,
+                842.6972277279388
+              ],
+              "last_observed_s": 5.2,
+              "age_s": 2.8,
+              "score": 0.6171804070472717
+            },
+            {
+              "id": 4,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                1439.4487061597981,
+                467.9410718194573,
+                2143.549531365772,
+                787.1539608596677
+              ],
+              "last_observed_s": 7.2,
+              "age_s": 0.7999999999999998,
+              "score": 0.5
+            },
+            {
+              "id": 3,
+              "state": 2,
+              "activated": true,
+              "predicted_xyxy": [
+                1828.748009085231,
+                366.16235567010574,
+                2247.7503600878576,
+                598.1329566018849
+              ],
+              "last_observed_s": 7.2,
+              "age_s": 0.7999999999999998,
+              "score": 0.2778412401676178
+            }
+          ],
+          "detections": [],
+          "cost_matrix": [
+            [],
+            [],
+            []
+          ]
+        }
+      ],
+      "solver_calls": [
+        {
+          "stage": "_first_association",
+          "threshold": 0.8,
+          "matrix_shape": [
+            3,
+            0
+          ],
+          "matches": [],
+          "unmatched_tracks": [
+            0,
+            1,
+            2
+          ],
+          "unmatched_detections": []
+        }
+      ],
+      "raw_candidates": [
+        [
+          1221.0146484375,
+          106.91441345214844,
+          1679.13720703125,
+          267.71240234375,
+          0.2325453907251358,
+          0.0
+        ]
+      ],
+      "actual_output_tracks": [],
+      "events": [],
+      "uncertain": [],
+      "counter_states": {
+        "0:1": {
+          "origin": "A",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 5.2,
+          "last_position": 0.2989990472793579,
+          "origin_time": 4.0,
+          "origin_frame": 120,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        },
+        "0:3": {
+          "origin": "B",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 7.2,
+          "last_position": 0.9020129203796386,
+          "origin_time": 6.2,
+          "origin_frame": 186,
+          "emitted": false,
+          "unanchored_start": [
+            5.6,
+            168
+          ],
+          "unanchored_reported": true
+        },
+        "0:4": {
+          "origin": "B",
+          "candidate": null,
+          "streak": 0,
+          "last_seen": 7.2,
+          "last_position": 0.8600499471028645,
+          "origin_time": 6.6,
+          "origin_frame": 198,
+          "emitted": false,
+          "unanchored_start": null,
+          "unanchored_reported": false
+        }
+      }
+    }
+  ]
+}

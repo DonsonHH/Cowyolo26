@@ -1,0 +1,54 @@
+"""Source-coordinate entry/completion panels from actual board logs; zero inference."""
+import json
+from pathlib import Path
+import sys
+import cv2
+import numpy as np
+from counting.render import draw_channel
+
+folder, video = Path(sys.argv[1]), Path(sys.argv[2])
+s = json.loads((folder / 'summary.json').read_text())
+events = [json.loads(x) for x in (folder / 'events.jsonl').read_text().splitlines() if x.strip()]
+rows = {r['frame0']: r for r in [json.loads(x) for x in (folder / 'frames.jsonl').read_text().splitlines()]}
+out = folder.parent / 'event_panels'
+cap = cv2.VideoCapture(str(video))
+if not cap.isOpened():
+    raise ValueError('Cannot open actual recorded source: '+str(video))
+out.mkdir(exist_ok=False)
+cards = []
+roi = s['config']['detection_roi_xyxy']
+x1, y1, x2, y2 = roi
+height = round((y2-y1)*280/(x2-x1))
+try:
+    for index, event in enumerate(events, 1):
+        tiles = []
+        for key, name in [('entry_frame0', 'ENTRY'), ('frame0', 'COMPLETE')]:
+            frame = event[key]
+            assert cap.set(cv2.CAP_PROP_POS_FRAMES, frame)
+            ok, image = cap.read()
+            assert ok
+            draw_channel(image, s['config'])
+            row = rows.get(frame)
+            if row:
+                for det in row['detections']:
+                    a,b,c,d = map(round, det[:4])
+                    cv2.rectangle(image, (a,b), (c,d), (130,130,130), 1)
+                for track in row['tracks']:
+                    if track['track_id'] == event['track_id']:
+                        a,b,c,d = map(round, track['xyxy'])
+                        cv2.rectangle(image, (a,b), (c,d), (30,255,40), 3)
+            tile = cv2.resize(image[y1:y2,x1:x2], (280,height))
+            header = np.full((34,280,3), 25, np.uint8)
+            text = f"#{index} {event['track_id']} {name} f{frame}"
+            cv2.putText(header,text,(4,22),cv2.FONT_HERSHEY_SIMPLEX,.45,(230,230,230),1)
+            tiles.append(np.concatenate([header,tile],0))
+        cards.append(np.concatenate(tiles,0))
+finally:
+    cap.release()
+for i in range(0,len(cards),4):
+    group = cards[i:i+4]
+    while len(group)<4: group.append(np.zeros_like(group[0]))
+    ok,data = cv2.imencode('.jpg',np.concatenate(group,1),[cv2.IMWRITE_JPEG_QUALITY,92])
+    assert ok
+    (out/f'panel_{i//4+1:02d}.jpg').write_bytes(data.tobytes())
+print(json.dumps({'events':len(events),'panels':len(list(out.glob('*.jpg'))),'new_model_forwards':0}))

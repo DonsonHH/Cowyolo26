@@ -1,0 +1,406 @@
+{
+  "status": "INCOMPLETE_SYSTEM_ACCEPTANCE",
+  "rows": [
+    {
+      "case": "realtime_v1_dev",
+      "summary_sha256": "c3e4739c2fe8194506e143f5ac10c5b5221eab453560a525a8226c1ac3af35db",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 2,
+        "OUT": 0,
+        "NET": 2
+      },
+      "capture_size": [
+        640,
+        360
+      ],
+      "input_fps": 10.0,
+      "model_size": 192,
+      "target_hz": 5.0,
+      "processed_frames": 405,
+      "model_forwards": 405,
+      "wall_s": 81.10122674500235,
+      "source_last_pts_s": 80.9,
+      "global_observation_latency": {
+        "count": 405,
+        "maximum_ms": 407.1647990022029,
+        "p95_upper_bound_ms": 309.79999999999995,
+        "over_1000ms": 0,
+        "over_500ms": 0,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 2,
+        "mean_ms": 263.0848455009982,
+        "maximum_ms": 279.40842900352436,
+        "p50_ms": 263.0848455009982,
+        "p95_ms": 277.77607065327174,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 2
+      },
+      "original_500ms_clock_pass": true
+    },
+    {
+      "case": "realtime_s256",
+      "summary_sha256": "8695abc47cb1c1f8dba0e89de6e267d3f5b1bea07a7180c3040e20feb8d8816f",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 5,
+        "OUT": 0,
+        "NET": 5
+      },
+      "capture_size": [
+        640,
+        360
+      ],
+      "input_fps": 10.0,
+      "model_size": 256,
+      "target_hz": 3.5,
+      "processed_frames": 259,
+      "model_forwards": 263,
+      "wall_s": 81.48619078399861,
+      "source_last_pts_s": 80.9,
+      "global_observation_latency": {
+        "count": 259,
+        "maximum_ms": 730.237223997392,
+        "p95_upper_bound_ms": 451.0,
+        "over_1000ms": 0,
+        "over_500ms": 6,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 5,
+        "mean_ms": 576.314336998621,
+        "maximum_ms": 717.7583869997761,
+        "p50_ms": 617.8372299982584,
+        "p95_ms": 711.6737061995082,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 5
+      },
+      "original_500ms_clock_pass": true
+    },
+    {
+      "case": "reacquisition_v2_dev",
+      "summary_sha256": "69631d89c937aa0a0dffea8e1ab22f976e83c5081efb4881441229fb75bd5294",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 5,
+        "OUT": 0,
+        "NET": 5
+      },
+      "capture_size": [
+        640,
+        360
+      ],
+      "input_fps": 10.0,
+      "model_size": 192,
+      "target_hz": 5.0,
+      "processed_frames": 373,
+      "model_forwards": 396,
+      "wall_s": 81.187782642,
+      "source_last_pts_s": 80.9,
+      "global_observation_latency": {
+        "count": 373,
+        "maximum_ms": 653.7060919999931,
+        "p95_upper_bound_ms": 440.4,
+        "over_1000ms": 0,
+        "over_500ms": 4,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 5,
+        "mean_ms": 456.2775425999462,
+        "maximum_ms": 615.3285450000112,
+        "p50_ms": 463.162008999916,
+        "p95_ms": 615.2368860000024,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 5
+      },
+      "original_500ms_clock_pass": true
+    },
+    {
+      "case": "native_bgr_v4_dev",
+      "summary_sha256": "61de237d560d1c8f499a1c57020ecc8824dfd21e29955598cf21a21e40c10e24",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 2,
+        "OUT": 0,
+        "NET": 2
+      },
+      "capture_size": [
+        640,
+        360
+      ],
+      "input_fps": 10.0,
+      "model_size": 320,
+      "target_hz": 2.5,
+      "processed_frames": 185,
+      "model_forwards": 191,
+      "wall_s": 81.650911189,
+      "source_last_pts_s": 80.9,
+      "global_observation_latency": {
+        "count": 185,
+        "maximum_ms": 1133.3293449997655,
+        "p95_upper_bound_ms": 628.1999999999998,
+        "over_1000ms": 2,
+        "over_500ms": 80,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 2,
+        "mean_ms": 956.7489005003154,
+        "maximum_ms": 1043.8744210005098,
+        "p50_ms": 956.7489005003154,
+        "p95_ms": 1035.1618689504903,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 2
+      },
+      "original_500ms_clock_pass": false
+    },
+    {
+      "case": "hd_s256_v5",
+      "summary_sha256": "90f8fe24aea621b5d20d0d42c848a9819e0220f47b8696363845e99f5ba076f8",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "capture_size": [
+        1280,
+        720
+      ],
+      "input_fps": 5.0,
+      "model_size": 256,
+      "target_hz": 3.0,
+      "processed_frames": 228,
+      "model_forwards": 238,
+      "wall_s": 81.27096309700028,
+      "source_last_pts_s": 80.80000000000001,
+      "global_observation_latency": {
+        "count": 228,
+        "maximum_ms": 935.0309339988598,
+        "p95_upper_bound_ms": 761.3,
+        "over_1000ms": 0,
+        "over_500ms": 117,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 11,
+        "mean_ms": 596.1275634545018,
+        "maximum_ms": 869.5065579995571,
+        "p50_ms": 566.6858679996949,
+        "p95_ms": 824.3809529994905,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 11
+      },
+      "original_500ms_clock_pass": false
+    },
+    {
+      "case": "aug15_hd_s256_v5",
+      "summary_sha256": "7b77bd3303a18d4a127eedca7845d4aa61b205f94921cc1f16195ba64b30bf12",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "capture_size": [
+        1280,
+        720
+      ],
+      "input_fps": 5.0,
+      "model_size": 256,
+      "target_hz": 3.0,
+      "processed_frames": 370,
+      "model_forwards": 375,
+      "wall_s": 130.08505593599875,
+      "source_last_pts_s": 129.6,
+      "global_observation_latency": {
+        "count": 370,
+        "maximum_ms": 1439.498312998694,
+        "p95_upper_bound_ms": 726.6500000000001,
+        "over_1000ms": 4,
+        "over_500ms": 249,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 11,
+        "mean_ms": 541.9850424543918,
+        "maximum_ms": 923.5650310001802,
+        "p50_ms": 507.3728499992285,
+        "p95_ms": 747.5129514996297,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 11
+      },
+      "original_500ms_clock_pass": false
+    },
+    {
+      "case": "aug15_hd_s192_observed_v6",
+      "summary_sha256": "cc8fdd04920553c870ba15a5e89f420d0b6ba1bdd97d6f8ce876881937d0878b",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 10,
+        "OUT": 0,
+        "NET": 10
+      },
+      "capture_size": [
+        1280,
+        720
+      ],
+      "input_fps": 5.0,
+      "model_size": 192,
+      "target_hz": 5.0,
+      "processed_frames": 605,
+      "model_forwards": 614,
+      "wall_s": 129.95785602199976,
+      "source_last_pts_s": 129.6,
+      "global_observation_latency": {
+        "count": 605,
+        "maximum_ms": 805.5364179999742,
+        "p95_upper_bound_ms": 558.8,
+        "over_1000ms": 0,
+        "over_500ms": 63,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 10,
+        "mean_ms": 401.37515740061644,
+        "maximum_ms": 428.87171100119303,
+        "p50_ms": 398.46553600000334,
+        "p95_ms": 425.1516141013781,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 10
+      },
+      "original_500ms_clock_pass": false
+    },
+    {
+      "case": "aug15_hd_s256_history_v7",
+      "summary_sha256": "65ffe9362d3241c3ca694536069e5ad98842bce4d936384d85cf12bde0d3c537",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "capture_size": [
+        1280,
+        720
+      ],
+      "input_fps": 5.0,
+      "model_size": 256,
+      "target_hz": 5.0,
+      "processed_frames": 377,
+      "model_forwards": 380,
+      "wall_s": 130.05823946199962,
+      "source_last_pts_s": 129.6,
+      "global_observation_latency": {
+        "count": 377,
+        "maximum_ms": 974.9334669995733,
+        "p95_upper_bound_ms": 744.8,
+        "over_1000ms": 0,
+        "over_500ms": 293,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 12,
+        "mean_ms": 570.1352925001023,
+        "maximum_ms": 782.2898819995316,
+        "p50_ms": 555.4990259997794,
+        "p95_ms": 745.04830619926,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 12
+      },
+      "original_500ms_clock_pass": false
+    },
+    {
+      "case": "aug19_hd_s256_history_v7",
+      "summary_sha256": "584c41e1e8bd3962fa90a49ede55b8b4aca9eeb76eeee97a553bf99548d81c19",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 10,
+        "OUT": 0,
+        "NET": 10
+      },
+      "capture_size": [
+        1280,
+        720
+      ],
+      "input_fps": 5.0,
+      "model_size": 256,
+      "target_hz": 5.0,
+      "processed_frames": 242,
+      "model_forwards": 249,
+      "wall_s": 81.22256618000029,
+      "source_last_pts_s": 80.80000000000001,
+      "global_observation_latency": {
+        "count": 242,
+        "maximum_ms": 1008.7109239993879,
+        "p95_upper_bound_ms": 701.8499999999999,
+        "over_1000ms": 1,
+        "over_500ms": 150,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 10,
+        "mean_ms": 679.8355155997342,
+        "maximum_ms": 997.9425549990992,
+        "p50_ms": 644.5738874990639,
+        "p95_ms": 962.7938280993475,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 10
+      },
+      "original_500ms_clock_pass": false
+    },
+    {
+      "case": "aug14_hd_s256_fast_v8",
+      "summary_sha256": "849bfab3f44decb61e032b91260bd9ca243c1aab08a9b4bb1308def883f1684e",
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "capture_size": [
+        1280,
+        720
+      ],
+      "input_fps": 5.0,
+      "model_size": 256,
+      "target_hz": 5.0,
+      "processed_frames": 241,
+      "model_forwards": 242,
+      "wall_s": 81.06355254700065,
+      "source_last_pts_s": 80.4,
+      "global_observation_latency": {
+        "count": 241,
+        "maximum_ms": 761.2787790003495,
+        "p95_upper_bound_ms": 641.0,
+        "over_1000ms": 0,
+        "over_500ms": 193,
+        "scope": "entire stream; linear p95 upper bound from 1ms ceil bins; >1s quantile returns null",
+        "retained_bin_count": 1002
+      },
+      "event_publication": {
+        "count": 11,
+        "mean_ms": 528.3604565460832,
+        "maximum_ms": 631.0601460008911,
+        "p50_ms": 517.1112370007904,
+        "p95_ms": 621.0358345015266,
+        "percentile_scope": "last 10000 processed frames",
+        "retained_samples": 11
+      },
+      "original_500ms_clock_pass": false
+    }
+  ],
+  "new_model_forwards_for_this_index": 0
+}

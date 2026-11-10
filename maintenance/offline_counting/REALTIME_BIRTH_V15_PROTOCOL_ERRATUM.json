@@ -1,0 +1,13 @@
+{
+  "created_UTC": "2026-11-05T19:33:25.785508+00:00",
+  "original_file_sha256": {
+    "REALTIME_BIRTH_V15_PROTOCOL.json": "ec9d96b60f564a85cea8e1e5af9668eecd89507cce1fbf2deaa17de833ae8601",
+    "AUG19_HD_S256_BIRTH_V15_FREEZE.json": "49aa36f0979868c223dc449a89c1f18f9e231a24bd025b67a6f7cc46648abff9",
+    "AUG20_HD_S256_BIRTH_V15_FREEZE.json": "53f012d25453003b227e0545354e4737ffb2fb6a6d160ac3cac2cfad9966861a"
+  },
+  "affected_field": "REALTIME_BIRTH_V15_PROTOCOL.json:clock_selection_rationale",
+  "correction": "The reference to untouched Aug20 is inherited historical rationale for the original service contract, not a statement that Aug20 remained unseen for V15. Before V15 freeze, Aug20 had completed its first V14 run with 361 model forwards and UP9 versus user reference UP12. Both V15 freezes, selection_data and held_out already disclose that exposure. V15 Aug20 is development retest; no independent generalization is claimed.",
+  "timing": "Added after Aug19 V15 completed UP10/11 and before Aug20 V15 launch.",
+  "algorithm_threshold_or_assessment_changed": false,
+  "original_protocol_and_freezes_changed": false
+}

@@ -1,0 +1,176 @@
+{
+  "status": "COMPLETED_UNSCORED",
+  "run_id": "fd5e46a4-97fd-4719-baef-cb6981c0bf87",
+  "session_id": "purdue_camera24_20220608_coco256_calibration",
+  "video_id": "cam24_2022-06-08_08-29-23_2234_53550_53991",
+  "PID": 5741,
+  "video_path": "/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/fast_passage_fix_v2/purdue_inputs/purdue_day1_s2.avi",
+  "video_sha256": "ad8ccd95ca116f6a9dcc99605a3dfec4e5c54a76eea05f03aa3de94f03044cb4",
+  "config": {
+    "video_id": "cam24_2022-06-08_08-29-23_2234_53550_53991",
+    "session_id": "purdue_camera24_20220608_coco256_calibration",
+    "sample_hz": 5,
+    "decode_start_frame0": 0,
+    "scope_start_frame0": 0,
+    "end_frame0_exclusive": 441,
+    "axis": "x",
+    "perpendicular_roi": [
+      0.0,
+      1.0
+    ],
+    "in_direction": "A->B",
+    "detection_roi_xyxy": null,
+    "rotation_clockwise": 0,
+    "confidence": 0.2,
+    "cow_class_ids": [
+      19
+    ],
+    "lost_seconds": 6,
+    "counter": {
+      "lower": 0.4,
+      "upper": 0.6,
+      "stable_samples": 2,
+      "maximum_gap_s": 2
+    },
+    "detector": {
+      "backend": "o8",
+      "root": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8",
+      "program": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/program_r256",
+      "plan": "/home/xilinx/jupyter_notebooks/yolo26_optimization_8/plans/r256_all/resident_plan.bin",
+      "size": 256
+    }
+  },
+  "nominal_fps": 30.0,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "source_stride": 6,
+  "effective_nominal_sample_hz": 5,
+  "sampling": {
+    "mode": "source_pts",
+    "requested_hz": 5,
+    "unavailable_source_sample_slots": 0,
+    "anchor_time_s": 0.0,
+    "minimum_source_frame_gap": 6,
+    "maximum_source_frame_gap": 6
+  },
+  "decoded_frames": 441,
+  "processed_frames": 74,
+  "wall_clock_skipped_frames": 0,
+  "sequential_lead_in_frames": 0,
+  "input_positioning_s": 9.643001249060035e-06,
+  "fast_seek_verified_by_source_pts": false,
+  "seek_verification": {},
+  "time_source": "opencv source PTS",
+  "model_forwards": 74,
+  "counts": {
+    "IN": 0,
+    "OUT": 0,
+    "NET": 0
+  },
+  "uncertain_records": 0,
+  "accuracy_verified": false,
+  "software_fixture_only": false,
+  "runtime_versions": {
+    "python": "3.10.4 (main, Apr  2 2022, 09:04:19) [GCC 11.2.0]",
+    "numpy": "1.21.5",
+    "opencv": "4.5.4"
+  },
+  "startup_scope": "elapsed_s covers model/processed interval/close; overall_elapsed_s also includes open, exact sequential lead-in and input hashing",
+  "memory_before_model": {
+    "process_peak_rss_kib": 93568,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 429328,
+      "SwapTotal": 524284,
+      "SwapFree": 448764
+    }
+  },
+  "clock_contract": "PTS sampling; motion covariance and Lost expiry use elapsed source time; predictions never count as observations",
+  "latency_boundary": "decode selected source frame through event/log update; offline, no realtime deadline",
+  "model_sha256": "e47c9fba0206e1fc4ad6a0e588ab93e08633e6fbd3a511c6b98d29028e0461b2",
+  "resident_plan_sha256": "c9f212d3f1816df856af89241fd9fcbffb9704cbb43703dbab284b518a283f45",
+  "device_initialization": {
+    "primed": false,
+    "core": "0x80001",
+    "FCLK0_MHz": 100.0
+  },
+  "runtime_asset_sha256": {
+    "native_sources/native_queue.so": "73822509d5d4315cb4ea49b3fac2fc8c453025c85cee00eb17f129d9d86bc87d",
+    "hardware/accepted/firmware_manifest.json": "4298d759d9e2452ab793a80945554d4ece91aa6efc595097bb54c1f2420692aa",
+    "hardware/accepted/optimization_8_resident.bit": "5da7a73bf52fd5153e25de5c28a40e2080c29e960d767008e0e804ec527bbfd8"
+  },
+  "last_source_frame0": 438,
+  "last_source_time_s": 14.6,
+  "elapsed_s": 75.13032299399492,
+  "overall_elapsed_s": 76.25417923099303,
+  "total_decoded_frames": 441,
+  "timings": {
+    "decode": {
+      "count": 74,
+      "mean_ms": 109.04648083846583,
+      "maximum_ms": 231.1161079996964,
+      "p50_ms": 108.79826050222619,
+      "p95_ms": 128.9648143501836,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    },
+    "preprocess": {
+      "count": 74,
+      "mean_ms": 22.85309390454377,
+      "maximum_ms": 23.71131000109017,
+      "p50_ms": 23.30619299755199,
+      "p95_ms": 23.62294299819041,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    },
+    "inference": {
+      "count": 74,
+      "mean_ms": 261.54056964937683,
+      "maximum_ms": 483.1949819927104,
+      "p50_ms": 258.8257769966731,
+      "p95_ms": 260.51658040305483,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    },
+    "tracking": {
+      "count": 74,
+      "mean_ms": 2.385603189838081,
+      "maximum_ms": 2.7576209977269173,
+      "p50_ms": 2.402839505521115,
+      "p95_ms": 2.5344778543512803,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    },
+    "frame": {
+      "count": 74,
+      "mean_ms": 396.8459639587751,
+      "maximum_ms": 740.9840990003431,
+      "p50_ms": 394.69019600073807,
+      "p95_ms": 415.1694395499362,
+      "percentile_scope": "last 10000 processed frames",
+      "retained_samples": 74
+    }
+  },
+  "counter_after_finish": {
+    "IN": 0,
+    "OUT": 0,
+    "NET": 0,
+    "active_states": 0,
+    "pending": 0,
+    "confirmation_guards": 0,
+    "maximum_state_count": 0
+  },
+  "maximum_state_count": 0,
+  "state_eviction_ttl_s": 6.2,
+  "memory_after_close": {
+    "process_peak_rss_kib": 237984,
+    "system_kib": {
+      "MemTotal": 503464,
+      "MemAvailable": 342176,
+      "SwapTotal": 524284,
+      "SwapFree": 448764
+    }
+  }
+}

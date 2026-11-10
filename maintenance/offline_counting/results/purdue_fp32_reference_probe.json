@@ -1,0 +1,91 @@
+{
+  "status": "EXISTING_FP32_S320_SOURCE_SNAPSHOT_REFERENCE",
+  "model": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\pynq_o8_sizes_20261030\\delivery\\s320\\results\\qualification\\frozen_S320_rot90_seed26.onnx",
+  "model_sha256": "b7dd0db3c9fb80f0249c4821634c4ff9c65d95a503e609ef50ef3617fa512799",
+  "input_shape": [
+    1,
+    3,
+    320,
+    320
+  ],
+  "metadata": {
+    "date": "2026-10-30T01:33:40.636520",
+    "description": "Ultralytics YOLO26n model trained on /share/home/renly/projects/idcoo_research_20261026/cows2021_adaptation_20261027/data_v1/data.yaml",
+    "author": "Ultralytics",
+    "version": "8.4.63",
+    "task": "detect",
+    "license": "AGPL-3.0 License (https://ultralytics.com/license)",
+    "docs": "https://docs.ultralytics.com",
+    "stride": "32",
+    "batch": "1",
+    "imgsz": "[320, 320]",
+    "names": "{0: 'cow'}",
+    "args": "{'data': None, 'batch': 1, 'fraction': 1.0, 'half': False, 'int8': False, 'dynamic': False, 'simplify': True, 'opset': 17, 'nms': False}",
+    "channels": "3",
+    "end2end": "True"
+  },
+  "frames": [
+    270,
+    300,
+    330
+  ],
+  "reference_model_forwards": 3,
+  "new_board_model_forwards": 0,
+  "records": [
+    {
+      "source_frame0": 270,
+      "detections_over_point2": [
+        [
+          12.060333251953125,
+          353.64093017578125,
+          1000.1738891601562,
+          1073.662353515625,
+          0.9188690185546875,
+          0.0
+        ],
+        [
+          3.42755126953125,
+          29.519668579101562,
+          832.189453125,
+          612.1226806640625,
+          0.38903868198394775,
+          0.0
+        ]
+      ]
+    },
+    {
+      "source_frame0": 300,
+      "detections_over_point2": [
+        [
+          4.71514892578125,
+          37.62725830078125,
+          809.15869140625,
+          597.7384643554688,
+          0.5403921604156494,
+          0.0
+        ],
+        [
+          331.0760192871094,
+          327.01544189453125,
+          1355.9022216796875,
+          838.4309692382812,
+          0.5138393044471741,
+          0.0
+        ]
+      ]
+    },
+    {
+      "source_frame0": 330,
+      "detections_over_point2": [
+        [
+          3.700469970703125,
+          24.935028076171875,
+          810.2999267578125,
+          607.3848266601562,
+          0.642064094543457,
+          0.0
+        ]
+      ]
+    }
+  ]
+}

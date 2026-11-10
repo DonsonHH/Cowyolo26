@@ -1,0 +1,106 @@
+"""Freeze a single generic V9 profile on existing development inputs only."""
+from datetime import datetime, timezone
+import json
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).parent
+REPO = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo')
+M = REPO / 'maintenance/offline_counting'
+RT = '/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102'
+REVISION = sys.argv[1] if len(sys.argv) > 1 else 'v9r1'
+assert REVISION in ('v9', 'v9r1', 'v10', 'v11', 'v12', 'v13', 'v13r1')
+
+
+def save(path, value):
+    assert not path.exists(), str(path)
+    path.write_bytes((json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode('utf-8'))
+
+
+protocol = json.loads((M / 'REALTIME_BOUNDED_1S_V4_PROTOCOL.json').read_text())
+normal_invariants = protocol['profiles']['normal']
+invariants = protocol['profiles']['fast']
+invariants['confidence'] = .02
+invariants['tracker']['track_high_thresh'] = .15
+invariants['birth_refinement'] = {'enabled': True, 'roi_scale': 1.5}
+if REVISION in ('v10', 'v11', 'v12', 'v13', 'v13r1'):
+    invariants['birth_refinement']['minimum_border_fraction'] = .02
+protocol.update(version='bounded-count-publication-1s-birth-' + REVISION,
+                status='FROZEN_BEFORE_' + REVISION.upper() + '_FULL_DEVELOPMENT_RUNS_AND_AUG20_INFERENCE',
+                created_UTC=datetime.now(timezone.utc).isoformat(),
+                profiles={'birth_' + REVISION: invariants},
+                selection_data='Aug14 weak-origin and Aug19 weak-reacquisition diagnostics only; same generic profile on all cameras, geometry configured per installation.',
+                scope_note='One generic candidate; existing development clips are regressions. Aug20 has had zero recorded model calls before this freeze.')
+if REVISION in ('v10', 'v11', 'v12', 'v13', 'v13r1'):
+    protocol['profiles']['normal'] = normal_invariants
+    protocol['selection_data'] = 'V9R1 Aug14 10/12 with51 birth zooms motivates edge deferral. Camera2 retains previously successful Aug19 normal3Hz/Kalman installation profile. No Aug20 inference or selection.'
+    protocol['scope_note'] = 'Shared generic runtime, explicit per-installation fast/normal presets; prepared replay only. Not universal accuracy or physical-camera proof.'
+if REVISION in ('v11', 'v12', 'v13', 'v13r1'):
+    normal_invariants['tracker']['track_high_thresh'] = .15
+    normal_invariants['endpoint_recovery']['maximum_age_s'] = 2.0
+    protocol['selection_data'] = 'V10 Aug14 12/12, Aug15 11/12 with useless .037 background crop before missed second cow. V11 sub-low proposals require recent real-track support. Camera2 V10 normal10/11 had last observed18.4, empty19.4 recovery and age cutoff preventing20.0 retry; set age2.0 and high .15 for actual weak reacquisition. No Aug20 inference.'
+if REVISION in ('v12', 'v13', 'v13r1'):
+    invariants['tracker']['prediction_axis'] = 'y'
+    invariants['fast_history_policy'] = 'gate_phase'
+    normal_invariants['tracker']['prediction_axis'] = None
+    normal_invariants['fast_history_policy'] = 'velocity'
+    protocol['selection_data'] = 'V11 fullAug14 12/12 and normalAug19 11/11, both service pass. Aug15 10/12:21.0 frame overwritten after20.8 publication21.64, and crop-to-global lateral velocity broke23.0 association. Axis-only three cached controls preserve12/12 and improve failed10 to11; gate-phase selects latest before channel midpoint and after completion. Aug20 untouched.'
+if REVISION in ('v13', 'v13r1'):
+    invariants['confidence'] = .01
+    invariants['birth_refinement'].update(weak_motion_support=True, minimum_motion_per_s=.05)
+    invariants['history_after_birth'] = True
+    normal_invariants['history_after_birth'] = False
+    protocol['selection_data'] = 'V12 first fast cow now correct; second lost after accepted22.4 crop skipped23.0 actual frame. Original misses27s when27.2 transient .125 not sampled. V13 preserves .0105 precursor and motion-consistent weak seeds (static background rejected), and consumes one oldest arrived image after acceptedbirth. Same clock/queue2/counter gates. Aug20 untouched.'
+save(M / ('REALTIME_BIRTH_' + REVISION.upper() + '_PROTOCOL.json'), protocol)
+
+for prefix, prior in [('aug14', 'aug14_hd_s256_fast_v8'),
+                      ('aug15', 'aug15_hd_s256_history_v7'),
+                      ('aug19', 'aug19_hd_s256_history_v7')]:
+    tag = prefix + '_hd_s256_birth_' + REVISION
+    normal = REVISION in ('v10', 'v11', 'v12', 'v13', 'v13r1') and prefix == 'aug19'
+    if normal:
+        prior = 'aug19_hd_s256_normal_v8'
+    config = json.loads((M / 'realtime_configs' / (prior + '.json')).read_text())
+    config['session_id'] = 'rt_' + tag
+    if normal:
+        config['birth_refinement'] = {'enabled': False}
+        if REVISION in ('v11', 'v12', 'v13', 'v13r1'):
+            config['tracker']['track_high_thresh'] = .15
+            config['endpoint_recovery']['maximum_age_s'] = 2.0
+        if REVISION in ('v12', 'v13', 'v13r1'):
+            config['tracker']['prediction_axis'] = None
+            config['fast_history_policy'] = 'velocity'
+        if REVISION in ('v13', 'v13r1'):
+            config['history_after_birth'] = False
+    else:
+        config['confidence'] = .02
+        config['tracker']['track_high_thresh'] = .15
+        config['birth_refinement'] = dict(invariants['birth_refinement'])
+        if REVISION in ('v12', 'v13', 'v13r1'):
+            config['tracker']['prediction_axis'] = config['axis']
+            config['fast_history_policy'] = 'gate_phase'
+        if REVISION in ('v13', 'v13r1'):
+            config['confidence'] = .01
+            config['history_after_birth'] = True
+    save(M / 'realtime_configs' / (tag + '.json'), config)
+    profile = json.loads((ROOT / (prior + '_profile.json')).read_text())
+    profile.update(tag=tag, source_package='counting_realtime_birth_' + REVISION + '_source.tar.gz',
+                   runtime=RT + '/birth_refinement_' + REVISION + '/runtime', test_proof='BIRTH_' + REVISION.upper() + '_TESTS.json',
+                   service_protocol='REALTIME_BIRTH_' + REVISION.upper() + '_PROTOCOL.json', service_profile='birth_' + REVISION,
+                   role='Known inspected development regression; new complete wall-paced board run',
+                   changes='Optional real-current-image weak-origin refinement; decode .02, first-stage .15, new .25 unchanged. Single profile; no GT or video/frame branch.')
+    if normal:
+        profile['service_profile'] = 'normal'
+        profile['changes'] = 'Reuse previously successful normal3Hz/Kalman camera2 installation profile; birth disabled; same shared V10 runtime. No GT input or video/frame branch.'
+        if REVISION in ('v11', 'v12', 'v13', 'v13r1'):
+            profile['changes'] = 'Normal3Hz/Kalman: recovery maximum age2.0 (counter gap remains2.0), high .15 allows actual weak Lost reacquisition; birth disabled. No GT input or video/frame branch.'
+    elif REVISION in ('v10', 'v11', 'v12', 'v13', 'v13r1'):
+        profile['changes'] = 'Defer axis-border-truncated birth seeds using2% detection ROI margin; same fast S256 .02/high .15 candidate otherwise.'
+        if REVISION in ('v11', 'v12', 'v13', 'v13r1'):
+            profile['changes'] += ' Sub-low seeds now require recent real-track support; directly usable unconfirmed measurements skip zoom.'
+        if REVISION in ('v12', 'v13', 'v13r1'):
+            profile['changes'] += ' Optional channel-axis association prediction and gate-phase history; still two-frame bounded real capture.'
+        if REVISION in ('v13', 'v13r1'):
+            profile['changes'] += ' Weak motion support from at most2x32 prior actual boxes at decode .01; successfulbirth requests one oldest arrived image next. No change to service deadline.'
+    save(ROOT / (tag + '_profile.json'), profile)
+print(json.dumps({'profiles_prepared': 3, 'Aug20_model_calls': 0, 'new_model_forwards': 0}))

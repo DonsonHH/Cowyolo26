@@ -1,0 +1,103 @@
+{
+  "status": "FIXED_CAPTURE_DETAIL_DEVELOPMENT_DIAGNOSTIC",
+  "created_UTC": "2026-11-02T04:59:07.941613+00:00",
+  "source_sha256": "fb0718865485fa195352c0e5957580895d843165adc0bddb5a38599bfe8ae064",
+  "manifest": {
+    "expected_input_count": 4,
+    "inputs_npz_sha256": "d108484332f8b272d93a33e8c51df4cd08bb8ab21821d2a4f5226b7042df54b0",
+    "config_sha256": "55f6fb6049f7f3d0b7c93730b009c21baeb9176dc77dad6ed9c93abc7c2dee25",
+    "frames": [
+      {
+        "frame0": 485,
+        "key": "f485_low640_area_q3",
+        "variant": "low640_area_q3",
+        "input_tensor_sha256": "9686cb0de687c97e32174e6afeabdd9935f827fbf4eb7015dad5bc970238247d",
+        "transform": {
+          "source_width": 640,
+          "source_height": 360,
+          "roi": [
+            150,
+            35,
+            425,
+            342
+          ],
+          "rotation": 90,
+          "size": 192,
+          "resized_width": 192,
+          "resized_height": 172,
+          "pad_left": 0,
+          "pad_top": 10
+        }
+      },
+      {
+        "frame0": 485,
+        "key": "f485_capture1280_linear_q2",
+        "variant": "capture1280_linear_q2",
+        "input_tensor_sha256": "93179aaa1736bd5a9807fb119952b0848d4ff24a50e55d992b01dd96549dd9f8",
+        "transform": {
+          "source_width": 1280,
+          "source_height": 720,
+          "roi": [
+            300,
+            70,
+            850,
+            685
+          ],
+          "rotation": 90,
+          "size": 192,
+          "resized_width": 192,
+          "resized_height": 172,
+          "pad_left": 0,
+          "pad_top": 10
+        }
+      },
+      {
+        "frame0": 1260,
+        "key": "f1260_low640_area_q3",
+        "variant": "low640_area_q3",
+        "input_tensor_sha256": "ba8b03197ffb6695880077b52413cbce349e772ea9761f7860ed9913b60f846f",
+        "transform": {
+          "source_width": 640,
+          "source_height": 360,
+          "roi": [
+            150,
+            35,
+            425,
+            342
+          ],
+          "rotation": 90,
+          "size": 192,
+          "resized_width": 192,
+          "resized_height": 172,
+          "pad_left": 0,
+          "pad_top": 10
+        }
+      },
+      {
+        "frame0": 1260,
+        "key": "f1260_capture1280_linear_q2",
+        "variant": "capture1280_linear_q2",
+        "input_tensor_sha256": "ca402dd3cf9ec9bb4d15cfbb304c01a9254aaaf560ad8e44cf43feaad0a7deec",
+        "transform": {
+          "source_width": 1280,
+          "source_height": 720,
+          "roi": [
+            300,
+            70,
+            850,
+            685
+          ],
+          "rotation": 90,
+          "size": 192,
+          "resized_width": 192,
+          "resized_height": 172,
+          "pad_left": 0,
+          "pad_top": 10
+        }
+      }
+    ]
+  },
+  "new_Aug20_forwards": 0,
+  "scope": "Controlled same-frame capture downsampling and JPEG quality; PC-prepared tensors, board NN only. No realtime or counting claim.",
+  "jpeg_quality_scope": "OpenCV JPEG qualities are diagnostic approximations, not exact FFmpeg qscale equivalences."
+}

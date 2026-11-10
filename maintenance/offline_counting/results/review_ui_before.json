@@ -1,0 +1,138 @@
+{
+  "reviewed_commit": "1357e4e483b94d9e7d365d070d55f0f1b55bbc71",
+  "review_html_sha256": "5323e48ac12fb943e90f93a6b880b466539f4cfbaeb77de64d18a21ac1e25970",
+  "fixture_only": true,
+  "no_real_video_or_board_access": true,
+  "tests": 5,
+  "passed": 0,
+  "failed": 5,
+  "results": [
+    {
+      "name": "native_video_controls_lock_until_seeked",
+      "status": "FAIL",
+      "actual": 0,
+      "expected": null,
+      "error": "Expected values to be strictly deep-equal:\n\n0 !== null\n"
+    },
+    {
+      "name": "annotation_uses_actual_source_pts_not_frame_div_fps",
+      "status": "FAIL",
+      "actual": [
+        4,
+        4.4
+      ],
+      "expected": [
+        7.321,
+        7.9
+      ],
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n+   4,\n+   4.4\n-   7.321,\n-   7.9\n  ]\n"
+    },
+    {
+      "name": "video_seek_blocks_annotation_before_seeked",
+      "status": "FAIL",
+      "actual": 100,
+      "expected": null,
+      "evidence": {
+        "frameLoading": false,
+        "entry": 100,
+        "reportedFrame": 100,
+        "videoSeeking": true
+      },
+      "error": "Expected values to be strictly deep-equal:\n\n100 !== null\n"
+    },
+    {
+      "name": "review_overlay_uses_configured_gate",
+      "status": "FAIL",
+      "actual": [
+        [
+          [
+            34,
+            40
+          ],
+          [
+            75,
+            40
+          ]
+        ],
+        [
+          [
+            34,
+            60
+          ],
+          [
+            75,
+            60
+          ]
+        ]
+      ],
+      "expected": [
+        [
+          [
+            25,
+            20
+          ],
+          [
+            25,
+            80
+          ]
+        ],
+        [
+          [
+            75,
+            20
+          ],
+          [
+            75,
+            80
+          ]
+        ]
+      ],
+      "evidence": {
+        "configuredGate": {
+          "axis": "x",
+          "perpendicular_roi": [
+            0.2,
+            0.8
+          ],
+          "lower": 0.25,
+          "upper": 0.75
+        }
+      },
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n    [\n      [\n+       34,\n+       40\n-       25,\n-       20\n      ],\n      [\n+       75,\n+       40\n-       25,\n-       80\n      ]\n    ],\n    [\n      [\n+       34,\n+       60\n-       75,\n-       20\n      ],\n      [\n        75,\n+       60\n-       80\n      ]\n    ]\n  ]\n"
+    },
+    {
+      "name": "different_session_and_interval_do_not_auto_load_old_draft",
+      "status": "FAIL",
+      "actual": [
+        {
+          "event_id": "old-event",
+          "video_id": "fixture-video",
+          "session_id": "sessionA",
+          "direction": "A->B",
+          "entry_source_frame0": 10,
+          "completion_source_frame0": 20
+        }
+      ],
+      "expected": [],
+      "evidence": {
+        "storeKey": "cow-source-review:SAME_SOURCE_HASH",
+        "currentSession": "sessionB",
+        "currentScope": {
+          "start_frame0": 100,
+          "end_frame0": 200
+        },
+        "loadedEvents": [
+          {
+            "event_id": "old-event",
+            "video_id": "fixture-video",
+            "session_id": "sessionA",
+            "direction": "A->B",
+            "entry_source_frame0": 10,
+            "completion_source_frame0": 20
+          }
+        ]
+      },
+      "error": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     completion_source_frame0: 20,\n+     direction: 'A->B',\n+     entry_source_frame0: 10,\n+     event_id: 'old-event',\n+     session_id: 'sessionA',\n+     video_id: 'fixture-video'\n+   }\n+ ]\n- []\n"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+"""Use the already fixed Camera1 preset on Camera2; Aug20 is now development data."""
+from copy import deepcopy
+from datetime import datetime,timezone
+import json
+from pathlib import Path
+
+ROOT=Path(__file__).parent
+M=Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+load=lambda p:json.loads(p.read_text())
+def save(path,value):
+    assert not path.exists(),str(path)
+    path.write_bytes((json.dumps(value,indent=2)+'\n').encode())
+old=load(M/'REALTIME_BIRTH_V14_PROTOCOL.json')
+common=deepcopy(old['profiles']['birth_v14'])
+protocol=deepcopy(old)
+protocol.update(version='bounded-count-publication-1s-unified-v15',
+                status='FROZEN_BEFORE_UNIFIED_CAMERA2_DEVELOPMENT_RETEST',
+                created_UTC=datetime.now(timezone.utc).isoformat(),profiles={'unified':common},
+                selection_data='First Aug20 frozen test9/12 FAILED. Fixed actual detections Kalman9 vs observed/axis11 diagnose association. Apply previously frozen Camera1 fast preset unchanged toCamera2: observedaxis, decode.01, actual ROI support. Aug20 now exposed development; no independent generalization claim.',
+                held_out='None remaining among these clips. Aug20 V14 first frozen failure9/12 is preserved; V15 Aug20 is development.',
+                scope_note='One shared algorithm preset, geometry varies by installation. Camera1 actual V14 evidence reused only after exact profile equivalence check; not regraded against a later protocol.')
+save(M/'REALTIME_BIRTH_V15_PROTOCOL.json',protocol)
+def contains(actual,required):
+    return all(k in actual and (contains(actual[k],v) if isinstance(v,dict) else actual[k]==v) for k,v in required.items())
+equivalence={'new_model_forwards':0,'shared_profile':common,'reused_cases':[]}
+for prefix in ['aug14','aug15']:
+    tag=prefix+'_hd_s256_birth_v14'
+    cfg=load(M/'realtime_configs'/(tag+'.json'))
+    assert contains(cfg,common)
+    equivalence['reused_cases'].append({'case':tag,'shared_parameters_identical':True,
+                                      'original_protocol':'REALTIME_BIRTH_V14_PROTOCOL.json',
+                                      'original_results_unchanged':True})
+save(M/'UNIFIED_V15_PROFILE_EQUIVALENCE.json',equivalence)
+prior_aug20=load(M/'results/aug20_hd_s256_birth_v14_summary.json')['model_forwards']
+def overlay(target,values):
+    for k,v in values.items():
+        if isinstance(v,dict):overlay(target.setdefault(k,{}),v)
+        else:target[k]=deepcopy(v)
+for prefix in ['aug19','aug20']:
+    prior=prefix+'_hd_s256_birth_v14'
+    tag=prefix+'_hd_s256_birth_v15'
+    cfg=load(M/'realtime_configs'/(prior+'.json'))
+    overlay(cfg,common)
+    cfg['session_id']='rt_'+tag
+    save(M/'realtime_configs'/(tag+'.json'),cfg)
+    profile=load(ROOT/(prior+'_profile.json'))
+    profile.update(tag=tag,service_protocol='REALTIME_BIRTH_V15_PROTOCOL.json',service_profile='unified',
+                   role='Development retest after Aug20 first frozen9/12 failure; not independent validation',
+                   Aug20_model_forwards_before_freeze=prior_aug20,
+                   changes='Apply the exact previously frozen Camera1 shared profile toCamera2; geometry unchanged, no new source/model or GT input. Aug20 already exposed.')
+    save(ROOT/(tag+'_profile.json'),profile)
+selection={'revision':'v15','source_revision':'v13r1','independent_generalization_verified':False,
+           'first_new_date_frozen_failure':{'case':'aug20_hd_s256_birth_v14','actual_UP':9,'reference_UP':12},
+           'cases':{'aug14':{'case':'aug14_hd_s256_birth_v14','role':'复用已实测V14（共享参数一致）'},
+                    'aug15':{'case':'aug15_hd_s256_birth_v14','role':'复用已实测V14（共享参数一致）'},
+                    'aug19':{'case':'aug19_hd_s256_birth_v15','role':'统一配置开发回归'},
+                    'aug20':{'case':'aug20_hd_s256_birth_v15','role':'开发回归；首次冻结9/12已失败'}}}
+save(M/'REALTIME_SELECTION_V15.json',selection)
+print(json.dumps({'new_camera2_cases':2,'camera1_reused_with_identical_profile':2,
+                  'Aug20_prior_real_model_calls':prior_aug20,'independent_generalization_claimed':False}))

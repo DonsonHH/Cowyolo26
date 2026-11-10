@@ -1,0 +1,27 @@
+"""A small motion/high-threshold control on one already recorded real stream."""
+from copy import deepcopy
+import json
+from pathlib import Path
+import sys
+from counting.tracking import TrackingSession
+
+M = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+tag = sys.argv[1]
+summary = json.loads((M/'results'/(tag+'_summary.json')).read_text())
+rows = [json.loads(line) for line in (M/'results'/(tag+'_frames.jsonl')).read_text().splitlines()]
+result = {'source_tag':tag,'scope':'fixed cached measurements; not live scheduling or independent accuracy',
+          'new_model_forwards':0,'cases':[]}
+for motion in ['kalman','observed_velocity','axis_velocity']:
+    for high in [.2,.15]:
+        config = deepcopy(summary['config'])
+        config['tracker'].update(motion_box='observed_velocity' if motion=='axis_velocity' else motion,
+                                 track_high_thresh=high,
+                                 prediction_axis=config.get('axis','y') if motion=='axis_velocity' else None)
+        session = TrackingSession(config,*summary['source_size'],config['sample_hz'],'cache-control')
+        events = []
+        for row in rows:
+            _,found,_ = session.update(row['frame0'],row['time_s'],row['detections'])
+            events.extend(found)
+        result['cases'].append({'motion':motion,'high':high,'counts':session.counter.summary(),'events':events})
+        print(motion,high,session.counter.summary()['IN'])
+(M/'results'/(tag+'_association_control.json')).write_text(json.dumps(result,indent=2)+'\n')

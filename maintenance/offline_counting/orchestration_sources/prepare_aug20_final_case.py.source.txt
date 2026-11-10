@@ -1,0 +1,38 @@
+"""Prepare the new-date run only after all frozen development cases pass."""
+from copy import deepcopy
+import json
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).parent
+M = Path(r'C:\Users\Donson\Documents\Codex\exports\Cowyolo26-20261031\repo\maintenance\offline_counting')
+REVISION = sys.argv[1]
+RT = '/home/xilinx/jupyter_notebooks/cow_research_offline_counting_20261031/physical_channel_v4_20261101/realtime_counting_v1_20261102'
+for prefix in ['aug14','aug15','aug19']:
+    assessment = json.loads((M/'results'/(prefix+'_hd_s256_birth_'+REVISION+'_assessment.json')).read_text())
+    assert assessment['counts_and_service_pass'], prefix
+tag = 'aug20_hd_s256_birth_' + REVISION
+protocol_path = 'REALTIME_BIRTH_' + REVISION.upper() + '_PROTOCOL.json'
+protocol = json.loads((M/protocol_path).read_text())
+config = json.loads((M/'realtime_configs/aug20_hd_s256_normal_v8.json').read_text())
+def overlay(target, values):
+    for key,value in values.items():
+        if isinstance(value,dict):
+            overlay(target.setdefault(key,{}),value)
+        else:
+            target[key] = deepcopy(value)
+overlay(config,protocol['profiles']['normal'])
+config['session_id'] = 'rt_' + tag
+profile = json.loads((ROOT/'aug20_hd_s256_normal_v8_profile.json').read_text())
+qualified = json.loads((ROOT/('aug19_hd_s256_birth_'+REVISION+'_profile.json')).read_text())
+profile.update(tag=tag,source_package=qualified['source_package'],
+               runtime=qualified['runtime'],test_proof=qualified['test_proof'],
+               service_protocol=protocol_path, service_profile='normal',
+               role='New date not used in this calibration; same farm/camera; no claim of training-set independence',
+               reference={'UP':12,'DOWN':None}, Aug20_model_forwards_before_freeze=0,
+               existing_remote_input=RT+'/aug20_hd_s256_normal_v8/input.avi',
+               changes='Exact frozen normal install profile from successful Aug19; new-date prediction used only after freeze, not for selection.')
+for path, value in [(M/'realtime_configs'/(tag+'.json'),config),(ROOT/(tag+'_profile.json'),profile)]:
+    assert not path.exists()
+    path.write_bytes((json.dumps(value,indent=2)+'\n').encode())
+print(json.dumps({'prepared':tag,'model_forwards_before_freeze':0,'reference_UP':12,'reference_DOWN':None}))

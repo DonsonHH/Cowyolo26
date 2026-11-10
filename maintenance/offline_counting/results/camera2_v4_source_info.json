@@ -1,0 +1,106 @@
+{
+  "status": "COMPLETE_NATIVE_SOURCE_DECODED_BEFORE_MODEL",
+  "video_sha256": "fb0718865485fa195352c0e5957580895d843165adc0bddb5a38599bfe8ae064",
+  "source_size": [
+    2560,
+    1440
+  ],
+  "nominal_fps": 24.99979118116287,
+  "declared_frames": 2993,
+  "decoded_frames": 2993,
+  "first_pts_s": 0.0,
+  "last_pts_s": 119.68100000000001,
+  "strict_monotonic_pts": true,
+  "new_model_forwards": 0,
+  "config_sha256": "cd35ea7edab7274dd0e33c1780bcaf3629825e5fcd434841df1c5173b5d8dd01",
+  "review_gate": {
+    "axis": "y",
+    "perpendicular_roi": [
+      0.0,
+      1.0
+    ],
+    "lower": 0.4,
+    "upper": 0.6,
+    "channel_polygon": [
+      [
+        0.24,
+        0.65
+      ],
+      [
+        0.25,
+        0.35
+      ],
+      [
+        0.28,
+        0.12
+      ],
+      [
+        0.5,
+        0.12
+      ],
+      [
+        0.55,
+        0.35
+      ],
+      [
+        0.59,
+        0.65
+      ],
+      [
+        0.63,
+        0.94
+      ],
+      [
+        0.24,
+        0.94
+      ]
+    ]
+  },
+  "camera_role": "Same public MultiCamCows2024 farm, different count-camera/date; not a separate dataset or farm",
+  "view_selection": "Ordinary fixed high overhead straight race with perspective rails; lower-camera bar and glare retained",
+  "source_acquisition": {
+    "status": "NATIVE_STREAM_COPY_COMPLETED_SOURCE_REVIEW_PENDING",
+    "source_URL": "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/videos/camera2/2023Aug19/2023-08-19T13-04-28.mp4",
+    "requested_start_seconds": 840,
+    "requested_duration_seconds": 120,
+    "selection": "First source-only activity sample in chronological camera2 files; source geometry/activity only, no model predictions",
+    "new_model_forwards": 0,
+    "resizing_or_video_reencoding": false,
+    "command": [
+      "ffmpeg",
+      "-nostdin",
+      "-hide_banner",
+      "-loglevel",
+      "warning",
+      "-http_proxy",
+      "http://127.0.0.1:7897",
+      "-rw_timeout",
+      "30000000",
+      "-ss",
+      "840",
+      "-i",
+      "https://data.bris.ac.uk/datasets/2inu67jru7a6821kkgehxg3cv2/MultiCamCows2024Root/videos/camera2/2023Aug19/2023-08-19T13-04-28.mp4",
+      "-t",
+      "120",
+      "-map",
+      "0:v:0",
+      "-c:v",
+      "copy",
+      "-an",
+      "-avoid_negative_ts",
+      "make_zero",
+      "-movflags",
+      "+faststart",
+      "-f",
+      "mp4",
+      "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\camera2_inputs\\camera2_aug19_120s_native.part"
+    ],
+    "started_UTC": "2026-11-01T12:53:43.715305+00:00",
+    "PID": 84376,
+    "exit_code": 0,
+    "file": "C:\\Users\\Donson\\Documents\\ChatGPT\\\u5976\u725b\\offline_counting_20261031\\straight_channel_validation\\camera2_inputs\\camera2_aug19_120s_native.mp4",
+    "bytes": 30591252,
+    "sha256": "fb0718865485fa195352c0e5957580895d843165adc0bddb5a38599bfe8ae064",
+    "ended_UTC": "2026-11-01T12:54:44.122004+00:00"
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "status": "SELECTED_IMPLEMENTATION_CURRENT_BOARD_QUALIFICATION_VERIFIED",
+  "batch_status": "COMPLETED",
+  "cases": [
+    {
+      "tag": "production_aug14",
+      "clip": "aug14",
+      "policy": "selected_greedy",
+      "repeat": 1,
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "absolute_count_error": 1,
+      "global_calls": 227,
+      "local_calls": 5,
+      "normal_model_calls": 232,
+      "warmup_calls": 1,
+      "processed_frames": 227,
+      "actual_global_hz": 2.8078076064001305,
+      "actual_normal_call_hz": 2.869653588919957,
+      "event_publication_max_ms": 638.2144079998398,
+      "event_publication_records": 11,
+      "observation_max_ms": 951.5895990007266,
+      "observation_p95_upper_ms": 651.4,
+      "capture_lateness_max_ms": 171.81230999995023,
+      "stream_wall_s": 80.8459951040004,
+      "drain_s": 0.44599510400038866,
+      "replay_reference_clock_checks": {
+        "event_publication": true,
+        "observation_max": true,
+        "observation_p95": true,
+        "capture_lateness": true,
+        "drain": true,
+        "queue": true,
+        "causal": true
+      },
+      "replay_reference_clock_pass": true,
+      "original_stricter_legacy_flag": false,
+      "summary_sha256": "a08a257df535da211656bd14034be361b46cad1e08572f502e68b96dff418f1b",
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug14",
+        "run_id": "f9fcb118-e247-446f-88b9-4182668c93fc",
+        "session_id": "equal_budget_v4_production_aug14",
+        "source_video_sha256": "7b2bcce4f700e4c72ff588f04f8254dd88f77c7dbbec327b917cf4c9db402fa9",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 402
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 11,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": -1
+        },
+        "absolute_errors": {
+          "A->B": 1
+        },
+        "absolute_error_over_reviewed_directions": 1,
+        "all_reviewed_totals_agree": false,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u6211\u7ecf\u8fc7\u4eba\u5de5\u5ba1\u6838\uff0c\u6e90\u72478912\u201310873\u5e27\u90a3\u4e2a\u89c6\u9891\u5c31\u662f12\u5934\u725b\uff0c\u5df2\u7ecf\u786e\u8ba4\u65e0\u8bef\u4e86\u3002",
+          "evidence": "historical user confirmation of native excerpt and accepted result replay",
+          "view": "unspecified"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "production_aug15",
+      "clip": "aug15",
+      "policy": "selected_greedy",
+      "repeat": 1,
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "absolute_count_error": 0,
+      "global_calls": 373,
+      "local_calls": 6,
+      "normal_model_calls": 379,
+      "warmup_calls": 1,
+      "processed_frames": 373,
+      "actual_global_hz": 2.866962065754625,
+      "actual_normal_call_hz": 2.913079418018774,
+      "event_publication_max_ms": 617.6145720000932,
+      "event_publication_records": 12,
+      "observation_max_ms": 1161.0807369997929,
+      "observation_p95_upper_ms": 657.5999999999999,
+      "capture_lateness_max_ms": 339.668321001227,
+      "stream_wall_s": 130.10287246400003,
+      "drain_s": 0.5028724640000348,
+      "replay_reference_clock_checks": {
+        "event_publication": true,
+        "observation_max": true,
+        "observation_p95": true,
+        "capture_lateness": true,
+        "drain": true,
+        "queue": true,
+        "causal": true
+      },
+      "replay_reference_clock_pass": true,
+      "original_stricter_legacy_flag": false,
+      "summary_sha256": "54293e92a2636090cd1942ed63f4e28b0beb9537f9cad5078ef84c19183c5c48",
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera1_aug15",
+        "run_id": "5bf38ba4-dff2-4518-949c-4e4e92d0bd62",
+        "session_id": "equal_budget_v4_production_aug15",
+        "source_video_sha256": "95aa0f7cf4b23d4c2d78101554eb8aa824f4c74070aebab1249b6e4505233638",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 648
+        },
+        "reviewed_directions": [
+          "A->B"
+        ],
+        "reference_totals": {
+          "A->B": 12
+        },
+        "predicted_directional_totals": {
+          "A->B": 12,
+          "B->A": 0
+        },
+        "signed_errors": {
+          "A->B": 0
+        },
+        "absolute_errors": {
+          "A->B": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "B->A"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u786e\u5b9e\u662f12\u6b21\uff0c\u5728\u7b2c\u4e00\u6b21\u5927\u6982\u662f20s\u7684\u65f6\u5019\u6709\u4e00\u5934\u725b\u6bd4\u8f83\u5feb\u901f\u7684\u901a\u8fc7\u4e86\u6f0f\u4e86\u4e00\u6b21\uff0c\u540e\u9762\u768411\u6b21\u90fd\u662f\u6b63\u786e\u7684",
+          "evidence": "historical user review of Aug15 result video",
+          "view": "prediction_overlay"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "production_aug19",
+      "clip": "aug19",
+      "policy": "selected_greedy",
+      "repeat": 1,
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 11,
+        "OUT": 0,
+        "NET": 11
+      },
+      "absolute_count_error": 0,
+      "global_calls": 233,
+      "local_calls": 13,
+      "normal_model_calls": 246,
+      "warmup_calls": 1,
+      "processed_frames": 233,
+      "actual_global_hz": 2.8621325432597984,
+      "actual_normal_call_hz": 3.021822341810774,
+      "event_publication_max_ms": 917.6206749998528,
+      "event_publication_records": 11,
+      "observation_max_ms": 935.4496680007287,
+      "observation_p95_upper_ms": 763.9999999999993,
+      "capture_lateness_max_ms": 172.66574499990384,
+      "stream_wall_s": 81.40783016800015,
+      "drain_s": 0.6078301680001346,
+      "replay_reference_clock_checks": {
+        "event_publication": true,
+        "observation_max": true,
+        "observation_p95": true,
+        "capture_lateness": true,
+        "drain": true,
+        "queue": true,
+        "causal": true
+      },
+      "replay_reference_clock_pass": true,
+      "original_stricter_legacy_flag": false,
+      "summary_sha256": "51d0ca39c804bd71fe1c33516d6e9e5d20ad2a9179c146fa969748587cd68913",
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug19",
+        "run_id": "701bcf42-7247-4cf5-80d7-ba60611ba87e",
+        "session_id": "equal_budget_v4_production_aug19",
+        "source_video_sha256": "56b488b8becb42a2bb899d59e88986e010535d72eda53409affaa80d5b261cf4",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 404
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 11
+        },
+        "predicted_directional_totals": {
+          "B->A": 11,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": 0
+        },
+        "absolute_errors": {
+          "B->A": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "11 \u4e0b\u5f80\u4e0a",
+          "evidence": "historical user confirmation of camera2 Aug19 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "production_aug20",
+      "clip": "aug20",
+      "policy": "selected_greedy",
+      "repeat": 1,
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 12,
+        "OUT": 0,
+        "NET": 12
+      },
+      "absolute_count_error": 0,
+      "global_calls": 344,
+      "local_calls": 24,
+      "normal_model_calls": 368,
+      "warmup_calls": 1,
+      "processed_frames": 344,
+      "actual_global_hz": 2.8623617512802078,
+      "actual_normal_call_hz": 3.0620614083462687,
+      "event_publication_max_ms": 867.2308279983554,
+      "event_publication_records": 12,
+      "observation_max_ms": 967.3632439989888,
+      "observation_p95_upper_ms": 777.0,
+      "capture_lateness_max_ms": 115.58187599803205,
+      "stream_wall_s": 120.18047678499897,
+      "drain_s": 0.5804767849989645,
+      "replay_reference_clock_checks": {
+        "event_publication": true,
+        "observation_max": true,
+        "observation_p95": true,
+        "capture_lateness": true,
+        "drain": true,
+        "queue": true,
+        "causal": true
+      },
+      "replay_reference_clock_pass": true,
+      "original_stricter_legacy_flag": false,
+      "summary_sha256": "bae8b06e52f7a81f80fde67cc15fc1d24a5725ffc6a1a91d34c54947f2d0ec15",
+      "count_score": {
+        "metric_version": "reviewed-directional-video-totals-v1",
+        "status": "SCORED_AGAINST_REVIEWED_VIDEO_TOTALS",
+        "video_id": "camera2_aug20",
+        "run_id": "f7c1a383-7849-4d99-a80e-25a0bcb40354",
+        "session_id": "equal_budget_v4_production_aug20",
+        "source_video_sha256": "3b68eae39d9e936e68e7c4d78bd8d18142623825c8aa3594fe273cbb36234f74",
+        "reviewed_interval": {
+          "start_frame0": 0,
+          "end_frame0": 598
+        },
+        "reviewed_directions": [
+          "B->A"
+        ],
+        "reference_totals": {
+          "B->A": 12
+        },
+        "predicted_directional_totals": {
+          "B->A": 12,
+          "A->B": 0
+        },
+        "signed_errors": {
+          "B->A": 0
+        },
+        "absolute_errors": {
+          "B->A": 0
+        },
+        "absolute_error_over_reviewed_directions": 0,
+        "all_reviewed_totals_agree": true,
+        "unreviewed_directions": [
+          "A->B"
+        ],
+        "review": {
+          "reviewer": "project user (historical conversation)",
+          "statement": "\u4e0a\u884c12",
+          "evidence": "historical user confirmation of camera2 Aug20 source-only preview",
+          "view": "source_only"
+        },
+        "data_role": "development, repeatedly exposed before this score",
+        "source_session_independence_verified": false,
+        "event_precision": null,
+        "event_recall": null,
+        "event_f1": null,
+        "count_agreement_proves_no_misses_or_duplicates": false
+      }
+    },
+    {
+      "tag": "production_aug17_negative",
+      "clip": "aug17_negative",
+      "policy": "selected_greedy",
+      "repeat": 1,
+      "status": "COMPLETED_UNSCORED",
+      "counts": {
+        "IN": 0,
+        "OUT": 0,
+        "NET": 0
+      },
+      "absolute_count_error": null,
+      "global_calls": 273,
+      "local_calls": 102,
+      "normal_model_calls": 375,
+      "warmup_calls": 1,
+      "processed_frames": 273,
+      "actual_global_hz": 2.269275027159939,
+      "actual_normal_call_hz": 3.1171360263185974,
+      "event_publication_max_ms": null,
+      "event_publication_records": 0,
+      "observation_max_ms": 1296.903848000511,
+      "observation_p95_upper_ms": 873.4,
+      "capture_lateness_max_ms": 197.23251200048253,
+      "stream_wall_s": 120.3027384220004,
+      "drain_s": 0.502738422000391,
+      "replay_reference_clock_checks": {
+        "event_publication": true,
+        "observation_max": true,
+        "observation_p95": true,
+        "capture_lateness": true,
+        "drain": true,
+        "queue": true,
+        "causal": true
+      },
+      "replay_reference_clock_pass": true,
+      "original_stricter_legacy_flag": false,
+      "summary_sha256": "87e8a7718341bb86215ec31171234fba5147d0af419e5dad0b7ab5166bca41db",
+      "reference_status": "No independently accepted total; keep unscored.",
+      "negative_reference_invented": false
+    }
+  ],
+  "four_video_aggregate": {
+    "metric_version": "reviewed-directional-video-totals-v1",
+    "video_units": 4,
+    "sum_absolute_error_over_reviewed_directions": 1,
+    "mean_absolute_error_over_reviewed_directions_per_video": 0.25,
+    "exact_agreement_video_units": 3,
+    "exact_agreement_fraction": 0.75,
+    "viewing_modes": [
+      "prediction_overlay",
+      "source_only",
+      "unspecified"
+    ],
+    "source_session_independence_verified": false,
+    "event_precision": null,
+    "event_recall": null,
+    "event_f1": null
+  },
+  "all_four_known_totals_agree": false,
+  "all_four_original_clock_references_pass": true,
+  "archive_sha256": "6b8723de06f6d1ff3a526cbe9692b162159ac963886c6f940e3846b5b8133116",
+  "archive_bytes": 187857,
+  "files": 49,
+  "collected_UTC": "2026-11-10T11:55:56.390538+00:00",
+  "new_model_forwards_for_this_verification": 0,
+  "USB_serial_JTAG_used": false,
+  "independent_final_positive_test": false
+}
