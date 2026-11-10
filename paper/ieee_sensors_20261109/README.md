@@ -1,5 +1,7 @@
 # IEEE Sensors Journal工作稿
 
+更新（2026-11-10）：优先阅读 [P0/P1 修订稿](p0p1/README.md)，已纳入 20 组消融、数据审计与 C1 反例。下文及原 PDF 保留为原 V4 阶段记录。
+
 主投目标：IEEE Sensors Journal，出版商IEEE。论文主线保持PYNQ-Z2与YOLO26n，研究资源受限视觉传感器如何通过因果图像选择、真实局部补检和可审计事件输出，改善通道计数可靠性。
 
 - [期刊选择与官方要求](../../docs/research/journal_20261109/期刊选择与官方投稿要求.md)
